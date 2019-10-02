@@ -157,7 +157,7 @@ body {
 body {
   background: #eee;
   color: #555;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Monaco', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 16px;
   line-height: 2;
 }
@@ -173,7 +173,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'DFGirlFull', 'Monaco', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
@@ -398,14 +398,14 @@ td {
 }
 pre,
 .highlight {
-  background: #2d2d2d;
-  color: #ccc;
+  background: #f7f7f7;
+  color: #4d4d4c;
   line-height: 1.6;
   margin: 0 auto 20px;
 }
 pre,
 code {
-  font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
+  font-family: 'Monaco', consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
 }
 code {
   overflow-wrap: break-word;
@@ -421,13 +421,13 @@ pre {
 }
 pre code {
   background: none;
-  color: #ccc;
+  color: #4d4d4c;
   font-size: 0.875em;
   padding: 0;
   text-shadow: none;
 }
 .highlight *::selection {
-  background: #515151;
+  background: #d6d6d6;
 }
 .highlight pre {
   border: 0;
@@ -446,7 +446,7 @@ pre code {
 .highlight figcaption {
   background: #eee;
   border-bottom: 1px solid #e9e9e9;
-  color: #ccc;
+  color: #4d4d4c;
   line-height: 1em;
   margin: 0;
   padding: 0.5em;
@@ -460,21 +460,21 @@ pre code {
   clear: both;
 }
 .highlight figcaption a {
-  color: #ccc;
+  color: #4d4d4c;
   float: right;
 }
 .highlight figcaption a:hover {
-  border-bottom-color: #ccc;
+  border-bottom-color: #4d4d4c;
 }
 .highlight .gutter pre {
-  background-color: #1b1b1b;
-  color: #999;
+  background-color: #eff2f3;
+  color: #869194;
   padding-left: 10px;
   padding-right: 10px;
   text-align: right;
 }
 .highlight .code pre {
-  background-color: #2d2d2d;
+  background-color: #f7f7f7;
   padding-left: 10px;
   width: 100%;
 }
@@ -491,20 +491,20 @@ pre code {
   border: 0;
 }
 pre .deletion {
-  background: #800000;
+  background: #fdd;
 }
 pre .addition {
-  background: #008000;
+  background: #dfd;
 }
 pre .meta {
-  color: #fc6;
+  color: #eab700;
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
 }
 pre .comment {
-  color: #999;
+  color: #8e908c;
 }
 pre .variable,
 pre .attribute,
@@ -519,7 +519,7 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-  color: #f2777a;
+  color: #c82829;
 }
 pre .number,
 pre .preprocessor,
@@ -529,7 +529,7 @@ pre .literal,
 pre .params,
 pre .constant,
 pre .command {
-  color: #f99157;
+  color: #f5871f;
 }
 pre .ruby .class .title,
 pre .css .rules .attribute,
@@ -542,11 +542,11 @@ pre .ruby .symbol,
 pre .xml .cdata,
 pre .special,
 pre .formula {
-  color: #9c9;
+  color: #718c00;
 }
 pre .title,
 pre .css .hexcolor {
-  color: #6cc;
+  color: #3e999f;
 }
 pre .function,
 pre .python .decorator,
@@ -556,11 +556,11 @@ pre .ruby .title .keyword,
 pre .perl .sub,
 pre .javascript .title,
 pre .coffeescript .title {
-  color: #69c;
+  color: #4271ae;
 }
 pre .keyword,
 pre .javascript .function {
-  color: #c9c;
+  color: #8959a8;
 }
 .blockquote-center {
   border-left: none;
@@ -1002,7 +1002,7 @@ pre .javascript .function {
 }
 .site-title {
   display: inline-block;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'ModernAntiqua', 'Monaco', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   line-height: 1.5;
@@ -1290,7 +1290,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ab0a4b;
+  background: #5382cf;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1718,7 +1718,7 @@ pre .javascript .function {
 .post-body {
   overflow-wrap: break-word;
   word-wrap: break-word;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Monaco', 'Monaco', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 @media (min-width: 1200px) {
   .post-body {
@@ -2033,7 +2033,7 @@ article:last-child .post-eof {
 }
 .posts-expand .post-meta {
   color: #999;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Monaco', 'Monaco', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.75em;
   margin: 3px 0 60px 0;
   text-align: center;
@@ -2975,4 +2975,81 @@ ul.breadcrumb li + li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
+}
+.post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3;
+}
+.post-body p a:hover {
+  color: #fc6423;
+  border-bottom: none;
+  border-bottom: 1px solid #fc6423;
+}
+.content {
+  border-radius: 20px;
+  padding: 10px 50px 20px 50px;
+  background: rgba(255,255,255,0.8) none repeat scroll !important;
+}
+.post-block {
+  margin-top: 10px;
+  background: rgba(255,255,255,0) none repeat scroll !important;
+}
+.post {
+  background: rgba(255,255,255,0) none repeat scroll !important;
+  box-shadow: 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(0,0,0,0);
+}
+.page {
+  background: rgba(255,255,255,0) none repeat scroll !important;
+  box-shadow: 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(0,0,0,0);
+}
+.pagination {
+  border: none;
+  margin: 0px;
+}
+.posts-expand .post-body img {
+  border: none;
+  padding: 0px;
+}
+.post-gallery .post-gallery-img img {
+  padding: 3px;
+}
+.posts-expand .post-title {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.posts-expand .post-eof {
+  margin: 0px;
+  background-color: rgba(255,255,255,0);
+}
+.post-block.page {
+  margin-top: 40px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.category-all-page {
+  margin: -80px 0px 40px 0px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  background-color: rgba(255,255,255,0.5);
+  padding: 80px 20px 100px 40px;
+}
+::selection {
+  background-color: #222;
+  color: #fced6d;
+}
+@font-face {
+  font-family: 'DFGirlFull';
+  src: url("/fonts/DFGirlFull.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'ModernAntiqua';
+  src: url("/fonts/ModernAntiqua.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Monaco';
+  src: url("/fonts/Monaco.ttf");
+  font-weight: 400;
 }
