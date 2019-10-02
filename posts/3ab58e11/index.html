@@ -67,7 +67,7 @@
 <meta property="og:site_name" content="Sidney God">
 <meta property="og:description" content="0 初始化每台计算机只需配置一次，升级时会保留配置信息。Git自带一个 git config 的工具帮助设置控制Git外观和行为的配置变量，这些变量存在于三个不同的位置： /etc/gitconfig：包含系统上每一个用户的及他们仓库的通用配置。如果带有--system选项的git config时，会从此文件读写变量 ~/.gitconfig或~/.config/git/config：只针对当前用">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-02T13:39:02.724Z">
+<meta property="og:updated_time" content="2019-10-02T16:43:35.923Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git Learning">
 <meta name="twitter:description" content="0 初始化每台计算机只需配置一次，升级时会保留配置信息。Git自带一个 git config 的工具帮助设置控制Git外观和行为的配置变量，这些变量存在于三个不同的位置： /etc/gitconfig：包含系统上每一个用户的及他们仓库的通用配置。如果带有--system选项的git config时，会从此文件读写变量 ~/.gitconfig或~/.config/git/config：只针对当前用">
@@ -361,11 +361,19 @@
                 
               
 
-              <time title="Created: 2019-10-02 21:31:37 / Modified: 21:39:02" itemprop="dateCreated datePublished" datetime="2019-10-02T21:31:37+08:00">2019-10-02</time>
+              <time title="Created: 2019-10-02 21:31:37" itemprop="dateCreated datePublished" datetime="2019-10-02T21:31:37+08:00">2019-10-02</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-10-03 00:43:35" itemprop="dateModified" datetime="2019-10-03T00:43:35+08:00">2019-10-03</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -426,8 +434,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 配置用户名和邮箱</span><br><span class="line">git config --global user.name "Sidney Ding"</span><br><span class="line">git config --global user.email "dingfs0527@thundersoft.com"</span><br><span class="line"><span class="meta">#</span> 文本编辑器 根据喜好</span><br><span class="line">git config --glonal core.editor vim</span><br><span class="line"><span class="meta">#</span> 检查配置信息</span><br><span class="line">git config --list</span><br><span class="line">git config user.name</span><br><span class="line"><span class="meta">#</span> 获取帮助</span><br><span class="line">git help &lt;verb&gt;</span><br><span class="line">git &lt;verb&gt; --help</span><br><span class="line">man git-&lt;verb&gt;</span><br></pre></td></tr></table></figure>
 
 <h1 id="1-基础"><a href="#1-基础" class="headerlink" title="1 基础"></a>1 基础</h1><p>Git使用基本流程</p>
-<img data-src="/Git-Learning/git1.png">
-
+<p><img alt="git1" data-src="Git-Learning/git1.png"></p>
 <h2 id="1-1-获取git仓库"><a href="#1-1-获取git仓库" class="headerlink" title="1.1 获取git仓库"></a>1.1 获取git仓库</h2><p>获取仓库的方法有两种</p>
 <h3 id="1-1-1-现有目录初始化"><a href="#1-1-1-现有目录初始化" class="headerlink" title="1.1.1 现有目录初始化"></a>1.1.1 现有目录初始化</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 进入项目目录</span><br><span class="line">cd &lt;ProjectDir&gt;</span><br><span class="line"><span class="meta">#</span> 初始化 会创建一个.git子目录</span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
 
@@ -451,8 +458,7 @@
 <li><code>a/**/z</code>：匹配任意中间目录，例：a/b/z,/a/b/c/z…</li>
 <li>more: <a href="https://github.com/github/gitignore" target="_blank" rel="noopener">https://github.com/github/gitignore</a></li>
 </ul>
-<h2 id="1-3-本地文件管理"><a href="#1-3-本地文件管理" class="headerlink" title="1.3 本地文件管理"></a>1.3 本地文件管理</h2><img data-src="/Git-Learning/git2.png">
-
+<h2 id="1-3-本地文件管理"><a href="#1-3-本地文件管理" class="headerlink" title="1.3 本地文件管理"></a>1.3 本地文件管理</h2><p><img alt="git2" data-src="/Git-Learning/git2.png"></p>
 <ul>
 <li>工作区：未隐藏的部分</li>
 <li>版本库：<code>.git</code>目录<ul>
@@ -576,11 +582,14 @@
 <li><p>repo status</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">project system/core/                            (*** NO BRANCH ***)</span><br><span class="line"> -m     fs_mgr/fs_mgr_fstab.cpp</span><br></pre></td></tr></table></figure>
 
+
+</li>
+</ul>
 <p>每个小节的首行显示项目名称,以及所在分支名称</p>
-<p>之后显示该项目中文件变更状态。头两个字母显示变更状态,后面显示文件名或者其<br>他变更信息</p>
+<p>之后显示该项目中文件变更状态。头两个字母显示变更状态,后面显示文件名或者其<br>  他变更信息</p>
 <p>第一个字母表示暂存区的文件修改状态</p>
 <ul>
-<li>- :没有改变</li>
+<li>- :没有改变<ul>
 <li>A :添加 (不在HEAD中, 在暂存区)</li>
 <li>M :修改 (在HEAD中, 在暂存区, 内容不同)</li>
 <li>D :删除 (在HEAD中, 不在暂存区)</li>
@@ -589,14 +598,18 @@
 <li>T :文件状态改变 (在HEAD中, 在暂存区, 内容相同)</li>
 <li>U :未合并, 需要冲突解决</li>
 </ul>
+</li>
+</ul>
 <p>第二个字母表示工作区文件的更改状态</p>
 <ul>
-<li>- :新/未知 (不在暂存区, 在工作区)</li>
+<li>- :新/未知 (不在暂存区, 在工作区)<ul>
 <li>m :修改 (在暂存区, 在工作区,被修改)</li>
 <li>d :删除 (在暂存区,不在工作区)</li>
 </ul>
-<p>两个表示状态的字母后面,显示文件名信息。如果有文件重命名还会显示改变前后的<br>文件名以及文件的相似度</p>
 </li>
+</ul>
+<p>两个表示状态的字母后面,显示文件名信息。如果有文件重命名还会显示改变前后的<br>  文件名以及文件的相似度</p>
+<ul>
 <li><p>repo diff [&lt;project&gt;…]</p>
 <p>是对<code>git diff</code>命令的封装,用以分别显示各个项目工作区下的文件差异</p>
 </li>
