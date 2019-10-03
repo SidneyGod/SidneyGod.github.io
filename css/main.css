@@ -157,9 +157,9 @@ body {
 body {
   background: #eee;
   color: #555;
-  font-family: 'Monaco', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Monaco', "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-size: 16px;
-  line-height: 2;
+  line-height: 1.5;
 }
 @media (max-width: 991px) {
   body {
@@ -173,7 +173,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Monaco', 'Monaco', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Monaco', 'Monaco', "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
@@ -400,12 +400,12 @@ pre,
 .highlight {
   background: #f7f7f7;
   color: #4d4d4c;
-  line-height: 1.6;
+  line-height: 1.5;
   margin: 0 auto 20px;
 }
 pre,
 code {
-  font-family: 'Monaco', consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
+  font-family: 'Monaco', "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", consolas, Menlo, monospace, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
 }
 code {
   overflow-wrap: break-word;
@@ -1002,7 +1002,7 @@ pre .javascript .function {
 }
 .site-title {
   display: inline-block;
-  font-family: 'ModernAntiqua', 'Monaco', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'ModernAntiqua', 'Monaco', "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   line-height: 1.5;
@@ -1290,7 +1290,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #40b911;
+  background: #ff09ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1458,7 +1458,7 @@ pre .javascript .function {
   white-space: nowrap;
 }
 .post-toc .nav .nav-child {
-  display: none;
+  display: block;
 }
 .post-toc .nav .active > .nav-child {
   display: block;
@@ -1718,7 +1718,7 @@ pre .javascript .function {
 .post-body {
   overflow-wrap: break-word;
   word-wrap: break-word;
-  font-family: 'Monaco', 'Monaco', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Monaco', 'Monaco', "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 @media (min-width: 1200px) {
   .post-body {
@@ -2033,7 +2033,7 @@ article:last-child .post-eof {
 }
 .posts-expand .post-meta {
   color: #999;
-  font-family: 'Monaco', 'Monaco', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Monaco', 'Monaco', "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-size: 0.75em;
   margin: 3px 0 60px 0;
   text-align: center;
@@ -3037,6 +3037,14 @@ ul.breadcrumb li + li:last-child {
 ::selection {
   background-color: #222;
   color: #fced6d;
+}
+code {
+  padding: 2px 4px;
+  word-break: break-all;
+  color: $my-code-foreground;
+  background: $my-code-background;
+  border-radius: 3px;
+  font-size: $code-font-size;
 }
 @font-face {
   font-family: 'DFGirlFull';
