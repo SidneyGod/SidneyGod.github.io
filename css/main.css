@@ -1290,7 +1290,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #622e4d;
+  background: #ff9a66;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -3023,28 +3023,15 @@ ul.breadcrumb li + li:last-child {
   margin: 0px;
   background-color: rgba(255,255,255,0);
 }
-.post-block.page {
-  margin-top: 40px;
-  margin-right: 30px;
-  margin-left: 30px;
-}
-.category-all-page {
-  margin: -80px 0px 40px 0px;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-  background-color: rgba(255,255,255,0.5);
-  padding: 80px 20px 100px 40px;
-}
 ::selection {
   background-color: #222;
   color: #fced6d;
 }
-code {
-  padding: 2px 4px;
-  word-break: break-all;
-  color: $my-code-foreground;
-  background: $my-code-background;
-  border-radius: 3px;
-  font-size: $code-font-size;
+* {
+  cursor: url("/images/cursor/pointer.ico"), auto !important;
+}
+:active {
+  cursor: url("/images/cursor/click.ico"), auto !important;
 }
 @font-face {
   font-family: 'DFGirlFull';
