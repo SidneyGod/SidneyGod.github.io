@@ -296,7 +296,7 @@ td {
 }
 .btn {
   background: #fff;
-  border: 5px solid #555;
+  border: 2px solid #555;
   border-radius: 2px;
   color: #555;
   display: inline-block;
@@ -1290,7 +1290,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #9d6918;
+  background: #53c84b;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -3032,6 +3032,9 @@ ul.breadcrumb li + li:last-child {
 }
 :active {
   cursor: url("/images/cursor/click.ico"), auto !important;
+}
+code {
+  font-size: 14px;
 }
 ::-webkit-scrollbar {
   width: 10px;
