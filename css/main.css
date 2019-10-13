@@ -1290,7 +1290,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #3909cb;
+  background: #044563;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -3032,6 +3032,20 @@ ul.breadcrumb li + li:last-child {
 }
 :active {
   cursor: url("/images/cursor/click.ico"), auto !important;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #909090;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: rgba(255,255,255,0.75);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,118,0,0.75);
 }
 @font-face {
   font-family: 'DFGirlFull';
