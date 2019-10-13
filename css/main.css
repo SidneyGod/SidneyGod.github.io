@@ -158,8 +158,8 @@ body {
   background: #eee;
   color: #555;
   font-family: 'Monaco', "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.3;
 }
 @media (max-width: 991px) {
   body {
@@ -278,7 +278,7 @@ caption,
 th,
 td {
   font-weight: normal;
-  padding: 8px;
+  padding: 5px;
   text-align: left;
   vertical-align: middle;
 }
@@ -296,7 +296,7 @@ td {
 }
 .btn {
   background: #fff;
-  border: 2px solid #555;
+  border: 5px solid #555;
   border-radius: 2px;
   color: #555;
   display: inline-block;
@@ -400,7 +400,7 @@ pre,
 .highlight {
   background: #f7f7f7;
   color: #4d4d4c;
-  line-height: 1.5;
+  line-height: 1.4;
   margin: 0 auto 20px;
 }
 pre,
@@ -411,7 +411,7 @@ code {
   overflow-wrap: break-word;
   word-wrap: break-word;
   background: #eee;
-  border-radius: 3px;
+  border-radius: 5px;
   color: #555;
   padding: 2px 4px;
 }
@@ -947,7 +947,7 @@ pre .javascript .function {
 }
 @media (min-width: 1600px) {
   .container .main-inner {
-    width: 73%;
+    width: 75%;
   }
 }
 .header {
@@ -966,7 +966,7 @@ pre .javascript .function {
 }
 @media (min-width: 1600px) {
   .container .header-inner {
-    width: 73%;
+    width: 75%;
   }
 }
 .headband {
@@ -1290,7 +1290,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #044563;
+  background: #9d6918;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1536,7 +1536,7 @@ pre .javascript .function {
 }
 @media (min-width: 1600px) {
   .container .footer-inner {
-    width: 73%;
+    width: 75%;
   }
 }
 #animate {
@@ -2536,7 +2536,7 @@ ul.breadcrumb li + li:last-child {
 }
 @media (min-width: 1600px) {
   .header {
-    width: 73%;
+    width: 75%;
   }
 }
 @media (max-width: 991px) {
