@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sidneygod.coding.me/"/>
-  <updated>2019-10-13T03:00:06.269Z</updated>
+  <updated>2019-11-29T15:17:59.545Z</updated>
   <id>https://sidneygod.coding.me/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Building image host via PicGo + Github</title>
+    <link href="https://sidneygod.coding.me/posts/47391a30/"/>
+    <id>https://sidneygod.coding.me/posts/47391a30/</id>
+    <published>2019-11-29T15:12:09.000Z</published>
+    <updated>2019-11-29T15:17:59.545Z</updated>
+    
+    <content type="html"><![CDATA[<p>嗯，比较懒，贴两个链接留作纪念：</p><p>PicGo + GitHub 搭建个人图床工具：<a href="https://blog.csdn.net/yefcion/article/details/88412025" target="_blank" rel="noopener">https://blog.csdn.net/yefcion/article/details/88412025</a></p><p>PicGo： <a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">https://github.com/Molunerfinn/PicGo</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;嗯，比较懒，贴两个链接留作纪念：&lt;/p&gt;
+&lt;p&gt;PicGo + GitHub 搭建个人图床工具：&lt;a href=&quot;https://blog.csdn.net/yefcion/article/details/88412025&quot; target=&quot;_blank&quot; rel=&quot;noo
+      
+    
+    </summary>
+    
+    
+      <category term="Other" scheme="https://sidneygod.coding.me/categories/Other/"/>
+    
+    
+      <category term="blog" scheme="https://sidneygod.coding.me/tags/blog/"/>
+    
+      <category term="图床" scheme="https://sidneygod.coding.me/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo&#39;s grammar</title>
@@ -39,9 +68,9 @@
       <category term="Other" scheme="https://sidneygod.coding.me/categories/Other/"/>
     
     
-      <category term="hexo" scheme="https://sidneygod.coding.me/tags/hexo/"/>
-    
       <category term="blog" scheme="https://sidneygod.coding.me/tags/blog/"/>
+    
+      <category term="hexo" scheme="https://sidneygod.coding.me/tags/hexo/"/>
     
   </entry>
   

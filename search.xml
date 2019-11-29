@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Building image host via PicGo + Github</title>
+      <link href="/posts/47391a30/"/>
+      <url>/posts/47391a30/</url>
+      
+        <content type="html"><![CDATA[<p>嗯，比较懒，贴两个链接留作纪念：</p><p>PicGo + GitHub 搭建个人图床工具：<a href="https://blog.csdn.net/yefcion/article/details/88412025" target="_blank" rel="noopener">https://blog.csdn.net/yefcion/article/details/88412025</a></p><p>PicGo： <a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">https://github.com/Molunerfinn/PicGo</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Other </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> blog </tag>
+            
+            <tag> 图床 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo&#39;s grammar</title>
       <link href="/posts/2b335451/"/>
       <url>/posts/2b335451/</url>
@@ -20,9 +47,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> blog </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       
