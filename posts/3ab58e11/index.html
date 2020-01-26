@@ -65,7 +65,7 @@
 <meta property="og:site_name" content="Sidney God">
 <meta property="og:description" content="0 初始化每台计算机只需配置一次，升级时会保留配置信息。Git自带一个 git config 的工具帮助设置控制Git外观和行为的配置变量，这些变量存在于三个不同的位置： /etc/gitconfig：包含系统上每一个用户的及他们仓库的通用配置。如果带有--system选项的git config时，会从此文件读写变量 ~/.gitconfig或~/.config/git/config：只针对当前用">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-03T04:54:20.384Z">
+<meta property="og:updated_time" content="2020-01-26T05:55:35.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git Learning">
 <meta name="twitter:description" content="0 初始化每台计算机只需配置一次，升级时会保留配置信息。Git自带一个 git config 的工具帮助设置控制Git外观和行为的配置变量，这些变量存在于三个不同的位置： /etc/gitconfig：包含系统上每一个用户的及他们仓库的通用配置。如果带有--system选项的git config时，会从此文件读写变量 ~/.gitconfig或~/.config/git/config：只针对当前用">
@@ -370,7 +370,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-10-03 12:54:20" itemprop="dateModified" datetime="2019-10-03T12:54:20+08:00">2019-10-03</time>
+                <time title="Modified: 2020-01-26 13:55:35" itemprop="dateModified" datetime="2020-01-26T13:55:35+08:00">2020-01-26</time>
               </span>
             
           
@@ -446,7 +446,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 配置用户名和邮箱</span></span><br><span class="line">git config --global user.name "Sidney Ding"</span><br><span class="line">git config --global user.email "dingfs0527@thundersoft.com"</span><br><span class="line"><span class="meta">#</span><span class="bash"> 文本编辑器 根据喜好</span></span><br><span class="line">git config --glonal core.editor vim</span><br><span class="line"><span class="meta">#</span><span class="bash"> 检查配置信息</span></span><br><span class="line">git config --list</span><br><span class="line">git config user.name</span><br><span class="line"><span class="meta">#</span><span class="bash"> 获取帮助</span></span><br><span class="line">git help &lt;verb&gt;</span><br><span class="line">git &lt;verb&gt; --help</span><br><span class="line">man git-&lt;verb&gt;</span><br></pre></td></tr></table></figure>
 
 <h1 id="1-基础"><a href="#1-基础" class="headerlink" title="1 基础"></a>1 基础</h1><p>Git使用基本流程</p>
-<p><img alt="git1" data-src="./Git-Learning/git1.png"></p>
+<p><img alt="git1" data-src="./images/Git-Learning/git1.png"></p>
 <h2 id="1-1-获取git仓库"><a href="#1-1-获取git仓库" class="headerlink" title="1.1 获取git仓库"></a>1.1 获取git仓库</h2><p>获取仓库的方法有两种</p>
 <h3 id="1-1-1-现有目录初始化"><a href="#1-1-1-现有目录初始化" class="headerlink" title="1.1.1 现有目录初始化"></a>1.1.1 现有目录初始化</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 进入项目目录</span></span><br><span class="line">cd &lt;ProjectDir&gt;</span><br><span class="line"><span class="meta">#</span><span class="bash"> 初始化 会创建一个.git子目录</span></span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
 
@@ -627,7 +627,7 @@
 <p>是对<code>git diff</code>命令的封装,用以分别显示各个项目工作区下的文件差异</p>
 </li>
 </ul>
-<p><img alt="1562563963220" data-src="./Git-Learning/1562563963220.png"></p>
+<p><img alt="1562563963220" data-src="./images/Git-Learning/1562563963220.png"></p>
 <h1 id="5-Gerrit"><a href="#5-Gerrit" class="headerlink" title="5 Gerrit"></a>5 Gerrit</h1><p>先加ssh-key</p>
 <p>Gerrit下的Git服务器只允许用户向特殊的引用<code>ref/for/&lt;branchName&gt;</code>推送，这样才会创建一个reviewId</p>
 
