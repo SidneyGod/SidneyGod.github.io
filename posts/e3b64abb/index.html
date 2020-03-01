@@ -57,18 +57,18 @@
   };
 </script>
 
-  <meta name="description" content="1 JNIJNI(Java Native Interface)，提供了若干API实现了Java和其他语言(主要是C/C++)的通信。简单来说就是Java想要调用C/C++的接口必须遵循JNI的规范牵涉到一个很重要的头文件jni.h，这个头文件的位置：/usr/lib/jvm/java-8-openjdk-amd64/include/jni.h。这个头文件定义了数据类型，JNIInterface(定">
+  <meta name="description" content="1 JNIJNI(Java Native Interface)，提供了若干API实现了Java和其他语言(主要是C/C++)的通信。简单来说就是Java想要调用C/C++的接口必须遵循JNI的规范牵涉到一个很重要的头文件jni.h，这个头文件的位置：\jdk1.8.0_211\include\jni.h，如果是Linux，或许是/usr/lib/jvm/java-8-openjdk-amd64/i">
 <meta name="keywords" content="jni">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JNI">
 <meta property="og:url" content="https://sidneygod.github.io/posts/e3b64abb/index.html">
 <meta property="og:site_name" content="Sidney God">
-<meta property="og:description" content="1 JNIJNI(Java Native Interface)，提供了若干API实现了Java和其他语言(主要是C/C++)的通信。简单来说就是Java想要调用C/C++的接口必须遵循JNI的规范牵涉到一个很重要的头文件jni.h，这个头文件的位置：/usr/lib/jvm/java-8-openjdk-amd64/include/jni.h。这个头文件定义了数据类型，JNIInterface(定">
+<meta property="og:description" content="1 JNIJNI(Java Native Interface)，提供了若干API实现了Java和其他语言(主要是C/C++)的通信。简单来说就是Java想要调用C/C++的接口必须遵循JNI的规范牵涉到一个很重要的头文件jni.h，这个头文件的位置：\jdk1.8.0_211\include\jni.h，如果是Linux，或许是/usr/lib/jvm/java-8-openjdk-amd64/i">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-01T12:05:51.603Z">
+<meta property="og:updated_time" content="2020-03-01T23:34:56.849Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JNI">
-<meta name="twitter:description" content="1 JNIJNI(Java Native Interface)，提供了若干API实现了Java和其他语言(主要是C/C++)的通信。简单来说就是Java想要调用C/C++的接口必须遵循JNI的规范牵涉到一个很重要的头文件jni.h，这个头文件的位置：/usr/lib/jvm/java-8-openjdk-amd64/include/jni.h。这个头文件定义了数据类型，JNIInterface(定">
+<meta name="twitter:description" content="1 JNIJNI(Java Native Interface)，提供了若干API实现了Java和其他语言(主要是C/C++)的通信。简单来说就是Java想要调用C/C++的接口必须遵循JNI的规范牵涉到一个很重要的头文件jni.h，这个头文件的位置：\jdk1.8.0_211\include\jni.h，如果是Linux，或许是/usr/lib/jvm/java-8-openjdk-amd64/i">
   <link rel="canonical" href="https://sidneygod.github.io/posts/e3b64abb/">
 
 
@@ -359,11 +359,19 @@
                 
               
 
-              <time title="Created: 2020-03-01 14:07:01 / Modified: 20:05:51" itemprop="dateCreated datePublished" datetime="2020-03-01T14:07:01+08:00">2020-03-01</time>
+              <time title="Created: 2020-03-01 14:07:01" itemprop="dateCreated datePublished" datetime="2020-03-01T14:07:01+08:00">2020-03-01</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-03-02 07:34:56" itemprop="dateModified" datetime="2020-03-02T07:34:56+08:00">2020-03-02</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -403,7 +411,7 @@
               
                 <span class="post-meta-item-text">Symbols count in article: </span>
               
-              <span>8k</span>
+              <span>8.1k</span>
             </span>
           
             <span class="post-meta-item" title="Reading time">
@@ -426,7 +434,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="1-JNI"><a href="#1-JNI" class="headerlink" title="1 JNI"></a>1 JNI</h1><p>JNI(Java Native Interface)，提供了若干API实现了Java和其他语言(主要是C/C++)的通信。简单来说就是Java想要调用C/C++的接口必须遵循JNI的规范</p><p>牵涉到一个很重要的头文件<code>jni.h</code>，这个头文件的位置：<code>/usr/lib/jvm/java-8-openjdk-amd64/include/jni.h</code>。这个头文件定义了数据类型，JNIInterface(定义了很多函数指针，就是一些接口)</p><a id="more"></a>
+        <h1 id="1-JNI"><a href="#1-JNI" class="headerlink" title="1 JNI"></a>1 JNI</h1><p>JNI(Java Native Interface)，提供了若干API实现了Java和其他语言(主要是C/C++)的通信。简单来说就是Java想要调用C/C++的接口必须遵循JNI的规范</p><p>牵涉到一个很重要的头文件<code>jni.h</code>，这个头文件的位置：<code>\jdk1.8.0_211\include\jni.h</code>，如果是Linux，或许是<code>/usr/lib/jvm/java-8-openjdk-amd64/include/jni.h</code>。这个头文件定义了数据类型，JNIInterface(定义了很多函数指针，就是一些接口)</p><a id="more"></a>
 
 <h2 id="1-1-hello-world"><a href="#1-1-hello-world" class="headerlink" title="1.1 hello world"></a>1.1 hello world</h2><ol>
 <li><p>创建一个JniHello.java, 并声明一个native函数<code>sayHello()</code></p>
