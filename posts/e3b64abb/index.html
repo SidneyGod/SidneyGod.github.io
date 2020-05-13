@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=7.4.1">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
+  <link rel="alternate" href="/atom.xml" title="Sidney God" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"flat"},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":true,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: true,
+    lazyload: true,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="1 JNIJNI(Java Native Interface)，提供了若干API实现了Java和其他语言(主要是C&#x2F;C++)的通信。简单来说就是Java想要调用C&#x2F;C++的接口必须遵循JNI的规范 牵涉到一个很重要的头文件jni.h，这个头文件的位置：\jdk1.8.0_211\include\jni.h，如果是Linux，或许是&#x2F;usr&#x2F;lib&#x2F;jvm&#x2F;java-8-openjdk-amd64&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JNI">
+<meta property="og:url" content="https://sidneygod.github.io/posts/e3b64abb/index.html">
+<meta property="og:site_name" content="Sidney God">
+<meta property="og:description" content="1 JNIJNI(Java Native Interface)，提供了若干API实现了Java和其他语言(主要是C&#x2F;C++)的通信。简单来说就是Java想要调用C&#x2F;C++的接口必须遵循JNI的规范 牵涉到一个很重要的头文件jni.h，这个头文件的位置：\jdk1.8.0_211\include\jni.h，如果是Linux，或许是&#x2F;usr&#x2F;lib&#x2F;jvm&#x2F;java-8-openjdk-amd64&#x2F;">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301142434381.png">
+<meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301144652883.png">
+<meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301150441786.png">
+<meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301160545773.png">
+<meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301172026651.png">
+<meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301172240368.png">
+<meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301172757769.png">
+<meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301173118469.png">
+<meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301182529753.png">
+<meta property="article:published_time" content="2020-03-01T06:07:01.000Z">
+<meta property="article:modified_time" content="2020-05-10T03:20:55.800Z">
+<meta property="article:author" content="Sidney Ding">
+<meta property="article:tag" content="jni">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301142434381.png">
+  <link rel="canonical" href="https://sidneygod.github.io/posts/e3b64abb/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>JNI | Sidney God</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Sidney God</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Keep quiet time for time</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+      
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">11</span></a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+      
+      
+        
+      
+        
+          
+        
+      
+        
+      
+    
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories<span class="badge">2</span></a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">7</span></a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-commonweal">
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>Commonweal 404</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="fa fa-search fa-fw"></i>Search</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a class="book-mark-link book-mark-link-fixed" href="#"></a>
+
+  <a href="https://github.com/SidneyGod" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://sidneygod.github.io/posts/e3b64abb/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sidney Ding">
+      <meta itemprop="description" content="You laugh at me for being different, but I laugh at you for being the same.">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sidney God">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">JNI
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-03-01 14:07:01" itemprop="dateCreated datePublished" datetime="2020-03-01T14:07:01+08:00">2020-03-01</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-05-10 11:20:55" itemprop="dateModified" datetime="2020-05-10T11:20:55+08:00">2020-05-10</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/posts/e3b64abb/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/e3b64abb/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              
+              <span>8.1k</span>
+            </span>
+          
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              
+              <span>13 mins.</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <html><head></head><body><h1 id="1-JNI"><a href="#1-JNI" class="headerlink" title="1 JNI"></a>1 JNI</h1><p>JNI(Java Native Interface)，提供了若干API实现了Java和其他语言(主要是C/C++)的通信。简单来说就是Java想要调用C/C++的接口必须遵循JNI的规范</p>
+<p>牵涉到一个很重要的头文件<code>jni.h</code>，这个头文件的位置：<code>\jdk1.8.0_211\include\jni.h</code>，如果是Linux，或许是<code>/usr/lib/jvm/java-8-openjdk-amd64/include/jni.h</code>。这个头文件定义了数据类型，JNIInterface(定义了很多函数指针，就是一些接口)</p>
+<h2 id="1-1-hello-world"><a href="#1-1-hello-world" class="headerlink" title="1.1 hello world"></a>1.1 hello world</h2><ol>
+<li><p>创建一个JniHello.java, 并声明一个native函数<code>sayHello()</code></p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JniHello</span> </span>{</span><br><span class="line">    <span class="comment">// define a native function</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">native</span> String <span class="title">hello</span><span class="params">(String str)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line"></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>生产C/C++头文件</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先编译 生成class文件</span></span><br><span class="line">javac JniHello.java</span><br><span class="line"><span class="comment"># 生成头文件</span></span><br><span class="line">javah JniHello</span><br></pre></td></tr></tbody></table></figure>
+
+<a id="more"></a>
+
+<p><img alt data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301142434381.png"></p>
+</li>
+<li><p>编写对应的C/C++函数，实现JniHello.h中声明的方法</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// JniHello.cpp 这里c和cpp文件是有区别的</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"JniHello.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string"><iostream></span></span></span><br><span class="line"></span><br><span class="line">JNIEXPORT jstring JNICALL Java_JniHello_hello</span><br><span class="line">  (JNIEnv *env, jclass clazz, jstring contentStr)</span><br><span class="line">{</span><br><span class="line">    <span class="comment">// 必须是指针 可到jni.h去查</span></span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span>* jstr = env->GetStringUTFChars(contentStr, JNI_FALSE);</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> << <span class="string">"Welcome to C/C++ world! java: "</span> << jstr << <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建字符串并返回</span></span><br><span class="line">    <span class="keyword">char</span> cStr[] = <span class="string">"I am from C/Cpp"</span>;</span><br><span class="line">    <span class="keyword">return</span> env->NewStringUTF(cStr);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>生成目标文件</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一定要带上这两个目录 且看好是/而不是\，毕竟win容易出这个错</span></span><br><span class="line">gcc \</span><br><span class="line">  -I D:/Develop/JDK/jdk1.8.0_211/include \</span><br><span class="line">  -I D:/Develop/JDK/jdk1.8.0_211/include/win32 \</span><br><span class="line">  -c -fPIC JniHello.cpp</span><br><span class="line"><span class="comment"># 如果出现 fatal error: jni.h: No such file or directory 肯定是因为没带目录</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><img alt data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301144652883.png"></p>
+</li>
+<li><p>生成C/C++共享库</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 库文件名格式(name可以随便改): <name> + .dll</span></span><br><span class="line">g++ -shared JniHello.o -o JniHello.dll</span><br><span class="line"><span class="comment"># 为什么是g++而不是gcc，因为会报错..其实貌似是因为gcc不识别c++?</span></span><br><span class="line"><span class="comment"># 因为是windows所以是<name> + .dll，如果是Linux就是lib + <name> + .so了</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>总之执行完后，目录下会多出一个<code>JniHello.dll</code>文件</p>
+</li>
+<li><p>Java文件中加载共享库并调用函数</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JniHello</span> </span>{</span><br><span class="line">    <span class="keyword">static</span> {</span><br><span class="line">        <span class="comment">// JniHello + .dll</span></span><br><span class="line">        System.loadLibrary(<span class="string">"JniHello"</span>);</span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// define a native function</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">native</span> String <span class="title">hello</span><span class="params">(String str)</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">// call hello</span></span><br><span class="line">        String str = hello(<span class="string">"I am from Java!"</span>);</span><br><span class="line">        System.out.println(str);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>编译运行Java文件</p>
+<p><img alt data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301150441786.png"></p>
+</li>
+</ol>
+<p>以上就是在Windows下，纯手撸java调c的过程了，前提是要配置好gcc或其他C/C++编译器</p>
+<h2 id="1-2-JNI原理"><a href="#1-2-JNI原理" class="headerlink" title="1.2 JNI原理"></a>1.2 JNI原理</h2><p>计算机系统中，每种语言都有一个执行环境(Runtime)用于解释执行语言中的语句，不同种的语言一般是不能存在同一种环境的。人鬼殊途</p>
+<h3 id="1-2-1-JavaVM"><a href="#1-2-1-JavaVM" class="headerlink" title="1.2.1 JavaVM"></a>1.2.1 JavaVM</h3><p>Java执行环境是JVM，其实是主机环境中的一个进程，每个JVM在本地环境都有一个JavaVM结构体，该结构体在创建JVM时返回</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JNI_CreateJavaVM(JavaVM **pvm, <span class="keyword">void</span> **penv, <span class="keyword">void</span> *args);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>JavaVM是JVM在JNI层的代表，JNI全局仅仅有一个JavaVM结构体，其中封装了一些函数指针(函数表结构)，JavaVM中封装的这些函数指针主要是针对JVM操作接口。另外，在C和CPP中JavaVM中定义有所不同</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * JNI Invocation Interface.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> __cplusplus</span></span><br><span class="line"><span class="keyword">typedef</span> JavaVM_ JavaVM;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">const</span> <span class="class"><span class="keyword">struct</span> <span class="title">JNIInvokeInterface_</span> *<span class="title">JavaVM</span>;</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>在CPP中对JavaVM进行了一次封装，少一个参数，所以推荐使用CPP</p>
+<h3 id="1-2-2-JNIEnv"><a href="#1-2-2-JNIEnv" class="headerlink" title="1.2.2 JNIEnv"></a>1.2.2 JNIEnv</h3><p>在<code>jni.h</code>中还声明一样东西</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * JNI Native Method Interface.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> __cplusplus</span></span><br><span class="line"><span class="keyword">typedef</span> JNIEnv_ JNIEnv;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">const</span> <span class="class"><span class="keyword">struct</span> <span class="title">JNINativeInterface_</span> *<span class="title">JNIEnv</span>;</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>JNIEnv是当前Java线程执行环境，一个JVM对应一个JavaVM结构体，而一个JVM可以创建多个Java线程，每一个Java线程对应一个JNIEnv结构，他们保存在线程本地存储TLS中。因此，不同线程的JNIEnv是不同的，不能共用。JNIEnv也是一个函数表，在本地代码中通过JNIEnv的函数表来操作Java数据或调用Java方法。</p>
+<p>从这里也可看出来，c和cpp在使用env时的区别了</p>
+<h1 id="2-Android-JNI"><a href="#2-Android-JNI" class="headerlink" title="2 Android JNI"></a>2 Android JNI</h1><p>Android中使用JNI需要NDK(Native Develop Kit)，先体验一把</p>
+<h2 id="2-1-Java-call-C-CPP"><a href="#2-1-Java-call-C-CPP" class="headerlink" title="2.1 Java call C/CPP"></a>2.1 Java call C/CPP</h2><h3 id="2-1-1-传统方式"><a href="#2-1-1-传统方式" class="headerlink" title="2.1.1 传统方式"></a>2.1.1 传统方式</h3><ol>
+<li><p>创建 HelloWorld.java 并点击一下 <strong>Build</strong></p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> io.github.sidneygod.jni_1;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>{</span><br><span class="line">    <span class="keyword">static</span> {</span><br><span class="line">        System.loadLibrary(<span class="string">"HelloWorld"</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">native</span> String <span class="title">sayHello</span><span class="params">(String str)</span></span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>生成c/cpp头文件</p>
+<p>可以直接找到对应的<code>HelloWorld.class</code>文件，然后使用<code>javah -jni HelloWorld</code></p>
+<p>也可以这样，在IDE的Terminal中，进入<code>app/src/main/java/</code>，输入对应的指令</p>
+<p><code>javah -jni io.github.sidneygod.jni_1.HelloWorld</code></p>
+<p><img alt data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301160545773.png"></p>
+</li>
+<li><p>在main下创建jni目录，编写对应的c/cpp文件</p>
+<p>这里不在赘述c/cpp文件，记得把刚刚的头文件也给拷过来，比较烦人的是，不能用cout..所以改成了ndk的log</p>
+<p><img alt data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301172026651.png"></p>
+</li>
+<li><p>编写<code>Android.mk</code>文件</p>
+<p>在jni目录创建<code>Android.mk</code>文件</p>
+<figure class="highlight makefile"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">LOCAL_PATH := <span class="variable">$(<span class="built_in">call</span> my-<span class="built_in">dir</span>)</span></span><br><span class="line"><span class="keyword">include</span> <span class="variable">$(CLEAR_VARS)</span></span><br><span class="line">LOCAL_MODULE := HelloWorld</span><br><span class="line">LOCAL_SRC_FILES := io_github_sidneygod_jni_1_HelloWorld.cpp</span><br><span class="line"><span class="comment"># 为了能打印log</span></span><br><span class="line">LOCAL_LDLIBS := -lm -llog</span><br><span class="line"><span class="keyword">include</span> <span class="variable">$(BUILD_SHARED_LIBRARY)</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>修改app下的build.gradle</p>
+<figure class="highlight groovy"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">apply <span class="string">plugin:</span> <span class="string">'com.android.application'</span></span><br><span class="line"></span><br><span class="line">android {</span><br><span class="line">    ...</span><br><span class="line">    defaultConfig {</span><br><span class="line">        ...</span><br><span class="line">        ndk {</span><br><span class="line">            <span class="comment">// 这个moduleName和mk文件的LOCAL_MODULE一致</span></span><br><span class="line">            moduleName <span class="string">"HelloWorld"</span></span><br><span class="line">            <span class="comment">// 打印日志需要的</span></span><br><span class="line">            ldLibs <span class="string">"log"</span>, <span class="string">"z"</span>, <span class="string">"m"</span></span><br><span class="line">            <span class="comment">// 指定生成对应版本的库文件 不加这句话默认生成全部</span></span><br><span class="line">            abiFilters <span class="string">"arm64-v8a"</span>, <span class="string">"armeabi-v7a"</span>, <span class="string">"x86_64"</span>, <span class="string">"x86"</span></span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    buildTypes {</span><br><span class="line">        ...</span><br><span class="line">        externalNativeBuild {</span><br><span class="line">            ndkBuild {</span><br><span class="line">                path <span class="string">'src/main/jni/Android.mk'</span></span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>改完了需要sync一下</p>
+</li>
+<li><p>编译运行</p>
+<p><img alt data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301172240368.png"></p>
+<p>和预想中的一毛一样..生成的库文件就在<code>build/intermediates/ndkBuild/debug/obj/local/x86/libHelloWorld.so</code></p>
+</li>
+</ol>
+<h3 id="2-1-2-CMake工具"><a href="#2-1-2-CMake工具" class="headerlink" title="2.1.2 CMake工具"></a>2.1.2 CMake工具</h3><p>直接新建一个Native C++项目</p>
+<p><img alt data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301172757769.png"></p>
+<p>然后会自动生成一个demo，直接运行就可以了..</p>
+<p><img alt data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301173118469.png"></p>
+<p>可以看到多了个CMakeLists.txt, 看一下<code>build.gradle</code>文件</p>
+<figure class="highlight groovy"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">apply <span class="string">plugin:</span> <span class="string">'com.android.application'</span></span><br><span class="line"></span><br><span class="line">android {</span><br><span class="line">    compileSdkVersion <span class="number">29</span></span><br><span class="line">    buildToolsVersion <span class="string">"29.0.3"</span></span><br><span class="line">    defaultConfig {</span><br><span class="line">        ...</span><br><span class="line">        externalNativeBuild {</span><br><span class="line">            cmake {</span><br><span class="line">                cppFlags <span class="string">""</span></span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    ...</span><br><span class="line">    externalNativeBuild {</span><br><span class="line">        cmake {</span><br><span class="line">            path <span class="string">"src/main/cpp/CMakeLists.txt"</span></span><br><span class="line">            version <span class="string">"3.10.2"</span></span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>出现了两次externalNativeBuild</p>
+<p>第一次: 填写CMake参数, 详情参考<a href="https://developer.android.google.cn/ndk/guides/cmake.html" target="_blank" rel="noopener">CMake|Android NDK</a></p>
+<p>第二次: 指明CMakeLists.txt路径</p>
+<p>看看这个CMakeLists.txt到底是什么鬼</p>
+<figure class="highlight cmake"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.4</span>.<span class="number">1</span>)</span><br><span class="line">...</span><br><span class="line"><span class="keyword">add_library</span>(</span><br><span class="line">             native-lib</span><br><span class="line">             SHARED</span><br><span class="line">             native-lib.cpp )</span><br><span class="line">...</span><br><span class="line"><span class="keyword">find_library</span>(</span><br><span class="line">              log-lib</span><br><span class="line">              log )</span><br><span class="line">...</span><br><span class="line"><span class="keyword">target_link_libraries</span>(</span><br><span class="line">                       native-lib</span><br><span class="line">                       <span class="variable">${log-lib}</span> )</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>cmake_minimum_required(): 指定CMake最小版本</li>
+<li>add_library: 创建一个静态或者动态库<ul>
+<li>native-lib: 是库的名字</li>
+<li>SHARED: 是库的类别 动态还是静态</li>
+<li>native-lib.cpp: 库原文件路径</li>
+</ul>
+</li>
+<li>find_library(): 找到一个预编译的库, 将之作为变量存起来<ul>
+<li>log-lib: 设置路径变量名称</li>
+<li>log: 制定NDK库的名字</li>
+</ul>
+</li>
+<li>target_link_libraries(): 指定CMake链接到的目标库<ul>
+<li>native-lib: 指定的目标库</li>
+<li>${log-lib}: 将目标库链接到NDK中的日志库</li>
+</ul>
+</li>
+</ul>
+<p><a href="http://cmake.org/documentation" target="_blank" rel="noopener">CMake文档-英文</a> <a href="https://www.zybuluo.com/khan-lau/note/254724" target="_blank" rel="noopener">CMake手册-中文</a></p>
+<p>注意: 与Instant Run不兼容</p>
+<h2 id="2-2-C-Cpp-call-Java"><a href="#2-2-C-Cpp-call-Java" class="headerlink" title="2.2 C/Cpp call Java"></a>2.2 C/Cpp call Java</h2><h3 id="2-2-1-函数签名"><a href="#2-2-1-函数签名" class="headerlink" title="2.2.1 函数签名"></a>2.2.1 函数签名</h3><p>首先看一眼<code>jni.h</code>中对JNINativeMethod的定义</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> {</span></span><br><span class="line">    <span class="keyword">char</span> *name;</span><br><span class="line">    <span class="keyword">char</span> *signature;</span><br><span class="line">    <span class="keyword">void</span> *fnPtr;</span><br><span class="line">} JNINativeMethod;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>函数名, 函数指针都好理解, 多出来一个函数签名, 这是因为Java允许方法重载, 光靠名字是分别不出来是哪个方法的</p>
+<p>查看一个类中函数的签名</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一定要写对class文件的目录</span></span><br><span class="line">javap -s JniHello.class</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后就可以看到一坨..</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Compiled from "JniHello.java"</span><br><span class="line">public class JniHello {</span><br><span class="line">  public JniHello();</span><br><span class="line">    descriptor: ()V</span><br><span class="line"></span><br><span class="line">  public static native java.lang.String hello(java.lang.String);</span><br><span class="line">    descriptor: (Ljava/lang/String;)Ljava/lang/String;</span><br><span class="line"></span><br><span class="line">  public static void main(java.lang.String[]);</span><br><span class="line">    descriptor: ([Ljava/lang/String;)V</span><br><span class="line"></span><br><span class="line">  static {};</span><br><span class="line">    descriptor: ()V</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>第一个<code>()V</code>：默认构造函数的签名</p>
+<p>第二个<code>(Ljava/lang/String;)Ljava/lang/String;</code>：是那个native函数的签名</p>
+<p>第三个<code>([Ljava/lang/String;)V</code>：是main函数的签名</p>
+<p>第四个<code>()V</code>：是哪个静态代码块的</p>
+<p>JNI规范定义的函数签名信息(<font color="red">注意这个”;” 不加是识别不出来的..</font>)</p>
+<p><code>(参数1类型标识;参数2类型标识;...;)返回值类型标识;</code></p>
+<ul>
+<li>当类型是引用类型时: L+包名+类名, Ljava/lang/String</li>
+<li>当类型是基本类型时: 除了boolean是Z, long是J, 其他全是基本类型首字母大写, V就是void</li>
+<li>数组<ul>
+<li>一般数组: [签名</li>
+<li>int[]: [i</li>
+<li>String[]: [LJava/lang/Object</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-2-实例"><a href="#2-2-2-实例" class="headerlink" title="2.2.2 实例"></a>2.2.2 实例</h3><p>把那个啥上面传统方式的改一下</p>
+<p>先在HelloWorld.java中加两个函数</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>{</span><br><span class="line">    <span class="keyword">static</span> {</span><br><span class="line">        System.loadLibrary(<span class="string">"HelloWorld"</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">native</span> String <span class="title">sayHello</span><span class="params">(String str)</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 新增native函数</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">native</span> <span class="keyword">void</span> <span class="title">nHello</span><span class="params">(String str)</span></span>;</span><br><span class="line">    <span class="comment">// native要调用的函数</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">hello</span><span class="params">(String str)</span> </span>{</span><br><span class="line">        Log.d(<span class="string">"SidneyGod"</span>, <span class="string">"hello: "</span> + str);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Java!"</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>再去完善cpp文件新增的函数nHello</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">JNIEXPORT <span class="keyword">void</span> JNICALL Java_io_github_sidneygod_jni_11_HelloWorld_nHello</span><br><span class="line">  (JNIEnv *env, jclass clazz, jstring contentStr)</span><br><span class="line">{</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span>* jStr = env->GetStringUTFChars(contentStr, JNI_FALSE);</span><br><span class="line">    LOGE(<span class="string">"Welcome to C/CPP! jStr: %s"</span>, jStr);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取HelloWorld的class 包名 + 类名</span></span><br><span class="line">    jclass helloWorld = env->FindClass(<span class="string">"io/github/sidneygod/jni_1/HelloWorld"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取HelloWorld的静态方法hello 类, 方法名, 方法签名</span></span><br><span class="line">    jmethodID hello = env->GetStaticMethodID(</span><br><span class="line">                          helloWorld,</span><br><span class="line">                          <span class="string">"hello"</span>,</span><br><span class="line">                          <span class="string">"(Ljava/lang/String;)Ljava/lang/String;"</span>);</span><br><span class="line">    <span class="comment">// 创建字符串</span></span><br><span class="line">    jstring cStr = env->NewStringUTF(<span class="string">"Hello, I am from JNI."</span>);</span><br><span class="line">    <span class="comment">// 调用Java静态方法 类, 方法, 方法参数...</span></span><br><span class="line">    jstring ret = (jstring) env->CallStaticObjectMethod(helloWorld, hello, cStr);</span><br><span class="line">    <span class="comment">// 打印返回值</span></span><br><span class="line">    LOGE(<span class="string">"Return Value: %s"</span>, env->GetStringUTFChars(ret, JNI_FALSE));</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>其他基本上没什么变化，在click2中调用nHello()，就会触发调用HelloWorld的hello()函数</p>
+<p><img alt data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/image-20200301182529753.png"></p>
+</body></html>
+    </div>
+
+    
+    
+    
+
+      <div style="text-align:center;color:#636363;font-size:14px;">------- This article is over <i class="fa fa-paw"></i> Thank you for your reading -------</div>
+
+        
+      
+        <div id="reward-container">
+  <div>All I need is you needing me.</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="Sidney Ding WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.jpg" alt="Sidney Ding Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Sidney Ding</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://sidneygod.github.io/posts/e3b64abb/" title="JNI">https://sidneygod.github.io/posts/e3b64abb/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
+</ul>
+</div>
+
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/jni/" rel="tag"><i class="fa fa-tag"></i> jni</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/posts/ad7ab3b5/" rel="next" title="Build OpenGrok To Read the Fuck Source Code">
+                  <i class="fa fa-chevron-left"></i> Build OpenGrok To Read the Fuck Source Code
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="comments"></div>
+  
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Catalogue
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-JNI"><span class="nav-text">1 JNI</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-hello-world"><span class="nav-text">1.1 hello world</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-JNI原理"><span class="nav-text">1.2 JNI原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-JavaVM"><span class="nav-text">1.2.1 JavaVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-JNIEnv"><span class="nav-text">1.2.2 JNIEnv</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Android-JNI"><span class="nav-text">2 Android JNI</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Java-call-C-CPP"><span class="nav-text">2.1 Java call C&#x2F;CPP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-传统方式"><span class="nav-text">2.1.1 传统方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-CMake工具"><span class="nav-text">2.1.2 CMake工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-C-Cpp-call-Java"><span class="nav-text">2.2 C&#x2F;Cpp call Java</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-函数签名"><span class="nav-text">2.2.1 函数签名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-实例"><span class="nav-text">2.2.2 实例</span></a></li></ol></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <a href="#">
+      <img class="site-author-image" itemprop="image"
+        src="/images/avatar.png"
+        alt="Sidney Ding">
+    </a>
+  <p class="site-author-name" itemprop="name">Sidney Ding</p>
+  <div class="site-description" itemprop="description">You laugh at me for being different, but I laugh at you for being the same.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/%20%7C%7C%20archive">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/%20%7C%7C%20th">
+          
+        
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/%20%7C%7C%20tags">
+          
+        
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">tags</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/SidneyGod" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;SidneyGod" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:sidneyding183@gmail.com" title="E-Mail &amp;rarr; mailto:sidneyding183@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://google.com/" title="https:&#x2F;&#x2F;google.com" rel="noopener" target="_blank">Google</a>
+        </li>
+      
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sidney Ding</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">Symbols count total: </span>
+    
+    <span title="Symbols count total">51k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">Reading time total &asymp;</span>
+    
+    <span title="Reading time total">1:25</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.1</div>
+  <div>
+    <span><i class="fa fa-bomb"></i> </span>
+    <span id="showDays"></span>
+  </div>
+
+<script>
+  var seconds = 1000;
+  var minutes = seconds * 60;
+  var hours = minutes * 60;
+  var days = hours * 24;
+  var years = days * 365;
+  var birthDay = Date.UTC(2019,10,1,00,00,00);
+  setInterval(function() {
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var now = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = now - birthDay;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+    document.getElementById('showDays').innerHTML="This website has been running for "+diffYears+" years, "+diffDays+" days, "+diffHours+" hours, "+diffMinutes+" minutes, "+diffSeconds+" seconds";
+  }, 1000);
+</script>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.4.1.js"></script>
+
+<script src="/js/motion.js?v=7.4.1.js"></script>
+
+
+<script src="/js/schemes/pisces.js?v=7.4.1.js"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.4.1.js"></script>
+
+<script src="/js/bookmark.js?v=7.4.1.js"></script>
+
+
+  <script defer src="//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three.min.js"></script>
+    
+    <script defer src="//cdn.jsdelivr.net/gh/theme-next/theme-next-three@latest/three-waves.min.js"></script>
+  
+
+
+  
+
+
+
+
+
+
+
+
+  
+<script src="/js/local-search.js?v=7.4.1.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('div.pdf').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js', () => {
+    document.querySelectorAll('div.pdf').forEach(element => {
+      PDFObject.embed(element.getAttribute('target'), element, {
+        pdfOpenParams: {
+          navpanes: 0,
+          toolbar: 0,
+          statusbar: 0,
+          pagemode: 'thumbs',
+          view: 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height: element.getAttribute('height') || '500px'
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: false,
+    appId: 'IJiDbg4VAiIeDsIj4MBo39Hq-gzGzoHsz',
+    appKey: '0osu23DWjzCzrIVH4Ybe3ihh',
+    placeholder: 'Just go go',
+    avatar: 'monsterid',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'en' || 'zh-cn',
+    path: location.pathname,
+    recordIP: true,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+  
+  <canvas id="canvas-rain" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 1;">Canvas is not supported in your browser</canvas>
+  <script type="text/javascript" src="/js/rain.js"></script>
+  <script type="text/javascript" src="/js/love.js"></script>
+</body>
+</html>
