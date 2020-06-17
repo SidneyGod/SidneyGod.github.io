@@ -67,7 +67,7 @@
 <meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/null/Cpp_Keywords.jpg">
 <meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/null/type_conversion.png">
 <meta property="article:published_time" content="2020-06-16T14:13:04.000Z">
-<meta property="article:modified_time" content="2020-06-16T14:27:57.806Z">
+<meta property="article:modified_time" content="2020-06-17T00:04:48.321Z">
 <meta property="article:author" content="Sidney Ding">
 <meta property="article:tag" content="Sidney">
 <meta property="article:tag" content=" Ding">
@@ -364,11 +364,19 @@
                 
               
 
-              <time title="Created: 2020-06-16 22:13:04 / Modified: 22:27:57" itemprop="dateCreated datePublished" datetime="2020-06-16T22:13:04+08:00">2020-06-16</time>
+              <time title="Created: 2020-06-16 22:13:04" itemprop="dateCreated datePublished" datetime="2020-06-16T22:13:04+08:00">2020-06-16</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-06-17 08:04:48" itemprop="dateModified" datetime="2020-06-17T08:04:48+08:00">2020-06-17</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -781,8 +789,9 @@
 </blockquote>
 <figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c = <span class="string">'a'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">char</span> *p1 = <span class="string">"abc"</span>;  <span class="comment">// 指向常量的变量指针 从右向左看</span></span><br><span class="line"><span class="keyword">char</span> <span class="keyword">const</span> *p2 = <span class="string">"abc"</span>;  <span class="comment">// 指向常量的变量指针</span></span><br><span class="line"><span class="keyword">char</span> *<span class="keyword">const</span> p3 = <span class="string">"abc"</span>;  <span class="comment">// 指向变量的常量指针</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">char</span> <span class="keyword">const</span> *p4 = <span class="string">"abc"</span>;  <span class="comment">// 其实这里的第二个const是多余的</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">char</span> *<span class="keyword">const</span> p5 = <span class="string">"abc"</span>;  <span class="comment">// 指向常量的常量指针</span></span><br><span class="line"></span><br><span class="line">p1 = &c;  <span class="comment">// p1的值可以变</span></span><br><span class="line"><span class="comment">// *p1 = c;  // p1指向的值不能变</span></span><br><span class="line"></span><br><span class="line">p2 = &c;  <span class="comment">// 同上</span></span><br><span class="line"><span class="comment">// *p1 = c;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// p3 = &c;  // p3的值不可以变 p3是指针(地址) 是常量</span></span><br><span class="line">*p3 = c;  <span class="comment">// *p3的值可以变</span></span><br><span class="line"></span><br><span class="line">p4 = &c;  <span class="comment">// 同p1</span></span><br><span class="line"><span class="comment">// *p4 = c;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// p5 = &c;  // 指针(地址)常量 不可变</span></span><br><span class="line"><span class="comment">// *p5 = c;  // 指向常量 不可变</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p>按照C++ Primer的说法，<strong>从右向左看</strong>似乎是能看通的，没啥大问题。不过这么想，const优先和左边结合，左边没有再和右边结合，反正const就是不允许变的意思。</p>
+<p>按照C++ Primer的说法，<strong>从右向左看</strong>似乎是能看通的，没啥大问题。不过这么想，const优先和左边结合，左边没有再和右边结合，反正const就是不允许变的意思，并且这样就能说得通上面的<code>const PCHAR</code>是<code>PCHAR const</code>，也就是<code>char* const</code>，而不是<code>const char *</code>或<code>char const *</code>了。</p>
 <p>这里的指针换成C++的引用也是同样适用的</p>
+<p>话又说回来，<strong>一般使用typedef去简化指针的时候似乎都会加个const</strong>，例如：<code>typedef const char* PCHAR;</code>，以使得该指针本身是常量，而不是对象</p>
 </body></html>
     </div>
 
