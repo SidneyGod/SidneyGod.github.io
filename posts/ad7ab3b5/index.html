@@ -850,7 +850,6 @@
 
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
@@ -1035,8 +1034,35 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
 </script>
 
   
+  
+<script>
+  var OriginTitile = document.title;
+  var titleTime;
+  document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+      document.title = "(つェ⊂) 我藏好了哦~" + OriginTitile;
+      clearTimeout(titleTime);
+    } else {
+      document.title = "(*´∇｀*) 被你发现啦~" + OriginTitile;
+      titleTime = setTimeout(function() {
+        document.title = OriginTitile;
+      }, 2000);
+    }
+  });
+</script>
+
+  
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = true;
+    POWERMODE.shake = true;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+  
   <canvas id="canvas-rain" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 1;">Canvas is not supported in your browser</canvas>
-  <script type="text/javascript" src="/js/rain.js"></script>
-  <script type="text/javascript" src="/js/love.js"></script>
+  <script async type="text/javascript" src="/js/rain.js"></script>
+  <script async type="text/javascript" src="/js/love.js"></script>
+  <script async type="text/javascript" src="/js/fireworks.js"></script
 </body>
 </html>
