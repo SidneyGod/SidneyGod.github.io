@@ -1290,7 +1290,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #bb12ff;
+  background: #4e478b;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -3101,10 +3101,10 @@ ul.breadcrumb li + li:last-child {
   color: #fced6d;
 }
 * {
-  cursor: url("/images/cursor/pointer.ico"), auto !important;
+  cursor: url("/images/cursor/normal.cur"), auto !important;
 }
 :active {
-  cursor: url("/images/cursor/click.ico"), auto !important;
+  cursor: url("/images/cursor/link.cur"), auto !important;
 }
 code {
   font-size: 14px;
