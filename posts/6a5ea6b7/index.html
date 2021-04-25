@@ -59,7 +59,7 @@
 
   <meta name="description" content="1 标识符 关键字标识符命名规则：  变量名只能是字母（A-Z，a-z）和数字（0-9）或者下划线（_）或者美元符号（$）组成 第一个字母不能是数字 不能使用C&#x2F;C++关键字来命名变量 变量名区分大小写  1int $name1, _name2, Name3;   似乎有的版本不支持$..我试了gcc8.1是可以的  C语言关键字：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Relearning C&#x2F;Cpp: Foundation Type">
+<meta property="og:title" content="[Relearning C&#x2F;Cpp] Foundation Type">
 <meta property="og:url" content="https://sidneygod.github.io/posts/6a5ea6b7/index.html">
 <meta property="og:site_name" content="Sidney God">
 <meta property="og:description" content="1 标识符 关键字标识符命名规则：  变量名只能是字母（A-Z，a-z）和数字（0-9）或者下划线（_）或者美元符号（$）组成 第一个字母不能是数字 不能使用C&#x2F;C++关键字来命名变量 变量名区分大小写  1int $name1, _name2, Name3;   似乎有的版本不支持$..我试了gcc8.1是可以的  C语言关键字：">
@@ -67,7 +67,7 @@
 <meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/null/Cpp_Keywords.jpg">
 <meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/null/type_conversion.png">
 <meta property="article:published_time" content="2020-06-16T14:13:04.000Z">
-<meta property="article:modified_time" content="2020-08-23T10:12:59.517Z">
+<meta property="article:modified_time" content="2021-04-24T11:28:33.665Z">
 <meta property="article:author" content="Sidney Ding">
 <meta property="article:tag" content="C">
 <meta property="article:tag" content="Cpp">
@@ -87,7 +87,7 @@
   };
 </script>
 
-  <title>Relearning C/Cpp: Foundation Type | Sidney God</title>
+  <title>[Relearning C/Cpp] Foundation Type | Sidney God</title>
   
 
 
@@ -258,7 +258,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">13</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">15</span></a>
 
   </li>
       
@@ -367,7 +367,7 @@
       <meta itemprop="name" content="Sidney God">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Relearning C/Cpp: Foundation Type
+        <h1 class="post-title" itemprop="name headline">[Relearning C/Cpp] Foundation Type
 
           
         </h1>
@@ -394,7 +394,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-23 18:12:59" itemprop="dateModified" datetime="2020-08-23T18:12:59+08:00">2020-08-23</time>
+                <time title="Modified: 2021-04-24 19:28:33" itemprop="dateModified" datetime="2021-04-24T19:28:33+08:00">2021-04-24</time>
               </span>
             
           
@@ -435,7 +435,7 @@
               
                 <span class="post-meta-item-text">Symbols count in article: </span>
               
-              <span>13k</span>
+              <span>14k</span>
             </span>
           
             <span class="post-meta-item" title="Reading time">
@@ -445,7 +445,7 @@
               
                 <span class="post-meta-item-text">Reading time &asymp;</span>
               
-              <span>22 mins.</span>
+              <span>23 mins.</span>
             </span>
           
 
@@ -741,7 +741,7 @@
 <p>text和data段都在可执行文件中（在嵌入式系统里一般是固化在镜像文件中），由系统从可执行文件中加载；而bss段不在可执行文件中，由系统初始化。</p>
 </blockquote>
 <p>应该放上一段汇编的，奈何看不太明白，mark几条命令</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 汇编代码 8086 或者 AT&T</span></span><br><span class="line">gcc -S -masm=intel main.c -o main.s</span><br><span class="line">gcc -S -masm=att main.c -o main.s</span><br><span class="line"></span><br><span class="line"><span class="comment"># 反汇编</span></span><br><span class="line">objdump -d test.exe</span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出目标文件的符号清单</span></span><br><span class="line">nm test.exe</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 汇编代码 8086 或者 AT&T，Linux上一般是ATT的</span></span><br><span class="line">gcc -S -O2 -masm=intel main.c -o main.s</span><br><span class="line">gcc -S -O2 -masm=att main.c -o main.s</span><br><span class="line"></span><br><span class="line"><span class="comment"># 反汇编</span></span><br><span class="line">objdump -sd test.exe</span><br><span class="line">objdump -h test.exe  <span class="comment"># 查看代码段啥的..</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出目标文件的符号清单</span></span><br><span class="line">nm test.exe</span><br></pre></td></tr></tbody></table></figure>
 
 <p><strong>静态变量(static)</strong></p>
 <p>在C/C++中，static 关键字不仅可以用来修饰变量，还可以用来修饰函数。在使用static关键字修饰变量时，我们称此变量为静态变量。静态变量的存储方式与全局变量一样，都是静态存储方式，但是全局变量不是静态变量</p>
@@ -811,6 +811,13 @@
 <p>按照C++ Primer的说法，<strong>从右向左看</strong>似乎是能看通的，没啥大问题。不过这么想，const优先和左边结合，左边没有再和右边结合，反正const就是不允许变的意思，并且这样就能说得通上面的<code>const PCHAR</code>是<code>PCHAR const</code>，也就是<code>char* const</code>，而不是<code>const char *</code>或<code>char const *</code>了。</p>
 <p>这里的指针换成C++的引用也是同样适用的</p>
 <p>话又说回来，<strong>一般使用typedef去简化指针的时候似乎都会加个const</strong>，例如：<code>typedef const char* PCHAR;</code>，以使得该指针本身是常量，而不是对象</p>
+<h1 id="8-sizeof"><a href="#8-sizeof" class="headerlink" title="8 sizeof"></a>8 sizeof</h1><p>这个其实没啥好说的，就是这是个关键字，不是个函数..比如说，写一段cpp代码，如下</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string"><iostream></span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> a)</span> </span>{}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="keyword">int</span> a = <span class="keyword">sizeof</span>(<span class="keyword">int</span>);</span><br><span class="line">    fun(<span class="number">4</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>汇编一下</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">main:</span><br><span class="line">truepushq	%rbp</span><br><span class="line">true...  # 先不管中间是啥</span><br><span class="line">true.seh_endprologue</span><br><span class="line">truecall	__main  # 程序入口 main函数 从汇编来看 main并不是第一阶段</span><br><span class="line">truemovl	$4, -4(%rbp)  # 这一步我觉得是 int a = sizeof(int);</span><br><span class="line">truemovl	$4, %ecx  # 这一步我觉得是 a = 4，fun的形参</span><br><span class="line">truecall	_Z3funi  # 这才是调用函数fun，可见，如果是函数必然是要call的</span><br><span class="line">truemovl	$0, %eax</span><br><span class="line">trueaddq	$48, %rsp</span><br><span class="line">truepopq	%rbp</span><br><span class="line">trueret</span><br></pre></td></tr></tbody></table></figure>
+
+<p>从汇编代码来看，在编译阶段就已经知道<code>sizeof(int)</code>的值了</p>
 </body></html>
     </div>
 
@@ -853,7 +860,7 @@
     <strong>Post author:  </strong>Sidney Ding</li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="https://sidneygod.github.io/posts/6a5ea6b7/" title="Relearning C&#x2F;Cpp: Foundation Type">https://sidneygod.github.io/posts/6a5ea6b7/</a>
+    <a href="https://sidneygod.github.io/posts/6a5ea6b7/" title="[Relearning C&#x2F;Cpp] Foundation Type">https://sidneygod.github.io/posts/6a5ea6b7/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
@@ -890,8 +897,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/posts/ea0e14e5/" rel="prev" title="Relearning C/Cpp: Operators and Expressions">
-                  Relearning C/Cpp: Operators and Expressions <i class="fa fa-chevron-right"></i>
+                <a href="/posts/ea0e14e5/" rel="prev" title="[Relearning C/Cpp] Operators and Expressions">
+                  [Relearning C/Cpp] Operators and Expressions <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -942,7 +949,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-标识符-关键字"><span class="nav-text">1 标识符 关键字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-变量声明-定义-初始化"><span class="nav-text">2 变量声明 定义 初始化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-变量类型-大小-类型转换"><span class="nav-text">3 变量类型 大小 类型转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-变量作用域"><span class="nav-text">4 变量作用域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-变量存储位置"><span class="nav-text">5 变量存储位置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-类型推导"><span class="nav-text">6 类型推导</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-typedef"><span class="nav-text">7 typedef</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-标识符-关键字"><span class="nav-text">1 标识符 关键字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-变量声明-定义-初始化"><span class="nav-text">2 变量声明 定义 初始化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-变量类型-大小-类型转换"><span class="nav-text">3 变量类型 大小 类型转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-变量作用域"><span class="nav-text">4 变量作用域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-变量存储位置"><span class="nav-text">5 变量存储位置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-类型推导"><span class="nav-text">6 类型推导</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-typedef"><span class="nav-text">7 typedef</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-sizeof"><span class="nav-text">8 sizeof</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -963,7 +970,7 @@
         
           <a href="/archives/%20%7C%7C%20archive">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1065,7 +1072,7 @@
     </main>
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -1076,14 +1083,14 @@
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
     
-    <span title="Symbols count total">110k</span>
+    <span title="Symbols count total">161k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
     
-    <span title="Reading time total">3:03</span>
+    <span title="Reading time total">4:28</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0</div>
   <span class="post-meta-divider">|</span>

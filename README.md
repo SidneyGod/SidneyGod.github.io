@@ -1,3 +1,5 @@
 # This is my blog
 
-just my blog
+The Blog url：https://sidneygod.gitee.io  or  https://sidneygod.github.io
+
+Sharing my knowledge, opinions, thoughts.
