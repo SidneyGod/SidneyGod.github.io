@@ -441,7 +441,7 @@
               
                 <span class="post-meta-item-text">Symbols count in article: </span>
               
-              <span>8.1k</span>
+              <span>8k</span>
             </span>
           
             <span class="post-meta-item" title="Reading time">
@@ -582,7 +582,7 @@
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一定要写对class文件的目录</span></span><br><span class="line">javap -s JniHello.class</span><br></pre></td></tr></tbody></table></figure>
 
 <p>然后就可以看到一坨..</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Compiled from "JniHello.java"</span><br><span class="line">public class JniHello {</span><br><span class="line">  public JniHello();</span><br><span class="line">    descriptor: ()V</span><br><span class="line"></span><br><span class="line">  public static native java.lang.String hello(java.lang.String);</span><br><span class="line">    descriptor: (Ljava/lang/String;)Ljava/lang/String;</span><br><span class="line"></span><br><span class="line">  public static void main(java.lang.String[]);</span><br><span class="line">    descriptor: ([Ljava/lang/String;)V</span><br><span class="line"></span><br><span class="line">  static {};</span><br><span class="line">    descriptor: ()V</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight haxe"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Compiled from <span class="string">"JniHello.java"</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JniHello</span> </span>{</span><br><span class="line">  <span class="keyword">public</span> JniHello();</span><br><span class="line">    descriptor: <span class="type"></span>()V</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> native java.lang.<span class="keyword">String</span> hello(java.lang.<span class="keyword">String</span>);</span><br><span class="line">    descriptor: <span class="type"></span>(Ljava/lang/<span class="keyword">String</span>;)Ljava/lang/<span class="keyword">String</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> void main(java.lang.<span class="keyword">String</span>[]);</span><br><span class="line">    descriptor: <span class="type"></span>([Ljava/lang/<span class="keyword">String</span>;)V</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> {};</span><br><span class="line">    descriptor: <span class="type"></span>()V</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>第一个<code>()V</code>：默认构造函数的签名</p>
 <p>第二个<code>(Ljava/lang/String;)Ljava/lang/String;</code>：是那个native函数的签名</p>
@@ -872,14 +872,14 @@
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
     
-    <span title="Symbols count total">161k</span>
+    <span title="Symbols count total">163k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
     
-    <span title="Reading time total">4:28</span>
+    <span title="Reading time total">4:31</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0</div>
   <span class="post-meta-divider">|</span>

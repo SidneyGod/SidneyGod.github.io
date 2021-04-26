@@ -500,7 +500,7 @@
 <p>还有<code>#pragma</code>，这个宏在visual studio中常见，这个宏用起来比较复杂，其一般格式是<code>#pragma para</code>，其中para表示参数，瞅瞅常见参数</p>
 <p><strong>#pragma message</strong></p>
 <p>常常这么用<code>#pragma message(&quot;some msg..&quot;)</code>，当编译器遇到这条指令时就在<strong>编译输出窗口</strong>中将消息文本打印出来，编译时才会打印哦</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">E:\Workspace\CCpp\test&gt;g++ -std&#x3D;c++17 main.cpp -o x</span><br><span class="line">main.cpp:1:31: note: #pragma message: hello world!</span><br><span class="line"> #pragma message(&quot;hello world!&quot;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">E:\Workspace\CCpp\test&gt;g++ -std=c++<span class="number">17</span> main<span class="selector-class">.cpp</span> -o x</span><br><span class="line">main<span class="selector-class">.cpp</span>:<span class="number">1</span>:<span class="number">31</span>: note: <span class="selector-id">#pragma</span> message: hello world!</span><br><span class="line"> <span class="selector-id">#pragma</span> message(<span class="string">"hello world!"</span>)</span><br></pre></td></tr></table></figure>
 
 <p>同时，<strong>还有<code>#error</code>和<code>#warning</code></strong>，也是针对编译时的，其中warning只是发出警告，error会停止编译</p>
 <p><strong>#pragma code_seg</strong></p>
@@ -794,14 +794,14 @@
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
     
-    <span title="Symbols count total">161k</span>
+    <span title="Symbols count total">163k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
     
-    <span title="Reading time total">4:28</span>
+    <span title="Reading time total">4:31</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0</div>
   <span class="post-meta-divider">|</span>
