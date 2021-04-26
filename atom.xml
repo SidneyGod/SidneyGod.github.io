@@ -95,9 +95,9 @@
       <category term="Other" scheme="https://sidneygod.github.io/categories/Other/"/>
     
     
-      <category term="blog" scheme="https://sidneygod.github.io/tags/blog/"/>
-    
       <category term="leanote" scheme="https://sidneygod.github.io/tags/leanote/"/>
+    
+      <category term="blog" scheme="https://sidneygod.github.io/tags/blog/"/>
     
   </entry>
   
@@ -444,9 +444,9 @@
       <category term="Other" scheme="https://sidneygod.github.io/categories/Other/"/>
     
     
-      <category term="hexo" scheme="https://sidneygod.github.io/tags/hexo/"/>
-    
       <category term="blog" scheme="https://sidneygod.github.io/tags/blog/"/>
+    
+      <category term="hexo" scheme="https://sidneygod.github.io/tags/hexo/"/>
     
   </entry>
   
