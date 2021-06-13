@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=7.4.1">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
+  <link rel="alternate" href="/atom.xml" title="Sidney God" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"flat"},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":true,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: true,
+    lazyload: true,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="手里就一台笔记本，可不想把系统换成Linux的，毕竟有很多操作还是很不方便，但是又想学习学习Android源码，所以，总得找点什么凑活着用的办法，于是我把目光放到了Win10上的Linux子系统上了，也就是WSL，毕竟虚拟机太废内存划不来，亲测 CPU：AMD Ryzen 7 4800H with Radeon Graphics 2.90 GHz RAM：16G ROM：512G SSD + 2T">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Compile Android 11 with WSL2">
+<meta property="og:url" content="https://sidneygod.github.io/posts/c64b5633/index.html">
+<meta property="og:site_name" content="Sidney God">
+<meta property="og:description" content="手里就一台笔记本，可不想把系统换成Linux的，毕竟有很多操作还是很不方便，但是又想学习学习Android源码，所以，总得找点什么凑活着用的办法，于是我把目光放到了Win10上的Linux子系统上了，也就是WSL，毕竟虚拟机太废内存划不来，亲测 CPU：AMD Ryzen 7 4800H with Radeon Graphics 2.90 GHz RAM：16G ROM：512G SSD + 2T">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/20210613100715.png">
+<meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/20210613100834.png">
+<meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/20210613231943.png">
+<meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/20210614010437.png">
+<meta property="article:published_time" content="2021-06-13T01:15:43.000Z">
+<meta property="article:modified_time" content="2021-06-13T17:10:53.311Z">
+<meta property="article:author" content="Sidney Ding">
+<meta property="article:tag" content="WSL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/20210613100715.png">
+  <link rel="canonical" href="https://sidneygod.github.io/posts/c64b5633/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Compile Android 11 with WSL2 | Sidney God</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Sidney God</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Keep quiet time for time</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+      
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">20</span></a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+      
+      
+        
+      
+        
+          
+        
+      
+        
+      
+    
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories<span class="badge">3</span></a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">17</span></a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-commonweal">
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>Commonweal 404</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-resources">
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/resources/" rel="section"><i class="fa fa-fw fa-book"></i>Resources</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="fa fa-search fa-fw"></i>Search</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a class="book-mark-link book-mark-link-fixed" href="#"></a>
+
+  <a href="https://github.com/SidneyGod" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://sidneygod.github.io/posts/c64b5633/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sidney Ding">
+      <meta itemprop="description" content="You laugh at me for being different, but I laugh at you for being the same.">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sidney God">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Compile Android 11 with WSL2
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2021-06-13 09:15:43" itemprop="dateCreated datePublished" datetime="2021-06-13T09:15:43+08:00">2021-06-13</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-06-14 01:10:53" itemprop="dateModified" datetime="2021-06-14T01:10:53+08:00">2021-06-14</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/posts/c64b5633/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/c64b5633/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              
+              <span>16k</span>
+            </span>
+          
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              
+              <span>26 mins.</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <html><head></head><body><p>手里就一台笔记本，可不想把系统换成Linux的，毕竟有很多操作还是很不方便，但是又想学习学习Android源码，所以，总得找点什么凑活着用的办法，于是我把目光放到了Win10上的Linux子系统上了，也就是WSL，毕竟虚拟机太废内存划不来，亲测</p>
+<p>CPU：AMD Ryzen 7 4800H with Radeon Graphics 2.90 GHz</p>
+<p>RAM：16G</p>
+<p>ROM：512G SSD + 2T HDD</p>
+<p>GPU：GTX 1650</p>
+<p>跑起来不说多么流畅，反正不卡，可能编译慢点，咱也不差那点时间，硬盘预留个256G的空间就够了。话不多说，记录一下这次操作的经历..</p>
+<a id="more"></a>
+
+<h1 id="1-安装WSL2"><a href="#1-安装WSL2" class="headerlink" title="1 安装WSL2"></a>1 安装WSL2</h1><p>网上教程比较多，直接看微软官方教程即可：[在 Windows 10 上安装 WSL | Microsoft Docs](<a href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10#manual-installation-steps" target="_blank" rel="noopener">在 Windows 10 上安装 WSL | Microsoft Docs</a>)</p>
+<p>我这里按照教程装了Ubuntu-18.04，推荐也安装个Windows Terminal，还是挺好用的，可以看看这个：<a href="https://zhuanlan.zhihu.com/p/137595941" target="_blank" rel="noopener">Windows Terminal 完美配置 PowerShell 7.1 - 知乎 (zhihu.com)</a></p>
+<p>按照这个方法安装完了呢，WSL2所有东西都是默认放在C盘的，咱可是要做大事的人，C盘怕是放不太下，啥？你就一个盘，好的，当我没说。</p>
+<h2 id="1-1-WSL2挪位"><a href="#1-1-WSL2挪位" class="headerlink" title="1.1 WSL2挪位"></a>1.1 WSL2挪位</h2><p>我C盘就200G显然不能够干大事，所以就转移到E盘了，于是，咱们打开powershell或者Windows Terminal：</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 挪位置</span></span><br><span class="line"><span class="comment">## 设置WSL要移动的位置</span></span><br><span class="line">PS C:\Users\Sidney> <span class="variable">$newLocation</span> = <span class="string">"E:\wsl2\ubuntu18"</span></span><br><span class="line"><span class="comment">## 这里具体位置可能不同 找到CanonicalGroupLimited.Ubuntu18.04onWindows开头就不会错了</span></span><br><span class="line">PS C:\Users\Sidney> cd ~\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.<span class="number">04</span>onWindows_79rhkp1fndgsc\LocalState</span><br><span class="line"><span class="comment">## 彻底关闭wsl</span></span><br><span class="line">PS C:\Users\Sidney\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.<span class="number">04</span>onWindows_79rhkp1fndgsc\LocalState> wsl --shutdown</span><br><span class="line"><span class="comment">## 下面这些命令 需要启用hype-v相关服务 不然会报没这个命令啥的 如果不需要 移动完了再关掉就行了</span></span><br><span class="line"><span class="comment">## 主要是两个地方 一个是 启用或关闭Windows功能 另一个是 服务 后面放张图</span></span><br><span class="line">PS C:\Users\Sidney\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.<span class="number">04</span>onWindows_79rhkp1fndgsc\LocalState> Optimize-VHD .\ext4.vhdx -Mode Full</span><br><span class="line"><span class="comment">## 创建目标位置</span></span><br><span class="line">PS C:\Users\Sidney\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.<span class="number">04</span>onWindows_79rhkp1fndgsc\LocalState> mkdir <span class="variable">$newLocation</span> -Force</span><br><span class="line"><span class="comment">## 这就挪过去了</span></span><br><span class="line">PS C:\Users\Sidney\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.<span class="number">04</span>onWindows_79rhkp1fndgsc\LocalState> mv ext4.vhdx <span class="variable">$newLocation</span></span><br><span class="line">PS C:\Users\Sidney\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.<span class="number">04</span>onWindows_79rhkp1fndgsc\LocalState> cd ..</span><br><span class="line">PS C:\Users\Sidney\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.<span class="number">04</span>onWindows_79rhkp1fndgsc\LocalState> rm LocalState</span><br><span class="line"><span class="comment">## 这实际上就类似于Linux上的link</span></span><br><span class="line">PS C:\Users\Sidney\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.<span class="number">04</span>onWindows_79rhkp1fndgsc\LocalState> <span class="built_in">New-Item</span> -ItemType SymbolicLink -Path <span class="string">"LocalState"</span> -Target <span class="variable">$newLocation</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 导出导入Ubuntu18</span></span><br><span class="line"><span class="comment">## 路径太长 看着不舒服 换一下</span></span><br><span class="line">PS C:\Users\Sidney\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.<span class="number">04</span>onWindows_79rhkp1fndgsc\LocalState> cd ~</span><br><span class="line">PS C:\Users\Sidney> wsl --shutdown</span><br><span class="line">PS C:\Users\Sidney> wsl -l -v</span><br><span class="line">  NAME            STATE           VERSION</span><br><span class="line">* Ubuntu-<span class="number">18.04</span>    Stopped         <span class="number">2</span></span><br><span class="line"><span class="comment">## 导出</span></span><br><span class="line">PS C:\Users\Sidney> wsl --export Ubuntu-<span class="number">18.04</span>  E:\wsl2\ubuntu18\ubuntu18.tar</span><br><span class="line">PS C:\Users\Sidney> wsl --unregister Ubuntu-<span class="number">18.04</span></span><br><span class="line"><span class="comment">## 导入</span></span><br><span class="line">PS C:\Users\Sidney> wsl --import Ubuntu-<span class="number">18.04</span> E:\wsl2\ubuntu18 E:\wsl2\ubuntu18\ubuntu18.tar</span><br><span class="line"><span class="comment">## 设置默认用户 就是之前安装wsl时创建的用户</span></span><br><span class="line">PS C:\Users\Sidney> ubuntu1804.exe config --default-user sidney</span><br></pre></td></tr></tbody></table></figure>
+
+<p>至此已经完成了wsl的迁移，已经可以用了</p>
+<p>贴两张图</p>
+<p>一个是 启用或关闭Windows功能，Win + R – 输入”control”，回车 – 程序</p>
+<img data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/20210613100715.png">
+
+<p>另一个是 服务，Win + R – 输入”services.msc”，回车</p>
+<img data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/20210613100834.png">
+
+<p>接下来需要考虑一件事，把Android源码放在哪？如果放在宿主机，Win10上，最好开启大小写敏感，以及得考虑后面权限的事情，我怕麻烦，最后决定就放wsl里面好了</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开启大小写敏感</span></span><br><span class="line">fsutil file SetCaseSensitiveInfo E:\workspace\AOSP enable</span><br><span class="line">fsutil file SetCaseSensitiveInfo E:\workspace\CCACHE enable</span><br><span class="line"><span class="comment"># 关闭大小写敏感</span></span><br><span class="line">fsutil file SetCaseSensitiveInfo E:\workspace\AOSP disable</span><br><span class="line">fsutil file SetCaseSensitiveInfo E:\workspace\CCACHE disable</span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果想要看代码，可以在wsl里面再弄个opengrok：<a href="https://sidneygod.github.io/posts/ad7ab3b5/">Build OpenGrok To Read the Fuck Source Code | Sidney God</a></p>
+<h2 id="1-2-WSL2配置"><a href="#1-2-WSL2配置" class="headerlink" title="1.2 WSL2配置"></a>1.2 WSL2配置</h2><p>我也是后来才想起来的，这儿么点配置，编译Android有点费事不说，还有可能编不了，我们需要对wsl做点什么：<a href="https://docs.microsoft.com/en-us/windows/wsl/wsl-config" target="_blank" rel="noopener">Manage Linux Distributions | Microsoft Docs</a></p>
+<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在Windows的user根目录创建.wslconfig文件 啥？你问我为啥有vim cat..命令？我装了git啊</span></span><br><span class="line">PS C:\Users\Sidney> vim ~\.wslconfig</span><br><span class="line">[wsl2]</span><br><span class="line"><span class="comment">#memory=8GB # Limits VM memory in WSL 2 to 4 GB</span></span><br><span class="line">processors=<span class="number">4</span> <span class="comment"># Makes the WSL 2 VM use two virtual processors</span></span><br><span class="line">swap=<span class="number">16</span>GB  <span class="comment"># 你不设置 貌似没有swap</span></span><br><span class="line">swapFile=%USERPROFILE%\AppData\Local\Temp\swap.vhdx</span><br><span class="line">localhostForwarding=true</span><br><span class="line"></span><br><span class="line">[interop]</span><br><span class="line">enabled=false</span><br><span class="line">appendWindowsPath=false</span><br><span class="line"></span><br><span class="line"><span class="comment"># 然后需要重启才能生效</span></span><br><span class="line">PS C:\Users\Sidney> wsl --shutdown</span><br><span class="line"></span><br><span class="line"><span class="comment"># 最好再用管理员模式打开powershell输入以下命令</span></span><br><span class="line">net stop LxssManager</span><br><span class="line">net start LxssManager</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="1-3-WSL2扩容"><a href="#1-3-WSL2扩容" class="headerlink" title="1.3 WSL2扩容"></a>1.3 WSL2扩容</h2><p>WSL2使用虚拟硬件磁盘(VHD)来存储Linux文件。如果达到其最大大小，则可能需要对其进行扩展。WSL2 VHD使用ext4文件系统,此VHD会自动调整大小以满足你的存储需求，并且其最大大小为256GB。如果你的分发版大小增长到大于256GB，则会显示错误，指出磁盘空间不足。 可以通过扩展 VHD 大小来纠正此错误。若要将最大 VHD 大小扩展到超过 256GB，请执行以下操作：</p>
+<p>以管理员模式打开powershell</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">PS C:\WINDOWS\system32> diskpart</span><br><span class="line"></span><br><span class="line">Microsoft DiskPart 版本 <span class="number">10.0</span>.<span class="number">19041.964</span></span><br><span class="line"></span><br><span class="line">Copyright (C) Microsoft Corporation.</span><br><span class="line">在计算机上: SIDNEYGOD</span><br><span class="line"><span class="comment"># 找不到咱的虚拟磁盘</span></span><br><span class="line">DISKPART> list vol</span><br><span class="line"></span><br><span class="line">  卷 <span class="comment">###      LTR  标签         FS     类型        大小     状态       信息</span></span><br><span class="line">  ----------  ---  -----------  -----  ----------  -------  ---------  --------</span><br><span class="line">  卷     <span class="number">0</span>     E   <span class="keyword">Data</span>         NTFS   磁盘分区        <span class="number">1863</span> GB  正常</span><br><span class="line">  卷     <span class="number">1</span>     C   System       NTFS   磁盘分区         <span class="number">200</span> GB  正常         启动</span><br><span class="line">  卷     <span class="number">2</span>     D   Software     NTFS   磁盘分区         <span class="number">275</span> GB  正常</span><br><span class="line">  卷     <span class="number">3</span>         SYSTEM_DRV   FAT32  磁盘分区         <span class="number">260</span> MB  正常         系统</span><br><span class="line">  卷     <span class="number">4</span>         WINRE_DRV    NTFS   磁盘分区        <span class="number">1000</span> MB  正常         已隐藏</span><br><span class="line">DISKPART> list vdisk</span><br><span class="line"></span><br><span class="line">没有要显示的虚拟磁盘。</span><br><span class="line"><span class="comment"># 但是咱知道在哪啊 选中</span></span><br><span class="line">DISKPART> Select vdisk file=<span class="string">"E:\wsl2\ubuntu18\ext4.vhdx"</span></span><br><span class="line"><span class="comment"># 扩展</span></span><br><span class="line">DISKPART> expand vdisk maximum=<span class="string">"358400"</span></span><br><span class="line"><span class="comment"># 退出</span></span><br><span class="line">DISKPART> <span class="keyword">exit</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>到这里算是把wsl折腾完了</p>
+<h1 id="2-编译Android"><a href="#2-编译Android" class="headerlink" title="2 编译Android"></a>2 编译Android</h1><p>我这里为啥没选Android S呢，完全是因为编不懂，编system的时候总是segment fault，并且当时也忘了设置swap试试，所以就试试Android R了，结果还是比较满意的</p>
+<h2 id="2-1-prepare"><a href="#2-1-prepare" class="headerlink" title="2.1 prepare"></a>2.1 prepare</h2><p>Ubuntu换源，基础的东西装一下。首先，Java得要安装吧，百度一下</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:linuxuprising/java</span><br><span class="line">sudo apt update</span><br><span class="line">apt list | grep oracle-java</span><br><span class="line">sudo apt install oracle-java16-installer</span><br><span class="line">sudo apt install oracle-java16-set-default</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后git配置一下，我发现这个git是有缺陷的，有需要最好重新安装一下</p>
+<p>然后把Android编译需要的东西安装一下</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gcc python bc git-core gnupg flex bison gperf libsdl1.2-dev \</span><br><span class="line">libesd0-dev squashfs-tools build-essential zip curl \</span><br><span class="line">libncurses5-dev zlib1g-dev pngcrush schedtool libxml2 libxml2-utils \</span><br><span class="line">xsltproc lzop libc6-dev schedtool g++-multilib lib32z1-dev lib32ncurses5-dev \</span><br><span class="line">lib32readline6-dev gcc-multilib libswitch-perl libssl1.0.0 libssl-dev</span><br></pre></td></tr></tbody></table></figure>
+
+<p>查询想要下载的分支：<a href="https://android.googlesource.com/platform/manifest/+refs，需要翻墙能力，或者用github也行：[aosp-mirror/platform_manifest" target="_blank" rel="noopener">https://android.googlesource.com/platform/manifest/+refs，需要翻墙能力，或者用github也行：[aosp-mirror/platform_manifest</a> (github.com)](<a href="https://github.com/aosp-mirror/platform_manifest" target="_blank" rel="noopener">https://github.com/aosp-mirror/platform_manifest</a>)</p>
+<p>我最终选的是android11-release</p>
+<h2 id="2-2-Compile-AOSP"><a href="#2-2-Compile-AOSP" class="headerlink" title="2.2 Compile AOSP"></a>2.2 Compile AOSP</h2><p>这里主要参考了：<a href="https://gitee.com/SidneyGod/ImagePlace/blob/master/attachments/exercises-210203.pdf" target="_blank" rel="noopener">https://gitee.com/SidneyGod/ImagePlace/blob/master/attachments/exercises-210203.pdf</a></p>
+<p>关于Android源码的下载，由于墙的原因，必然只能找镜像的，清华源，北外源，中科大源都是ok的</p>
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/" target="_blank" rel="noopener">AOSP | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a></p>
+<p><a href="https://mirrors.bfsu.edu.cn/help/AOSP/" target="_blank" rel="noopener">AOSP | 镜像站使用帮助 | 北京外国语大学开源软件镜像站 | BFSU Open Source Mirror</a></p>
+<p><a href="http://mirrors.ustc.edu.cn/help/aosp.html" target="_blank" rel="noopener">AOSP 镜像使用帮助 — USTC Mirror Help 文档</a></p>
+<p>建议repo啥的，直接都用这些源提供的就好</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这就不解释了 直接加到PATH里面就好了</span></span><br><span class="line">curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -o repo</span><br><span class="line">chmod +x repo</span><br><span class="line"><span class="comment"># 创建aosp目录</span></span><br><span class="line">mkdir -p ~/FuckSourceCode/1-android11-release</span><br><span class="line"><span class="built_in">cd</span> ~/FuckSourceCode/1-android11-release</span><br><span class="line"><span class="comment">## 这里一定要加--depth=1，省点空间，还快一点</span></span><br><span class="line">repo init -u git://mirrors.ustc.edu.cn/aosp/platform/manifest -b android11-release --depth=1 --no-tags</span><br><span class="line"><span class="comment">## -j4就可以了 太多会被服务器拉黑的</span></span><br><span class="line">repo sync -j4 --fail-fast --force-sync</span><br><span class="line"><span class="comment">## 然后就是常规的编译</span></span><br><span class="line"><span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">lunch aosp_x86_64-eng</span><br><span class="line">make -j4</span><br><span class="line"><span class="comment"># 经过漫长的几把王者荣耀 编译完成 展示一下主要的东西</span></span><br><span class="line">sidney@SidneyGod:~/FuckSourceCode/1-android11-release$ ls out/target/product/generic_x86_64/ -la</span><br><span class="line">total 6757124</span><br><span class="line">drwxr-xr-x 20 sidney sidney       4096 Jun 12 22:07 .</span><br><span class="line">drwxr-xr-x  3 sidney sidney       4096 Jun  6 17:00 ..</span><br><span class="line">-rw-r--r--  1 sidney sidney        356 Jun 12 22:07 VerifiedBootParams.textproto</span><br><span class="line">-rw-r--r--  1 sidney sidney        383 Jun  6 17:06 advancedFeatures.ini</span><br><span class="line">-rw-r--r--  1 sidney sidney   18874368 Jun  6 17:06 encryptionkey.img</span><br><span class="line">-rw-r--r--  1 sidney sidney   14157728 Jun 12 22:03 kernel-ranchu</span><br><span class="line">-rw-r--r--  1 sidney sidney    2927776 Jun 12 22:03 ramdisk-qemu.img</span><br><span class="line">drwxr-xr-x 15 sidney sidney       4096 Jun 12 22:05 system</span><br><span class="line">-rw-r--r--  1 sidney sidney 3232759808 Jun 12 22:08 system-qemu.img</span><br><span class="line">-rw-r--r--  1 sidney sidney  576716800 Jun 12 22:03 userdata.img</span><br><span class="line">-rw-r--r--  1 sidney sidney   68157440 Jun 12 22:05 vendor-qemu.img</span><br></pre></td></tr></tbody></table></figure>
+
+<p>编译完了当然要看看咱们的成果了，由于咱是在WSL里面弄的，肯定不能敲一个emulator命令了事</p>
+<p>首先，它需要一个模拟器，去下载Android Studio并且创建一个模拟器，这一部不详细说了</p>
+<p>比如我这里创建的模拟器和下载的image是</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\Sidney> emulator -list-avds</span><br><span class="line">Pixel_3_Edited_API_30</span><br><span class="line"><span class="comment"># 不带playstore的</span></span><br><span class="line">PS C:\Users\Sidney> ls D:\Develop\Environments\sdk\system-images\android-<span class="number">30</span>\google_apis\x86_64\</span><br><span class="line"></span><br><span class="line">    目录: D:\Develop\Environments\sdk\system-images\android-<span class="number">30</span>\google_apis\x86_64</span><br><span class="line"></span><br><span class="line">Mode                 LastWriteTime         Length Name</span><br><span class="line">----                 -------------         ------ ----</span><br><span class="line">d-----          <span class="number">2021</span>/<span class="number">6</span>/<span class="number">7</span>     <span class="number">22</span>:<span class="number">09</span>                <span class="keyword">data</span></span><br><span class="line">-a----         <span class="number">2021</span>/<span class="number">6</span>/<span class="number">12</span>     <span class="number">22</span>:<span class="number">08</span>            <span class="number">383</span> advancedFeatures.ini</span><br><span class="line">-a----         <span class="number">2021</span>/<span class="number">6</span>/<span class="number">12</span>     <span class="number">22</span>:<span class="number">08</span>           <span class="number">2271</span> build.prop</span><br><span class="line">-a----         <span class="number">2021</span>/<span class="number">6</span>/<span class="number">12</span>     <span class="number">22</span>:<span class="number">08</span>       <span class="number">18874368</span> encryptionkey.img</span><br><span class="line">-a----         <span class="number">2021</span>/<span class="number">6</span>/<span class="number">12</span>     <span class="number">22</span>:<span class="number">08</span>       <span class="number">14157728</span> kernel-ranchu</span><br><span class="line">-a----          <span class="number">2021</span>/<span class="number">6</span>/<span class="number">7</span>     <span class="number">22</span>:<span class="number">09</span>        <span class="number">2984443</span> NOTICE.txt</span><br><span class="line">-a----          <span class="number">2021</span>/<span class="number">6</span>/<span class="number">7</span>     <span class="number">22</span>:<span class="number">09</span>          <span class="number">18153</span> package.xml</span><br><span class="line">-a----         <span class="number">2021</span>/<span class="number">6</span>/<span class="number">12</span>     <span class="number">22</span>:<span class="number">08</span>        <span class="number">2927776</span> ramdisk.img</span><br><span class="line">-a----          <span class="number">2021</span>/<span class="number">6</span>/<span class="number">7</span>     <span class="number">22</span>:<span class="number">09</span>            <span class="number">294</span> source.properties</span><br><span class="line">-a----         <span class="number">2021</span>/<span class="number">6</span>/<span class="number">12</span>     <span class="number">22</span>:<span class="number">08</span>     <span class="number">3232759808</span> system.img</span><br><span class="line">-a----         <span class="number">2021</span>/<span class="number">6</span>/<span class="number">12</span>     <span class="number">22</span>:<span class="number">08</span>      <span class="number">576716800</span> userdata.img</span><br><span class="line">-a----         <span class="number">2021</span>/<span class="number">6</span>/<span class="number">12</span>     <span class="number">22</span>:<span class="number">08</span>       <span class="number">68157440</span> vendor.img</span><br><span class="line">-a----         <span class="number">2021</span>/<span class="number">6</span>/<span class="number">12</span>     <span class="number">22</span>:<span class="number">08</span>            <span class="number">356</span> VerifiedBootParams.textproto</span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以看到核心也就这么几个文件，把这些文件备份一下，拷入我们编译出来的image</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 忘了说，其实对于宿主机win10的磁盘都是以挂载的形式存在于wsl中的 所以直接cp过去就完了</span></span><br><span class="line"><span class="comment"># 这里要注意 有qemu的image就用qemu的，bootimage是kernel-ranchu</span></span><br><span class="line">cp out/target/product/generic_x86_64/VerifiedBootParams.textproto /mnt/d/Develop/Android/MySystemImg/</span><br><span class="line">cp out/target/product/generic_x86_64/advancedFeatures.ini /mnt/d/Develop/Android/MySystemImg/</span><br><span class="line">cp out/target/product/generic_x86_64/encryptionkey.img /mnt/d/Develop/Android/MySystemImg/</span><br><span class="line">cp out/target/product/generic_x86_64/kernel-ranchu /mnt/d/Develop/Android/MySystemImg/</span><br><span class="line">cp out/target/product/generic_x86_64/ramdisk-qemu.img /mnt/d/Develop/Android/MySystemImg/ramdisk.img</span><br><span class="line">cp out/target/product/generic_x86_64/system-qemu.img /mnt/d/Develop/Android/MySystemImg/system.img</span><br><span class="line">cp out/target/product/generic_x86_64/userdata.img /mnt/d/Develop/Android/MySystemImg/</span><br><span class="line">cp out/target/product/generic_x86_64/vendor-qemu.img /mnt/d/Develop/Android/MySystemImg/vendor.img</span><br><span class="line">cp out/target/product/generic_x86_64/system/build.prop /mnt/d/Develop/Android/MySystemImg/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拷贝完了 理论上咱编的system就能起来了</span></span><br><span class="line">emulator -avd Pixel_3_Edited_API_30 -writable-system -wipe-data -show-kernel -skip-adb-auth -no-cache</span><br></pre></td></tr></tbody></table></figure>
+
+<p>看一下，效果还是可以的</p>
+<img data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/20210613231943.png">
+
+<p>只不过这里的kernel其实是源码里自带的，没有源码，所以略显僵硬，注意这里的内核版本</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Sidney>adb shell</span><br><span class="line">generic_x86_64:/ # cat /proc/version</span><br><span class="line">Linux version 5.4.47-01061-g22e35a1de440 (android-build@abfarm-east4-070) (Android (6443078 based on r383902) clang version 11.0.1 (https://android.googlesource.com/toolchain/llvm-project b397f81060ce6d701042b782172ed13bee898b79), LLD 11.0.1 (/buildbot/tmp/tmp6_m7QH b397f81060ce6d701042b782172ed13bee898b79)) #1 SMP PREEMPT Fri Jun 19 01:58:49 UTC 2020</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下面继续整个内核源码</p>
+<h2 id="2-3-Compile-Kernel"><a href="#2-3-Compile-Kernel" class="headerlink" title="2.3 Compile Kernel"></a>2.3 Compile Kernel</h2><p>貌似从Android11开始，内核整了个gki，<a href="https://source.android.google.cn/devices/architecture/kernel/android-common?hl=zh-cn" target="_blank" rel="noopener">Android 通用内核  | Android 开源项目  | Android Open Source Project (google.cn)</a></p>
+<p>关于内核的版本我选择了与参考文档不一样的版本，不是common-android11-5.4，而是common-android-mainline，毕竟根据Android官方文档介绍，common-android-mainline看起来才是祖宗，于是乎</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sidney@SidneyGod:~/FuckSourceCode$ mkdir 2-common-android-mainline</span><br><span class="line">sidney@SidneyGod:~/FuckSourceCode$ <span class="built_in">cd</span> 2-common-android-mainline</span><br><span class="line">sidney@SidneyGod:~/FuckSourceCode/2-common-android-mainline$ repo init -u http://mirrors.tuna.tsinghua.edu.cn/git/AOSP/kernel/manifest -b common-android11-5.4 --depth=1</span><br><span class="line">sidney@SidneyGod:~/FuckSourceCode/2-common-android-mainline$ repo sync -j4</span><br></pre></td></tr></tbody></table></figure>
+
+<p>代码下载完成后，并不能直接进行编译，而是需要改一个地方</p>
+<figure class="highlight diff"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">sidney@SidneyGod:~/FuckSourceCode/2-common-android-mainline$ cd common</span><br><span class="line">sidney@SidneyGod:~/FuckSourceCode/2-common-android-mainline/common$ git diff</span><br><span class="line">diff --git a/arch/x86/configs/gki_defconfig b/arch/x86/configs/gki_defconfig</span><br><span class="line">index d120cc284..9147503b3 100644</span><br><span class="line"><span class="comment">--- a/arch/x86/configs/gki_defconfig</span></span><br><span class="line"><span class="comment">+++ b/arch/x86/configs/gki_defconfig</span></span><br><span class="line"><span class="meta">@@ -1,5 +1,5 @@</span></span><br><span class="line"> CONFIG_LOCALVERSION="-mainline"</span><br><span class="line"><span class="deletion">-CONFIG_KERNEL_LZ4=y</span></span><br><span class="line"><span class="addition">+CONFIG_KERNEL_BZIP2=y</span></span><br><span class="line"></span><br><span class="line"># CONFIG_USELIB is not set</span><br><span class="line"></span><br><span class="line"> CONFIG_AUDIT=y</span><br><span class="line"> CONFIG_NO_HZ=y</span><br></pre></td></tr></tbody></table></figure>
+
+<p>貌似是因为Ubuntu18不支持LZ4打包，改成BZIP2就可以了，于是：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这两句其实编译得还算挺快的了</span></span><br><span class="line">sidney@SidneyGod:~/FuckSourceCode/2-common-android-mainline$ SKIP_MRPROPER=1 BUILD_CONFIG=common/build.config.gki.x86_64 build/build.sh</span><br><span class="line">sidney@SidneyGod:~/FuckSourceCode/2-common-android-mainline$ SKIP_MRPROPER=1 BUILD_CONFIG=common-modules/virtual-device/build.config.virtual_device.x86_64 build/build.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 完了之后呢 回到刚才的android11-release目录 把源码自带的kernel备份一下</span></span><br><span class="line">sidney@SidneyGod:~/FuckSourceCode/2-common-android-mainline$ <span class="built_in">cd</span> ../1-android11-release</span><br><span class="line">sidney@SidneyGod:~/FuckSourceCode//1-android11-release$ cp prebuilts/qemu-kernel/x86_64/5.4 prebuilts/qemu-kernel/x86_64/5.4.bak</span><br><span class="line"><span class="comment"># 再回到kernel目录</span></span><br><span class="line">sidney@SidneyGod:~/FuckSourceCode/1-android11-release$ <span class="built_in">cd</span> ../2-common-android-mainline</span><br><span class="line"><span class="comment"># 把android11-release中kernel的东西删掉</span></span><br><span class="line">sidney@SidneyGod:~/FuckSourceCode/2-common-android-mainline$ rm -rf ../1-android11-release/prebuilts/qemu-kernel/x86_64/5.4/kernel-qemu2</span><br><span class="line">sidney@SidneyGod:~/FuckSourceCode/2-common-android-mainline$ rm -rf ../1-android11-release/prebuilts/qemu-kernel/x86_64/5.4/ko/*</span><br><span class="line"><span class="comment"># 将刚刚编译好的kernel拷贝到android11-release中</span></span><br><span class="line">sidney@SidneyGod:~/FuckSourceCode/2-common-android-mainline$ cp out/android-mainline/dist/bzImage /home/sidney/FuckSourceCode/1-android11-release/prebuilts/qemu-kernel/x86_64/5.4/kernel-qemu2</span><br><span class="line">sidney@SidneyGod:~/FuckSourceCode/2-common-android-mainline$ out/android-mainline/dist/*.ko /home/sidney/FuckSourceCode/1-android11-release/prebuilts/qemu-kernel/x86_64/5.4/ko/</span><br><span class="line"><span class="comment"># 再回到android11-release目录 整编一下aosp</span></span><br><span class="line">sidney@SidneyGod:~/FuckSourceCode/2-common-android-mainline$ <span class="built_in">cd</span> ../1-android11-release</span><br><span class="line">sidney@SidneyGod:~/FuckSourceCode/1-android11-release$ make -j4</span><br></pre></td></tr></tbody></table></figure>
+
+<p>最后的步骤当然和前面的一摸一样了，把编译出来的image拷贝到宿主机中</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这里要注意 不要漏任何一个image 否则总会有一些奇奇怪怪的错误出现</span></span><br><span class="line">cp out/target/product/generic_x86_64/VerifiedBootParams.textproto /mnt/d/Develop/Android/MySystemImg/</span><br><span class="line">cp out/target/product/generic_x86_64/advancedFeatures.ini /mnt/d/Develop/Android/MySystemImg/</span><br><span class="line">cp out/target/product/generic_x86_64/encryptionkey.img /mnt/d/Develop/Android/MySystemImg/</span><br><span class="line">cp out/target/product/generic_x86_64/kernel-ranchu /mnt/d/Develop/Android/MySystemImg/</span><br><span class="line">cp out/target/product/generic_x86_64/ramdisk-qemu.img /mnt/d/Develop/Android/MySystemImg/ramdisk.img</span><br><span class="line">cp out/target/product/generic_x86_64/system-qemu.img /mnt/d/Develop/Android/MySystemImg/system.img</span><br><span class="line">cp out/target/product/generic_x86_64/userdata.img /mnt/d/Develop/Android/MySystemImg/</span><br><span class="line">cp out/target/product/generic_x86_64/vendor-qemu.img /mnt/d/Develop/Android/MySystemImg/vendor.img</span><br><span class="line">cp out/target/product/generic_x86_64/system/build.prop /mnt/d/Develop/Android/MySystemImg/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拷贝完了 理论上咱编的system就能起来了</span></span><br><span class="line">emulator -avd Pixel_3_Edited_API_30 -writable-system -wipe-data -show-kernel -skip-adb-auth -no-cache</span><br></pre></td></tr></tbody></table></figure>
+
+<p>再上效果图</p>
+<img data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/20210614010437.png">
+
+<p>再看看这里的内核版本</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Sidney>adb shell</span><br><span class="line">generic_x86_64:/ <span class="comment"># cat /proc/version</span></span><br><span class="line">Linux version 5.13.0-rc5-mainline-g9c2efcb127bb-dirty (build-user@build-host) (Android (7284624, based on r416183b) clang version 12.0.5 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee), LLD 12.0.5 (/buildbot/src/android/llvm-toolchain/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)) <span class="comment">#1 SMP PREEMPT Wed Jun 9 12:52:23 UTC 2021</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>到这里就说明成功了，至此，kernel和system都可以顺利编译了</p>
+<p>另外，如果拷贝完image到宿主机后，发现无法开机，并报下面的错，那可能是image没编好，kernel不适配，重新整编一下就好了</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[    1.785501] init: Failed to insmod '/lib/modules/dummy-cpufreq.ko' <span class="keyword">with</span> args <span class="string">''</span></span><br><span class="line">[    <span class="number">1.789747</span>] init: LoadWithAliases was unable <span class="keyword">to</span> <span class="keyword">load</span> dummy_cpufreq</span><br><span class="line">[    <span class="number">1.793175</span>] init: [libfs_mgr]ReadFstabFromDt(): <span class="keyword">failed</span> <span class="keyword">to</span> <span class="keyword">read</span> fstab <span class="keyword">from</span> dt</span><br><span class="line">[    <span class="number">1.797138</span>] init: <span class="keyword">Using</span> Android DT <span class="keyword">directory</span> /proc/device-tree/firmware/android/</span><br><span class="line">[    <span class="number">1.824079</span>] init: <span class="built_in">bool</span> android::init::BlockDevInitializer::InitDevices(<span class="keyword">std</span>::<span class="keyword">set</span><<span class="keyword">std</span>::<span class="keyword">string</span>>): <span class="keyword">partition</span>(s) <span class="keyword">not</span> <span class="keyword">found</span> <span class="keyword">in</span> /<span class="keyword">sys</span>, waiting <span class="keyword">for</span> their uevent(s): metadata, super, vbmeta</span><br><span class="line">[   <span class="number">11.844727</span>] init: <span class="keyword">Wait</span> <span class="keyword">for</span> <span class="keyword">partitions</span> returned <span class="keyword">after</span> <span class="number">10011</span>ms</span><br><span class="line">[   <span class="number">11.848915</span>] init: <span class="built_in">bool</span> android::init::BlockDevInitializer::InitDevices(<span class="keyword">std</span>::<span class="keyword">set</span><<span class="keyword">std</span>::<span class="keyword">string</span>>): <span class="keyword">partition</span>(s) <span class="keyword">not</span> <span class="keyword">found</span> <span class="keyword">after</span> polling <span class="keyword">timeout</span>: metadata, super, vbmeta</span><br><span class="line">[   <span class="number">11.855918</span>] init: <span class="keyword">Failed</span> <span class="keyword">to</span> <span class="keyword">mount</span> <span class="keyword">required</span> <span class="keyword">partitions</span> early ...</span><br><span class="line">[   <span class="number">11.859722</span>] init: InitFatalReboot: signal <span class="number">6</span></span><br></pre></td></tr></tbody></table></figure>
+
+</body></html>
+    </div>
+
+    
+    
+    
+      
+
+
+      <div style="text-align:center;color:#636363;font-size:14px;">------- This article is over <i class="fa fa-paw"></i> Thank you for your reading -------</div>
+
+        
+      
+        <div id="reward-container">
+  <div>All I need is you needing me.</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="Sidney Ding WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.jpg" alt="Sidney Ding Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Sidney Ding</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://sidneygod.github.io/posts/c64b5633/" title="Compile Android 11 with WSL2">https://sidneygod.github.io/posts/c64b5633/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
+</ul>
+</div>
+
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/WSL/" rel="tag"><i class="fa fa-tag"></i> WSL</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/posts/c8ed763e/" rel="next" title="[Relearning C/Cpp] Supplement">
+                  <i class="fa fa-chevron-left"></i> [Relearning C/Cpp] Supplement
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="comments"></div>
+  
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Catalogue
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-安装WSL2"><span class="nav-text">1 安装WSL2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-WSL2挪位"><span class="nav-text">1.1 WSL2挪位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-WSL2配置"><span class="nav-text">1.2 WSL2配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-WSL2扩容"><span class="nav-text">1.3 WSL2扩容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-编译Android"><span class="nav-text">2 编译Android</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-prepare"><span class="nav-text">2.1 prepare</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Compile-AOSP"><span class="nav-text">2.2 Compile AOSP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Compile-Kernel"><span class="nav-text">2.3 Compile Kernel</span></a></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <a href="#">
+      <img class="site-author-image" itemprop="image"
+        src="/images/avatar.png"
+        alt="Sidney Ding">
+    </a>
+  <p class="site-author-name" itemprop="name">Sidney Ding</p>
+  <div class="site-description" itemprop="description">You laugh at me for being different, but I laugh at you for being the same.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/%20%7C%7C%20archive">
+        
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/%20%7C%7C%20th">
+          
+        
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/%20%7C%7C%20tags">
+          
+        
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">tags</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/SidneyGod" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;SidneyGod" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:sidneyding183@gmail.com" title="E-Mail &amp;rarr; mailto:sidneyding183@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://google.com/" title="https:&#x2F;&#x2F;google.com" rel="noopener" target="_blank">Google</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="https://bing.com/" title="https:&#x2F;&#x2F;bing.com" rel="noopener" target="_blank">Bing</a>
+        </li>
+      
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sidney Ding</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">Symbols count total: </span>
+    
+    <span title="Symbols count total">192k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">Reading time total &asymp;</span>
+    
+    <span title="Reading time total">5:20</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.1</div>
+  <div>
+    <span><i class="fa fa-bomb"></i> </span>
+    <span id="showDays"></span>
+  </div>
+
+<script>
+  var seconds = 1000;
+  var minutes = seconds * 60;
+  var hours = minutes * 60;
+  var days = hours * 24;
+  var years = days * 365;
+  var birthDay = Date.UTC(2019,10,1,00,00,00);
+  setInterval(function() {
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var now = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = now - birthDay;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+    document.getElementById('showDays').innerHTML="This website has been running for "+diffYears+" years, "+diffDays+" days, "+diffHours+" hours, "+diffMinutes+" minutes, "+diffSeconds+" seconds";
+  }, 1000);
+</script>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.4.1.js"></script>
+
+<script src="/js/motion.js?v=7.4.1.js"></script>
+
+
+<script src="/js/schemes/pisces.js?v=7.4.1.js"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.4.1.js"></script>
+
+<script src="/js/bookmark.js?v=7.4.1.js"></script>
+
+
+  <script defer src="//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three.min.js"></script>
+    
+    <script defer src="//cdn.jsdelivr.net/gh/theme-next/theme-next-three@latest/three-waves.min.js"></script>
+  
+
+
+  
+
+
+
+
+
+
+
+
+  
+<script src="/js/local-search.js?v=7.4.1.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('div.pdf').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js', () => {
+    document.querySelectorAll('div.pdf').forEach(element => {
+      PDFObject.embed(element.getAttribute('target'), element, {
+        pdfOpenParams: {
+          navpanes: 0,
+          toolbar: 0,
+          statusbar: 0,
+          pagemode: 'thumbs',
+          view: 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height: element.getAttribute('height') || '500px'
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
+
+
+
+
+
+    
+
+  
+
+    
+
+    
+
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: false,
+    appId: 'IJiDbg4VAiIeDsIj4MBo39Hq-gzGzoHsz',
+    appKey: '0osu23DWjzCzrIVH4Ybe3ihh',
+    placeholder: 'Just go go',
+    avatar: 'monsterid',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'en' || 'zh-cn',
+    path: location.pathname,
+    recordIP: true,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+
+  <canvas id="canvas-rain" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 1;">Canvas is not supported in your browser</canvas>
+  <script type="text/javascript" src="/js/rain.js"></script>
+  <script async type="text/javascript" src="/js/love.js"></script>
+  <script async type="text/javascript" src="/js/fireworks.js"></script>
+  
+<script>
+  var OriginTitile = document.title;
+  var titleTime;
+  document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+      document.title = "(つェ⊂) 我藏好了哦~" + OriginTitile;
+      clearTimeout(titleTime);
+    } else {
+      document.title = "(*´∇｀*) 被你发现啦~" + OriginTitile;
+      titleTime = setTimeout(function() {
+        document.title = OriginTitile;
+      }, 2000);
+    }
+  });
+</script>
+
+  
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = true;
+    POWERMODE.shake = true;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+</body>
+</html>
