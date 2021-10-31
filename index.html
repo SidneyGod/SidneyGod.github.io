@@ -379,7 +379,7 @@
                 
               
 
-              <time title="Created: 2021-10-31 23:05:46 / Modified: 23:14:55" itemprop="dateCreated datePublished" datetime="2021-10-31T23:05:46+08:00">2021-10-31</time>
+              <time title="Created: 2021-10-31 23:05:46 / Modified: 23:24:55" itemprop="dateCreated datePublished" datetime="2021-10-31T23:05:46+08:00">2021-10-31</time>
             </span>
           
             
@@ -1134,7 +1134,6 @@
           <p>这篇笔记主要是对C/Cpp一些知识的补充，这篇笔记过后就是抽象机制以及一些库函数的学习了</p>
 <h1 id="1-源文件与程序"><a href="#1-源文件与程序" class="headerlink" title="1 源文件与程序"></a>1 源文件与程序</h1><p>一个C语言文件到可执行文件，中间经历了什么？预处理(Preprocessing)、编译(Compilation)、汇编(Assemble)、链接(Linking)。这是耳熟能详的几个过程，甚至还能敲出对应的gcc命令，那么实际上到底是啥情况呢？比如现在有个C程序</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Hello World!\n"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>敲出gcc的命令：<code>gcc main.c -o main.o -v</code></p>
           <!--noindex-->
           
@@ -1547,7 +1546,6 @@
       
           <h1 id="1-Prepare"><a href="#1-Prepare" class="headerlink" title="1 Prepare"></a>1 Prepare</h1><p>You need a server. My server OS is CentOS 7.2. You can also use other versions of Linux. Ok, let’s get started.</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">su</span><br><span class="line">yum install git  # config your git</span><br><span class="line">git config --global user.name=UserName</span><br><span class="line">git config --global user.email=xx@yy.zz</span><br><span class="line">mkdir /usr/local/apps</span><br><span class="line">mkdir ~/tmp</span><br><span class="line">cd ~/tmp</span><br></pre></td></tr></table></figure>
-
 <h1 id="2-Install-Golang"><a href="#2-Install-Golang" class="headerlink" title="2 Install Golang"></a>2 Install Golang</h1>
           <!--noindex-->
           
@@ -1689,8 +1687,7 @@
 <p><a href="https://www.cnblogs.com/opsprobe/p/9420502.html" target="_blank" rel="noopener">https://www.cnblogs.com/opsprobe/p/9420502.html</a></p>
 <p><a href="https://blog.csdn.net/lassewang/article/details/9159543" target="_blank" rel="noopener">https://blog.csdn.net/lassewang/article/details/9159543</a></p>
 <h1 id="0-RADIUS"><a href="#0-RADIUS" class="headerlink" title="0 RADIUS"></a>0 RADIUS</h1><p>RADIUS：（Remote Authentication Dial In User Service）中文名为远程用户拨号认证服务，简称RADIUS，是目前应用最广泛的AAA协议（认证、授权和计费）</p>
-<img data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/AAA组网示意图.png">
-
+<p><img data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/AAA组网示意图.png"></p>
 <p>图中Device（例如交换机）向远程接入用户提供接入及与RADIUS服务器交互的服务。RADIUS服务器上则存储用户的身份信息、授权信息以及访问记录，对用户进行认证、授权和计费服务</p>
 <p><strong>认证过程如下</strong></p>
 <p>（1）客户端向接入设备发送一个EAPoL-Start报文，开始802.1x认证接入；</p>
@@ -2036,7 +2033,7 @@ if (document.querySelectorAll('div.pdf').length) {
   
     
       
-    
+        
       
     
       
@@ -2054,6 +2051,60 @@ if (document.querySelectorAll('div.pdf').length) {
       
     
       
+    
+      
+    
+  
+    
+      
+<script type="text/x-mathjax-config">
+    MathJax.Ajax.config.path['mhchem'] = '//cdn.jsdelivr.net/npm/mathjax-mhchem@3';
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        extensions: ['[mhchem]/mhchem.js'],
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('[object Object]', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
     
   
 

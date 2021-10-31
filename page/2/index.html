@@ -742,50 +742,54 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="1-算数运算符"><a href="#1-算数运算符" class="headerlink" title="1 算数运算符"></a>1 算数运算符</h1><table>
+          <h1 id="1-算数运算符"><a href="#1-算数运算符" class="headerlink" title="1 算数运算符"></a>1 算数运算符</h1><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="left">运算符</th>
-<th align="left">描述</th>
-<th align="left">实例</th>
+<th style="text-align:left">运算符</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">实例</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">+</td>
-<td align="left">把两个操作数相加</td>
-<td align="left">A + B 将得到 30</td>
+<tbody>
+<tr>
+<td style="text-align:left">+</td>
+<td style="text-align:left">把两个操作数相加</td>
+<td style="text-align:left">A + B 将得到 30</td>
 </tr>
 <tr>
-<td align="left">-</td>
-<td align="left">从第一个操作数中减去第二个操作数</td>
-<td align="left">A - B 将得到 -10</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">从第一个操作数中减去第二个操作数</td>
+<td style="text-align:left">A - B 将得到 -10</td>
 </tr>
 <tr>
-<td align="left">*</td>
-<td align="left">把两个操作数相乘</td>
-<td align="left">A * B 将得到 200</td>
+<td style="text-align:left">*</td>
+<td style="text-align:left">把两个操作数相乘</td>
+<td style="text-align:left">A * B 将得到 200</td>
 </tr>
 <tr>
-<td align="left">/</td>
-<td align="left">分子除以分母</td>
-<td align="left">B / A 将得到 2</td>
+<td style="text-align:left">/</td>
+<td style="text-align:left">分子除以分母</td>
+<td style="text-align:left">B / A 将得到 2</td>
 </tr>
 <tr>
-<td align="left">%</td>
-<td align="left">取模运算符，整除后的余数</td>
-<td align="left">B % A 将得到 0</td>
+<td style="text-align:left">%</td>
+<td style="text-align:left">取模运算符，整除后的余数</td>
+<td style="text-align:left">B % A 将得到 0</td>
 </tr>
 <tr>
-<td align="left">++</td>
-<td align="left">自增运算符，整数值增加 1</td>
-<td align="left">A++ 将得到 11</td>
+<td style="text-align:left">++</td>
+<td style="text-align:left">自增运算符，整数值增加 1</td>
+<td style="text-align:left">A++ 将得到 11</td>
 </tr>
 <tr>
-<td align="left">–</td>
-<td align="left">自减运算符，整数值减少 1</td>
-<td align="left">A– 将得到 9</td>
+<td style="text-align:left">—</td>
+<td style="text-align:left">自减运算符，整数值减少 1</td>
+<td style="text-align:left">A— 将得到 9</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>没啥好说的，可能比较有意思的是，<code>++</code>和<code>--</code>了</p>
           <!--noindex-->
           
@@ -931,7 +935,6 @@
 <li>变量名区分大小写</li>
 </ol>
 <figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> $name1, _name2, Name3;</span><br></pre></td></tr></tbody></table></figure>
-
 <blockquote>
 <p>似乎有的版本不支持<code>$</code>..我试了gcc8.1是可以的</p>
 </blockquote>
@@ -1357,7 +1360,6 @@
       
           <p>CentOS常用软件的安装与配置</p>
 <h1 id="1-卸载软件"><a href="#1-卸载软件" class="headerlink" title="1 卸载软件"></a>1 卸载软件</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先列出要卸载的项</span></span><br><span class="line">yum list installed | grep gcc</span><br><span class="line"><span class="comment"># 再逐个卸载</span></span><br><span class="line">yum -y remove libgcc.x86_64</span><br></pre></td></tr></table></figure>
-
 <h1 id="2-GCC"><a href="#2-GCC" class="headerlink" title="2 GCC"></a>2 GCC</h1><p>升级或安装gcc流程</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">wget https://mirrors.ustc.edu.cn/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.gz</span><br><span class="line">tar -xf gcc-7.3.0.tar.gz </span><br><span class="line"><span class="built_in">cd</span> gcc-7.3.0</span><br><span class="line">./contrib/download_prerequisites</span><br><span class="line">mkdir gcc-build-7.3.0 </span><br><span class="line"><span class="built_in">cd</span> gcc-build-7.3.0</span><br><span class="line">../configure --<span class="built_in">enable</span>-checking=release --<span class="built_in">enable</span>-languages=c,c++ --<span class="built_in">disable</span>-multilib</span><br><span class="line"><span class="comment"># 时间可能很长 耐心等待就好</span></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
           <!--noindex-->

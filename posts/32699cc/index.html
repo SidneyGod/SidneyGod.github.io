@@ -464,7 +464,6 @@
 <p>Vol3：介绍x86系统编程的基础，包括内存管理、保护、任务管理、中断和异常处理、多处理器支持、散热和电源管理功能、调试、性能监控、系统管理模式、虚拟机扩展(VMX)指令、英特尔虚拟化技术(Intel VT)和英特尔软件防护扩展(Intel SGX)。</p>
 <p>Vol4：介绍x86 CPU上的MSR，是CPU内部的一组特殊的寄存器（这个是从原来的Vol3中独立出来的）。</p>
 <a id="more"></a>
-
 <h1 id="1-Why-Booting-is-called-Booting"><a href="#1-Why-Booting-is-called-Booting" class="headerlink" title="1 Why Booting is called Booting"></a>1 Why Booting is called Booting</h1><p>为什么计算机的启动叫boot，兴奋把这个疑问敲向了Google，我就知道肯定会有这个疑问的</p>
 <p>参考：</p>
 <p><a href="https://people.cs.rutgers.edu/~pxk/416/notes/02-boot.html" target="_blank" rel="noopener">Booting an Operating System (rutgers.edu)</a></p>
@@ -513,7 +512,6 @@
 </ol>
 <h1 id="3-MBR"><a href="#3-MBR" class="headerlink" title="3 MBR"></a>3 MBR</h1><p>MBR(Master Boot Record)，硬盘的0柱面、0磁头、1扇区称为主引导扇区，FDISK程序写到该扇区的内容称为主引导记录（MBR）。该记录占用512个字节，它用于硬盘启动时将系统控制权交给用户指定的，并在分区表中登记了的某个操作系统区。，BIOS中启动顺序排第一的存储设备，软盘，硬盘，U盘等..不管什么盘，一般都是读取其第一个扇区，也就是512字节，加载到0x7c00处，如果这512字节的最后两个字节是0x55AA，那么就表示这个设备可以启动，如果不是，那就用下一个储存设备。512字节太小了，所以作用很明确，就是指明操作系统的入口在哪。MBR的内容是：</p>
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第一阶段引导加载程序（≤ <span class="number">440</span>字节）</span><br><span class="line">磁盘签名（<span class="number">4</span>字节）</span><br><span class="line">磁盘分区表，用于标识磁盘的不同区域（每个分区<span class="number">16</span>字节 × <span class="number">4</span>个分区）</span><br></pre></td></tr></table></figure>
-
 <p>一个扇区的硬盘主引导记录MBR由4个部分组成。</p>
 <table>
 <thead>
@@ -568,6 +566,7 @@
 </table>
 
 <p>占用512个字节的MBR中，偏移地址01BEH~01FDH的64个字节，为4个分区项内容（分区信息表）。它是由磁盘介质类型及用户在使用FDISK定义分区时确定的。在实际应用中，FDISK对一个磁盘划分的主分区可少于4个，但最多不超过4个。每个分区表的项目是16个字节，其内容含义如下表所示。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -575,7 +574,8 @@
 <th>内容及含义</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>第1字节</td>
 <td>引导标志。若值为80H表示活动分区，若值为00H表示非活动分区。</td>
 </tr>
@@ -599,7 +599,9 @@
 <td>第13、14、15、16字节</td>
 <td>本分区的总扇区数。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>最后的四个字节（“主分区的扇区总数”），决定了这个主分区的长度。也就是说，一个主分区的扇区总数最多不超过2^32。</p>
 <p>如果每个扇区为512个字节，就意味着单个分区最大不超过2TB。再考虑到扇区的逻辑地址也是32位，所以单个硬盘可利用的空间最大也不超过2TB。如果想使用更大的硬盘，只有2个方法：一是提高每个扇区的字节数，二是增加扇区总数。</p>
 <p>BIOS完了以后就到了硬盘的某个分区了，在进硬盘分区之前，先来看一个疑问。</p>
@@ -613,7 +615,6 @@
 <p>BIOS开发团队决定0x7C00是因为：他们希望为操作系统在32KB内加载自己留下尽可能多的空间。8086/8088使用0x0~0x3FF作为中断向量，BIOS数据区在它之后。引导扇区为512字节，引导程序的堆栈/数据区需要更多的512字节。因此，选择了0x7C00，即32KB的最后1024B。一旦操作系统加载并启动，引导扇区将永远不会使用，直到电源重置。因此，操作系统和应用程序可以自由使用32KB的最后1024B。</p>
 <p>系统加载后，内存布局</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">+--------------------- 0x0</span><br><span class="line">| Interrupts vectors</span><br><span class="line">+--------------------- 0x400</span><br><span class="line">| BIOS data area</span><br><span class="line">+--------------------- 0x5??</span><br><span class="line">| OS load area</span><br><span class="line">+--------------------- 0x7C00</span><br><span class="line">| Boot sector</span><br><span class="line">+--------------------- 0x7E00</span><br><span class="line">| Boot data/stack</span><br><span class="line">+--------------------- 0x7FFF</span><br><span class="line">| (<span class="keyword">not</span> used)</span><br><span class="line">+--------------------- (<span class="built_in">..</span>.)</span><br></pre></td></tr></table></figure>
-
 <p>相对MBR，还有一种应该不会用到的EBR(Extended Boot Record)..</p>
 <h1 id="4-VBR"><a href="#4-VBR" class="headerlink" title="4 VBR"></a>4 VBR</h1><p>一旦BIOS将控制权转移到加载到内存中的MBR的开头，MBR代码就会扫描其分区表并加载该分区的卷引导记录(VBR)。VBR是从指定分区的第一个磁盘块开始的一系列连续块。VBR的第一个块标识分区类型和大小并包含初始程序加载器(IPL)，该代码将加载构成第二阶段引导加载器的附加块。在Windows NT派生系统（例如，Windows Server 2012、Windows 8）上，IPL加载一个名为NTLDR 的程序，然后该程序加载操作系统。</p>
 <p>低级引导加载程序难以加载完整操作系统（尤其是可能由多个文件组成的操作系统）的一个原因是，这样做需要解析文件系统结构的能力。这意味着了解目录和文件名的布局方式以及如何找到与特定文件对应的数据块。没有太多代码，只读取连续的块要容易得多。更高级别的加载程序，例如Microsoft的NTLDR，可以读取NTFS、FAT和ISO 9660(CD)文件格式。</p>

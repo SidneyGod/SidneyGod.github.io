@@ -57,12 +57,12 @@
   };
 </script>
 
-  <meta name="description" content="1 算数运算符   运算符 描述 实例    + 把两个操作数相加 A + B 将得到 30   - 从第一个操作数中减去第二个操作数 A - B 将得到 -10   * 把两个操作数相乘 A * B 将得到 200   &#x2F; 分子除以分母 B &#x2F; A 将得到 2   % 取模运算符，整除后的余数 B % A 将得到 0   ++ 自增运算符，整数值增加 1 A++ 将得到 11   – 自减运算符">
+  <meta name="description" content="1 算数运算符    运算符 描述 实例     + 把两个操作数相加 A + B 将得到 30   - 从第一个操作数中减去第二个操作数 A - B 将得到 -10   * 把两个操作数相乘 A * B 将得到 200   &#x2F; 分子除以分母 B &#x2F; A 将得到 2   % 取模运算符，整除后的余数 B % A 将得到 0   ++ 自增运算符，整数值增加 1 A++ 将得到 11   — 自减运">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Relearning C&#x2F;Cpp] Operators and Expressions">
 <meta property="og:url" content="https://sidneygod.github.io/posts/ea0e14e5/index.html">
 <meta property="og:site_name" content="Sidney God">
-<meta property="og:description" content="1 算数运算符   运算符 描述 实例    + 把两个操作数相加 A + B 将得到 30   - 从第一个操作数中减去第二个操作数 A - B 将得到 -10   * 把两个操作数相乘 A * B 将得到 200   &#x2F; 分子除以分母 B &#x2F; A 将得到 2   % 取模运算符，整除后的余数 B % A 将得到 0   ++ 自增运算符，整数值增加 1 A++ 将得到 11   – 自减运算符">
+<meta property="og:description" content="1 算数运算符    运算符 描述 实例     + 把两个操作数相加 A + B 将得到 30   - 从第一个操作数中减去第二个操作数 A - B 将得到 -10   * 把两个操作数相乘 A * B 将得到 200   &#x2F; 分子除以分母 B &#x2F; A 将得到 2   % 取模运算符，整除后的余数 B % A 将得到 0   ++ 自增运算符，整数值增加 1 A++ 将得到 11   — 自减运">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-06-17T15:15:07.000Z">
 <meta property="article:modified_time" content="2021-04-17T05:08:19.653Z">
@@ -455,164 +455,176 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="1-算数运算符"><a href="#1-算数运算符" class="headerlink" title="1 算数运算符"></a>1 算数运算符</h1><table>
-<thead>
-<tr>
-<th align="left">运算符</th>
-<th align="left">描述</th>
-<th align="left">实例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">+</td>
-<td align="left">把两个操作数相加</td>
-<td align="left">A + B 将得到 30</td>
-</tr>
-<tr>
-<td align="left">-</td>
-<td align="left">从第一个操作数中减去第二个操作数</td>
-<td align="left">A - B 将得到 -10</td>
-</tr>
-<tr>
-<td align="left">*</td>
-<td align="left">把两个操作数相乘</td>
-<td align="left">A * B 将得到 200</td>
-</tr>
-<tr>
-<td align="left">/</td>
-<td align="left">分子除以分母</td>
-<td align="left">B / A 将得到 2</td>
-</tr>
-<tr>
-<td align="left">%</td>
-<td align="left">取模运算符，整除后的余数</td>
-<td align="left">B % A 将得到 0</td>
-</tr>
-<tr>
-<td align="left">++</td>
-<td align="left">自增运算符，整数值增加 1</td>
-<td align="left">A++ 将得到 11</td>
-</tr>
-<tr>
-<td align="left">–</td>
-<td align="left">自减运算符，整数值减少 1</td>
-<td align="left">A– 将得到 9</td>
-</tr>
-</tbody></table>
-<p>没啥好说的，可能比较有意思的是，<code>++</code>和<code>--</code>了</p>
-<a id="more"></a>
-
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> s = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</span><br><span class="line">        s = s++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"s: %d\n"</span>, s);  <span class="comment">// s: 0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>第一眼看过去，那不得炸毛？啥，不说等于10，起码也得等于9吧。说好的先运算，再自加1呢。其实感觉都被那句话给带偏了，前置++是先自增，再运算；后置++是先运算，再自增。这句话是不准确的，准确来说，无论前置++还是后置++，都是先+1，再运算，区别是后置++会先将原来的值存在一个临时变量中，运算的时候用这个临时变量运算。</p>
-<p>在第五版的C++ Primer的132页，有这么一句话：<strong>前置版本的递增运算符避免了不必要的工作，它把值加1后直接返回改变了的运算对象。与之相比，后置版本需要将原始值存储下来以便于返回这个未修改的内容</strong>。也就是说，真实情况应该是这样的：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> s = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</span><br><span class="line">        <span class="keyword">int</span> tmp = s;</span><br><span class="line">        s = s + <span class="number">1</span>;</span><br><span class="line">        s = tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"s: %d\n"</span>, s);  <span class="comment">// s: 0 这样毫无疑问是等于0的</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>不信？我们看看汇编代码(<code>gcc -S main.cpp -o main.s</code>)：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">; 略...</span><br><span class="line">truecall	__main</span><br><span class="line">truemovl	$0, -4(%rbp)    ; 这个是int s &#x3D; 0;</span><br><span class="line">truemovl	$0, -8(%rbp)    ; int i &#x3D; 0;</span><br><span class="line">.L5:</span><br><span class="line">truecmpl	$9, -8(%rbp)    ; i和9作比较</span><br><span class="line">truejg	.L4                 ; 大于9就跳到.L4</span><br><span class="line">truemovl	-4(%rbp), %eax  ; 把s的值放到eax先 是0</span><br><span class="line">trueleal	1(%rax), %edx   ; rax + 1放到edx，rax没出现过，就当是0好了</span><br><span class="line">truemovl	%edx, -4(%rbp)  ; 把edx值1放到s中 s &#x3D; 1</span><br><span class="line">truemovl	%eax, -4(%rbp)  ; 把eax的值放到s中 s &#x3D; 0</span><br><span class="line">trueaddl	$1, -8(%rbp)    ; i &#x3D; i + 1</span><br><span class="line">truejmp	.L5                 ; 跳回到.L5</span><br><span class="line">.L4:</span><br><span class="line">; 略...</span><br></pre></td></tr></table></figure>
-
-<p>所以C++ Primer中<strong>推荐优先使用前置运算符</strong></p>
-<h1 id="2-逻辑和关系运算符"><a href="#2-逻辑和关系运算符" class="headerlink" title="2 逻辑和关系运算符"></a>2 逻辑和关系运算符</h1><table>
-<thead>
-<tr>
-<th align="left">运算符</th>
-<th align="left">描述</th>
-<th align="left">实例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">&amp;&amp;</td>
-<td align="left">称为逻辑与运算符。如果两个操作数都非零，则条件为真。</td>
-<td align="left">(A &amp;&amp; B) 为假。</td>
-</tr>
-<tr>
-<td align="left">||</td>
-<td align="left">称为逻辑或运算符。如果两个操作数中有任意一个非零，则条件为真。</td>
-<td align="left">(A || B) 为真。</td>
-</tr>
-<tr>
-<td align="left">!</td>
-<td align="left">称为逻辑非运算符。用来逆转操作数的逻辑状态。如果条件为真则逻辑非运算符将使其为假。</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">==</td>
-<td align="left">检查两个操作数的值是否相等，如果相等则条件为真。</td>
-<td align="left">(A == B) 不为真。</td>
-</tr>
-<tr>
-<td align="left">!=</td>
-<td align="left">检查两个操作数的值是否相等，如果不相等则条件为真。</td>
-<td align="left">(A != B) 为真。</td>
-</tr>
-<tr>
-<td align="left">&gt;</td>
-<td align="left">检查左操作数的值是否大于右操作数的值，如果是则条件为真。</td>
-<td align="left">(A &gt; B) 不为真。</td>
-</tr>
-<tr>
-<td align="left">&lt;</td>
-<td align="left">检查左操作数的值是否小于右操作数的值，如果是则条件为真。</td>
-<td align="left">(A &lt; B) 为真。</td>
-</tr>
-<tr>
-<td align="left">&gt;=</td>
-<td align="left">检查左操作数的值是否大于或等于右操作数的值，如果是则条件为真。</td>
-<td align="left">(A &gt;= B) 不为真。</td>
-</tr>
-<tr>
-<td align="left">&lt;=</td>
-<td align="left">检查左操作数的值是否小于或等于右操作数的值，如果是则条件为真。</td>
-<td align="left">(A &lt;= B) 为真。</td>
-</tr>
-</tbody></table>
-<p>注意&amp;&amp;和||是短路的。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(expr1) &amp;&amp; (expr2);  <span class="comment">// 如果计算出expr1是false，就不会再去计算expr2</span></span><br><span class="line">(expr1) || (expr2);  <span class="comment">// 如果计算出expr1是true，就不会再去计算expr2</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="3-赋值运算符"><a href="#3-赋值运算符" class="headerlink" title="3 赋值运算符"></a>3 赋值运算符</h1><p>任何一种复合赋值运算符都等价于<code>a = a op b</code>。例如：<code>a += 1;</code>就等价于<code>a = a + 1;</code>。唯一的区别就是，使用复合赋值运算符只求值一次，使用普通赋值运算需要求值两次。第一次，右边运算求一次值；第二次，赋值的时候左侧运算对象求值。这么说来还是复合赋值运算符好一点</p>
-<h1 id="4-位运算符"><a href="#4-位运算符" class="headerlink" title="4 位运算符"></a>4 位运算符</h1><p>假设变量 A 的值为 60，变量 B 的值为 13，则：</p>
+        <h1 id="1-算数运算符"><a href="#1-算数运算符" class="headerlink" title="1 算数运算符"></a>1 算数运算符</h1><div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">运算符</th>
-<th align="left">描述</th>
-<th align="left">实例</th>
+<th style="text-align:left">运算符</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">实例</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">&amp;</td>
-<td align="left">如果同时存在于两个操作数中，二进制 AND 运算符复制一位到结果中。</td>
-<td align="left">(A &amp; B) 将得到 12，即为 0000 1100</td>
+<tbody>
+<tr>
+<td style="text-align:left">+</td>
+<td style="text-align:left">把两个操作数相加</td>
+<td style="text-align:left">A + B 将得到 30</td>
 </tr>
 <tr>
-<td align="left">|</td>
-<td align="left">如果存在于任一操作数中，二进制 OR 运算符复制一位到结果中。</td>
-<td align="left">(A | B) 将得到 61，即为 0011 1101</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">从第一个操作数中减去第二个操作数</td>
+<td style="text-align:left">A - B 将得到 -10</td>
 </tr>
 <tr>
-<td align="left">^</td>
-<td align="left">如果存在于其中一个操作数中但不同时存在于两个操作数中，二进制异或运算符复制一位到结果中。</td>
-<td align="left">(A ^ B) 将得到 49，即为 0011 0001</td>
+<td style="text-align:left">*</td>
+<td style="text-align:left">把两个操作数相乘</td>
+<td style="text-align:left">A * B 将得到 200</td>
 </tr>
 <tr>
-<td align="left">~</td>
-<td align="left">二进制补码运算符是一元运算符，具有”翻转”位效果，即0变成1，1变成0。</td>
-<td align="left">(~A ) 将得到 -61，即为 1100 0011，一个有符号二进制数的补码形式。</td>
+<td style="text-align:left">/</td>
+<td style="text-align:left">分子除以分母</td>
+<td style="text-align:left">B / A 将得到 2</td>
 </tr>
 <tr>
-<td align="left">&lt;&lt;</td>
-<td align="left">二进制左移运算符。左操作数的值向左移动右操作数指定的位数。</td>
-<td align="left">A &lt;&lt; 2 将得到 240，即为 1111 0000</td>
+<td style="text-align:left">%</td>
+<td style="text-align:left">取模运算符，整除后的余数</td>
+<td style="text-align:left">B % A 将得到 0</td>
 </tr>
 <tr>
-<td align="left">&gt;&gt;</td>
-<td align="left">二进制右移运算符。左操作数的值向右移动右操作数指定的位数。</td>
-<td align="left">A &gt;&gt; 2 将得到 15，即为 0000 1111</td>
+<td style="text-align:left">++</td>
+<td style="text-align:left">自增运算符，整数值增加 1</td>
+<td style="text-align:left">A++ 将得到 11</td>
 </tr>
-</tbody></table>
+<tr>
+<td style="text-align:left">—</td>
+<td style="text-align:left">自减运算符，整数值减少 1</td>
+<td style="text-align:left">A— 将得到 9</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>没啥好说的，可能比较有意思的是，<code>++</code>和<code>--</code>了</p>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> s = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</span><br><span class="line">        s = s++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"s: %d\n"</span>, s);  <span class="comment">// s: 0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>第一眼看过去，那不得炸毛？啥，不说等于10，起码也得等于9吧。说好的先运算，再自加1呢。其实感觉都被那句话给带偏了，前置++是先自增，再运算；后置++是先运算，再自增。这句话是不准确的，准确来说，无论前置++还是后置++，都是先+1，再运算，区别是后置++会先将原来的值存在一个临时变量中，运算的时候用这个临时变量运算。</p>
+<p>在第五版的C++ Primer的132页，有这么一句话：<strong>前置版本的递增运算符避免了不必要的工作，它把值加1后直接返回改变了的运算对象。与之相比，后置版本需要将原始值存储下来以便于返回这个未修改的内容</strong>。也就是说，真实情况应该是这样的：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> s = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</span><br><span class="line">        <span class="keyword">int</span> tmp = s;</span><br><span class="line">        s = s + <span class="number">1</span>;</span><br><span class="line">        s = tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"s: %d\n"</span>, s);  <span class="comment">// s: 0 这样毫无疑问是等于0的</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>不信？我们看看汇编代码(<code>gcc -S main.cpp -o main.s</code>)：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">; 略...</span><br><span class="line">truecall	__main</span><br><span class="line">truemovl	$0, -4(%rbp)    ; 这个是int s &#x3D; 0;</span><br><span class="line">truemovl	$0, -8(%rbp)    ; int i &#x3D; 0;</span><br><span class="line">.L5:</span><br><span class="line">truecmpl	$9, -8(%rbp)    ; i和9作比较</span><br><span class="line">truejg	.L4                 ; 大于9就跳到.L4</span><br><span class="line">truemovl	-4(%rbp), %eax  ; 把s的值放到eax先 是0</span><br><span class="line">trueleal	1(%rax), %edx   ; rax + 1放到edx，rax没出现过，就当是0好了</span><br><span class="line">truemovl	%edx, -4(%rbp)  ; 把edx值1放到s中 s &#x3D; 1</span><br><span class="line">truemovl	%eax, -4(%rbp)  ; 把eax的值放到s中 s &#x3D; 0</span><br><span class="line">trueaddl	$1, -8(%rbp)    ; i &#x3D; i + 1</span><br><span class="line">truejmp	.L5                 ; 跳回到.L5</span><br><span class="line">.L4:</span><br><span class="line">; 略...</span><br></pre></td></tr></table></figure>
+<p>所以C++ Primer中<strong>推荐优先使用前置运算符</strong></p>
+<h1 id="2-逻辑和关系运算符"><a href="#2-逻辑和关系运算符" class="headerlink" title="2 逻辑和关系运算符"></a>2 逻辑和关系运算符</h1><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">运算符</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&amp;&amp;</td>
+<td style="text-align:left">称为逻辑与运算符。如果两个操作数都非零，则条件为真。</td>
+<td style="text-align:left">(A &amp;&amp; B) 为假。</td>
+</tr>
+<tr>
+<td style="text-align:left">\</td>
+<td style="text-align:left">\</td>
+<td style="text-align:left"></td>
+<td>称为逻辑或运算符。如果两个操作数中有任意一个非零，则条件为真。</td>
+<td>(A \</td>
+<td>\</td>
+<td>B) 为真。</td>
+</tr>
+<tr>
+<td style="text-align:left">!</td>
+<td style="text-align:left">称为逻辑非运算符。用来逆转操作数的逻辑状态。如果条件为真则逻辑非运算符将使其为假。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">==</td>
+<td style="text-align:left">检查两个操作数的值是否相等，如果相等则条件为真。</td>
+<td style="text-align:left">(A == B) 不为真。</td>
+</tr>
+<tr>
+<td style="text-align:left">!=</td>
+<td style="text-align:left">检查两个操作数的值是否相等，如果不相等则条件为真。</td>
+<td style="text-align:left">(A != B) 为真。</td>
+</tr>
+<tr>
+<td style="text-align:left">&gt;</td>
+<td style="text-align:left">检查左操作数的值是否大于右操作数的值，如果是则条件为真。</td>
+<td style="text-align:left">(A &gt; B) 不为真。</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;</td>
+<td style="text-align:left">检查左操作数的值是否小于右操作数的值，如果是则条件为真。</td>
+<td style="text-align:left">(A &lt; B) 为真。</td>
+</tr>
+<tr>
+<td style="text-align:left">&gt;=</td>
+<td style="text-align:left">检查左操作数的值是否大于或等于右操作数的值，如果是则条件为真。</td>
+<td style="text-align:left">(A &gt;= B) 不为真。</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;=</td>
+<td style="text-align:left">检查左操作数的值是否小于或等于右操作数的值，如果是则条件为真。</td>
+<td style="text-align:left">(A &lt;= B) 为真。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>注意&amp;&amp;和||是短路的。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(expr1) &amp;&amp; (expr2);  <span class="comment">// 如果计算出expr1是false，就不会再去计算expr2</span></span><br><span class="line">(expr1) || (expr2);  <span class="comment">// 如果计算出expr1是true，就不会再去计算expr2</span></span><br></pre></td></tr></table></figure>
+<h1 id="3-赋值运算符"><a href="#3-赋值运算符" class="headerlink" title="3 赋值运算符"></a>3 赋值运算符</h1><p>任何一种复合赋值运算符都等价于<code>a = a op b</code>。例如：<code>a += 1;</code>就等价于<code>a = a + 1;</code>。唯一的区别就是，使用复合赋值运算符只求值一次，使用普通赋值运算需要求值两次。第一次，右边运算求一次值；第二次，赋值的时候左侧运算对象求值。这么说来还是复合赋值运算符好一点</p>
+<h1 id="4-位运算符"><a href="#4-位运算符" class="headerlink" title="4 位运算符"></a>4 位运算符</h1><p>假设变量 A 的值为 60，变量 B 的值为 13，则：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">运算符</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&amp;</td>
+<td style="text-align:left">如果同时存在于两个操作数中，二进制 AND 运算符复制一位到结果中。</td>
+<td style="text-align:left">(A &amp; B) 将得到 12，即为 0000 1100</td>
+</tr>
+<tr>
+<td style="text-align:left">\</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">如果存在于任一操作数中，二进制 OR 运算符复制一位到结果中。</td>
+<td>(A \</td>
+<td>B) 将得到 61，即为 0011 1101</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">如果存在于其中一个操作数中但不同时存在于两个操作数中，二进制异或运算符复制一位到结果中。</td>
+<td style="text-align:left">(A ^ B) 将得到 49，即为 0011 0001</td>
+</tr>
+<tr>
+<td style="text-align:left">~</td>
+<td style="text-align:left">二进制补码运算符是一元运算符，具有”翻转”位效果，即0变成1，1变成0。</td>
+<td style="text-align:left">(~A ) 将得到 -61，即为 1100 0011，一个有符号二进制数的补码形式。</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;&lt;</td>
+<td style="text-align:left">二进制左移运算符。左操作数的值向左移动右操作数指定的位数。</td>
+<td style="text-align:left">A &lt;&lt; 2 将得到 240，即为 1111 0000</td>
+</tr>
+<tr>
+<td style="text-align:left">&gt;&gt;</td>
+<td style="text-align:left">二进制右移运算符。左操作数的值向右移动右操作数指定的位数。</td>
+<td style="text-align:left">A &gt;&gt; 2 将得到 15，即为 0000 1111</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>位运算符作用于位，并逐位执行操作。</strong>在kernel中经常喜欢用位运算做flag判断，感受一下：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">unsigned</span> FLAG_0 = <span class="number">0b000</span>;  <span class="comment">// 0</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">unsigned</span> FLAG_1 = <span class="number">0b001</span>;  <span class="comment">// 1</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">unsigned</span> FLAG_2 = <span class="number">0b010</span>;  <span class="comment">// 2</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">unsigned</span> FLAG_4 = <span class="number">0b100</span>;  <span class="comment">// 4</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">unsigned</span> flag_0 = FLAG_0;</span><br><span class="line"><span class="keyword">unsigned</span> flag_1 = FLAG_1;</span><br><span class="line"><span class="keyword">unsigned</span> flag_0_1 = FLAG_0 | FLAG_1;</span><br><span class="line"><span class="keyword">unsigned</span> flag_1_2 = FLAG_1 | FLAG_2;</span><br><span class="line"><span class="keyword">unsigned</span> flag_1_2_4 = FLAG_1 | FLAG_2 | FLAG_4;</span><br><span class="line"></span><br><span class="line"><span class="comment">// |表示+?</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"flag_0_1: %d\n"</span>, flag_0_1);  <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"flag_1_2: %d\n"</span>, flag_1_2);  <span class="comment">// 3</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"flag_1_2_4: %d\n"</span>, flag_1_2_4);  <span class="comment">// 7</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 0和&amp; 可以用来清空</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"flag_0 &amp; FLAG_0: %d\n"</span>, flag_0 &amp; FLAG_0);  <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"flag_1 &amp; FLAG_0: %d\n"</span>, flag_1 &amp; FLAG_0);  <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 非0和&amp; 可以用来判断包不包含当前的FLAG</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"flag_1 &amp; FLAG_1: %d\n"</span>, flag_1 &amp; FLAG_1);  <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"flag_1 &amp; FLAG_2: %d\n"</span>, flag_1 &amp; FLAG_2);  <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// |并不是单纯的+ 不包含则+ 包含则不加；&amp;(~FLAG)表示减去这个FLAG 有则减 无则不用管</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"flag_1_2 | FLAG_1: %d\n"</span>, flag_1_2 | FLAG_1);  <span class="comment">// 3</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"flag_1_2 &amp; FLAG_1: %d\n"</span>, flag_1_2 &amp; FLAG_1);  <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"flag_1_2 &amp; (FLAG_1 | FLAG_4): %d\n"</span>, flag_1_2 &amp; (FLAG_1 | FLAG_4));  <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"flag_1_2 &amp; (~FLAG_1): %d\n"</span>, flag_1_2 &amp; (~FLAG_1));  <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"flag_1_2 &amp; (~(FLAG_1 | FLAG_4)): %d\n"</span>, flag_1_2 &amp; (~(FLAG_1 | FLAG_4)));  <span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"flag_1_2_4 | FLAG_1 | FLAG_2: %d\n"</span>, flag_1_2_4 | FLAG_1 | FLAG_2);  <span class="comment">// 7</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"flag_1_2_4 &amp; (FLAG_1 | FLAG_2): %d\n"</span>, flag_1_2_4 &amp; (FLAG_1 | FLAG_2));  <span class="comment">// 3</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"flag_1_2_4 &amp; (~(FLAG_1 | FLAG_2)): %d\n"</span>, flag_1_2_4 &amp; (~(FLAG_1 | FLAG_2)));  <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>强烈建议位运算只用于无符号数..</strong></p>
 <h1 id="5-杂项"><a href="#5-杂项" class="headerlink" title="5 杂项"></a>5 杂项</h1><p>条件运算符：<code>?:</code>，唯一一个三元运算符，就是一个简化版的if-else，但是效率比if-else高</p>
 <p>sizeof运算符：<code>sizeof(expr)</code>，事实上并<strong>不会去使用expr</strong>，所以即使<code>sizeof(*ptr)</code>，其中ptr是null，也不会报错，多用于求数组长度，毕竟C/C++没有<code>arr.length</code>的用法</p>
