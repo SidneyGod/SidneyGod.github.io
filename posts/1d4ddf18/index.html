@@ -69,7 +69,7 @@
 <meta property="og:image" content="http://www.c-jump.com/CIS24/Slides/FAT/images/directory_entry_format.png">
 <meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/202110312044018.png">
 <meta property="article:published_time" content="2021-10-31T15:05:46.000Z">
-<meta property="article:modified_time" content="2021-10-31T15:11:40.145Z">
+<meta property="article:modified_time" content="2021-10-31T15:14:55.123Z">
 <meta property="article:author" content="Sidney Ding">
 <meta property="article:tag" content="Sidney">
 <meta property="article:tag" content=" Ding">
@@ -386,7 +386,7 @@
                 
               
 
-              <time title="Created: 2021-10-31 23:05:46 / Modified: 23:11:40" itemprop="dateCreated datePublished" datetime="2021-10-31T23:05:46+08:00">2021-10-31</time>
+              <time title="Created: 2021-10-31 23:05:46 / Modified: 23:14:55" itemprop="dateCreated datePublished" datetime="2021-10-31T23:05:46+08:00">2021-10-31</time>
             </span>
           
             
@@ -456,6 +456,8 @@
         <html><head></head><body><p>说是第三天，我看了该一个星期了..发现之前看得有点浮躁，最近看了费曼读书法有了新的想法，不怕慢，就不没看明白，所以听费曼的，每次看卡壳了，就返回去重新看..</p>
 <p>看到这里，突然觉得还是以《64位》为主比较好，《32位》太老了，用的还是nask转换起来有点累，并且《64位》介绍得细啊，所以我悟了，《32位》用来打辅助吧..</p>
 <h1 id="1-软盘与FAT12"><a href="#1-软盘与FAT12" class="headerlink" title="1 软盘与FAT12"></a>1 软盘与FAT12</h1><p>先来看软盘，一个PC里面可以有多个软盘，一个软盘里面包含2个磁头，80个柱面，18个扇区。因为软盘正反面都可以存储数据，所以有俩磁头去读取数据。柱面参考下图(注意编号0~79)，英文是cylinder；扇区参考下图(注意编号1~18)，英文是sector</p>
+<a id="more"></a>
+
 <p><img alt data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/202110162308914.png"></p>
 <p>两本书用的都是FAT12文件系统来装载Loader程序和内核程序，将软盘格式化成FAT12文件系统时，FAT类文件系统会对软盘里的扇区进行结构化处理，把软盘<strong>扇区划分为引导扇区，FAT表，根目录区和数据区</strong>4部分</p>
 <ul>
