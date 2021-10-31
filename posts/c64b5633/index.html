@@ -69,7 +69,7 @@
 <meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/20210613231943.png">
 <meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/20210614010437.png">
 <meta property="article:published_time" content="2021-06-13T01:15:43.000Z">
-<meta property="article:modified_time" content="2021-10-31T03:49:53.476Z">
+<meta property="article:modified_time" content="2021-10-31T04:02:05.370Z">
 <meta property="article:author" content="Sidney Ding">
 <meta property="article:tag" content="WSL">
 <meta name="twitter:card" content="summary">
@@ -259,7 +259,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">20</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">21</span></a>
 
   </li>
       
@@ -395,7 +395,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-10-31 11:49:53" itemprop="dateModified" datetime="2021-10-31T11:49:53+08:00">2021-10-31</time>
+                <time title="Modified: 2021-10-31 12:02:05" itemprop="dateModified" datetime="2021-10-31T12:02:05+08:00">2021-10-31</time>
               </span>
             
           
@@ -436,7 +436,7 @@
               
                 <span class="post-meta-item-text">Symbols count in article: </span>
               
-              <span>16k</span>
+              <span>17k</span>
             </span>
           
             <span class="post-meta-item" title="Reading time">
@@ -446,7 +446,7 @@
               
                 <span class="post-meta-item-text">Reading time &asymp;</span>
               
-              <span>27 mins.</span>
+              <span>28 mins.</span>
             </span>
           
 
@@ -491,6 +491,9 @@
 <h2 id="1-3-WSL2扩容"><a href="#1-3-WSL2扩容" class="headerlink" title="1.3 WSL2扩容"></a>1.3 WSL2扩容</h2><p>WSL2使用虚拟硬件磁盘(VHD)来存储Linux文件。如果达到其最大大小，则可能需要对其进行扩展。WSL2 VHD使用ext4文件系统,此VHD会自动调整大小以满足你的存储需求，并且其最大大小为256GB。如果你的分发版大小增长到大于256GB，则会显示错误，指出磁盘空间不足。 可以通过扩展 VHD 大小来纠正此错误。若要将最大 VHD 大小扩展到超过 256GB，请执行以下操作：</p>
 <p>以管理员模式打开powershell</p>
 <figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">PS C:\WINDOWS\system32> diskpart</span><br><span class="line"></span><br><span class="line">Microsoft DiskPart 版本 <span class="number">10.0</span>.<span class="number">19041.964</span></span><br><span class="line"></span><br><span class="line">Copyright (C) Microsoft Corporation.</span><br><span class="line">在计算机上: SIDNEYGOD</span><br><span class="line"><span class="comment"># 找不到咱的虚拟磁盘</span></span><br><span class="line">DISKPART> list vol</span><br><span class="line"></span><br><span class="line">  卷 <span class="comment">###      LTR  标签         FS     类型        大小     状态       信息</span></span><br><span class="line">  ----------  ---  -----------  -----  ----------  -------  ---------  --------</span><br><span class="line">  卷     <span class="number">0</span>     E   <span class="keyword">Data</span>         NTFS   磁盘分区        <span class="number">1863</span> GB  正常</span><br><span class="line">  卷     <span class="number">1</span>     C   System       NTFS   磁盘分区         <span class="number">200</span> GB  正常         启动</span><br><span class="line">  卷     <span class="number">2</span>     D   Software     NTFS   磁盘分区         <span class="number">275</span> GB  正常</span><br><span class="line">  卷     <span class="number">3</span>         SYSTEM_DRV   FAT32  磁盘分区         <span class="number">260</span> MB  正常         系统</span><br><span class="line">  卷     <span class="number">4</span>         WINRE_DRV    NTFS   磁盘分区        <span class="number">1000</span> MB  正常         已隐藏</span><br><span class="line">DISKPART> list vdisk</span><br><span class="line"></span><br><span class="line">没有要显示的虚拟磁盘。</span><br><span class="line"><span class="comment"># 但是咱知道在哪啊 选中</span></span><br><span class="line">DISKPART> Select vdisk file=<span class="string">"E:\wsl2\ubuntu18\ext4.vhdx"</span></span><br><span class="line"><span class="comment"># 扩展</span></span><br><span class="line">DISKPART> expand vdisk maximum=<span class="string">"358400"</span></span><br><span class="line"><span class="comment"># 退出</span></span><br><span class="line">DISKPART> <span class="keyword">exit</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="1-4-WSL2压缩"><a href="#1-4-WSL2压缩" class="headerlink" title="1.4 WSL2压缩"></a>1.4 WSL2压缩</h2><p>上面扩容完了有时候又会觉得分的太大，浪费，又想收回来，所以又得要个压缩空间的法子，同样是管理员模式打开powershell</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 关闭wsl</span></span><br><span class="line">wsl.exe --shutdown</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看当前子系统是不是在stopped状态</span></span><br><span class="line">wsl.exe --list --verbose</span><br><span class="line"><span class="meta">#</span><span class="bash"> 进入磁盘管理</span></span><br><span class="line">diskpart</span><br><span class="line"><span class="meta">#</span><span class="bash"> 选中要操作的虚拟磁盘</span></span><br><span class="line">select vdisk file="E:\wsl2\ubuntu18\ext4.vhdx"</span><br><span class="line"><span class="meta">#</span><span class="bash"> 压缩</span></span><br><span class="line">compact vdisk</span><br><span class="line"><span class="meta">#</span><span class="bash"> 等一会</span></span><br><span class="line">100 百分比已完成</span><br><span class="line"><span class="meta">#</span><span class="bash"> 退出</span></span><br><span class="line">exit</span><br></pre></td></tr></tbody></table></figure>
 
 <p>到这里算是把wsl折腾完了</p>
 <h1 id="2-编译Android"><a href="#2-编译Android" class="headerlink" title="2 编译Android"></a>2 编译Android</h1><p>我这里为啥没选Android S呢，完全是因为编不懂，编system的时候总是segment fault，并且当时也忘了设置swap试试，所以就试试Android R了，结果还是比较满意的</p>
@@ -686,7 +689,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-安装WSL2"><span class="nav-text">1 安装WSL2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-WSL2挪位"><span class="nav-text">1.1 WSL2挪位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-WSL2配置"><span class="nav-text">1.2 WSL2配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-WSL2扩容"><span class="nav-text">1.3 WSL2扩容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-编译Android"><span class="nav-text">2 编译Android</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-prepare"><span class="nav-text">2.1 prepare</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Compile-AOSP"><span class="nav-text">2.2 Compile AOSP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Compile-Kernel"><span class="nav-text">2.3 Compile Kernel</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android12编译后起不来"><span class="nav-text">Android12编译后起不来</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-安装WSL2"><span class="nav-text">1 安装WSL2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-WSL2挪位"><span class="nav-text">1.1 WSL2挪位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-WSL2配置"><span class="nav-text">1.2 WSL2配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-WSL2扩容"><span class="nav-text">1.3 WSL2扩容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-WSL2压缩"><span class="nav-text">1.4 WSL2压缩</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-编译Android"><span class="nav-text">2 编译Android</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-prepare"><span class="nav-text">2.1 prepare</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Compile-AOSP"><span class="nav-text">2.2 Compile AOSP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Compile-Kernel"><span class="nav-text">2.3 Compile Kernel</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android12编译后起不来"><span class="nav-text">Android12编译后起不来</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -710,7 +713,7 @@
           <a href="/archives/%20%7C%7C%20archive">
         
         -->
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -829,14 +832,14 @@
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
     
-    <span title="Symbols count total">217k</span>
+    <span title="Symbols count total">232k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
     
-    <span title="Reading time total">6:01</span>
+    <span title="Reading time total">6:27</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0</div>
   <span class="post-meta-divider">|</span>

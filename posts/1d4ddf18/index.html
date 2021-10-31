@@ -57,33 +57,40 @@
   };
 </script>
 
-  <meta name="description" content="You laugh at me for being different, but I laugh at you for being the same.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sidney God">
-<meta property="og:url" content="https://sidneygod.github.io/index.html">
+  <meta name="description" content="说是第三天，我看了该一个星期了..发现之前看得有点浮躁，最近看了费曼读书法有了新的想法，不怕慢，就不没看明白，所以听费曼的，每次看卡壳了，就返回去重新看.. 看到这里，突然觉得还是以《64位》为主比较好，《32位》太老了，用的还是nask转换起来有点累，并且《64位》介绍得细啊，所以我悟了，《32位》用来打辅助吧.. 1 软盘与FAT12先来看软盘，一个PC里面可以有多个软盘，一个软盘里面包含2个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Make MyOS] Find loader">
+<meta property="og:url" content="https://sidneygod.github.io/posts/1d4ddf18/index.html">
 <meta property="og:site_name" content="Sidney God">
-<meta property="og:description" content="You laugh at me for being different, but I laugh at you for being the same.">
+<meta property="og:description" content="说是第三天，我看了该一个星期了..发现之前看得有点浮躁，最近看了费曼读书法有了新的想法，不怕慢，就不没看明白，所以听费曼的，每次看卡壳了，就返回去重新看.. 看到这里，突然觉得还是以《64位》为主比较好，《32位》太老了，用的还是nask转换起来有点累，并且《64位》介绍得细啊，所以我悟了，《32位》用来打辅助吧.. 1 软盘与FAT12先来看软盘，一个PC里面可以有多个软盘，一个软盘里面包含2个">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/202110162308914.png">
+<meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/202110162324743.png">
+<meta property="og:image" content="http://www.c-jump.com/CIS24/Slides/FAT/images/directory_entry_format.png">
+<meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/202110312044018.png">
+<meta property="article:published_time" content="2021-10-31T15:05:46.000Z">
+<meta property="article:modified_time" content="2021-10-31T15:11:40.145Z">
 <meta property="article:author" content="Sidney Ding">
 <meta property="article:tag" content="Sidney">
 <meta property="article:tag" content=" Ding">
 <meta property="article:tag" content=" Sidney Ding">
 <meta name="twitter:card" content="summary">
-  <link rel="canonical" href="https://sidneygod.github.io/">
+<meta name="twitter:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/202110162308914.png">
+  <link rel="canonical" href="https://sidneygod.github.io/posts/1d4ddf18/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>Sidney God</title>
+  <title>[Make MyOS] Find loader | Sidney God</title>
   
 
 
@@ -344,12 +351,13 @@
 
           <div id="content" class="content">
             
+
   <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block home">
+  <div class="post-block post">
     <link itemprop="mainEntityOfPage" href="https://sidneygod.github.io/posts/1d4ddf18/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -362,9 +370,8 @@
       <meta itemprop="name" content="Sidney God">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/posts/1d4ddf18/" class="post-title-link" itemprop="url">[Make MyOS] Find loader</a>
+        <h1 class="post-title" itemprop="name headline">[Make MyOS] Find loader
+
           
         </h1>
 
@@ -446,7 +453,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <html><head></head><body><p>说是第三天，我看了该一个星期了..发现之前看得有点浮躁，最近看了费曼读书法有了新的想法，不怕慢，就不没看明白，所以听费曼的，每次看卡壳了，就返回去重新看..</p>
+        <html><head></head><body><p>说是第三天，我看了该一个星期了..发现之前看得有点浮躁，最近看了费曼读书法有了新的想法，不怕慢，就不没看明白，所以听费曼的，每次看卡壳了，就返回去重新看..</p>
 <p>看到这里，突然觉得还是以《64位》为主比较好，《32位》太老了，用的还是nask转换起来有点累，并且《64位》介绍得细啊，所以我悟了，《32位》用来打辅助吧..</p>
 <h1 id="1-软盘与FAT12"><a href="#1-软盘与FAT12" class="headerlink" title="1 软盘与FAT12"></a>1 软盘与FAT12</h1><p>先来看软盘，一个PC里面可以有多个软盘，一个软盘里面包含2个磁头，80个柱面，18个扇区。因为软盘正反面都可以存储数据，所以有俩磁头去读取数据。柱面参考下图(注意编号0~79)，英文是cylinder；扇区参考下图(注意编号1~18)，英文是sector</p>
 <p><img alt data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/202110162308914.png"></p>
@@ -816,1280 +823,93 @@
 <p>启动效果是这个死样子</p>
 <p><img alt data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/202110312044018.png"></p>
 </body></html>
-        
-      
     </div>
 
     
     
     
-      <footer class="post-footer">
-          <div class="post-eof"></div>
+      
+
+
+      <div style="text-align:center;color:#636363;font-size:14px;">------- This article is over <i class="fa fa-leaf" aria-hidden="true"></i> Thank you for your reading -------</div>
         
-      </footer>
+      
+        <div id="reward-container">
+  <div>All I need is you needing me.</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="Sidney Ding WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.jpg" alt="Sidney Ding Alipay">
+        <p>Alipay</p>
+      </div>
+
   </div>
-  
-  
-  
-  </article>
+</div>
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://sidneygod.github.io/posts/c0d78c8f/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sidney Ding">
-      <meta itemprop="description" content="You laugh at me for being different, but I laugh at you for being the same.">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sidney God">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/posts/c0d78c8f/" class="post-title-link" itemprop="url">[Make MyOS] Make a boot</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2021-09-05 22:48:41 / Modified: 22:52:07" itemprop="dateCreated datePublished" datetime="2021-09-05T22:48:41+08:00">2021-09-05</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Make-MyOS/" itemprop="url" rel="index"><span itemprop="name">Make MyOS</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
+      
         
-      
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/posts/c0d78c8f/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/c0d78c8f/" itemprop="commentCount"></span></a>
-  </span>
-  
-  
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              
-              <span>9.9k</span>
-            </span>
-          
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              
-              <span>17 mins.</span>
-            </span>
-          
 
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Sidney Ding</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://sidneygod.github.io/posts/1d4ddf18/" title="[Make MyOS] Find loader">https://sidneygod.github.io/posts/1d4ddf18/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
+</ul>
+</div>
 
       
-          <html><head></head><body><p>第二天的内容本该是，学习一些汇编指令和Makefile，在这之前我觉得有必要好好看看CPU结构，自古操作系统和组成原理就分不开啊</p>
-<p>面向总线的计算机组成示意图。中央处理器，从主存储器中逐条进行取指令，分析指令和执行指令。计算机各组件通过总线连在一起，总线是一些平行导线的集合，用来传递地址，数据和控制信号，可以在CPU之外连接CPU，存储器及IO设备；也可以在CPU内部连接CPU的各个组成部分。</p>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/posts/c0d78c8f/#more" rel="contents">
-                Read more &raquo;
-              </a>
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/posts/c0d78c8f/" rel="next" title="[Make MyOS] Make a boot">
+                  <i class="fa fa-chevron-left"></i> [Make MyOS] Make a boot
+                </a>
+              
             </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
+            <span class="post-nav-divider"></span>
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://sidneygod.github.io/posts/307d30a/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sidney Ding">
-      <meta itemprop="description" content="You laugh at me for being different, but I laugh at you for being the same.">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sidney God">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/posts/307d30a/" class="post-title-link" itemprop="url">[Make MyOS] Hello MyOS!</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
+            <div class="post-nav-prev post-nav-item">
               
-                
-              
-
-              <time title="Created: 2021-08-21 21:20:47" itemprop="dateCreated datePublished" datetime="2021-08-21T21:20:47+08:00">2021-08-21</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-10-23 11:46:15" itemprop="dateModified" datetime="2021-10-23T11:46:15+08:00">2021-10-23</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Make-MyOS/" itemprop="url" rel="index"><span itemprop="name">Make MyOS</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/posts/307d30a/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/307d30a/" itemprop="commentCount"></span></a>
-  </span>
-  
-  
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              
-              <span>6.6k</span>
-            </span>
-          
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              
-              <span>11 mins.</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这是30天的第一天内容，也不知道自己能坚持到几天，有几天就几天了，活这么久了，半途而废的事情还少吗？</p>
-<p>首先需要准备几个工具</p>
-<h1 id="1-qemu"><a href="#1-qemu" class="headerlink" title="1 qemu"></a>1 qemu</h1><p>不可能真去买个软盘什么的，所以我们需要一个虚拟计算机的东西——QEMU</p>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/posts/307d30a/#more" rel="contents">
-                Read more &raquo;
-              </a>
             </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
+          </div>
         
       </footer>
+    
   </div>
   
   
   
   </article>
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://sidneygod.github.io/posts/32699cc/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sidney Ding">
-      <meta itemprop="description" content="You laugh at me for being different, but I laugh at you for being the same.">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sidney God">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/posts/32699cc/" class="post-title-link" itemprop="url">[Make MyOS] After power on</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2021-08-21 21:09:12" itemprop="dateCreated datePublished" datetime="2021-08-21T21:09:12+08:00">2021-08-21</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-10-23 11:45:46" itemprop="dateModified" datetime="2021-10-23T11:45:46+08:00">2021-10-23</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Make-MyOS/" itemprop="url" rel="index"><span itemprop="name">Make MyOS</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/posts/32699cc/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/32699cc/" itemprop="commentCount"></span></a>
-  </span>
-  
-  
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              
-              <span>7.5k</span>
-            </span>
-          
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              
-              <span>13 mins.</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>学习嘛，当然要有浓厚的兴趣先，所以需要百度学习了一下，按下电源键之后的故事。操作系统这玩意虽说玄乎，但是参考资料还是很多的</p>
-<p>参考书籍是《30天自制操作系统》和《一个64位操作系统的设计与实现》，以30天为主，但是这玩意用的是Windows环境，这显然是不友好的，最终选择环境位Ubuntu18，能换的都换换呗</p>
-<p>Intel手册：<a href="https://software.intel.com/content/www/us/en/develop/articles/intel-sdm.html" target="_blank" rel="noopener">Intel® 64 and IA-32 Architectures Software Developer Manuals</a></p>
-<p>Vol1：用来介绍Intel x86平台的基本架构和执行环境。</p>
-<p>Vol2：介绍x86指令，学汇编的时候可以参考啊</p>
-<p>Vol3：介绍x86系统编程的基础，包括内存管理、保护、任务管理、中断和异常处理、多处理器支持、散热和电源管理功能、调试、性能监控、系统管理模式、虚拟机扩展(VMX)指令、英特尔虚拟化技术(Intel VT)和英特尔软件防护扩展(Intel SGX)。</p>
-<p>Vol4：介绍x86 CPU上的MSR，是CPU内部的一组特殊的寄存器（这个是从原来的Vol3中独立出来的）。</p>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/posts/32699cc/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
   </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://sidneygod.github.io/posts/c64b5633/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sidney Ding">
-      <meta itemprop="description" content="You laugh at me for being different, but I laugh at you for being the same.">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sidney God">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/posts/c64b5633/" class="post-title-link" itemprop="url">Compile Android 11 with WSL2</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2021-06-13 09:15:43" itemprop="dateCreated datePublished" datetime="2021-06-13T09:15:43+08:00">2021-06-13</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-10-31 12:02:05" itemprop="dateModified" datetime="2021-10-31T12:02:05+08:00">2021-10-31</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/posts/c64b5633/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/c64b5633/" itemprop="commentCount"></span></a>
-  </span>
-  
-  
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              
-              <span>17k</span>
-            </span>
-          
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              
-              <span>28 mins.</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <html><head></head><body><p>手里就一台笔记本，可不想把系统换成Linux的，毕竟有很多操作还是很不方便，但是又想学习学习Android源码，所以，总得找点什么凑活着用的办法，于是我把目光放到了Win10上的Linux子系统上了，也就是WSL，毕竟虚拟机太废内存划不来，亲测</p>
-<p>CPU：AMD Ryzen 7 4800H with Radeon Graphics 2.90 GHz</p>
-<p>RAM：16G</p>
-<p>ROM：512G SSD + 2T HDD</p>
-<p>GPU：GTX 1650</p>
-<p>跑起来不说多么流畅，反正不卡，可能编译慢点，咱也不差那点时间，硬盘预留个256G的空间就够了。话不多说，记录一下这次操作的经历..</p>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/posts/c64b5633/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://sidneygod.github.io/posts/c8ed763e/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sidney Ding">
-      <meta itemprop="description" content="You laugh at me for being different, but I laugh at you for being the same.">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sidney God">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/posts/c8ed763e/" class="post-title-link" itemprop="url">[Relearning C/Cpp] Supplement</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2021-05-05 17:40:29 / Modified: 20:26:31" itemprop="dateCreated datePublished" datetime="2021-05-05T17:40:29+08:00">2021-05-05</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C-Cpp/" itemprop="url" rel="index"><span itemprop="name">C/Cpp</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/posts/c8ed763e/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/c8ed763e/" itemprop="commentCount"></span></a>
-  </span>
-  
-  
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              
-              <span>13k</span>
-            </span>
-          
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              
-              <span>22 mins.</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这篇笔记主要是对C/Cpp一些知识的补充，这篇笔记过后就是抽象机制以及一些库函数的学习了</p>
-<h1 id="1-源文件与程序"><a href="#1-源文件与程序" class="headerlink" title="1 源文件与程序"></a>1 源文件与程序</h1><p>一个C语言文件到可执行文件，中间经历了什么？预处理(Preprocessing)、编译(Compilation)、汇编(Assemble)、链接(Linking)。这是耳熟能详的几个过程，甚至还能敲出对应的gcc命令，那么实际上到底是啥情况呢？比如现在有个C程序</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Hello World!\n"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>敲出gcc的命令：<code>gcc main.c -o main.o -v</code></p>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/posts/c8ed763e/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://sidneygod.github.io/posts/e4de57a8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sidney Ding">
-      <meta itemprop="description" content="You laugh at me for being different, but I laugh at you for being the same.">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sidney God">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/posts/e4de57a8/" class="post-title-link" itemprop="url">[Relearning C/Cpp] Initialization and Functions</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2021-04-17 16:53:30" itemprop="dateCreated datePublished" datetime="2021-04-17T16:53:30+08:00">2021-04-17</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-26 22:54:54" itemprop="dateModified" datetime="2021-04-26T22:54:54+08:00">2021-04-26</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C-Cpp/" itemprop="url" rel="index"><span itemprop="name">C/Cpp</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/posts/e4de57a8/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/e4de57a8/" itemprop="commentCount"></span></a>
-  </span>
-  
-  
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              
-              <span>20k</span>
-            </span>
-          
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              
-              <span>33 mins.</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <html><head></head><body><h1 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1 初始化"></a>1 初始化</h1><p>对象的声明可以通过初始化的过程获得初始值。主要就是见识一下C/Cpp里面几种初始化的形式，免得大惊小怪</p>
-<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C语言的初始化还好，怎么着都得有个 =</span></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">3</span>] = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>};</span><br><span class="line"><span class="keyword">int</span> b = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> c = {<span class="number">1</span>};  <span class="comment">// scalar initialization</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> {</span><span class="keyword">int</span> a[<span class="number">3</span>], b;} MyType;</span><br><span class="line">MyType mm = {{<span class="number">1</span>}, <span class="number">3</span>};</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span>* ptr = <span class="built_in">malloc</span>(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Cpp多了一个花样</span></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">3</span>] {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>};</span><br><span class="line"><span class="keyword">int</span> b {<span class="number">0</span>};</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> {</span><span class="keyword">int</span> a[<span class="number">3</span>], b;} MyType;</span><br><span class="line">MyType mm {{<span class="number">1</span>}, <span class="number">3</span>};</span><br><span class="line"><span class="keyword">auto</span> *m = <span class="keyword">new</span> MyType;</span><br><span class="line"><span class="keyword">auto</span> *m1 {<span class="keyword">new</span> MyType()};</span><br></pre></td></tr></tbody></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/posts/e4de57a8/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://sidneygod.github.io/posts/61dcf29f/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sidney Ding">
-      <meta itemprop="description" content="You laugh at me for being different, but I laugh at you for being the same.">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sidney God">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/posts/61dcf29f/" class="post-title-link" itemprop="url">[Relearning C/Cpp] Array and Pointer</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2021-04-17 15:47:30" itemprop="dateCreated datePublished" datetime="2021-04-17T15:47:30+08:00">2021-04-17</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-26 22:54:34" itemprop="dateModified" datetime="2021-04-26T22:54:34+08:00">2021-04-26</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C-Cpp/" itemprop="url" rel="index"><span itemprop="name">C/Cpp</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/posts/61dcf29f/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/61dcf29f/" itemprop="commentCount"></span></a>
-  </span>
-  
-  
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              
-              <span>31k</span>
-            </span>
-          
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              
-              <span>51 mins.</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <html><head></head><body><p>数组和指针一般不能分开，尤其是C语言里面，让人又爱又恨的东西..而一谈到这俩玩意就得画图..</p>
-<h1 id="1-数组"><a href="#1-数组" class="headerlink" title="1 数组"></a>1 数组</h1><p>对数组下定义，抱歉，我不会。但是我有词典，a way of organizing and storing related data in a computer memory。这么一看就清晰多了</p>
-<p>元素类型为char的数组可以如下声明</p>
-<p><code>int c[6];  // 可以存6个整数的数组</code></p>
-<p>在声明中<code>[]</code>表示xxx的数组，所有数组下标都是从0开始，计算机中很多东西都是从0开始，为什么？搜索一下吧。数组的大小，就是那个6，必须得是个常量表达式，这么看，数组一旦定义好了大小就定下来了呀</p>
-<p>数组名也是标识符，也要符合规则，不能和其他变量重名</p>
-<p>数组初始化的时候可以部分初始化，也可以整体初始化；赋值的时候不能整体赋值，只能单个元素得赋值(数组拷贝，那个不算)</p>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/posts/61dcf29f/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://sidneygod.github.io/posts/5d13faf3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sidney Ding">
-      <meta itemprop="description" content="You laugh at me for being different, but I laugh at you for being the same.">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sidney God">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/posts/5d13faf3/" class="post-title-link" itemprop="url">Build a leanote server</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2020-08-23 18:05:55 / Modified: 18:44:13" itemprop="dateCreated datePublished" datetime="2020-08-23T18:05:55+08:00">2020-08-23</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Other/" itemprop="url" rel="index"><span itemprop="name">Other</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/posts/5d13faf3/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/5d13faf3/" itemprop="commentCount"></span></a>
-  </span>
-  
-  
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              
-              <span>5.5k</span>
-            </span>
-          
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              
-              <span>9 mins.</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1-Prepare"><a href="#1-Prepare" class="headerlink" title="1 Prepare"></a>1 Prepare</h1><p>You need a server. My server OS is CentOS 7.2. You can also use other versions of Linux. Ok, let’s get started.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">su</span><br><span class="line">yum install git  # config your git</span><br><span class="line">git config --global user.name=UserName</span><br><span class="line">git config --global user.email=xx@yy.zz</span><br><span class="line">mkdir /usr/local/apps</span><br><span class="line">mkdir ~/tmp</span><br><span class="line">cd ~/tmp</span><br></pre></td></tr></table></figure>
-
-<h1 id="2-Install-Golang"><a href="#2-Install-Golang" class="headerlink" title="2 Install Golang"></a>2 Install Golang</h1>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/posts/5d13faf3/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://sidneygod.github.io/posts/cb75f049/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sidney Ding">
-      <meta itemprop="description" content="You laugh at me for being different, but I laugh at you for being the same.">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sidney God">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/posts/cb75f049/" class="post-title-link" itemprop="url">Build FreeRADIUS server based on Ubuntu18</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2020-08-22 22:46:36" itemprop="dateCreated datePublished" datetime="2020-08-22T22:46:36+08:00">2020-08-22</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-23 18:09:36" itemprop="dateModified" datetime="2020-08-23T18:09:36+08:00">2020-08-23</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Other/" itemprop="url" rel="index"><span itemprop="name">Other</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/posts/cb75f049/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/cb75f049/" itemprop="commentCount"></span></a>
-  </span>
-  
-  
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              
-              <span>13k</span>
-            </span>
-          
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              
-              <span>22 mins.</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <html><head></head><body><p>参考：</p>
-<p><a href="https://www.cnblogs.com/opsprobe/p/9420502.html" target="_blank" rel="noopener">https://www.cnblogs.com/opsprobe/p/9420502.html</a></p>
-<p><a href="https://blog.csdn.net/lassewang/article/details/9159543" target="_blank" rel="noopener">https://blog.csdn.net/lassewang/article/details/9159543</a></p>
-<h1 id="0-RADIUS"><a href="#0-RADIUS" class="headerlink" title="0 RADIUS"></a>0 RADIUS</h1><p>RADIUS：（Remote Authentication Dial In User Service）中文名为远程用户拨号认证服务，简称RADIUS，是目前应用最广泛的AAA协议（认证、授权和计费）</p>
-<img data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/AAA组网示意图.png">
-
-<p>图中Device（例如交换机）向远程接入用户提供接入及与RADIUS服务器交互的服务。RADIUS服务器上则存储用户的身份信息、授权信息以及访问记录，对用户进行认证、授权和计费服务</p>
-<p><strong>认证过程如下</strong></p>
-<p>（1）客户端向接入设备发送一个EAPoL-Start报文，开始802.1x认证接入；</p>
-<p>（2）接入设备向客户端发送EAP-Request/Identity报文，要求客户端将用户名送上来；</p>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/posts/cb75f049/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-  </div>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
 
 
           </div>
           
+    
+    <div class="comments" id="comments"></div>
+  
 
         </div>
           
@@ -2102,6 +922,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -2114,6 +939,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-软盘与FAT12"><span class="nav-text">1 软盘与FAT12</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-boot-asm"><span class="nav-text">2 boot.asm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-FAT12文件系统数据"><span class="nav-text">2.1 FAT12文件系统数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-初始化"><span class="nav-text">2.2 初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-查找loader-bin文件"><span class="nav-text">2.3 查找loader.bin文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-加载扇区内容到内存"><span class="nav-text">2.4 加载扇区内容到内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-读取磁盘扇区模块"><span class="nav-text">2.5 读取磁盘扇区模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-FAT表项解析模块"><span class="nav-text">2.6 FAT表项解析模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-Other"><span class="nav-text">2.7 Other</span></a></li></ol></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
@@ -2391,28 +1218,6 @@ if (document.querySelectorAll('div.pdf').length) {
 
     
 
-  
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
   
 
     
