@@ -69,7 +69,7 @@
 <meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/20210613231943.png">
 <meta property="og:image" content="https://gitee.com/SidneyGod/ImagePlace/raw/master/20210614010437.png">
 <meta property="article:published_time" content="2021-06-13T01:15:43.000Z">
-<meta property="article:modified_time" content="2021-06-13T17:10:53.311Z">
+<meta property="article:modified_time" content="2021-10-31T03:49:53.476Z">
 <meta property="article:author" content="Sidney Ding">
 <meta property="article:tag" content="WSL">
 <meta name="twitter:card" content="summary">
@@ -395,7 +395,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-06-14 01:10:53" itemprop="dateModified" datetime="2021-06-14T01:10:53+08:00">2021-06-14</time>
+                <time title="Modified: 2021-10-31 11:49:53" itemprop="dateModified" datetime="2021-10-31T11:49:53+08:00">2021-10-31</time>
               </span>
             
           
@@ -446,7 +446,7 @@
               
                 <span class="post-meta-item-text">Reading time &asymp;</span>
               
-              <span>26 mins.</span>
+              <span>27 mins.</span>
             </span>
           
 
@@ -549,6 +549,13 @@
 <p>另外，如果拷贝完image到宿主机后，发现无法开机，并报下面的错，那可能是image没编好，kernel不适配，重新整编一下就好了</p>
 <figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[    1.785501] init: Failed to insmod '/lib/modules/dummy-cpufreq.ko' <span class="keyword">with</span> args <span class="string">''</span></span><br><span class="line">[    <span class="number">1.789747</span>] init: LoadWithAliases was unable <span class="keyword">to</span> <span class="keyword">load</span> dummy_cpufreq</span><br><span class="line">[    <span class="number">1.793175</span>] init: [libfs_mgr]ReadFstabFromDt(): <span class="keyword">failed</span> <span class="keyword">to</span> <span class="keyword">read</span> fstab <span class="keyword">from</span> dt</span><br><span class="line">[    <span class="number">1.797138</span>] init: <span class="keyword">Using</span> Android DT <span class="keyword">directory</span> /proc/device-tree/firmware/android/</span><br><span class="line">[    <span class="number">1.824079</span>] init: <span class="built_in">bool</span> android::init::BlockDevInitializer::InitDevices(<span class="keyword">std</span>::<span class="keyword">set</span><<span class="keyword">std</span>::<span class="keyword">string</span>>): <span class="keyword">partition</span>(s) <span class="keyword">not</span> <span class="keyword">found</span> <span class="keyword">in</span> /<span class="keyword">sys</span>, waiting <span class="keyword">for</span> their uevent(s): metadata, super, vbmeta</span><br><span class="line">[   <span class="number">11.844727</span>] init: <span class="keyword">Wait</span> <span class="keyword">for</span> <span class="keyword">partitions</span> returned <span class="keyword">after</span> <span class="number">10011</span>ms</span><br><span class="line">[   <span class="number">11.848915</span>] init: <span class="built_in">bool</span> android::init::BlockDevInitializer::InitDevices(<span class="keyword">std</span>::<span class="keyword">set</span><<span class="keyword">std</span>::<span class="keyword">string</span>>): <span class="keyword">partition</span>(s) <span class="keyword">not</span> <span class="keyword">found</span> <span class="keyword">after</span> polling <span class="keyword">timeout</span>: metadata, super, vbmeta</span><br><span class="line">[   <span class="number">11.855918</span>] init: <span class="keyword">Failed</span> <span class="keyword">to</span> <span class="keyword">mount</span> <span class="keyword">required</span> <span class="keyword">partitions</span> early ...</span><br><span class="line">[   <span class="number">11.859722</span>] init: InitFatalReboot: signal <span class="number">6</span></span><br></pre></td></tr></tbody></table></figure>
 
+<h1 id="Android12编译后起不来"><a href="#Android12编译后起不来" class="headerlink" title="Android12编译后起不来"></a>Android12编译后起不来</h1><p>首先AndroidS和AndroidR的操作基本没啥区别，只不过lunch时候的选项可能需要改一下，因为用<code>aosp_x86_64-eng</code>编译完成后没有qemu的image和<code>userdata.img</code>，就像stack overflow上这样<a href="https://stackoverflow.com/questions/69553871/android-12-latest-release-emulator-build-not-running-for-android-12-0-0-r2-aosp/69780243#69780243" target="_blank" rel="noopener">android 12 latest release: Emulator build not running for android-12.0.0_r2 aosp release - Stack Overflow</a></p>
+<figure class="highlight subunit"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Error: </span>out/target/product/generic_arm64/userdata-qemu.img': No such file or directory</span><br></pre></td></tr></tbody></table></figure>
+
+<p>解决方案我也贴上去了，就是需要在<code>build/make/target/product/AndroidProducts.mk</code>下面加一句</p>
+<figure class="highlight diff"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">diff --git a/target/product/AndroidProducts.mk b/target/product/AndroidProducts.mk</span><br><span class="line">index 7d9d90e..419cccb 100644</span><br><span class="line"><span class="comment">--- a/target/product/AndroidProducts.mk</span></span><br><span class="line"><span class="comment">+++ b/target/product/AndroidProducts.mk</span></span><br><span class="line">@@ -84,3 +84,4 @@ COMMON_LUNCH_CHOICES := \</span><br><span class="line">     aosp_arm-eng \</span><br><span class="line">     aosp_x86_64-eng \</span><br><span class="line">     aosp_x86-eng \</span><br><span class="line"><span class="addition">+    sdk_phone_x86_64-eng \</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后lunch的时候选择<code>sdk_phone_x86_64-eng</code>就好了..</p>
 </body></html>
     </div>
 
@@ -679,7 +686,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-安装WSL2"><span class="nav-text">1 安装WSL2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-WSL2挪位"><span class="nav-text">1.1 WSL2挪位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-WSL2配置"><span class="nav-text">1.2 WSL2配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-WSL2扩容"><span class="nav-text">1.3 WSL2扩容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-编译Android"><span class="nav-text">2 编译Android</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-prepare"><span class="nav-text">2.1 prepare</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Compile-AOSP"><span class="nav-text">2.2 Compile AOSP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Compile-Kernel"><span class="nav-text">2.3 Compile Kernel</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-安装WSL2"><span class="nav-text">1 安装WSL2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-WSL2挪位"><span class="nav-text">1.1 WSL2挪位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-WSL2配置"><span class="nav-text">1.2 WSL2配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-WSL2扩容"><span class="nav-text">1.3 WSL2扩容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-编译Android"><span class="nav-text">2 编译Android</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-prepare"><span class="nav-text">2.1 prepare</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Compile-AOSP"><span class="nav-text">2.2 Compile AOSP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Compile-Kernel"><span class="nav-text">2.3 Compile Kernel</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android12编译后起不来"><span class="nav-text">Android12编译后起不来</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -822,7 +829,7 @@
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
     
-    <span title="Symbols count total">216k</span>
+    <span title="Symbols count total">217k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>

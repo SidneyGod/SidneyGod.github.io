@@ -65,7 +65,7 @@
 <meta property="og:description" content="学习嘛，当然要有浓厚的兴趣先，所以需要百度学习了一下，按下电源键之后的故事。操作系统这玩意虽说玄乎，但是参考资料还是很多的 参考书籍是《30天自制操作系统》和《一个64位操作系统的设计与实现》，以30天为主，但是这玩意用的是Windows环境，这显然是不友好的，最终选择环境位Ubuntu18，能换的都换换呗 Intel手册：Intel® 64 and IA-32 Architectures Sof">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-21T13:09:12.000Z">
-<meta property="article:modified_time" content="2021-08-21T13:44:05.952Z">
+<meta property="article:modified_time" content="2021-10-23T03:45:46.707Z">
 <meta property="article:author" content="Sidney Ding">
 <meta property="article:tag" content="Sidney">
 <meta property="article:tag" content=" Ding">
@@ -381,11 +381,19 @@
                 
               
 
-              <time title="Created: 2021-08-21 21:09:12 / Modified: 21:44:05" itemprop="dateCreated datePublished" datetime="2021-08-21T21:09:12+08:00">2021-08-21</time>
+              <time title="Created: 2021-08-21 21:09:12" itemprop="dateCreated datePublished" datetime="2021-08-21T21:09:12+08:00">2021-08-21</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-10-23 11:45:46" itemprop="dateModified" datetime="2021-10-23T11:45:46+08:00">2021-10-23</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -425,7 +433,7 @@
               
                 <span class="post-meta-item-text">Symbols count in article: </span>
               
-              <span>7.4k</span>
+              <span>7.5k</span>
             </span>
           
             <span class="post-meta-item" title="Reading time">
@@ -435,7 +443,7 @@
               
                 <span class="post-meta-item-text">Reading time &asymp;</span>
               
-              <span>12 mins.</span>
+              <span>13 mins.</span>
             </span>
           
 
@@ -470,14 +478,14 @@
 <h1 id="2-BIOS"><a href="#2-BIOS" class="headerlink" title="2 BIOS"></a>2 BIOS</h1><blockquote>
 <p>参考：Intel manual volume 3 chapter 9.1</p>
 </blockquote>
-<p>当按下电源键或者RESET引脚被触发时，系统总线上每个CPU都会执行初始化(硬件复位)和可选的内置自检(build-in self-test)。硬件复位将每个处理器的寄存器设置为已知状态并<strong>将处理器置于实地址模式</strong>。它还会使内部缓存、转换后备缓冲区(TLB)和分支目标缓冲区(BTB)失效。此时，采取的操作取决于处理器系列，Intel手册上举了四类，三大类，比较古老的就不看了，IA-32 and Intel 64 processors，系统总线上的所有处理器（包括单处理器系统中的单个处理器）都执行多处理器（MP）初始化协议。通过该协议被选为自举处理器(BSP)的处理器然后立即开始<strong>执行从EIP寄存器中的偏移量开始的当前代码段中的软件初始化代码</strong>。</p>
+<p>当按下电源键或者RESET引脚被触发时，系统总线上每个CPU都会执行初始化(硬件复位)和可选的内置自检(build-in self-test)。硬件复位将每个处理器的寄存器设置为已知状态并<strong>将处理器置于实地址模式</strong>。它还会使内部缓存、转换后备缓冲区(TLB)和分支目标缓冲区(BTB)失效。此时，采取的操作取决于处理器系列，Intel手册上举了四类，三大类，比较古老的就不看了，IA-32 and Intel 64 processors，系统总线上的所有处理器（包括单处理器系统中的单个处理器）都执行<strong>多处理器（MP）初始化协议</strong>。通过该协议被选为自举处理器(BSP)的处理器然后立即开始<strong>执行从EIP寄存器中的偏移量开始的当前代码段中的软件初始化代码</strong>。</p>
 <p>这一段描述RESET引脚相关启动，还有一种INIT引脚，这俩差别不大，只是INIT是从保护模式转到实地址模式，抛开上电之后的BIST(毕竟是可选的)，来瞅瞅第一行代码是怎么被执行的</p>
-<p>参考Intel手册卷3第9.1.1节，首先上电之后，寄存器CR0被设为60000010H，用以确保CPU进入实地址模式。EIP被设定为0000FFF0H，CS基地址被设定为FFFF0000H(选择器是F000H)，通过<code>CS.BASE+EIP</code>得出第一条指令的地址FFFFFFF0H。</p>
-<p>参考Intel手册卷3第9.1.4节，硬件复位后取出并执行的第一条指令位于物理地址FFFFFFF0H。该地址比处理器的最高物理地址低16个字节。包含软件初始化代码的EPROM必须位于该地址。在实地址模式下，地址FFFFFFF0H超出了处理器的1MB可寻址范围。CS寄存器有两部分：可见段选择器部分和隐藏基地址部分。在实地址模式下，基地址通常是通过将16位段选择器值向左移动4位以产生20位基地址来形成的。但是，在硬件复位期间，CS寄存器中的段选择器装入F000H，基地址装入FFFF0000H。因此，起始地址是通过将基地址与EIP寄存器中的值相加而形成的（即，FFFF0000 + FFF0H = FFFFFFF0H）。为确保CS寄存器中的基地址在基于EPROM的软件初始化代码完成之前保持不变，代码不得包含远跳转或远调用或允许发生中断。</p>
+<p>参考Intel手册卷3第9.1.1节，首先上电之后，寄存器CR0被设为60000010H，用以确保CPU进入<strong>实地址模式</strong>。EIP被设定为0000FFF0H，CS基地址被设定为FFFF0000H(选择器是F000H)，通过<code>CS.BASE+EIP</code>得出第一条指令的地址FFFFFFF0H。</p>
+<p>参考Intel手册卷3第9.1.4节，硬件复位后取出并执行的第一条指令位于物理地址FFFFFFF0H。该地址比处理器的最高物理地址低16个字节。包含软件初始化代码的EPROM必须位于该地址。在实地址模式下，地址FFFFFFF0H超出了处理器的<strong>1MB</strong>可寻址范围。CS寄存器有两部分：可见段选择器部分和隐藏基地址部分。在实地址模式下，基地址通常是通过将16位段选择器值向左移动4位以产生20位基地址来形成的。但是，在硬件复位期间，CS寄存器中的段选择器装入F000H，基地址装入FFFF0000H。因此，起始地址是通过将基地址与EIP寄存器中的值相加而形成的（即，FFFF0000 + FFF0H = FFFFFFF0H）。为确保CS寄存器中的基地址在基于EPROM的软件初始化代码完成之前保持不变，代码不得包含远跳转或远调用或允许发生中断。</p>
 <p>那么为啥地址要是FFFFFFF0H呢？我们知道开机第一件事是读取BIOS，其实FFFFFFF0H的位置就是BIOS ROM的末尾，并且包含一条跳转指令，跳转到包含启动代码的BIOS区域。因为每家计算机生产厂商生产的机器外设不同，所以其BIOS程序大小不尽相同，有的可能是1K，有的可能是2K，如果把BIOS程序放在0x0000处，那么会造成在机器A上用户写的程序是从0x0400开始，机器B上用户写的程序就是0x0800开始，非常不统一。如果把这程序放在1M内存的顶部，再规定计算机第一条指令位置是FFFFFFF0H，然后就跳到各家BIOS开始处，那么用户写的程序都可以从0x0000开始了。</p>
 <blockquote>
 <p>CPU工作模式：实模式、保护模式、长模式。CPU同时在安全性上也要提升，从只有实模式【可以随意执行全部CPU指令，内存可以直接通过物理地址访问，随意访问随意读写】，到了32的保护模式【将指令划分为ring0到ring3，CPU指令不是你想调用就能调用；内存不是你想访问就能访问，首先CPU要允许，而且操作系统允许】，而64的长模式在安全方面与32并没有本至区别；</p>
-<p>实模式又称实地址模式，实，即真实，这个真实分为两个方面，一个方面是运行真实的指令，对指令的动作不作区分，直接执行指令的真实功能，另一方面是发往内存的地址是真实的，对任何地址不加限制地发往内存。</p>
+<p>实模式又称实地址模式，实，即真实，这个真实分为两个方面，一个方面是运行真实的指令，对指令的动作不作区分，直接执行指令的真实功能，另一方面是发往内存的地址是真实的，对任何地址不加限制地发往内存。另外16位CPU是没有实模式这一说的，在实模式下地址总线只使用了20根，<strong>寻址范围为2^20^B=1MB</strong>。可参考Intel manual volume 3 chapter 8.7.13.4，有个A20M# pin，会屏蔽掉</p>
 <p>保护模式相比于实模式，增加了一些控制寄存器和段寄存器，扩展通用寄存器的位宽，所有的通用寄存器都是32位的，还可以单独使用低16位，这个低16位又可以拆分成两个8位寄存器</p>
 <p>长模式又名AMD64，因为这个标准是AMD公司最早定义的，它使CPU在现有的基础上有了64位的处理能力，既能完成64位的数据运算，也能寻址64位的地址空间。这在大型计算机上犹为重要，因为它们的物理内存通常有几百GB。</p>
 <p>更多查看：Intel manual volume 3 chapter 2.2</p>
@@ -886,7 +894,7 @@
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
     
-    <span title="Symbols count total">216k</span>
+    <span title="Symbols count total">217k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
