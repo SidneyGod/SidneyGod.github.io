@@ -254,7 +254,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">21</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">22</span></a>
 
   </li>
       
@@ -345,6 +345,143 @@
           <div id="content" class="content">
             
   <div id="posts" class="posts-expand">
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://sidneygod.github.io/posts/a4707db6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sidney Ding">
+      <meta itemprop="description" content="You laugh at me for being different, but I laugh at you for being the same.">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sidney God">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/posts/a4707db6/" class="post-title-link" itemprop="url">[Make MyOS] Basic execution env & Interrupt</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2021-12-21 23:31:33 / Modified: 23:37:25" itemprop="dateCreated datePublished" datetime="2021-12-21T23:31:33+08:00">2021-12-21</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Make-MyOS/" itemprop="url" rel="index"><span itemprop="name">Make MyOS</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/posts/a4707db6/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/a4707db6/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              
+              <span>252</span>
+            </span>
+          
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              
+              <span>1 mins.</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="1-执行环境介绍"><a href="#1-执行环境介绍" class="headerlink" title="1 执行环境介绍"></a>1 执行环境介绍</h1><p>在find loader那一节之后，发现后面的代码真的看不懂了，直接抄也没有意义，于是补了一下相关的知识..希望能继续下去</p>
+<h2 id="1-1-CPU工作模式"><a href="#1-1-CPU工作模式" class="headerlink" title="1.1 CPU工作模式"></a>1.1 CPU工作模式</h2><p>参考Intel手册卷3第2.2 MODES OF OPERATION</p>
+<p>32位的支持三种工作模式和一种准工作模式</p>
+<ul>
+<li><p>实地址模式(Real-address mode)，处理器上电(power-up)或复位(reset)后处于该模式。这个模式实际上是为了兼容8086，因为地址线只有20根，限制了寻址只能是1M大小，也就是通过<script type="math/tex">段寄存器 << 4 + 偏移地址</script>方式寻址。进入这个模式，也就只使用20根地址线，主要是因为A20M#引脚被屏蔽了</p>
+</li>
+<li><p>保护模式(Protected mode)，这个是80386时期引入的，也就是32位处理器原本的工作模式。在这个模式下不再使用<script type="math/tex">段寄存器 << 4 + 偏移地址</script>的方式寻址，而是通过段描述符的方式描述基址和限长，并通过描述符中的属性设置实现对内存段的访问限制和数据保护。</p>
+</li>
+<li>虚拟8086模式(Virtual-8086 mode)，是一种准工作模式，目的是为了在保护模式下能够执行8086程序
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/posts/a4707db6/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
         <article itemscope itemtype="http://schema.org/Article">
   
   
@@ -1574,151 +1711,6 @@
   </article>
 
     
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://sidneygod.github.io/posts/cb75f049/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sidney Ding">
-      <meta itemprop="description" content="You laugh at me for being different, but I laugh at you for being the same.">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sidney God">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/posts/cb75f049/" class="post-title-link" itemprop="url">Build FreeRADIUS server based on Ubuntu18</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2020-08-22 22:46:36" itemprop="dateCreated datePublished" datetime="2020-08-22T22:46:36+08:00">2020-08-22</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-23 18:09:36" itemprop="dateModified" datetime="2020-08-23T18:09:36+08:00">2020-08-23</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Other/" itemprop="url" rel="index"><span itemprop="name">Other</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/posts/cb75f049/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/cb75f049/" itemprop="commentCount"></span></a>
-  </span>
-  
-  
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              
-              <span>13k</span>
-            </span>
-          
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              
-              <span>22 mins.</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <html><head></head><body><p>参考：</p>
-<p><a href="https://www.cnblogs.com/opsprobe/p/9420502.html" target="_blank" rel="noopener">https://www.cnblogs.com/opsprobe/p/9420502.html</a></p>
-<p><a href="https://blog.csdn.net/lassewang/article/details/9159543" target="_blank" rel="noopener">https://blog.csdn.net/lassewang/article/details/9159543</a></p>
-<h1 id="0-RADIUS"><a href="#0-RADIUS" class="headerlink" title="0 RADIUS"></a>0 RADIUS</h1><p>RADIUS：（Remote Authentication Dial In User Service）中文名为远程用户拨号认证服务，简称RADIUS，是目前应用最广泛的AAA协议（认证、授权和计费）</p>
-<p><img data-src="https://gitee.com/SidneyGod/ImagePlace/raw/master/AAA组网示意图.png"></p>
-<p>图中Device（例如交换机）向远程接入用户提供接入及与RADIUS服务器交互的服务。RADIUS服务器上则存储用户的身份信息、授权信息以及访问记录，对用户进行认证、授权和计费服务</p>
-<p><strong>认证过程如下</strong></p>
-<p>（1）客户端向接入设备发送一个EAPoL-Start报文，开始802.1x认证接入；</p>
-<p>（2）接入设备向客户端发送EAP-Request/Identity报文，要求客户端将用户名送上来；</p>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/posts/cb75f049/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </div>
 
   
@@ -1775,7 +1767,7 @@
           <a href="/archives/%20%7C%7C%20archive">
         
         -->
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">22</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -2033,9 +2025,9 @@ if (document.querySelectorAll('div.pdf').length) {
   
     
       
-        
-      
     
+      
+        
       
     
       
