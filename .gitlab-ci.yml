@@ -1,4 +1,4 @@
-image: node:10.15.3
+image: node:12.18.2
 
 cache:
   paths:
@@ -7,7 +7,7 @@ cache:
 before_script:
   - npm install hexo-cli -g
   - test -e package.json && npm install
-  - hexo generate
+  - npm install
 
 pages:
   script:
@@ -17,3 +17,5 @@ pages:
       - public
   rules:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+  only:
+    - master

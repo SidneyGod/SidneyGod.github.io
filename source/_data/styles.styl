@@ -1,0 +1,199 @@
+// Custom styles.
+body {
+    // https://cdn.seovx.com/ 随机图片API
+    // https://www.talklee.com/api/bing?rand=true&size=1920x1080
+    background-image: url(https://cdn.seovx.com/ha/?mom=302);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    //background-repeat: no-repeat
+    font-size: 14px;
+    color: #000000;
+    line-height: 1.5;
+}
+
+p, table {
+    margin: 5px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+}
+
+.posts-expand .post-title {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.posts-expand .post-title-link {
+    color: #000;
+}
+
+.posts-expand .post-header {
+    margin-bottom: 20px;
+}
+
+// 文章内链接文本样式
+.post-body p a{
+    color: #0593d3;
+    border-bottom: none;
+    border-bottom: 1px solid #0593d3;
+    &:hover {
+        color: #fc6423;
+        border-bottom: none;
+        border-bottom: 1px solid #fc6423;
+    }
+}
+
+// 文章背景半透明
+.content {
+    padding: 10px 20px 20px 20px;
+    background:rgba(255, 255, 255, 0) none repeat scroll !important;
+}
+
+// 第一个文章块
+.main-inner>.post-block {
+    background: rgba(255, 255, 255, 0.8) none repeat scroll !important;
+    margin-bottom: 15px;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 -1px 0.5px 0 rgba(0, 0, 0, 0.09);
+}
+
+// 其余的块
+.main-inner>.comments:not(:first-child):not(.sub-menu),
+.main-inner>.post-block:not(:first-child):not(.sub-menu),
+.main-inner>.pagination:not(:first-child):not(.sub-menu) {
+    background: rgba(255, 255, 255, 0.8) none repeat scroll !important;
+    margin-bottom: 15px;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 -1px 0.5px 0 rgba(0, 0, 0, 0.09);
+}
+
+.comments {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.8) none repeat scroll !important;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
+}
+
+.sidebar-inner, .menu {
+    background: rgba(255, 255, 255, 0.8) none repeat scroll !important;
+}
+
+.post-button {
+    margin-top: 20px;
+}
+
+.post-copyright ul,
+.btn {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.btn:hover {
+    background-color: #555;
+    border: 2px solid #555;
+    color: #fff;
+}
+
+// 去除页面底部页码上面的横线
+.pagination {
+    border-radius: 10px;
+    margin: 10px 0 0 0;
+    background: rgba(255, 255, 255, 0.8) none repeat scroll !important;
+}
+// 去掉图片边框
+.posts-expand .post-body img {
+    border: none;
+    padding: 0px;
+}
+.post-gallery .post-gallery-img img {
+    padding: 3px;
+}
+
+figure.highlight {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .4);
+    padding-top: 30px;
+    margin: 10px 0;
+}
+
+code, pre {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer {
+    font-size: 12px;
+    padding: 10px 0;
+}
+
+.reward-container {
+    margin: 7px 0 0;
+    padding: 0;
+}
+
+tbody tr:nth-of-type(odd) {
+    background: #ddd;
+}
+
+// 去除在页面文章之间的分割线
+.posts-expand .post-eof {
+    margin: 0px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+// 选中文字部分的样式
+::selection {
+    background-color: #222222;
+    color: #fced6d;
+}
+
+// 鼠标样式
+* {
+    cursor: url("/images/cursor/normal.cur"),auto!important
+}
+:active {
+    cursor: url("/images/cursor/link.cur"),auto!important
+}
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+    background: rgba(144, 144, 144, 1);
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.75);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 118, 0, 0.75);
+}
+
+// fonts
+@font-face {
+    font-family: 'DFGirlFull';
+    src: url('/fonts/DFGirlFull.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'ModernAntiqua';
+    src: url('/fonts/ModernAntiqua.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Monaco';
+    src: url('/fonts/Monaco.ttf');
+    font-weight: 400;
+}
+
+.readEnd {
+    text-align:center;
+    color:#636363;
+    margin-top: 15px;
+}

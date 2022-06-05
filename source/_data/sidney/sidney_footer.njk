@@ -1,0 +1,29 @@
+<div>
+    <span><i class="fa-solid fa-bomb"></i> </span>
+    <span id="showDays"></span>
+</div>
+<script>
+  let seconds = 1000;
+  let minutes = seconds * 60;
+  let hours = minutes * 60;
+  let days = hours * 24;
+  let years = days * 365;
+  let birthDay = Date.UTC(2019, 10, 1, 00, 00, 00);
+  setInterval(function () {
+    let today = new Date();
+    let todayYear = today.getFullYear();
+    let todayMonth = today.getMonth() + 1;
+    let todayDate = today.getDate();
+    let todayHour = today.getHours();
+    let todayMinute = today.getMinutes();
+    let todaySecond = today.getSeconds();
+    let now = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+    let diff = now - birthDay;
+    let diffYears = Math.floor(diff / years);
+    let diffDays = Math.floor((diff / days) - diffYears * 365);
+    let diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+    let diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+    let diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+    document.getElementById('showDays').innerHTML = "This website has been running for " + diffYears + " years, " + diffDays + " days, " + diffHours + " hours, " + diffMinutes + " minutes, " + diffSeconds + " seconds";
+  }, 1000);
+</script>

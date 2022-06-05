@@ -3,19 +3,23 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
-timezone:
+title: Sidney God
+subtitle: Keep quiet time for time
+description: You laugh at me for being different, but I laugh at you for being the same.
+keywords: Sidney, Ding, Sidney Ding, SidneyGod
+author: Sidney Ding
+language: en
+timezone: Asia/Shanghai
 
 # URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: /
-root: "/hexo/"
-permalink: :year/:month/:day/:title/
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://sidneygod.gitlab.io/
+root: /
+permalink: posts/:abbrlink/
 permalink_defaults:
+pretty_urls:
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -26,12 +30,21 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - README.md
+  - LICENSE
+  - js/**/*
+  - css/**/*
+  - images/**/*
+  - fonts/**/*
 
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -40,13 +53,38 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
-  tab_replace:
+  auto_detect: true
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# https://github.com/amlove2/hexo-generator-topindex
+topindex_generator:
+  per_page: 10
+  order_by: -date
 
 # Category & Tag
 default_category: uncategorized
 category_map:
 tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -54,18 +92,144 @@ tag_map:
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
 per_page: 10
 pagination_dir: page
 
-# Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: landscape
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Themes: https://hexo.io/themes/
+theme: next
 
 # Deployment
-## Docs: https://hexo.io/docs/deployment.html
+## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type:
+  type: ''
+
+# Extensions
+## Plugins: https://hexo.io/plugins/ npm install hexo-generator-feed --save
+### Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+
+### Local Search
+search:
+  path: search.xml
+  field: post
+  format: html
+  content: true
+  limit: 999
+
+### https://github.com/theme-next/hexo-symbols-count-time
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  exclude_codeblock: false
+
+### https://github.com/Rozbo/hexo-abbrlink
+abbrlink:
+  alg: crc32  # support crc16(default) and crc32
+  rep: hex    # support dec(default) and hex
+  drafts: false   # (true)Process draft,(false)Do not process draft. false(default) 
+  # Generate categories from directory-tree
+  # depth: the max_depth of directory-tree you want to generate, should > 0
+  auto_category:
+     enable: true  # true(default)
+     depth:        # 3(default)
+     over_write: false 
+  auto_title: false # enable auto title, it can auto fill the title by path
+  auto_date: false # enable auto date, it can auto fill the date by time today
+  force: false
+
+### https://github.com/chenzhutian/hexo-all-minifier
+all_minifier: true
+html_minifier:
+  enable: true
+  ignore_error: false
+  silent: false
+  exclude:
+  collapseBooleanAttributes: true
+  collapseWhitespace: true
+  # Ignore '<!-- more -->' https://hexo.io/docs/tag-plugins#Post-Excerpt
+  ignoreCustomComments: [ !!js/regexp /^\s*more/]
+  removeComments: true
+  removeEmptyAttributes: true
+  removeScriptTypeAttributes: true
+  removeStyleLinkTypeAttributes: true
+  minifyJS: true
+  minifyCSS: true
+js_minifier:
+  enable: true
+  mangle: true
+  silent: false
+  output:
+  compress:
+  exclude: 
+    - '*.min.js'
+css_minifier:
+  enable: true
+  silent: false
+  exclude: 
+    - '*.min.css'
+image_minifier:
+  enable: true
+  interlaced: false
+  multipass: false
+  optimizationLevel: 2
+  pngquant: false
+  progressive: false
+  silent: false
+
+### https://github.com/next-theme/hexo-filter-mathjax
+mathjax:
+  tags: none # or 'ams' or 'all'
+  single_dollars: true # enable single dollar signs as in-line math delimiters
+  cjk_width: 0.9 # relative CJK char width
+  normal_width: 0.6 # relative normal (monospace) width
+  append_css: true # add CSS to pages rendered by MathJax
+  every_page: false # if true, every page will be rendered by MathJax regardless the `mathjax` setting in Front-matter
+  extension_options: {}
+  # you can put your extension options here
+  # see http://docs.mathjax.org/en/latest/options/input/tex.html#tex-extension-options for more detail
+
+### https://github.com/next-theme/hexo-optimize
+filter_optimize:
+  enable: true
+  # remove the surrounding comments in each of the bundled files
+  remove_comments: true
+  css:
+    # minify all css files
+    minify: true
+    # bundle loaded css files into one
+    bundle: false
+    # use a script block to load css elements dynamically
+    delivery: true
+    # make specific css content inline into the html page
+    #   - only support the full path
+    #   - default is ['css/main.css']
+    inlines:
+    excludes:
+  js:
+    # minify all js files
+    minify: true
+    # bundle loaded js files into one
+    bundle: false
+    excludes:
+  # set the priority of this plugin,
+  # lower means it will be executed first, default of Hexo is 10
+  priority: 12

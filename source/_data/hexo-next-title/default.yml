@@ -1,0 +1,19 @@
+# Change title and favicon when window is hidden and visible.
+title_change:
+  enable: true
+  # Restore the original title after the specified time in milliseconds.
+  timeout: 2000
+  # Options when window is hidden.
+  hidden:
+    favicon: /images/favicon.ico
+    title: (つェ⊂) 我藏好了哦~
+      #- 404
+      #- φ(*￣0￣)
+      #- Waiting for you.
+  # Options when window is visible.
+  visible:
+    favicon: /images/favicon.ico
+    title: (*´∇｀*) 被你发现啦~
+      #- 200
+      #- (✿◡‿◡)
+      #- Welcome back!

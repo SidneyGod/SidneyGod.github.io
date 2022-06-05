@@ -1,0 +1,21 @@
+<script>
+  let originTitile = document.title;
+  let titleTime;
+  document.addEventListener("visibilitychange", function() {
+    let favicon = document.querySelector('link[rel="icon"]');
+    let hiddenTitle = '{{ config.title_change.hidden.title }}';
+    let visibleTitle = '{{ config.title_change.visible.title }}';
+
+    if (document.hidden) {
+      favicon.setAttribute('href', '{{ config.title_change.hidden.favicon }}');
+      document.title = hiddenTitle + originTitile;
+      clearTimeout(titleTime);
+    } else {
+      favicon.setAttribute('href', '{{ config.title_change.visible.favicon }}');
+      document.title = visibleTitle + originTitile;
+      titleTime = setTimeout(function() {
+        document.title = originTitile;
+      }, {{ config.title_change.timeout }});
+    }
+  });
+</script>

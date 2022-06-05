@@ -1,0 +1,10 @@
+# language
+en:
+  sidebar:
+    toc: Catalogue
+  menu:
+    resources: Resources
+
+zh-CN:
+  menu:
+    resources: 资源

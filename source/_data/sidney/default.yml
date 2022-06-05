@@ -1,0 +1,9 @@
+# sideny
+sidney:
+  enable: true
+  love: true
+  show_text: true
+  snow: true
+  power_text:
+    colorful: true
+    shake: true
