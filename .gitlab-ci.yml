@@ -1,4 +1,4 @@
-image: node:12.18.2
+image: node:16.14.2
 
 cache:
   paths:
@@ -7,7 +7,6 @@ cache:
 before_script:
   - npm install hexo-cli -g
   - test -e package.json && npm install
-  - npm install
 
 pages:
   script:

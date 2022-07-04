@@ -167,6 +167,8 @@ git remote show [remoteName]
 # 重命名远程仓库
 git remote rename <oldRemoteName> <newRemoteName>
 git remote rm <remoteName>
+# 清除本地远程分支 远程分支可能不存在了 但是本地还有
+git remote prune origin
 ```
 
 ## 1.5 打标签
