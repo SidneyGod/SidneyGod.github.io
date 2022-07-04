@@ -55,7 +55,7 @@ highlight:
   line_number: true
   auto_detect: true
   tab_replace: ''
-  wrap: true
+  wrap: false
   hljs: false
 prismjs:
   enable: false
@@ -206,6 +206,31 @@ mathjax:
   extension_options: {}
   # you can put your extension options here
   # see http://docs.mathjax.org/en/latest/options/input/tex.html#tex-extension-options for more detail
+
+### https://github.com/hexojs/hexo-renderer-marked
+marked:
+  gfm: true
+  pedantic: false
+  breaks: true
+  smartLists: true
+  smartypants: true
+  quotes: '“”‘’'
+  modifyAnchors: 0
+  anchorAlias: false
+  autolink: true
+  mangle: true
+  sanitizeUrl: false
+  dompurify: false
+  headerIds: true
+  lazyload: false
+  prependRoot: true
+  postAsset: false
+  external_link:
+    enable: false
+    exclude: []
+    nofollow: false
+  disableNunjucks: false
+  descriptionLists: true
 
 ### https://github.com/next-theme/hexo-optimize
 filter_optimize:

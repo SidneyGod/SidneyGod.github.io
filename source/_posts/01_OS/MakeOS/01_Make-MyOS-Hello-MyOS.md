@@ -63,7 +63,7 @@ sudo apt update
 | ------------------- | ---------------------------------- |
 | `JMP entry`         | `JMP SHORT entry`                  |
 | `RESB <填充字节数>` | `TIMES <填充字节数> DB <填充数据>` |
-| `RESB 0x7dfe-$`     | `TIMES 0x1fe-($-$$) DB 0`          |
+| `RESB 0x7dfe-$`     | `TIMES 0x1fe-($-$) DB 0`           |
 | `ALIGNB 16`         | `ALIGN 16, DB 0`                   |
 
 我觉得这个就没必要再通过二进制包安装了，直接`sudo apt install nasm`就好了，然后用`nasm --version`检测一下是否安装好就ok了
@@ -195,7 +195,7 @@ DB  "This is my first OS!"
 DB  0x0a             ; 换行
 DB  0
 ;RESB  0x1fe-$       ; 填写0x00，直到0x001fe
-TIMES  0x1fe-($-$$)  DB 0
+TIMES  0x1fe-($-$)  DB 0
 DB  0x55, 0xaa       ; 必须保证510字节处是55aa
 
 ; 以下是启动区以外部分的输出
@@ -213,9 +213,9 @@ DW: define word，16位
 
 DD: define double-word，32位
 
-$ : 代表一个变量，表示当前行的偏移地址
+\$ : 代表一个变量，表示当前行的偏移地址
 
-$\$: 代表一个变量，表示当前段(汇编的section，数据段，代码段..)的起始偏移地址
+\$\$: 代表一个变量，表示当前段(汇编的section，数据段，代码段..)的起始偏移地址
 
 TIMES: 重复定义数据或指令
 

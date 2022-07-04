@@ -145,7 +145,7 @@ social:
 social_icons:
   enable: true
   icons_only: false
-  transition: false
+  transition: true
 # Blog rolls
 links_settings:
   icon: fa fa-globe
@@ -266,7 +266,7 @@ post_edit:
   #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/ # Link for fork & edit
 # Show previous post and next post in post footer if exists
 # Available values: left | right | false
-post_navigation: right
+post_navigation: left
 
 # ---------------------------------------------------------------
 # Custom Page Settings
