@@ -112,7 +112,9 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: git@github.com:SidneyGod/SidneyGod.github.io.git
+  branch: blog-hexo
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/ npm install hexo-generator-feed --save

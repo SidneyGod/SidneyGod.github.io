@@ -11,7 +11,9 @@ before_script:
 
 pages:
   script:
+    - hexo clean
     - hexo generate
+    - hexo deploy
   artifacts:
     paths:
       - public
