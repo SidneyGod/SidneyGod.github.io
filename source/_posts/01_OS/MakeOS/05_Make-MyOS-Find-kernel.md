@@ -1216,7 +1216,7 @@ sudo make install
 bochs -help cpu
 ```
 
-然后根据书上在用户家目录创建bochs的配置文件
+然后根据书上在用户home目录创建bochs的配置文件
 
 ```bash
 vim ~/.bochsrc

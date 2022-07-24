@@ -47,7 +47,7 @@ tags:
 - BNDCFGU和BNDSTATUS寄存器，可以看出一个是配置寄存器，一个是状态寄存器，用于支持MPX指令。
 - 堆栈(Stack)，为了支持过程或子例程调用以及过程或子例程之间的参数传递，在执行环境中包括堆栈和堆栈管理资源。它通过段寄存器SS指定位置，而实际指向的是一段内存或者Cache
 
-<img src="assets/04_Make-MyOS-Basic-execution-env-and-Interrupt/202112042113976.png" alt="202112042113976" style="zoom:80%;" /><img src="assets/04_Make-MyOS-Basic-execution-env-and-Interrupt/202112042114804.png" alt="202112042114804" style="zoom:80%;" />
+<img src="assets/04_Make-MyOS-Basic-execution-env-and-Interrupt/202112042113976.png" alt="202112042113976" style="zoom:70%;" /><img src="assets/04_Make-MyOS-Basic-execution-env-and-Interrupt/202112042114804.png" alt="202112042114804" style="zoom:70%;" />
 
 以上的运行环境是在CPU core级别的环境，另外处理器还提供了下列系统级别的运行环境，在多核处理器的环境中，处理器内部的多个CPU core共享这些运行环境。这个系统级别的运行环境主要包括：
 
@@ -391,10 +391,10 @@ The processor provides two mechanisms for interrupting program execution, interr
 
 处理器提供了两个打断程序执行的机制，中断和异常
 
-- **<big>中断</big>**是异步事件，通常由IO设备触发。Interrupts occur at random times during the execution of a program, in response to signals from hardware. System hardware uses interrupts to handle events external to the processor, such as requests to service peripheral devices. Software can also generate interrupts by executing the INT n instruction.Interrupts occur at random times during the execution of a program, in response to signals from hardware. System hardware uses interrupts to handle events external to the processor, such as requests to service peripheral devices. Software can also generate interrupts by executing the INT n instruction.
+- <big>**中断**</big>是异步事件，通常由IO设备触发。Interrupts occur at random times during the execution of a program, in response to signals from hardware. System hardware uses interrupts to handle events external to the processor, such as requests to service peripheral devices. Software can also generate interrupts by executing the INT n instruction.Interrupts occur at random times during the execution of a program, in response to signals from hardware. System hardware uses interrupts to handle events external to the processor, such as requests to service peripheral devices. Software can also generate interrupts by executing the INT n instruction.
   - External (hardware generated) interrupts：外部中断通过处理器上的引脚或通过本地APIC(Advanced Programmable Interrupt Controller)接收。当本地APIC启用时，LINT[1:0]引脚可以通过APIC的本地向量表(LVT)进行编程，以与任何处理器的异常或中断向量相关联。当本地APIC全局/硬件禁用时，这些引脚分别配置为INTR和NMI引脚。通过INTR引脚或通过本地APIC传递给处理器的任何外部中断称为**可屏蔽硬件中断**，EFLAGS寄存器中的IF标志允许将所有可屏蔽的硬件中断作为一组进行屏蔽。通过NMI引脚以及系统总线或APIC串行总线上以NMI传递模式传递给处理器的任何外部中断称为**不可屏蔽中断**，EFLAGS寄存器的IF标志对这个无效
   - Software-generated interrupts：通过INT指令+中断号直接触发对应的中断
-- **<big>异常</big>**是同步事件，处理器在执行指令时检测到一个或多个预定义条件生成的。异常分为三类：错误，陷阱，中止。Exceptions occur when the processor detects an error condition while executing an instruction, such as division by zero. The processor detects a variety of error conditions including protection violations, page faults, and internal machine faults.
+- <big>**异常**</big>是同步事件，处理器在执行指令时检测到一个或多个预定义条件生成的。异常分为三类：错误，陷阱，中止。Exceptions occur when the processor detects an error condition while executing an instruction, such as division by zero. The processor detects a variety of error conditions including protection violations, page faults, and internal machine faults.
   - Program-Error Exceptions：The processor generates one or more exceptions when it detects program errors during the execution in an application program or the operating system or executive.
   - Software-Generated Exceptions: The INTO, INT1, INT3, and BOUND instructions permit exceptions to be generated in software.
   - Machine-Check Exceptions: 

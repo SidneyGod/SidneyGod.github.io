@@ -3,11 +3,12 @@ title: Optimize hexo
 top: 1
 related_posts: true
 mathjax: false
-date: 2022-07-04 23:26:03
 tags:
   - hexo
   - blog
 categories: Other
+abbrlink: ebc737d8
+date: 2022-07-04 23:26:03
 ---
 
 之前gitee图床挂了，然后gitee想用pages也必须用身份证，折腾一整最后放弃了gitee，直接用github好了(还是github靠谱)，本想着研究一下hugo，但是新东西费时间啊，就继续使用hexo+next了，算是升了个级，并且添加了github CI，解决环境，部署问题，一个字，爽！
