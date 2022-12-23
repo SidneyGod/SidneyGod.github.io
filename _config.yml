@@ -113,8 +113,7 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo:
-    github: git@github.com:SidneyGod/SidneyGod.github.io.git
+  repo: git@github.com:SidneyGod/SidneyGod.github.io.git
   branch: blog-hexo
 
 # Extensions
