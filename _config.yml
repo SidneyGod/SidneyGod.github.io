@@ -115,7 +115,6 @@ deploy:
   type: git
   repo:
     github: git@github.com:SidneyGod/SidneyGod.github.io.git
-    gitee: git@gitee.com:SidneyGod/SidneyGod.git
   branch: blog-hexo
 
 # Extensions
