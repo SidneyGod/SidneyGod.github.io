@@ -1,8 +1,13 @@
+<script type="text/javascript" src="/js/code_unfold.js"></script>
 <script type="text/javascript" src="/js/love.js"></script>
 <script type="text/javascript" src="/js/show-text.js"></script>
 <script type="text/javascript" src="/js/snowflakes.min.js"></script>
 <script type="text/javascript" src="/js/activate-power-mode.min.js"></script>
 <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        codeUnfold ();
+    });
+
     new Snowflakes({ color: 'rgba(129, 161, 193, 0.87)' });
 
     POWERMODE.colorful = true;

@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://sidneygod.gitlab.io/
+url: https://sidneyding.cn/
 root: /
 permalink: posts/:abbrlink/
 permalink_defaults:
@@ -32,6 +32,7 @@ i18n_dir: :lang
 skip_render:
   - README.md
   - LICENSE
+  - CNAME
   - js/**/*
   - css/**/*
   - images/**/*
