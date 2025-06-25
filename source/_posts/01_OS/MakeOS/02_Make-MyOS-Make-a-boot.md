@@ -382,5 +382,5 @@ qemu-system-i386 -drive file=my64.img,format=raw,if=floppy
 
 接下来是Makefile的一些介绍，推荐看经典啊
 
-[makefile介绍 — 跟我一起写Makefile 1.0 文档 (seisman.github.io)](https://seisman.github.io/how-to-write-makefile/introduction.html)
+[makefile介绍 — 跟我一起写Makefile 1.0 文档](https://seisman.github.io/how-to-write-makefile/introduction.html)
 

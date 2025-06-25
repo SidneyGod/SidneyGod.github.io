@@ -11,7 +11,7 @@ date: 2021-10-31 23:05:46
 tags:
 ---
 
-说是第三天，我看了该一个星期了..发现之前看得有点浮躁，最近看了费曼读书法有了新的想法，不怕慢，就不没看明白，所以听费曼的，每次看卡壳了，就返回去重新看..
+说是第三天，我看了该一个星期了..发现之前看得有点浮躁，最近看了费曼读书法有了新的想法，不怕慢，就怕没看明白，所以听费曼的，每次看卡壳了，就返回去重新看..
 
 看到这里，突然觉得还是以《64位》为主比较好，《32位》太老了，用的还是nask转换起来有点累，并且《64位》介绍得细啊，所以我悟了，《32位》用来打辅助吧..
 
@@ -23,7 +23,7 @@ tags:
 
 ![202110162308914](assets/03_Make-MyOS-Find-loader/202110162308914.png)
 
-两本书用的都是FAT12文件系统来装载Loader程序和内核程序，将软盘格式化成FAT12文件系统时，FAT类文件系统会对软盘里的扇区进行结构化处理，把软盘**扇区划分为引导扇区，FAT表，根目录区和数据区**4部分
+两本书用的都是 FAT12 文件系统来装载 Loader 程序和内核程序，将软盘格式化成 FAT12 文件系统时，FAT类文件系统会对软盘里的扇区进行结构化处理，把软盘**扇区划分为引导扇区，FAT表，根目录区和数据区** 4 部分
 
 - 引导扇区
 
@@ -139,7 +139,7 @@ FAT表的0号和1号FAT表项有专门的用途。0号FAT表项通常用来存�
 
 ![Root Directory Entry Format](assets/03_Make-MyOS-Find-loader/202112261614209.png)
 
-[The FAT File System (c-jump.com)](http://www.c-jump.com/CIS24/Slides/FAT/lecture.html#F01_0140_root_directory)
+[The FAT File System](http://www.c-jump.com/CIS24/Slides/FAT/lecture.html#F01_0140_root_directory)
 
 # 2 boot.asm
 
@@ -328,7 +328,7 @@ Label_No_LoaderBin:
 
 2 FAT12文件系统的文件名是不分大小写的，即是将小写字母命名的文件赋值到FAT12文件系统内，文件系统也会为其创建大写字母的文件名和目录项。而小写字母文件名只作为其显示名，而真正的数据内容皆保存在对应的大写字母目录项。所以这里应该搜索大写字母的文件名字符串。
 
-3 关于**lodsb**指令，参考64-ia-32-architectures-software-developer-vol-2-manual的chapter 3.2指令介绍
+3 关于 **lodsb** 指令，参考64-ia-32-architectures-software-developer-vol-2-manual的chapter 3.2指令介绍
 
 LODS/LODSB/LODSW/LODSD/LODSQ—Load String
 

@@ -28,7 +28,7 @@ GPU：GTX 1650
 
 网上教程比较多，直接看微软官方教程即可：[在 Windows 10 上安装 WSL | Microsoft Docs]([在 Windows 10 上安装 WSL | Microsoft Docs](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10#manual-installation-steps))
 
-我这里按照教程装了Ubuntu-18.04，推荐也安装个Windows Terminal，还是挺好用的，可以看看这个：[Windows Terminal 完美配置 PowerShell 7.1 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/137595941)
+我这里按照教程装了Ubuntu-18.04，推荐也安装个Windows Terminal，还是挺好用的，可以看看这个：[Windows Terminal 完美配置 PowerShell 7.1](https://zhuanlan.zhihu.com/p/137595941)
 
 按照这个方法安装完了呢，WSL2所有东西都是默认放在C盘的，咱可是要做大事的人，C盘怕是放不太下，啥？你就一个盘，好的，当我没说。
 
@@ -128,6 +128,8 @@ net start LxssManager
 
 WSL2使用虚拟硬件磁盘(VHD)来存储Linux文件。如果达到其最大大小，则可能需要对其进行扩展。WSL2 VHD使用ext4文件系统,此VHD会自动调整大小以满足你的存储需求，并且其最大大小为256GB。如果你的分发版大小增长到大于256GB，则会显示错误，指出磁盘空间不足。 可以通过扩展 VHD 大小来纠正此错误。若要将最大 VHD 大小扩展到超过 256GB，请执行以下操作：
 
+参考：[如何管理 WSL 磁盘空间 | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/wsl/disk-space?source=recommendations#how-to-expand-the-size-of-your-wsl-2-virtual-hard-disk)
+
 以管理员模式打开powershell
 
 ```powershell
@@ -156,6 +158,9 @@ DISKPART> Select vdisk file="E:\wsl2\ubuntu18\ext4.vhdx"
 DISKPART> expand vdisk maximum="358400"
 # 退出
 DISKPART> exit
+
+# 需要在wsl里面执行个命令 sudo apt install resize2fs
+sudo resize2fs /dev/sdb <sizeInMegabytes>M
 ```
 
 ## 1.4 WSL2压缩
@@ -183,7 +188,7 @@ exit
 
 # 2 编译Android
 
-我这里为啥没选Android S呢，完全是因为编不懂，编system的时候总是segment fault，并且当时也忘了设置swap试试，所以就试试Android R了，结果还是比较满意的
+我这里为啥没选Android S呢，完全是因为编不动，编system的时候总是segment fault，并且当时也忘了设置swap试试，所以就试试Android R了，结果还是比较满意的
 
 ## 2.1 prepare
 
@@ -231,7 +236,7 @@ xsltproc lzop libc6-dev schedtool g++-multilib lib32z1-dev lib32ncurses5-dev \
 lib32readline6-dev gcc-multilib libswitch-perl libssl1.0.0 libssl-dev
 ```
 
-查询想要下载的分支：https://android.googlesource.com/platform/manifest/+refs，需要翻墙能力，或者用github也行：[aosp-mirror/platform_manifest (github.com)](https://github.com/aosp-mirror/platform_manifest)
+查询想要下载的分支：https://android.googlesource.com/platform/manifest/+refs，需要翻墙能力，或者用github也行：https://github.com/aosp-mirror/platform_manifest
 
 我最终选的是android11-release
 
@@ -346,7 +351,7 @@ Linux version 5.4.47-01061-g22e35a1de440 (android-build@abfarm-east4-070) (Andro
 
 ## 2.3 Compile Kernel
 
-貌似从Android11开始，内核整了个gki，[Android 通用内核  | Android 开源项目  | Android Open Source Project (google.cn)](https://source.android.google.cn/devices/architecture/kernel/android-common?hl=zh-cn)
+貌似从Android11开始，内核整了个gki，[Android 通用内核](https://source.android.google.cn/devices/architecture/kernel/android-common?hl=zh-cn)
 
 关于内核的版本我选择了与参考文档不一样的版本，不是common-android11-5.4，而是common-android-mainline，毕竟根据Android官方文档介绍，common-android-mainline看起来才是祖宗，于是乎
 

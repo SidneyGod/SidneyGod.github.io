@@ -42,7 +42,7 @@ tags:
 - x87 FPU寄存器，32位和64位都是8个，主要用于浮点计算的
 - MMX寄存器，32位和64位都是8个，主要用于矩阵运算？用于支持64bit的SIMD(single-instruction，multiple-data)单指令多数据
 - XMM寄存器，32位和64位都是8个，对MMX的扩展，用于支持128位的SIMD
-- YMM寄存器，32位和64位都是8个，对MMX的扩展，用于支持256位的SIMD，[PC平台主要SIMD扩展发展简史 - TaigaComplex - 博客园 (cnblogs.com)](https://www.cnblogs.com/TaigaCon/p/7835340.html)
+- YMM寄存器，32位和64位都是8个，对MMX的扩展，用于支持256位的SIMD，[PC平台主要SIMD扩展发展简史](https://www.cnblogs.com/TaigaCon/p/7835340.html)
 - 边界寄存器(Bounds)，BND0-BND3寄存器存放的是内存缓冲区的上限指针，这些寄存器用于支持MPX指令。
 - BNDCFGU和BNDSTATUS寄存器，可以看出一个是配置寄存器，一个是状态寄存器，用于支持MPX指令。
 - 堆栈(Stack)，为了支持过程或子例程调用以及过程或子例程之间的参数传递，在执行环境中包括堆栈和堆栈管理资源。它通过段寄存器SS指定位置，而实际指向的是一段内存或者Cache
@@ -59,6 +59,8 @@ tags:
 - MSR(Machine specific registers)，主要用于控制处理器的配置并且汇报处理器的状态
 - Machine check registers，主要用于硬件错误的检测，它其实也是属于MSR寄存器
 - Performance monitoring counters，主要用于监测处理器的性能
+
+你说这环境像不像"线程"的概念？
 
 ### 1.2.1 通用寄存器
 

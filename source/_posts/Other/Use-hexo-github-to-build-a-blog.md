@@ -521,6 +521,6 @@ https://sidneygod.github.io/
 
 ~~https://sidneygod.coding.me/~~
 
-https://sidneygod.gitee.io/
+~~https://sidneygod.gitee.io/~~
 
 访问blog了

@@ -32,9 +32,9 @@ Vol4：介绍x86 CPU上的MSR，是CPU内部的一组特殊的寄存器（这个
 
 参考：
 
-[Booting an Operating System (rutgers.edu)](https://people.cs.rutgers.edu/~pxk/416/notes/02-boot.html)
+[Booting an Operating System](https://people.cs.rutgers.edu/~pxk/416/notes/02-boot.html)
 
-[Why Booting is called “Booting “ | Desktop Reality](https://desktopreality.com/why-booting-is-called-booting/)
+[Why Booting is called "Booting"](https://desktopreality.com/why-booting-is-called-booting/)
 
 操作系统的启动为什么被称之为booting，而实际的程序又被称之为loading。这个原因要追溯到1950年代，booting是实际上是bootstrapping的缩写，而bootstrapping又是来自美国的一句谚语
 
@@ -48,7 +48,7 @@ Vol4：介绍x86 CPU上的MSR，是CPU内部的一组特殊的寄存器（这个
 
 > 参考：Intel manual volume 3 chapter 9.1
 
-当按下电源键或者RESET引脚被触发时，系统总线上每个CPU都会执行初始化(硬件复位)和可选的内置自检(build-in self-test)。硬件复位将每个处理器的寄存器设置为已知状态并**将处理器置于实地址模式**。它还会使内部缓存、转换后备缓冲区(TLB)和分支目标缓冲区(BTB)失效。此时，采取的操作取决于处理器系列，Intel手册上举了四类，三大类，比较古老的就不看了，IA-32 and Intel 64 processors，系统总线上的所有处理器（包括单处理器系统中的单个处理器）都执行**多处理器（MP）初始化协议**。通过该协议被选为自举处理器(BSP)的处理器然后立即开始**执行从EIP寄存器中的偏移量开始的当前代码段中的软件初始化代码**。
+当按下电源键或者 RESET 引脚被触发时，系统总线上每个CPU都会执行初始化(硬件复位)和可选的内置自检(build-in self-test)。硬件复位将每个处理器的寄存器设置为已知状态并**将处理器置于实地址模式**。它还会使内部缓存、转换后备缓冲区(TLB)和分支目标缓冲区(BTB)失效。此时，采取的操作取决于处理器系列，Intel手册上举了四类，三大类，比较古老的就不看了，IA-32 and Intel 64 processors，系统总线上的所有处理器（包括单处理器系统中的单个处理器）都执行**多处理器（MP）初始化协议**。通过该协议被选为自举处理器(BSP)的处理器然后立即开始**执行从EIP寄存器中的偏移量开始的当前代码段中的软件初始化代码**。
 
 这一段描述RESET引脚相关启动，还有一种INIT引脚，这俩差别不大，只是INIT是从保护模式转到实地址模式，抛开上电之后的BIST(毕竟是可选的)，来瞅瞅第一行代码是怎么被执行的
 
@@ -169,7 +169,7 @@ MBR(Master Boot Record)，硬盘的0柱面、0磁头、1扇区称为主引导扇
 
 BIOS完了以后就到了硬盘的某个分区了，在进硬盘分区之前，先来看一个疑问。
 
-为什么是0x7c00？这玩意在Intel手册没搜到，所以应当和CPU啥的没关系。觉知此事要Google：[Why BIOS loads MBR into 0x7C00 in x86 ? - Glamenv-Septzen.net(en)](https://www.glamenv-septzen.net/en/view/6)
+为什么是0x7c00？这玩意在Intel手册没搜到，所以应当和CPU啥的没关系。觉知此事要Google：[Why BIOS loads MBR into 0x7C00 in x86 ?](https://www.glamenv-septzen.net/en/view/6)
 
 > "0x7C00" First appeared in IBM PC 5150 ROM BIOS INT 19h handler.
 >
@@ -219,7 +219,7 @@ VBR指明了操作系统在哪，接下来就是把操作系统给加载起来�
 
 # 6 UEFI
 
-B站大佬：[谭玉刚的个人空间_哔哩哔哩_bilibili](https://space.bilibili.com/41036636/channel/collectiondetail?sid=54177)讲UEFI的，先mark下，后面可以学习学习..
+B站大佬：[谭玉刚的个人空间](https://space.bilibili.com/41036636/channel/collectiondetail?sid=54177) 讲UEFI的，先mark下，后面可以学习学习..
 
 随着64位架构取代32位架构的出现，BIOS开始显得过时了。英特尔着手创建BIOS后继产品的规范，该规范对必须以20位寻址的16位模式运行启动代码没有任何限制。此规范称为统一可扩展固件接口或UEFI。尽管由英特尔开发，但自2005年起由统一EFI论坛管理。许多较新的64位系统都使用它，包括Mac，这些系统也支持运行Windows的旧版BIOS。
 
@@ -241,5 +241,5 @@ UEFI包括设备驱动程序，包括解释与体系结构无关的EFI字节代�
 
 上面的依据都是Intel的，向Android(嵌入式)和MAC就不一定一样了
 
-许多嵌入式设备不会加载操作系统，而是已经将操作系统存储在非易失性存储器（如闪存或ROM）中。例如，那些加载操作系统（例如基于ARM的Android手机）的设备将在设备开机时执行只读存储器（通常在NOR闪存中）中的代码。此引导代码嵌入在某些设备的CPU ASIC中，因此不需要板上单独的闪存芯片。当系统复位（包括上电）时，处理器处于监控(SVC)模式并且中断被禁用。在基于ARM的系统上，处理器从地址0x00000000开始执行。包含启动代码的闪存在复位时映射到地址0x00000000。此代码执行各种初始化，包括在DRAM中设置异常向量表以及将应用程序代码从ROM复制到DRAM（代码在DRAM中运行速度更快）。代码将DRAM重新映射到地址0，从而隐藏了闪存（处理器有一个REMAP位来改变闪存的映射）。然后初始化存储系统。这涉及设置内存保护和设置系统堆栈。然后初始化I/O设备并将处理器更改为用户模式。引导固件检测可引导媒体并加载和运行第二阶段引导加载程序（如有必要）。第二阶段引导加载程序通常是用于大型系统的GRUB或用于嵌入式系统的uBoot。第二阶段加载器加载操作系统并将控制权转移给它。
+许多嵌入式设备不会加载操作系统，而是已经将操作系统存储在非易失性存储器（如Flash或ROM）中。例如，那些加载操作系统（例如基于ARM的Android手机）的设备将在设备开机时执行只读存储器（通常在NOR闪存中）中的代码。此引导代码嵌入在某些设备的CPU ASIC中，因此不需要板上单独的闪存芯片。当系统复位（包括上电）时，处理器处于监控(SVC)模式并且中断被禁用。在基于ARM的系统上，处理器从地址0x00000000开始执行。包含启动代码的闪存在复位时映射到地址0x00000000。此代码执行各种初始化，包括在DRAM中设置异常向量表以及将应用程序代码从ROM复制到DRAM（代码在DRAM中运行速度更快）。代码将DRAM重新映射到地址0，从而隐藏了闪存（处理器有一个REMAP位来改变闪存的映射）。然后初始化存储系统。这涉及设置内存保护和设置系统堆栈。然后初始化I/O设备并将处理器更改为用户模式。引导固件检测可引导媒体并加载和运行第二阶段引导加载程序（如有必要）。第二阶段引导加载程序通常是用于大型系统的GRUB或用于嵌入式系统的uBoot。第二阶段加载器加载操作系统并将控制权转移给它。
 

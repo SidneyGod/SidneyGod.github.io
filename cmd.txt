@@ -6,5 +6,6 @@ export no_proxy="*.go.com,10.*.*.*,192.168.*.*,*.local,localhost,127.0.0.1"
 
 unset ALL_PROXY
 
+hexo new "title"
 hexo clean && hexo generate && hexo server
 hexo deploy

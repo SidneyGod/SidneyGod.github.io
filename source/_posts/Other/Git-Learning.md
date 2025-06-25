@@ -16,9 +16,9 @@ date: 2019-10-02 21:31:37
 
 Git自带一个 git config 的工具帮助设置控制Git外观和行为的配置变量，这些变量存在于三个不同的位置：
 
-- /etc/gitconfig：包含系统上每一个用户的及他们仓库的通用配置。如果带有`--system`选项的git config时，会从此文件读写变量
-- \~/.gitconfig或\~/.config/git/config：只针对当前用户。使用`--global`选项读写此文件
-- 当前仓库目录中的config(.git/config)：针对该仓库
+- `/etc/gitconfig`：包含系统上每一个用户的及他们仓库的通用配置。如果带有`--system`选项的git config时，会从此文件读写变量
+- `~/.gitconfig`或`~/.config/git/config`：只针对当前用户。使用`--global`选项读写此文件
+- 当前仓库目录中的config(`.git/config`)：针对该仓库
 
 每一级别覆盖上一级别
 
@@ -26,8 +26,8 @@ Git自带一个 git config 的工具帮助设置控制Git外观和行为的配�
 
 ```shell
 # 配置用户名和邮箱
-git config --global user.name "Sidney Ding"
-git config --global user.email "dingfs0527@thundersoft.com"
+git config --global user.name "Sidney DING"
+git config --global user.email "sidneyding183@gmail.com"
 # 文本编辑器 根据喜好
 git config --glonal core.editor vim
 # 检查配置信息
@@ -141,11 +141,11 @@ git reset --hard <commitId>
 git reflog
 ```
 
-后悔药使用指南:
+**后悔药使用指南**:
 
-git checkout .  还没有add
+`git checkout .`  还没有add
 
-git reset
+`git reset`
 
 ## 1.4 远程仓库
 
@@ -338,6 +338,8 @@ git stash pop
 - rebase操作可以把本地未push的分叉提交历史整理成直线
 - 目的是为了我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比
 - 变基有风险！
+
+我们经常会合并多笔change为一笔，就是我们常说的squash操作，`git rebase -i HEAD ~3`
 
 # 3 Patch
 
