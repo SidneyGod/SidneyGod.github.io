@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 450"
+   width="1200"
+   height="450"
+   version="1.1"
+   id="svg36"
+   sodipodi:docname="02-protection-mechanism.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview36"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.4462011"
+     inkscape:cx="600.19314"
+     inkscape:cy="225.07243"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg36" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN',monospace; }
+  </style>
+  <defs
+     id="defs3">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrow-green"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M0,0 L0,6 L9,3 z"
+         fill="#10b981"
+         id="path2" />
+    </marker>
+    <marker
+       id="arrow-orange"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M0,0 L0,6 L9,3 z"
+         fill="#f97316"
+         id="path3" />
+    </marker>
+  </defs>
+  <rect
+     width="1200"
+     height="450"
+     fill="url(#bg-grad)"
+     id="rect3" />
+  <!-- Title -->
+  <text
+     x="600"
+     y="35"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="18"
+     font-weight="700"
+     id="text3">802.11g Protection Mechanism — Mixed Mode</text>
+  <text
+     x="600"
+     y="55"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="13"
+     id="text4">802.11g 保护机制 — 混合模式下的兼容策略</text>
+  <!-- Timeline arrow -->
+  <line
+     x1="60"
+     y1="85"
+     x2="1150"
+     y2="85"
+     stroke="#334155"
+     stroke-width="1.5"
+     id="line4" />
+  <text
+     x="1160"
+     y="89"
+     fill="#94a3b8"
+     font-size="10"
+     id="text5">Time →</text>
+  <!-- Participants -->
+  <text
+     x="100"
+     y="120"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="12"
+     font-weight="700"
+     id="text6">802.11g STA</text>
+  <text
+     x="100"
+     y="135"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text7">(OFDM capable)</text>
+  <line
+     x1="150"
+     y1="115"
+     x2="150"
+     y2="400"
+     stroke="#10b981"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     opacity="0.5"
+     id="line7" />
+  <text
+     x="100"
+     y="180"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-size="12"
+     font-weight="700"
+     id="text8">802.11b STA</text>
+  <text
+     x="100"
+     y="195"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text9">(CCK only)</text>
+  <line
+     x1="150"
+     y1="175"
+     x2="150"
+     y2="400"
+     stroke="#a855f7"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     opacity="0.5"
+     id="line9" />
+  <text
+     x="100"
+     y="250"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="12"
+     font-weight="700"
+     id="text10">Other STAs</text>
+  <text
+     x="100"
+     y="265"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text11">(any type)</text>
+  <line
+     x1="150"
+     y1="245"
+     x2="150"
+     y2="400"
+     stroke="#3b82f6"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     opacity="0.5"
+     id="line11" />
+  <!-- Step 1: CTS-to-Self (CCK) -->
+  <text
+     x="180"
+     y="105"
+     fill="#10b981"
+     font-size="10"
+     id="text12">①</text>
+  <rect
+     x="180"
+     y="110"
+     width="160"
+     height="35"
+     rx="4"
+     ry="4"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect12" />
+  <text
+     x="260"
+     y="127"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     font-weight="700"
+     id="text13">CTS-to-Self</text>
+  <text
+     x="260"
+     y="140"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text14">CCK modulated | Duration=300µs</text>
+  <!-- Arrow from g STA to others -->
+  <line
+     x1="340"
+     y1="130"
+     x2="500"
+     y2="200"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="line14" />
+  <text
+     x="420"
+     y="160"
+     fill="#10b981"
+     font-size="9"
+     id="text15">All STAs hear</text>
+  <!-- NAV at b STA -->
+  <rect
+     x="350"
+     y="185"
+     width="200"
+     height="25"
+     rx="3"
+     ry="3"
+     fill="#a855f7"
+     opacity="0.2"
+     id="rect15" />
+  <text
+     x="450"
+     y="202"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-size="10"
+     id="text16">NAV = 300µs (defer access)</text>
+  <!-- NAV at other STAs -->
+  <rect
+     x="350"
+     y="255"
+     width="200"
+     height="25"
+     rx="3"
+     ry="3"
+     fill="#3b82f6"
+     opacity="0.2"
+     id="rect16" />
+  <text
+     x="450"
+     y="272"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="10"
+     id="text17">NAV = 300µs (defer access)</text>
+  <!-- Step 2: SIFS -->
+  <text
+     x="560"
+     y="105"
+     fill="#eab308"
+     font-size="10"
+     id="text18">②</text>
+  <rect
+     x="560"
+     y="115"
+     width="50"
+     height="25"
+     rx="3"
+     ry="3"
+     fill="#eab308"
+     opacity="0.2"
+     id="rect18" />
+  <text
+     x="585"
+     y="132"
+     text-anchor="middle"
+     fill="#eab308"
+     font-size="10"
+     id="text19">SIFS</text>
+  <!-- Step 3: DATA (OFDM) -->
+  <text
+     x="620"
+     y="105"
+     fill="#10b981"
+     font-size="10"
+     id="text20">③</text>
+  <rect
+     x="620"
+     y="110"
+     width="250"
+     height="45"
+     rx="4"
+     ry="4"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="2"
+     id="rect20" />
+  <text
+     x="745"
+     y="130"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="12"
+     font-weight="700"
+     id="text21">DATA (OFDM)</text>
+  <text
+     x="745"
+     y="146"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text22">54 Mbps — 高速数据传输</text>
+  <!-- Step 4: SIFS at receiver -->
+  <text
+     x="880"
+     y="105"
+     fill="#eab308"
+     font-size="10"
+     id="text23">④</text>
+  <rect
+     x="880"
+     y="115"
+     width="50"
+     height="25"
+     rx="3"
+     ry="3"
+     fill="#eab308"
+     opacity="0.2"
+     id="rect23" />
+  <text
+     x="905"
+     y="132"
+     text-anchor="middle"
+     fill="#eab308"
+     font-size="10"
+     id="text24">SIFS</text>
+  <!-- Step 5: ACK (OFDM) -->
+  <text
+     x="940"
+     y="105"
+     fill="#10b981"
+     font-size="10"
+     id="text25">⑤</text>
+  <rect
+     x="940"
+     y="115"
+     width="100"
+     height="30"
+     rx="4"
+     ry="4"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect25" />
+  <text
+     x="990"
+     y="135"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     font-weight="700"
+     id="text26">ACK</text>
+  <!-- NAV expires -->
+  <line
+     x1="1040"
+     y1="185"
+     x2="1040"
+     y2="280"
+     stroke="#ef4444"
+     stroke-width="1"
+     stroke-dasharray="3,2"
+     id="line26" />
+  <text
+     x="1080"
+     y="235"
+     fill="#ef4444"
+     font-size="10"
+     id="text27">NAV</text>
+  <text
+     x="1080"
+     y="248"
+     fill="#ef4444"
+     font-size="10"
+     id="text28">expires</text>
+  <!-- Alternative: RTS/CTS method -->
+  <rect
+     x="60"
+     y="310"
+     width="1100"
+     height="80"
+     rx="4"
+     ry="4"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect28" />
+  <text
+     x="100"
+     y="335"
+     fill="#f97316"
+     font-size="12"
+     font-weight="700"
+     id="text29">Alternative: RTS/CTS Protection</text>
+  <text
+     x="100"
+     y="355"
+     fill="#94a3b8"
+     font-size="10"
+     id="text30">替代方案：RTS/CTS 保护</text>
+  <!-- RTS/CTS flow -->
+  <rect
+     x="350"
+     y="325"
+     width="120"
+     height="30"
+     rx="3"
+     ry="3"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect30" />
+  <text
+     x="410"
+     y="345"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="10"
+     id="text31">RTS (CCK)</text>
+  <line
+     x1="470"
+     y1="340"
+     x2="530"
+     y2="340"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="line31" />
+  <rect
+     x="530"
+     y="325"
+     width="120"
+     height="30"
+     rx="3"
+     ry="3"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect31" />
+  <text
+     x="590"
+     y="345"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="10"
+     id="text32">CTS (CCK)</text>
+  <line
+     x1="650"
+     y1="340"
+     x2="710"
+     y2="340"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="line32" />
+  <rect
+     x="710"
+     y="325"
+     width="180"
+     height="30"
+     rx="3"
+     ry="3"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect32" />
+  <text
+     x="800"
+     y="345"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     font-weight="700"
+     id="text33">DATA (OFDM)</text>
+  <line
+     x1="890"
+     y1="340"
+     x2="950"
+     y2="340"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="line33" />
+  <rect
+     x="950"
+     y="325"
+     width="100"
+     height="30"
+     rx="3"
+     ry="3"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect33" />
+  <text
+     x="1000"
+     y="345"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10"
+     id="text34">ACK</text>
+  <!-- Comparison note -->
+  <rect
+     x="60"
+     y="400"
+     width="1100"
+     height="40"
+     rx="4"
+     ry="4"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect34" />
+  <text
+     x="600"
+     y="420"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text35">CTS-to-Self: Less overhead, only 1 extra frame | RTS/CTS: More overhead but better collision avoidance at receiver</text>
+  <text
+     x="600"
+     y="435"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text36">CTS-to-Self: 开销小，仅 1 个额外帧 | RTS/CTS: 开销大，但在接收端碰撞避免效果更好</text>
+</svg>

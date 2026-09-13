@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1270"
+   height="650"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="00-protocol-timeline.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.18"
+     inkscape:cx="634.74576"
+     inkscape:cy="325"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs2">
+    <filter
+       id="glow"
+       x="-0.6"
+       y="-0.6"
+       width="2.2"
+       height="2.2">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="4"
+         id="feGaussianBlur1" />
+    </filter>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrow-blue">
+      <polygon
+         id="svg_2"
+         fill="#3b82f6"
+         points="0 0, 8 3, 0 6" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrow-green">
+      <polygon
+         id="svg_3"
+         fill="#059669"
+         points="0 0, 8 3, 0 6" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrow-green2">
+      <polygon
+         id="svg_4"
+         fill="#10b981"
+         points="0 0, 8 3, 0 6" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrow-gold">
+      <polygon
+         id="svg_5"
+         fill="#eab308"
+         points="0 0, 8 3, 0 6" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrow-orange">
+      <polygon
+         id="svg_6"
+         fill="#f97316"
+         points="0 0, 8 3, 0 6" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrow-orange2">
+      <polygon
+         id="svg_7"
+         fill="#ea580c"
+         points="0 0, 8 3, 0 6" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrow-red">
+      <polygon
+         id="svg_8"
+         fill="#dc2626"
+         points="0 0, 8 3, 0 6" />
+    </marker>
+    <linearGradient
+       y2="100%"
+       x2="100%"
+       y1="0%"
+       x1="0%"
+       id="bg-grad">
+      <stop
+         stop-color="#0f0f1a"
+         offset="0%"
+         id="stop1" />
+      <stop
+         stop-color="#1a1a2e"
+         offset="100%"
+         id="stop2" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <!-- Title -->
+  <!-- Timeline horizontal line -->
+  <!-- Evolution arrows between nodes -->
+  <!-- Node 1: 1997 - 802.11 (above) -->
+  <!-- Node 2: 1999 - 802.11b (below) -->
+  <!-- Node 3: 1999 - 802.11a (above) -->
+  <!-- Node 4: 2003 - 802.11g (below) -->
+  <!-- Node 5: 2009 - 802.11n (above) -->
+  <!-- Node 6: 2013 - 802.11ac (below) -->
+  <!-- Node 7: 2020 - 802.11ax (above) -->
+  <!-- Node 8: 2024 - 802.11be (below) -->
+  <!-- Legend -->
+  <g
+     id="g2">
+    <title
+       id="title2">802.11 协议族演进时间线</title>
+    <rect
+       id="svg_9"
+       fill="url(#bg-grad)"
+       height="650"
+       width="1270" />
+    <text
+       id="svg_10"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       letter-spacing="0.05em"
+       font-weight="700"
+       font-size="22"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="26"
+       x="636">802.11 Protocol Family Evolution Timeline (1997-2024)</text>
+    <text
+       id="svg_11"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="14"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="51"
+       x="636">802.11 协议族演进时间线</text>
+    <line
+       id="svg_12"
+       stroke-width="3"
+       stroke="#334155"
+       y2="308"
+       x2="1256"
+       y1="308"
+       x1="16" />
+    <line
+       id="svg_13"
+       opacity="0.7"
+       marker-end="url(#arrow-blue)"
+       stroke-width="2"
+       stroke="#3b82f6"
+       y2="308"
+       x2="216"
+       y1="308"
+       x1="96" />
+    <line
+       id="svg_14"
+       opacity="0.7"
+       marker-end="url(#arrow-green)"
+       stroke-width="2"
+       stroke="#059669"
+       y2="308"
+       x2="376"
+       y1="308"
+       x1="256" />
+    <line
+       id="svg_15"
+       opacity="0.7"
+       marker-end="url(#arrow-green2)"
+       stroke-width="2"
+       stroke="#10b981"
+       y2="308"
+       x2="536"
+       y1="308"
+       x1="416" />
+    <line
+       id="svg_16"
+       opacity="0.7"
+       marker-end="url(#arrow-gold)"
+       stroke-width="2"
+       stroke="#eab308"
+       y2="308"
+       x2="696"
+       y1="308"
+       x1="576" />
+    <line
+       id="svg_17"
+       opacity="0.7"
+       marker-end="url(#arrow-orange)"
+       stroke-width="2"
+       stroke="#f97316"
+       y2="308"
+       x2="856"
+       y1="308"
+       x1="736" />
+    <line
+       id="svg_18"
+       opacity="0.7"
+       marker-end="url(#arrow-orange2)"
+       stroke-width="2"
+       stroke="#ea580c"
+       y2="308"
+       x2="1016"
+       y1="308"
+       x1="896" />
+    <line
+       id="svg_19"
+       opacity="0.7"
+       marker-end="url(#arrow-red)"
+       stroke-width="2"
+       stroke="#dc2626"
+       y2="308"
+       x2="1176"
+       y1="308"
+       x1="1056" />
+    <circle
+       id="svg_20"
+       filter="url(#glow)"
+       fill="#7c3aed"
+       r="8"
+       cy="308"
+       cx="76" />
+    <circle
+       id="svg_21"
+       fill="#7c3aed"
+       r="5"
+       cy="308"
+       cx="76" />
+    <text
+       id="svg_22"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#7c3aed"
+       text-anchor="middle"
+       y="333"
+       x="76">1997</text>
+    <line
+       id="svg_23"
+       opacity="0.6"
+       stroke-dasharray="4,3"
+       stroke-width="1.5"
+       stroke="#7c3aed"
+       y2="201"
+       x2="76"
+       y1="291"
+       x1="76" />
+    <rect
+       id="svg_24"
+       stroke-width="1.5"
+       stroke="#7c3aed"
+       fill="#0f172a"
+       ry="6"
+       rx="6"
+       height="140"
+       width="130"
+       y="61"
+       x="11" />
+    <text
+       id="svg_25"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="14"
+       fill="#7c3aed"
+       text-anchor="middle"
+       y="83"
+       x="76">802.11</text>
+    <text
+       id="svg_26"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="101"
+       x="76">Original</text>
+    <text
+       id="svg_27"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="119"
+       x="76">2.4 GHz</text>
+    <text
+       id="svg_28"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="139"
+       x="76">2 Mbps</text>
+    <text
+       id="svg_29"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="157"
+       x="76">CSMA/CA</text>
+    <text
+       id="svg_30"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="171"
+       x="76">FHSS/DSSS</text>
+    <text
+       id="svg_31"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#7c3aed"
+       text-anchor="middle"
+       y="189"
+       x="76">小镇十字路口</text>
+    <circle
+       id="svg_32"
+       filter="url(#glow)"
+       fill="#3b82f6"
+       r="8"
+       cy="308"
+       cx="236" />
+    <circle
+       id="svg_33"
+       fill="#3b82f6"
+       r="5"
+       cy="308"
+       cx="236" />
+    <text
+       id="svg_34"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#3b82f6"
+       text-anchor="middle"
+       y="333"
+       x="236">1999</text>
+    <line
+       id="svg_35"
+       opacity="0.6"
+       stroke-dasharray="4,3"
+       stroke-width="1.5"
+       stroke="#3b82f6"
+       y2="448"
+       x2="236"
+       y1="348"
+       x1="236" />
+    <rect
+       id="svg_36"
+       stroke-width="1.5"
+       stroke="#3b82f6"
+       fill="#0f172a"
+       ry="6"
+       rx="6"
+       height="140"
+       width="130"
+       y="448"
+       x="171" />
+    <text
+       id="svg_37"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="14"
+       fill="#3b82f6"
+       text-anchor="middle"
+       y="470"
+       x="236">802.11b</text>
+    <text
+       id="svg_38"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="12"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="488"
+       x="236">Wi-Fi 1</text>
+    <text
+       id="svg_39"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="506"
+       x="236">2.4 GHz</text>
+    <text
+       id="svg_40"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="526"
+       x="236">11 Mbps</text>
+    <text
+       id="svg_41"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="544"
+       x="236">CCK</text>
+    <text
+       id="svg_42"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#3b82f6"
+       text-anchor="middle"
+       y="576"
+       x="236">双车道</text>
+    <circle
+       id="svg_43"
+       filter="url(#glow)"
+       fill="#059669"
+       r="8"
+       cy="308"
+       cx="396" />
+    <circle
+       id="svg_44"
+       fill="#059669"
+       r="5"
+       cy="308"
+       cx="396" />
+    <text
+       id="svg_45"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#059669"
+       text-anchor="middle"
+       y="333"
+       x="396">1999</text>
+    <line
+       id="svg_46"
+       opacity="0.6"
+       stroke-dasharray="4,3"
+       stroke-width="1.5"
+       stroke="#059669"
+       y2="201"
+       x2="396"
+       y1="291"
+       x1="396" />
+    <rect
+       id="svg_47"
+       stroke-width="1.5"
+       stroke="#059669"
+       fill="#0f172a"
+       ry="6"
+       rx="6"
+       height="140"
+       width="130"
+       y="61"
+       x="331" />
+    <text
+       id="svg_48"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="14"
+       fill="#059669"
+       text-anchor="middle"
+       y="83"
+       x="396">802.11a</text>
+    <text
+       id="svg_49"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="12"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="101"
+       x="396">Wi-Fi 2</text>
+    <text
+       id="svg_50"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="119"
+       x="396">5 GHz</text>
+    <text
+       id="svg_51"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="139"
+       x="396">54 Mbps</text>
+    <text
+       id="svg_52"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="157"
+       x="396">OFDM</text>
+    <text
+       id="svg_53"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#059669"
+       text-anchor="middle"
+       y="189"
+       x="396">城市快速路</text>
+    <circle
+       id="svg_54"
+       filter="url(#glow)"
+       fill="#10b981"
+       r="8"
+       cy="308"
+       cx="556" />
+    <circle
+       id="svg_55"
+       fill="#10b981"
+       r="5"
+       cy="308"
+       cx="556" />
+    <text
+       id="svg_56"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#10b981"
+       text-anchor="middle"
+       y="333"
+       x="556">2003</text>
+    <line
+       id="svg_57"
+       opacity="0.6"
+       stroke-dasharray="4,3"
+       stroke-width="1.5"
+       stroke="#10b981"
+       y2="448"
+       x2="556"
+       y1="348"
+       x1="556" />
+    <rect
+       id="svg_58"
+       stroke-width="1.5"
+       stroke="#10b981"
+       fill="#0f172a"
+       ry="6"
+       rx="6"
+       height="140"
+       width="130"
+       y="448"
+       x="491" />
+    <text
+       id="svg_59"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="14"
+       fill="#10b981"
+       text-anchor="middle"
+       y="470"
+       x="556">802.11g</text>
+    <text
+       id="svg_60"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="12"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="488"
+       x="556">Wi-Fi 3</text>
+    <text
+       id="svg_61"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="506"
+       x="556">2.4 GHz</text>
+    <text
+       id="svg_62"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="526"
+       x="556">54 Mbps</text>
+    <text
+       id="svg_63"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="544"
+       x="556">OFDM+兼容</text>
+    <text
+       id="svg_64"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#10b981"
+       text-anchor="middle"
+       y="576"
+       x="556">快速路铺到老城区</text>
+    <circle
+       id="svg_65"
+       filter="url(#glow)"
+       fill="#eab308"
+       r="8"
+       cy="308"
+       cx="716" />
+    <circle
+       id="svg_66"
+       fill="#eab308"
+       r="5"
+       cy="308"
+       cx="716" />
+    <text
+       id="svg_67"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#eab308"
+       text-anchor="middle"
+       y="333"
+       x="716">2009</text>
+    <line
+       id="svg_68"
+       opacity="0.6"
+       stroke-dasharray="4,3"
+       stroke-width="1.5"
+       stroke="#eab308"
+       y2="201"
+       x2="716"
+       y1="291"
+       x1="716" />
+    <rect
+       id="svg_69"
+       stroke-width="1.5"
+       stroke="#eab308"
+       fill="#0f172a"
+       ry="6"
+       rx="6"
+       height="140"
+       width="130"
+       y="61"
+       x="651" />
+    <text
+       id="svg_70"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="14"
+       fill="#eab308"
+       text-anchor="middle"
+       y="83"
+       x="716">802.11n</text>
+    <text
+       id="svg_71"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="12"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="101"
+       x="716">Wi-Fi 4</text>
+    <text
+       id="svg_72"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="119"
+       x="716">2.4/5 GHz</text>
+    <text
+       id="svg_73"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="139"
+       x="716">600 Mbps</text>
+    <text
+       id="svg_74"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="157"
+       x="716">MIMO</text>
+    <text
+       id="svg_75"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#eab308"
+       text-anchor="middle"
+       y="189"
+       x="716">立交桥时代</text>
+    <circle
+       id="svg_76"
+       filter="url(#glow)"
+       fill="#f97316"
+       r="8"
+       cy="308"
+       cx="876" />
+    <circle
+       id="svg_77"
+       fill="#f97316"
+       r="5"
+       cy="308"
+       cx="876" />
+    <text
+       id="svg_78"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#f97316"
+       text-anchor="middle"
+       y="333"
+       x="876">2013</text>
+    <line
+       id="svg_79"
+       opacity="0.6"
+       stroke-dasharray="4,3"
+       stroke-width="1.5"
+       stroke="#f97316"
+       y2="448"
+       x2="876"
+       y1="348"
+       x1="876" />
+    <rect
+       id="svg_80"
+       stroke-width="1.5"
+       stroke="#f97316"
+       fill="#0f172a"
+       ry="6"
+       rx="6"
+       height="140"
+       width="130"
+       y="448"
+       x="811" />
+    <text
+       id="svg_81"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="14"
+       fill="#f97316"
+       text-anchor="middle"
+       y="470"
+       x="876">802.11ac</text>
+    <text
+       id="svg_82"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="12"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="488"
+       x="876">Wi-Fi 5</text>
+    <text
+       id="svg_83"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="506"
+       x="876">5 GHz</text>
+    <text
+       id="svg_84"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="526"
+       x="876">6.93 Gbps</text>
+    <text
+       id="svg_85"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="544"
+       x="876">MU-MIMO</text>
+    <text
+       id="svg_86"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#f97316"
+       text-anchor="middle"
+       y="576"
+       x="876">超级高速公路</text>
+    <circle
+       id="svg_87"
+       filter="url(#glow)"
+       fill="#ea580c"
+       r="8"
+       cy="308"
+       cx="1036" />
+    <circle
+       id="svg_88"
+       fill="#ea580c"
+       r="5"
+       cy="308"
+       cx="1036" />
+    <text
+       id="svg_89"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#ea580c"
+       text-anchor="middle"
+       y="333"
+       x="1036">2020</text>
+    <line
+       id="svg_90"
+       opacity="0.6"
+       stroke-dasharray="4,3"
+       stroke-width="1.5"
+       stroke="#ea580c"
+       y2="201"
+       x2="1036"
+       y1="291"
+       x1="1036" />
+    <rect
+       id="svg_91"
+       stroke-width="1.5"
+       stroke="#ea580c"
+       fill="#0f172a"
+       ry="6"
+       rx="6"
+       height="140"
+       width="130"
+       y="61"
+       x="971" />
+    <text
+       id="svg_92"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="14"
+       fill="#ea580c"
+       text-anchor="middle"
+       y="83"
+       x="1036">802.11ax</text>
+    <text
+       id="svg_93"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="12"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="101"
+       x="1036">Wi-Fi 6/6E</text>
+    <text
+       id="svg_94"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="119"
+       x="1036">2.4/5/6 GHz</text>
+    <text
+       id="svg_95"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="139"
+       x="1036">9.6 Gbps</text>
+    <text
+       id="svg_96"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="157"
+       x="1036">OFDMA</text>
+    <text
+       id="svg_97"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#ea580c"
+       text-anchor="middle"
+       y="189"
+       x="1036">智能交通系统</text>
+    <circle
+       id="svg_98"
+       filter="url(#glow)"
+       fill="#dc2626"
+       r="8"
+       cy="308"
+       cx="1196" />
+    <circle
+       id="svg_99"
+       fill="#dc2626"
+       r="5"
+       cy="308"
+       cx="1196" />
+    <text
+       id="svg_100"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#dc2626"
+       text-anchor="middle"
+       y="333"
+       x="1196">2024</text>
+    <line
+       id="svg_101"
+       opacity="0.6"
+       stroke-dasharray="4,3"
+       stroke-width="1.5"
+       stroke="#dc2626"
+       y2="448"
+       x2="1196"
+       y1="348"
+       x1="1196" />
+    <rect
+       id="svg_102"
+       stroke-width="1.5"
+       stroke="#dc2626"
+       fill="#0f172a"
+       ry="6"
+       rx="6"
+       height="140"
+       width="130"
+       y="448"
+       x="1131" />
+    <text
+       id="svg_103"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="14"
+       fill="#dc2626"
+       text-anchor="middle"
+       y="470"
+       x="1196">802.11be</text>
+    <text
+       id="svg_104"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="12"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="488"
+       x="1196">Wi-Fi 7</text>
+    <text
+       id="svg_105"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="506"
+       x="1196">2.4/5/6 GHz</text>
+    <text
+       id="svg_106"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="526"
+       x="1196">46 Gbps</text>
+    <text
+       id="svg_107"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="544"
+       x="1196">MLO</text>
+    <text
+       id="svg_108"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#dc2626"
+       text-anchor="middle"
+       y="576"
+       x="1196">多维交通网络</text>
+    <text
+       id="svg_109"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#475569"
+       y="623"
+       x="16">Legend: Each node = IEEE 802.11 standard | Color = generation | Cards show: standard, Wi-Fi name, band, max rate, core tech | 图例: 节点=标准, 颜色=世代, 卡片=标准/Wi-Fi名/频段/速率/核心技术</text>
+    <text
+       id="svg_110"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#475569"
+       y="643"
+       x="16">Speed growth: 2 Mbps (1997) → 46 Gbps (2024) = 23,000x | 速率增长: 2 Mbps → 46 Gbps = 23000 倍</text>
+  </g>
+</svg>

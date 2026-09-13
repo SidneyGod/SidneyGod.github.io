@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 900 550"
+   width="900"
+   height="550"
+   version="1.1"
+   id="svg62"
+   sodipodi:docname="04-beamforming.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview62"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.86"
+     inkscape:cx="450.26882"
+     inkscape:cy="275"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg62" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs5">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arr-b"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#3b82f6"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arr-p"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#a78bfa"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arr-g"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#10b981"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arr-dim"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#475569"
+         id="polygon5" />
+    </marker>
+  </defs>
+  <rect
+     width="900"
+     height="550"
+     fill="url(#bg)"
+     id="rect5" />
+  <!-- Title -->
+  <text
+     x="450"
+     y="28"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="16"
+     font-weight="700"
+     id="text5">Beamforming — 波束成形：定向增强信号</text>
+  <text
+     x="450"
+     y="46"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="11"
+     id="text6">通过调整各天线的相位权重，把能量集中到目标方向</text>
+  <!-- ==================== Left: Without Beamforming ==================== -->
+  <rect
+     x="30"
+     y="65"
+     width="400"
+     height="341.93549"
+     rx="8"
+     fill="#0f172a"
+     stroke="#475569"
+     stroke-width="1.60141"
+     id="rect6" />
+  <text
+     x="230"
+     y="90"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="13"
+     font-weight="700"
+     id="text7">无波束成形：全向辐射</text>
+  <text
+     x="230"
+     y="108"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text8">各天线以相同相位发送，能量均匀分散</text>
+  <!-- AP with 4 antennas (center-left) -->
+  <rect
+     x="130"
+     y="200"
+     width="80"
+     height="70"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect8" />
+  <text
+     x="170"
+     y="225"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="600"
+     id="text9">AP</text>
+  <text
+     x="170"
+     y="240"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text10">4TX</text>
+  <!-- Antennas -->
+  <rect
+     x="138"
+     y="270"
+     width="6"
+     height="18"
+     rx="2"
+     fill="#3b82f6"
+     id="rect10" />
+  <rect
+     x="150"
+     y="270"
+     width="6"
+     height="18"
+     rx="2"
+     fill="#3b82f6"
+     id="rect11" />
+  <rect
+     x="162"
+     y="270"
+     width="6"
+     height="18"
+     rx="2"
+     fill="#3b82f6"
+     id="rect12" />
+  <rect
+     x="174"
+     y="270"
+     width="6"
+     height="18"
+     rx="2"
+     fill="#3b82f6"
+     id="rect13" />
+  <!-- Omnidirectional radiation pattern (circle) -->
+  <circle
+     cx="170"
+     cy="235"
+     r="80"
+     fill="none"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     stroke-dasharray="4,4"
+     opacity="0.5"
+     id="circle13" />
+  <circle
+     cx="170"
+     cy="235"
+     r="55"
+     fill="none"
+     stroke="#3b82f6"
+     stroke-width="1"
+     stroke-dasharray="3,4"
+     opacity="0.3"
+     id="circle14" />
+  <!-- Equal-length signal arrows in multiple directions -->
+  <!-- Right (toward user) -->
+  <line
+     x1="250"
+     y1="235"
+     x2="320"
+     y2="235"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arr-b)"
+     opacity="0.6"
+     id="line14" />
+  <!-- Up-right -->
+  <line
+     x1="225"
+     y1="185"
+     x2="280"
+     y2="145"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arr-b)"
+     opacity="0.6"
+     id="line15" />
+  <!-- Up -->
+  <line
+     x1="170"
+     y1="155"
+     x2="170"
+     y2="120"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arr-b)"
+     opacity="0.6"
+     id="line16" />
+  <!-- Up-left -->
+  <line
+     x1="115"
+     y1="185"
+     x2="80"
+     y2="145"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arr-b)"
+     opacity="0.6"
+     id="line17" />
+  <!-- Left -->
+  <line
+     x1="90"
+     y1="235"
+     x2="55"
+     y2="235"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arr-b)"
+     opacity="0.6"
+     id="line18" />
+  <!-- Down-left -->
+  <line
+     x1="115"
+     y1="285"
+     x2="80"
+     y2="320"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arr-b)"
+     opacity="0.6"
+     id="line19" />
+  <!-- Down -->
+  <line
+     x1="170"
+     y1="360"
+     x2="170"
+     y2="385"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arr-b)"
+     opacity="0.6"
+     id="line20" />
+  <!-- Down-right -->
+  <line
+     x1="225"
+     y1="285"
+     x2="280"
+     y2="320"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arr-b)"
+     opacity="0.6"
+     id="line21" />
+  <!-- User (far, weak signal) -->
+  <rect
+     x="340"
+     y="220"
+     width="60"
+     height="35"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#475569"
+     stroke-width="1"
+     id="rect21" />
+  <text
+     x="370"
+     y="242"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text21">用户</text>
+  <!-- Weak signal indicator -->
+  <text
+     x="330"
+     y="252"
+     fill="#ef4444"
+     font-size="8"
+     id="text22">信号弱</text>
+  <!-- Problem -->
+  <rect
+     x="54.464775"
+     y="358.05124"
+     width="340"
+     height="40"
+     rx="3"
+     fill="#2d0a0a"
+     stroke="#ef4444"
+     stroke-width="0.5"
+     id="rect22" />
+  <text
+     x="224.46478"
+     y="376.05124"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="9px"
+     id="text23">能量均匀分散到所有方向 → 每个方向都只有 1/4 的功率</text>
+  <text
+     x="224.46478"
+     y="390.05124"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8px"
+     id="text24">像路灯：照亮四面八方，但每个方向都不够亮</text>
+  <!-- ==================== Right: With Beamforming ==================== -->
+  <rect
+     x="460"
+     y="65"
+     width="410"
+     height="341.39786"
+     rx="8"
+     fill="#0f172a"
+     stroke="#a78bfa"
+     stroke-width="1.60015"
+     id="rect24" />
+  <text
+     x="665"
+     y="90"
+     text-anchor="middle"
+     fill="#a78bfa"
+     font-size="13"
+     font-weight="700"
+     id="text25">波束成形：定向增强</text>
+  <text
+     x="665"
+     y="108"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text26">各天线信号加权（相位+幅度），目标方向叠加增强</text>
+  <!-- AP with 4 antennas -->
+  <rect
+     x="490"
+     y="200"
+     width="80"
+     height="70"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#a78bfa"
+     stroke-width="1.5"
+     id="rect26" />
+  <text
+     x="530"
+     y="225"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="600"
+     id="text27">AP</text>
+  <text
+     x="530"
+     y="240"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text28">4TX + 加权</text>
+  <!-- Antennas -->
+  <rect
+     x="498"
+     y="270"
+     width="6"
+     height="18"
+     rx="2"
+     fill="#a78bfa"
+     id="rect28" />
+  <rect
+     x="510"
+     y="270"
+     width="6"
+     height="18"
+     rx="2"
+     fill="#a78bfa"
+     id="rect29" />
+  <rect
+     x="522"
+     y="270"
+     width="6"
+     height="18"
+     rx="2"
+     fill="#a78bfa"
+     id="rect30" />
+  <rect
+     x="534"
+     y="270"
+     width="6"
+     height="18"
+     rx="2"
+     fill="#a78bfa"
+     id="rect31" />
+  <!-- Beam pattern (elongated toward target direction) -->
+  <!-- Main beam (right, toward user) - thick converging lines -->
+  <path
+     d="M570,215 Q640,210 770,220"
+     fill="none"
+     stroke="#a78bfa"
+     stroke-width="3"
+     opacity="0.8"
+     id="path31" />
+  <path
+     d="M570,235 Q640,235 770,235"
+     fill="none"
+     stroke="#a78bfa"
+     stroke-width="3"
+     opacity="0.8"
+     id="path32" />
+  <path
+     d="M570,255 Q640,260 770,250"
+     fill="none"
+     stroke="#a78bfa"
+     stroke-width="3"
+     opacity="0.8"
+     id="path33" />
+  <!-- Beam fill (subtle) -->
+  <path
+     d="M570,215 Q640,210 770,220 L770,250 Q640,260 570,255 Z"
+     fill="#a78bfa"
+     opacity="0.08"
+     id="path34" />
+  <!-- Weak side lobes -->
+  <path
+     d="M570,200 Q600,170 620,140"
+     fill="none"
+     stroke="#a78bfa"
+     stroke-width="1"
+     stroke-dasharray="3,3"
+     opacity="0.3"
+     id="path35" />
+  <path
+     d="M570,270 Q600,300 620,330"
+     fill="none"
+     stroke="#a78bfa"
+     stroke-width="1"
+     stroke-dasharray="3,3"
+     opacity="0.3"
+     id="path36" />
+  <!-- Null directions -->
+  <line
+     x1="530"
+     y1="195"
+     x2="510"
+     y2="130"
+     stroke="#475569"
+     stroke-width="1"
+     stroke-dasharray="3,3"
+     opacity="0.4"
+     id="line36" />
+  <line
+     x1="530"
+     y1="275"
+     x2="510"
+     y2="340"
+     stroke="#475569"
+     stroke-width="1"
+     stroke-dasharray="3,3"
+     opacity="0.4"
+     id="line37" />
+  <text
+     x="500"
+     y="128"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="7"
+     id="text37">零点</text>
+  <text
+     x="500"
+     y="352"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="7"
+     id="text38">零点</text>
+  <!-- User (close, strong signal) -->
+  <rect
+     x="770"
+     y="218"
+     width="60"
+     height="35"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect38" />
+  <text
+     x="800"
+     y="240"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text39">用户</text>
+  <!-- Strong signal indicator -->
+  <text
+     x="760"
+     y="212"
+     fill="#10b981"
+     font-size="8"
+     id="text40">信号强!</text>
+  <!-- How it works -->
+  <rect
+     x="526.73376"
+     y="356"
+     width="291.06131"
+     height="40"
+     rx="2.4255109"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="0.449584"
+     id="rect40" />
+  <text
+     x="670"
+     y="374"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9px"
+     id="text41">天线相位精确对齐 → 目标方向建设性叠加 → 增益 +3~6 dB</text>
+  <text
+     x="670"
+     y="388"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8px"
+     id="text42">像聚光灯：把光集中照向目标，亮度 ×4</text>
+  <!-- ==================== Bottom: How Beamforming Works ==================== -->
+  <rect
+     x="30"
+     y="418.26883"
+     width="840"
+     height="124.73119"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.911889"
+     id="rect42" />
+  <text
+     x="450"
+     y="438"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="13px"
+     font-weight="700"
+     id="text43">波束成形原理：相位加权</text>
+  <!-- Phase alignment illustration -->
+  <!-- Without BF: random phases -->
+  <text
+     x="120"
+     y="463"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="10px"
+     font-weight="600"
+     id="text44">无波束成形</text>
+  <text
+     x="120"
+     y="480"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8px"
+     id="text45">各天线相位随机</text>
+  <!-- 4 sine waves with different phases (simplified as arrows) -->
+  <line
+     x1="50"
+     y1="498"
+     x2="100"
+     y2="498"
+     stroke="#3b82f6"
+     stroke-width="2"
+     id="line45" />
+  <line
+     x1="50"
+     y1="510"
+     x2="110"
+     y2="510"
+     stroke="#06b6d4"
+     stroke-width="2"
+     id="line46" />
+  <line
+     x1="50"
+     y1="522"
+     x2="90"
+     y2="522"
+     stroke="#f97316"
+     stroke-width="2"
+     id="line47" />
+  <line
+     x1="50"
+     y1="534"
+     x2="105"
+     y2="534"
+     stroke="#a78bfa"
+     stroke-width="2"
+     id="line48" />
+  <text
+     x="140"
+     y="503"
+     fill="#ef4444"
+     font-size="9px"
+     id="text48">→</text>
+  <text
+     x="155"
+     y="503"
+     fill="#ef4444"
+     font-size="9px"
+     id="text49">叠加后幅度小</text>
+  <text
+     x="155"
+     y="523"
+     fill="#94a3b8"
+     font-size="8px"
+     id="text50">（相位不一致，互相抵消）</text>
+  <!-- Arrow -->
+  <text
+     x="300"
+     y="508"
+     fill="#64748b"
+     font-size="20px"
+     id="text51">→</text>
+  <!-- With BF: aligned phases -->
+  <text
+     x="430"
+     y="463"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10px"
+     font-weight="600"
+     id="text52">波束成形</text>
+  <text
+     x="430"
+     y="480"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8px"
+     id="text53">各天线相位精确对齐</text>
+  <!-- 4 sine waves aligned (same length) -->
+  <line
+     x1="360"
+     y1="498"
+     x2="430"
+     y2="498"
+     stroke="#a78bfa"
+     stroke-width="2"
+     id="line53" />
+  <line
+     x1="360"
+     y1="510"
+     x2="430"
+     y2="510"
+     stroke="#a78bfa"
+     stroke-width="2"
+     id="line54" />
+  <line
+     x1="360"
+     y1="522"
+     x2="430"
+     y2="522"
+     stroke="#a78bfa"
+     stroke-width="2"
+     id="line55" />
+  <line
+     x1="360"
+     y1="534"
+     x2="430"
+     y2="534"
+     stroke="#a78bfa"
+     stroke-width="2"
+     id="line56" />
+  <text
+     x="450"
+     y="503"
+     fill="#10b981"
+     font-size="9px"
+     id="text56">→</text>
+  <text
+     x="465"
+     y="503"
+     fill="#10b981"
+     font-size="9px"
+     id="text57">叠加后幅度 ×4</text>
+  <text
+     x="465"
+     y="523"
+     fill="#94a3b8"
+     font-size="8px"
+     id="text58">（相位一致，建设性叠加）</text>
+  <!-- Key formula -->
+  <rect
+     x="580"
+     y="452"
+     width="270"
+     height="80"
+     rx="4"
+     fill="#1e1b4b"
+     stroke="#a78bfa"
+     stroke-width="1"
+     id="rect58" />
+  <text
+     x="715"
+     y="472"
+     text-anchor="middle"
+     fill="#a78bfa"
+     font-size="10px"
+     font-weight="600"
+     id="text59">核心公式</text>
+  <text
+     x="715"
+     y="490"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text60">功率增益 = N²（N = 天线数）</text>
+  <text
+     x="715"
+     y="506"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text61">4 天线 → 功率 ×16 → 增益 +12 dB</text>
+  <text
+     x="715"
+     y="522"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="8px"
+     id="text62">实际受信道估计精度限制，约 +3~6 dB</text>
+  <!-- 802.11n note -->
+  <rect
+     x="30"
+     y="540"
+     width="840"
+     height="0"
+     rx="0"
+     fill="none"
+     id="rect62" />
+</svg>

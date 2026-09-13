@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Sidney God
+title: Sidney DING
 subtitle: Keep quiet time for time
 description: You laugh at me for being different, but I laugh at you for being the same.
 keywords: Sidney, Ding, Sidney Ding, SidneyGod
@@ -216,7 +216,7 @@ marked:
   pedantic: false
   breaks: true
   smartLists: true
-  smartypants: true
+  smartypants: false # true
   quotes: '“”‘’'
   modifyAnchors: 0
   anchorAlias: false

@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="960"
+   height="770"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="02-ofdm-capacity-comparison.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.4194805"
+     inkscape:cx="479.75297"
+     inkscape:cy="385"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g2" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN',monospace; }
+  </style>
+  <defs
+     id="defs2">
+    <linearGradient
+       y2="100%"
+       x2="100%"
+       y1="0%"
+       x1="0%"
+       id="bg">
+      <stop
+         stop-color="#0f0f1a"
+         offset="0%"
+         id="stop1" />
+      <stop
+         stop-color="#1a1a2e"
+         offset="100%"
+         id="stop2" />
+    </linearGradient>
+  </defs>
+  <!-- Title -->
+  <!-- ==================== Section 1: Wide carrier ==================== -->
+  <!-- Frequency: one wide band -->
+  <!-- Time: MANY symbol periods in same time T -->
+  <!-- Show many small symbol slots to convey "fast" -->
+  <!-- Time bracket -->
+  <!-- Calculation -->
+  <!-- Constellation -->
+  <!-- mini 8x8 -->
+  <!-- ==================== Section 2: OFDM ==================== -->
+  <!-- Frequency: many subcarrier rows -->
+  <!-- SC 1 -->
+  <!-- SC 2 -->
+  <!-- SC 3 -->
+  <!-- dots -->
+  <!-- SC 256 -->
+  <!-- Time: ONE long symbol period spanning the whole width -->
+  <!-- The one OFDM symbol period = full width, same time T as above -->
+  <!-- Each subcarrier carries 6 bit simultaneously -->
+  <!-- Calculation -->
+  <!-- ==================== Section 3: The answer ==================== -->
+  <!-- Left: Wide carrier summary -->
+  <!-- Right: OFDM summary -->
+  <!-- Equals sign -->
+  <g
+     id="g2">
+    <title
+       id="title2">Layer 1</title>
+    <rect
+       id="svg_2"
+       fill="url(#bg)"
+       height="770"
+       width="960" />
+    <text
+       id="svg_3"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="17"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="32"
+       x="480">宽载波 vs OFDM：相同时间内，数据量为什么一样？</text>
+    <text
+       id="svg_4"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="52"
+       x="480">关键：宽载波一次发1个符号，但发得快；OFDM一次发1个符号（含有256个子载波），但符号周期长</text>
+    <rect
+       id="svg_5"
+       stroke-width="1.5"
+       stroke="#ef4444"
+       fill="#1e293b"
+       rx="8"
+       height="260"
+       width="920"
+       y="70"
+       x="20" />
+    <text
+       id="svg_6"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="15"
+       fill="#ef4444"
+       text-anchor="middle"
+       y="94"
+       x="480">宽载波：1条载波，每次发1个符号，但频率极高</text>
+    <text
+       id="svg_7"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#64748b"
+       y="120"
+       x="40">频率:</text>
+    <rect
+       id="svg_8"
+       stroke="#ef4444"
+       fill-opacity="0.15"
+       fill="#ef4444"
+       rx="3"
+       height="22"
+       width="850"
+       y="108"
+       x="75" />
+    <text
+       id="svg_9"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#ef4444"
+       text-anchor="middle"
+       y="124"
+       x="500">20 MHz 宽载波 (一条整体)</text>
+    <text
+       id="svg_10"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#64748b"
+       y="152"
+       x="40">时间:</text>
+    <g
+       id="svg_11">
+      <rect
+         id="svg_12"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.2"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="75" />
+      <rect
+         id="svg_13"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.25"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="105" />
+      <rect
+         id="svg_14"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.2"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="135" />
+      <rect
+         id="svg_15"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.25"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="165" />
+      <rect
+         id="svg_16"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.2"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="195" />
+      <rect
+         id="svg_17"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.25"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="225" />
+      <rect
+         id="svg_18"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.2"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="255" />
+      <rect
+         id="svg_19"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.25"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="285" />
+      <rect
+         id="svg_20"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.2"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="315" />
+      <rect
+         id="svg_21"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.25"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="345" />
+      <rect
+         id="svg_22"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.2"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="375" />
+      <rect
+         id="svg_23"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.25"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="405" />
+      <rect
+         id="svg_24"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.2"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="435" />
+      <rect
+         id="svg_25"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.25"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="465" />
+      <rect
+         id="svg_26"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.2"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="495" />
+      <rect
+         id="svg_27"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.25"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="525" />
+      <rect
+         id="svg_28"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.2"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="555" />
+      <rect
+         id="svg_29"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.25"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="585" />
+      <rect
+         id="svg_30"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.2"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="615" />
+      <rect
+         id="svg_31"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.25"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="645" />
+      <rect
+         id="svg_32"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.2"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="675" />
+      <rect
+         id="svg_33"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.25"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="705" />
+      <rect
+         id="svg_34"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.2"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="735" />
+      <rect
+         id="svg_35"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.25"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="765" />
+      <rect
+         id="svg_36"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.2"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="795" />
+      <rect
+         id="svg_37"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.25"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="825" />
+      <rect
+         id="svg_38"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.2"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="28"
+         y="140"
+         x="855" />
+      <rect
+         id="svg_39"
+         stroke-width="0.8"
+         stroke="#ef4444"
+         fill-opacity="0.25"
+         fill="#ef4444"
+         rx="2"
+         height="22"
+         width="22"
+         y="140"
+         x="885" />
+    </g>
+    <text
+       transform="scale(1.0389418,0.96251783)"
+       stroke="null"
+       id="svg_40"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="7.27259px"
+       fill="#ef4444"
+       text-anchor="middle"
+       y="156.8802"
+       x="494.25323"
+       style="stroke-width:1.03894">... 每个小框 = 1个符号周期 ...</text>
+    <line
+       id="svg_41"
+       stroke-width="1.5"
+       stroke="#fbbf24"
+       y2="168"
+       x2="907"
+       y1="168"
+       x1="75" />
+    <line
+       id="svg_42"
+       stroke-width="1.5"
+       stroke="#fbbf24"
+       y2="172"
+       x2="75"
+       y1="164"
+       x1="75" />
+    <line
+       id="svg_43"
+       stroke-width="1.5"
+       stroke="#fbbf24"
+       y2="172"
+       x2="907"
+       y1="164"
+       x1="907" />
+    <text
+       id="svg_44"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600;"
+       font-size="10"
+       fill="#fbbf24"
+       text-anchor="middle"
+       y="183"
+       x="490">相同时间 T，宽载波发了 ~256 个符号，每个 6 bit</text>
+    <rect
+       id="svg_45"
+       stroke="#ef4444"
+       fill="#0f172a"
+       rx="6"
+       height="50"
+       width="560"
+       y="198"
+       x="200" />
+    <text
+       id="svg_46"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#ef4444"
+       text-anchor="middle"
+       y="220"
+       x="480">256 符号 × 6 bit/符号 = 1536 bit / 时间 T</text>
+    <text
+       id="svg_47"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="240"
+       x="480">符号率高(每秒约330万次)，但每次只发1个符号</text>
+    <rect
+       id="svg_48"
+       stroke-width="0.8"
+       stroke="#334155"
+       fill="#0f172a"
+       rx="6"
+       height="55"
+       width="560"
+       y="258"
+       x="200" />
+    <text
+       id="svg_49"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="278"
+       x="480">显星图：每个符号周期发 1 个64-QAM符号，即 6 bit</text>
+    <g
+       id="svg_50"
+       fill-opacity="0.7"
+       fill="#ef4444">
+      <circle
+         id="svg_51"
+         r="2"
+         cy="294"
+         cx="365" />
+      <circle
+         id="svg_52"
+         r="2"
+         cy="294"
+         cx="378" />
+      <circle
+         id="svg_53"
+         r="2"
+         cy="294"
+         cx="391" />
+      <circle
+         id="svg_54"
+         r="2"
+         cy="294"
+         cx="404" />
+      <circle
+         id="svg_55"
+         r="2"
+         cy="294"
+         cx="417" />
+      <circle
+         id="svg_56"
+         r="2"
+         cy="294"
+         cx="430" />
+      <circle
+         id="svg_57"
+         r="2"
+         cy="294"
+         cx="443" />
+      <circle
+         id="svg_58"
+         r="2"
+         cy="294"
+         cx="456" />
+      <circle
+         id="svg_59"
+         r="2"
+         cy="304"
+         cx="365" />
+      <circle
+         id="svg_60"
+         r="2"
+         cy="304"
+         cx="378" />
+      <circle
+         id="svg_61"
+         r="2"
+         cy="304"
+         cx="391" />
+      <circle
+         id="svg_62"
+         r="2"
+         cy="304"
+         cx="404" />
+      <circle
+         id="svg_63"
+         r="2"
+         cy="304"
+         cx="417" />
+      <circle
+         id="svg_64"
+         r="2"
+         cy="304"
+         cx="430" />
+      <circle
+         id="svg_65"
+         r="2"
+         cy="304"
+         cx="443" />
+      <circle
+         id="svg_66"
+         r="2"
+         cy="304"
+         cx="456" />
+    </g>
+    <text
+       id="svg_67"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="8"
+       fill="#94a3b8"
+       y="300"
+       x="510">64点 = 6 bit</text>
+    <rect
+       stroke="#10b981"
+       id="svg_68"
+       stroke-width="1.5"
+       fill="#1e293b"
+       rx="8"
+       height="256"
+       width="920"
+       y="345"
+       x="20" />
+    <text
+       id="svg_69"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="15"
+       fill="#10b981"
+       text-anchor="middle"
+       y="369"
+       x="480">OFDM：256条子载波，每次发1个OFDM符号（含有256个子载波），但符号周期长</text>
+    <text
+       id="svg_70"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#64748b"
+       y="395"
+       x="40">频率:</text>
+    <rect
+       id="svg_71"
+       stroke-width="0.6"
+       stroke="#10b981"
+       fill-opacity="0.15"
+       fill="#10b981"
+       rx="2"
+       height="14"
+       width="850"
+       y="383"
+       x="75" />
+    <text
+       id="svg_72"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="7"
+       fill="#10b981"
+       y="394"
+       x="42">SC 1</text>
+    <rect
+       id="svg_73"
+       stroke-width="0.6"
+       stroke="#10b981"
+       fill-opacity="0.15"
+       fill="#10b981"
+       rx="2"
+       height="14"
+       width="850"
+       y="399"
+       x="75" />
+    <text
+       id="svg_74"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="7"
+       fill="#10b981"
+       y="410"
+       x="42">SC 2</text>
+    <rect
+       id="svg_75"
+       stroke-width="0.6"
+       stroke="#10b981"
+       fill-opacity="0.15"
+       fill="#10b981"
+       rx="2"
+       height="14"
+       width="850"
+       y="415"
+       x="75" />
+    <text
+       id="svg_76"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="7"
+       fill="#10b981"
+       y="426"
+       x="42">SC 3</text>
+    <text
+       id="svg_77"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#475569"
+       text-anchor="middle"
+       y="442"
+       x="490">. . . (共 256 条子载波，上下排列)</text>
+    <rect
+       id="svg_78"
+       stroke-width="0.6"
+       stroke="#10b981"
+       fill-opacity="0.15"
+       fill="#10b981"
+       rx="2"
+       height="14"
+       width="850"
+       y="448"
+       x="75" />
+    <text
+       id="svg_79"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="7"
+       fill="#10b981"
+       y="459"
+       x="42">SC256</text>
+    <text
+       id="svg_80"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#64748b"
+       y="480"
+       x="40">时间:</text>
+    <line
+       id="svg_81"
+       stroke-dasharray="5,3"
+       stroke-width="2"
+       stroke="#fbbf24"
+       y2="468"
+       x2="75"
+       y1="380"
+       x1="75" />
+    <line
+       id="svg_82"
+       stroke-dasharray="5,3"
+       stroke-width="2"
+       stroke="#fbbf24"
+       y2="468"
+       x2="925"
+       y1="380"
+       x1="925" />
+    <line
+       id="svg_83"
+       stroke-width="2"
+       stroke="#fbbf24"
+       y2="470"
+       x2="925"
+       y1="470"
+       x1="75" />
+    <line
+       id="svg_84"
+       stroke-width="2"
+       stroke="#fbbf24"
+       y2="474"
+       x2="75"
+       y1="466"
+       x1="75" />
+    <line
+       id="svg_85"
+       stroke-width="2"
+       stroke="#fbbf24"
+       y2="474"
+       x2="925"
+       y1="466"
+       x1="925" />
+    <text
+       id="svg_86"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="11"
+       fill="#fbbf24"
+       text-anchor="middle"
+       y="488"
+       x="490">相同时间 T，OFDM发了 1 个OFDM符号，但这个符号包含 256 个子载波同时传输</text>
+    <rect
+       id="svg_87"
+       stroke="#10b981"
+       fill="#0f172a"
+       rx="4"
+       height="30"
+       width="850"
+       y="498"
+       x="75" />
+    <text
+       id="svg_88"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#10b981"
+       y="517"
+       x="120">SC1: 6bit</text>
+    <text
+       id="svg_89"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#10b981"
+       y="517"
+       x="230">SC2: 6bit</text>
+    <text
+       id="svg_90"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#10b981"
+       y="517"
+       x="340">SC3: 6bit</text>
+    <text
+       id="svg_91"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#475569"
+       y="517"
+       x="440">...</text>
+    <text
+       id="svg_92"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#10b981"
+       y="517"
+       x="540">SC128: 6bit</text>
+    <text
+       id="svg_93"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#475569"
+       y="517"
+       x="660">...</text>
+    <text
+       id="svg_94"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#10b981"
+       y="517"
+       x="780">SC256: 6bit</text>
+    <rect
+       id="svg_95"
+       stroke="#10b981"
+       fill="#0f172a"
+       rx="6"
+       height="50"
+       width="560"
+       y="540"
+       x="200" />
+    <text
+       id="svg_96"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="13"
+       fill="#10b981"
+       text-anchor="middle"
+       y="562"
+       x="480">256 子载波 × 6 bit/子载波 = 1536 bit / 时间 T</text>
+    <text
+       id="svg_97"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="582"
+       x="480">符号率低(每秒约21万次)，但每次发1个符号包含256个子载波</text>
+    <rect
+       id="svg_98"
+       stroke-width="1.5"
+       stroke="#fbbf24"
+       fill="#1e293b"
+       rx="8"
+       height="135"
+       width="920"
+       y="620"
+       x="19" />
+    <text
+       id="svg_99"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="15"
+       fill="#fbbf24"
+       text-anchor="middle"
+       y="645"
+       x="479">等平表达：宽载波和OFDM，相同时间内传一样多的数据</text>
+    <rect
+       id="svg_100"
+       stroke="#ef4444"
+       fill="#0f172a"
+       rx="6"
+       height="80"
+       width="410"
+       y="660"
+       x="49" />
+    <text
+       id="svg_101"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="12"
+       fill="#ef4444"
+       text-anchor="middle"
+       y="680"
+       x="254">宽载波</text>
+    <text
+       id="svg_102"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#e2e8f0"
+       y="700"
+       x="69">时间T内：发 256 次，每次 1 符号 × 6 bit</text>
+    <text
+       id="svg_103"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       font-size="12"
+       fill="#ef4444"
+       y="720"
+       x="69">= 256 × 6 = 1536 bit</text>
+    <rect
+       id="svg_104"
+       stroke="#10b981"
+       fill="#0f172a"
+       rx="6"
+       height="80"
+       width="420"
+       y="660"
+       x="499" />
+    <text
+       id="svg_105"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="12"
+       fill="#10b981"
+       text-anchor="middle"
+       y="680"
+       x="709">OFDM</text>
+    <text
+       id="svg_106"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#e2e8f0"
+       y="700"
+       x="519">时间T内：发 1 次，每次 256 子载波 × 6 bit</text>
+    <text
+       id="svg_107"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       font-size="12"
+       fill="#10b981"
+       y="720"
+       x="519">= 256 × 6 = 1536 bit</text>
+    <text
+       id="svg_108"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="24"
+       fill="#fbbf24"
+       text-anchor="middle"
+       y="710"
+       x="479">=</text>
+  </g>
+</svg>

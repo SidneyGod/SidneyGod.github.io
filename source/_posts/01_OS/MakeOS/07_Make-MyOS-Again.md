@@ -144,6 +144,8 @@ CPU 控制权正式移交到**操作系统内核**的入口点（如Linux的`sta
 
 其中`image`是生成的用于加载的镜像，`out`是生成的中间文件以及elf等，`ref`放一些参考文件，`script`放一下好用的脚本，`src`就是系统的源码了
 
+具体请看第一笔提交：https://github.com/SidneyGod/StudyOS64
+
 
 
 因为不是nasm来编译，而是`x86_64_elf_gcc`来编译，所以汇编语法略有变化，叫GAS汇编

@@ -1,0 +1,77 @@
+<svg width="960" height="690" xmlns="http://www.w3.org/2000/svg">
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN',monospace; }
+  </style>
+ <defs>
+  <linearGradient y2="100%" x2="100%" y1="0%" x1="0%" id="bg">
+   <stop stop-color="#0f0f1a" offset="0%"/>
+   <stop stop-color="#1a1a2e" offset="100%"/>
+  </linearGradient>
+ </defs>
+ <!-- Title -->
+ <!-- ==================== Part 1: Individual subcarrier waves ==================== -->
+ <!-- Subcarrier 1 (lowest frequency) - blue -->
+ <!-- Data annotation: large amplitude = more data -->
+ <!-- Subcarrier 2 - green -->
+ <!-- Subcarrier 3 - purple -->
+ <!-- Subcarrier 4 (highest frequency) - orange -->
+ <!-- Key point -->
+ <!-- ==================== Part 2: All waves combined ==================== -->
+ <!-- Combined waveform - complex wave showing superposition -->
+ <!-- Fill area -->
+ <!-- ==================== Part 3: The key insight ==================== -->
+ <!-- Left: Frequency domain view -->
+ <!-- Frequency domain bars -->
+ <!-- Right: Key insight -->
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_3" fill="url(#bg)" height="690" width="960"/>
+  <text id="svg_4" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="17" fill="#e2e8f0" text-anchor="middle" y="32" x="480">OFDM 三维图：频率 × 时间 × 幅度</text>
+  <text id="svg_5" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="11" fill="#94a3b8" text-anchor="middle" y="52" x="480">每个子载波是一条正弦波，所有子载波同时发送，在空中叠加成一条复杂波形</text>
+  <rect id="svg_6" stroke="#334155" fill="#1e293b" rx="8" height="280" width="920" y="67" x="20"/>
+  <text id="svg_7" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="13" fill="#fbbf24" text-anchor="middle" y="90" x="480">1. 每条子载波的波形</text>
+  <text id="svg_8" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#94a3b8" text-anchor="middle" y="106" x="480">每条子载波是一条正弦波(sine wave)，频率各不相同，幅度(代表数据)各不相同</text>
+  <text id="svg_9" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#3b82f6" y="148" x="35">SC 1</text>
+  <text id="svg_10" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#64748b" y="160" x="35">低频</text>
+  <path id="svg_11" stroke-width="2" stroke="#3b82f6" fill="none" d="m70,145c30,-20 60,-20 90,0c30,20 60,20 90,0c30,-20 60,-20 90,0c30,20 60,20 90,0c30,-20 60,-20 90,0c30,20 60,20 90,0c30,-20 60,-20 90,0c30,20 60,20 90,0l30,0"/>
+  <text id="svg_12" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#3b82f6" y="122" x="251">大幅度 = 多数据</text>
+  <text id="svg_13" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#10b981" y="200" x="35">SC 2</text>
+  <path id="svg_14" stroke-width="2" stroke="#10b981" fill="none" d="m70,197c18,-15 36,-15 54,0c18,15 36,15 54,0c18,-15 36,-15 54,0c18,15 36,15 54,0c18,-15 36,-15 54,0c18,15 36,15 54,0c18,-15 36,-15 54,0c18,15 36,15 54,0c18,-15 36,-15 54,0c18,15 36,15 54,0c18,-15 36,-15 54,0c18,15 36,15 54,0c18,-15 36,-15 54,0c18,15 36,15 54,0"/>
+  <text id="svg_15" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#10b981" y="178" x="497">小幅度 = 少数据</text>
+  <text id="svg_16" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#8b5cf6" y="250" x="35">SC 3</text>
+  <path id="svg_17" stroke-width="2" stroke="#8b5cf6" fill="none" d="m70,247c12,-10 24,-10 36,0c12,10 24,10 36,0c12,-10 24,-10 36,0c12,10 24,10 36,0c12,-10 24,-10 36,0c12,10 24,10 36,0c12,-10 24,-10 36,0c12,10 24,10 36,0c12,-10 24,-10 36,0c12,10 24,10 36,0c12,-10 24,-10 36,0c12,10 24,10 36,0c12,-10 24,-10 36,0c12,10 24,10 36,0c12,-10 24,-10 36,0c12,10 24,10 36,0c12,-10 24,-10 36,0c12,10 24,10 36,0c12,-10 24,-10 36,0c12,10 24,10 36,0c12,-10 24,-10 36,0"/>
+  <text id="svg_18" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#f97316" y="300" x="35">SC 4</text>
+  <text id="svg_19" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#64748b" y="312" x="35">高频</text>
+  <path id="svg_20" stroke-width="2" stroke="#f97316" fill="none" d="m70,297c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0c6,-7 12,-7 18,0c6,7 12,7 18,0"/>
+  <rect id="svg_21" stroke-width="0.5" stroke="#475569" fill="#0f172a" rx="4" height="22" width="840" y="318" x="60"/>
+  <text id="svg_22" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#94a3b8" text-anchor="middle" y="334" x="480">注意：频率越高，波形越密；幅度（高度）代表该子载波该符号的数据</text>
+  <rect stroke="#ef4444" id="svg_23" stroke-width="1.5" fill="#1e293b" rx="8" height="144.00001" width="920" y="360" x="20"/>
+  <text id="svg_24" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="13" fill="#ef4444" text-anchor="middle" y="382" x="480">2. 所有子载波叠加：在空中变成一条复杂波形</text>
+  <text id="svg_25" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#94a3b8" text-anchor="middle" y="398" x="480">将上面4条波形逐点相加，得到一条复杂的合成波形。这就是实际在空中传播的信号！</text>
+  <path id="svg_26" stroke-width="2.5" stroke="#e2e8f0" fill="none" d="m70,460c15,-30 25,-15 40,-40c15,-25 25,20 40,5c15,-15 25,30 40,5c15,-25 25,15 40,-10c15,-25 25,30 40,15c15,-15 25,10 40,-20c15,-30 25,25 40,10c15,-15 25,25 40,-5c15,-30 25,25 40,10c15,-15 25,10 40,-20c15,-30 25,35 40,15c15,-20 25,25 40,-5c15,-30 25,20 40,10c15,-10 25,20 40,-15c15,-35 25,25 40,10c15,-15 25,30 40,-5c15,-35 25,20 40,10c15,-10 25,20 40,-15c15,-35 25,25 40,10"/>
+  <path id="svg_27" fill-opacity="0.08" fill="#e2e8f0" d="m70,460c15,-30 25,-15 40,-40c15,-25 25,20 40,5c15,-15 25,30 40,5c15,-25 25,15 40,-10c15,-25 25,30 40,15c15,-15 25,10 40,-20c15,-30 25,25 40,10c15,-15 25,25 40,-5c15,-30 25,25 40,10c15,-15 25,10 40,-20c15,-30 25,35 40,15c15,-20 25,25 40,-5c15,-30 25,20 40,10c15,-10 25,20 40,-15c15,-35 25,25 40,10c15,-15 25,30 40,-5c15,-35 25,20 40,10c15,-10 25,20 40,-15c15,-35 25,25 40,10l0,55l-760,0l0,-20z"/>
+  <text id="svg_28" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#ef4444" text-anchor="middle" y="495" x="480">↑ 看起来很复杂，但它就是实际在空中传播的信号！接收端用FFT将它分离回原来的4条子载波</text>
+  <rect id="svg_29" stroke-width="1.5" stroke="#10b981" fill="#1e293b" rx="8" height="160" width="920" y="517" x="22"/>
+  <text id="svg_30" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="14" fill="#10b981" text-anchor="middle" y="542" x="482">3. 关键认识：频率与时间的分离</text>
+  <rect id="svg_31" stroke="#334155" fill="#0f172a" rx="6" height="105" width="380" y="557" x="52"/>
+  <text id="svg_32" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="11" fill="#fbbf24" text-anchor="middle" y="577" x="242">频域视野 (直接看每条子载波)</text>
+  <rect id="svg_33" fill-opacity="0.7" fill="#3b82f6" rx="3" height="55" width="40" y="592" x="82"/>
+  <text id="svg_34" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#3b82f6" text-anchor="middle" y="660" x="102">SC1</text>
+  <rect id="svg_35" fill-opacity="0.7" fill="#10b981" rx="3" height="45" width="40" y="602" x="142"/>
+  <text id="svg_36" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#10b981" text-anchor="middle" y="660" x="162">SC2</text>
+  <rect id="svg_37" fill-opacity="0.7" fill="#8b5cf6" rx="3" height="35" width="40" y="612" x="202"/>
+  <text id="svg_38" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#8b5cf6" text-anchor="middle" y="660" x="222">SC3</text>
+  <rect id="svg_39" fill-opacity="0.7" fill="#f97316" rx="3" height="25" width="40" y="622" x="262"/>
+  <text id="svg_40" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#f97316" text-anchor="middle" y="660" x="282">SC4</text>
+  <text id="svg_41" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#64748b" text-anchor="middle" y="590" x="202">幅度(数据)</text>
+  <line id="svg_42" stroke-width="0.5" stroke="#475569" y2="647" x2="372" y1="647" x1="62"/>
+  <text id="svg_43" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#64748b" text-anchor="middle" y="649" x="388">频率</text>
+  <rect id="svg_44" stroke="#fbbf24" fill="#0f172a" rx="6" height="105" width="460" y="557" x="462"/>
+  <text id="svg_45" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="11" fill="#fbbf24" text-anchor="middle" y="579" x="692">为什么能分离？</text>
+  <text id="svg_46" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#e2e8f0" y="600" x="482">• 每条子载波的频率精确已知(间距 312.5 kHz)</text>
+  <text id="svg_47" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#e2e8f0" y="618" x="482">• 它们之间正交(orthogonal)，互不干扰</text>
+  <text id="svg_48" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#e2e8f0" y="636" x="482">• 接收端FFT能将合成波形拆回每条子载波</text>
+  <text id="svg_49" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="10" fill="#10b981" y="654" x="482">→ 频率与时间的交换：在频域分割，在时域合成</text>
+ </g>
+</svg>

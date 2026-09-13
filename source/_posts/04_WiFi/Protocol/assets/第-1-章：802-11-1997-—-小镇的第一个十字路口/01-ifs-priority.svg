@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 650 300"
+   width="650"
+   height="300"
+   version="1.1"
+   id="svg22"
+   sodipodi:docname="01-ifs-priority.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview22"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.02"
+     inkscape:cx="400"
+     inkscape:cy="160.14851"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg22" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs2">
+    <linearGradient
+       id="bg-grad"
+       x1="0"
+       y1="0"
+       x2="505.96442"
+       y2="505.96442"
+       gradientTransform="scale(1.2846753,0.59292706)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+  </defs>
+  <rect
+     width="650"
+     height="300"
+     fill="url(#bg-grad)"
+     id="rect2"
+     style="fill:url(#bg-grad);stroke-width:0.872765"
+     x="0"
+     y="0" />
+  <!-- Title -->
+  <text
+     x="364"
+     y="28"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="15px"
+     font-weight="700"
+     id="text2">IFS Priority Levels / IFS 优先级层次</text>
+  <!-- Timeline base -->
+  <line
+     x1="64"
+     y1="60"
+     x2="64"
+     y2="280"
+     stroke="#334155"
+     stroke-width="2"
+     id="line2" />
+  <text
+     x="64"
+     y="55"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="10px"
+     id="text3">Medium Idle</text>
+  <!-- SIFS - highest priority -->
+  <rect
+     x="64"
+     y="80"
+     width="120"
+     height="45"
+     rx="4"
+     fill="#10b981"
+     opacity="0.15"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect3" />
+  <text
+     x="124"
+     y="100"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="13px"
+     font-weight="700"
+     id="text4">SIFS</text>
+  <text
+     x="124"
+     y="118"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10px"
+     id="text5">10us (DSSS)</text>
+  <line
+     x1="184"
+     y1="100"
+     x2="264"
+     y2="100"
+     stroke="#10b981"
+     stroke-width="1"
+     id="line5" />
+  <text
+     x="274"
+     y="95"
+     fill="#e2e8f0"
+     font-size="11px"
+     id="text6">ACK, CTS, Poll Response</text>
+  <text
+     x="274"
+     y="110"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text7">最高优先级 - 急救车，立即启动</text>
+  <!-- PIFS -->
+  <rect
+     x="64"
+     y="135"
+     width="120"
+     height="45"
+     rx="4"
+     fill="#3b82f6"
+     opacity="0.15"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect7" />
+  <text
+     x="124"
+     y="155"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="13px"
+     font-weight="700"
+     id="text8">PIFS</text>
+  <text
+     x="124"
+     y="173"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="10px"
+     id="text9">30us (DSSS)</text>
+  <line
+     x1="184"
+     y1="155"
+     x2="264"
+     y2="155"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="line9" />
+  <text
+     x="274"
+     y="150"
+     fill="#e2e8f0"
+     font-size="11px"
+     id="text10">PCF Poll (AP only)</text>
+  <text
+     x="274"
+     y="165"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text11">AP 专用 - 警车，稍等一下</text>
+  <!-- DIFS -->
+  <rect
+     x="64"
+     y="190"
+     width="120"
+     height="45"
+     rx="4"
+     fill="#eab308"
+     opacity="0.15"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="rect11" />
+  <text
+     x="124"
+     y="210"
+     text-anchor="middle"
+     fill="#eab308"
+     font-size="13px"
+     font-weight="700"
+     id="text12">DIFS</text>
+  <text
+     x="124"
+     y="228"
+     text-anchor="middle"
+     fill="#eab308"
+     font-size="10px"
+     id="text13">50us (DSSS)</text>
+  <line
+     x1="184"
+     y1="210"
+     x2="264"
+     y2="210"
+     stroke="#eab308"
+     stroke-width="1"
+     id="line13" />
+  <text
+     x="274"
+     y="205"
+     fill="#e2e8f0"
+     font-size="11px"
+     id="text14">Normal Data (DCF)</text>
+  <text
+     x="274"
+     y="220"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text15">普通数据 - 私家车，标准等待</text>
+  <!-- EIFS -->
+  <rect
+     x="64"
+     y="245"
+     width="120"
+     height="35"
+     rx="4"
+     fill="#dc2626"
+     opacity="0.15"
+     stroke="#dc2626"
+     stroke-width="1.5"
+     id="rect15" />
+  <text
+     x="124"
+     y="265"
+     text-anchor="middle"
+     fill="#dc2626"
+     font-size="13px"
+     font-weight="700"
+     id="text16">EIFS</text>
+  <line
+     x1="184"
+     y1="260"
+     x2="264"
+     y2="260"
+     stroke="#dc2626"
+     stroke-width="1"
+     id="line16" />
+  <text
+     x="274"
+     y="258"
+     fill="#e2e8f0"
+     font-size="11px"
+     id="text17">After Error Recovery</text>
+  <text
+     x="274"
+     y="273"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text18">错误恢复 - 事故后等待清理</text>
+  <!-- Arrow showing priority direction -->
+  <line
+     x1="24"
+     y1="90"
+     x2="24"
+     y2="265"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#arr-down)"
+     id="line18" />
+  <defs
+     id="defs18">
+    <marker
+       id="arr-down"
+       markerWidth="8"
+       markerHeight="6"
+       refX="4"
+       refY="6"
+       orient="auto">
+      <polygon
+         points="8,0 4,6 0,0 "
+         fill="#475569"
+         id="polygon18" />
+    </marker>
+  </defs>
+  <text
+     x="-175"
+     y="19"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="10px"
+     transform="rotate(-90)"
+     id="text19">Priority decreases</text>
+  <!-- Formula box -->
+  <rect
+     x="444"
+     y="80"
+     width="190.29703"
+     height="68.613861"
+     rx="2.8192153"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.77749"
+     id="rect19" />
+  <text
+     x="452"
+     y="100"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text20">PIFS = SIFS + Slot Time</text>
+  <text
+     x="452"
+     y="118"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text21">DIFS = SIFS + 2 x Slot Time</text>
+  <text
+     x="452"
+     y="136"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text22">EIFS = SIFS + DIFS + ACK_time</text>
+</svg>

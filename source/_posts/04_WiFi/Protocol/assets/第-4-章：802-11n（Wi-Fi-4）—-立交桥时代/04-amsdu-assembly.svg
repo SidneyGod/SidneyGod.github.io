@@ -1,0 +1,1301 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1200"
+   height="700"
+   viewBox="0 0 1200 700"
+   version="1.1"
+   id="svg87"
+   sodipodi:docname="04-amsdu-assembly.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview87"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.36"
+     inkscape:cx="600.36765"
+     inkscape:cy="350.36765"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg87" />
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+ </style>
+  <defs
+     id="defs5">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+    <marker
+       id="arr-o"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#f97316"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arr-g"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#10b981"
+         id="polygon5" />
+    </marker>
+  </defs>
+  <rect
+     width="1200"
+     height="700"
+     fill="url(#bg)"
+     id="rect5" />
+  <!-- Title -->
+  <text
+     x="600"
+     y="30"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="16"
+     font-weight="700"
+     id="text5">A-MSDU Packet Assembly &amp; Traffic Metaphor</text>
+  <text
+     x="600"
+     y="48"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="11"
+     id="text6">A-MSDU 数据包组装流程 — 交通比喻</text>
+  <!-- ==================== Left: Assembly Flow ==================== -->
+  <rect
+     x="30"
+     y="65"
+     width="560"
+     height="620"
+     rx="8"
+     fill="url(#card)"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect6" />
+  <text
+     x="310"
+     y="90"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="14"
+     font-weight="700"
+     id="text7">A-MSDU 组装流程</text>
+  <!-- Step 1: Multiple MSDUs -->
+  <text
+     x="60"
+     y="120"
+     fill="#f97316"
+     font-size="11"
+     font-weight="600"
+     id="text8">Step 1: 多个原始数据</text>
+  <rect
+     x="60"
+     y="130"
+     width="150"
+     height="30"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect8" />
+  <text
+     x="135"
+     y="150"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text9">MSDU 1 (IP Pkt)</text>
+  <rect
+     x="220"
+     y="130"
+     width="150"
+     height="30"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect9" />
+  <text
+     x="295"
+     y="150"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text10">MSDU 2 (IP Pkt)</text>
+  <rect
+     x="380"
+     y="130"
+     width="150"
+     height="30"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect10" />
+  <text
+     x="455"
+     y="150"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text11">MSDU 3 (IP Pkt)</text>
+  <!-- Arrow -->
+  <line
+     x1="310"
+     y1="165"
+     x2="310"
+     y2="185"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arr-o)"
+     id="line11" />
+  <!-- Step 2: Add subframe header to each MSDU -->
+  <text
+     x="60"
+     y="200"
+     fill="#f97316"
+     font-size="11"
+     font-weight="600"
+     id="text12">Step 2: 每个 MSDU 加子帧头（SA+DA+Len）</text>
+  <!-- Subframe 1 -->
+  <rect
+     x="60"
+     y="212"
+     width="155"
+     height="35"
+     rx="4"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect12" />
+  <rect
+     x="60"
+     y="212"
+     width="18"
+     height="35"
+     rx="4"
+     fill="#475569"
+     id="rect13" />
+  <text
+     x="69"
+     y="234"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="7"
+     id="text13">SA</text>
+  <rect
+     x="78"
+     y="212"
+     width="18"
+     height="35"
+     rx="0"
+     fill="#475569"
+     id="rect14" />
+  <text
+     x="87"
+     y="234"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="7"
+     id="text14">DA</text>
+  <rect
+     x="96"
+     y="212"
+     width="18"
+     height="35"
+     rx="0"
+     fill="#475569"
+     id="rect15" />
+  <text
+     x="105"
+     y="234"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="7"
+     id="text15">Len</text>
+  <rect
+     x="114"
+     y="212"
+     width="101"
+     height="35"
+     rx="0"
+     fill="#1e3a5f"
+     id="rect16" />
+  <text
+     x="164"
+     y="234"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text16">MSDU 1</text>
+  <!-- Subframe 2 -->
+  <rect
+     x="225"
+     y="212"
+     width="155"
+     height="35"
+     rx="4"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect17" />
+  <rect
+     x="225"
+     y="212"
+     width="18"
+     height="35"
+     rx="4"
+     fill="#475569"
+     id="rect18" />
+  <text
+     x="234"
+     y="234"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="7"
+     id="text18">SA</text>
+  <rect
+     x="243"
+     y="212"
+     width="18"
+     height="35"
+     rx="0"
+     fill="#475569"
+     id="rect19" />
+  <text
+     x="252"
+     y="234"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="7"
+     id="text19">DA</text>
+  <rect
+     x="261"
+     y="212"
+     width="18"
+     height="35"
+     rx="0"
+     fill="#475569"
+     id="rect20" />
+  <text
+     x="270"
+     y="234"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="7"
+     id="text20">Len</text>
+  <rect
+     x="279"
+     y="212"
+     width="101"
+     height="35"
+     rx="0"
+     fill="#1e3a5f"
+     id="rect21" />
+  <text
+     x="329"
+     y="234"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text21">MSDU 2</text>
+  <!-- Subframe 3 -->
+  <rect
+     x="390"
+     y="212"
+     width="155"
+     height="35"
+     rx="4"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect22" />
+  <rect
+     x="390"
+     y="212"
+     width="18"
+     height="35"
+     rx="4"
+     fill="#475569"
+     id="rect23" />
+  <text
+     x="399"
+     y="234"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="7"
+     id="text23">SA</text>
+  <rect
+     x="408"
+     y="212"
+     width="18"
+     height="35"
+     rx="0"
+     fill="#475569"
+     id="rect24" />
+  <text
+     x="417"
+     y="234"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="7"
+     id="text24">DA</text>
+  <rect
+     x="426"
+     y="212"
+     width="18"
+     height="35"
+     rx="0"
+     fill="#475569"
+     id="rect25" />
+  <text
+     x="435"
+     y="234"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="7"
+     id="text25">Len</text>
+  <rect
+     x="444"
+     y="212"
+     width="101"
+     height="35"
+     rx="0"
+     fill="#1e3a5f"
+     id="rect26" />
+  <text
+     x="494"
+     y="234"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text26">MSDU 3</text>
+  <text
+     x="310"
+     y="265"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text27">每个子帧 = 子帧头(6B: SA2+DA2+Len2) + MSDU 数据</text>
+  <!-- Arrow -->
+  <line
+     x1="310"
+     y1="275"
+     x2="310"
+     y2="295"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arr-o)"
+     id="line27" />
+  <!-- Step 3: Combine into one MPDU -->
+  <text
+     x="60"
+     y="310"
+     fill="#f97316"
+     font-size="11"
+     font-weight="600"
+     id="text28">Step 3: 拼接子帧 + 填充 → 一个 MPDU</text>
+  <rect
+     x="60"
+     y="320"
+     width="500"
+     height="55"
+     rx="5"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect28" />
+  <rect
+     x="65"
+     y="325"
+     width="150"
+     height="45"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect29" />
+  <text
+     x="140"
+     y="345"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text29">Subframe 1</text>
+  <text
+     x="140"
+     y="360"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text30">SA+DA+Len+Data</text>
+  <rect
+     x="220"
+     y="325"
+     width="150"
+     height="45"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect30" />
+  <text
+     x="295"
+     y="345"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text31">Subframe 2</text>
+  <text
+     x="295"
+     y="360"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text32">SA+DA+Len+Data</text>
+  <rect
+     x="375"
+     y="325"
+     width="150"
+     height="45"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect32" />
+  <text
+     x="450"
+     y="345"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text33">Subframe 3</text>
+  <text
+     x="450"
+     y="360"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text34">SA+DA+Len+Data</text>
+  <rect
+     x="530"
+     y="325"
+     width="25"
+     height="45"
+     rx="3"
+     fill="#1c1917"
+     stroke="#44403c"
+     stroke-width="0.5"
+     stroke-dasharray="3,2"
+     id="rect34" />
+  <text
+     x="542"
+     y="352"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="7"
+     id="text35">填</text>
+  <!-- Arrow -->
+  <line
+     x1="310"
+     y1="380"
+     x2="310"
+     y2="400"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arr-o)"
+     id="line35" />
+  <!-- Step 4: Add shared MAC Header + FCS -->
+  <text
+     x="60"
+     y="415"
+     fill="#f97316"
+     font-size="11"
+     font-weight="600"
+     id="text36">Step 4: 加共享 MAC 头 + 共享 FCS</text>
+  <rect
+     x="60"
+     y="425"
+     width="500"
+     height="55"
+     rx="5"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect36" />
+  <rect
+     x="65"
+     y="430"
+     width="55"
+     height="45"
+     rx="3"
+     fill="#7c2d12"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect37" />
+  <text
+     x="92"
+     y="450"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text37">MAC</text>
+  <text
+     x="92"
+     y="463"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="7"
+     id="text38">Header</text>
+  <rect
+     x="125"
+     y="430"
+     width="120"
+     height="45"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect38" />
+  <text
+     x="185"
+     y="457"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text39">Subframe 1</text>
+  <rect
+     x="250"
+     y="430"
+     width="120"
+     height="45"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect39" />
+  <text
+     x="310"
+     y="457"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text40">Subframe 2</text>
+  <rect
+     x="375"
+     y="430"
+     width="120"
+     height="45"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect40" />
+  <text
+     x="435"
+     y="457"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text41">Subframe 3</text>
+  <rect
+     x="500"
+     y="430"
+     width="55"
+     height="45"
+     rx="3"
+     fill="#475569"
+     id="rect41" />
+  <text
+     x="527"
+     y="457"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text42">FCS</text>
+  <text
+     x="310"
+     y="498"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text43">整个 A-MSDU 只有 1 个 MAC 头 + 1 个 FCS</text>
+  <!-- Arrow -->
+  <line
+     x1="310"
+     y1="508"
+     x2="310"
+     y2="528"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arr-o)"
+     id="line43" />
+  <!-- Step 5: Wrap in PHY -->
+  <text
+     x="60"
+     y="543"
+     fill="#f97316"
+     font-size="11"
+     font-weight="600"
+     id="text44">Step 5: 加 PHY 头 → 发送</text>
+  <rect
+     x="60"
+     y="553"
+     width="500"
+     height="50"
+     rx="5"
+     fill="#065f46"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect44" />
+  <rect
+     x="65"
+     y="558"
+     width="75"
+     height="40"
+     rx="3"
+     fill="#475569"
+     id="rect45" />
+  <text
+     x="102"
+     y="582"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text45">PHY Preamble</text>
+  <rect
+     x="145"
+     y="558"
+     width="45"
+     height="40"
+     rx="3"
+     fill="#475569"
+     id="rect46" />
+  <text
+     x="167"
+     y="582"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text46">PLCP</text>
+  <rect
+     x="195"
+     y="558"
+     width="360"
+     height="40"
+     rx="3"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect47" />
+  <text
+     x="375"
+     y="577"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="9"
+     font-weight="600"
+     id="text47">A-MSDU (MAC Hdr + Subframe × N + FCS)</text>
+  <text
+     x="375"
+     y="592"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text48">最大 7935 Bytes | 通常 3839 Bytes</text>
+  <!-- Key difference note -->
+  <rect
+     x="60"
+     y="615"
+     width="500"
+     height="55"
+     rx="6"
+     fill="#1c1917"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect48" />
+  <text
+     x="310"
+     y="635"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="10"
+     font-weight="600"
+     id="text49">风险：只有 1 个 FCS</text>
+  <text
+     x="310"
+     y="652"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text50">任何一个子帧出错 → 整个 A-MSDU 的 FCS 校验失败 → 全部重传</text>
+  <text
+     x="310"
+     y="665"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="9px"
+     id="text51">大箱子里一件货坏了，整箱退回重发</text>
+  <!-- ==================== Right: Traffic Metaphor ==================== -->
+  <rect
+     x="620"
+     y="65"
+     width="550"
+     height="620"
+     rx="8"
+     fill="url(#card)"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect51" />
+  <text
+     x="895"
+     y="90"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="14"
+     font-weight="700"
+     id="text52">交通比喻：装大箱子再装车</text>
+  <!-- Step 1: Individual packages -->
+  <text
+     x="650"
+     y="125"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="600"
+     id="text53">Step 1: 3 个小包裹</text>
+  <!-- Package 1 -->
+  <rect
+     x="660"
+     y="140"
+     width="100"
+     height="50"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect53" />
+  <text
+     x="710"
+     y="160"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="9"
+     id="text54">包裹 A</text>
+  <text
+     x="710"
+     y="178"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text55">文件 500B</text>
+  <!-- Package 2 -->
+  <rect
+     x="775"
+     y="140"
+     width="100"
+     height="50"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect55" />
+  <text
+     x="825"
+     y="160"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="9"
+     id="text56">包裹 B</text>
+  <text
+     x="825"
+     y="178"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text57">照片 800B</text>
+  <!-- Package 3 -->
+  <rect
+     x="890"
+     y="140"
+     width="100"
+     height="50"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect57" />
+  <text
+     x="940"
+     y="160"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="9"
+     id="text58">包裹 C</text>
+  <text
+     x="940"
+     y="178"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text59">表格 200B</text>
+  <!-- Arrow down -->
+  <text
+     x="895"
+     y="215"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="16"
+     id="text60">⬇</text>
+  <!-- Step 2: Pack into big box -->
+  <text
+     x="650"
+     y="240"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="600"
+     id="text61">Step 2: 装进一个大箱子</text>
+  <!-- Big box -->
+  <rect
+     x="650"
+     y="255"
+     width="480"
+     height="110"
+     rx="8"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="2"
+     id="rect61" />
+  <!-- Box label -->
+  <rect
+     x="650"
+     y="255"
+     width="100"
+     height="25"
+     rx="8"
+     fill="#7c2d12"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect62" />
+  <text
+     x="700"
+     y="273"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text62">收件信息</text>
+  <!-- Packages inside -->
+  <rect
+     x="665"
+     y="290"
+     width="90"
+     height="35"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect63" />
+  <text
+     x="710"
+     y="312"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text63">包裹 A</text>
+  <rect
+     x="765"
+     y="290"
+     width="90"
+     height="35"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect64" />
+  <text
+     x="810"
+     y="312"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text64">包裹 B</text>
+  <rect
+     x="865"
+     y="290"
+     width="90"
+     height="35"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect65" />
+  <text
+     x="910"
+     y="312"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text65">包裹 C</text>
+  <rect
+     x="965"
+     y="290"
+     width="25"
+     height="35"
+     rx="3"
+     fill="#1c1917"
+     stroke="#44403c"
+     stroke-width="0.5"
+     stroke-dasharray="3,2"
+     id="rect66" />
+  <text
+     x="977"
+     y="312"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="7"
+     id="text66">填</text>
+  <!-- FCS label -->
+  <rect
+     x="1000"
+     y="255"
+     width="25"
+     height="110"
+     rx="4"
+     fill="#475569"
+     id="rect67" />
+  <text
+     x="1012"
+     y="315"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     transform="rotate(-90 1012 315)"
+     id="text67">封箱胶带(FCS)</text>
+  <text
+     x="890"
+     y="385"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="9"
+     id="text68">1 个箱子 + 1 条封箱胶带 + 1 张收件信息</text>
+  <!-- Arrow down -->
+  <text
+     x="895"
+     y="410"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="16"
+     id="text69">⬇</text>
+  <!-- Step 3: Load onto truck -->
+  <text
+     x="650"
+     y="435"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="600"
+     id="text70">Step 3: 装上一辆车出发</text>
+  <!-- Single truck with big box -->
+  <rect
+     x="660"
+     y="450"
+     width="460"
+     height="65"
+     rx="8"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect70" />
+  <!-- Truck cab -->
+  <rect
+     x="665"
+     y="455"
+     width="50"
+     height="55"
+     rx="5"
+     fill="#475569"
+     stroke="#94a3b8"
+     stroke-width="1"
+     id="rect71" />
+  <text
+     x="690"
+     y="480"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="9"
+     font-weight="600"
+     id="text71">车头</text>
+  <text
+     x="690"
+     y="498"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text72">PHY头</text>
+  <!-- Cargo area with big box -->
+  <rect
+     x="720"
+     y="458"
+     width="390"
+     height="50"
+     rx="5"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect72" />
+  <rect
+     x="725"
+     y="463"
+     width="70"
+     height="40"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect73" />
+  <text
+     x="760"
+     y="487"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text73">A</text>
+  <rect
+     x="800"
+     y="463"
+     width="70"
+     height="40"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect74" />
+  <text
+     x="835"
+     y="487"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text74">B</text>
+  <rect
+     x="875"
+     y="463"
+     width="70"
+     height="40"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect75" />
+  <text
+     x="910"
+     y="487"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text75">C</text>
+  <rect
+     x="950"
+     y="463"
+     width="20"
+     height="40"
+     rx="3"
+     fill="#1c1917"
+     stroke="#44403c"
+     stroke-width="0.5"
+     stroke-dasharray="3,2"
+     id="rect76" />
+  <!-- Green light -->
+  <text
+     x="1050"
+     y="480"
+     fill="#10b981"
+     font-size="11"
+     id="text76">绿灯</text>
+  <text
+     x="1050"
+     y="498"
+     fill="#10b981"
+     font-size="8"
+     id="text77">出发!</text>
+  <!-- Key advantage -->
+  <rect
+     x="650"
+     y="530"
+     width="480"
+     height="35"
+     rx="5"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect77" />
+  <text
+     x="890"
+     y="548"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10"
+     id="text78">1 辆车 + 1 个箱子 + 1 条封箱胶带 + 1 次出发</text>
+  <text
+     x="890"
+     y="562"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text79">比 3 辆车各运一个小包裹省了 2 次出发、2 个车头开销</text>
+  <!-- Comparison: What if one item is damaged? -->
+  <text
+     x="650"
+     y="595"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="600"
+     id="text80">如果箱内一件货损坏？</text>
+  <rect
+     x="650"
+     y="608"
+     width="480"
+     height="65"
+     rx="6"
+     fill="#2d0a0a"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect80" />
+  <!-- Big box with one damaged item -->
+  <rect
+     x="665"
+     y="618"
+     width="200"
+     height="45"
+     rx="5"
+     fill="#0f172a"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect81" />
+  <rect
+     x="670"
+     y="623"
+     width="55"
+     height="35"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect82" />
+  <text
+     x="697"
+     y="645"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="8"
+     id="text82">A ✓</text>
+  <rect
+     x="730"
+     y="623"
+     width="55"
+     height="35"
+     rx="3"
+     fill="#2d0a0a"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect83" />
+  <text
+     x="757"
+     y="645"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="8"
+     id="text83">B ✗</text>
+  <rect
+     x="790"
+     y="623"
+     width="55"
+     height="35"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect84" />
+  <text
+     x="817"
+     y="645"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="8"
+     id="text84">C ✓</text>
+  <text
+     x="880"
+     y="635"
+     fill="#ef4444"
+     font-size="10"
+     id="text85">→ 整箱退回!</text>
+  <text
+     x="880"
+     y="655"
+     fill="#94a3b8"
+     font-size="8"
+     id="text86">封箱胶带（FCS）只有一条，无法定位哪个坏了</text>
+  <text
+     x="880"
+     y="668"
+     fill="#fbbf24"
+     font-size="8"
+     id="text87">→ 必须拆箱重装（重传整个 A-MSDU）</text>
+  <!-- Summary box -->
+  <rect
+     x="650"
+     y="680"
+     width="480"
+     height="0"
+     rx="0"
+     fill="none"
+     id="rect87" />
+</svg>

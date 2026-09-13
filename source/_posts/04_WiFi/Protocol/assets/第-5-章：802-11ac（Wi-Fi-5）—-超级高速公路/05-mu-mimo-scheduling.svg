@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="960"
+   height="520"
+   viewBox="0 0 960 520"
+   version="1.1"
+   id="svg56"
+   sodipodi:docname="05-mu-mimo-scheduling.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview56"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.71"
+     inkscape:cx="479.82456"
+     inkscape:cy="259.94152"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg56" />
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+ </style>
+  <defs
+     id="defs5">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arr-b"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#3b82f6"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arr-o"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#f97316"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arr-g"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#10b981"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arr-p"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#a855f7"
+         id="polygon5" />
+    </marker>
+  </defs>
+  <rect
+     width="960"
+     height="520"
+     fill="url(#bg)"
+     id="rect5" />
+  <!-- Title -->
+  <text
+     x="480"
+     y="28"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="16"
+     font-weight="700"
+     id="text5">SU-MIMO vs MU-MIMO — 802.11ac Wave 2</text>
+  <text
+     x="480"
+     y="46"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="11"
+     id="text6">从&quot;一对一专车&quot;到&quot;同时服务多位乘客&quot;</text>
+  <!-- ==================== Top: SU-MIMO ==================== -->
+  <rect
+     x="30"
+     y="60"
+     width="430"
+     height="440"
+     rx="8"
+     fill="#1e293b"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect6" />
+  <text
+     x="245"
+     y="82"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="13"
+     font-weight="700"
+     id="text7">SU-MIMO (802.11n/ac)</text>
+  <text
+     x="245"
+     y="98"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text8">多条空间流 → 同一个用户</text>
+  <!-- AP -->
+  <rect
+     x="170"
+     y="115"
+     width="150"
+     height="50"
+     rx="8"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect8" />
+  <text
+     x="245"
+     y="138"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="12"
+     font-weight="600"
+     id="text9">AP (4 天线)</text>
+  <text
+     x="245"
+     y="153"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text10">4×4 MIMO</text>
+  <!-- Antenna icons -->
+  <rect
+     x="175"
+     y="110"
+     width="4"
+     height="12"
+     rx="1"
+     fill="#3b82f6"
+     id="rect10" />
+  <rect
+     x="200"
+     y="110"
+     width="4"
+     height="12"
+     rx="1"
+     fill="#3b82f6"
+     id="rect11" />
+  <rect
+     x="225"
+     y="110"
+     width="4"
+     height="12"
+     rx="1"
+     fill="#3b82f6"
+     id="rect12" />
+  <rect
+     x="250"
+     y="110"
+     width="4"
+     height="12"
+     rx="1"
+     fill="#3b82f6"
+     id="rect13" />
+  <!-- Stream arrows to single user -->
+  <line
+     x1="195"
+     y1="165"
+     x2="195"
+     y2="280"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#arr-b)"
+     id="line13" />
+  <text
+     x="182"
+     y="225"
+     fill="#3b82f6"
+     font-size="8px"
+     id="text13">流 1</text>
+  <line
+     x1="215"
+     y1="165"
+     x2="215"
+     y2="280"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#arr-b)"
+     id="line14" />
+  <text
+     x="204"
+     y="225"
+     fill="#3b82f6"
+     font-size="8px"
+     id="text14">流 2</text>
+  <line
+     x1="235"
+     y1="165"
+     x2="235"
+     y2="280"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#arr-b)"
+     id="line15" />
+  <text
+     x="224"
+     y="225"
+     fill="#3b82f6"
+     font-size="8px"
+     id="text15">流 3</text>
+  <line
+     x1="255"
+     y1="165"
+     x2="255"
+     y2="280"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#arr-b)"
+     id="line16" />
+  <text
+     x="244"
+     y="225"
+     fill="#3b82f6"
+     font-size="8px"
+     id="text16">流 4</text>
+  <!-- Single User -->
+  <rect
+     x="165"
+     y="285"
+     width="160"
+     height="45"
+     rx="8"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect16" />
+  <text
+     x="245"
+     y="307"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="600"
+     id="text17">用户 A (4×4)</text>
+  <text
+     x="245"
+     y="322"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text18">4 条空间流全部给 1 人</text>
+  <!-- Time slots -->
+  <rect
+     x="70"
+     y="355"
+     width="370"
+     height="130"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect18" />
+  <text
+     x="255"
+     y="372"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     font-weight="600"
+     id="text19">时间轴</text>
+  <rect
+     x="80"
+     y="380"
+     width="160"
+     height="35"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect19" />
+  <text
+     x="160"
+     y="402"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="9"
+     font-weight="600"
+     id="text20">发给用户 A (全带宽)</text>
+  <rect
+     x="80"
+     y="420"
+     width="160"
+     height="35"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect20" />
+  <text
+     x="160"
+     y="442"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9"
+     font-weight="600"
+     id="text21">发给用户 B (全带宽)</text>
+  <rect
+     x="80"
+     y="460"
+     width="160"
+     height="15"
+     rx="3"
+     fill="#1e293b"
+     stroke="#64748b"
+     stroke-width="0.5"
+     id="rect21" />
+  <text
+     x="160"
+     y="472"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="7"
+     id="text22">... 逐个用户排队 ...</text>
+  <!-- Efficiency label -->
+  <rect
+     x="260"
+     y="380"
+     width="170"
+     height="90"
+     rx="6"
+     fill="#2d0a0a"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect22" />
+  <text
+     x="345"
+     y="400"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="9"
+     font-weight="600"
+     id="text23">效率分析</text>
+  <text
+     x="345"
+     y="416"
+     text-anchor="middle"
+     fill="#f87171"
+     font-size="8"
+     id="text24">每次只服务 1 人</text>
+  <text
+     x="345"
+     y="430"
+     text-anchor="middle"
+     fill="#f87171"
+     font-size="8"
+     id="text25">用户 B/C/D 必须等待</text>
+  <text
+     x="345"
+     y="444"
+     text-anchor="middle"
+     fill="#f87171"
+     font-size="8"
+     id="text26">多人场景 → 排队长</text>
+  <text
+     x="345"
+     y="460"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="9"
+     font-weight="600"
+     id="text27">时延 = N × T_frame</text>
+  <!-- ==================== Right: MU-MIMO ==================== -->
+  <rect
+     x="500"
+     y="60"
+     width="430"
+     height="440"
+     rx="8"
+     fill="#1e293b"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect27" />
+  <text
+     x="715"
+     y="82"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="13"
+     font-weight="700"
+     id="text28">MU-MIMO (802.11ac Wave 2)</text>
+  <text
+     x="715"
+     y="98"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text29">空间流 → 分配给不同用户</text>
+  <!-- AP -->
+  <rect
+     x="640"
+     y="115"
+     width="150"
+     height="50"
+     rx="8"
+     fill="#1e3a5f"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect29" />
+  <text
+     x="715"
+     y="138"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="12"
+     font-weight="600"
+     id="text30">AP (4 天线)</text>
+  <text
+     x="715"
+     y="153"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text31">波束成形矩阵 Q</text>
+  <!-- Antenna icons -->
+  <rect
+     x="645"
+     y="110"
+     width="4"
+     height="12"
+     rx="1"
+     fill="#f97316"
+     id="rect31" />
+  <rect
+     x="670"
+     y="110"
+     width="4"
+     height="12"
+     rx="1"
+     fill="#f97316"
+     id="rect32" />
+  <rect
+     x="695"
+     y="110"
+     width="4"
+     height="12"
+     rx="1"
+     fill="#f97316"
+     id="rect33" />
+  <rect
+     x="720"
+     y="110"
+     width="4"
+     height="12"
+     rx="1"
+     fill="#f97316"
+     id="rect34" />
+  <!-- Stream 1 to User A -->
+  <path
+     d="M 660,165 C 600,200 570,240 570,280"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arr-b)"
+     id="path34" />
+  <text
+     x="584"
+     y="220"
+     fill="#3b82f6"
+     font-size="8px"
+     id="text34">流 1</text>
+  <!-- Stream 2 to User B -->
+  <path
+     d="M 680,165 C 650,200 640,240 640,280"
+     stroke="#10b981"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arr-g)"
+     id="path35" />
+  <text
+     x="638"
+     y="220"
+     fill="#10b981"
+     font-size="8px"
+     id="text35">流 2</text>
+  <!-- Stream 3 to User C -->
+  <path
+     d="M 720,165 C 760,200 770,240 770,280"
+     stroke="#a855f7"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arr-p)"
+     id="path36" />
+  <text
+     x="746"
+     y="220"
+     fill="#a855f7"
+     font-size="8px"
+     id="text36">流 3</text>
+  <!-- Stream 4 to User D -->
+  <path
+     d="M 740,165 C 800,200 830,240 840,280"
+     stroke="#f97316"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arr-o)"
+     id="path37" />
+  <text
+     x="794"
+     y="220"
+     fill="#f97316"
+     font-size="8px"
+     id="text37">流 4</text>
+  <!-- Users -->
+  <rect
+     x="540"
+     y="285"
+     width="70"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect37" />
+  <text
+     x="575"
+     y="305"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="9"
+     font-weight="600"
+     id="text38">用户 A</text>
+  <text
+     x="575"
+     y="318"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text39">1 流</text>
+  <rect
+     x="615"
+     y="285"
+     width="70"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect39" />
+  <text
+     x="650"
+     y="305"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9"
+     font-weight="600"
+     id="text40">用户 B</text>
+  <text
+     x="650"
+     y="318"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text41">1 流</text>
+  <rect
+     x="735"
+     y="285"
+     width="70"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#a855f7"
+     stroke-width="1"
+     id="rect41" />
+  <text
+     x="770"
+     y="305"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-size="9"
+     font-weight="600"
+     id="text42">用户 C</text>
+  <text
+     x="770"
+     y="318"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text43">1 流</text>
+  <rect
+     x="810"
+     y="285"
+     width="70"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect43" />
+  <text
+     x="845"
+     y="305"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="9"
+     font-weight="600"
+     id="text44">用户 D</text>
+  <text
+     x="845"
+     y="318"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text45">1 流</text>
+  <!-- Time slots for MU-MIMO -->
+  <rect
+     x="540"
+     y="355"
+     width="370"
+     height="130"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect45" />
+  <text
+     x="725"
+     y="372"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     font-weight="600"
+     id="text46">时间轴</text>
+  <rect
+     x="550"
+     y="380"
+     width="160"
+     height="35"
+     rx="4"
+     fill="#4c1d95"
+     stroke="#a855f7"
+     stroke-width="1"
+     id="rect46" />
+  <text
+     x="630"
+     y="395"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-size="9"
+     font-weight="600"
+     id="text47">同时发给 A+B+C+D</text>
+  <text
+     x="630"
+     y="408"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text48">波束成形 → 各自独立解码</text>
+  <rect
+     x="550"
+     y="420"
+     width="160"
+     height="35"
+     rx="4"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect48" />
+  <text
+     x="630"
+     y="438"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9"
+     font-weight="600"
+     id="text49">Block ACK（BAR 轮询依次回）</text>
+  <text
+     x="630"
+     y="450"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text50">标准 Block ACK</text>
+  <rect
+     x="550"
+     y="460"
+     width="160"
+     height="15"
+     rx="3"
+     fill="#1e293b"
+     stroke="#64748b"
+     stroke-width="0.5"
+     id="rect50" />
+  <text
+     x="630"
+     y="472"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="7"
+     id="text51">... 下一轮同时发送 ...</text>
+  <!-- Efficiency label -->
+  <rect
+     x="730"
+     y="380"
+     width="170"
+     height="90"
+     rx="6"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect51" />
+  <text
+     x="815"
+     y="400"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9"
+     font-weight="600"
+     id="text52">效率分析</text>
+  <text
+     x="815"
+     y="416"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="8"
+     id="text53">同时服务最多 4 人</text>
+  <text
+     x="815"
+     y="430"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="8"
+     id="text54">无需逐个排队</text>
+  <text
+     x="815"
+     y="444"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="8"
+     id="text55">多人场景 → 效率 ×4</text>
+  <text
+     x="815"
+     y="460"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="9"
+     font-weight="600"
+     id="text56">时延 = T_frame (一次)</text>
+  <!-- Limitation callout -->
+  <rect
+     x="540"
+     y="340"
+     width="380"
+     height="0"
+     rx="0"
+     fill="none"
+     id="rect56" />
+</svg>

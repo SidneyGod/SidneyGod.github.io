@@ -1,0 +1,223 @@
+<svg width="1200" height="700" xmlns="http://www.w3.org/2000/svg">
+  <style id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+ <defs>
+  <linearGradient y2="100%" x2="100%" y1="0%" x1="0%" id="bg">
+   <stop stop-color="#0f0f1a" offset="0%"/>
+   <stop stop-color="#1a1a2e" offset="100%"/>
+  </linearGradient>
+ </defs>
+ <!-- Title -->
+ <!-- ==================== Left: Structure Diagram ==================== -->
+ <!-- Outer A-MPDU container -->
+ <!-- ===== MPDU 1 ===== -->
+ <!-- Delimiter -->
+ <!-- MPDU 1 container -->
+ <!-- MAC Header -->
+ <!-- A-MSDU 1 content -->
+ <!-- MSDU-A subframe -->
+ <!-- MSDU-B subframe -->
+ <!-- Padding indicator in A-MSDU -->
+ <!-- FCS for MPDU 1 -->
+ <!-- ===== MPDU 2 ===== -->
+ <!-- Delimiter -->
+ <!-- MPDU 2 container -->
+ <!-- MAC Header -->
+ <!-- A-MSDU 2 content -->
+ <!-- MSDU-C subframe -->
+ <!-- MSDU-D subframe -->
+ <!-- Padding in A-MSDU -->
+ <!-- FCS for MPDU 2 -->
+ <!-- ===== MPDU 3 ===== -->
+ <!-- Delimiter -->
+ <!-- MPDU 3 container -->
+ <!-- MAC Header -->
+ <!-- A-MSDU 3 content -->
+ <!-- MSDU-E subframe -->
+ <!-- MSDU-F subframe -->
+ <!-- Padding in A-MSDU -->
+ <!-- FCS for MPDU 3 -->
+ <!-- A-MPDU Padding -->
+ <!-- Block ACK -->
+ <!-- Annotation: arrows pointing to layers -->
+ <!-- ==================== Right: Explanation ==================== -->
+ <!-- Layer explanation -->
+ <!-- Traffic metaphor -->
+ <!-- Truck -->
+ <!-- Box 1 (A-MSDU) -->
+ <!-- Box 2 (A-MSDU) -->
+ <!-- Box 3 -->
+ <!-- Benefits comparison -->
+ <!-- Overall benefit -->
+ <!-- Legend (left side) -->
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_4" fill="url(#bg)" height="700" width="1200"/>
+  <text id="svg_5" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="16" fill="#e2e8f0" text-anchor="middle" y="30" x="600">A-MSDU in A-MPDU: Dual Aggregation</text>
+  <text id="svg_6" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="11" fill="#94a3b8" text-anchor="middle" y="48" x="600">双重聚合结构 — 外层 A-MPDU + 内层 A-MSDU</text>
+  <rect id="svg_7" stroke-width="1.5" stroke="#a855f7" fill="#1e293b" rx="8" height="620" width="600" y="65" x="30"/>
+  <text id="svg_8" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="14" fill="#a855f7" text-anchor="middle" y="90" x="330">双重聚合结构</text>
+  <rect id="svg_9" stroke-dasharray="8,4" stroke-width="2" stroke="#10b981" fill="#0f172a" rx="8" height="480" width="560" y="105" x="50"/>
+  <rect id="svg_10" stroke="#10b981" fill="#065f46" rx="4" height="20" width="140" y="98" x="55"/>
+  <text id="svg_11" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="11" fill="#10b981" text-anchor="middle" y="112" x="125">A-MPDU (外层)</text>
+  <rect id="svg_12" stroke="#94a3b8" fill="#475569" rx="3" height="130" width="45" y="135" x="70"/>
+  <text id="svg_13" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" transform="rotate(-90 92 195)" font-size="8" fill="#e2e8f0" text-anchor="middle" y="195" x="92">Delimiter 4B</text>
+  <rect id="svg_14" stroke-width="1.5" stroke="#3b82f6" fill="#1e293b" rx="5" height="130" width="470" y="135" x="120"/>
+  <rect id="svg_15" stroke="#3b82f6" fill="#1e3a5f" rx="3" height="18" width="100" y="128" x="125"/>
+  <text id="svg_16" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="10" fill="#3b82f6" text-anchor="middle" y="141" x="175">MPDU 1</text>
+  <rect id="svg_17" stroke="#f97316" fill="#7c2d12" rx="3" height="100" width="50" y="155" x="130"/>
+  <text id="svg_18" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" transform="rotate(-90 155 200)" font-size="8" fill="#f97316" text-anchor="middle" y="200" x="155">MAC Hdr</text>
+  <rect id="svg_19" stroke-dasharray="4,2" stroke="#f97316" fill="#0f172a" rx="3" height="100" width="360" y="155" x="185"/>
+  <rect id="svg_20" stroke-width="0.5" stroke="#f97316" fill="#7c2d12" rx="3" height="16" width="110" y="148" x="190"/>
+  <text id="svg_21" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#f97316" text-anchor="middle" y="160" x="245">A-MSDU 1</text>
+  <rect id="svg_22" stroke="#3b82f6" fill="#1e3a5f" rx="3" height="35" width="165" y="170" x="195"/>
+  <rect id="svg_23" fill="#475569" rx="3" height="35" width="20" y="170" x="195"/>
+  <text id="svg_24" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="192" x="205">SA</text>
+  <rect id="svg_25" fill="#475569" height="35" width="20" y="170" x="215"/>
+  <text id="svg_26" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="192" x="225">DA</text>
+  <rect id="svg_27" fill="#475569" height="35" width="20" y="170" x="235"/>
+  <text id="svg_28" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="192" x="245">Ln</text>
+  <rect id="svg_29" fill="#1e3a5f" height="35" width="105" y="170" x="255"/>
+  <text id="svg_30" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#e2e8f0" text-anchor="middle" y="192" x="307">MSDU-A</text>
+  <rect id="svg_31" stroke="#3b82f6" fill="#1e3a5f" rx="3" height="35" width="165" y="170" x="370"/>
+  <rect id="svg_32" fill="#475569" rx="3" height="35" width="20" y="170" x="370"/>
+  <text id="svg_33" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="192" x="380">SA</text>
+  <rect id="svg_34" fill="#475569" height="35" width="20" y="170" x="390"/>
+  <text id="svg_35" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="192" x="400">DA</text>
+  <rect id="svg_36" fill="#475569" height="35" width="20" y="170" x="410"/>
+  <text id="svg_37" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="192" x="420">Ln</text>
+  <rect id="svg_38" fill="#1e3a5f" height="35" width="105" y="170" x="430"/>
+  <text id="svg_39" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#e2e8f0" text-anchor="middle" y="192" x="482">MSDU-B</text>
+  <rect id="svg_40" stroke-dasharray="3,2" stroke-width="0.5" stroke="#44403c" fill="#1c1917" rx="2" height="14" width="340" y="210" x="195"/>
+  <text id="svg_41" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#64748b" text-anchor="middle" y="221" x="365">4B 填充对齐</text>
+  <rect id="svg_42" stroke="#94a3b8" fill="#475569" rx="3" height="100" width="30" y="155" x="550"/>
+  <text id="svg_43" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" transform="rotate(-90 565 200)" font-size="8" fill="#e2e8f0" text-anchor="middle" y="200" x="565">FCS 4B</text>
+  <rect id="svg_44" stroke="#94a3b8" fill="#475569" rx="3" height="130" width="45" y="275" x="70"/>
+  <text id="svg_45" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" transform="rotate(-90 92 335)" font-size="8" fill="#e2e8f0" text-anchor="middle" y="335" x="92">Delimiter 4B</text>
+  <rect id="svg_46" stroke-width="1.5" stroke="#3b82f6" fill="#1e293b" rx="5" height="130" width="470" y="275" x="120"/>
+  <rect id="svg_47" stroke="#3b82f6" fill="#1e3a5f" rx="3" height="18" width="100" y="268" x="125"/>
+  <text id="svg_48" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="10" fill="#3b82f6" text-anchor="middle" y="281" x="175">MPDU 2</text>
+  <rect id="svg_49" stroke="#f97316" fill="#7c2d12" rx="3" height="100" width="50" y="295" x="130"/>
+  <text id="svg_50" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" transform="rotate(-90 155 340)" font-size="8" fill="#f97316" text-anchor="middle" y="340" x="155">MAC Hdr</text>
+  <rect id="svg_51" stroke-dasharray="4,2" stroke="#f97316" fill="#0f172a" rx="3" height="100" width="360" y="295" x="185"/>
+  <rect id="svg_52" stroke-width="0.5" stroke="#f97316" fill="#7c2d12" rx="3" height="16" width="110" y="288" x="190"/>
+  <text id="svg_53" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#f97316" text-anchor="middle" y="300" x="245">A-MSDU 2</text>
+  <rect id="svg_54" stroke="#3b82f6" fill="#1e3a5f" rx="3" height="35" width="165" y="310" x="195"/>
+  <rect id="svg_55" fill="#475569" rx="3" height="35" width="20" y="310" x="195"/>
+  <text id="svg_56" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="332" x="205">SA</text>
+  <rect id="svg_57" fill="#475569" height="35" width="20" y="310" x="215"/>
+  <text id="svg_58" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="332" x="225">DA</text>
+  <rect id="svg_59" fill="#475569" height="35" width="20" y="310" x="235"/>
+  <text id="svg_60" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="332" x="245">Ln</text>
+  <rect id="svg_61" fill="#1e3a5f" height="35" width="105" y="310" x="255"/>
+  <text id="svg_62" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#e2e8f0" text-anchor="middle" y="332" x="307">MSDU-C</text>
+  <rect id="svg_63" stroke="#3b82f6" fill="#1e3a5f" rx="3" height="35" width="165" y="310" x="370"/>
+  <rect id="svg_64" fill="#475569" rx="3" height="35" width="20" y="310" x="370"/>
+  <text id="svg_65" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="332" x="380">SA</text>
+  <rect id="svg_66" fill="#475569" height="35" width="20" y="310" x="390"/>
+  <text id="svg_67" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="332" x="400">DA</text>
+  <rect id="svg_68" fill="#475569" height="35" width="20" y="310" x="410"/>
+  <text id="svg_69" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="332" x="420">Ln</text>
+  <rect id="svg_70" fill="#1e3a5f" height="35" width="105" y="310" x="430"/>
+  <text id="svg_71" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#e2e8f0" text-anchor="middle" y="332" x="482">MSDU-D</text>
+  <rect id="svg_72" stroke-dasharray="3,2" stroke-width="0.5" stroke="#44403c" fill="#1c1917" rx="2" height="14" width="340" y="350" x="195"/>
+  <text id="svg_73" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#64748b" text-anchor="middle" y="361" x="365">4B 填充对齐</text>
+  <rect id="svg_74" stroke="#94a3b8" fill="#475569" rx="3" height="100" width="30" y="295" x="550"/>
+  <text id="svg_75" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" transform="rotate(-90 565 340)" font-size="8" fill="#e2e8f0" text-anchor="middle" y="340" x="565">FCS 4B</text>
+  <rect id="svg_76" stroke="#94a3b8" fill="#475569" rx="3" height="130" width="45" y="415" x="70"/>
+  <text id="svg_77" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" transform="rotate(-90 92 475)" font-size="8" fill="#e2e8f0" text-anchor="middle" y="475" x="92">Delimiter 4B</text>
+  <rect id="svg_78" stroke-width="1.5" stroke="#3b82f6" fill="#1e293b" rx="5" height="130" width="470" y="415" x="120"/>
+  <rect id="svg_79" stroke="#3b82f6" fill="#1e3a5f" rx="3" height="18" width="100" y="408" x="125"/>
+  <text id="svg_80" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="10" fill="#3b82f6" text-anchor="middle" y="421" x="175">MPDU 3</text>
+  <rect id="svg_81" stroke="#f97316" fill="#7c2d12" rx="3" height="100" width="50" y="435" x="130"/>
+  <text id="svg_82" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" transform="rotate(-90 155 480)" font-size="8" fill="#f97316" text-anchor="middle" y="480" x="155">MAC Hdr</text>
+  <rect id="svg_83" stroke-dasharray="4,2" stroke="#f97316" fill="#0f172a" rx="3" height="100" width="360" y="435" x="185"/>
+  <rect id="svg_84" stroke-width="0.5" stroke="#f97316" fill="#7c2d12" rx="3" height="16" width="110" y="428" x="190"/>
+  <text id="svg_85" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#f97316" text-anchor="middle" y="440" x="245">A-MSDU 3</text>
+  <rect id="svg_86" stroke="#3b82f6" fill="#1e3a5f" rx="3" height="35" width="165" y="450" x="195"/>
+  <rect id="svg_87" fill="#475569" rx="3" height="35" width="20" y="450" x="195"/>
+  <text id="svg_88" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="472" x="205">SA</text>
+  <rect id="svg_89" fill="#475569" height="35" width="20" y="450" x="215"/>
+  <text id="svg_90" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="472" x="225">DA</text>
+  <rect id="svg_91" fill="#475569" height="35" width="20" y="450" x="235"/>
+  <text id="svg_92" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="472" x="245">Ln</text>
+  <rect id="svg_93" fill="#1e3a5f" height="35" width="105" y="450" x="255"/>
+  <text id="svg_94" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#e2e8f0" text-anchor="middle" y="472" x="307">MSDU-E</text>
+  <rect id="svg_95" stroke="#3b82f6" fill="#1e3a5f" rx="3" height="35" width="165" y="450" x="370"/>
+  <rect id="svg_96" fill="#475569" rx="3" height="35" width="20" y="450" x="370"/>
+  <text id="svg_97" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="472" x="380">SA</text>
+  <rect id="svg_98" fill="#475569" height="35" width="20" y="450" x="390"/>
+  <text id="svg_99" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="472" x="400">DA</text>
+  <rect id="svg_100" fill="#475569" height="35" width="20" y="450" x="410"/>
+  <text id="svg_101" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="472" x="420">Ln</text>
+  <rect id="svg_102" fill="#1e3a5f" height="35" width="105" y="450" x="430"/>
+  <text id="svg_103" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#e2e8f0" text-anchor="middle" y="472" x="482">MSDU-F</text>
+  <rect id="svg_104" stroke-dasharray="3,2" stroke-width="0.5" stroke="#44403c" fill="#1c1917" rx="2" height="14" width="340" y="490" x="195"/>
+  <text id="svg_105" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#64748b" text-anchor="middle" y="501" x="365">4B 填充对齐</text>
+  <rect id="svg_106" stroke="#94a3b8" fill="#475569" rx="3" height="100" width="30" y="435" x="550"/>
+  <text id="svg_107" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" transform="rotate(-90 565 480)" font-size="8" fill="#e2e8f0" text-anchor="middle" y="480" x="565">FCS 4B</text>
+  <rect id="svg_108" stroke-dasharray="4,2" stroke-width="0.5" stroke="#44403c" fill="#1c1917" rx="3" height="20" width="510" y="555" x="70"/>
+  <text id="svg_109" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#64748b" text-anchor="middle" y="569" x="325">A-MPDU Padding (4B 对齐)</text>
+  <rect id="svg_110" stroke-width="1.5" stroke="#10b981" fill="#065f46" rx="5" height="28" width="300" y="585" x="70"/>
+  <text id="svg_111" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="11" fill="#10b981" text-anchor="middle" y="604" x="220">Block ACK (逐个 MPDU 确认)</text>
+  <text id="svg_112" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#a855f7" y="597" x="460">外层: A-MPDU 管理</text>
+  <text id="svg_113" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#a855f7" y="610" x="460">每个 MPDU 独立确认</text>
+  <rect id="svg_114" stroke-width="1.5" stroke="#f97316" fill="#1e293b" rx="8" height="620" width="510" y="65" x="660"/>
+  <text id="svg_115" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="14" fill="#f97316" text-anchor="middle" y="90" x="915">两层聚合的效果</text>
+  <rect id="svg_116" stroke="#10b981" fill="#0f172a" rx="6" height="80" width="470" y="110" x="680"/>
+  <text id="svg_117" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="12" fill="#10b981" text-anchor="middle" y="132" x="915">外层：A-MPDU</text>
+  <text id="svg_118" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#94a3b8" y="152" x="690">多个 MPDU 组成 A-MPDU，每个 MPDU 有独立 FCS</text>
+  <text id="svg_119" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#94a3b8" y="168" x="690">任一 MPDU 出错 → 只重传该 MPDU（灵活重传）</text>
+  <text id="svg_120" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#94a3b8" y="184" x="690">确认方式：Block ACK（bitmap 逐帧确认）</text>
+  <rect id="svg_121" stroke="#f97316" fill="#0f172a" rx="6" height="80" width="470" y="200" x="680"/>
+  <text id="svg_122" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="12" fill="#f97316" text-anchor="middle" y="222" x="915">内层：A-MSDU</text>
+  <text id="svg_123" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#94a3b8" y="242" x="690">每个 MPDU 内部装多个 MSDU，共享一个 MAC 头</text>
+  <text id="svg_124" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#94a3b8" y="258" x="690">减少了 MAC 头开销（低开销）</text>
+  <text id="svg_125" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#94a3b8" y="274" x="690">一个 MPDU 内部只需 1 个 FCS（高效封装）</text>
+  <rect id="svg_126" stroke="#fbbf24" fill="#1c1917" rx="6" height="140" width="470" y="300" x="680"/>
+  <text id="svg_127" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="12" fill="#fbbf24" text-anchor="middle" y="322" x="915">交通比喻：大箱子里装小箱子</text>
+  <rect id="svg_128" stroke="#10b981" fill="#052e16" rx="6" height="55" width="430" y="340" x="700"/>
+  <rect id="svg_129" stroke="#94a3b8" fill="#475569" rx="4" height="45" width="45" y="345" x="705"/>
+  <text id="svg_130" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#fbbf24" text-anchor="middle" y="365" x="727">车头</text>
+  <text id="svg_131" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#94a3b8" text-anchor="middle" y="380" x="727">PHY</text>
+  <rect id="svg_132" stroke="#f97316" fill="#0f172a" rx="4" height="38" width="130" y="351" x="760"/>
+  <rect id="svg_133" stroke-width="0.5" stroke="#3b82f6" fill="#1e3a5f" rx="2" height="28" width="35" y="356" x="765"/>
+  <text id="svg_134" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="374" x="782">小包A</text>
+  <rect id="svg_135" stroke-width="0.5" stroke="#3b82f6" fill="#1e3a5f" rx="2" height="28" width="35" y="356" x="805"/>
+  <text id="svg_136" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="374" x="822">小包B</text>
+  <text id="svg_137" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#f97316" text-anchor="middle" y="348" x="825">大箱子 1</text>
+  <rect id="svg_138" stroke="#f97316" fill="#0f172a" rx="4" height="38" width="130" y="351" x="900"/>
+  <rect id="svg_139" stroke-width="0.5" stroke="#3b82f6" fill="#1e3a5f" rx="2" height="28" width="35" y="356" x="905"/>
+  <text id="svg_140" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="374" x="922">小包C</text>
+  <rect id="svg_141" stroke-width="0.5" stroke="#3b82f6" fill="#1e3a5f" rx="2" height="28" width="35" y="356" x="945"/>
+  <text id="svg_142" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#e2e8f0" text-anchor="middle" y="374" x="962">小包D</text>
+  <text id="svg_143" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#f97316" text-anchor="middle" y="348" x="965">大箱子 2</text>
+  <rect id="svg_144" stroke-dasharray="4,2" stroke="#f97316" fill="#0f172a" rx="4" height="38" width="80" y="351" x="1040"/>
+  <text id="svg_145" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#64748b" text-anchor="middle" y="374" x="1080">箱子 3...</text>
+  <text id="svg_146" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#fbbf24" text-anchor="middle" y="415" x="915">车队里每辆卡车装一个大箱子（A-MSDU），箱子里打包多个小包裹（MSDU）</text>
+  <rect id="svg_147" stroke="#a855f7" fill="#0f172a" rx="6" height="120" width="470" y="455" x="680"/>
+  <text id="svg_148" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="12" fill="#a855f7" text-anchor="middle" y="477" x="915">双重聚合的优势</text>
+  <text id="svg_149" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#10b981" y="500" x="700">A-MPDU 带来：</text>
+  <text id="svg_150" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#94a3b8" y="516" x="720">- 只重传出错的 MPDU（灵活重传）</text>
+  <text id="svg_151" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#94a3b8" y="530" x="720">- Block ACK 批量确认</text>
+  <text id="svg_152" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#f97316" y="550" x="700">A-MSDU 带来：</text>
+  <text id="svg_153" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#94a3b8" y="566" x="720">- 减少 MAC 头数量（低开销）</text>
+  <rect id="svg_154" stroke="#a855f7" fill="#1c1917" rx="5" height="40" width="470" y="585" x="680"/>
+  <text id="svg_155" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="11" fill="#a855f7" text-anchor="middle" y="603" x="915">效果：兼顾 A-MSDU 的低开销 + A-MPDU 的灵活重传</text>
+  <text id="svg_156" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#fbbf24" text-anchor="middle" y="618" x="915">既减少车队车辆数，又保留"哪辆车坏了只重发哪辆"的灵活性</text>
+  <rect id="svg_157" stroke-width="0.5" stroke="#334155" fill="#0f172a" rx="5" height="50" width="560" y="620" x="50"/>
+  <text id="svg_158" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#475569" y="638" x="60">色标：</text>
+  <rect id="svg_159" fill="#10b981" rx="2" height="10" width="12" y="630" x="100"/>
+  <text id="svg_160" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" y="639" x="116">A-MPDU</text>
+  <rect id="svg_161" fill="#f97316" rx="2" height="10" width="12" y="630" x="190"/>
+  <text id="svg_162" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" y="639" x="206">A-MSDU</text>
+  <rect id="svg_163" fill="#3b82f6" rx="2" height="10" width="12" y="630" x="270"/>
+  <text id="svg_164" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" y="639" x="286">MSDU</text>
+  <rect id="svg_165" fill="#475569" rx="2" height="10" width="12" y="630" x="330"/>
+  <text id="svg_166" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" y="639" x="346">Delimiter / FCS</text>
+  <rect id="svg_167" fill="#7c2d12" rx="2" height="10" width="12" y="630" x="440"/>
+  <text id="svg_168" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" y="639" x="456">MAC Header</text>
+  <text id="svg_169" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#64748b" y="662" x="60">DLM = Delimiter (4B: MPDU Length + EOF + CRC) | FCS = 每个 MPDU 独立校验</text>
+ </g>
+</svg>

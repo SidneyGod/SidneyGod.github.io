@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="720"
+   height="220"
+   version="1.1"
+   id="svg26"
+   sodipodi:docname="03-pll-loop.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview26"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.42"
+     inkscape:cx="360.12397"
+     inkscape:cy="110.12397"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg26" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arr-b"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#3b82f6"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arr-y"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#eab308"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arr-g"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#10b981"
+         id="polygon4" />
+    </marker>
+  </defs>
+  <style
+     id="style4">
+  text { font-family: 'Maple Mono Normal NL NF CN',monospace; }
+ </style>
+  <rect
+     width="720"
+     height="220"
+     fill="url(#bg)"
+     id="rect4" />
+  <!-- Title -->
+  <text
+     x="360"
+     y="22"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="14"
+     font-weight="700"
+     id="text4">PLL / Synthesizer — Phase-Locked Loop</text>
+  <text
+     x="360"
+     y="38"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text5">锁相环：本振信号生成的反馈环路</text>
+  <!-- Crystal Oscillator -->
+  <rect
+     x="20"
+     y="70"
+     width="90"
+     height="50"
+     rx="4"
+     fill="#1c1917"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="rect5" />
+  <text
+     x="65"
+     y="91"
+     text-anchor="middle"
+     fill="#eab308"
+     font-size="10"
+     font-weight="700"
+     id="text6">Crystal</text>
+  <text
+     x="65"
+     y="105"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text7">40 MHz 晶振</text>
+  <line
+     x1="110"
+     y1="95"
+     x2="140"
+     y2="95"
+     stroke="#eab308"
+     stroke-width="1.5"
+     marker-end="url(#arr-y)"
+     id="line7" />
+  <!-- Divider (reference) -->
+  <rect
+     x="140"
+     y="70"
+     width="70"
+     height="50"
+     rx="4"
+     fill="#1c1917"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="rect7" />
+  <text
+     x="175"
+     y="91"
+     text-anchor="middle"
+     fill="#eab308"
+     font-size="10"
+     font-weight="700"
+     id="text8">÷R</text>
+  <text
+     x="175"
+     y="105"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text9">参考分频</text>
+  <line
+     x1="210"
+     y1="95"
+     x2="240"
+     y2="95"
+     stroke="#eab308"
+     stroke-width="1.5"
+     marker-end="url(#arr-y)"
+     id="line9" />
+  <!-- Phase Detector -->
+  <rect
+     x="240"
+     y="65"
+     width="80"
+     height="60"
+     rx="4"
+     fill="#2d0a0a"
+     stroke="#dc2626"
+     stroke-width="2"
+     id="rect9" />
+  <text
+     x="280"
+     y="88"
+     text-anchor="middle"
+     fill="#dc2626"
+     font-size="10"
+     font-weight="700"
+     id="text10">Phase</text>
+  <text
+     x="280"
+     y="101"
+     text-anchor="middle"
+     fill="#dc2626"
+     font-size="10"
+     font-weight="700"
+     id="text11">Detector</text>
+  <text
+     x="280"
+     y="115"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text12">鉴相器</text>
+  <line
+     x1="320"
+     y1="95"
+     x2="350"
+     y2="95"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#arr-b)"
+     id="line12" />
+  <!-- Loop Filter -->
+  <rect
+     x="350"
+     y="70"
+     width="80"
+     height="50"
+     rx="4"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1.5"
+     id="rect12" />
+  <text
+     x="390"
+     y="91"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-size="10"
+     font-weight="700"
+     id="text13">Loop Filter</text>
+  <text
+     x="390"
+     y="105"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text14">环路滤波</text>
+  <line
+     x1="430"
+     y1="95"
+     x2="460"
+     y2="95"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#arr-b)"
+     id="line14" />
+  <!-- VCO -->
+  <rect
+     x="460"
+     y="65"
+     width="80"
+     height="60"
+     rx="4"
+     fill="#2d0a0a"
+     stroke="#dc2626"
+     stroke-width="2"
+     id="rect14" />
+  <text
+     x="500"
+     y="88"
+     text-anchor="middle"
+     fill="#dc2626"
+     font-size="11"
+     font-weight="700"
+     id="text15">VCO</text>
+  <text
+     x="500"
+     y="102"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text16">压控振荡器</text>
+  <text
+     x="500"
+     y="115"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text17">Voltage Controlled</text>
+  <text
+     x="500"
+     y="125"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text18">Oscillator</text>
+  <line
+     x1="540"
+     y1="95"
+     x2="570"
+     y2="95"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#arr-b)"
+     id="line18" />
+  <!-- Output LO -->
+  <rect
+     x="570"
+     y="70"
+     width="80"
+     height="50"
+     rx="4"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="2"
+     id="rect18" />
+  <text
+     x="610"
+     y="91"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     font-weight="700"
+     id="text19">LO Out</text>
+  <text
+     x="610"
+     y="105"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text20">输出本振</text>
+  <!-- Feedback path: LO Out → ÷N → Phase Detector -->
+  <line
+     x1="610"
+     y1="120"
+     x2="610"
+     y2="170"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="line20" />
+  <line
+     x1="610"
+     y1="170"
+     x2="575"
+     y2="170"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arr-g)"
+     id="line21" />
+  <!-- Divider (feedback) -->
+  <rect
+     x="505"
+     y="148"
+     width="70"
+     height="44"
+     rx="4"
+     fill="#1c1917"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="rect21" />
+  <text
+     x="540"
+     y="167"
+     text-anchor="middle"
+     fill="#eab308"
+     font-size="10"
+     font-weight="700"
+     id="text21">÷N</text>
+  <text
+     x="540"
+     y="181"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text22">反馈分频</text>
+  <line
+     x1="505"
+     y1="170"
+     x2="280"
+     y2="170"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="line22" />
+  <line
+     x1="280"
+     y1="170"
+     x2="280"
+     y2="125"
+     stroke="#eab308"
+     stroke-width="1.5"
+     marker-end="url(#arr-y)"
+     id="line23" />
+  <!-- Labels on feedback path -->
+  <text
+     x="390"
+     y="164"
+     text-anchor="middle"
+     fill="#eab308"
+     font-size="9"
+     id="text23">f_out / N 反馈到鉴相器</text>
+  <!-- Output label -->
+  <text
+     x="610"
+     y="55"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9"
+     id="text24">f_out = f_ref × N/R</text>
+  <text
+     x="600"
+     y="136"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="8px"
+     id="text25">如 5.25 GHz</text>
+  <!-- Annotation -->
+  <rect
+     x="20"
+     y="195"
+     width="630"
+     height="18"
+     rx="3"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="rect25" />
+  <text
+     x="30"
+     y="208"
+     fill="#94a3b8"
+     font-size="9"
+     id="text26">晶振提供稳定参考频率 → 分频后与 VCO 反馈信号鉴相 → 滤波后控制 VCO 频率 → 形成闭环锁定目标频率</text>
+</svg>

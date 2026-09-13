@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="700"
+   height="600"
+   version="1.1"
+   id="svg80"
+   sodipodi:docname="03-evm-constellation.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview80"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.8216667"
+     inkscape:cx="349.95425"
+     inkscape:cy="300"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg80" />
+  <defs
+     id="defs3">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <filter
+       id="glow-green"
+       x="-0.51428571"
+       y="-0.51428571"
+       width="2.0285714"
+       height="2.0285714">
+      <feGaussianBlur
+         in="SourceGraphic"
+         stdDeviation="1.5"
+         result="blur"
+         id="feGaussianBlur2" />
+      <feComposite
+         in="SourceGraphic"
+         in2="blur"
+         operator="over"
+         id="feComposite2" />
+    </filter>
+    <filter
+       id="glow-red"
+       x="-0.6"
+       y="-0.6"
+       width="2.2"
+       height="2.2">
+      <feGaussianBlur
+         in="SourceGraphic"
+         stdDeviation="1.5"
+         result="blur"
+         id="feGaussianBlur3" />
+      <feComposite
+         in="SourceGraphic"
+         in2="blur"
+         operator="over"
+         id="feComposite3" />
+    </filter>
+  </defs>
+  <style
+     id="style3">
+  text { font-family: 'Maple Mono Normal NL NF CN',monospace; }
+ </style>
+  <rect
+     width="700"
+     height="600"
+     fill="url(#bg)"
+     id="rect3" />
+  <!-- Title -->
+  <text
+     x="350"
+     y="25"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="15"
+     font-weight="700"
+     id="text3">EVM: Constellation Diagram — 星座图上的&quot;散弹&quot;</text>
+  <text
+     x="350"
+     y="43"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text4">16-QAM 星座图：理想点 vs 实际接收点</text>
+  <!-- ==================== Main Constellation (good EVM) ==================== -->
+  <!-- Area: 460x460, origin (30,60), center (260, 290) -->
+  <!-- Axis: -4 to +4, 57.5 px/unit -->
+  <!-- Ideal grid: ±1, ±3 -->
+  <rect
+     x="30"
+     y="60"
+     width="460"
+     height="460"
+     rx="4"
+     fill="#0a0a14"
+     stroke="#1e293b"
+     stroke-width="1.5"
+     id="rect4" />
+  <!-- Axis lines -->
+  <line
+     x1="260"
+     y1="60"
+     x2="260"
+     y2="520"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4,4"
+     id="line4" />
+  <line
+     x1="30"
+     y1="290"
+     x2="490"
+     y2="290"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4,4"
+     id="line5" />
+  <!-- Axis labels -->
+  <text
+     x="260"
+     y="538"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="10"
+     id="text5">In-phase (I)</text>
+  <text
+     x="15"
+     y="290"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="10"
+     transform="rotate(-90,15,290)"
+     id="text6">Quadrature (Q)</text>
+  <!-- I ticks -->
+  <text
+     x="433"
+     y="285"
+     fill="#64748b"
+     font-size="9"
+     id="text7">+3</text>
+  <text
+     x="318"
+     y="285"
+     fill="#64748b"
+     font-size="9"
+     id="text8">+1</text>
+  <text
+     x="203"
+     y="285"
+     fill="#64748b"
+     font-size="9"
+     id="text9">-1</text>
+  <text
+     x="88"
+     y="285"
+     fill="#64748b"
+     font-size="9"
+     id="text10">-3</text>
+  <!-- Q ticks -->
+  <text
+     x="255"
+     y="120"
+     fill="#64748b"
+     font-size="9"
+     id="text11">+3</text>
+  <text
+     x="255"
+     y="235"
+     fill="#64748b"
+     font-size="9"
+     id="text12">+1</text>
+  <text
+     x="255"
+     y="350"
+     fill="#64748b"
+     font-size="9"
+     id="text13">-1</text>
+  <text
+     x="255"
+     y="465"
+     fill="#64748b"
+     font-size="9"
+     id="text14">-3</text>
+  <!-- Decision boundary lines -->
+  <line
+     x1="30"
+     y1="175"
+     x2="490"
+     y2="175"
+     stroke="#475569"
+     stroke-width="0.7"
+     stroke-dasharray="3,4"
+     id="line14" />
+  <line
+     x1="30"
+     y1="290"
+     x2="490"
+     y2="290"
+     stroke="#475569"
+     stroke-width="0.7"
+     stroke-dasharray="3,4"
+     id="line15" />
+  <line
+     x1="30"
+     y1="405"
+     x2="490"
+     y2="405"
+     stroke="#475569"
+     stroke-width="0.7"
+     stroke-dasharray="3,4"
+     id="line16" />
+  <line
+     x1="145"
+     y1="60"
+     x2="145"
+     y2="520"
+     stroke="#475569"
+     stroke-width="0.7"
+     stroke-dasharray="3,4"
+     id="line17" />
+  <line
+     x1="260"
+     y1="60"
+     x2="260"
+     y2="520"
+     stroke="#475569"
+     stroke-width="0.7"
+     stroke-dasharray="3,4"
+     id="line18" />
+  <line
+     x1="375"
+     y1="60"
+     x2="375"
+     y2="520"
+     stroke="#475569"
+     stroke-width="0.7"
+     stroke-dasharray="3,4"
+     id="line19" />
+  <!-- Ideal 16-QAM points (blue) -->
+  <!-- Row Q=+3: y=118 -->
+  <circle
+     cx="88"
+     cy="118"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle19" />
+  <circle
+     cx="203"
+     cy="118"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle20" />
+  <circle
+     cx="318"
+     cy="118"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle21" />
+  <circle
+     cx="433"
+     cy="118"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle22" />
+  <!-- Row Q=+1: y=233 -->
+  <circle
+     cx="88"
+     cy="233"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle23" />
+  <circle
+     cx="203"
+     cy="233"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle24" />
+  <circle
+     cx="318"
+     cy="233"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle25" />
+  <circle
+     cx="433"
+     cy="233"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle26" />
+  <!-- Row Q=-1: y=348 -->
+  <circle
+     cx="88"
+     cy="348"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle27" />
+  <circle
+     cx="203"
+     cy="348"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle28" />
+  <circle
+     cx="318"
+     cy="348"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle29" />
+  <circle
+     cx="433"
+     cy="348"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle30" />
+  <!-- Row Q=-3: y=463 -->
+  <circle
+     cx="88"
+     cy="463"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle31" />
+  <circle
+     cx="203"
+     cy="463"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle32" />
+  <circle
+     cx="318"
+     cy="463"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle33" />
+  <circle
+     cx="433"
+     cy="463"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle34" />
+  <!-- Actual points: good EVM (tight green scatter, all 16 points) -->
+  <circle
+     cx="92"
+     cy="115"
+     r="3.5"
+     fill="#34d399"
+     opacity="1"
+     filter="url(#glow-green)"
+     id="circle35" />
+  <circle
+     cx="199"
+     cy="121"
+     r="3.5"
+     fill="#34d399"
+     opacity="1"
+     filter="url(#glow-green)"
+     id="circle36" />
+  <circle
+     cx="322"
+     cy="114"
+     r="3.5"
+     fill="#34d399"
+     opacity="1"
+     filter="url(#glow-green)"
+     id="circle37" />
+  <circle
+     cx="429"
+     cy="122"
+     r="3.5"
+     fill="#34d399"
+     opacity="1"
+     filter="url(#glow-green)"
+     id="circle38" />
+  <circle
+     cx="85"
+     cy="236"
+     r="3.5"
+     fill="#34d399"
+     opacity="1"
+     filter="url(#glow-green)"
+     id="circle39" />
+  <circle
+     cx="207"
+     cy="230"
+     r="3.5"
+     fill="#34d399"
+     opacity="1"
+     filter="url(#glow-green)"
+     id="circle40" />
+  <circle
+     cx="314"
+     cy="236"
+     r="3.5"
+     fill="#34d399"
+     opacity="1"
+     filter="url(#glow-green)"
+     id="circle41" />
+  <circle
+     cx="437"
+     cy="230"
+     r="3.5"
+     fill="#34d399"
+     opacity="1"
+     filter="url(#glow-green)"
+     id="circle42" />
+  <circle
+     cx="84"
+     cy="351"
+     r="3.5"
+     fill="#34d399"
+     opacity="1"
+     filter="url(#glow-green)"
+     id="circle43" />
+  <circle
+     cx="208"
+     cy="345"
+     r="3.5"
+     fill="#34d399"
+     opacity="1"
+     filter="url(#glow-green)"
+     id="circle44" />
+  <circle
+     cx="322"
+     cy="351"
+     r="3.5"
+     fill="#34d399"
+     opacity="1"
+     filter="url(#glow-green)"
+     id="circle45" />
+  <circle
+     cx="429"
+     cy="344"
+     r="3.5"
+     fill="#34d399"
+     opacity="1"
+     filter="url(#glow-green)"
+     id="circle46" />
+  <circle
+     cx="91"
+     cy="460"
+     r="3.5"
+     fill="#34d399"
+     opacity="1"
+     filter="url(#glow-green)"
+     id="circle47" />
+  <circle
+     cx="199"
+     cy="466"
+     r="3.5"
+     fill="#34d399"
+     opacity="1"
+     filter="url(#glow-green)"
+     id="circle48" />
+  <circle
+     cx="313"
+     cy="466"
+     r="3.5"
+     fill="#34d399"
+     opacity="1"
+     filter="url(#glow-green)"
+     id="circle49" />
+  <circle
+     cx="438"
+     cy="460"
+     r="3.5"
+     fill="#34d399"
+     opacity="1"
+     filter="url(#glow-green)"
+     id="circle50" />
+  <!-- ==================== Inset: Good vs Bad EVM comparison ==================== -->
+  <!-- Bottom-right corner, zoomed view of ONE ideal point -->
+  <rect
+     x="510"
+     y="60"
+     width="175"
+     height="250"
+     rx="4"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect50" />
+  <text
+     x="598"
+     y="80"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     font-weight="700"
+     id="text50">局部对比 / Zoom In</text>
+  <!-- Good EVM box -->
+  <rect
+     x="520"
+     y="90"
+     width="155"
+     height="100"
+     rx="3"
+     fill="#0a0a14"
+     stroke="#1e293b"
+     stroke-width="1"
+     id="rect51" />
+  <text
+     x="598"
+     y="106"
+     text-anchor="middle"
+     fill="#34d399"
+     font-size="9"
+     font-weight="600"
+     id="text51">EVM 好 → 点云紧凑</text>
+  <!-- One ideal point (center of box) -->
+  <circle
+     cx="598"
+     cy="155"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle51" />
+  <!-- Tight cluster of green dots around it -->
+  <circle
+     cx="595"
+     cy="152"
+     r="3"
+     fill="#34d399"
+     opacity="1"
+     id="circle52" />
+  <circle
+     cx="601"
+     cy="153"
+     r="3"
+     fill="#34d399"
+     opacity="1"
+     id="circle53" />
+  <circle
+     cx="596"
+     cy="159"
+     r="3"
+     fill="#34d399"
+     opacity="1"
+     id="circle54" />
+  <circle
+     cx="602"
+     cy="157"
+     r="3"
+     fill="#34d399"
+     opacity="1"
+     id="circle55" />
+  <circle
+     cx="593"
+     cy="156"
+     r="3"
+     fill="#34d399"
+     opacity="1"
+     id="circle56" />
+  <circle
+     cx="599"
+     cy="150"
+     r="3"
+     fill="#34d399"
+     opacity="1"
+     id="circle57" />
+  <!-- Small radius indicator -->
+  <circle
+     cx="598"
+     cy="155"
+     r="10"
+     fill="none"
+     stroke="#34d399"
+     stroke-width="0.8"
+     stroke-dasharray="2,2"
+     opacity="0.6"
+     id="circle58" />
+  <text
+     x="598"
+     y="180"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text58">散弹半径小 → 可用高阶 MCS</text>
+  <!-- Bad EVM box -->
+  <rect
+     x="520"
+     y="200"
+     width="155"
+     height="100"
+     rx="3"
+     fill="#0a0a14"
+     stroke="#1e293b"
+     stroke-width="1"
+     id="rect58" />
+  <text
+     x="598"
+     y="216"
+     text-anchor="middle"
+     fill="#f87171"
+     font-size="9"
+     font-weight="600"
+     id="text59">EVM 差 → 点云发散</text>
+  <!-- One ideal point (center of box) -->
+  <circle
+     cx="598"
+     cy="265"
+     r="5"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle59" />
+  <!-- Wide scatter of red dots -->
+  <circle
+     cx="580"
+     cy="248"
+     r="3"
+     fill="#f87171"
+     opacity="1"
+     filter="url(#glow-red)"
+     id="circle60" />
+  <circle
+     cx="618"
+     cy="250"
+     r="3"
+     fill="#f87171"
+     opacity="1"
+     filter="url(#glow-red)"
+     id="circle61" />
+  <circle
+     cx="578"
+     cy="275"
+     r="3"
+     fill="#f87171"
+     opacity="1"
+     filter="url(#glow-red)"
+     id="circle62" />
+  <circle
+     cx="620"
+     cy="272"
+     r="3"
+     fill="#f87171"
+     opacity="1"
+     filter="url(#glow-red)"
+     id="circle63" />
+  <circle
+     cx="590"
+     cy="245"
+     r="3"
+     fill="#f87171"
+     opacity="1"
+     filter="url(#glow-red)"
+     id="circle64" />
+  <circle
+     cx="610"
+     cy="280"
+     r="3"
+     fill="#f87171"
+     opacity="1"
+     filter="url(#glow-red)"
+     id="circle65" />
+  <circle
+     cx="612"
+     cy="248"
+     r="3"
+     fill="#f87171"
+     opacity="1"
+     filter="url(#glow-red)"
+     id="circle66" />
+  <circle
+     cx="585"
+     cy="282"
+     r="3"
+     fill="#f87171"
+     opacity="1"
+     filter="url(#glow-red)"
+     id="circle67" />
+  <!-- Large radius indicator -->
+  <circle
+     cx="598"
+     cy="265"
+     r="22"
+     fill="none"
+     stroke="#f87171"
+     stroke-width="0.8"
+     stroke-dasharray="2,2"
+     opacity="0.6"
+     id="circle68" />
+  <text
+     x="598"
+     y="295"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text68">散弹半径大 → 只能用低阶 MCS</text>
+  <!-- Error vector example in bad EVM box -->
+  <line
+     x1="598"
+     y1="265"
+     x2="580"
+     y2="248"
+     stroke="#fb923c"
+     stroke-width="1.5"
+     opacity="0.9"
+     id="line68" />
+  <line
+     x1="598"
+     y1="265"
+     x2="618"
+     y2="250"
+     stroke="#fb923c"
+     stroke-width="1.5"
+     opacity="0.9"
+     id="line69" />
+  <!-- ==================== Legend & Info Panel ==================== -->
+  <rect
+     x="510"
+     y="325"
+     width="175"
+     height="195"
+     rx="4"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect69" />
+  <text
+     x="525"
+     y="345"
+     fill="#e2e8f0"
+     font-size="10"
+     font-weight="700"
+     id="text69">Legend / 图例</text>
+  <circle
+     cx="535"
+     cy="363"
+     r="4"
+     fill="#3b82f6"
+     id="circle69" />
+  <text
+     x="547"
+     y="367"
+     fill="#94a3b8"
+     font-size="9"
+     id="text70">理想星座点</text>
+  <circle
+     cx="535"
+     cy="383"
+     r="3"
+     fill="#34d399"
+     id="circle70" />
+  <text
+     x="547"
+     y="387"
+     fill="#94a3b8"
+     font-size="9"
+     id="text71">实际接收点（EVM 好）</text>
+  <circle
+     cx="535"
+     cy="403"
+     r="3"
+     fill="#f87171"
+     id="circle71" />
+  <text
+     x="547"
+     y="407"
+     fill="#94a3b8"
+     font-size="9"
+     id="text72">实际接收点（EVM 差）</text>
+  <line
+     x1="525"
+     y1="420"
+     x2="545"
+     y2="420"
+     stroke="#fb923c"
+     stroke-width="1.5"
+     id="line72" />
+  <text
+     x="550"
+     y="424"
+     fill="#94a3b8"
+     font-size="9"
+     id="text73">误差矢量</text>
+  <!-- Divider -->
+  <line
+     x1="525"
+     y1="435"
+     x2="670"
+     y2="435"
+     stroke="#1e293b"
+     stroke-width="1"
+     id="line73" />
+  <!-- MCS table -->
+  <text
+     x="525"
+     y="452"
+     fill="#e2e8f0"
+     font-size="9"
+     font-weight="600"
+     id="text74">EVM 要求 (dB)</text>
+  <text
+     x="525"
+     y="467"
+     fill="#10b981"
+     font-size="8"
+     id="text75">BPSK → -5 | QPSK → -10</text>
+  <text
+     x="525"
+     y="480"
+     fill="#eab308"
+     font-size="8"
+     id="text76">16-QAM → -19 | 64-QAM → -25</text>
+  <text
+     x="525"
+     y="493"
+     fill="#ef4444"
+     font-size="8"
+     id="text77">256-QAM → -32 | 1024-QAM → -35</text>
+  <text
+     x="525"
+     y="512"
+     fill="#64748b"
+     font-size="7"
+     id="text78">调制越高 → 点越密 → EVM 要求越严格</text>
+  <!-- ==================== Bottom annotation ==================== -->
+  <rect
+     x="30"
+     y="540"
+     width="655"
+     height="45"
+     rx="3"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="rect78" />
+  <text
+     x="45"
+     y="558"
+     fill="#94a3b8"
+     font-size="9"
+     id="text79">主图：一次正常发射的星座图（EVM 好），所有点的散弹都小而紧凑</text>
+  <text
+     x="45"
+     y="573"
+     fill="#94a3b8"
+     font-size="9"
+     id="text80">右上对比：同一理想点，EVM 好 vs EVM 差的散弹形态 — 散弹越大，越容易跨入相邻格子导致误判</text>
+</svg>
