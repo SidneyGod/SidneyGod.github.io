@@ -2,10 +2,9 @@
 title: Compile system app with AndroidStudio
 top: 1
 related_posts: true
-mathjax: false
 tags:
   - Android
-categories: Other
+categories: Android
 abbrlink: 1c3367f4
 date: 2022-10-16 11:51:07
 ---

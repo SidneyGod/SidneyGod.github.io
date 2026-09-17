@@ -2,7 +2,6 @@
 title: '[Make MyOS] Find loader'
 top: 1
 related_posts: true
-mathjax: true
 categories:
   - OS
   - Make OS
@@ -68,7 +67,7 @@ BS_VolLab，就是Windows或Linux系统中显示的磁盘名
 
 FAT12文件系统是以簇为单位来分配数据区的存储空间，每个簇的大小为{%raw%}$BPB\_BytesPerSec × BPB\_SecPerClus${%endraw%}(扇区数×扇区字节数)字节，**数据区的簇号与FAT表的表项是一一对应关系**。文件在FAT类文件系统存储单位是簇，即使文件长度只有1字节，也是分配了一个簇。
 
-> 在该实例中，1簇=1扇区，数据区有$2880-1(MBR)-9(FAT1)-9(FAT2)-14(RootDir)=2847扇区(簇)$，而FAT1表的大小是$9 × 512B=4608B$，每个表项占12bit(1.5B)，一共有$4608 \div 1.5=3072$个表项，其中有两个表项不用，也就是3070个FAT表项，对应2847个簇是绰绰有余了
+> 在该实例中，1簇=1扇区，数据区有 $2880-1(MBR)-9(FAT1)-9(FAT2)-14(RootDir)=2847\text{扇区(簇)}$，而FAT1表的大小是 $9 × 512B=4608B$，每个表项占12bit(1.5B)，一共有 $4608 \div 1.5=3072$ 个表项，其中有两个表项不用，也就是3070个FAT表项，对应2847个簇是绰绰有余了
 
 FAT表由FAT表项构成。每个FAT表项的大小有12位、16位、和32位三种情况。每个FAT表项都有一个固定的编号，这个编号从0开始。
 
@@ -460,15 +459,15 @@ AX代表的是待读取的磁盘起始扇区号，CL代表的是读入的扇区�
 
 因为磁盘扇区号是LBA(Logical Block Address，逻辑块寻址)格式的，而`INT 13h, AH=02h`中断服务程序只能受理CHS(Cylinder/Header/Sector，柱面/磁头/扇区)格式的磁盘扇区号，所以需要通过下面的公式将LBA格式转为CHS格式
 $$
-LBA扇区号 \div 每磁道扇区数 = 
+\text{LBA扇区号} \div \text{每磁道扇区数} = 
 \begin{cases}
-商Q \rightarrow 
+\text{商Q} \rightarrow 
   \begin{cases}
-    柱面号 = Q >> 1 \newline
-    磁头号 = Q \& 1
+    \text{柱面号} = Q >> 1 \newline
+    \text{磁头号} = Q \& 1
    \end{cases}
 \newline
-余数R \rightarrow 起始扇区号 = R + 1
+\text{余数R} \rightarrow \text{起始扇区号} = R + 1
 \end{cases}
 $$
 **问题3，返回值FLAGS.CF代表啥？**

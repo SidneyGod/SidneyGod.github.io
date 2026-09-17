@@ -1,0 +1,2050 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="960"
+   height="650"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="06-ofdma-ru-allocation.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.46"
+     inkscape:cx="480.13699"
+     inkscape:cy="325"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g2" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs2">
+    <linearGradient
+       y2="100%"
+       x2="100%"
+       y1="0%"
+       x1="0%"
+       id="bg">
+      <stop
+         stop-color="#0f0f1a"
+         offset="0%"
+         id="stop1" />
+      <stop
+         stop-color="#1a1a2e"
+         offset="100%"
+         id="stop2" />
+    </linearGradient>
+  </defs>
+  <!-- Title -->
+  <!-- ==================== Part 1: Subcarrier grouping ==================== -->
+  <!-- Level 0: Individual subcarriers (simplified view) -->
+  <!-- Draw small ticks to represent subcarriers -->
+  <!-- Arrow down -->
+  <!-- Level 1: RU grouping -->
+  <!-- RU-26 #1 -->
+  <!-- RU-26 #2 -->
+  <!-- RU-52 -->
+  <!-- RU-106 -->
+  <!-- RU-52 -->
+  <!-- DC null -->
+  <!-- RU-26 #3 -->
+  <!-- Bracket showing total = 242 -->
+  <!-- ==================== Part 2: RU assigned to users ==================== -->
+  <!-- User assignment - same horizontal layout but with user labels -->
+  <!-- RU-26 -> User A -->
+  <!-- RU-26 -> User B -->
+  <!-- RU-52 -> User C -->
+  <!-- RU-106 -> User D -->
+  <!-- RU-52 -> User E -->
+  <!-- DC null -->
+  <!-- RU-26 -> User F -->
+  <!-- Key insight -->
+  <!-- ==================== Part 3: RU size comparison ==================== -->
+  <!-- RU-26 -->
+  <!-- RU-52 -->
+  <!-- RU-106 -->
+  <!-- RU-242 -->
+  <!-- ==================== Part 4: DL vs UL ==================== -->
+  <g
+     id="g2">
+    <title
+       id="title2">Layer 1</title>
+    <rect
+       id="svg_4"
+       fill="url(#bg)"
+       height="650"
+       width="960" />
+    <text
+       id="svg_5"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       style="font-size:16px"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="28"
+       x="480">OFDMA: Subcarrier → RU → User</text>
+    <text
+       id="svg_6"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:11px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="48"
+       x="480">20 MHz 信道 (242 个可用子载波) 的RU分割示意图</text>
+    <rect
+       id="svg_7"
+       stroke="#334155"
+       fill="#1e293b"
+       rx="8"
+       height="195"
+       width="920"
+       y="66"
+       x="20" />
+    <text
+       id="svg_8"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       style="font-size:13px"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="88"
+       x="480">子载波怎么分组成RU</text>
+    <text
+       id="svg_9"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:9px"
+       fill="#94a3b8"
+       y="113"
+       x="38">子载波:</text>
+    <rect
+       id="svg_10"
+       stroke-width="0.5"
+       stroke="#334155"
+       fill="#0f172a"
+       rx="2"
+       height="16"
+       width="820"
+       y="103"
+       x="90" />
+    <g
+       id="svg_11"
+       fill="#475569">
+      <rect
+         id="svg_12"
+         height="14"
+         width="1.5"
+         y="104"
+         x="92" />
+      <rect
+         id="svg_13"
+         height="14"
+         width="1.5"
+         y="104"
+         x="96" />
+      <rect
+         id="svg_14"
+         height="14"
+         width="1.5"
+         y="104"
+         x="100" />
+      <rect
+         id="svg_15"
+         height="14"
+         width="1.5"
+         y="104"
+         x="104" />
+      <rect
+         id="svg_16"
+         height="14"
+         width="1.5"
+         y="104"
+         x="108" />
+      <rect
+         id="svg_17"
+         height="14"
+         width="1.5"
+         y="104"
+         x="112" />
+      <rect
+         id="svg_18"
+         height="14"
+         width="1.5"
+         y="104"
+         x="116" />
+      <rect
+         id="svg_19"
+         height="14"
+         width="1.5"
+         y="104"
+         x="120" />
+      <rect
+         id="svg_20"
+         height="14"
+         width="1.5"
+         y="104"
+         x="124" />
+      <rect
+         id="svg_21"
+         height="14"
+         width="1.5"
+         y="104"
+         x="128" />
+      <rect
+         id="svg_22"
+         height="14"
+         width="1.5"
+         y="104"
+         x="132" />
+      <rect
+         id="svg_23"
+         height="14"
+         width="1.5"
+         y="104"
+         x="136" />
+      <rect
+         id="svg_24"
+         height="14"
+         width="1.5"
+         y="104"
+         x="140" />
+      <rect
+         id="svg_25"
+         height="14"
+         width="1.5"
+         y="104"
+         x="144" />
+      <rect
+         id="svg_26"
+         height="14"
+         width="1.5"
+         y="104"
+         x="148" />
+      <rect
+         id="svg_27"
+         height="14"
+         width="1.5"
+         y="104"
+         x="152" />
+      <rect
+         id="svg_28"
+         height="14"
+         width="1.5"
+         y="104"
+         x="156" />
+      <rect
+         id="svg_29"
+         height="14"
+         width="1.5"
+         y="104"
+         x="160" />
+      <rect
+         id="svg_30"
+         height="14"
+         width="1.5"
+         y="104"
+         x="164" />
+      <rect
+         id="svg_31"
+         height="14"
+         width="1.5"
+         y="104"
+         x="168" />
+      <rect
+         id="svg_32"
+         height="14"
+         width="1.5"
+         y="104"
+         x="172" />
+      <rect
+         id="svg_33"
+         height="14"
+         width="1.5"
+         y="104"
+         x="176" />
+      <rect
+         id="svg_34"
+         height="14"
+         width="1.5"
+         y="104"
+         x="180" />
+      <rect
+         id="svg_35"
+         height="14"
+         width="1.5"
+         y="104"
+         x="184" />
+      <rect
+         id="svg_36"
+         height="14"
+         width="1.5"
+         y="104"
+         x="188" />
+      <rect
+         id="svg_37"
+         height="14"
+         width="1.5"
+         y="104"
+         x="192" />
+      <rect
+         id="svg_38"
+         height="14"
+         width="1.5"
+         y="104"
+         x="196" />
+      <rect
+         id="svg_39"
+         height="14"
+         width="1.5"
+         y="104"
+         x="200" />
+      <rect
+         id="svg_40"
+         height="14"
+         width="1.5"
+         y="104"
+         x="204" />
+      <rect
+         id="svg_41"
+         height="14"
+         width="1.5"
+         y="104"
+         x="208" />
+      <rect
+         id="svg_42"
+         height="14"
+         width="1.5"
+         y="104"
+         x="212" />
+      <rect
+         id="svg_43"
+         height="14"
+         width="1.5"
+         y="104"
+         x="216" />
+      <rect
+         id="svg_44"
+         height="14"
+         width="1.5"
+         y="104"
+         x="220" />
+      <rect
+         id="svg_45"
+         height="14"
+         width="1.5"
+         y="104"
+         x="224" />
+      <rect
+         id="svg_46"
+         height="14"
+         width="1.5"
+         y="104"
+         x="228" />
+      <rect
+         id="svg_47"
+         height="14"
+         width="1.5"
+         y="104"
+         x="232" />
+      <rect
+         id="svg_48"
+         height="14"
+         width="1.5"
+         y="104"
+         x="236" />
+      <rect
+         id="svg_49"
+         height="14"
+         width="1.5"
+         y="104"
+         x="240" />
+      <rect
+         id="svg_50"
+         height="14"
+         width="1.5"
+         y="104"
+         x="244" />
+      <rect
+         id="svg_51"
+         height="14"
+         width="1.5"
+         y="104"
+         x="248" />
+      <rect
+         id="svg_52"
+         height="14"
+         width="1.5"
+         y="104"
+         x="252" />
+      <rect
+         id="svg_53"
+         height="14"
+         width="1.5"
+         y="104"
+         x="256" />
+      <rect
+         id="svg_54"
+         height="14"
+         width="1.5"
+         y="104"
+         x="260" />
+      <rect
+         id="svg_55"
+         height="14"
+         width="1.5"
+         y="104"
+         x="264" />
+      <rect
+         id="svg_56"
+         height="14"
+         width="1.5"
+         y="104"
+         x="268" />
+      <rect
+         id="svg_57"
+         height="14"
+         width="1.5"
+         y="104"
+         x="272" />
+      <rect
+         id="svg_58"
+         height="14"
+         width="1.5"
+         y="104"
+         x="276" />
+      <rect
+         id="svg_59"
+         height="14"
+         width="1.5"
+         y="104"
+         x="280" />
+      <rect
+         id="svg_60"
+         height="14"
+         width="1.5"
+         y="104"
+         x="284" />
+      <rect
+         id="svg_61"
+         height="14"
+         width="1.5"
+         y="104"
+         x="288" />
+      <rect
+         id="svg_62"
+         height="14"
+         width="1.5"
+         y="104"
+         x="292" />
+      <rect
+         id="svg_63"
+         height="14"
+         width="1.5"
+         y="104"
+         x="296" />
+      <rect
+         id="svg_64"
+         height="14"
+         width="1.5"
+         y="104"
+         x="300" />
+      <rect
+         id="svg_65"
+         height="14"
+         width="1.5"
+         y="104"
+         x="304" />
+      <rect
+         id="svg_66"
+         height="14"
+         width="1.5"
+         y="104"
+         x="308" />
+      <rect
+         id="svg_67"
+         height="14"
+         width="1.5"
+         y="104"
+         x="312" />
+      <rect
+         id="svg_68"
+         height="14"
+         width="1.5"
+         y="104"
+         x="316" />
+      <rect
+         id="svg_69"
+         height="14"
+         width="1.5"
+         y="104"
+         x="320" />
+      <rect
+         id="svg_70"
+         height="14"
+         width="1.5"
+         y="104"
+         x="324" />
+      <rect
+         id="svg_71"
+         height="14"
+         width="1.5"
+         y="104"
+         x="328" />
+      <rect
+         id="svg_72"
+         height="14"
+         width="1.5"
+         y="104"
+         x="332" />
+      <rect
+         id="svg_73"
+         height="14"
+         width="1.5"
+         y="104"
+         x="336" />
+      <rect
+         id="svg_74"
+         height="14"
+         width="1.5"
+         y="104"
+         x="340" />
+      <rect
+         id="svg_75"
+         height="14"
+         width="1.5"
+         y="104"
+         x="344" />
+      <rect
+         id="svg_76"
+         height="14"
+         width="1.5"
+         y="104"
+         x="348" />
+      <rect
+         id="svg_77"
+         height="14"
+         width="1.5"
+         y="104"
+         x="352" />
+      <rect
+         id="svg_78"
+         height="14"
+         width="1.5"
+         y="104"
+         x="356" />
+      <rect
+         id="svg_79"
+         height="14"
+         width="1.5"
+         y="104"
+         x="360" />
+      <rect
+         id="svg_80"
+         height="14"
+         width="1.5"
+         y="104"
+         x="364" />
+      <rect
+         id="svg_81"
+         height="14"
+         width="1.5"
+         y="104"
+         x="368" />
+      <rect
+         id="svg_82"
+         height="14"
+         width="1.5"
+         y="104"
+         x="372" />
+      <rect
+         id="svg_83"
+         height="14"
+         width="1.5"
+         y="104"
+         x="376" />
+      <rect
+         id="svg_84"
+         height="14"
+         width="1.5"
+         y="104"
+         x="380" />
+      <rect
+         id="svg_85"
+         height="14"
+         width="1.5"
+         y="104"
+         x="384" />
+      <rect
+         id="svg_86"
+         height="14"
+         width="1.5"
+         y="104"
+         x="388" />
+      <rect
+         id="svg_87"
+         height="14"
+         width="1.5"
+         y="104"
+         x="392" />
+      <rect
+         id="svg_88"
+         height="14"
+         width="1.5"
+         y="104"
+         x="396" />
+      <rect
+         id="svg_89"
+         height="14"
+         width="1.5"
+         y="104"
+         x="400" />
+      <rect
+         id="svg_90"
+         height="14"
+         width="1.5"
+         y="104"
+         x="404" />
+      <rect
+         id="svg_91"
+         height="14"
+         width="1.5"
+         y="104"
+         x="408" />
+      <rect
+         id="svg_92"
+         height="14"
+         width="1.5"
+         y="104"
+         x="412" />
+      <rect
+         id="svg_93"
+         height="14"
+         width="1.5"
+         y="104"
+         x="416" />
+      <rect
+         id="svg_94"
+         height="14"
+         width="1.5"
+         y="104"
+         x="420" />
+      <rect
+         id="svg_95"
+         height="14"
+         width="1.5"
+         y="104"
+         x="424" />
+      <rect
+         id="svg_96"
+         height="14"
+         width="1.5"
+         y="104"
+         x="428" />
+      <rect
+         id="svg_97"
+         height="14"
+         width="1.5"
+         y="104"
+         x="432" />
+      <rect
+         id="svg_98"
+         height="14"
+         width="1.5"
+         y="104"
+         x="436" />
+      <rect
+         id="svg_99"
+         height="14"
+         width="1.5"
+         y="104"
+         x="440" />
+      <rect
+         id="svg_100"
+         height="14"
+         width="1.5"
+         y="104"
+         x="444" />
+      <rect
+         id="svg_101"
+         height="14"
+         width="1.5"
+         y="104"
+         x="448" />
+      <rect
+         id="svg_102"
+         height="14"
+         width="1.5"
+         y="104"
+         x="452" />
+      <rect
+         id="svg_103"
+         height="14"
+         width="1.5"
+         y="104"
+         x="456" />
+      <rect
+         id="svg_104"
+         height="14"
+         width="1.5"
+         y="104"
+         x="460" />
+      <rect
+         id="svg_105"
+         height="14"
+         width="1.5"
+         y="104"
+         x="464" />
+      <rect
+         id="svg_106"
+         height="14"
+         width="1.5"
+         y="104"
+         x="468" />
+      <rect
+         id="svg_107"
+         height="14"
+         width="1.5"
+         y="104"
+         x="472" />
+      <rect
+         id="svg_108"
+         height="14"
+         width="1.5"
+         y="104"
+         x="476" />
+      <rect
+         id="svg_109"
+         height="14"
+         width="1.5"
+         y="104"
+         x="480" />
+      <rect
+         id="svg_110"
+         height="14"
+         width="1.5"
+         y="104"
+         x="484" />
+      <rect
+         id="svg_111"
+         height="14"
+         width="1.5"
+         y="104"
+         x="488" />
+      <rect
+         id="svg_112"
+         height="14"
+         width="1.5"
+         y="104"
+         x="492" />
+      <rect
+         id="svg_113"
+         height="14"
+         width="1.5"
+         y="104"
+         x="496" />
+      <rect
+         id="svg_114"
+         height="14"
+         width="1.5"
+         y="104"
+         x="500" />
+      <rect
+         id="svg_115"
+         height="14"
+         width="1.5"
+         y="104"
+         x="504" />
+      <rect
+         id="svg_116"
+         height="14"
+         width="1.5"
+         y="104"
+         x="508" />
+      <rect
+         id="svg_117"
+         height="14"
+         width="1.5"
+         y="104"
+         x="512" />
+      <rect
+         id="svg_118"
+         height="14"
+         width="1.5"
+         y="104"
+         x="516" />
+      <rect
+         id="svg_119"
+         height="14"
+         width="1.5"
+         y="104"
+         x="520" />
+      <rect
+         id="svg_120"
+         height="14"
+         width="1.5"
+         y="104"
+         x="524" />
+      <rect
+         id="svg_121"
+         height="14"
+         width="1.5"
+         y="104"
+         x="528" />
+      <rect
+         id="svg_122"
+         height="14"
+         width="1.5"
+         y="104"
+         x="532" />
+      <rect
+         id="svg_123"
+         height="14"
+         width="1.5"
+         y="104"
+         x="536" />
+      <rect
+         id="svg_124"
+         height="14"
+         width="1.5"
+         y="104"
+         x="540" />
+      <rect
+         id="svg_125"
+         height="14"
+         width="1.5"
+         y="104"
+         x="544" />
+      <rect
+         id="svg_126"
+         height="14"
+         width="1.5"
+         y="104"
+         x="548" />
+      <rect
+         id="svg_127"
+         height="14"
+         width="1.5"
+         y="104"
+         x="552" />
+      <rect
+         id="svg_128"
+         height="14"
+         width="1.5"
+         y="104"
+         x="556" />
+      <rect
+         id="svg_129"
+         height="14"
+         width="1.5"
+         y="104"
+         x="560" />
+      <rect
+         id="svg_130"
+         height="14"
+         width="1.5"
+         y="104"
+         x="564" />
+      <rect
+         id="svg_131"
+         height="14"
+         width="1.5"
+         y="104"
+         x="568" />
+      <rect
+         id="svg_132"
+         height="14"
+         width="1.5"
+         y="104"
+         x="572" />
+      <rect
+         id="svg_133"
+         height="14"
+         width="1.5"
+         y="104"
+         x="576" />
+      <rect
+         id="svg_134"
+         height="14"
+         width="1.5"
+         y="104"
+         x="580" />
+      <rect
+         id="svg_135"
+         height="14"
+         width="1.5"
+         y="104"
+         x="584" />
+      <rect
+         id="svg_136"
+         height="14"
+         width="1.5"
+         y="104"
+         x="588" />
+      <rect
+         id="svg_137"
+         height="14"
+         width="1.5"
+         y="104"
+         x="592" />
+      <rect
+         id="svg_138"
+         height="14"
+         width="1.5"
+         y="104"
+         x="596" />
+      <rect
+         id="svg_139"
+         height="14"
+         width="1.5"
+         y="104"
+         x="600" />
+      <rect
+         id="svg_140"
+         height="14"
+         width="1.5"
+         y="104"
+         x="604" />
+      <rect
+         id="svg_141"
+         height="14"
+         width="1.5"
+         y="104"
+         x="608" />
+      <rect
+         id="svg_142"
+         height="14"
+         width="1.5"
+         y="104"
+         x="612" />
+      <rect
+         id="svg_143"
+         height="14"
+         width="1.5"
+         y="104"
+         x="616" />
+      <rect
+         id="svg_144"
+         height="14"
+         width="1.5"
+         y="104"
+         x="620" />
+      <rect
+         id="svg_145"
+         height="14"
+         width="1.5"
+         y="104"
+         x="624" />
+      <rect
+         id="svg_146"
+         height="14"
+         width="1.5"
+         y="104"
+         x="628" />
+      <rect
+         id="svg_147"
+         height="14"
+         width="1.5"
+         y="104"
+         x="632" />
+      <rect
+         id="svg_148"
+         height="14"
+         width="1.5"
+         y="104"
+         x="636" />
+      <rect
+         id="svg_149"
+         height="14"
+         width="1.5"
+         y="104"
+         x="640" />
+      <rect
+         id="svg_150"
+         height="14"
+         width="1.5"
+         y="104"
+         x="644" />
+      <rect
+         id="svg_151"
+         height="14"
+         width="1.5"
+         y="104"
+         x="648" />
+      <rect
+         id="svg_152"
+         height="14"
+         width="1.5"
+         y="104"
+         x="652" />
+      <rect
+         id="svg_153"
+         height="14"
+         width="1.5"
+         y="104"
+         x="656" />
+      <rect
+         id="svg_154"
+         height="14"
+         width="1.5"
+         y="104"
+         x="660" />
+      <rect
+         id="svg_155"
+         height="14"
+         width="1.5"
+         y="104"
+         x="664" />
+      <rect
+         id="svg_156"
+         height="14"
+         width="1.5"
+         y="104"
+         x="668" />
+      <rect
+         id="svg_157"
+         height="14"
+         width="1.5"
+         y="104"
+         x="672" />
+      <rect
+         id="svg_158"
+         height="14"
+         width="1.5"
+         y="104"
+         x="676" />
+      <rect
+         id="svg_159"
+         height="14"
+         width="1.5"
+         y="104"
+         x="680" />
+      <rect
+         id="svg_160"
+         height="14"
+         width="1.5"
+         y="104"
+         x="684" />
+      <rect
+         id="svg_161"
+         height="14"
+         width="1.5"
+         y="104"
+         x="688" />
+      <rect
+         id="svg_162"
+         height="14"
+         width="1.5"
+         y="104"
+         x="692" />
+      <rect
+         id="svg_163"
+         height="14"
+         width="1.5"
+         y="104"
+         x="696" />
+      <rect
+         id="svg_164"
+         height="14"
+         width="1.5"
+         y="104"
+         x="700" />
+      <rect
+         id="svg_165"
+         height="14"
+         width="1.5"
+         y="104"
+         x="704" />
+      <rect
+         id="svg_166"
+         height="14"
+         width="1.5"
+         y="104"
+         x="708" />
+      <rect
+         id="svg_167"
+         height="14"
+         width="1.5"
+         y="104"
+         x="712" />
+      <rect
+         id="svg_168"
+         height="14"
+         width="1.5"
+         y="104"
+         x="716" />
+      <rect
+         id="svg_169"
+         height="14"
+         width="1.5"
+         y="104"
+         x="720" />
+      <rect
+         id="svg_170"
+         height="14"
+         width="1.5"
+         y="104"
+         x="724" />
+      <rect
+         id="svg_171"
+         height="14"
+         width="1.5"
+         y="104"
+         x="728" />
+      <rect
+         id="svg_172"
+         height="14"
+         width="1.5"
+         y="104"
+         x="732" />
+      <rect
+         id="svg_173"
+         height="14"
+         width="1.5"
+         y="104"
+         x="736" />
+      <rect
+         id="svg_174"
+         height="14"
+         width="1.5"
+         y="104"
+         x="740" />
+      <rect
+         id="svg_175"
+         height="14"
+         width="1.5"
+         y="104"
+         x="744" />
+      <rect
+         id="svg_176"
+         height="14"
+         width="1.5"
+         y="104"
+         x="748" />
+      <rect
+         id="svg_177"
+         height="14"
+         width="1.5"
+         y="104"
+         x="752" />
+      <rect
+         id="svg_178"
+         height="14"
+         width="1.5"
+         y="104"
+         x="756" />
+      <rect
+         id="svg_179"
+         height="14"
+         width="1.5"
+         y="104"
+         x="760" />
+      <rect
+         id="svg_180"
+         height="14"
+         width="1.5"
+         y="104"
+         x="764" />
+      <rect
+         id="svg_181"
+         height="14"
+         width="1.5"
+         y="104"
+         x="768" />
+      <rect
+         id="svg_182"
+         height="14"
+         width="1.5"
+         y="104"
+         x="772" />
+      <rect
+         id="svg_183"
+         height="14"
+         width="1.5"
+         y="104"
+         x="776" />
+      <rect
+         id="svg_184"
+         height="14"
+         width="1.5"
+         y="104"
+         x="780" />
+      <rect
+         id="svg_185"
+         height="14"
+         width="1.5"
+         y="104"
+         x="784" />
+      <rect
+         id="svg_186"
+         height="14"
+         width="1.5"
+         y="104"
+         x="788" />
+      <rect
+         id="svg_187"
+         height="14"
+         width="1.5"
+         y="104"
+         x="792" />
+      <rect
+         id="svg_188"
+         height="14"
+         width="1.5"
+         y="104"
+         x="796" />
+      <rect
+         id="svg_189"
+         height="14"
+         width="1.5"
+         y="104"
+         x="800" />
+      <rect
+         id="svg_190"
+         height="14"
+         width="1.5"
+         y="104"
+         x="804" />
+      <rect
+         id="svg_191"
+         height="14"
+         width="1.5"
+         y="104"
+         x="808" />
+      <rect
+         id="svg_192"
+         height="14"
+         width="1.5"
+         y="104"
+         x="812" />
+      <rect
+         id="svg_193"
+         height="14"
+         width="1.5"
+         y="104"
+         x="816" />
+      <rect
+         id="svg_194"
+         height="14"
+         width="1.5"
+         y="104"
+         x="820" />
+      <rect
+         id="svg_195"
+         height="14"
+         width="1.5"
+         y="104"
+         x="824" />
+      <rect
+         id="svg_196"
+         height="14"
+         width="1.5"
+         y="104"
+         x="828" />
+      <rect
+         id="svg_197"
+         height="14"
+         width="1.5"
+         y="104"
+         x="832" />
+      <rect
+         id="svg_198"
+         height="14"
+         width="1.5"
+         y="104"
+         x="836" />
+      <rect
+         id="svg_199"
+         height="14"
+         width="1.5"
+         y="104"
+         x="840" />
+      <rect
+         id="svg_200"
+         height="14"
+         width="1.5"
+         y="104"
+         x="844" />
+      <rect
+         id="svg_201"
+         height="14"
+         width="1.5"
+         y="104"
+         x="848" />
+      <rect
+         id="svg_202"
+         height="14"
+         width="1.5"
+         y="104"
+         x="852" />
+      <rect
+         id="svg_203"
+         height="14"
+         width="1.5"
+         y="104"
+         x="856" />
+      <rect
+         id="svg_204"
+         height="14"
+         width="1.5"
+         y="104"
+         x="860" />
+      <rect
+         id="svg_205"
+         height="14"
+         width="1.5"
+         y="104"
+         x="864" />
+      <rect
+         id="svg_206"
+         height="14"
+         width="1.5"
+         y="104"
+         x="868" />
+      <rect
+         id="svg_207"
+         height="14"
+         width="1.5"
+         y="104"
+         x="872" />
+      <rect
+         id="svg_208"
+         height="14"
+         width="1.5"
+         y="104"
+         x="876" />
+      <rect
+         id="svg_209"
+         height="14"
+         width="1.5"
+         y="104"
+         x="880" />
+      <rect
+         id="svg_210"
+         height="14"
+         width="1.5"
+         y="104"
+         x="884" />
+      <rect
+         id="svg_211"
+         height="14"
+         width="1.5"
+         y="104"
+         x="888" />
+      <rect
+         id="svg_212"
+         height="14"
+         width="1.5"
+         y="104"
+         x="892" />
+      <rect
+         id="svg_213"
+         height="14"
+         width="1.5"
+         y="104"
+         x="896" />
+      <rect
+         id="svg_214"
+         height="14"
+         width="1.5"
+         y="104"
+         x="900" />
+      <rect
+         id="svg_215"
+         height="14"
+         width="1.5"
+         y="104"
+         x="904" />
+    </g>
+    <text
+       id="svg_216"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:7px"
+       fill="#94a3b8"
+       y="98"
+       x="90">低频</text>
+    <text
+       id="svg_217"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:7px"
+       fill="#94a3b8"
+       y="98"
+       x="890">高频</text>
+    <text
+       id="svg_218"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:8px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="139"
+       x="490">242 个子载波 — 每枚子载波是一条微小的频率路程</text>
+    <text
+       id="svg_219"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:11px"
+       fill="#fbbf24"
+       text-anchor="middle"
+       y="156"
+       x="490">⬇ AP调度：将子载波分组成不同大小的RU ⬇</text>
+    <text
+       id="svg_220"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:9px"
+       fill="#94a3b8"
+       y="183"
+       x="38">RU分组:</text>
+    <rect
+       id="svg_221"
+       stroke-width="1.5"
+       stroke="#3b82f6"
+       fill="#1e3a5f"
+       rx="3"
+       height="22"
+       width="97"
+       y="172"
+       x="90" />
+    <text
+       id="svg_222"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       style="font-size:8px"
+       fill="#3b82f6"
+       text-anchor="middle"
+       y="187"
+       x="138">RU-26 (26载波)</text>
+    <rect
+       id="svg_223"
+       stroke-width="1.5"
+       stroke="#10b981"
+       fill="#0e4429"
+       rx="3"
+       height="22"
+       width="97"
+       y="172"
+       x="190" />
+    <text
+       id="svg_224"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       style="font-size:8px"
+       fill="#10b981"
+       text-anchor="middle"
+       y="187"
+       x="238">RU-26 (26载波)</text>
+    <rect
+       id="svg_225"
+       stroke-width="1.5"
+       stroke="#8b5cf6"
+       fill="#1e1b4b"
+       rx="3"
+       height="22"
+       width="145"
+       y="172"
+       x="290" />
+    <text
+       id="svg_226"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       style="font-size:8px"
+       fill="#8b5cf6"
+       text-anchor="middle"
+       y="187"
+       x="362">RU-52 (52载波)</text>
+    <rect
+       id="svg_227"
+       stroke-width="1.5"
+       stroke="#ef4444"
+       fill="#450a0a"
+       rx="3"
+       height="22"
+       width="195"
+       y="172"
+       x="438" />
+    <text
+       id="svg_228"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       style="font-size:8px"
+       fill="#ef4444"
+       text-anchor="middle"
+       y="187"
+       x="535">RU-106 (106载波)</text>
+    <rect
+       id="svg_229"
+       stroke-width="1.5"
+       stroke="#f97316"
+       fill="#7c2d12"
+       rx="3"
+       height="22"
+       width="145"
+       y="172"
+       x="636" />
+    <text
+       id="svg_230"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       style="font-size:8px"
+       fill="#f97316"
+       text-anchor="middle"
+       y="187"
+       x="708">RU-52 (52载波)</text>
+    <rect
+       id="svg_231"
+       stroke-width="0.5"
+       stroke="#475569"
+       fill="#1e293b"
+       rx="2"
+       height="22"
+       width="14"
+       y="172"
+       x="784" />
+    <text
+       id="svg_232"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:6px"
+       fill="#475569"
+       text-anchor="middle"
+       y="187"
+       x="791">DC</text>
+    <rect
+       id="svg_233"
+       stroke-width="1.5"
+       stroke="#10b981"
+       fill="#0e4429"
+       rx="3"
+       height="22"
+       width="97"
+       y="172"
+       x="801" />
+    <text
+       id="svg_234"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       style="font-size:8px"
+       fill="#10b981"
+       text-anchor="middle"
+       y="187"
+       x="849">RU-26 (26载波)</text>
+    <line
+       id="svg_235"
+       stroke-width="0.5"
+       stroke="#64748b"
+       y2="200"
+       x2="898"
+       y1="200"
+       x1="90" />
+    <line
+       id="svg_236"
+       stroke-width="0.5"
+       stroke="#64748b"
+       y2="203"
+       x2="90"
+       y1="197"
+       x1="90" />
+    <line
+       id="svg_237"
+       stroke-width="0.5"
+       stroke="#64748b"
+       y2="203"
+       x2="898"
+       y1="197"
+       x1="898" />
+    <text
+       id="svg_238"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:8px"
+       fill="#64748b"
+       text-anchor="middle"
+       y="216"
+       x="490">同一个OFDM符号中，所有RU同时传输——频域分割，互不干扰</text>
+    <rect
+       stroke="#10b981"
+       id="svg_239"
+       fill="#1e293b"
+       rx="8"
+       height="140"
+       width="920"
+       y="233"
+       x="20" />
+    <text
+       id="svg_240"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       style="font-size:13px"
+       fill="#10b981"
+       text-anchor="middle"
+       y="255"
+       x="480">每个RU分配给不同用户</text>
+    <rect
+       id="svg_241"
+       stroke-width="1.5"
+       stroke="#3b82f6"
+       fill="#1e3a5f"
+       rx="4"
+       height="50"
+       width="97"
+       y="270"
+       x="90" />
+    <text
+       id="svg_242"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       style="font-size:9px"
+       fill="#3b82f6"
+       text-anchor="middle"
+       y="290"
+       x="138">用户 A</text>
+    <text
+       id="svg_243"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:7px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="304"
+       x="138">温度传感器</text>
+    <text
+       id="svg_244"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:6px"
+       fill="#64748b"
+       text-anchor="middle"
+       y="314"
+       x="138">上报 22.5°C</text>
+    <rect
+       id="svg_245"
+       stroke-width="1.5"
+       stroke="#10b981"
+       fill="#0e4429"
+       rx="4"
+       height="50"
+       width="97"
+       y="270"
+       x="190" />
+    <text
+       id="svg_246"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       style="font-size:9px"
+       fill="#10b981"
+       text-anchor="middle"
+       y="290"
+       x="238">用户 B</text>
+    <text
+       id="svg_247"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:7px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="304"
+       x="238">门磁传感器</text>
+    <text
+       id="svg_248"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:6px"
+       fill="#64748b"
+       text-anchor="middle"
+       y="314"
+       x="238">状态=关闭</text>
+    <rect
+       id="svg_249"
+       stroke-width="1.5"
+       stroke="#8b5cf6"
+       fill="#1e1b4b"
+       rx="4"
+       height="50"
+       width="145"
+       y="270"
+       x="290" />
+    <text
+       id="svg_250"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       style="font-size:9px"
+       fill="#8b5cf6"
+       text-anchor="middle"
+       y="290"
+       x="362">用户 C</text>
+    <text
+       id="svg_251"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:7px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="304"
+       x="362">智能手表</text>
+    <text
+       id="svg_252"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:6px"
+       fill="#64748b"
+       text-anchor="middle"
+       y="314"
+       x="362">心率 72bpm</text>
+    <rect
+       id="svg_253"
+       stroke-width="1.5"
+       stroke="#ef4444"
+       fill="#450a0a"
+       rx="4"
+       height="50"
+       width="195"
+       y="270"
+       x="438" />
+    <text
+       id="svg_254"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       style="font-size:9px"
+       fill="#ef4444"
+       text-anchor="middle"
+       y="290"
+       x="535">用户 D</text>
+    <text
+       id="svg_255"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:7px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="304"
+       x="535">笔记本电脑</text>
+    <text
+       id="svg_256"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:6px"
+       fill="#64748b"
+       text-anchor="middle"
+       y="314"
+       x="535">文件下载 2MB</text>
+    <rect
+       id="svg_257"
+       stroke-width="1.5"
+       stroke="#f97316"
+       fill="#7c2d12"
+       rx="4"
+       height="50"
+       width="145"
+       y="270"
+       x="636" />
+    <text
+       id="svg_258"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       style="font-size:9px"
+       fill="#f97316"
+       text-anchor="middle"
+       y="290"
+       x="708">用户 E</text>
+    <text
+       id="svg_259"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:7px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="304"
+       x="708">手机</text>
+    <text
+       id="svg_260"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:6px"
+       fill="#64748b"
+       text-anchor="middle"
+       y="314"
+       x="708">微信消息</text>
+    <rect
+       id="svg_261"
+       stroke-width="0.5"
+       stroke="#475569"
+       fill="#1e293b"
+       rx="2"
+       height="50"
+       width="14"
+       y="270"
+       x="784" />
+    <text
+       id="svg_262"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:5px"
+       fill="#475569"
+       text-anchor="middle"
+       y="298"
+       x="791">DC</text>
+    <rect
+       id="svg_263"
+       stroke-width="1.5"
+       stroke="#10b981"
+       fill="#0e4429"
+       rx="4"
+       height="50"
+       width="97"
+       y="270"
+       x="801" />
+    <text
+       id="svg_264"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       style="font-size:9px"
+       fill="#10b981"
+       text-anchor="middle"
+       y="290"
+       x="849">用户 F</text>
+    <text
+       id="svg_265"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:7px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="304"
+       x="849">智能灯泡</text>
+    <text
+       id="svg_266"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:6px"
+       fill="#64748b"
+       text-anchor="middle"
+       y="314"
+       x="849">确认收到</text>
+    <rect
+       id="svg_267"
+       stroke="#fbbf24"
+       fill="#0f172a"
+       rx="6"
+       height="30"
+       width="810"
+       y="333"
+       x="90" />
+    <text
+       id="svg_268"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       style="font-size:10px"
+       fill="#fbbf24"
+       text-anchor="middle"
+       y="353"
+       x="495">重点：6个用户在同一个OFDM符号中同时传输，各自占据不同宽度的频率块（RU），互不干扰</text>
+    <rect
+       id="svg_269"
+       stroke="#334155"
+       fill="#1e293b"
+       rx="8"
+       height="130"
+       width="920"
+       y="384"
+       x="20" />
+    <text
+       id="svg_270"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       style="font-size:13px"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="406"
+       x="480">RU大小对比 — 宽度代表带宽</text>
+    <rect
+       id="svg_271"
+       stroke="#3b82f6"
+       fill="#1e3a5f"
+       rx="3"
+       height="30"
+       width="55"
+       y="424"
+       x="90" />
+    <text
+       id="svg_272"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       style="font-size:8px"
+       fill="#3b82f6"
+       text-anchor="middle"
+       y="443"
+       x="117">RU-26</text>
+    <text
+       id="svg_273"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:7px"
+       fill="#94a3b8"
+       y="443"
+       x="150">~2 MHz</text>
+    <rect
+       id="svg_274"
+       stroke="#8b5cf6"
+       fill="#1e1b4b"
+       rx="3"
+       height="30"
+       width="110"
+       y="459"
+       x="90" />
+    <text
+       id="svg_275"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       style="font-size:8px"
+       fill="#8b5cf6"
+       text-anchor="middle"
+       y="478"
+       x="145">RU-52</text>
+    <text
+       id="svg_276"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:7px"
+       fill="#94a3b8"
+       y="478"
+       x="205">~4 MHz</text>
+    <rect
+       id="svg_277"
+       stroke="#ef4444"
+       fill="#450a0a"
+       rx="3"
+       height="30"
+       width="220"
+       y="424"
+       x="260" />
+    <text
+       id="svg_278"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       style="font-size:8px"
+       fill="#ef4444"
+       text-anchor="middle"
+       y="443"
+       x="370">RU-106</text>
+    <text
+       id="svg_279"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:7px"
+       fill="#94a3b8"
+       y="443"
+       x="485">~8 MHz</text>
+    <rect
+       id="svg_280"
+       stroke="#f97316"
+       fill="#7c2d12"
+       rx="3"
+       height="30"
+       width="440"
+       y="459"
+       x="260" />
+    <text
+       id="svg_281"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       style="font-size:8px"
+       fill="#f97316"
+       text-anchor="middle"
+       y="478"
+       x="480">RU-242</text>
+    <text
+       id="svg_282"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:7px"
+       fill="#94a3b8"
+       y="478"
+       x="705">~20 MHz (整个信道)</text>
+    <rect
+       id="svg_283"
+       stroke="#3b82f6"
+       fill="#1e293b"
+       rx="8"
+       height="110"
+       width="450"
+       y="529"
+       x="20" />
+    <text
+       id="svg_284"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       style="font-size:12px"
+       fill="#3b82f6"
+       text-anchor="middle"
+       y="551"
+       x="245">DL OFDMA (下行)</text>
+    <text
+       id="svg_285"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:9px"
+       fill="#e2e8f0"
+       y="572"
+       x="40">1. AP 根据各用户数据量和信道条件计算RU分配</text>
+    <text
+       id="svg_286"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:9px"
+       fill="#e2e8f0"
+       y="589"
+       x="40">2. AP 在HE-SIG-A中填写每个RU的User ID + MCS</text>
+    <text
+       id="svg_287"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:9px"
+       fill="#e2e8f0"
+       y="606"
+       x="40">3. AP 同时向多个用户发送，每个用户只需解码自己的RU</text>
+    <text
+       id="svg_288"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:8px"
+       fill="#fbbf24"
+       text-anchor="middle"
+       y="629"
+       x="245">HE-SIG-A = 类似 VHT-SIG-A 的信令字段</text>
+    <rect
+       id="svg_289"
+       stroke="#f97316"
+       fill="#1e293b"
+       rx="8"
+       height="110"
+       width="450"
+       y="529"
+       x="490" />
+    <text
+       id="svg_290"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       style="font-size:12px"
+       fill="#f97316"
+       text-anchor="middle"
+       y="551"
+       x="715">UL OFDMA (上行)</text>
+    <text
+       id="svg_291"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:9px"
+       fill="#e2e8f0"
+       y="572"
+       x="502">1. AP 发Trigger Frame，告知每个STA“你用那个RU”</text>
+    <text
+       id="svg_292"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:9px"
+       fill="#e2e8f0"
+       y="589"
+       x="502">2. Trigger Frame以自身结束时刻为公共时间参考，配合Cyclic Prefix校准各STA发送时机</text>
+    <text
+       id="svg_293"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:9px"
+       fill="#e2e8f0"
+       y="606"
+       x="502">3. 各STA在SIFS后同时在各自RU上发送</text>
+    <text
+       id="svg_294"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       style="font-size:8px"
+       fill="#fbbf24"
+       text-anchor="middle"
+       y="629"
+       x="715">Trigger Frame (Type=01, Subtype=1100) 复用CTS的subtype</text>
+  </g>
+</svg>

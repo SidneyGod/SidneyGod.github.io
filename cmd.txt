@@ -9,3 +9,8 @@ unset ALL_PROXY
 hexo new "title"
 hexo clean && hexo generate && hexo server
 hexo deploy
+
+
+git push origin HEAD:refs/for/master
+git push origin master
+

@@ -34,17 +34,35 @@ hexo.on('generateBefore', function(data) {
 
     assetsSet.forEach(function(value) {
         console.log("dingfs: " + value);
-        copyDir(utils.getFilePath(srcAssetPath + path.sep + value),
-                destAssetPath);
+        copyDir(utils.getFilePath(srcAssetPath + path.sep + value), destAssetPath);
     });
 });
 
-// match markdown image and covert to asset_img 
+// match markdown image and covert to asset_img
 hexo.extend.filter.register('before_post_render', function(data){
-    data.content = data.content.replace(/<img src="assets\//g,
-        function(match_str, label, path){
-            //console.log("dingfs: match_str="+match_str+"-label="+label+"-path="+path);
-            return '<img src="/assets/';
-        });
+  // 1. markdown ![]() 图片
+  const reMdImg = /(!\[.*?\]\()(assets\/[^)]+)(\))/g;
+  // 2. html <img src="assets/..." ，兼容单引号、双引号
+  const reHtmlImg = /(<img\s+[^>]*src=)(["'])(assets\/[^"']+)(\2)/g;
+
+  data.content = data.content
+    .replace(reMdImg, '$1/$2$3')
+    .replace(reHtmlImg, '$1$2/$3$4');
+
+    //data.content = data.content.replace(/<img src="assets\//g,
+    //    function(match_str, label, path){
+    //        console.log("dingfs: match_str="+match_str+"-label="+label+"-path="+path);
+    //        return '<img src="/assets/';
+    //    });
     return data;
 });
+
+//hexo.extend.filter.register('after_post_render', function(data){
+//    console.log("dingfs after data: " + data.content)
+//    data.content = data.content.replace(/<img src="assets\//g,
+//        function(match_str, label, path){
+//            console.log("dingfs: match_str="+match_str+"-label="+label+"-path="+path);
+//            return '<img src="/assets/';
+//        });
+//    return data;
+//});

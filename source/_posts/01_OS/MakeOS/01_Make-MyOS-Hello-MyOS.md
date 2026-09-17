@@ -2,7 +2,6 @@
 title: '[Make MyOS] Hello MyOS!'
 top: 1
 related_posts: true
-mathjax: true
 categories:
   - OS
   - Make OS
@@ -115,7 +114,7 @@ WARNING: Image format was not specified for 'helloos.img' and probing guessed ra
 1474560: # 因为我们是从0开始计数的哦
 ```
 
-剩下的内容全为0，文件大小为$80\times18\times512\times2=1474560$字节，这个很重要，一定要保证大小正确
+剩下的内容全为0，文件大小为 $80\times18\times512\times2=1474560$ 字节，这个很重要，一定要保证大小正确
 
 # 5 helloos1
 

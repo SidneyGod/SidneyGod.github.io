@@ -1,0 +1,1306 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1150"
+   height="750"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="06-twt-negotiation.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.36"
+     inkscape:cx="574.63235"
+     inkscape:cy="375.36765"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g4" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <!-- validate: skip-gap-consistency -->
+  <defs
+     id="defs4">
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrow-blue">
+      <polygon
+         fill="#3b82f6"
+         points="0 0, 8 3, 0 6"
+         id="svg_1" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrow-green">
+      <polygon
+         fill="#10b981"
+         points="0 0, 8 3, 0 6"
+         id="svg_2" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrow-orange">
+      <polygon
+         fill="#f97316"
+         points="0 0, 8 3, 0 6"
+         id="svg_3" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrow-purple">
+      <polygon
+         fill="#a78bfa"
+         points="0 0, 8 3, 0 6"
+         id="svg_4" />
+    </marker>
+    <linearGradient
+       y2="100%"
+       x2="100%"
+       y1="0%"
+       x1="0%"
+       id="bg-grad">
+      <stop
+         stop-color="#0f0f1a"
+         offset="0%"
+         id="stop1" />
+      <stop
+         stop-color="#1a1a2e"
+         offset="100%"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       y2="100%"
+       x2="0%"
+       y1="0%"
+       x1="0%"
+       id="card-grad">
+      <stop
+         stop-color="#1e293b"
+         offset="0%"
+         id="stop3" />
+      <stop
+         stop-color="#0f172a"
+         offset="100%"
+         id="stop4" />
+    </linearGradient>
+  </defs>
+  <g
+     id="g4">
+    <title
+       id="title4">Layer 1</title>
+    <rect
+       width="1150"
+       height="750"
+       fill="url(#bg-grad)"
+       id="svg_6"
+       stroke="null" />
+    <!-- Title -->
+    <text
+       x="574"
+       y="35"
+       text-anchor="middle"
+       fill="#e2e8f0"
+       style="font-size:18px"
+       font-weight="700"
+       font-family="monospace"
+       id="svg_7"
+       stroke="null">TWT Negotiation — Frame Exchange Sequences</text>
+    <text
+       x="574"
+       y="55"
+       text-anchor="middle"
+       fill="#94a3b8"
+       style="font-size:13px"
+       font-family="monospace"
+       id="svg_8"
+       stroke="null">TWT 协商机制 — 帧交互流程（含 Type/Subtype）</text>
+    <!-- ==================== Individual TWT ==================== -->
+    <path
+       stroke="#3b82f6"
+       fill="url(#card-grad)"
+       stroke-width="1.5"
+       opacity="undefined"
+       d="m14,84.85057c0,-5.89597 4.56621,-10.85057 10,-10.85057l530,0c5.43379,0 10,4.9546 10,10.85057l0,450.29886c0,5.89597 -4.56621,10.85057 -10,10.85057l-530,0c-5.43379,0 -10,-4.9546 -10,-10.85057l0,-450.29886z"
+       id="svg_9" />
+    <text
+       x="289"
+       y="100"
+       text-anchor="middle"
+       fill="#3b82f6"
+       style="font-size:14px"
+       font-weight="700"
+       font-family="monospace"
+       id="svg_10"
+       stroke="null">Individual TWT（一对一协商）</text>
+    <text
+       x="289"
+       y="118"
+       text-anchor="middle"
+       fill="#94a3b8"
+       style="font-size:10px"
+       font-family="monospace"
+       id="svg_11"
+       stroke="null">单个 STA 与 AP 独立协商唤醒时间</text>
+    <!-- STA / AP headers -->
+    <rect
+       x="374"
+       y="130"
+       width="80"
+       height="30"
+       rx="6"
+       fill="#1e3a5f"
+       stroke-width="1.5"
+       id="svg_14"
+       stroke="#3b82f6" />
+    <text
+       x="414"
+       y="150"
+       text-anchor="middle"
+       fill="#e2e8f0"
+       style="font-size:11px"
+       font-weight="600"
+       font-family="monospace"
+       id="svg_15"
+       stroke="null">AP</text>
+    <!-- Vertical timeline -->
+    <line
+       x1="414"
+       y1="160"
+       x2="414"
+       y2="530"
+       stroke-dasharray="4,3"
+       id="svg_17"
+       stroke="#334155" />
+    <!-- ① Association Request -->
+    <!-- ② Association Response -->
+    <!-- ③ TWT Setup Action Frame (STA→AP) -->
+    <!-- ④ TWT Setup Action Frame (AP→STA) -->
+    <!-- Negotiation complete divider -->
+    <!-- ⑤ STA wakes up -->
+    <text
+       x="250"
+       y="375"
+       text-anchor="middle"
+       fill="#64748b"
+       style="font-size:8px"
+       font-family="monospace"
+       id="svg_39"
+       stroke="null">到达 Target Wake Time</text>
+    <!-- ⑥ Trigger Frame -->
+    <!-- ⑦ QoS Data (STA→AP) -->
+    <!-- ⑧ Multi-STA Block ACK -->
+    <!-- ==================== Broadcast TWT ==================== -->
+    <path
+       id="svg_52"
+       d="m584,85c0,-5.43379 4.56621,-10 10,-10l530,0c5.43379,0 10,4.56621 10,10l0,451c0,5.43379 -4.56621,10 -10,10l-530,0c-5.43379,0 -10,-4.56621 -10,-10l0,-451z"
+       opacity="undefined"
+       stroke-width="1.5"
+       stroke="#f97316"
+       fill="url(#card-grad)" />
+    <text
+       x="859"
+       y="100"
+       text-anchor="middle"
+       fill="#f97316"
+       style="font-size:14px"
+       font-weight="700"
+       font-family="monospace"
+       id="svg_53"
+       stroke="null">Broadcast TWT（广播协商）</text>
+    <text
+       x="859"
+       y="118"
+       text-anchor="middle"
+       fill="#94a3b8"
+       style="font-size:10px"
+       font-family="monospace"
+       id="svg_54"
+       stroke="null">AP 广播 TWT 调度，多个 STA 加入同一组</text>
+    <!-- STA-A / STA-B / STA-C / AP headers -->
+    <rect
+       x="634"
+       y="130"
+       width="55"
+       height="30"
+       rx="6"
+       fill="#1e3a5f"
+       stroke-width="1.5"
+       id="svg_55"
+       stroke="#3b82f6" />
+    <text
+       x="661"
+       y="150"
+       text-anchor="middle"
+       fill="#e2e8f0"
+       style="font-size:9px"
+       font-weight="600"
+       font-family="monospace"
+       id="svg_56"
+       stroke="null">STA-A</text>
+    <rect
+       x="704"
+       y="130"
+       width="55"
+       height="30"
+       rx="6"
+       fill="#1e3a5f"
+       stroke-width="1.5"
+       id="svg_57"
+       stroke="#3b82f6" />
+    <text
+       x="731"
+       y="150"
+       text-anchor="middle"
+       fill="#e2e8f0"
+       style="font-size:9px"
+       font-weight="600"
+       font-family="monospace"
+       id="svg_58"
+       stroke="null">STA-B</text>
+    <rect
+       x="774"
+       y="130"
+       width="55"
+       height="30"
+       rx="6"
+       fill="#1e3a5f"
+       stroke-width="1.5"
+       id="svg_59"
+       stroke="#3b82f6" />
+    <text
+       x="801"
+       y="150"
+       text-anchor="middle"
+       fill="#e2e8f0"
+       style="font-size:9px"
+       font-weight="600"
+       font-family="monospace"
+       id="svg_60"
+       stroke="null">STA-C</text>
+    <!-- Vertical timelines -->
+    <line
+       x1="661"
+       y1="160"
+       x2="661"
+       y2="530"
+       stroke-dasharray="4,3"
+       id="svg_63"
+       stroke="#334155" />
+    <line
+       x1="731"
+       y1="160"
+       x2="731"
+       y2="530"
+       stroke-dasharray="4,3"
+       id="svg_64"
+       stroke="#334155" />
+    <line
+       x1="801"
+       y1="160"
+       x2="801"
+       y2="530"
+       stroke-dasharray="4,3"
+       id="svg_65"
+       stroke="#334155" />
+    <!-- ① Beacon with Broadcast TWT Element -->
+    <rect
+       x="820"
+       y="166"
+       width="200"
+       height="30"
+       rx="4"
+       fill="#1c1917"
+       id="svg_67"
+       stroke="#f97316" />
+    <text
+       x="924"
+       y="177"
+       text-anchor="middle"
+       fill="#f97316"
+       style="font-size:9px"
+       font-weight="600"
+       font-family="monospace"
+       id="svg_68"
+       stroke="null">① Beacon（携带 Broadcast TWT）</text>
+    <text
+       x="924"
+       y="191"
+       text-anchor="middle"
+       fill="#64748b"
+       style="font-size:7px"
+       font-family="monospace"
+       id="svg_69"
+       stroke="null">Management | Type=00 Subtype=1000 | TWT ID</text>
+    <line
+       x1="1039"
+       y1="183"
+       x2="664"
+       y2="183"
+       stroke-width="1"
+       marker-end="url(#arrow-orange)"
+       id="svg_70"
+       stroke="#f97316" />
+    <line
+       x1="1039"
+       y1="183"
+       x2="734"
+       y2="183"
+       stroke-width="1"
+       marker-end="url(#arrow-orange)"
+       id="svg_71"
+       stroke="#f97316" />
+    <line
+       x1="1039"
+       y1="183"
+       x2="804"
+       y2="183"
+       stroke-width="1"
+       marker-end="url(#arrow-orange)"
+       id="svg_72"
+       stroke="#f97316" />
+    <!-- ② TWT Setup Accept (STAs→AP) -->
+    <rect
+       x="820"
+       y="205"
+       width="200"
+       height="30"
+       rx="4"
+       fill="#1c1917"
+       id="svg_73"
+       stroke="#10b981" />
+    <text
+       x="924"
+       y="215"
+       text-anchor="middle"
+       fill="#10b981"
+       style="font-size:9px"
+       font-weight="600"
+       font-family="monospace"
+       id="svg_74"
+       stroke="null">② TWT Setup Accept（各 STA 加入）</text>
+    <text
+       x="924"
+       y="231"
+       text-anchor="middle"
+       fill="#64748b"
+       style="font-size:7px"
+       font-family="monospace"
+       id="svg_75"
+       stroke="null">Management | Type=00 Subtype=1101 (Action)</text>
+    <line
+       x1="664"
+       y1="220"
+       x2="1039"
+       y2="220"
+       stroke-width="1"
+       marker-end="url(#arrow-green)"
+       id="svg_76"
+       stroke="#10b981" />
+    <line
+       x1="734"
+       y1="220"
+       x2="1039"
+       y2="220"
+       stroke-width="1"
+       marker-end="url(#arrow-green)"
+       id="svg_77"
+       stroke="#10b981" />
+    <line
+       x1="804"
+       y1="220"
+       x2="1039"
+       y2="220"
+       stroke-width="1"
+       marker-end="url(#arrow-green)"
+       id="svg_78"
+       stroke="#10b981" />
+    <!-- Divider: all join -->
+    <rect
+       x="635"
+       y="245"
+       width="410"
+       height="20"
+       rx="4"
+       fill="#065f46"
+       id="svg_79"
+       stroke="#10b981" />
+    <text
+       x="859"
+       y="260"
+       text-anchor="middle"
+       fill="#10b981"
+       style="font-size:10px"
+       font-weight="600"
+       font-family="monospace"
+       id="svg_80"
+       stroke="null">所有 STA 加入同一 TWT 组 → 统一休眠</text>
+    <!-- Sleep indication -->
+    <rect
+       x="634"
+       y="278"
+       width="180"
+       height="16"
+       rx="3"
+       fill="#1e293b"
+       stroke-width="0.5"
+       id="svg_81"
+       stroke="#475569" />
+    <text
+       x="724"
+       y="290"
+       text-anchor="middle"
+       fill="#64748b"
+       style="font-size:8px"
+       font-family="monospace"
+       id="svg_82"
+       stroke="null">所有 STA 深度休眠...</text>
+    <!-- ③ TWT arrives -->
+    <rect
+       x="634"
+       y="305"
+       width="180"
+       height="18"
+       rx="3"
+       fill="#10b981"
+       id="svg_83"
+       stroke="null" />
+    <text
+       x="724"
+       y="318"
+       text-anchor="middle"
+       fill="#fff"
+       style="font-size:9px"
+       font-family="monospace"
+       id="svg_84"
+       stroke="null">③ 到达 TWT 时刻，所有 STA 醒来</text>
+    <!-- ④ Trigger Frame (Broadcast) -->
+    <rect
+       x="820"
+       y="335"
+       width="200"
+       height="30"
+       rx="4"
+       fill="#1c1917"
+       id="svg_85"
+       stroke="#f97316" />
+    <text
+       x="910"
+       y="346"
+       text-anchor="middle"
+       fill="#f97316"
+       style="font-size:9px"
+       font-weight="600"
+       font-family="monospace"
+       id="svg_86"
+       stroke="null">④ Trigger Frame（Broadcast）</text>
+    <text
+       x="910"
+       y="360"
+       text-anchor="middle"
+       fill="#64748b"
+       style="font-size:7px"
+       font-family="monospace"
+       id="svg_87"
+       stroke="null">Control | Type=01 Subtype=1100 | RU 分配</text>
+    <line
+       x1="1039"
+       y1="350"
+       x2="664"
+       y2="350"
+       stroke-width="1"
+       marker-end="url(#arrow-orange)"
+       id="svg_88"
+       stroke="#f97316" />
+    <line
+       x1="1039"
+       y1="350"
+       x2="734"
+       y2="350"
+       stroke-width="1"
+       marker-end="url(#arrow-orange)"
+       id="svg_89"
+       stroke="#f97316" />
+    <line
+       x1="1039"
+       y1="350"
+       x2="804"
+       y2="350"
+       stroke-width="1"
+       marker-end="url(#arrow-orange)"
+       id="svg_90"
+       stroke="#f97316" />
+    <!-- ⑤ Simultaneous UL data -->
+    <rect
+       x="814.85297"
+       y="375"
+       width="211.14706"
+       height="28"
+       rx="4.0999427"
+       fill="#1c1917"
+       id="svg_91"
+       stroke="#a78bfa"
+       style="stroke-width:1.01242" />
+    <text
+       x="900"
+       y="386"
+       text-anchor="middle"
+       fill="#a78bfa"
+       style="font-size:9px"
+       font-weight="600"
+       font-family="monospace"
+       id="svg_92"
+       stroke="null">⑤ 各 STA 同时在各自 RU 上行</text>
+    <text
+       x="920"
+       y="399"
+       text-anchor="middle"
+       fill="#64748b"
+       style="font-size:7px"
+       font-family="monospace"
+       id="svg_93"
+       stroke="null">Data | Type=10 Subtype=1000 — 频域分离，互不干扰</text>
+    <line
+       x1="664"
+       y1="389"
+       x2="1039"
+       y2="389"
+       stroke-width="1"
+       marker-end="url(#arrow-purple)"
+       id="svg_94"
+       stroke="#a78bfa" />
+    <line
+       x1="734"
+       y1="389"
+       x2="1039"
+       y2="389"
+       stroke-width="1"
+       marker-end="url(#arrow-purple)"
+       id="svg_95"
+       stroke="#a78bfa" />
+    <line
+       x1="804"
+       y1="389"
+       x2="1039"
+       y2="389"
+       stroke-width="1"
+       marker-end="url(#arrow-purple)"
+       id="svg_96"
+       stroke="#a78bfa" />
+    <!-- ⑥ Multi-STA Block ACK -->
+    <rect
+       stroke="#334155"
+       x="820"
+       y="415"
+       width="200"
+       height="24"
+       rx="4"
+       fill="#1e293b"
+       stroke-width="0.5"
+       id="svg_97" />
+    <text
+       x="900"
+       y="424"
+       text-anchor="middle"
+       fill="#93c5fd"
+       style="font-size:9px"
+       font-family="monospace"
+       id="svg_98"
+       stroke="null">⑥ Multi-STA Block ACK</text>
+    <text
+       x="900"
+       y="436"
+       text-anchor="middle"
+       fill="#64748b"
+       style="font-size:7px"
+       font-family="monospace"
+       id="svg_99"
+       stroke="null">Control | Type=01 Subtype=1001</text>
+    <line
+       x1="1039"
+       y1="427"
+       x2="664"
+       y2="427"
+       stroke-width="1"
+       marker-end="url(#arrow-blue)"
+       id="svg_100"
+       stroke="#60a5fa" />
+    <line
+       x1="1039"
+       y1="427"
+       x2="734"
+       y2="427"
+       stroke-width="1"
+       marker-end="url(#arrow-blue)"
+       id="svg_101"
+       stroke="#60a5fa" />
+    <line
+       x1="1039"
+       y1="427"
+       x2="804"
+       y2="427"
+       stroke-width="1"
+       marker-end="url(#arrow-blue)"
+       id="svg_102"
+       stroke="#60a5fa" />
+    <!-- Divider: back to sleep -->
+    <rect
+       x="637"
+       y="451"
+       width="413"
+       height="20"
+       rx="4"
+       fill="#065f46"
+       id="svg_103"
+       stroke="#10b981" />
+    <text
+       x="859"
+       y="465"
+       text-anchor="middle"
+       fill="#10b981"
+       style="font-size:10px"
+       font-weight="600"
+       font-family="monospace"
+       id="svg_104"
+       stroke="null">完成 → 所有 STA 继续休眠</text>
+    <!-- ==================== Comparison Table ==================== -->
+    <!-- Table header -->
+    <!-- Row 1 -->
+    <!-- Row 2 -->
+    <!-- Row 3 -->
+    <!-- Row 4 -->
+    <!-- Row 5 -->
+    <!-- Frame type legend -->
+    <g
+       id="svg_5">
+      <rect
+         x="13"
+         y="562"
+         width="1120"
+         height="176.99999"
+         rx="10"
+         fill="url(#card-grad)"
+         id="svg_105"
+         stroke="#334155" />
+      <text
+         x="573"
+         y="587"
+         text-anchor="middle"
+         fill="#e2e8f0"
+         style="font-size:13px"
+         font-weight="700"
+         font-family="monospace"
+         id="svg_106"
+         stroke="null">两种模式对比</text>
+      <rect
+         x="33"
+         y="600"
+         width="200"
+         height="20"
+         rx="3"
+         fill="#1e293b"
+         id="svg_107"
+         stroke="null" />
+      <text
+         x="133"
+         y="615"
+         text-anchor="middle"
+         fill="#94a3b8"
+         style="font-size:9px"
+         font-weight="600"
+         font-family="monospace"
+         id="svg_108"
+         stroke="null">特性</text>
+      <rect
+         x="243"
+         y="600"
+         width="420"
+         height="20"
+         rx="3"
+         fill="#1e293b"
+         id="svg_109"
+         stroke="null" />
+      <text
+         x="453"
+         y="615"
+         text-anchor="middle"
+         fill="#3b82f6"
+         style="font-size:9px"
+         font-weight="600"
+         font-family="monospace"
+         id="svg_110"
+         stroke="null">Individual TWT</text>
+      <rect
+         x="673"
+         y="600"
+         width="440"
+         height="20"
+         rx="3"
+         fill="#1e293b"
+         id="svg_111"
+         stroke="null" />
+      <text
+         x="893"
+         y="615"
+         text-anchor="middle"
+         fill="#f97316"
+         style="font-size:9px"
+         font-weight="600"
+         font-family="monospace"
+         id="svg_112"
+         stroke="null">Broadcast TWT</text>
+      <text
+         x="133"
+         y="641"
+         text-anchor="middle"
+         fill="#94a3b8"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_113"
+         stroke="null">协商方式</text>
+      <text
+         x="453"
+         y="641"
+         text-anchor="middle"
+         fill="#93c5fd"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_114"
+         stroke="null">STA ↔ AP 一对一协商</text>
+      <text
+         x="893"
+         y="641"
+         text-anchor="middle"
+         fill="#fdba74"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_115"
+         stroke="null">AP 广播，STA 自愿加入</text>
+      <text
+         x="133"
+         y="662"
+         text-anchor="middle"
+         fill="#94a3b8"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_116"
+         stroke="null">唤醒时间</text>
+      <text
+         x="453"
+         y="662"
+         text-anchor="middle"
+         fill="#93c5fd"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_117"
+         stroke="null">每个 STA 独立</text>
+      <text
+         x="893"
+         y="662"
+         text-anchor="middle"
+         fill="#fdba74"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_118"
+         stroke="null">同组 STA 相同</text>
+      <text
+         x="133"
+         y="685"
+         text-anchor="middle"
+         fill="#94a3b8"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_119"
+         stroke="null">灵活性</text>
+      <text
+         x="453"
+         y="685"
+         text-anchor="middle"
+         fill="#93c5fd"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_120"
+         stroke="null">高（个性化参数）</text>
+      <text
+         x="893"
+         y="685"
+         text-anchor="middle"
+         fill="#fdba74"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_121"
+         stroke="null">中（统一参数）</text>
+      <text
+         x="133"
+         y="708"
+         text-anchor="middle"
+         fill="#94a3b8"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_122"
+         stroke="null">开销</text>
+      <text
+         x="453"
+         y="708"
+         text-anchor="middle"
+         fill="#93c5fd"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_123"
+         stroke="null">每 STA 单独协商</text>
+      <text
+         x="893"
+         y="708"
+         text-anchor="middle"
+         fill="#fdba74"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_124"
+         stroke="null">一次 Beacon 广播</text>
+      <text
+         x="133"
+         y="731"
+         text-anchor="middle"
+         fill="#94a3b8"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_125"
+         stroke="null">适用场景</text>
+      <text
+         x="453"
+         y="731"
+         text-anchor="middle"
+         fill="#93c5fd"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_126"
+         stroke="null">手机、笔记本等交互设备</text>
+      <text
+         x="893"
+         y="731"
+         text-anchor="middle"
+         fill="#fdba74"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_127"
+         stroke="null">IoT 传感器群组</text>
+    </g>
+    <g
+       id="svg_129">
+      <path
+         id="svg_12"
+         d="m94,136c0,-3.26027 2.73973,-6 6,-6l68,0c3.26027,0 6,2.73973 6,6l0,18c0,3.26027 -2.73973,6 -6,6l-68,0c-3.26027,0 -6,-2.73973 -6,-6l0,-18z"
+         opacity="undefined"
+         stroke-width="1.5"
+         stroke="#3b82f6"
+         fill="#1e3a5f" />
+      <text
+         stroke="null"
+         x="133"
+         y="150"
+         text-anchor="middle"
+         fill="#e2e8f0"
+         style="font-size:11px"
+         font-weight="600"
+         font-family="monospace"
+         id="svg_13">STA</text>
+      <line
+         x1="134"
+         y1="161"
+         x2="134"
+         y2="530"
+         stroke-dasharray="4,3"
+         id="svg_16"
+         stroke="#334155" />
+    </g>
+    <g
+       id="svg_130">
+      <path
+         stroke="#334155"
+         id="svg_48"
+         d="m85,484.30769c0,-2.34071 1.82648,-4.30769 4,-4.30769l372,0c2.17352,0 4,1.96698 4,4.30769l0,19.38462c0,2.34071 -1.82648,4.30769 -4,4.30769l-372,0c-2.17352,0 -4,-1.96698 -4,-4.30769l0,-19.38462z"
+         opacity="undefined"
+         stroke-width="0.5"
+         fill="#1e293b" />
+      <text
+         x="274"
+         y="491"
+         text-anchor="middle"
+         fill="#93c5fd"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_49"
+         stroke="null">⑧ Multi-STA Block ACK</text>
+      <text
+         x="274"
+         y="504.75"
+         text-anchor="middle"
+         fill="#64748b"
+         style="font-size:7px"
+         font-family="monospace"
+         id="svg_50"
+         stroke="null">Control | Type=01 Subtype=1001</text>
+      <line
+         x1="409"
+         y1="493.75"
+         x2="139"
+         y2="493.75"
+         stroke-width="1"
+         marker-end="url(#arrow-blue)"
+         id="svg_51"
+         stroke="#60a5fa" />
+    </g>
+    <g
+       id="svg_132">
+      <rect
+         stroke="#a78bfa"
+         x="85"
+         y="440"
+         width="380"
+         height="30"
+         rx="4"
+         fill="#1c1917"
+         id="svg_44" />
+      <text
+         x="274"
+         y="451"
+         text-anchor="middle"
+         fill="#a78bfa"
+         style="font-size:9px"
+         font-weight="600"
+         font-family="monospace"
+         id="svg_45"
+         stroke="null">⑦ QoS Data（上行，STA 在分配的 RU 上发送）</text>
+      <text
+         x="274"
+         y="466"
+         text-anchor="middle"
+         fill="#64748b"
+         style="font-size:7px"
+         font-family="monospace"
+         id="svg_46"
+         stroke="null">Data | Type=10 Subtype=1000 — Trigger-Based UL OFDMA</text>
+      <line
+         x1="139"
+         y1="457"
+         x2="409"
+         y2="457"
+         stroke-width="1"
+         marker-end="url(#arrow-purple)"
+         id="svg_47"
+         stroke="#a78bfa" />
+    </g>
+    <g
+       id="svg_133">
+      <rect
+         stroke="#f97316"
+         x="85"
+         y="400"
+         width="380"
+         height="30"
+         rx="4"
+         fill="#1c1917"
+         id="svg_40" />
+      <text
+         x="274"
+         y="411"
+         text-anchor="middle"
+         fill="#f97316"
+         style="font-size:9px"
+         font-weight="600"
+         font-family="monospace"
+         id="svg_41"
+         stroke="null">⑥ Trigger Frame（分配 RU + 同步参考时刻）</text>
+      <text
+         x="274"
+         y="426"
+         text-anchor="middle"
+         fill="#64748b"
+         style="font-size:7px"
+         font-family="monospace"
+         id="svg_42"
+         stroke="null">Control | Type=01 Subtype=1100 — AP 在 STA 唤醒窗口发送调度帧</text>
+      <line
+         x1="409"
+         y1="416"
+         x2="139"
+         y2="416"
+         stroke-width="1"
+         marker-end="url(#arrow-orange)"
+         id="svg_43"
+         stroke="#f97316" />
+    </g>
+    <g
+       id="svg_134">
+      <rect
+         x="85"
+         y="360"
+         width="80"
+         height="20"
+         rx="4"
+         fill="#10b981"
+         id="svg_37"
+         stroke="null" />
+      <text
+         x="125"
+         y="375"
+         text-anchor="middle"
+         fill="#fff"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_38"
+         stroke="null">⑤ STA 醒来</text>
+    </g>
+    <g
+       id="svg_135">
+      <rect
+         x="85"
+         y="330"
+         width="380"
+         height="20"
+         rx="4"
+         fill="#065f46"
+         id="svg_35"
+         stroke="#10b981" />
+      <text
+         x="274"
+         y="345"
+         text-anchor="middle"
+         fill="#10b981"
+         style="font-size:10px"
+         font-weight="600"
+         font-family="monospace"
+         id="svg_36"
+         stroke="null">协商完成 → STA 进入深度休眠</text>
+    </g>
+    <g
+       id="svg_136">
+      <rect
+         stroke="#10b981"
+         x="85"
+         y="290"
+         width="380"
+         height="30"
+         rx="4"
+         fill="#1c1917"
+         id="svg_31" />
+      <text
+         x="274"
+         y="301"
+         text-anchor="middle"
+         fill="#10b981"
+         style="font-size:9px"
+         font-weight="600"
+         font-family="monospace"
+         id="svg_32"
+         stroke="null">④ TWT Setup Action Frame（Accept / Alternate）</text>
+      <text
+         x="274"
+         y="316"
+         text-anchor="middle"
+         fill="#64748b"
+         style="font-size:7px"
+         font-family="monospace"
+         id="svg_33"
+         stroke="null">Management | Type=00 Subtype=1101 (Action) — AP 接受或提出替代参数</text>
+      <line
+         x1="409"
+         y1="306"
+         x2="139"
+         y2="306"
+         stroke-width="1"
+         marker-end="url(#arrow-green)"
+         id="svg_34"
+         stroke="#10b981" />
+    </g>
+    <g
+       id="svg_137">
+      <rect
+         stroke="#10b981"
+         x="85"
+         y="240"
+         width="380"
+         height="40"
+         rx="4"
+         fill="#1c1917"
+         id="svg_26" />
+      <text
+         x="274"
+         y="251"
+         text-anchor="middle"
+         fill="#10b981"
+         style="font-size:9px"
+         font-weight="600"
+         font-family="monospace"
+         id="svg_27"
+         stroke="null">③ TWT Setup Action Frame（Request）</text>
+      <text
+         x="274"
+         y="266"
+         text-anchor="middle"
+         fill="#64748b"
+         style="font-size:7px"
+         font-family="monospace"
+         id="svg_28"
+         stroke="null">Management | Type=00 Subtype=1101 (Action)</text>
+      <text
+         x="274"
+         y="276"
+         text-anchor="middle"
+         fill="#a7f3d0"
+         style="font-size:7px"
+         font-family="monospace"
+         id="svg_29"
+         stroke="null">Wake Duration=4ms | Interval=500ms | Target Wake Time=TSF</text>
+      <line
+         x1="139"
+         y1="258"
+         x2="409"
+         y2="258"
+         stroke-width="1"
+         marker-end="url(#arrow-green)"
+         id="svg_30"
+         stroke="#10b981" />
+    </g>
+    <g
+       id="svg_138">
+      <rect
+         stroke="#334155"
+         x="85"
+         y="205"
+         width="380"
+         height="26"
+         rx="3"
+         fill="#1e293b"
+         stroke-width="0.5"
+         id="svg_22" />
+      <text
+         x="274"
+         y="216"
+         text-anchor="middle"
+         fill="#93c5fd"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_23"
+         stroke="null">② Association Response</text>
+      <text
+         x="274"
+         y="228"
+         text-anchor="middle"
+         fill="#64748b"
+         style="font-size:7px"
+         font-family="monospace"
+         id="svg_24"
+         stroke="null">Management | Type=00 Subtype=0001</text>
+      <line
+         x1="409"
+         y1="220"
+         x2="139"
+         y2="220"
+         stroke-width="1"
+         marker-end="url(#arrow-blue)"
+         id="svg_25"
+         stroke="#60a5fa" />
+    </g>
+    <g
+       id="svg_139">
+      <rect
+         stroke="#334155"
+         x="85"
+         y="170"
+         width="380"
+         height="26"
+         rx="3"
+         fill="#1e293b"
+         stroke-width="0.5"
+         id="svg_18" />
+      <text
+         x="274"
+         y="181"
+         text-anchor="middle"
+         fill="#93c5fd"
+         style="font-size:9px"
+         font-family="monospace"
+         id="svg_19"
+         stroke="null">① Association Request</text>
+      <text
+         x="274"
+         y="193"
+         text-anchor="middle"
+         fill="#64748b"
+         style="font-size:7px"
+         font-family="monospace"
+         id="svg_20"
+         stroke="null">Management | Type=00 Subtype=0000</text>
+      <line
+         x1="140"
+         y1="185"
+         x2="410"
+         y2="185"
+         stroke-width="1"
+         marker-end="url(#arrow-blue)"
+         id="svg_21"
+         stroke="#60a5fa" />
+    </g>
+    <g
+       id="svg_140">
+      <rect
+         x="1000"
+         y="130"
+         width="80"
+         height="30"
+         rx="6"
+         fill="#1e3a5f"
+         stroke-width="1.5"
+         id="svg_61"
+         stroke="#3b82f6" />
+      <text
+         x="1040"
+         y="150"
+         text-anchor="middle"
+         fill="#e2e8f0"
+         style="font-size:11px"
+         font-weight="600"
+         font-family="monospace"
+         id="svg_62"
+         stroke="null">AP</text>
+      <line
+         x1="1040"
+         y1="160"
+         x2="1040"
+         y2="530"
+         stroke-dasharray="4,3"
+         id="svg_66"
+         stroke="#334155" />
+    </g>
+  </g>
+</svg>

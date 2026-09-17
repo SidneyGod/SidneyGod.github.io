@@ -2,7 +2,6 @@
 title: '[Make MyOS] Start Again'
 top: 1
 related_posts: true
-mathjax: false
 categories:
   - OS
   - Make OS

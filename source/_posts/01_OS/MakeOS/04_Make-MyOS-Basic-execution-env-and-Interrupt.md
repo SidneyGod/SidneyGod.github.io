@@ -2,7 +2,6 @@
 title: '[Make MyOS] Basic execution env & Interrupt'
 top: 1
 related_posts: true
-mathjax: true
 categories:
   - OS
   - Make OS
@@ -21,9 +20,9 @@ tags:
 
 32位的支持三种工作模式和一种准工作模式
 
-- 实地址模式(Real-address mode)，处理器上电(power-up)或复位(reset)后处于该模式。这个模式实际上是为了兼容8086，因为地址线只有20根，限制了寻址只能是1M大小，也就是通过$段寄存器 << 4 + 偏移地址$方式寻址。进入这个模式，也就只使用20根地址线，主要是因为A20M#引脚被屏蔽了
+- 实地址模式(Real-address mode)，处理器上电(power-up)或复位(reset)后处于该模式。这个模式实际上是为了兼容8086，因为地址线只有20根，限制了寻址只能是1M大小，也就是通过$\text{段寄存器} << 4 + \text{偏移地址}$方式寻址。进入这个模式，也就只使用20根地址线，主要是因为A20M#引脚被屏蔽了
 
-- 保护模式(Protected mode)，这个是80386时期引入的，也就是32位处理器原本的工作模式。在这个模式下不再使用$段寄存器 << 4 + 偏移地址$的方式寻址，而是通过段描述符的方式描述基址和限长，并通过描述符中的属性设置实现对内存段的访问限制和数据保护。
+- 保护模式(Protected mode)，这个是80386时期引入的，也就是32位处理器原本的工作模式。在这个模式下不再使用$\text{段寄存器} << 4 + \text{偏移地址}$的方式寻址，而是通过段描述符的方式描述基址和限长，并通过描述符中的属性设置实现对内存段的访问限制和数据保护。
 - 虚拟8086模式(Virtual-8086 mode)，是一种准工作模式，目的是为了在保护模式下能够执行8086程序<!--more-->
 - 系统管理模式(System management mode)，80386时期引入，提供了一种对操作系统或执行程序透明的机制实现平台特定功能，如电源管理或系统安全或oem差异化的feature。对操作系统透明(这个透明的意思在计算机组成原理里就可以理解为不知道为什么，它就..)，换句话说，就是操作系统不知道何时进入SMM的，也不知道SMM曾经执行过。进入SMM是通过给CPU引脚SMI#上电，或者可编程中断控制器(APIC)接收到SMI，进入SMM后，一切被都屏蔽，包括所有的中断，处理器切换到单独的地址空间(System Management RAM)，同时保存当前运行的程序或任务的上下文。然后可以透明地执行SMM特定的代码。可以通过设置SMBASE的寄存器来设置SMRAM的空间。SMM处理程序只能由系统固件实现。只能通过执行RSM指令退出，退出后，处理器将被置于SMI之前的状态。 
 
@@ -47,7 +46,11 @@ tags:
 - BNDCFGU和BNDSTATUS寄存器，可以看出一个是配置寄存器，一个是状态寄存器，用于支持MPX指令。
 - 堆栈(Stack)，为了支持过程或子例程调用以及过程或子例程之间的参数传递，在执行环境中包括堆栈和堆栈管理资源。它通过段寄存器SS指定位置，而实际指向的是一段内存或者Cache
 
-<img src="assets/04_Make-MyOS-Basic-execution-env-and-Interrupt/202112042113976.png" alt="202112042113976" style="zoom:70%;" /><img src="assets/04_Make-MyOS-Basic-execution-env-and-Interrupt/202112042114804.png" alt="202112042114804" style="zoom:70%;" />
+<div class="img-row">
+    <img src="assets/04_Make-MyOS-Basic-execution-env-and-Interrupt/202112042113976.png" alt="202112042113976" />
+    <img src="assets/04_Make-MyOS-Basic-execution-env-and-Interrupt/202112042114804.png" alt="202112042114804" />
+
+</div>
 
 以上的运行环境是在CPU core级别的环境，另外处理器还提供了下列系统级别的运行环境，在多核处理器的环境中，处理器内部的多个CPU core共享这些运行环境。这个系统级别的运行环境主要包括：
 
@@ -291,7 +294,7 @@ IA-32架构的内存管理工具分为两部分：分段和分页，如下图，
 
 The MOV instruction can also be used to store the visible part of a segment register in a general-purpose register.
 
-接下来才是主题，段选择子且当成一个数组的index，那么段描述符就是这个数组中的一项了。具体的定义是：**A segment descriptor is a data structure in a GDT or LDT that provides the processor with the size and location of a segment, as well as access control and status information**.段描述符通常由编译器、链接器、加载器或操作系统或执行程序创建，而不是由应用程序创建。
+接下来才是主题，段选择子且当成一个数组的index，那么段描述符就是这个数组中的一项了。具体的定义是：**A segment descriptor is a data structure in a GDT or LDT that provides the processor with the size and location of a segment, as well as access control and status information**. 段描述符通常由编译器、链接器、加载器或操作系统或执行程序创建，而不是由应用程序创建。
 
 ![202112072244745](assets/04_Make-MyOS-Basic-execution-env-and-Interrupt/202112072244745.png)
 
@@ -367,9 +370,9 @@ Intel手册卷3 CHAPTER 4 PAGING
 
 通过上面一通操作，已经拿到了一个线性地址了，现在需要通过分页模型将这个线性地址与物理地址对应起来。简单介绍下分页的思想
 
-一级分页，假设将线性地址分为两部分table(页表)，offset(页内偏移)，然后能页表里面包含entry(页项)，每个entry存的是一个起始地址(一个起始地址是32位也就是4B)，CPU从table中拿到对应的entry存储物理地址加上偏移，就得到实际的物理地址了。假设offset的范围是0~4KB，那么offset需要12位($2^{12}=4096$)来表示，假设是32位PC，剩下的20位用来表达entry，那么此时一个32位的线性地址能够表达$2^{20}\times 2^{12}=2^{32}$，可以映射4G，但是需要$2^{20}\times 4B=4MB$的物理内存来保存entry
+一级分页，假设将线性地址分为两部分table(页表)，offset(页内偏移)，然后能页表里面包含entry(页项)，每个entry存的是一个起始地址(一个起始地址是32位也就是4B)，CPU从table中拿到对应的entry存储物理地址加上偏移，就得到实际的物理地址了。假设offset的范围是0~4KB，那么offset需要12位( $2^{12}=4096$ )来表示，假设是32位PC，剩下的20位用来表达entry，那么此时一个32位的线性地址能够表达 $2^{20}\times 2^{12}=2^{32}$ ，可以映射4G，但是需要 $2^{20}\times 4B=4MB$ 的物理内存来保存entry
 
-二级分页，将线性地址分为三部分directory(页表目录)，table(页表)，offset(页内偏移)，假设offset的范围还是0~4KB用12位来表达，假设剩下来的20位，directory和table各占10位，那么此时一个32位线性地址能够表达$2^{10}\times 2^{10}\times 2^{12}=2^{32}$，但是只需要$2^{10}\times4B+2^{10}\times4B=8KB$来保存整个页表关系
+二级分页，将线性地址分为三部分directory(页表目录)，table(页表)，offset(页内偏移)，假设offset的范围还是0~4KB用12位来表达，假设剩下来的20位，directory和table各占10位，那么此时一个32位线性地址能够表达 $2^{10}\times 2^{10}\times 2^{12}=2^{32}$ ，但是只需要 $2^{10}\times4B+2^{10}\times4B=8KB$ 来保存整个页表关系
 
 N级页表..
 

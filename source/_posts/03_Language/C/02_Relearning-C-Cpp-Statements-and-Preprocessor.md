@@ -13,9 +13,9 @@ tags:
 
 突然发现两个不错的网址
 
-https://en.cppreference.com/w/cpp/language
+[https://en.cppreference.com/w/cpp/language](https://en.cppreference.com/w/cpp/language)
 
-https://en.cppreference.com/w/c/language
+[https://en.cppreference.com/w/c/language](https://en.cppreference.com/w/c/language)
 
 书籍千千万，不如这个定义来得直接啊
 
@@ -152,7 +152,7 @@ main:
 	ret
 ```
 
-但是...https://blog.csdn.net/jeremyjone/article/details/103428009 网上都总结好了，我还折腾啥呢
+但是...[https://blog.csdn.net/jeremyjone/article/details/103428009](https://blog.csdn.net/jeremyjone/article/details/103428009) 网上都总结好了，我还折腾啥呢
 
 这都是基本操作，就不说了，我们再看**try...catch**，这个东西只有C++有，叫做异常处理，有仨关键字：try，catch，throw，看看代码实例
 
@@ -207,6 +207,8 @@ void testMyException() {
 
 基本的思路是，通过一个局部对象来表现资源，于是局部对象的析构函数将会释放资源。这样，程序员就不会忘记释放资源了。但是写析构函数是个技术活啊
 
+
+
 C++11开始支持"Range-based for loop"，就是Java中的增强for循环
 
 ```c++
@@ -247,7 +249,7 @@ void test1() {
 
 这里又认识了`#ifndef`和`#endif`(结束判断)，意思就是if not define，当然也会有`ifdef`，这样就可以防止头文件被多次导入引出的麻烦了
 
-还有我们常说的宏开关`#if`，这其实就是if的功能，看起来高大上一点而已，还有`#else`，和`#elif`(就是else if)
+还有我们常说的宏开关`#if`，这其实就是if的功能（编译时生效），看起来高大上一点而已，还有`#else`，和`#elif`(就是else if)
 
 ```c++
 #if 1
@@ -297,17 +299,17 @@ struct TestStruct1
 
 按照常理说，如果c1的内存位置是0，那么s就是1-2，c2就是3，i就是4-7；实际上呢，地址开头是0，2，4，8。意思就是默认四字节对齐
 
-首先，每个成员分别按自己的方式对齐,并能最小化长度。
+首先，每个成员分别按自己的方式对齐，并能最小化长度。
 
-其次，复杂类型(如结构)的默认对齐方式是它最长的成员的对齐方式,这样在成员是复杂类型时,可以最小化长度。
+其次，复杂类型(如结构)的默认对齐方式是它最长的成员的对齐方式,这样在成员是复杂类型时，可以最小化长度。
 
-然后，对齐后的长度必须是成员中最大的对齐参数的整数倍,这样在处理数组时可以保证每一项都边界对齐。
+然后，对齐后的长度必须是成员中最大的对齐参数的整数倍，这样在处理数组时可以保证每一项都边界对齐。
 
 还有其他的，不了解了..
 
 
 
-下一个是**`#line`**，说到这个，就不得不说`__LINE__`和`__FILE__`，一般来说这LINE和FILE就是单纯的行数和文件名，然而这个LINE和FILE就是固定的吗？显然不是，这个line就可以重新定义这两个宏
+下一个是<strong>`#line`</strong>，说到这个，就不得不说`__LINE__`和`__FILE__`，一般来说这LINE和FILE就是单纯的行数和文件名，然而这个LINE和FILE就是固定的吗？显然不是，这个line就可以重新定义这两个宏
 
 语法：`#line lineNum fileName`，其中lineNum是数字；fileName是字符串，可省略。这个宏定义了lineNum，那下一行的数字就是lineNum
 
@@ -321,7 +323,7 @@ struct TestStruct1
 
 
 
-再说源码里面常用的**`#，##，#@`**
+再说源码里面常用的<strong>`#，##，#@`</strong>
 
 `#`: 对应变量字符串化
 

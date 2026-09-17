@@ -1,0 +1,161 @@
+<svg width="1200" height="670" xmlns="http://www.w3.org/2000/svg">
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+ <defs>
+  <marker orient="auto-start-reverse" markerHeight="6" markerWidth="6" refY="5" refX="9" viewBox="0 0 10 10" id="arrow-purple">
+   <path id="svg_1" fill="#8b5cf6" d="m0,0l10,5l-10,5l0,-10z"/>
+  </marker>
+  <linearGradient y2="100%" x2="100%" y1="0%" x1="0%" id="bg-grad">
+   <stop stop-color="#0f0f1a" offset="0%"/>
+   <stop stop-color="#1a1a2e" offset="100%"/>
+  </linearGradient>
+  <linearGradient y2="100%" x2="0%" y1="0%" x1="0%" id="card-grad">
+   <stop stop-color="#1e293b" offset="0%"/>
+   <stop stop-color="#0f172a" offset="100%"/>
+  </linearGradient>
+  <linearGradient y2="100%" x2="0%" y1="0%" x1="0%" id="mld-grad">
+   <stop stop-color="#1e1b4b" offset="0%"/>
+   <stop stop-color="#0f0f2e" offset="100%"/>
+  </linearGradient>
+ </defs>
+ <!-- Title -->
+ <!-- Upper Layers -->
+ <!-- Arrow down -->
+ <!-- MLD Container -->
+ <!-- Common Entity -->
+ <!-- Common Entity blocks -->
+ <!-- Affiliated STA 1 -->
+ <!-- Affiliated STA 2 -->
+ <!-- Affiliated STA 3 -->
+ <!-- Dashed arrows from Common Entity to STAs -->
+ <!-- RF icons -->
+ <!-- Bottom: Data flow path -->
+ <!-- Step 1: Upper layer -->
+ <!-- Step 2: Common Entity decision -->
+ <!-- Step 3: Link selection arrows -->
+ <!-- Link boxes -->
+ <!-- Step 4: Per-link MAC + PHY -->
+ <!-- Air -->
+ <!-- Key insight -->
+ <!-- Bottom note -->
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_2" fill="url(#bg-grad)" height="670" width="1200"/>
+  <text id="svg_3" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="18" fill="#e2e8f0" text-anchor="middle" y="27" x="600">non-AP MLD Architecture (STA Side)</text>
+  <text id="svg_4" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="12" fill="#94a3b8" text-anchor="middle" y="47" x="600">STA MLD — non-AP Multi-Link Device 内部架构</text>
+  <rect id="svg_5" stroke-width="1.5" stroke="#64748b" fill="#1e293b" rx="8" height="40" width="500" y="59" x="350"/>
+  <text id="svg_6" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="11" fill="#94a3b8" text-anchor="middle" y="77" x="600">Upper Layers (IP / LLC)</text>
+  <text id="svg_7" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#64748b" text-anchor="middle" y="92" x="600">对上层透明 — 看到的是一个 MAC 地址</text>
+  <line id="svg_8" marker-end="url(#arrow-purple)" stroke-width="1.5" stroke="#8b5cf6" y2="117" x2="600" y1="99" x1="600"/>
+  <text id="svg_9" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#8b5cf6" y="113" x="615">MAC SAP</text>
+  <rect id="svg_10" stroke-width="2" stroke="#8b5cf6" fill="url(#mld-grad)" rx="12" height="265" width="1080" y="122" x="60"/>
+  <text id="svg_11" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="13" fill="#c4b5fd" y="145" x="100">MLD (Multi-Link Device)</text>
+  <text id="svg_12" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#64748b" y="145" x="340">MLD MAC Address: 00:11:22:33:44:55</text>
+  <text id="svg_13" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#64748b" y="145" x="680">(对外唯一的 MAC 地址)</text>
+  <rect id="svg_14" stroke-dasharray="6,3" stroke="#7c3aed" fill="#1e1b4b" rx="8" height="80" width="1020" y="157" x="90"/>
+  <text id="svg_15" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="11" fill="#a78bfa" y="177" x="115">Common Entity (共享实体)</text>
+  <rect id="svg_16" stroke="#7c3aed" fill="#312e81" rx="5" height="40" width="135" y="187" x="110"/>
+  <text id="svg_17" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#c4b5fd" text-anchor="middle" y="205" x="177">ML Setup</text>
+  <text id="svg_18" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="219" x="177">&amp; Reconfig</text>
+  <rect id="svg_19" stroke="#7c3aed" fill="#312e81" rx="5" height="40" width="135" y="187" x="260"/>
+  <text id="svg_20" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#c4b5fd" text-anchor="middle" y="205" x="327">TID-to-Link</text>
+  <text id="svg_21" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="219" x="327">Mapping</text>
+  <rect id="svg_22" stroke="#7c3aed" fill="#312e81" rx="5" height="40" width="135" y="187" x="410"/>
+  <text id="svg_23" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#c4b5fd" text-anchor="middle" y="205" x="477">Key Mgmt</text>
+  <text id="svg_24" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="219" x="477">PTK/GTK 分发</text>
+  <rect id="svg_25" stroke="#7c3aed" fill="#312e81" rx="5" height="40" width="135" y="187" x="560"/>
+  <text id="svg_26" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#c4b5fd" text-anchor="middle" y="205" x="627">Traffic</text>
+  <text id="svg_27" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="219" x="627">Separation</text>
+  <rect id="svg_28" stroke="#7c3aed" fill="#312e81" rx="5" height="40" width="135" y="187" x="710"/>
+  <text id="svg_29" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#c4b5fd" text-anchor="middle" y="205" x="777">EML Mode</text>
+  <text id="svg_30" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="219" x="777">Control</text>
+  <rect id="svg_31" stroke="#7c3aed" fill="#312e81" rx="5" height="40" width="125" y="187" x="860"/>
+  <text id="svg_32" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#c4b5fd" text-anchor="middle" y="205" x="922">Link Add</text>
+  <text id="svg_33" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="219" x="922">/ Delete</text>
+  <rect id="svg_34" stroke-width="1.5" stroke="#3b82f6" fill="#0f172a" rx="8" height="115" width="310" y="255" x="90"/>
+  <text id="svg_35" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="11" fill="#60a5fa" y="275" x="110">Affiliated STA 1</text>
+  <text id="svg_36" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#475569" y="275" x="270">addr: ...:44:01</text>
+  <rect id="svg_37" stroke="#3b82f6" fill="#1e3a5f" rx="4" height="38" width="125" y="285" x="110"/>
+  <text id="svg_38" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#93c5fd" text-anchor="middle" y="303" x="172">MAC Entity</text>
+  <text id="svg_39" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="317" x="172">Link-specific</text>
+  <rect id="svg_40" stroke="#3b82f6" fill="#1e3a5f" rx="4" height="38" width="125" y="285" x="255"/>
+  <text id="svg_41" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#93c5fd" text-anchor="middle" y="303" x="317">PHY (2.4G)</text>
+  <text id="svg_42" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="317" x="317">20/40 MHz</text>
+  <line id="svg_43" stroke-width="1.5" stroke="#3b82f6" y2="304" x2="255" y1="304" x1="235"/>
+  <text id="svg_44" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#3b82f6" y="355" x="175">Link 1</text>
+  <text id="svg_45" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" y="355" x="265">Ch 6</text>
+  <rect id="svg_46" stroke-width="1.5" stroke="#10b981" fill="#0f172a" rx="8" height="115" width="310" y="255" x="445"/>
+  <text id="svg_47" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="11" fill="#34d399" y="275" x="465">Affiliated STA 2</text>
+  <text id="svg_48" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#475569" y="275" x="625">addr: ...:44:02</text>
+  <rect id="svg_49" stroke="#10b981" fill="#1e3a5f" rx="4" height="38" width="125" y="285" x="465"/>
+  <text id="svg_50" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#6ee7b7" text-anchor="middle" y="303" x="527">MAC Entity</text>
+  <text id="svg_51" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="317" x="527">Link-specific</text>
+  <rect id="svg_52" stroke="#10b981" fill="#1e3a5f" rx="4" height="38" width="125" y="285" x="610"/>
+  <text id="svg_53" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#6ee7b7" text-anchor="middle" y="303" x="672">PHY (5G)</text>
+  <text id="svg_54" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="317" x="672">20~160 MHz</text>
+  <line id="svg_55" stroke-width="1.5" stroke="#10b981" y2="304" x2="610" y1="304" x1="590"/>
+  <text id="svg_56" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#10b981" y="355" x="530">Link 2</text>
+  <text id="svg_57" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" y="355" x="620">Ch 36</text>
+  <rect id="svg_58" stroke-width="1.5" stroke="#f97316" fill="#0f172a" rx="8" height="115" width="310" y="255" x="800"/>
+  <text id="svg_59" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="11" fill="#fb923c" y="275" x="820">Affiliated STA 3</text>
+  <text id="svg_60" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#475569" y="275" x="980">addr: ...:44:03</text>
+  <rect id="svg_61" stroke="#f97316" fill="#1e3a5f" rx="4" height="38" width="125" y="285" x="820"/>
+  <text id="svg_62" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#fdba74" text-anchor="middle" y="303" x="882">MAC Entity</text>
+  <text id="svg_63" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="317" x="882">Link-specific</text>
+  <rect id="svg_64" stroke="#f97316" fill="#1e3a5f" rx="4" height="38" width="125" y="285" x="965"/>
+  <text id="svg_65" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#fdba74" text-anchor="middle" y="303" x="1027">PHY (6G)</text>
+  <text id="svg_66" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="317" x="1027">20~320 MHz</text>
+  <line id="svg_67" stroke-width="1.5" stroke="#f97316" y2="304" x2="965" y1="304" x1="945"/>
+  <text id="svg_68" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#f97316" y="355" x="885">Link 3</text>
+  <text id="svg_69" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" y="355" x="975">Ch 1</text>
+  <line id="svg_70" stroke-dasharray="4,2" stroke="#7c3aed" y2="255" x2="245" y1="237" x1="350"/>
+  <line id="svg_71" stroke-dasharray="4,2" stroke="#7c3aed" y2="255" x2="600" y1="237" x1="600"/>
+  <line id="svg_72" stroke-dasharray="4,2" stroke="#7c3aed" y2="255" x2="955" y1="237" x1="850"/>
+  <text id="svg_73" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-style="italic" font-size="8" fill="#a78bfa" text-anchor="middle" y="250" x="430">PTK 全 Link 共享 · GTK/IGTK/BIGTK per-Link</text>
+  <text id="svg_74" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="11" fill="#3b82f6" text-anchor="middle" y="392" x="245">⚡</text>
+  <text id="svg_75" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="11" fill="#10b981" text-anchor="middle" y="392" x="600">⚡</text>
+  <text id="svg_76" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="11" fill="#f97316" text-anchor="middle" y="392" x="955">⚡</text>
+  <rect id="svg_77" stroke="#334155" fill="url(#card-grad)" rx="10" height="180" width="1080" y="412" x="60"/>
+  <text id="svg_78" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="13" fill="#e2e8f0" text-anchor="middle" y="437" x="600">MLD 数据流 Path — 一个包如何通过 MLD 发出</text>
+  <rect id="svg_79" stroke="#64748b" fill="#1e293b" rx="5" height="45" width="150" y="484" x="88"/>
+  <text id="svg_80" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#94a3b8" text-anchor="middle" y="504" x="163">上层发送数据</text>
+  <text id="svg_81" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#64748b" text-anchor="middle" y="520" x="163">dst = MLD MAC addr</text>
+  <line id="svg_82" marker-end="url(#arrow-purple)" stroke-width="1.5" stroke="#94a3b8" y2="506" x2="278" y1="506" x1="238"/>
+  <rect id="svg_83" stroke="#7c3aed" fill="#312e81" rx="5" height="60" width="200" y="476" x="283"/>
+  <text id="svg_84" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#c4b5fd" text-anchor="middle" y="496" x="383">Common Entity 决策</text>
+  <text id="svg_85" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="512" x="383">TID Mapping → 选择 Link</text>
+  <text id="svg_86" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="526" x="383">用共享 PTK 加密（无 per-Link）</text>
+  <line id="svg_87" marker-end="url(#arrow-purple)" stroke-width="1.5" stroke="#3b82f6" y2="464" x2="558" y1="494" x1="483"/>
+  <line id="svg_88" marker-end="url(#arrow-purple)" stroke-width="1.5" stroke="#10b981" y2="506" x2="558" y1="506" x1="483"/>
+  <line id="svg_89" marker-end="url(#arrow-purple)" stroke-width="1.5" stroke="#f97316" y2="549" x2="558" y1="519" x1="483"/>
+  <rect id="svg_90" stroke-width="1.5" stroke="#3b82f6" fill="#1e3a5f" rx="4" height="30" width="130" y="449" x="563"/>
+  <text id="svg_91" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#93c5fd" text-anchor="middle" y="468" x="628">Link 1 (2.4G)</text>
+  <rect id="svg_92" stroke-width="1.5" stroke="#10b981" fill="#1e3a5f" rx="4" height="30" width="130" y="492" x="563"/>
+  <text id="svg_93" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#6ee7b7" text-anchor="middle" y="511" x="628">Link 2 (5G)</text>
+  <rect id="svg_94" stroke-width="1.5" stroke="#f97316" fill="#1e3a5f" rx="4" height="30" width="130" y="534" x="563"/>
+  <text id="svg_95" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#fdba74" text-anchor="middle" y="553" x="628">Link 3 (6G)</text>
+  <line id="svg_96" marker-end="url(#arrow-purple)" stroke-width="1.5" stroke="#3b82f6" y2="464" x2="748" y1="464" x1="693"/>
+  <line id="svg_97" marker-end="url(#arrow-purple)" stroke-width="1.5" stroke="#10b981" y2="507" x2="748" y1="507" x1="693"/>
+  <line id="svg_98" marker-end="url(#arrow-purple)" stroke-width="1.5" stroke="#f97316" y2="549" x2="748" y1="549" x1="693"/>
+  <rect id="svg_99" stroke="#3b82f6" fill="#0f172a" rx="4" height="30" width="120" y="449" x="753"/>
+  <text id="svg_100" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#93c5fd" text-anchor="middle" y="468" x="813">MAC → PHY → 空中</text>
+  <rect id="svg_101" stroke="#10b981" fill="#0f172a" rx="4" height="30" width="120" y="492" x="753"/>
+  <text id="svg_102" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#6ee7b7" text-anchor="middle" y="511" x="813">MAC → PHY → 空中</text>
+  <rect id="svg_103" stroke="#f97316" fill="#0f172a" rx="4" height="30" width="120" y="534" x="753"/>
+  <text id="svg_104" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#fdba74" text-anchor="middle" y="553" x="813">MAC → PHY → 空中</text>
+  <text id="svg_105" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="11" fill="#3b82f6" y="468" x="928">⚡</text>
+  <text id="svg_106" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="11" fill="#10b981" y="511" x="928">⚡</text>
+  <text id="svg_107" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="11" fill="#f97316" y="553" x="928">⚡</text>
+  <rect id="svg_108" stroke="#7c3aed" fill="#1e1b4b" rx="6" height="115" width="170" y="454" x="948"/>
+  <text id="svg_109" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="9" fill="#c4b5fd" text-anchor="middle" y="479" x="1033">关键点</text>
+  <text id="svg_110" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="499" x="1033">1. 上层不知道走哪条Link</text>
+  <text id="svg_111" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="517" x="1033">2. Common Entity 决策</text>
+  <text id="svg_112" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="535" x="1033">3. 可以同时走多条Link</text>
+  <text id="svg_113" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#94a3b8" text-anchor="middle" y="553" x="1033">4. 单播统一用共享 PTK</text>
+  <rect id="svg_114" stroke="#7c3aed" fill="#1e1b4b" rx="8" height="50" width="1080" y="607" x="60"/>
+  <text id="svg_115" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="11" fill="#c4b5fd" text-anchor="middle" y="629" x="600">关键设计：MLD 对上层只有一个 MAC 地址，内部的 Affiliated STA 有独立地址但对上层不可见</text>
+  <text id="svg_116" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#94a3b8" text-anchor="middle" y="649" x="600">上层只需发送数据到 MLD MAC address，MLD 内部决定从哪条 Link 发出</text>
+ </g>
+</svg>

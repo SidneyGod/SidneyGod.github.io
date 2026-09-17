@@ -2,7 +2,6 @@
 title: Optimize hexo
 top: 1
 related_posts: true
-mathjax: false
 tags:
   - hexo
   - blog

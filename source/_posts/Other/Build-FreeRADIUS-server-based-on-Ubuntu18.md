@@ -13,9 +13,9 @@ date: 2020-08-22 22:46:36
 
 参考：
 
-https://www.cnblogs.com/opsprobe/p/9420502.html
+[https://www.cnblogs.com/opsprobe/p/9420502.html](https://www.cnblogs.com/opsprobe/p/9420502.html)
 
-https://blog.csdn.net/lassewang/article/details/9159543
+[https://blog.csdn.net/lassewang/article/details/9159543](https://blog.csdn.net/lassewang/article/details/9159543)
 
 # 0 RADIUS
 
@@ -263,11 +263,11 @@ sudo vim /var/www/html/daloradius/library/daloradius.conf.php
 systemctl restart freeradius apache2
 ```
 
-打开浏览器，访问**`http://ip-address/daloradius/login.php`**
+打开浏览器，访问<strong>`http://ip-address/daloradius/login.php`</strong>
 
 ![image-20200822142751997](assets/Build-FreeRADIUS-server-based-on-Ubuntu18/image-20200822142751997.png)
 
-默认的管理员账户密码是 administrator:radius
+默认的管理员账户密码是 **administrator:radius**
 
 > 查看syslog和daloradius.log时，可能会报错，修改syslog权限为644即可，加到用户组或许效果更好；至于daloradius.log去Config>Logging Settings中把想要监听的log设置成yes就好了
 
@@ -474,4 +474,4 @@ sudo gpasswd -a www-data adm
 
 ## 6.1 证书配置
 
-参考：https://blog.csdn.net/lassewang/article/details/9159543
+参考：[https://blog.csdn.net/lassewang/article/details/9159543](https://blog.csdn.net/lassewang/article/details/9159543)

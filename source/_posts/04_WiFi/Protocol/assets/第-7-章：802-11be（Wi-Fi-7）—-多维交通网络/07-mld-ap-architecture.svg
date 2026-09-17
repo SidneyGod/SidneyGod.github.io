@@ -1,0 +1,1239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 750"
+   width="1200"
+   height="750"
+   version="1.1"
+   id="svg95"
+   sodipodi:docname="07-mld-ap-architecture.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview95"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.4573333"
+     inkscape:cx="599.72553"
+     inkscape:cy="375"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg95" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs10">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card-grad"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="mld-grad"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#1e1b4b"
+         id="stop5" />
+      <stop
+         offset="100%"
+         stop-color="#0f0f2e"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       id="ap-grad"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#172554"
+         id="stop7" />
+      <stop
+         offset="100%"
+         stop-color="#0c1a3a"
+         id="stop8" />
+    </linearGradient>
+    <marker
+       id="arrow-blue"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M 0 0 L 10 5 L 0 10 z"
+         fill="#3b82f6"
+         id="path8" />
+    </marker>
+    <marker
+       id="arrow-green"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M 0 0 L 10 5 L 0 10 z"
+         fill="#10b981"
+         id="path9" />
+    </marker>
+    <marker
+       id="arrow-orange"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M 0 0 L 10 5 L 0 10 z"
+         fill="#f97316"
+         id="path10" />
+    </marker>
+  </defs>
+  <rect
+     width="1200"
+     height="750"
+     fill="url(#bg-grad)"
+     id="rect10" />
+  <!-- Title -->
+  <text
+     x="600"
+     y="28"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="18"
+     font-weight="700"
+     id="text10">AP MLD Architecture — Serving Multiple Client MLDs</text>
+  <text
+     x="600"
+     y="48"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="12"
+     id="text11">AP MLD 架构 — 一个 AP MLD 同时服务多个 Client MLD</text>
+  <!-- DS / Backbone -->
+  <rect
+     x="430"
+     y="58"
+     width="340"
+     height="35"
+     rx="6"
+     fill="#1e293b"
+     stroke="#64748b"
+     stroke-width="1.5"
+     id="rect11" />
+  <text
+     x="600"
+     y="80"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="11"
+     id="text12">DS (Distribution System) / Backbone</text>
+  <line
+     x1="600"
+     y1="93"
+     x2="600"
+     y2="108"
+     stroke="#64748b"
+     stroke-width="1.5"
+     marker-end="url(#arrow-blue)"
+     id="line12" />
+  <!-- AP MLD Container -->
+  <rect
+     x="80"
+     y="108"
+     width="1040"
+     height="230"
+     rx="12"
+     fill="url(#ap-grad)"
+     stroke="#3b82f6"
+     stroke-width="2"
+     id="rect12" />
+  <text
+     x="120"
+     y="132"
+     fill="#93c5fd"
+     font-size="13"
+     font-weight="700"
+     id="text13">AP MLD</text>
+  <text
+     x="260"
+     y="132"
+     fill="#475569"
+     font-size="10"
+     id="text14">AP MLD MAC Address: AA:BB:CC:DD:EE:FF</text>
+  <!-- AP Common Entity -->
+  <rect
+     x="110"
+     y="145"
+     width="980"
+     height="55"
+     rx="6"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1"
+     stroke-dasharray="6,3"
+     id="rect14" />
+  <text
+     x="130"
+     y="165"
+     fill="#a78bfa"
+     font-size="10"
+     font-weight="600"
+     id="text15">AP Common Entity</text>
+  <rect
+     x="130"
+     y="172"
+     width="100"
+     height="22"
+     rx="3"
+     fill="#312e81"
+     stroke="#7c3aed"
+     stroke-width="0.8"
+     id="rect15" />
+  <text
+     x="180"
+     y="187"
+     text-anchor="middle"
+     fill="#c4b5fd"
+     font-size="8"
+     id="text16">ML Discovery</text>
+  <rect
+     x="245"
+     y="172"
+     width="100"
+     height="22"
+     rx="3"
+     fill="#312e81"
+     stroke="#7c3aed"
+     stroke-width="0.8"
+     id="rect16" />
+  <text
+     x="295"
+     y="187"
+     text-anchor="middle"
+     fill="#c4b5fd"
+     font-size="8"
+     id="text17">TID Mapping</text>
+  <rect
+     x="360"
+     y="172"
+     width="110"
+     height="22"
+     rx="3"
+     fill="#312e81"
+     stroke="#7c3aed"
+     stroke-width="0.8"
+     id="rect17" />
+  <text
+     x="415"
+     y="187"
+     text-anchor="middle"
+     fill="#c4b5fd"
+     font-size="8"
+     id="text18">Key Distribution</text>
+  <rect
+     x="485"
+     y="172"
+     width="100"
+     height="22"
+     rx="3"
+     fill="#312e81"
+     stroke="#7c3aed"
+     stroke-width="0.8"
+     id="rect18" />
+  <text
+     x="535"
+     y="187"
+     text-anchor="middle"
+     fill="#c4b5fd"
+     font-size="8"
+     id="text19">EML Notify</text>
+  <rect
+     x="600"
+     y="172"
+     width="120"
+     height="22"
+     rx="3"
+     fill="#312e81"
+     stroke="#7c3aed"
+     stroke-width="0.8"
+     id="rect19" />
+  <text
+     x="660"
+     y="187"
+     text-anchor="middle"
+     fill="#c4b5fd"
+     font-size="8"
+     id="text20">Client MLD Mgmt</text>
+  <rect
+     x="735"
+     y="172"
+     width="120"
+     height="22"
+     rx="3"
+     fill="#312e81"
+     stroke="#7c3aed"
+     stroke-width="0.8"
+     id="rect20" />
+  <text
+     x="795"
+     y="187"
+     text-anchor="middle"
+     fill="#c4b5fd"
+     font-size="8"
+     id="text21">Traffic Steering</text>
+  <rect
+     x="870"
+     y="172"
+     width="110"
+     height="22"
+     rx="3"
+     fill="#312e81"
+     stroke="#7c3aed"
+     stroke-width="0.8"
+     id="rect21" />
+  <text
+     x="925"
+     y="187"
+     text-anchor="middle"
+     fill="#c4b5fd"
+     font-size="8"
+     id="text22">Link Reconfig</text>
+  <!-- AP Affiliated STA 1 (2.4G) -->
+  <rect
+     x="110"
+     y="218"
+     width="280"
+     height="105"
+     rx="8"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect22" />
+  <text
+     x="130"
+     y="238"
+     fill="#60a5fa"
+     font-size="11"
+     font-weight="600"
+     id="text23">AP Affiliated STA 1</text>
+  <text
+     x="260"
+     y="238"
+     fill="#475569"
+     font-size="8"
+     id="text24">addr: AA:BB:CC:DD:01</text>
+  <rect
+     x="130"
+     y="248"
+     width="115"
+     height="35"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect24" />
+  <text
+     x="187"
+     y="265"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="9"
+     font-weight="600"
+     id="text25">MAC Entity</text>
+  <text
+     x="187"
+     y="278"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text26">BSS 1</text>
+  <rect
+     x="260"
+     y="248"
+     width="115"
+     height="35"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect26" />
+  <text
+     x="317"
+     y="265"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="9"
+     font-weight="600"
+     id="text27">PHY (2.4G)</text>
+  <text
+     x="317"
+     y="278"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text28">Ch 1/6/11</text>
+  <line
+     x1="245"
+     y1="265"
+     x2="260"
+     y2="265"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="line28" />
+  <text
+     x="187"
+     y="308"
+     fill="#3b82f6"
+     font-size="9"
+     font-weight="600"
+     id="text29">Link 1</text>
+  <!-- AP Affiliated STA 2 (5G) -->
+  <rect
+     x="440"
+     y="218"
+     width="280"
+     height="105"
+     rx="8"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect29" />
+  <text
+     x="460"
+     y="238"
+     fill="#34d399"
+     font-size="11"
+     font-weight="600"
+     id="text30">AP Affiliated STA 2</text>
+  <text
+     x="590"
+     y="238"
+     fill="#475569"
+     font-size="8"
+     id="text31">addr: AA:BB:CC:DD:02</text>
+  <rect
+     x="460"
+     y="248"
+     width="115"
+     height="35"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect31" />
+  <text
+     x="517"
+     y="265"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="9"
+     font-weight="600"
+     id="text32">MAC Entity</text>
+  <text
+     x="517"
+     y="278"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text33">BSS 2</text>
+  <rect
+     x="590"
+     y="248"
+     width="115"
+     height="35"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect33" />
+  <text
+     x="647"
+     y="265"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="9"
+     font-weight="600"
+     id="text34">PHY (5G)</text>
+  <text
+     x="647"
+     y="278"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text35">Ch 36~165</text>
+  <line
+     x1="575"
+     y1="265"
+     x2="590"
+     y2="265"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="line35" />
+  <text
+     x="517"
+     y="308"
+     fill="#10b981"
+     font-size="9"
+     font-weight="600"
+     id="text36">Link 2</text>
+  <!-- AP Affiliated STA 3 (6G) -->
+  <rect
+     x="770"
+     y="218"
+     width="280"
+     height="105"
+     rx="8"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect36" />
+  <text
+     x="790"
+     y="238"
+     fill="#fb923c"
+     font-size="11"
+     font-weight="600"
+     id="text37">AP Affiliated STA 3</text>
+  <text
+     x="920"
+     y="238"
+     fill="#475569"
+     font-size="8"
+     id="text38">addr: AA:BB:CC:DD:03</text>
+  <rect
+     x="790"
+     y="248"
+     width="115"
+     height="35"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect38" />
+  <text
+     x="847"
+     y="265"
+     text-anchor="middle"
+     fill="#fdba74"
+     font-size="9"
+     font-weight="600"
+     id="text39">MAC Entity</text>
+  <text
+     x="847"
+     y="278"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text40">BSS 3</text>
+  <rect
+     x="920"
+     y="248"
+     width="115"
+     height="35"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect40" />
+  <text
+     x="977"
+     y="265"
+     text-anchor="middle"
+     fill="#fdba74"
+     font-size="9"
+     font-weight="600"
+     id="text41">PHY (6G)</text>
+  <text
+     x="977"
+     y="278"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text42">Ch 1~233</text>
+  <line
+     x1="905"
+     y1="265"
+     x2="920"
+     y2="265"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="line42" />
+  <text
+     x="847"
+     y="308"
+     fill="#f97316"
+     font-size="9"
+     font-weight="600"
+     id="text43">Link 3</text>
+  <!-- Air interface -->
+  <line
+     x1="60"
+     y1="345"
+     x2="1140"
+     y2="345"
+     stroke="#475569"
+     stroke-width="1"
+     stroke-dasharray="8,4"
+     id="line43" />
+  <text
+     x="600"
+     y="358"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="9"
+     id="text44">Air Interface</text>
+  <!-- Link indicators -->
+  <text
+     x="245"
+     y="345"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="11"
+     id="text45">⚡</text>
+  <text
+     x="600"
+     y="345"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     id="text46">⚡</text>
+  <text
+     x="955"
+     y="345"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="11"
+     id="text47">⚡</text>
+  <!-- Client MLD 1 -->
+  <rect
+     x="60"
+     y="375"
+     width="340"
+     height="170"
+     rx="10"
+     fill="url(#mld-grad)"
+     stroke="#a78bfa"
+     stroke-width="1.5"
+     id="rect47" />
+  <text
+     x="90"
+     y="398"
+     fill="#c4b5fd"
+     font-size="11"
+     font-weight="700"
+     id="text48">Client MLD 1 (STA)</text>
+  <text
+     x="250"
+     y="398"
+     fill="#64748b"
+     font-size="8"
+     id="text49">MLD addr: 11:22:33:01:00:00</text>
+  <rect
+     x="80"
+     y="410"
+     width="90"
+     height="55"
+     rx="5"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect49" />
+  <text
+     x="125"
+     y="428"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="8"
+     font-weight="600"
+     id="text50">STA 1</text>
+  <text
+     x="125"
+     y="442"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text51">2.4G / ...:01:01</text>
+  <text
+     x="125"
+     y="456"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="7"
+     id="text52">Link 1</text>
+  <rect
+     x="185"
+     y="410"
+     width="90"
+     height="55"
+     rx="5"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect52" />
+  <text
+     x="230"
+     y="428"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="8"
+     font-weight="600"
+     id="text53">STA 2</text>
+  <text
+     x="230"
+     y="442"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text54">5G / ...:01:02</text>
+  <text
+     x="230"
+     y="456"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="7"
+     id="text55">Link 2</text>
+  <rect
+     x="290"
+     y="410"
+     width="90"
+     height="55"
+     rx="5"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect55" />
+  <text
+     x="335"
+     y="428"
+     text-anchor="middle"
+     fill="#fdba74"
+     font-size="8"
+     font-weight="600"
+     id="text56">STA 3</text>
+  <text
+     x="335"
+     y="442"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text57">6G / ...:01:03</text>
+  <text
+     x="335"
+     y="456"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="7"
+     id="text58">Link 3</text>
+  <!-- Lines from Client MLD 1 to AP links -->
+  <line
+     x1="125"
+     y1="405"
+     x2="125"
+     y2="370"
+     stroke="#3b82f6"
+     stroke-width="1"
+     stroke-dasharray="3,2"
+     marker-end="url(#arrow-blue)"
+     id="line58" />
+  <line
+     x1="230"
+     y1="405"
+     x2="230"
+     y2="370"
+     stroke="#10b981"
+     stroke-width="1"
+     stroke-dasharray="3,2"
+     marker-end="url(#arrow-green)"
+     id="line59" />
+  <line
+     x1="335"
+     y1="405"
+     x2="335"
+     y2="370"
+     stroke="#f97316"
+     stroke-width="1"
+     stroke-dasharray="3,2"
+     marker-end="url(#arrow-orange)"
+     id="line60" />
+  <text
+     x="230"
+     y="490"
+     text-anchor="middle"
+     fill="#a78bfa"
+     font-size="8"
+     id="text60">扩展分织结构 (ML Probe)</text>
+  <text
+     x="230"
+     y="505"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text61">通过任意一条 Link 发现整个 MLD</text>
+  <text
+     x="230"
+     y="520"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text62">获取对端 MLD 的所有 Link 信息</text>
+  <!-- Client MLD 2 -->
+  <rect
+     x="430"
+     y="375"
+     width="340"
+     height="170"
+     rx="10"
+     fill="url(#mld-grad)"
+     stroke="#a78bfa"
+     stroke-width="1.5"
+     id="rect62" />
+  <text
+     x="460"
+     y="398"
+     fill="#c4b5fd"
+     font-size="11"
+     font-weight="700"
+     id="text63">Client MLD 2 (STA)</text>
+  <text
+     x="620"
+     y="398"
+     fill="#64748b"
+     font-size="8"
+     id="text64">MLD addr: 11:22:33:02:00:00</text>
+  <rect
+     x="450"
+     y="410"
+     width="90"
+     height="55"
+     rx="5"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect64" />
+  <text
+     x="495"
+     y="428"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="8"
+     font-weight="600"
+     id="text65">STA 1</text>
+  <text
+     x="495"
+     y="442"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text66">2.4G / ...:02:01</text>
+  <text
+     x="495"
+     y="456"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="7"
+     id="text67">Link 1</text>
+  <rect
+     x="555"
+     y="410"
+     width="90"
+     height="55"
+     rx="5"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect67" />
+  <text
+     x="600"
+     y="428"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="8"
+     font-weight="600"
+     id="text68">STA 2</text>
+  <text
+     x="600"
+     y="442"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text69">5G / ...:02:02</text>
+  <text
+     x="600"
+     y="456"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="7"
+     id="text70">Link 2</text>
+  <line
+     x1="495"
+     y1="405"
+     x2="495"
+     y2="370"
+     stroke="#3b82f6"
+     stroke-width="1"
+     stroke-dasharray="3,2"
+     marker-end="url(#arrow-blue)"
+     id="line70" />
+  <line
+     x1="600"
+     y1="405"
+     x2="600"
+     y2="370"
+     stroke="#10b981"
+     stroke-width="1"
+     stroke-dasharray="3,2"
+     marker-end="url(#arrow-green)"
+     id="line71" />
+  <text
+     x="600"
+     y="490"
+     text-anchor="middle"
+     fill="#a78bfa"
+     font-size="8"
+     id="text71">只使用 2 条 Link</text>
+  <text
+     x="600"
+     y="505"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text72">设备只支持 2.4G + 5G</text>
+  <text
+     x="600"
+     y="520"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text73">或者由 TID Mapping 决定</text>
+  <!-- Client MLD 3 -->
+  <rect
+     x="800"
+     y="375"
+     width="340"
+     height="170"
+     rx="10"
+     fill="url(#mld-grad)"
+     stroke="#a78bfa"
+     stroke-width="1.5"
+     id="rect73" />
+  <text
+     x="830"
+     y="398"
+     fill="#c4b5fd"
+     font-size="11"
+     font-weight="700"
+     id="text74">Client MLD 3 (STA)</text>
+  <text
+     x="990"
+     y="398"
+     fill="#64748b"
+     font-size="8"
+     id="text75">MLD addr: 11:22:33:03:00:00</text>
+  <rect
+     x="820"
+     y="410"
+     width="90"
+     height="55"
+     rx="5"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect75" />
+  <text
+     x="865"
+     y="428"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="8"
+     font-weight="600"
+     id="text76">STA 1</text>
+  <text
+     x="865"
+     y="442"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text77">2.4G / ...:03:01</text>
+  <text
+     x="865"
+     y="456"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="7"
+     id="text78">Link 1</text>
+  <rect
+     x="925"
+     y="410"
+     width="90"
+     height="55"
+     rx="5"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect78" />
+  <text
+     x="970"
+     y="428"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="8"
+     font-weight="600"
+     id="text79">STA 2</text>
+  <text
+     x="970"
+     y="442"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text80">5G / ...:03:02</text>
+  <text
+     x="970"
+     y="456"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="7"
+     id="text81">Link 2</text>
+  <rect
+     x="1030"
+     y="410"
+     width="90"
+     height="55"
+     rx="5"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect81" />
+  <text
+     x="1075"
+     y="428"
+     text-anchor="middle"
+     fill="#fdba74"
+     font-size="8"
+     font-weight="600"
+     id="text82">STA 3</text>
+  <text
+     x="1075"
+     y="442"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text83">6G / ...:03:03</text>
+  <text
+     x="1075"
+     y="456"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="7"
+     id="text84">Link 3</text>
+  <line
+     x1="865"
+     y1="405"
+     x2="865"
+     y2="370"
+     stroke="#3b82f6"
+     stroke-width="1"
+     stroke-dasharray="3,2"
+     marker-end="url(#arrow-blue)"
+     id="line84" />
+  <line
+     x1="970"
+     y1="405"
+     x2="970"
+     y2="370"
+     stroke="#10b981"
+     stroke-width="1"
+     stroke-dasharray="3,2"
+     marker-end="url(#arrow-green)"
+     id="line85" />
+  <line
+     x1="1075"
+     y1="405"
+     x2="1075"
+     y2="370"
+     stroke="#f97316"
+     stroke-width="1"
+     stroke-dasharray="3,2"
+     marker-end="url(#arrow-orange)"
+     id="line86" />
+  <text
+     x="970"
+     y="490"
+     text-anchor="middle"
+     fill="#a78bfa"
+     font-size="8"
+     id="text86">全部 3 条 Link 都使用</text>
+  <text
+     x="970"
+     y="505"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text87">eMLSR 模式：单射频在多条 Link 间切换</text>
+  <text
+     x="970"
+     y="520"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text88">AP 通过 EML Notification 控制切换</text>
+  <!-- Bottom: Key insight -->
+  <rect
+     x="60"
+     y="560"
+     width="1080"
+     height="80"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect88" />
+  <text
+     x="600"
+     y="585"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="13"
+     font-weight="700"
+     id="text89">一个 AP MLD ，多个 Client MLD — 共享相同的特性</text>
+  <rect
+     x="90"
+     y="598"
+     width="220"
+     height="30"
+     rx="4"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect89" />
+  <text
+     x="200"
+     y="617"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9"
+     id="text90">每个 Client MLD 自由选择使用哪些 Link</text>
+  <rect
+     x="330"
+     y="598"
+     width="220"
+     height="30"
+     rx="4"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect90" />
+  <text
+     x="440"
+     y="617"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="9"
+     id="text91">扩展剪剪架构：一条 Link 即一个 BSS</text>
+  <rect
+     x="570"
+     y="598"
+     width="220"
+     height="30"
+     rx="4"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect91" />
+  <text
+     x="680"
+     y="617"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="9"
+     id="text92">密钥在 MLD 级别协商，per-link 派生</text>
+  <rect
+     x="810"
+     y="598"
+     width="220"
+     height="30"
+     rx="4"
+     fill="#0f172a"
+     stroke="#8b5cf6"
+     stroke-width="1"
+     id="rect92" />
+  <text
+     x="920"
+     y="617"
+     text-anchor="middle"
+     fill="#8b5cf6"
+     font-size="9"
+     id="text93">TID Mapping 端端可配，流量分离</text>
+  <!-- Multi-link BSS concept -->
+  <rect
+     x="60"
+     y="655"
+     width="1080"
+     height="55"
+     rx="8"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1"
+     id="rect93" />
+  <text
+     x="600"
+     y="678"
+     text-anchor="middle"
+     fill="#c4b5fd"
+     font-size="11"
+     font-weight="600"
+     id="text94">架构对比：传统 WiFi = 一个 AP 管一个 BSS → 11be = 一个 AP MLD 管多个 BSS (Link)</text>
+  <text
+     x="600"
+     y="698"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text95">每条 Link 是独立的 BSS，有自己的 Beacon、SSID、信息内容，但对外给对方的是一个整体</text>
+</svg>

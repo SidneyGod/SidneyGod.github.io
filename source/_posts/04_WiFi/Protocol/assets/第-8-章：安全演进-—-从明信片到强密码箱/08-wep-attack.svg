@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 520"
+   width="1200"
+   height="520"
+   version="1.1"
+   id="svg39"
+   sodipodi:docname="08-wep-attack.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview39"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.35"
+     inkscape:cx="600"
+     inkscape:cy="260.37037"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg39" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card-grad"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+  </defs>
+  <rect
+     width="1200"
+     height="520"
+     fill="url(#bg-grad)"
+     id="rect4" />
+  <text
+     x="600"
+     y="30"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="16"
+     font-weight="700"
+     id="text4">WEP 攻击原理 — IV 重用与密钥恢复</text>
+  <text
+     x="600"
+     y="48"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="11"
+     id="text5">IV太短(24bit) → 几小时内重复 → 密钥流偏差 → 经统分析破解</text>
+  <!-- Step 1: IV Collision -->
+  <rect
+     x="40"
+     y="65"
+     width="350"
+     height="180"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     id="rect5" />
+  <text
+     x="215"
+     y="88"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="13"
+     font-weight="700"
+     id="text6">Step 1: IV 重复</text>
+  <text
+     x="60"
+     y="112"
+     fill="#94a3b8"
+     font-size="10"
+     id="text7">Packets 1: IV=0x1A2B3C, Key=K</text>
+  <text
+     x="60"
+     y="128"
+     fill="#94a3b8"
+     font-size="10"
+     id="text8">  C1 = P1 XOR RC4(IV, K)</text>
+  <text
+     x="60"
+     y="152"
+     fill="#94a3b8"
+     font-size="10"
+     id="text9">Packets 2: IV=0x1A2B3C, Key=K</text>
+  <text
+     x="60"
+     y="168"
+     fill="#94a3b8"
+     font-size="10"
+     id="text10">  C2 = P2 XOR RC4(IV, K)</text>
+  <rect
+     x="60"
+     y="180"
+     width="310"
+     height="25"
+     rx="4"
+     fill="#7f1d1d"
+     id="rect10" />
+  <text
+     x="215"
+     y="197"
+     text-anchor="middle"
+     fill="#fca5a5"
+     font-size="10"
+     id="text11">IV相同 → RC4密钥流相同!</text>
+  <text
+     x="60"
+     y="222"
+     fill="#fbbf24"
+     font-size="10"
+     id="text12">16.7M 种 IV, 线下好的场景下几小时就能重复</text>
+  <!-- Step 2: XOR Recovery -->
+  <rect
+     x="420"
+     y="65"
+     width="350"
+     height="180"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect12" />
+  <text
+     x="595"
+     y="88"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="13"
+     font-weight="700"
+     id="text13">Step 2: XOR 恢复明文</text>
+  <text
+     x="440"
+     y="112"
+     fill="#94a3b8"
+     font-size="10"
+     id="text14">C1 XOR C2</text>
+  <text
+     x="440"
+     y="128"
+     fill="#94a3b8"
+     font-size="10"
+     id="text15">= (P1 XOR KS) XOR (P2 XOR KS)</text>
+  <text
+     x="440"
+     y="144"
+     fill="#94a3b8"
+     font-size="10"
+     id="text16">= P1 XOR P2</text>
+  <rect
+     x="440"
+     y="156"
+     width="310"
+     height="25"
+     rx="4"
+     fill="#7c2d12"
+     id="rect16" />
+  <text
+     x="595"
+     y="173"
+     text-anchor="middle"
+     fill="#fdba74"
+     font-size="10"
+     id="text17">密钥流被消损，只剩下两个明文的 XOR</text>
+  <text
+     x="440"
+     y="200"
+     fill="#fbbf24"
+     font-size="10"
+     id="text18">若 P2 已知(ARP帧)，则 P1 = (P1^P2) XOR P2</text>
+  <!-- Step 3: FMS Attack -->
+  <rect
+     x="800"
+     y="65"
+     width="360"
+     height="180"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#8b5cf6"
+     stroke-width="1.5"
+     id="rect18" />
+  <text
+     x="980"
+     y="88"
+     text-anchor="middle"
+     fill="#8b5cf6"
+     font-size="13"
+     font-weight="700"
+     id="text19">Step 3: FMS 攻击</text>
+  <text
+     x="820"
+     y="112"
+     fill="#94a3b8"
+     font-size="10"
+     id="text20">弱 IV: (A+3, N-1, X)</text>
+  <text
+     x="820"
+     y="128"
+     fill="#94a3b8"
+     font-size="10"
+     id="text21">导自 S[1] 的信息泄露</text>
+  <text
+     x="820"
+     y="152"
+     fill="#94a3b8"
+     font-size="10"
+     id="text22">收集约 40,000-80,000 个包</text>
+  <text
+     x="820"
+     y="168"
+     fill="#94a3b8"
+     font-size="10"
+     id="text23">经统分析密钥流偏差</text>
+  <rect
+     x="820"
+     y="180"
+     width="320"
+     height="25"
+     rx="4"
+     fill="#3b0764"
+     id="rect23" />
+  <text
+     x="980"
+     y="197"
+     text-anchor="middle"
+     fill="#c4b5fd"
+     font-size="10"
+     id="text24">2001年FMS：约1小时可破解 40-bit 密钥</text>
+  <text
+     x="820"
+     y="222"
+     fill="#fbbf24"
+     font-size="10"
+     id="text25">2007年Aircrack-ng: 几分钟破解</text>
+  <!-- Bottom: RC4 Weak Key -->
+  <rect
+     x="40"
+     y="265"
+     width="1120"
+     height="240"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect25" />
+  <text
+     x="600"
+     y="290"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="14"
+     font-weight="700"
+     id="text26">RC4 密钥流偏差技术说明</text>
+  <rect
+     x="60"
+     y="305"
+     width="500"
+     height="110.74074"
+     rx="6"
+     fill="#0f172a"
+     stroke="#ef4444"
+     stroke-width="1.10926"
+     id="rect26" />
+  <text
+     x="310"
+     y="325"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="12"
+     font-weight="600"
+     id="text27">RC4 密钥制程 (KSA)</text>
+  <text
+     x="80"
+     y="345"
+     fill="#94a3b8"
+     font-size="10"
+     id="text28">for i = 0 to 255: S[i] = i</text>
+  <text
+     x="80"
+     y="360"
+     fill="#94a3b8"
+     font-size="10"
+     id="text29">j = 0</text>
+  <text
+     x="80"
+     y="375"
+     fill="#94a3b8"
+     font-size="10"
+     id="text30">for i = 0 to 255:</text>
+  <text
+     x="100"
+     y="390"
+     fill="#94a3b8"
+     font-size="10"
+     id="text31">j = (j + S[i] + K[i mod len]) mod 256</text>
+  <text
+     x="100"
+     y="405"
+     fill="#94a3b8"
+     font-size="10"
+     id="text32">swap(S[i], S[j])</text>
+  <rect
+     x="590"
+     y="305"
+     width="550"
+     height="110.74074"
+     rx="6"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1.10926"
+     id="rect32" />
+  <text
+     x="865"
+     y="325"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="12"
+     font-weight="600"
+     id="text33">密钥流偏差 (FMS 发现)</text>
+  <text
+     x="610"
+     y="345"
+     fill="#94a3b8"
+     font-size="10"
+     id="text34">当 IV = (A+3, N-1, X) 时:</text>
+  <text
+     x="610"
+     y="360"
+     fill="#94a3b8"
+     font-size="10"
+     id="text35">KSA 第一步可能不冲空 S[1]</text>
+  <text
+     x="610"
+     y="375"
+     fill="#94a3b8"
+     font-size="10"
+     id="text36">造成 PRGA 输出的第一个字节有偏差</text>
+  <text
+     x="610"
+     y="390"
+     fill="#94a3b8"
+     font-size="10"
+     id="text37">经统分析可以推断密钥流</text>
+  <rect
+     x="60"
+     y="426"
+     width="1080"
+     height="35"
+     rx="4"
+     fill="#7f1d1d"
+     id="rect37" />
+  <text
+     x="600"
+     y="449"
+     text-anchor="middle"
+     fill="#fca5a5"
+     font-size="11px"
+     id="text38">RC4本身是安全的，但 WEP 的 IV携带方式导自密钥流偏差，这是单经理的错误而非 RC4的错</text>
+  <text
+     x="600"
+     y="486"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="11px"
+     id="text39">交通比喻：车轨本身很好（RC4 算法本身没被破），但运输/调度方式有问题（IV 的携带和使用方式）</text>
+</svg>

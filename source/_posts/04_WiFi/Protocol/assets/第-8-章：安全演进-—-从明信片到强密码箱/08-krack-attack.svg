@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 520"
+   width="1200"
+   height="520"
+   version="1.1"
+   id="svg28"
+   sodipodi:docname="08-krack-attack.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview28"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.3528978"
+     inkscape:cx="599.82356"
+     inkscape:cy="259.81267"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg28" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs5">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card-grad"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+    <marker
+       id="arrow-p"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="m0,0l10,5l-10,5l0,-10z"
+         fill="#a78bfa"
+         id="path4" />
+    </marker>
+    <marker
+       id="arrow-g"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="m0,0l10,5l-10,5l0,-10z"
+         fill="#10b981"
+         id="path5" />
+    </marker>
+  </defs>
+  <rect
+     width="1200"
+     height="520"
+     fill="url(#bg-grad)"
+     id="rect5" />
+  <text
+     x="600"
+     y="30"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="16"
+     font-weight="700"
+     id="text5">KRACK 攻击 — 密钥重装攻击 (2017)</text>
+  <text
+     x="600"
+     y="48"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="11"
+     id="text6">Key Reinstallation Attack | Mathy Vanhoef 发现 | 影响所有 WPA2 握手</text>
+  <!-- Normal handshake (left) -->
+  <text
+     x="300"
+     y="75"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="14"
+     font-weight="700"
+     id="text7">正常握手</text>
+  <rect
+     x="80"
+     y="85"
+     width="100"
+     height="30"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect7" />
+  <text
+     x="130"
+     y="105"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="10"
+     font-weight="600"
+     id="text8">STA</text>
+  <line
+     x1="130"
+     y1="115"
+     x2="130"
+     y2="350"
+     stroke="#3b82f6"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line8" />
+  <rect
+     x="420"
+     y="85"
+     width="100"
+     height="30"
+     rx="4"
+     fill="#0e4429"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect8" />
+  <text
+     x="470"
+     y="105"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="10"
+     font-weight="600"
+     id="text9">AP</text>
+  <line
+     x1="470"
+     y1="115"
+     x2="470"
+     y2="350"
+     stroke="#10b981"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line9" />
+  <!-- Normal: Msg 3 -->
+  <line
+     x1="460"
+     y1="140"
+     x2="140"
+     y2="140"
+     stroke="#a78bfa"
+     stroke-width="1.5"
+     marker-end="url(#arrow-p)"
+     id="line10" />
+  <rect
+     x="200"
+     y="125"
+     width="200"
+     height="28"
+     rx="3"
+     fill="#1c1917"
+     stroke="#a78bfa"
+     stroke-width="1"
+     id="rect10" />
+  <text
+     x="300"
+     y="143"
+     text-anchor="middle"
+     fill="#c4b5fd"
+     font-size="10"
+     id="text10">Msg 3: 安装密钥 K</text>
+  <!-- Normal: Msg 4 -->
+  <line
+     x1="140"
+     y1="180"
+     x2="460"
+     y2="180"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-g)"
+     id="line11" />
+  <rect
+     x="200"
+     y="165"
+     width="200"
+     height="28"
+     rx="3"
+     fill="#1c1917"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect11" />
+  <text
+     x="300"
+     y="183"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="10"
+     id="text11">Msg 4: 确认</text>
+  <!-- Normal: Communication -->
+  <rect
+     x="150"
+     y="210"
+     width="250"
+     height="35"
+     rx="6"
+     fill="#065f46"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect12" />
+  <text
+     x="275"
+     y="232"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="10"
+     id="text12">双方用密钥 K 加密通信</text>
+  <text
+     x="300"
+     y="270"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10"
+     id="text13">正常：nonce 重置，安全</text>
+  <!-- KRACK attack (right) -->
+  <text
+     x="900"
+     y="75"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="14"
+     font-weight="700"
+     id="text14">KRACK 攻击</text>
+  <rect
+     x="680"
+     y="85"
+     width="100"
+     height="30"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect14" />
+  <text
+     x="730"
+     y="105"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="10"
+     font-weight="600"
+     id="text15">STA</text>
+  <line
+     x1="730"
+     y1="115"
+     x2="730"
+     y2="490"
+     stroke="#3b82f6"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line15" />
+  <rect
+     x="1020"
+     y="85"
+     width="100"
+     height="30"
+     rx="4"
+     fill="#0e4429"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect15" />
+  <text
+     x="1070"
+     y="105"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="10"
+     font-weight="600"
+     id="text16">AP</text>
+  <line
+     x1="1070"
+     y1="115"
+     x2="1070"
+     y2="490"
+     stroke="#10b981"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line16" />
+  <!-- Attacker box -->
+  <rect
+     x="820"
+     y="125"
+     width="120"
+     height="26"
+     rx="4"
+     fill="#7f1d1d"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect16" />
+  <text
+     x="880"
+     y="143"
+     text-anchor="middle"
+     fill="#fca5a5"
+     font-size="9"
+     font-weight="600"
+     id="text17">攻击者 (MITM)</text>
+  <!-- KRACK: Msg 3 -->
+  <line
+     x1="1060"
+     y1="170"
+     x2="740"
+     y2="170"
+     stroke="#a78bfa"
+     stroke-width="1.5"
+     marker-end="url(#arrow-p)"
+     id="line17" />
+  <rect
+     x="800"
+     y="155"
+     width="180"
+     height="28"
+     rx="3"
+     fill="#1c1917"
+     stroke="#a78bfa"
+     stroke-width="1"
+     id="rect17" />
+  <text
+     x="890"
+     y="173"
+     text-anchor="middle"
+     fill="#c4b5fd"
+     font-size="10"
+     id="text18">Msg 3: 安装密钥 K</text>
+  <!-- KRACK: Msg 4 blocked -->
+  <line
+     x1="740"
+     y1="210"
+     x2="820"
+     y2="210"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     stroke-dasharray="4,3"
+     id="line18" />
+  <rect
+     x="745"
+     y="195"
+     width="130"
+     height="28"
+     rx="3"
+     fill="#7f1d1d"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect18" />
+  <text
+     x="810"
+     y="213"
+     text-anchor="middle"
+     fill="#fca5a5"
+     font-size="9"
+     id="text19">Msg 4 被截断</text>
+  <!-- KRACK: AP timeout, resend -->
+  <rect
+     x="980"
+     y="225"
+     width="160"
+     height="26"
+     rx="3"
+     fill="#7c2d12"
+     id="rect19" />
+  <text
+     x="1060"
+     y="243"
+     text-anchor="middle"
+     fill="#fdba74"
+     font-size="9"
+     id="text20">AP 超时，重发 Msg 3</text>
+  <!-- KRACK: Msg 3 again -->
+  <line
+     x1="1060"
+     y1="270"
+     x2="740"
+     y2="270"
+     stroke="#a78bfa"
+     stroke-width="1.5"
+     marker-end="url(#arrow-p)"
+     id="line20" />
+  <rect
+     x="800"
+     y="255"
+     width="180"
+     height="28"
+     rx="3"
+     fill="#7f1d1d"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     id="rect20" />
+  <text
+     x="890"
+     y="273"
+     text-anchor="middle"
+     fill="#fca5a5"
+     font-size="10"
+     id="text21">重发 Msg 3: 重装密钥 K!</text>
+  <!-- KRACK: nonce reset -->
+  <rect
+     x="680"
+     y="300"
+     width="180"
+     height="40"
+     rx="4"
+     fill="#7f1d1d"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     id="rect21" />
+  <text
+     x="770"
+     y="318"
+     text-anchor="middle"
+     fill="#fca5a5"
+     font-size="10"
+     font-weight="600"
+     id="text22">nonce 计数器重置!</text>
+  <text
+     x="770"
+     y="333"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text23">相同密钥 + 相同 nonce</text>
+  <!-- KRACK: Msg 4 again -->
+  <line
+     x1="740"
+     y1="360"
+     x2="1060"
+     y2="360"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-g)"
+     id="line23" />
+  <rect
+     x="800"
+     y="345"
+     width="180"
+     height="28"
+     rx="3"
+     fill="#1c1917"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect23" />
+  <text
+     x="890"
+     y="363"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="10"
+     id="text24">Msg 4: 确认 (重新安装)</text>
+  <!-- KRACK: result -->
+  <rect
+     x="700"
+     y="390"
+     width="400"
+     height="45"
+     rx="6"
+     fill="#7f1d1d"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     id="rect24" />
+  <text
+     x="900"
+     y="410"
+     text-anchor="middle"
+     fill="#fca5a5"
+     font-size="11"
+     font-weight="600"
+     id="text25">相同密钥 K + 相同 nonce → 相同密钥流!</text>
+  <text
+     x="900"
+     y="427"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text26">攻击者可用相同密钥流解密新数据</text>
+  <!-- Key insight -->
+  <rect
+     x="40"
+     y="455"
+     width="1120"
+     height="50"
+     rx="8"
+     fill="url(#card-grad)"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect26" />
+  <text
+     x="600"
+     y="478"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="12"
+     font-weight="700"
+     id="text27">攻击核心：截断 Msg 4 → AP 重发 Msg 3 → STA 重新安装密钥 → nonce 计数器重置到 0</text>
+  <text
+     x="600"
+     y="495"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text28">修复：802.11 标准更新，要求 STA 在密钥安装后不再接受重放的 Msg 3</text>
+</svg>

@@ -2,7 +2,6 @@
 title: 第 0 章：导读 — 城市交通的 Wi-Fi 版本
 top: 1
 related_posts: true
-mathjax: false
 tags:
   - 802.11
 categories:
