@@ -321,8 +321,8 @@ codeblock:
   # Code Highlight theme
   # All available themes: https://theme-next.js.org/highlight/
   theme:
-    light: vs
-    dark: vs
+    light: github
+    dark: github-dark-dimmed
   prism:
     light: prism-vsc-dark-plus.min
     dark: prism-vsc-dark-plus.min
@@ -460,7 +460,7 @@ fancybox: true
 # A JavaScript library for zooming images like Medium.
 # Warning: Do not enable both `fancybox` and `mediumzoom`.
 # For more information: https://medium-zoom.francoischalifour.com
-mediumzoom: true
+mediumzoom: false  # 使用 fancybox 代替
 # Vanilla JavaScript plugin for lazyloading images.
 # For more information: https://apoorv.pro/lozad.js/demo/
 lazyload: true

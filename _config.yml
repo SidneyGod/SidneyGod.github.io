@@ -119,6 +119,11 @@ deploy:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/ npm install hexo-generator-feed --save
+### hexo-generator-sitemap・SEO 核心
+sitemap:
+  path: sitemap.xml
+  limit: 9999
+
 ### Feed Atom
 feed:
   type: atom
