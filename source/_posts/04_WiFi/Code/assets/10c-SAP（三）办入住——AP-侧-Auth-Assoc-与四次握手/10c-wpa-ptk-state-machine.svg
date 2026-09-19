@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 450 570"
+   width="450"
+   height="570"
+   version="1.1"
+   id="svg24"
+   sodipodi:docname="10c-wpa-ptk-state-machine.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview24"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.38"
+     inkscape:cx="400"
+     inkscape:cy="343.84058"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg24" />
+  <!-- validate: skip-row-centering -->
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="692.82031"
+       y2="692.82031"
+       gradientTransform="scale(0.64951908,0.8227241)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         style="stop-color:#1a1a2e"
+         id="stop1" />
+      <stop
+         offset="100%"
+         style="stop-color:#16213e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrow"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#e94560"
+         id="path2" />
+    </marker>
+    <marker
+       id="arrowGray"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#606080"
+         id="path3" />
+    </marker>
+    <marker
+       id="arrowDisco"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#e94560"
+         id="path4" />
+    </marker>
+  </defs>
+  <rect
+     width="450"
+     height="570"
+     fill="url(#bg)"
+     id="rect4"
+     style="fill:url(#bg);stroke-width:0.73101"
+     x="0"
+     y="0" />
+  <!-- Title -->
+  <text
+     x="130"
+     y="26"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="18px"
+     font-weight="bold"
+     fill="#ffffff"
+     text-anchor="middle"
+     id="text4">WPA_PTK 状态机（AP 侧）</text>
+  <text
+     x="130"
+     y="46"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="12px"
+     fill="#606080"
+     text-anchor="middle"
+     id="text5">wpa_auth.c SM_STEP(WPA_PTK)</text>
+  <!-- INITPMK/INITPSK -->
+  <rect
+     x="30"
+     y="66"
+     rx="8"
+     ry="8"
+     width="200"
+     height="40"
+     fill="#0f3460"
+     stroke="#533483"
+     stroke-width="2"
+     id="rect5" />
+  <text
+     x="130"
+     y="91"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="12px"
+     fill="#ffffff"
+     text-anchor="middle"
+     id="text6">INITPMK / INITPSK</text>
+  <!-- Arrow INITPMK → PTKSTART -->
+  <line
+     x1="130"
+     y1="106"
+     x2="130"
+     y2="141"
+     stroke="#e94560"
+     stroke-width="2"
+     marker-end="url(#arrow)"
+     id="line6" />
+  <text
+     x="145"
+     y="128"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#a0a0b8"
+     id="text7">PMK 就绪</text>
+  <!-- PTKSTART -->
+  <rect
+     x="30"
+     y="146"
+     rx="8"
+     ry="8"
+     width="200"
+     height="50"
+     fill="#1a3a5c"
+     stroke="#e94560"
+     stroke-width="2"
+     id="rect7" />
+  <text
+     x="130"
+     y="168"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     font-weight="bold"
+     fill="#e94560"
+     text-anchor="middle"
+     id="text8">PTKSTART</text>
+  <text
+     x="130"
+     y="186"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#a0a0b8"
+     text-anchor="middle"
+     id="text9">发送 EAPOL 1/4（ANonce + PMKID）</text>
+  <!-- Arrow PTKSTART → PTKCALCNEGOTIATING -->
+  <line
+     x1="130"
+     y1="196"
+     x2="130"
+     y2="231"
+     stroke="#e94560"
+     stroke-width="2"
+     marker-end="url(#arrow)"
+     id="line9" />
+  <text
+     x="145"
+     y="218"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#a0a0b8"
+     id="text10">收到 2/4</text>
+  <!-- PTKCALCNEGOTIATING -->
+  <rect
+     x="10"
+     y="236"
+     rx="8"
+     ry="8"
+     width="240"
+     height="50"
+     fill="#1a3a5c"
+     stroke="#e94560"
+     stroke-width="2"
+     id="rect10" />
+  <text
+     x="130"
+     y="258"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     font-weight="bold"
+     fill="#e94560"
+     text-anchor="middle"
+     id="text11">PTKCALCNEGOTIATING</text>
+  <text
+     x="130"
+     y="276"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#a0a0b8"
+     text-anchor="middle"
+     id="text12">推导 PTK → 验证 M2 的 MIC</text>
+  <!-- Arrow PTKCALCNEGOTIATING → PTKCALCNEGOTIATING2 -->
+  <line
+     x1="130"
+     y1="286"
+     x2="130"
+     y2="321"
+     stroke="#e94560"
+     stroke-width="2"
+     marker-end="url(#arrow)"
+     id="line12" />
+  <text
+     x="145"
+     y="308"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#a0a0b8"
+     id="text13">MIC 通过</text>
+  <!-- PTKCALCNEGOTIATING2 -->
+  <rect
+     x="30"
+     y="326"
+     rx="8"
+     ry="8"
+     width="200"
+     height="35"
+     fill="#0f3460"
+     stroke="#533483"
+     stroke-width="1"
+     id="rect13" />
+  <text
+     x="130"
+     y="348"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#a0a0b8"
+     text-anchor="middle"
+     id="text14">PTKCALCNEGOTIATING2（桥接）</text>
+  <!-- Arrow PTKCALCNEGOTIATING2 → PTKINITNEGOTIATING -->
+  <line
+     x1="130"
+     y1="361"
+     x2="130"
+     y2="396"
+     stroke="#e94560"
+     stroke-width="2"
+     marker-end="url(#arrow)"
+     id="line14" />
+  <!-- PTKINITNEGOTIATING -->
+  <rect
+     x="10"
+     y="401"
+     rx="8"
+     ry="8"
+     width="240"
+     height="50"
+     fill="#1a3a5c"
+     stroke="#e94560"
+     stroke-width="2"
+     id="rect14" />
+  <text
+     x="130"
+     y="423"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     font-weight="bold"
+     fill="#e94560"
+     text-anchor="middle"
+     id="text15">PTKINITNEGOTIATING</text>
+  <text
+     x="130"
+     y="441"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#a0a0b8"
+     text-anchor="middle"
+     id="text16">发送 EAPOL 3/4（RSN IE + GTK KDE）</text>
+  <!-- Arrow PTKINITNEGOTIATING → PTKINITDONE -->
+  <line
+     x1="130"
+     y1="451"
+     x2="130"
+     y2="486"
+     stroke="#e94560"
+     stroke-width="2"
+     marker-end="url(#arrow)"
+     id="line16" />
+  <text
+     x="145"
+     y="473"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#a0a0b8"
+     id="text17">收到 4/4</text>
+  <!-- PTKINITDONE -->
+  <rect
+     x="30"
+     y="491"
+     rx="8"
+     ry="8"
+     width="200"
+     height="50"
+     fill="#1a5a3c"
+     stroke="#4ade80"
+     stroke-width="2"
+     id="rect17" />
+  <text
+     x="130"
+     y="513"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     font-weight="bold"
+     fill="#4ade80"
+     text-anchor="middle"
+     id="text18">PTKINITDONE</text>
+  <text
+     x="130"
+     y="531"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#a0a0b8"
+     text-anchor="middle"
+     id="text19">安装 PTK/GTK → 数据帧可收发</text>
+  <!-- Timeout exceed → DISCONNECT branch -->
+  <path
+     d="M 250.83257,266.68161 370,266.13266 V 161"
+     fill="none"
+     stroke="#e94560"
+     stroke-width="1.83828"
+     marker-end="url(#arrowDisco)"
+     id="path19"
+     sodipodi:nodetypes="ccc" />
+  <text
+     x="292.96887"
+     y="260.2269"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="9px"
+     fill="#e94560"
+     id="text20">TimeoutCtr &gt; 4</text>
+  <!-- Timeout retry arrow -->
+  <path
+     d="m 252.47027,251.23788 c 38.30436,0 24.51967,-8.08173 24.51967,-74.7484 C 276.98994,166.48948 275.96523,156 230,156"
+     fill="none"
+     stroke="#606080"
+     stroke-width="1.137"
+     stroke-dasharray="5, 3"
+     marker-end="url(#arrowGray)"
+     id="path20"
+     sodipodi:nodetypes="csc" />
+  <text
+     x="282.59833"
+     y="188.55261"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#606080"
+     id="text21">超时重传</text>
+  <text
+     x="282.59833"
+     y="203.55261"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="9px"
+     fill="#606080"
+     id="text22">TimeoutCtr ≤ 4</text>
+  <!-- DISCONNECT -->
+  <rect
+     x="310"
+     y="131"
+     rx="6"
+     ry="6"
+     width="120"
+     height="30"
+     fill="#5a1a1a"
+     stroke="#e94560"
+     stroke-width="1"
+     id="rect22" />
+  <text
+     x="370"
+     y="151"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#e94560"
+     text-anchor="middle"
+     id="text23">DISCONNECT</text>
+  <!-- Bottom note -->
+  <text
+     x="220"
+     y="559"
+     font-family="'Maple Mono Normal NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#404060"
+     text-anchor="middle"
+     id="text24">源码：wpa_auth.c SM_STATE(WPA_PTK, ...) | 状态：wpa_auth_i.h:27</text>
+</svg>

@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 960 720"
+   width="960"
+   height="720"
+   version="1.1"
+   id="svg39"
+   sodipodi:docname="03-cnss_pci_probe流程.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview39"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.4182101"
+     inkscape:cx="474.5418"
+     inkscape:cy="367.71701"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg39" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; }
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+  </style>
+  <defs
+     id="defs9">
+    <linearGradient
+       id="bgGrad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="stageARed"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="0%">
+      <stop
+         offset="0%"
+         stop-color="#e74c3c"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#c0392b"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="stageBOrange"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="0%">
+      <stop
+         offset="0%"
+         stop-color="#e67e22"
+         id="stop5" />
+      <stop
+         offset="100%"
+         stop-color="#d35400"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       id="stageCGreen"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="0%">
+      <stop
+         offset="0%"
+         stop-color="#2ecc71"
+         id="stop7" />
+      <stop
+         offset="100%"
+         stop-color="#27ae60"
+         id="stop8" />
+    </linearGradient>
+    <filter
+       id="shadow"
+       x="-0.00087209302"
+       y="-0.0053571429"
+       width="1.0017442"
+       height="1.0107143">
+      <feDropShadow
+         dx="2"
+         dy="2"
+         stdDeviation="3"
+         flood-color="#000"
+         flood-opacity="0.4" />
+    </filter>
+    <marker
+       id="arrowGray"
+       markerWidth="8"
+       markerHeight="6"
+       refX="8"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#94a3b8"
+         id="polygon8" />
+    </marker>
+    <marker
+       id="arrowRed"
+       markerWidth="8"
+       markerHeight="6"
+       refX="8"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#ef4444"
+         id="polygon9" />
+    </marker>
+    <pattern
+       id="grid"
+       width="40"
+       height="40"
+       patternUnits="userSpaceOnUse">
+      <path
+         d="M 40 0 L 0 0 0 40"
+         fill="none"
+         stroke="#ffffff06"
+         stroke-width="0.5"
+         id="path9" />
+    </pattern>
+  </defs>
+  <rect
+     width="960"
+     height="720"
+     fill="url(#bgGrad)"
+     id="rect9" />
+  <rect
+     width="960"
+     height="720"
+     id="rect10"
+     fill="url(#grid)" />
+  <rect
+     x="50"
+     y="80"
+     width="860"
+     height="160"
+     rx="8"
+     fill="#2c0a0a"
+     stroke="#e74c3c"
+     stroke-width="1.5"
+     id="rect11" />
+  <text
+     x="480"
+     y="38"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="18"
+     font-weight="bold"
+     id="text10">QCOM CNSS PCI Probe 流程</text>
+  <text
+     x="480"
+     y="58"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="11"
+     id="text11">cnss2 框架 · PCI 枚举 → 总线建立 → 设备配置</text>
+  <path
+     d="M58 88 L902 88 L910 105 L902 122 L58 122 Z"
+     fill="url(#stageARed)"
+     id="path11" />
+  <rect
+     x="50"
+     y="80"
+     width="860"
+     height="42"
+     rx="8"
+     fill="url(#stageARed)"
+     id="rect12" />
+  <rect
+     x="50"
+     y="102"
+     width="860"
+     height="20"
+     fill="url(#stageARed)"
+     id="rect13" />
+  <text
+     x="70"
+     y="107"
+     fill="#ffffff"
+     font-size="13"
+     font-weight="bold"
+     id="text13">阶段 A：硬件上电</text>
+  <text
+     x="75"
+     y="142"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text14">1. PCI 枚举匹配</text>
+  <text
+     x="75"
+     y="164"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text15">2. 分配 cnss_pci_data</text>
+  <text
+     x="75"
+     y="186"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text16">3. 读取设备树配置</text>
+  <rect
+     x="50"
+     y="270"
+     width="860"
+     height="200"
+     rx="8"
+     fill="#2c1a0a"
+     stroke="#e67e22"
+     stroke-width="1.5"
+     id="rect17" />
+  <text
+     x="75"
+     y="208"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text17">4. cnss_dev_specific_power_on</text>
+  <path
+     d="M58 278 L902 278 L910 295 L902 312 L58 312 Z"
+     fill="url(#stageBOrange)"
+     id="path17" />
+  <rect
+     x="50"
+     y="270"
+     width="860"
+     height="42"
+     rx="8"
+     fill="url(#stageBOrange)"
+     id="rect18" />
+  <rect
+     x="50"
+     y="292"
+     width="860"
+     height="20"
+     fill="url(#stageBOrange)"
+     id="rect19" />
+  <text
+     x="70"
+     y="297"
+     fill="#ffffff"
+     font-size="13"
+     font-weight="bold"
+     id="text19">阶段 B：总线和通道建立</text>
+  <text
+     x="75"
+     y="332"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text20">5. 保留内存初始化</text>
+  <text
+     x="75"
+     y="354"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text21">6. 注册 SSR + ramdump</text>
+  <text
+     x="75"
+     y="376"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text22">7. cnss_pci_init_smmu</text>
+  <text
+     x="510"
+     y="332"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text23">8. 注册 PCI 事件</text>
+  <text
+     x="510"
+     y="354"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text24">9. cnss_pci_enable_bus</text>
+  <text
+     x="510"
+     y="376"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text25">10. cnss_pci_enable_msi</text>
+  <text
+     x="510"
+     y="398"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text26">11. cnss_pci_register_mhi</text>
+  <rect
+     x="50"
+     y="500"
+     width="860"
+     height="140"
+     rx="8"
+     fill="#0a2c0a"
+     stroke="#2ecc71"
+     stroke-width="1.5"
+     id="rect26" />
+  <path
+     d="M58 508 L902 508 L910 525 L902 542 L58 542 Z"
+     fill="url(#stageCGreen)"
+     id="path26" />
+  <rect
+     x="50"
+     y="500"
+     width="860"
+     height="42"
+     rx="8"
+     fill="url(#stageCGreen)"
+     id="rect27" />
+  <rect
+     x="50"
+     y="522"
+     width="860"
+     height="20"
+     fill="url(#stageCGreen)"
+     id="rect28" />
+  <text
+     x="70"
+     y="527"
+     fill="#ffffff"
+     font-size="13"
+     font-weight="bold"
+     id="text28">阶段 C：设备特定配置</text>
+  <text
+     x="75"
+     y="562"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text29">12. switch device_id</text>
+  <text
+     x="75"
+     y="584"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text30">13. 配置 PCI 寄存器</text>
+  <text
+     x="75"
+     y="606"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text31">14. probe_done ✓</text>
+  <line
+     x1="480"
+     y1="240"
+     x2="480"
+     y2="270"
+     stroke="#94a3b8"
+     stroke-width="1.5"
+     marker-end="url(#arrowGray)"
+     id="line31" />
+  <line
+     x1="480"
+     y1="470"
+     x2="480"
+     y2="500"
+     stroke="#94a3b8"
+     stroke-width="1.5"
+     marker-end="url(#arrowGray)"
+     id="line32" />
+  <rect
+     x="680"
+     y="500"
+     width="230"
+     height="140"
+     rx="8"
+     fill="#2c0a0a"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     stroke-dasharray="6,3"
+     id="rect32" />
+  <text
+     x="795"
+     y="522"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="13px"
+     font-weight="bold"
+     id="text32">⚠ 错误回滚</text>
+  <text
+     x="795"
+     y="547"
+     text-anchor="middle"
+     fill="#fca5a5"
+     font-size="11px"
+     id="text33">任一步骤失败 →</text>
+  <text
+     x="795"
+     y="563"
+     text-anchor="middle"
+     fill="#fca5a5"
+     font-size="11px"
+     id="text34">反向释放已分配资源</text>
+  <text
+     x="795"
+     y="584"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text35">goto err_rollback</text>
+  <path
+     d="M 910 180 L 920 180 L 920 570 L 675 570"
+     stroke="#ef4444"
+     stroke-width="1.2"
+     stroke-dasharray="5,3"
+     fill="none"
+     marker-end="url(#arrowRed)"
+     id="path35" />
+  <path
+     d="M 910 390 L 930 390 L 930 570 L 675 570"
+     stroke="#ef4444"
+     stroke-width="1.2"
+     stroke-dasharray="5,3"
+     fill="none"
+     marker-end="url(#arrowRed)"
+     id="path36" />
+  <text
+     x="35"
+     y="107"
+     fill="#e74c3c"
+     font-size="11"
+     font-weight="bold"
+     text-anchor="end"
+     id="text36">阶段</text>
+  <text
+     x="35"
+     y="297"
+     fill="#e67e22"
+     font-size="11"
+     font-weight="bold"
+     text-anchor="end"
+     id="text37">阶段</text>
+  <text
+     x="35"
+     y="527"
+     fill="#2ecc71"
+     font-size="11"
+     font-weight="bold"
+     text-anchor="end"
+     id="text38">阶段</text>
+  <text
+     x="480"
+     y="680"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="10"
+     id="text39">源码参考：platform/cnss2/pci.c · cnss_pci_probe() → cnss_pci_enumerate() → cnss_pci_probe_done()</text>
+</svg>

@@ -1,0 +1,179 @@
+<svg width="960" height="530" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="shadow"/>
+  <marker id="arrowWhite" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+   <path d="m0,0l8,3l-8,3l0,-6z" fill="#aaaaaa" id="svg_1"/>
+  </marker>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0f0f1a"/>
+   <stop offset="100%" stop-color="#1a1a2e"/>
+  </linearGradient>
+  <linearGradient id="stage1" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0%" stop-color="#e74c3c"/>
+   <stop offset="100%" stop-color="#c0392b"/>
+  </linearGradient>
+  <linearGradient id="stage2" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0%" stop-color="#e67e22"/>
+   <stop offset="100%" stop-color="#d35400"/>
+  </linearGradient>
+  <linearGradient id="stage3" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0%" stop-color="#f1c40f"/>
+   <stop offset="100%" stop-color="#d4ac0d"/>
+  </linearGradient>
+  <linearGradient id="stage4" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0%" stop-color="#2ecc71"/>
+   <stop offset="100%" stop-color="#27ae60"/>
+  </linearGradient>
+  <linearGradient id="stage5" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0%" stop-color="#3498db"/>
+   <stop offset="100%" stop-color="#2980b9"/>
+  </linearGradient>
+  <linearGradient id="stage6" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0%" stop-color="#9b59b6"/>
+   <stop offset="100%" stop-color="#8e44ad"/>
+  </linearGradient>
+  <linearGradient id="timelineGrad" x1="0" y1="0" x2="1" y2="0">
+   <stop offset="0%" stop-color="#e74c3c"/>
+   <stop offset="20%" stop-color="#e67e22"/>
+   <stop offset="40%" stop-color="#f1c40f"/>
+   <stop offset="60%" stop-color="#2ecc71"/>
+   <stop offset="80%" stop-color="#3498db"/>
+   <stop offset="100%" stop-color="#9b59b6"/>
+  </linearGradient>
+ </defs>
+ <!-- Background -->
+ <!-- Title -->
+ <!-- ====== Stage 1: hdd_module_init() ====== -->
+ <!-- Arrow 1→2 -->
+ <!-- ====== Stage 2: pld_register_driver() ====== -->
+ <!-- Arrow 2→3 -->
+ <!-- ====== Stage 3: cnss_pci_probe() ====== -->
+ <!-- Arrow 3→4 -->
+ <!-- ====== Stage 4: hdd_context_create() ====== -->
+ <!-- Arrow 4→5 -->
+ <!-- ====== Stage 5: hdd_wlan_start_modules() ====== -->
+ <!-- Arrow 5→6 -->
+ <!-- ====== Stage 6: wiphy_register() ====== -->
+ <!-- ====== EXIT CONDITIONS (below stages) ====== -->
+ <!-- ====== TIMELINE ====== -->
+ <!-- Timeline arrow bar -->
+ <!-- Timeline markers -->
+ <!-- ====== KEY DETAIL BOXES ====== -->
+ <g>
+  <title>Layer 1</title>
+  <rect width="960" height="530" fill="url(#bg)" id="svg_2"/>
+  <text x="480" y="35" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_3">QCOM 驱动加载 6 阶段全景 — 从 insmod 到驱动就绪</text>
+  <text x="480" y="55" text-anchor="middle" fill="#888888" font-size="11" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_4">qcacld-3.0 + cnss2 + qca-wifi-host-cmn</text>
+  <rect x="30" y="75" width="140" height="130" rx="8" fill="#2c0a0a" stroke="#e74c3c" stroke-width="1.5" filter="url(#shadow)" id="svg_5"/>
+  <rect x="30" y="75" width="140" height="26" rx="8" fill="url(#stage1)" id="svg_6"/>
+  <text x="100" y="93" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_7">阶段 1</text>
+  <text x="100" y="118" text-anchor="middle" fill="#f1948a" font-size="10" font-weight="bold" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_8">hdd_module_init()</text>
+  <text x="100" y="136" text-anchor="middle" fill="#cccccc" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_9">insmod 入口</text>
+  <text x="100" y="152" text-anchor="middle" fill="#aaaaaa" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_10">QDF 初始化</text>
+  <text x="100" y="165" text-anchor="middle" fill="#aaaaaa" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_11">osif_sync 初始化</text>
+  <text x="100" y="178" text-anchor="middle" fill="#aaaaaa" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_12">CDS 上下文分配</text>
+  <text x="100" y="195" text-anchor="middle" fill="#e67e22" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_13">典型耗时: 10-30ms</text>
+  <line x1="170" y1="140" x2="185" y2="140" stroke="#aaaaaa" stroke-width="2" marker-end="url(#arrowWhite)" id="svg_14"/>
+  <rect x="190" y="75" width="140" height="130" rx="8" fill="#2c1a0a" stroke="#e67e22" stroke-width="1.5" filter="url(#shadow)" id="svg_15"/>
+  <rect x="190" y="75" width="140" height="26" rx="8" fill="url(#stage2)" id="svg_16"/>
+  <text x="260" y="93" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_17">阶段 2</text>
+  <text x="260" y="118" text-anchor="middle" fill="#f0b27a" font-size="10" font-weight="bold" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_18">pld_register_driver()</text>
+  <text x="260" y="136" text-anchor="middle" fill="#cccccc" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_19">向平台层注册</text>
+  <text x="260" y="152" text-anchor="middle" fill="#aaaaaa" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_20">PCIe / SNOC / SDIO</text>
+  <text x="260" y="165" text-anchor="middle" fill="#aaaaaa" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_21">USB / IPCI 注册</text>
+  <text x="260" y="178" text-anchor="middle" fill="#aaaaaa" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_22">等待设备匹配</text>
+  <text x="260" y="195" text-anchor="middle" fill="#e67e22" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_23">典型耗时: 5-15ms</text>
+  <line x1="330" y1="140" x2="345" y2="140" stroke="#aaaaaa" stroke-width="2" marker-end="url(#arrowWhite)" id="svg_24"/>
+  <rect x="350" y="75" width="140" height="130" rx="8" fill="#2c2a0a" stroke="#f1c40f" stroke-width="1.5" filter="url(#shadow)" id="svg_25"/>
+  <rect x="350" y="75" width="140" height="26" rx="8" fill="url(#stage3)" id="svg_26"/>
+  <text x="420" y="93" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_27">阶段 3</text>
+  <text x="420" y="118" text-anchor="middle" fill="#f9e79f" font-size="10" font-weight="bold" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_28">cnss_pci_probe()</text>
+  <text x="420" y="136" text-anchor="middle" fill="#cccccc" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_29">PCIe 枚举与上电</text>
+  <text x="420" y="152" text-anchor="middle" fill="#aaaaaa" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_30">power_on (5-20ms)</text>
+  <text x="420" y="165" text-anchor="middle" fill="#aaaaaa" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_31">SMMU / MSI / MHI</text>
+  <text x="420" y="178" text-anchor="middle" fill="#aaaaaa" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_32">QMI 固件下载</text>
+  <text x="420" y="195" text-anchor="middle" fill="#e67e22" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_33">典型耗时: 50-200ms</text>
+  <line x1="490" y1="140" x2="505" y2="140" stroke="#aaaaaa" stroke-width="2" marker-end="url(#arrowWhite)" id="svg_34"/>
+  <rect x="510" y="75" width="140" height="130" rx="8" fill="#0a2c14" stroke="#2ecc71" stroke-width="1.5" filter="url(#shadow)" id="svg_35"/>
+  <rect x="510" y="75" width="140" height="26" rx="8" fill="url(#stage4)" id="svg_36"/>
+  <text x="580" y="93" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_37">阶段 4</text>
+  <text x="580" y="115" text-anchor="middle" fill="#82e0aa" font-size="9" font-weight="bold" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_38">hdd_context_create()</text>
+  <text x="580" y="133" text-anchor="middle" fill="#cccccc" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_39">对象创建</text>
+  <text x="580" y="149" text-anchor="middle" fill="#aaaaaa" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_40">wiphy 分配</text>
+  <text x="580" y="162" text-anchor="middle" fill="#aaaaaa" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_41">INI 配置解析</text>
+  <text x="580" y="175" text-anchor="middle" fill="#aaaaaa" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_42">psoc 对象创建</text>
+  <text x="580" y="195" text-anchor="middle" fill="#e67e22" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_43">典型耗时: 20-80ms</text>
+  <line x1="650" y1="140" x2="665" y2="140" stroke="#aaaaaa" stroke-width="2" marker-end="url(#arrowWhite)" id="svg_44"/>
+  <rect x="670" y="75" width="140" height="130" rx="8" fill="#0a1a2c" stroke="#3498db" stroke-width="1.5" filter="url(#shadow)" id="svg_45"/>
+  <rect x="670" y="75" width="140" height="26" rx="8" fill="url(#stage5)" id="svg_46"/>
+  <text x="740" y="93" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_47">阶段 5</text>
+  <text x="740" y="113" text-anchor="middle" fill="#85c1e9" font-size="8" font-weight="bold" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_48">hdd_wlan_start_modules()</text>
+  <text x="740" y="130" text-anchor="middle" fill="#cccccc" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_49">WMI 握手</text>
+  <text x="740" y="146" text-anchor="middle" fill="#aaaaaa" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_50">HIF 打开 + BMI</text>
+  <text x="740" y="160" text-anchor="middle" fill="#aaaaaa" font-size="7.5" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_51">cds_open (WMA/SME/PE)</text>
+  <text x="740" y="174" text-anchor="middle" fill="#aaaaaa" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_52">固件就绪确认</text>
+  <text x="740" y="195" text-anchor="middle" fill="#e67e22" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_53">典型耗时: 100-500ms</text>
+  <line x1="810" y1="140" x2="825" y2="140" stroke="#aaaaaa" stroke-width="2" marker-end="url(#arrowWhite)" id="svg_54"/>
+  <rect x="830" y="75" width="120" height="130" rx="8" fill="#1a0a2c" stroke="#9b59b6" stroke-width="1.5" filter="url(#shadow)" id="svg_55"/>
+  <rect x="830" y="75" width="120" height="26" rx="8" fill="url(#stage6)" id="svg_56"/>
+  <text x="890" y="93" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_57">阶段 6</text>
+  <text x="890" y="118" text-anchor="middle" fill="#d2b4de" font-size="10" font-weight="bold" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_58">wiphy_register()</text>
+  <text x="890" y="136" text-anchor="middle" fill="#cccccc" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_59">驱动就绪</text>
+  <text x="890" y="152" text-anchor="middle" fill="#aaaaaa" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_60">cfg80211 注册</text>
+  <text x="890" y="165" text-anchor="middle" fill="#aaaaaa" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_61">nl80211 可用</text>
+  <text x="890" y="178" text-anchor="middle" fill="#82e0aa" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_62">Supplicant 可连接</text>
+  <text x="890" y="195" text-anchor="middle" fill="#e67e22" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_63">典型耗时: 5-10ms</text>
+  <rect x="30" y="215" width="920" height="55" rx="6" fill="#12121e" stroke="#333355" id="svg_64"/>
+  <text x="480" y="232" text-anchor="middle" fill="#8888aa" font-size="10" font-weight="bold" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_65">退出条件 = 下一阶段的进入条件</text>
+  <text x="100" y="252" text-anchor="middle" fill="#e74c3c" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_66">QDF/CDS 就绪</text>
+  <text x="100" y="262" text-anchor="middle" fill="#666666" font-size="7" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_67">→</text>
+  <text x="260" y="252" text-anchor="middle" fill="#e67e22" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_68">驱动已注册</text>
+  <text x="260" y="262" text-anchor="middle" fill="#666666" font-size="7" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_69">→</text>
+  <text x="420" y="252" text-anchor="middle" fill="#f1c40f" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_70">PCIe 枚举完成 / MHI 就绪</text>
+  <text x="420" y="262" text-anchor="middle" fill="#666666" font-size="7" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_71">→</text>
+  <text x="580" y="252" text-anchor="middle" fill="#2ecc71" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_72">psoc 对象创建完成</text>
+  <text x="580" y="262" text-anchor="middle" fill="#666666" font-size="7" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_73">→</text>
+  <text x="740" y="252" text-anchor="middle" fill="#3498db" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_74">WMI 握手完成 / 子系统就绪</text>
+  <text x="740" y="262" text-anchor="middle" fill="#666666" font-size="7" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_75">→</text>
+  <text x="890" y="252" text-anchor="middle" fill="#9b59b6" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_76">cfg80211 注册完成</text>
+  <rect x="30" y="285" width="920" height="100" rx="8" fill="#12121e" stroke="#333355" id="svg_77"/>
+  <text x="480" y="305" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_78">时间线</text>
+  <rect x="60" y="325" width="840" height="4" rx="2" fill="url(#timelineGrad)" id="svg_79"/>
+  <polygon points="900,320 900,334 912,327" fill="#9b59b6" id="svg_80"/>
+  <circle cx="100" cy="327" r="8" fill="#e74c3c" stroke="#0f0f1a" stroke-width="2" id="svg_81"/>
+  <text x="100" y="350" text-anchor="middle" fill="#f1948a" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_82">insmod</text>
+  <text x="100" y="365" text-anchor="middle" fill="#666666" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_83">0ms</text>
+  <circle cx="240" cy="327" r="8" fill="#e67e22" stroke="#0f0f1a" stroke-width="2" id="svg_84"/>
+  <text x="240" y="350" text-anchor="middle" fill="#f0b27a" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_85">注册完成</text>
+  <text x="240" y="365" text-anchor="middle" fill="#666666" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_86">~30ms</text>
+  <circle cx="400" cy="327" r="8" fill="#f1c40f" stroke="#0f0f1a" stroke-width="2" id="svg_87"/>
+  <text x="400" y="350" text-anchor="middle" fill="#f9e79f" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_88">PCIe 枚举</text>
+  <text x="400" y="365" text-anchor="middle" fill="#666666" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_89">~200ms</text>
+  <circle cx="560" cy="327" r="8" fill="#2ecc71" stroke="#0f0f1a" stroke-width="2" id="svg_90"/>
+  <text x="560" y="350" text-anchor="middle" fill="#82e0aa" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_91">psoc 创建</text>
+  <text x="560" y="365" text-anchor="middle" fill="#666666" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_92">~300ms</text>
+  <circle cx="720" cy="327" r="8" fill="#3498db" stroke="#0f0f1a" stroke-width="2" id="svg_93"/>
+  <text x="720" y="350" text-anchor="middle" fill="#85c1e9" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_94">WMI 就绪</text>
+  <text x="720" y="365" text-anchor="middle" fill="#666666" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_95">~600ms</text>
+  <circle cx="870" cy="327" r="8" fill="#9b59b6" stroke="#0f0f1a" stroke-width="2" id="svg_96"/>
+  <text x="870" y="350" text-anchor="middle" fill="#d2b4de" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_97">驱动就绪</text>
+  <text x="870" y="365" text-anchor="middle" fill="#666666" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_98">~800ms</text>
+  <rect stroke="#333366" x="30" y="395" width="468" height="126.00001" rx="6" fill="#16162a" id="svg_99"/>
+  <text x="50" y="415" fill="#ffffff" font-size="11" font-weight="bold" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_100">关键函数调用链</text>
+  <text x="50" y="435" fill="#e74c3c" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_101">hdd_module_init → hdd_driver_load → hdd_qdf_init + osif_sync_init + hdd_init</text>
+  <text x="50" y="450" fill="#e67e22" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_102">pld_register_driver → pld_pcie_register_driver (→ cnss2 注册)</text>
+  <text x="50" y="465" fill="#f1c40f" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_103">cnss_pci_probe → power_on → SMMU → enable_bus → MSI → MHI</text>
+  <text x="50" y="480" fill="#2ecc71" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_104">hdd_context_create → wiphy_alloc + cfg_parse + objmgr_psoc_create</text>
+  <text x="50" y="495" fill="#3498db" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_105">hdd_wlan_start_modules → hif_open → cds_open → configure_cds</text>
+  <text x="50" y="508" fill="#9b59b6" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_106">wiphy_register → cfg80211 注册完成 → nl80211 通道可用</text>
+  <rect stroke="#333366" x="500" y="395" width="450" height="129.00001" rx="6" fill="#16162a" id="svg_107"/>
+  <text x="520" y="415" fill="#ffffff" font-size="11" font-weight="bold" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_108">WMI 五事件握手（阶段 5 内部）</text>
+  <text x="520" y="435" fill="#3498db" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_109">1. SERVICE_READY → 固件上报服务位图、vdev/peer 限额</text>
+  <text x="520" y="450" fill="#3498db" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_110">2. SERVICE_READY_EXT → HW mode 列表、MAC/PHY 能力（可选）</text>
+  <text x="520" y="465" fill="#3498db" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_111">3. SERVICE_READY_EXT2 → 6GHz/MLO/AFC 能力（可选）</text>
+  <text x="520" y="480" fill="#3498db" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_112">4. INIT_CMD → Host 回复驱动版本、CE 配置</text>
+  <text x="520" y="495" fill="#3498db" font-size="9" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_113">5. READY_EVENT → 固件初始化完成，status=0 表示成功</text>
+  <text x="520" y="508" fill="#888888" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_114">QMI 固件下载: BDF + WLAN_CFG + WLAN_MODE（MHI channel 之上）</text>
+  <text x="520" y="520" fill="#888888" font-size="8" font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif" id="svg_115">重试机制: PCIe 链路训练最多 3 次, pld_register 最多 HDD_MAX_PLD_REGISTER_RETRY 次</text>
+ </g>
+</svg>

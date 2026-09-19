@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 630"
+   width="1200"
+   height="630"
+   version="1.1"
+   id="svg46"
+   sodipodi:docname="07a-mgmt-frame-arch.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview46"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1040967"
+     inkscape:cx="551.58211"
+     inkscape:cy="246.80809"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg46" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN',Monaco,'Microsoft YaHei',monospace; }
+    .title { font-size: 17px; font-weight: 700; fill: #e2e8f0; }
+    .subtitle { font-size: 11px; fill: #94a3b8; }
+    .layer-title { font-size: 12px; font-weight: 700; }
+    .box-label { font-size: 12px; font-weight: 700; fill: #e2e8f0; }
+    .box-sub { font-size: 10px; fill: #94a3b8; }
+    .arrow-label { font-size: 10px; fill: #cbd5e1; }
+    .note-text { font-size: 10px; fill: #64748b; }
+    .legend-text { font-size: 10px; fill: #94a3b8; }
+    .tax-title { font-size: 13px; font-weight: 700; fill: #e2e8f0; }
+    .tax-item { font-size: 11px; font-weight: 700; }
+    .tax-sub { font-size: 10px; fill: #94a3b8; }
+  </style>
+  <defs
+     id="defs3">
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="916.51514"
+       y2="916.51514"
+       gradientTransform="scale(1.3093073,0.68738634)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arr-gray"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0,6 0,0 8,3 "
+         fill="#64748b"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arr-blue"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0,6 0,0 8,3 "
+         fill="#3b82f6"
+         id="polygon3" />
+    </marker>
+  </defs>
+  <rect
+     width="1200"
+     height="630"
+     fill="url(#bg)"
+     id="rect3"
+     style="fill:url(#bg);stroke-width:0.948684"
+     x="0"
+     y="0" />
+  <text
+     x="600"
+     y="36"
+     text-anchor="middle"
+     class="title"
+     id="text3">管理帧三分类与发送全景</text>
+  <text
+     x="600"
+     y="56"
+     text-anchor="middle"
+     class="subtitle"
+     id="text4">Mgmt Frame Taxonomy and TX Architecture</text>
+  <line
+     x1="60"
+     y1="66"
+     x2="1140"
+     y2="66"
+     stroke="#334155"
+     stroke-width="1"
+     id="line4" />
+  <rect
+     x="40"
+     y="82"
+     width="840"
+     height="130"
+     rx="8"
+     fill="rgba(30,41,59,0.4)"
+     stroke="#06b6d4"
+     stroke-width="1"
+     id="rect4" />
+  <rect
+     x="40"
+     y="82"
+     width="120"
+     height="28"
+     rx="8"
+     fill="#06b6d4"
+     id="rect5" />
+  <rect
+     x="40"
+     y="102"
+     width="120"
+     height="8"
+     fill="#06b6d4"
+     id="rect6" />
+  <text
+     x="100"
+     y="101"
+     text-anchor="middle"
+     font-size="12px"
+     font-weight="700"
+     fill="#ffffff"
+     id="text6">用户态</text>
+  <rect
+     x="180"
+     y="102"
+     width="340"
+     height="90"
+     rx="6"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect7" />
+  <text
+     x="350"
+     y="128"
+     text-anchor="middle"
+     class="box-label"
+     id="text7">wpa_supplicant</text>
+  <text
+     x="350"
+     y="146"
+     text-anchor="middle"
+     class="box-sub"
+     id="text8">机组调度中心 · Auth/Assoc/Action 帧构建</text>
+  <text
+     x="350"
+     y="164"
+     text-anchor="middle"
+     class="box-sub"
+     id="text9">send_mlme() / driver_nl80211</text>
+  <rect
+     x="540"
+     y="102"
+     width="320"
+     height="90"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1.5"
+     id="rect9" />
+  <text
+     x="700"
+     y="128"
+     text-anchor="middle"
+     class="box-label"
+     id="text10">nl80211</text>
+  <text
+     x="700"
+     y="146"
+     text-anchor="middle"
+     class="box-sub"
+     id="text11">光纤专线 · netlink socket</text>
+  <text
+     x="700"
+     y="164"
+     text-anchor="middle"
+     class="box-sub"
+     id="text12">NL80211_CMD_FRAME → cfg80211_ops</text>
+  <line
+     x1="600"
+     y1="212"
+     x2="600"
+     y2="242"
+     stroke="#64748b"
+     stroke-width="1.5"
+     marker-end="url(#arr-gray)"
+     id="line12" />
+  <text
+     x="616"
+     y="226"
+     class="arrow-label"
+     id="text13">Netlink (NL80211_CMD_FRAME)</text>
+  <rect
+     x="40"
+     y="242"
+     width="840"
+     height="130"
+     rx="8"
+     fill="rgba(30,41,59,0.4)"
+     stroke="#06b6d4"
+     stroke-width="1"
+     id="rect13" />
+  <rect
+     x="40"
+     y="242"
+     width="120"
+     height="28"
+     rx="8"
+     fill="#06b6d4"
+     id="rect14" />
+  <rect
+     x="40"
+     y="262"
+     width="120"
+     height="8"
+     fill="#06b6d4"
+     id="rect15" />
+  <text
+     x="100"
+     y="261"
+     text-anchor="middle"
+     font-size="12px"
+     font-weight="700"
+     fill="#ffffff"
+     id="text15">内核驱动</text>
+  <rect
+     x="180"
+     y="262"
+     width="410"
+     height="90"
+     rx="6"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect16" />
+  <text
+     x="385"
+     y="286"
+     text-anchor="middle"
+     class="box-label"
+     id="text16">QCOM 驱动 (qcacld-3.0)</text>
+  <text
+     x="385"
+     y="306"
+     text-anchor="middle"
+     class="box-sub"
+     id="text17">双路径: Auth 快速(PE直发) + Action 标准(P2P→ROC→WMI)</text>
+  <text
+     x="385"
+     y="326"
+     text-anchor="middle"
+     class="box-sub"
+     id="text18">wlan_hdd_mgmt_tx → sme_send_mgmt_tx / wlan_cfg80211_mgmt_tx</text>
+  <rect
+     x="590"
+     y="262"
+     width="270"
+     height="90"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1.5"
+     id="rect18" />
+  <text
+     x="725"
+     y="286"
+     text-anchor="middle"
+     class="box-label"
+     id="text19">MTK 驱动</text>
+  <text
+     x="725"
+     y="306"
+     text-anchor="middle"
+     class="box-sub"
+     id="text20">单入口: MBOX + 大帧直通</text>
+  <text
+     x="725"
+     y="326"
+     text-anchor="middle"
+     class="box-sub"
+     id="text21">mtk_cfg80211_mgmt_tx → mboxSendMsg</text>
+  <line
+     x1="600"
+     y1="372"
+     x2="600"
+     y2="402"
+     stroke="#64748b"
+     stroke-width="1.5"
+     marker-end="url(#arr-gray)"
+     id="line21" />
+  <text
+     x="616"
+     y="386"
+     class="arrow-label"
+     id="text22">WMI (QCOM) / MBOX (MTK)</text>
+  <rect
+     x="40"
+     y="402"
+     width="840"
+     height="130"
+     rx="8"
+     fill="rgba(30,41,59,0.4)"
+     stroke="#eab308"
+     stroke-width="1"
+     id="rect22" />
+  <rect
+     x="40"
+     y="402"
+     width="120"
+     height="28"
+     rx="8"
+     fill="#eab308"
+     id="rect23" />
+  <rect
+     x="40"
+     y="422"
+     width="120"
+     height="8"
+     fill="#eab308"
+     id="rect24" />
+  <text
+     x="100"
+     y="421"
+     text-anchor="middle"
+     font-size="12px"
+     font-weight="700"
+     fill="#1a1a2e"
+     id="text24">固件/硬件</text>
+  <rect
+     x="180"
+     y="422"
+     width="390"
+     height="90"
+     rx="6"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect25" />
+  <text
+     x="375"
+     y="446"
+     text-anchor="middle"
+     class="box-label"
+     fill="#10b981"
+     id="text25">固件 MAC</text>
+  <text
+     x="375"
+     y="466"
+     text-anchor="middle"
+     class="box-sub"
+     id="text26">Beacon / Probe Response 自主管理</text>
+  <text
+     x="375"
+     y="486"
+     text-anchor="middle"
+     class="box-sub"
+     id="text27">TBTT 定时器触发 · 模板填充 · 硬件队列直推</text>
+  <rect
+     x="590"
+     y="422"
+     width="270"
+     height="90"
+     rx="6"
+     fill="#1c1917"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="rect27" />
+  <text
+     x="725"
+     y="446"
+     text-anchor="middle"
+     class="box-label"
+     fill="#fbbf24"
+     id="text28">硬件 MAC</text>
+  <text
+     x="725"
+     y="466"
+     text-anchor="middle"
+     class="box-sub"
+     id="text29">RTS / CTS / ACK / PS-Poll 全自动</text>
+  <text
+     x="725"
+     y="486"
+     text-anchor="middle"
+     class="box-sub"
+     id="text30">SIFS 间隔自动回复 · 不可被软件拦截</text>
+  <text
+     x="60"
+     y="560"
+     class="note-text"
+     id="text31">RX: cfg80211_rx_mgmt() 上报 — 反向路径，驱动→内核→用户态</text>
+  <text
+     x="60"
+     y="582"
+     class="legend-text"
+     fill="#e2e8f0"
+     font-weight="700"
+     id="text32">颜色说明:</text>
+  <rect
+     x="60"
+     y="592"
+     width="12"
+     height="12"
+     rx="2"
+     fill="#3b82f6"
+     id="rect32" />
+  <text
+     x="78"
+     y="603"
+     class="legend-text"
+     id="text33">蓝色 = 用户态发起</text>
+  <rect
+     x="200"
+     y="592"
+     width="12"
+     height="12"
+     rx="2"
+     fill="#10b981"
+     id="rect33" />
+  <text
+     x="218"
+     y="603"
+     class="legend-text"
+     id="text34">绿色 = 驱动/固件自主管理</text>
+  <rect
+     x="410"
+     y="592"
+     width="12"
+     height="12"
+     rx="2"
+     fill="#eab308"
+     id="rect34" />
+  <text
+     x="428"
+     y="603"
+     class="legend-text"
+     id="text35">黄色 = 硬件不可见</text>
+  <rect
+     x="920"
+     y="82"
+     width="260"
+     height="450"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect35" />
+  <text
+     x="1050"
+     y="110"
+     text-anchor="middle"
+     class="tax-title"
+     id="text36">帧分类 Taxonomy</text>
+  <line
+     x1="935"
+     y1="120"
+     x2="1165"
+     y2="120"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="line36" />
+  <rect
+     x="932"
+     y="134"
+     width="4"
+     height="100"
+     rx="2"
+     fill="#3b82f6"
+     id="rect36" />
+  <rect
+     x="940"
+     y="134"
+     width="228"
+     height="100"
+     rx="6"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="rect37" />
+  <text
+     x="1050"
+     y="162"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="700"
+     fill="#93c5fd"
+     id="text37">用户态发起</text>
+  <text
+     x="1050"
+     y="184"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text38">Auth · Assoc · Deauth</text>
+  <text
+     x="1050"
+     y="202"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text39">Reassoc · Action · PASN</text>
+  <text
+     x="1050"
+     y="220"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#64748b"
+     id="text40">wpa_supplicant 构建下发</text>
+  <rect
+     x="932"
+     y="249"
+     width="4"
+     height="84"
+     rx="2"
+     fill="#10b981"
+     id="rect40" />
+  <rect
+     x="940"
+     y="249"
+     width="228"
+     height="84"
+     rx="6"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="rect41" />
+  <text
+     x="1050"
+     y="275"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="700"
+     fill="#6ee7b7"
+     id="text41">驱动自主管理</text>
+  <text
+     x="1050"
+     y="295"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text42">Beacon · Probe Response</text>
+  <text
+     x="1050"
+     y="313"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#64748b"
+     id="text43">固件 MAC 模板自动发送</text>
+  <rect
+     x="932"
+     y="348"
+     width="4"
+     height="84"
+     rx="2"
+     fill="#eab308"
+     id="rect43" />
+  <rect
+     x="940"
+     y="348"
+     width="228"
+     height="84"
+     rx="6"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="rect44" />
+  <text
+     x="1050"
+     y="374"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="700"
+     fill="#fde047"
+     id="text44">硬件不可见</text>
+  <text
+     x="1050"
+     y="394"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text45">RTS · CTS · ACK · PS-Poll</text>
+  <text
+     x="1050"
+     y="412"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#64748b"
+     id="text46">硬件 MAC 自动生成，无软件路径</text>
+</svg>

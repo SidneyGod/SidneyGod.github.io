@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1a"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="750" fill="url(#bg-grad)"/>
+
+  <text x="500" y="35" text-anchor="middle" fill="#e2e8f0" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="700">ACS 三向对比：hostapd 自主 / QCOM offload / MTK vendor</text>
+  <line x1="280" y1="46" x2="720" y2="46" stroke="#10b981" stroke-width="1.5"/>
+
+  <!-- 1. hostapd path -->
+  <rect x="20" y="65" width="300" height="45" rx="6" ry="6" fill="#052e16" stroke="#10b981" stroke-width="2"/>
+  <text x="170" y="90" text-anchor="middle" fill="#10b981" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="14" font-weight="700">hostapd 自主 ACS</text>
+  <text x="170" y="105" text-anchor="middle" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">源文件: src/ap/acs.c</text>
+
+  <rect x="20" y="120" width="300" height="200" rx="6" ry="6" fill="#0f172a" stroke="#10b981" stroke-width="1" fill-opacity="0.6"/>
+<text x="35" y="142" fill="#e2e8f0" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="10" font-weight="700">数据源</text>
+<text x="45" y="158" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">nl80211 survey dump（内核采集）</text>
+<text x="35" y="178" fill="#e2e8f0" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="10" font-weight="700">流程</text>
+<text x="45" y="194" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">acs_request_scan() 被动扫描</text>
+<text x="45" y="210" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">→ acs_scan_complete() 收集 survey</text>
+<text x="45" y="226" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">→ acs_study() 分析+选频</text>
+<text x="45" y="242" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">→ 异步 callback → setup 继续</text>
+<text x="35" y="262" fill="#e2e8f0" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="10" font-weight="700">干扰探测</text>
+<text x="45" y="278" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">间接：通过底噪升高反映非WiFi干扰</text>
+<text x="35" y="298" fill="#e2e8f0" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="10" font-weight="700">重试</text>
+<text x="45" y="313" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">5s/次 × 15次 max</text>
+
+  <!-- 2. QCOM path -->
+  <rect x="350" y="65" width="300" height="45" rx="6" ry="6" fill="#1c1917" stroke="#ea580c" stroke-width="2"/>
+  <text x="500" y="90" text-anchor="middle" fill="#f97316" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="14" font-weight="700">QCOM ACS offload</text>
+  <text x="500" y="105" text-anchor="middle" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">WPA_DRIVER_FLAGS_ACS_OFFLOAD</text>
+
+  <rect x="350" y="120" width="300" height="200" rx="6" ry="6" fill="#0f172a" stroke="#ea580c" stroke-width="1" fill-opacity="0.6"/>
+<text x="365" y="142" fill="#e2e8f0" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="10" font-weight="700">数据源</text>
+<text x="375" y="158" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">固件空口感知 + 频谱分析</text>
+<text x="365" y="178" fill="#e2e8f0" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="10" font-weight="700">流程</text>
+<text x="375" y="194" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">acs_init() 检测 offload flag</text>
+<text x="375" y="210" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">→ hostapd_drv_do_acs()</text>
+<text x="375" y="226" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">→ hapd->driver->do_acs()</text>
+<text x="375" y="242" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">→ WMI 命令 → 固件 → 回调 result</text>
+<text x="365" y="262" fill="#e2e8f0" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="10" font-weight="700">干扰探测</text>
+<text x="375" y="278" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">直接：频谱分析识别非WiFi干扰</text>
+<text x="365" y="298" fill="#e2e8f0" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="10" font-weight="700">特点</text>
+<text x="375" y="313" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">结果更优，但闭源黑盒</text>
+
+  <!-- 3. MTK path -->
+  <rect x="680" y="65" width="300" height="45" rx="6" ry="6" fill="#1e1b4b" stroke="#a855f7" stroke-width="2"/>
+  <text x="830" y="90" text-anchor="middle" fill="#a855f7" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="14" font-weight="700">MTK vendor ACS</text>
+  <text x="830" y="105" text-anchor="middle" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">NL80211_VENDOR_SUBCMD_ACS</text>
+
+  <rect x="680" y="120" width="300" height="200" rx="6" ry="6" fill="#0f172a" stroke="#a855f7" stroke-width="1" fill-opacity="0.6"/>
+<text x="695" y="142" fill="#e2e8f0" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="10" font-weight="700">数据源</text>
+<text x="705" y="158" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">驱动扫描结果（BSS 描述符）</text>
+<text x="695" y="178" fill="#e2e8f0" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="10" font-weight="700">流程</text>
+<text x="705" y="194" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">VENDOR_SUBCMD_ACS → vendor_acs()</text>
+<text x="705" y="210" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">→ MID_MNY_P2P_ACS → FSM 扫描</text>
+<text x="705" y="226" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">→ p2pFunCalAcsChnScores() 评分</text>
+<text x="705" y="242" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">→ vendor event 回报结果</text>
+<text x="695" y="262" fill="#e2e8f0" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="10" font-weight="700">干扰探测</text>
+<text x="705" y="278" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">无（只看 AP 数量和脏度）</text>
+<text x="695" y="298" fill="#e2e8f0" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="10" font-weight="700">特点</text>
+<text x="705" y="313" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">不依赖 survey,有 SCC 捷径</text>
+
+  <!-- Formula section -->
+  <rect x="20" y="340" width="960" height="65" rx="8" ry="8" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+  <text x="500" y="362" text-anchor="middle" fill="#10b981" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="12" font-weight="700">干扰因子公式（hostapd 自主 ACS）</text>
+  <text x="500" y="382" text-anchor="middle" fill="#e2e8f0" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="11">factor = pow(10, nf/5) + (busy-tx)/(total-tx) * 2^(10^(nf/10) - 10^(min_nf/10))</text>
+  <text x="500" y="398" text-anchor="middle" fill="#64748b" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">第一项: 底噪惩罚 | 第二项: 信道占用率 * 底噪差指数放大</text>
+
+  <!-- Detailed comparison table -->
+  <rect x="20" y="420" width="960" height="305" rx="8" ry="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="500" y="445" text-anchor="middle" fill="#e2e8f0" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="14" font-weight="700">详细对比</text>
+  <rect x="35" y="455" width="945" height="26" rx="4" ry="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="180" y="473" text-anchor="middle" fill="#3b82f6" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="10" font-weight="700">hostapd 自主 ACS</text>
+  <text x="490" y="473" text-anchor="middle" fill="#f97316" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="10" font-weight="700">QCOM ACS offload</text>
+  <text x="805" y="473" text-anchor="middle" fill="#a855f7" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="10" font-weight="700">MTK vendor ACS</text>
+  <line x1="345" y1="455" x2="345" y2="735" stroke="#334155" stroke-width="1"/>
+  <line x1="650" y1="455" x2="650" y2="735" stroke="#334155" stroke-width="1"/>
+  <rect x="35" y="481" width="945" height="25" rx="2" ry="2" fill="#0f1a2e" fill-opacity="0.6"/>
+  <text x="35" y="493" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="700">选频主体</text>
+  <text x="120" y="493" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">hostapd（用户空间）</text>
+  <text x="355" y="493" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">QCOM 固件</text>
+  <text x="660" y="493" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">MTK 驱动（P2P FSM）</text>
+  <rect x="35" y="506" width="945" height="25" rx="2" ry="2" fill="#0f172a" fill-opacity="0.6"/>
+  <text x="35" y="518" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="700">入口函数</text>
+  <text x="120" y="518" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">acs_init() → acs_request_scan()</text>
+  <text x="355" y="518" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">acs_init() → hostapd_drv_do_acs()</text>
+  <text x="660" y="518" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">NL80211_VENDOR_SUBCMD_ACS</text>
+  <rect x="35" y="531" width="945" height="25" rx="2" ry="2" fill="#0f1a2e" fill-opacity="0.6"/>
+  <text x="35" y="543" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="700">数据源</text>
+  <text x="120" y="543" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">nl80211 survey dump</text>
+  <text x="355" y="543" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">固件空口感知+频谱分析</text>
+  <text x="660" y="543" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">驱动扫描（BSS 描述符）</text>
+  <rect x="35" y="556" width="945" height="25" rx="2" ry="2" fill="#0f172a" fill-opacity="0.6"/>
+  <text x="35" y="568" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="700">通信协议</text>
+  <text x="120" y="568" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">NL80211_CMD_TRIGGER_SCAN</text>
+  <text x="355" y="568" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">WMI (共享内存命令队列)</text>
+  <text x="660" y="568" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">vendor cmd + mbox</text>
+  <rect x="35" y="581" width="945" height="25" rx="2" ry="2" fill="#0f1a2e" fill-opacity="0.6"/>
+  <text x="35" y="593" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="700">异步模型</text>
+  <text x="120" y="593" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">eloop callback 链</text>
+  <text x="355" y="593" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">WMI event callback</text>
+  <text x="660" y="593" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">vendor event callback</text>
+  <rect x="35" y="606" width="945" height="25" rx="2" ry="2" fill="#0f172a" fill-opacity="0.6"/>
+  <text x="35" y="618" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="700">非WiFi干扰</text>
+  <text x="120" y="618" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">间接感知 (底噪升高)</text>
+  <text x="355" y="618" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">直接感知 (频谱分析)</text>
+  <text x="660" y="618" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">无（只看 AP 数量）</text>
+  <rect x="35" y="631" width="945" height="25" rx="2" ry="2" fill="#0f1a2e" fill-opacity="0.6"/>
+  <text x="35" y="643" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="700">重试机制</text>
+  <text x="120" y="643" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">5s/次, 15次 max</text>
+  <text x="355" y="643" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">固件自主决策</text>
+  <text x="660" y="643" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">驱动内部处理</text>
+  <rect x="35" y="656" width="945" height="25" rx="2" ry="2" fill="#0f172a" fill-opacity="0.6"/>
+  <text x="35" y="668" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="700">优点</text>
+  <text x="120" y="668" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">全开源,可调试</text>
+  <text x="355" y="668" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">数据更丰富,结果更优</text>
+  <text x="660" y="668" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">不依赖 survey;有 SCC 捷径</text>
+  <rect x="35" y="681" width="945" height="25" rx="2" ry="2" fill="#0f1a2e" fill-opacity="0.6"/>
+  <text x="35" y="693" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="700">缺点</text>
+  <text x="120" y="693" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">survey 数据有限</text>
+  <text x="355" y="693" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">闭源黑盒</text>
+  <text x="660" y="693" fill="#94a3b8" font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif" font-size="9">评分粗糙;vendor 路径非标准</text>
+
+  <!-- call flow comparison -->
+  <rect x="20" y="420" width="960" height="305" rx="0" ry="0" fill="none" stroke="none"/>
+</svg>

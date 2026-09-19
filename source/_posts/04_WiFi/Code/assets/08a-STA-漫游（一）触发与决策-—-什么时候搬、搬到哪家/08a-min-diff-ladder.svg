@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="680" viewBox="0 0 960 680" preserveAspectRatio="xMidYMid meet" role="img" aria-label="min_diff 五阶梯决策图">
+  <title>min_diff 五阶梯决策</title>
+  <desc>RSSI 阈值 -86/-80/-75/-70 对应 min_diff 1/2/3/4/5 阶梯与 est_throughput 微调</desc>
+  <style>
+    text { font-family: 'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif; }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1a"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <marker id="arrO" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#f97316"/></marker>
+    <marker id="arrG" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#10b981"/></marker>
+  </defs>
+  <rect width="960" height="680" fill="url(#bg)"/>
+  <g stroke="#1E293B" stroke-width="0.5" opacity="0.10">
+    <line x1="80" y1="0" x2="80" y2="680"/>
+    <line x1="160" y1="0" x2="160" y2="680"/>
+    <line x1="240" y1="0" x2="240" y2="680"/>
+    <line x1="320" y1="0" x2="320" y2="680"/>
+    <line x1="400" y1="0" x2="400" y2="680"/>
+    <line x1="480" y1="0" x2="480" y2="680"/>
+    <line x1="560" y1="0" x2="560" y2="680"/>
+    <line x1="640" y1="0" x2="640" y2="680"/>
+    <line x1="720" y1="0" x2="720" y2="680"/>
+    <line x1="800" y1="0" x2="800" y2="680"/>
+    <line x1="880" y1="0" x2="880" y2="680"/>
+    <line x1="0" y1="60" x2="960" y2="60"/>
+    <line x1="0" y1="120" x2="960" y2="120"/>
+    <line x1="0" y1="180" x2="960" y2="180"/>
+    <line x1="0" y1="240" x2="960" y2="240"/>
+    <line x1="0" y1="300" x2="960" y2="300"/>
+    <line x1="0" y1="360" x2="960" y2="360"/>
+    <line x1="0" y1="420" x2="960" y2="420"/>
+    <line x1="0" y1="480" x2="960" y2="480"/>
+    <line x1="0" y1="540" x2="960" y2="540"/>
+    <line x1="0" y1="600" x2="960" y2="600"/>
+    <line x1="0" y1="660" x2="960" y2="660"/>
+  </g>
+  <text x="40" y="44" font-size="21" fill="#f59e0b" font-weight="700" text-anchor="start">漫游决策：min_diff 五阶梯与吞吐量微调</text>
+  <text x="40" y="70" font-size="12" fill="#64748B" font-weight="400" text-anchor="start">wpa_supplicant_need_to_roam_within_ess() 内部决策 · events.c:2294-2349（源码有精简）</text>
+  <rect x="40" y="96" width="470" height="464" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="126" font-size="15" fill="#e2e8f0" font-weight="700" text-anchor="start">① 基础值：按当前信号分层（柱高 = min_diff）</text>
+  <text x="430" y="126" font-size="11" fill="#64748B" font-weight="400" text-anchor="end">else 兜底 → 2</text>
+  <rect x="84" y="434" width="72" height="36" rx="3" fill="#f59e0b" opacity="0.16" stroke="#f59e0b" stroke-width="1.6"/>
+  <text x="120.0" y="424" font-size="21" fill="#f59e0b" font-weight="700" text-anchor="middle">1</text>
+  <text x="120.0" y="492" font-size="11" fill="#94a3b8" font-weight="400" text-anchor="middle">-86 dBm 以下</text>
+  <rect x="168" y="398" width="72" height="72" rx="3" fill="#f59e0b" opacity="0.26" stroke="#f59e0b" stroke-width="1.6"/>
+  <text x="204.0" y="388" font-size="21" fill="#f59e0b" font-weight="700" text-anchor="middle">2</text>
+  <text x="204.0" y="492" font-size="11" fill="#94a3b8" font-weight="400" text-anchor="middle">-85 ~ -81</text>
+  <rect x="252" y="362" width="72" height="108" rx="3" fill="#f59e0b" opacity="0.36" stroke="#f59e0b" stroke-width="1.6"/>
+  <text x="288.0" y="352" font-size="21" fill="#f59e0b" font-weight="700" text-anchor="middle">3</text>
+  <text x="288.0" y="492" font-size="11" fill="#94a3b8" font-weight="400" text-anchor="middle">-80 ~ -76</text>
+  <rect x="336" y="326" width="72" height="144" rx="3" fill="#f59e0b" opacity="0.46" stroke="#f59e0b" stroke-width="1.6"/>
+  <text x="372.0" y="316" font-size="21" fill="#f59e0b" font-weight="700" text-anchor="middle">4</text>
+  <text x="372.0" y="492" font-size="11" fill="#94a3b8" font-weight="400" text-anchor="middle">-75 ~ -71</text>
+  <rect x="420" y="290" width="72" height="180" rx="3" fill="#f59e0b" opacity="0.56" stroke="#f59e0b" stroke-width="1.6"/>
+  <text x="456.0" y="280" font-size="21" fill="#f59e0b" font-weight="700" text-anchor="middle">5</text>
+  <text x="456.0" y="492" font-size="11" fill="#94a3b8" font-weight="400" text-anchor="middle">-70 ~ -1</text>
+  <line x1="78" y1="470" x2="504" y2="470" stroke="#475569" stroke-width="1.2"/>
+  <line x1="204" y1="470" x2="204" y2="398" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+  <circle cx="204" cy="396" r="3.5" fill="#e2e8f0"/>
+  <text x="60" y="522" font-size="12" fill="#94a3b8" font-weight="400" text-anchor="start">例：当前 -82 dBm 落在 -85~-81 → min_diff = 2</text>
+  <text x="60" y="544" font-size="12" fill="#64748B" font-weight="400" text-anchor="start">信号越差门槛越低：-86 dBm 以下好 1 dB 就切（快断线了）</text>
+  <rect x="536" y="96" width="384" height="464" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="556" y="126" font-size="15" fill="#e2e8f0" font-weight="700" text-anchor="start">② 微调：est_throughput 吞吐量修正</text>
+  <text x="556" y="148" font-size="11" fill="#64748B" font-weight="400" text-anchor="start">对基础 min_diff 做加减，不改信号比较本身</text>
+  <text x="556" y="180" font-size="13" fill="#f97316" font-weight="600" text-anchor="start">当前 AP 吞吐更好 → 抬高门槛（不愿切）</text>
+  <text x="566" y="214" font-size="12" fill="#94a3b8" font-weight="400" text-anchor="start">cur_est &gt; sel_est ×1.5</text>
+  <line x1="800" y1="216" x2="828" y2="206" stroke="#f97316" stroke-width="1.8" marker-end="url(#arrO)"/>
+  <text x="850" y="214" font-size="13" fill="#f97316" font-weight="700" text-anchor="start">+10</text>
+  <text x="566" y="248" font-size="12" fill="#94a3b8" font-weight="400" text-anchor="start">cur_est &gt; sel_est ×1.2</text>
+  <line x1="800" y1="250" x2="828" y2="240" stroke="#f97316" stroke-width="1.8" marker-end="url(#arrO)"/>
+  <text x="850" y="248" font-size="13" fill="#f97316" font-weight="700" text-anchor="start">+5</text>
+  <text x="566" y="282" font-size="12" fill="#94a3b8" font-weight="400" text-anchor="start">cur_est &gt; sel_est ×1.1</text>
+  <line x1="800" y1="284" x2="828" y2="274" stroke="#f97316" stroke-width="1.8" marker-end="url(#arrO)"/>
+  <text x="850" y="282" font-size="13" fill="#f97316" font-weight="700" text-anchor="start">+2</text>
+  <line x1="556" y1="310" x2="900" y2="310" stroke="#334155" stroke-width="1" stroke-dasharray="5,4"/>
+  <text x="556" y="338" font-size="13" fill="#10b981" font-weight="600" text-anchor="start">候选 AP 吞吐更好 → 降低门槛（愿意切）</text>
+  <text x="566" y="372" font-size="12" fill="#94a3b8" font-weight="400" text-anchor="start">sel_est &gt; cur_est ×1.5</text>
+  <line x1="800" y1="370" x2="828" y2="380" stroke="#10b981" stroke-width="1.8" marker-end="url(#arrG)"/>
+  <text x="850" y="372" font-size="13" fill="#10b981" font-weight="700" text-anchor="start">-10</text>
+  <text x="566" y="406" font-size="12" fill="#94a3b8" font-weight="400" text-anchor="start">sel_est &gt; cur_est ×1.2</text>
+  <line x1="800" y1="404" x2="828" y2="414" stroke="#10b981" stroke-width="1.8" marker-end="url(#arrG)"/>
+  <text x="850" y="406" font-size="13" fill="#10b981" font-weight="700" text-anchor="start">-5</text>
+  <text x="566" y="440" font-size="12" fill="#94a3b8" font-weight="400" text-anchor="start">sel_est &gt; cur_est ×1.1</text>
+  <line x1="800" y1="438" x2="828" y2="448" stroke="#10b981" stroke-width="1.8" marker-end="url(#arrG)"/>
+  <text x="850" y="440" font-size="13" fill="#10b981" font-weight="700" text-anchor="start">-2</text>
+  <text x="556" y="474" font-size="11" fill="#64748B" font-weight="400" text-anchor="start">优势不足 1.1× 时仅 ±1（源码末两档）</text>
+  <text x="556" y="498" font-size="11" fill="#94a3b8" font-weight="400" text-anchor="start">例：-82 dBm → 基础 2；当前快 1.5× → 2+10=12，基本否决</text>
+  <text x="556" y="522" font-size="11" fill="#94a3b8" font-weight="400" text-anchor="start">例：候选快 1.5× → 2-10=-8，信号弱些也切（如 160MHz）</text>
+  <rect x="40" y="576" width="880" height="80" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="610" font-size="15" fill="#e2e8f0" font-weight="700" text-anchor="start">③ 最终比较：</text>
+  <text x="196" y="610" font-size="14" fill="#f59e0b" font-weight="600" text-anchor="start">diff = sel_level - cur_level</text>
+  <rect x="430" y="594" width="236" height="30" rx="15" fill="#052e16" stroke="#10b981" stroke-width="1.3"/>
+  <text x="548" y="613" font-size="13" fill="#10b981" font-weight="600" text-anchor="middle">diff &gt;= min_diff → 漫游</text>
+  <rect x="676" y="594" width="236" height="30" rx="15" fill="#1c1917" stroke="#f97316" stroke-width="1.3"/>
+  <text x="794" y="613" font-size="13" fill="#f97316" font-weight="600" text-anchor="middle">diff &lt; min_diff → 不漫游</text>
+  <text x="60" y="644" font-size="12" fill="#64748B" font-weight="400" text-anchor="start">放行/拒绝由 wpa_supplicant 发出事件：WPA_EVENT_DO_ROAM / WPA_EVENT_SKIP_ROAM</text>
+</svg>

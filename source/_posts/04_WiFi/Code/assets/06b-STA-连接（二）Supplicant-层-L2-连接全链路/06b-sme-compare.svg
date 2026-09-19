@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 1080"
+   width="1200"
+   height="1080"
+   version="1.1"
+   id="svg61"
+   sodipodi:docname="06b-sme-compare.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview61"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.012037"
+     inkscape:cx="599.78042"
+     inkscape:cy="460.95151"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg61" />
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  .title-main { font-size: 20px; font-weight: 700; fill: #e2e8f0; }
+  .title-sub { font-size: 13px; fill: #94a3b8; }
+  .hdr-text { font-size: 14px; font-weight: 700; fill: #e8a445; }
+  .hdr-sub { font-size: 11px; fill: #7dd3fc; }
+  .box-label { font-size: 11.5px; fill: #e2e8f0; }
+  .box-sub { font-size: 10px; fill: #94a3b8; }
+  .box-label-blue { font-size: 11.5px; fill: #7dd3fc; }
+  .box-label-orange { font-size: 11.5px; fill: #f97316; }
+  .tbl-title { font-size: 14px; font-weight: 700; fill: #e2e8f0; }
+  .tbl-header { font-size: 12px; font-weight: 700; fill: #cbd5e1; }
+  .tbl-cell { font-size: 11px; fill: #cbd5e1; }
+  .tbl-cell-dim { font-size: 11px; fill: #94a3b8; }
+  .tbl-cell-feat { font-size: 11px; font-weight: 600; fill: #e2e8f0; }
+  .leg-text { font-size: 10px; fill: #64748b; }
+</style>
+  <defs
+     id="defs5">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arr-gray"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0,8 3,0 6"
+         fill="#667788"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arr-gold"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0,8 3,0 6"
+         fill="#e8c840"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arr-blue"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0,8 3,0 6"
+         fill="#3b82f6"
+         id="polygon4" />
+    </marker>
+    <filter
+       id="glow-orange"
+       x="-0.013469388"
+       y="-0.12222222"
+       width="1.0269388"
+       height="1.2444444">
+      <feGaussianBlur
+         stdDeviation="2.5"
+         result="blur"
+         id="feGaussianBlur4" />
+      <feMerge
+         id="feMerge5">
+        <feMergeNode
+           in="blur"
+           id="feMergeNode4" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode5" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect
+     width="1200"
+     height="1080"
+     fill="url(#bg)"
+     id="rect5" />
+  <text
+     x="600"
+     y="42"
+     text-anchor="middle"
+     class="title-main"
+     id="text5">SME 模式对比：两步走 vs 一步走</text>
+  <text
+     x="600"
+     y="70"
+     text-anchor="middle"
+     class="title-sub"
+     id="text6">Supplicant SME（命令两步下发）vs Driver SME（合并一步下发）</text>
+  <rect
+     x="50"
+     y="100"
+     width="520"
+     height="44"
+     rx="7"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1.5"
+     id="rect6" />
+  <text
+     x="310"
+     y="121"
+     text-anchor="middle"
+     class="hdr-text"
+     id="text7">Supplicant SME 模式（两步走）</text>
+  <text
+     x="310"
+     y="137"
+     text-anchor="middle"
+     class="hdr-sub"
+     id="text8">SAE / FT / FILS / OWE</text>
+  <rect
+     x="630"
+     y="100"
+     width="520"
+     height="44"
+     rx="7"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1.5"
+     id="rect8" />
+  <text
+     x="890"
+     y="121"
+     text-anchor="middle"
+     class="hdr-text"
+     id="text9">非 SME 模式（一步走）</text>
+  <text
+     x="890"
+     y="137"
+     text-anchor="middle"
+     class="hdr-sub"
+     id="text10">WPA2-PSK / Open / WPA2-EAP</text>
+  <rect
+     x="65"
+     y="170"
+     width="490"
+     height="54"
+     rx="6"
+     fill="#151928"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect10" />
+  <text
+     x="83"
+     y="192"
+     class="box-label"
+     id="text11">sme_send_authentication()</text>
+  <text
+     x="83"
+     y="211"
+     class="box-sub"
+     id="text12">auth_alg 决策枢纽</text>
+  <line
+     x1="310"
+     y1="224"
+     x2="310"
+     y2="241"
+     stroke="#667788"
+     stroke-width="1.2"
+     marker-end="url(#arr-gray)"
+     id="line12" />
+  <rect
+     x="65"
+     y="244"
+     width="490"
+     height="54"
+     rx="6"
+     fill="#151928"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect12" />
+  <text
+     x="83"
+     y="266"
+     class="box-label"
+     id="text13">wpa_drv_authenticate()</text>
+  <text
+     x="83"
+     y="285"
+     class="box-sub"
+     id="text14">构造 Auth 帧</text>
+  <line
+     x1="310"
+     y1="298"
+     x2="310"
+     y2="315"
+     stroke="#667788"
+     stroke-width="1.2"
+     marker-end="url(#arr-gray)"
+     id="line14" />
+  <rect
+     x="65"
+     y="318"
+     width="490"
+     height="54"
+     rx="6"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1.2"
+     filter="url(#glow-orange)"
+     id="rect14" />
+  <rect
+     x="65"
+     y="318"
+     width="3"
+     height="54"
+     rx="3"
+     fill="#ea580c"
+     id="rect15" />
+  <text
+     x="83"
+     y="340"
+     class="box-label-orange"
+     id="text15">NL80211_CMD_AUTHENTICATE</text>
+  <text
+     x="83"
+     y="359"
+     class="box-sub"
+     id="text16">下发 Auth → 驱动执行帧交换</text>
+  <line
+     x1="310"
+     y1="372"
+     x2="310"
+     y2="389"
+     stroke="#667788"
+     stroke-width="1.2"
+     marker-end="url(#arr-gray)"
+     id="line16" />
+  <rect
+     x="65"
+     y="392"
+     width="490"
+     height="54"
+     rx="6"
+     fill="#151928"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect16" />
+  <text
+     x="83"
+     y="414"
+     class="box-label"
+     id="text17">sme_event_auth()</text>
+  <text
+     x="83"
+     y="433"
+     class="box-sub"
+     id="text18">处理 Auth 响应（SAE多帧/FT/FILS）</text>
+  <line
+     x1="310"
+     y1="446"
+     x2="310"
+     y2="463"
+     stroke="#667788"
+     stroke-width="1.2"
+     marker-end="url(#arr-gray)"
+     id="line18" />
+  <rect
+     x="65"
+     y="466"
+     width="490"
+     height="54"
+     rx="6"
+     fill="#151928"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect18" />
+  <text
+     x="83"
+     y="488"
+     class="box-label"
+     id="text19">sme_associate()</text>
+  <text
+     x="83"
+     y="507"
+     class="box-sub"
+     id="text20">构造 Assoc Req（预构建 IE）</text>
+  <line
+     x1="310"
+     y1="520"
+     x2="310"
+     y2="537"
+     stroke="#667788"
+     stroke-width="1.2"
+     marker-end="url(#arr-gray)"
+     id="line20" />
+  <rect
+     x="65"
+     y="540"
+     width="490"
+     height="54"
+     rx="6"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1.2"
+     filter="url(#glow-orange)"
+     id="rect20" />
+  <rect
+     x="65"
+     y="540"
+     width="3"
+     height="54"
+     rx="3"
+     fill="#ea580c"
+     id="rect21" />
+  <text
+     x="83"
+     y="562"
+     class="box-label-orange"
+     id="text21">NL80211_CMD_ASSOCIATE</text>
+  <text
+     x="83"
+     y="581"
+     class="box-sub"
+     id="text22">下发 Assoc → 驱动执行帧交换</text>
+  <rect
+     x="645"
+     y="170"
+     width="490"
+     height="56"
+     rx="6"
+     fill="#0f1f2e"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect22" />
+  <rect
+     x="645"
+     y="170"
+     width="3"
+     height="56"
+     rx="3"
+     fill="#3b82f6"
+     id="rect23" />
+  <text
+     x="663"
+     y="192"
+     class="box-label-blue"
+     id="text23">wpas_start_assoc_cb()</text>
+  <text
+     x="663"
+     y="211"
+     class="box-sub"
+     id="text24">构建所有 IE + 连接参数</text>
+  <line
+     x1="890"
+     y1="226"
+     x2="890"
+     y2="249"
+     stroke="#667788"
+     stroke-width="1.2"
+     marker-end="url(#arr-gray)"
+     id="line24" />
+  <rect
+     x="645"
+     y="252"
+     width="490"
+     height="56"
+     rx="6"
+     fill="#0f1f2e"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect24" />
+  <rect
+     x="645"
+     y="252"
+     width="3"
+     height="56"
+     rx="3"
+     fill="#3b82f6"
+     id="rect25" />
+  <text
+     x="663"
+     y="274"
+     class="box-label-blue"
+     id="text25">wpas_populate_assoc_ies()</text>
+  <text
+     x="663"
+     y="293"
+     class="box-sub"
+     id="text26">RSNE / HT / VHT / HE 等 14+ 种 IE</text>
+  <line
+     x1="890"
+     y1="308"
+     x2="890"
+     y2="331"
+     stroke="#667788"
+     stroke-width="1.2"
+     marker-end="url(#arr-gray)"
+     id="line26" />
+  <rect
+     x="645"
+     y="334"
+     width="490"
+     height="56"
+     rx="6"
+     fill="#0f1f2e"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect26" />
+  <rect
+     x="645"
+     y="334"
+     width="3"
+     height="56"
+     rx="3"
+     fill="#3b82f6"
+     id="rect27" />
+  <text
+     x="663"
+     y="356"
+     class="box-label-blue"
+     id="text27">wpa_drv_associate() → CMD_CONNECT</text>
+  <text
+     x="663"
+     y="375"
+     class="box-sub"
+     id="text28">一步下发：Auth+Assoc 合并</text>
+  <line
+     x1="890"
+     y1="390"
+     x2="890"
+     y2="413"
+     stroke="#667788"
+     stroke-width="1.2"
+     marker-end="url(#arr-gray)"
+     id="line28" />
+  <rect
+     x="645"
+     y="416"
+     width="490"
+     height="56"
+     rx="6"
+     fill="#151928"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect28" />
+  <text
+     x="663"
+     y="438"
+     class="box-label"
+     id="text29">驱动自动完成</text>
+  <text
+     x="663"
+     y="457"
+     class="box-sub"
+     id="text30">Auth Req/Resp → Assoc Req/Resp</text>
+  <line
+     x1="890"
+     y1="472"
+     x2="890"
+     y2="495"
+     stroke="#667788"
+     stroke-width="1.2"
+     marker-end="url(#arr-gray)"
+     id="line30" />
+  <rect
+     x="645"
+     y="498"
+     width="490"
+     height="56"
+     rx="6"
+     fill="#151928"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect30" />
+  <text
+     x="663"
+     y="520"
+     class="box-label"
+     id="text31">驱动自动完成</text>
+  <text
+     x="663"
+     y="539"
+     class="box-sub"
+     id="text32">（可选）4-Way Handshake offload</text>
+  <line
+     x1="310"
+     y1="594"
+     x2="310"
+     y2="621"
+     stroke="#e8c840"
+     stroke-width="1.6"
+     marker-end="url(#arr-gold)"
+     id="line32" />
+  <line
+     x1="890"
+     y1="554"
+     x2="890"
+     y2="621"
+     stroke="#e8c840"
+     stroke-width="1.6"
+     marker-end="url(#arr-gold)"
+     id="line33" />
+  <rect
+     x="180"
+     y="636"
+     width="840"
+     height="54"
+     rx="8"
+     fill="#1a1a0f"
+     stroke="#e8c840"
+     stroke-width="1.8"
+     id="rect33" />
+  <text
+     x="600"
+     y="660"
+     text-anchor="middle"
+     style="font-size:15px;font-weight:700;fill:#e8c840;"
+     id="text33">Kernel cfg80211 / 驱动</text>
+  <text
+     x="600"
+     y="680"
+     text-anchor="middle"
+     class="box-sub"
+     id="text34">下层执行：帧交换 / 4-Way Handshake / 连接建立</text>
+  <text
+     x="600"
+     y="718"
+     text-anchor="middle"
+     class="tbl-title"
+     id="text35">模式对比总览</text>
+  <rect
+     x="60"
+     y="730"
+     width="1080"
+     height="34"
+     rx="5"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect35" />
+  <text
+     x="160.0"
+     y="752"
+     text-anchor="middle"
+     class="tbl-header"
+     id="text36">特性</text>
+  <line
+     x1="260"
+     y1="736"
+     x2="260"
+     y2="758"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="line36" />
+  <text
+     x="480.0"
+     y="752"
+     text-anchor="middle"
+     class="tbl-header"
+     id="text37">Supplicant SME</text>
+  <line
+     x1="700"
+     y1="736"
+     x2="700"
+     y2="758"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="line37" />
+  <text
+     x="920.0"
+     y="752"
+     text-anchor="middle"
+     class="tbl-header"
+     id="text38">Driver SME</text>
+  <rect
+     x="60"
+     y="764"
+     width="1080"
+     height="34"
+     fill="#0f172a"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="rect38" />
+  <text
+     x="76"
+     y="786"
+     class="tbl-cell-feat"
+     id="text39">下发命令数</text>
+  <text
+     x="276"
+     y="786"
+     class="tbl-cell"
+     id="text40">2 个（AUTH + ASSOC）</text>
+  <text
+     x="716"
+     y="786"
+     class="tbl-cell"
+     id="text41">1 个（CONNECT）</text>
+  <line
+     x1="260"
+     y1="768"
+     x2="260"
+     y2="794"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="line41" />
+  <line
+     x1="700"
+     y1="768"
+     x2="700"
+     y2="794"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="line42" />
+  <rect
+     x="60"
+     y="798"
+     width="1080"
+     height="34"
+     fill="#131c2e"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="rect42" />
+  <text
+     x="76"
+     y="820"
+     class="tbl-cell-feat"
+     id="text42">Auth 帧控制</text>
+  <text
+     x="276"
+     y="820"
+     class="tbl-cell"
+     id="text43">supplicant (sme.c)</text>
+  <text
+     x="716"
+     y="820"
+     class="tbl-cell"
+     id="text44">驱动/固件</text>
+  <line
+     x1="260"
+     y1="802"
+     x2="260"
+     y2="828"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="line44" />
+  <line
+     x1="700"
+     y1="802"
+     x2="700"
+     y2="828"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="line45" />
+  <rect
+     x="60"
+     y="832"
+     width="1080"
+     height="34"
+     fill="#0f172a"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="rect45" />
+  <text
+     x="76"
+     y="854"
+     class="tbl-cell-feat"
+     id="text45">Assoc IE 构建</text>
+  <text
+     x="276"
+     y="854"
+     class="tbl-cell"
+     id="text46">supplicant 预构建</text>
+  <text
+     x="716"
+     y="854"
+     class="tbl-cell"
+     id="text47">驱动构造</text>
+  <line
+     x1="260"
+     y1="836"
+     x2="260"
+     y2="862"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="line47" />
+  <line
+     x1="700"
+     y1="836"
+     x2="700"
+     y2="862"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="line48" />
+  <rect
+     x="60"
+     y="866"
+     width="1080"
+     height="34"
+     fill="#131c2e"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="rect48" />
+  <text
+     x="76"
+     y="888"
+     class="tbl-cell-feat"
+     id="text48">失败重试策略</text>
+  <text
+     x="276"
+     y="888"
+     class="tbl-cell"
+     id="text49">supplicant 决定</text>
+  <text
+     x="716"
+     y="888"
+     class="tbl-cell"
+     id="text50">驱动决定</text>
+  <line
+     x1="260"
+     y1="870"
+     x2="260"
+     y2="896"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="line50" />
+  <line
+     x1="700"
+     y1="870"
+     x2="700"
+     y2="896"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="line51" />
+  <rect
+     x="60"
+     y="900"
+     width="1080"
+     height="34"
+     fill="#0f172a"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="rect51" />
+  <text
+     x="76"
+     y="922"
+     class="tbl-cell-feat"
+     id="text51">适用认证</text>
+  <text
+     x="276"
+     y="922"
+     class="tbl-cell"
+     id="text52">SAE / FT / FILS / OWE</text>
+  <text
+     x="716"
+     y="922"
+     class="tbl-cell"
+     id="text53">Open / WPA2-PSK / EAP</text>
+  <line
+     x1="260"
+     y1="904"
+     x2="260"
+     y2="930"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="line53" />
+  <line
+     x1="700"
+     y1="904"
+     x2="700"
+     y2="930"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="line54" />
+  <rect
+     x="60"
+     y="934"
+     width="1080"
+     height="34"
+     fill="#131c2e"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="rect54" />
+  <text
+     x="76"
+     y="956"
+     class="tbl-cell-feat"
+     id="text54">PMKSA 缓存</text>
+  <text
+     x="276"
+     y="956"
+     class="tbl-cell"
+     id="text55">supplicant 控制降级</text>
+  <text
+     x="716"
+     y="956"
+     class="tbl-cell"
+     id="text56">驱动控制</text>
+  <line
+     x1="260"
+     y1="938"
+     x2="260"
+     y2="964"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="line56" />
+  <line
+     x1="700"
+     y1="938"
+     x2="700"
+     y2="964"
+     stroke="#1e293b"
+     stroke-width="0.5"
+     id="line57" />
+  <rect
+     x="60"
+     y="968"
+     width="1080"
+     height="1"
+     fill="#334155"
+     opacity="0.5"
+     id="rect57" />
+  <rect
+     x="60"
+     y="1008"
+     width="10"
+     height="10"
+     rx="2"
+     fill="#ea580c"
+     opacity="0.8"
+     id="rect58" />
+  <text
+     x="76"
+     y="1017"
+     class="leg-text"
+     id="text58">NL80211 命令（orange）</text>
+  <rect
+     x="270"
+     y="1008"
+     width="10"
+     height="10"
+     rx="2"
+     fill="#3b82f6"
+     opacity="0.8"
+     id="rect59" />
+  <text
+     x="286"
+     y="1017"
+     class="leg-text"
+     id="text59">wpas 连接函数（blue）</text>
+  <rect
+     x="500"
+     y="1008"
+     width="10"
+     height="10"
+     rx="2"
+     fill="#334155"
+     id="rect60" />
+  <text
+     x="516"
+     y="1017"
+     class="leg-text"
+     id="text60">SME 内部函数（gray）</text>
+  <line
+     x1="710"
+     y1="1013"
+     x2="740"
+     y2="1013"
+     stroke="#e8c840"
+     stroke-width="1.6"
+     marker-end="url(#arr-gold)"
+     id="line60" />
+  <text
+     x="746"
+     y="1017"
+     class="leg-text"
+     id="text61">收敛至驱动层（gold）</text>
+</svg>

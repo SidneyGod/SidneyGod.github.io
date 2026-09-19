@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 960 680"
+   width="960"
+   height="680"
+   version="1.1"
+   id="svg41"
+   sodipodi:docname="10a-hdm-decision.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview41"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.3062462"
+     inkscape:cx="352.91969"
+     inkscape:cy="333.3981"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg41" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; fill: #e2e8f0; }
+  </style>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg-grad"
+       x1="0"
+       y1="0"
+       x2="837.138"
+       y2="837.138"
+       gradientTransform="scale(1.1467644,0.81229142)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrow-orange"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0,6 0,0 8,3 "
+         fill="#f97316"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arrow-green"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0,6 0,0 8,3 "
+         fill="#10b981"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arrow-red"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0,6 0,0 8,3 "
+         fill="#ef4444"
+         id="polygon4" />
+    </marker>
+  </defs>
+  <rect
+     width="960"
+     height="680"
+     fill="url(#bg-grad)"
+     id="rect4"
+     style="fill:url(#bg-grad);stroke-width:0.965146"
+     x="0"
+     y="0" />
+  <text
+     x="480"
+     y="30"
+     text-anchor="middle"
+     font-size="17px"
+     font-weight="700"
+     fill="#f97316"
+     id="text4">HalDeviceManager AP 接口兼容性决策树</text>
+  <line
+     x1="300"
+     y1="38"
+     x2="660"
+     y2="38"
+     stroke="#f97316"
+     stroke-width="1"
+     opacity="0.4"
+     id="line4" />
+  <!-- Entry -->
+  <line
+     x1="480"
+     y1="55"
+     x2="480"
+     y2="72"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="line5" />
+  <text
+     x="480"
+     y="50"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text5">createIface(AP)</text>
+  <!-- Decision 1: HAL available? -->
+  <polygon
+     points="545,100 480,128 415,100 480,72 "
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1.2"
+     id="polygon5" />
+  <text
+     x="480"
+     y="99"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#f97316"
+     id="text6">HAL 已可用?</text>
+  <text
+     x="480"
+     y="112"
+     text-anchor="middle"
+     font-size="8px"
+     fill="#94a3b8"
+     id="text7">startHal() 成功?</text>
+  <line
+     x1="480"
+     y1="128"
+     x2="480"
+     y2="155"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="line7" />
+  <text
+     x="498"
+     y="136.5"
+     font-size="9px"
+     fill="#10b981"
+     id="text8">是</text>
+  <line
+     x1="416.55078"
+     y1="100.61665"
+     x2="251.46387"
+     y2="171.98537"
+     stroke="#ef4444"
+     stroke-width="1.04287"
+     marker-end="url(#arrow-red)"
+     id="line8" />
+  <text
+     x="355.1528"
+     y="120.94877"
+     font-size="9px"
+     fill="#ef4444"
+     id="text9">否</text>
+  <!-- Decision 2: ChipMode exists? -->
+  <polygon
+     points="545,183 480,211 415,183 480,155 "
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1.2"
+     id="polygon9" />
+  <text
+     x="480"
+     y="182"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#f97316"
+     id="text10">ChipMode 存在?</text>
+  <text
+     x="480"
+     y="195"
+     text-anchor="middle"
+     font-size="8px"
+     fill="#94a3b8"
+     id="text11">getAvailableModes() 非空?</text>
+  <line
+     x1="480"
+     y1="211"
+     x2="480"
+     y2="240"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="line11" />
+  <text
+     x="498"
+     y="220.5"
+     font-size="9px"
+     fill="#10b981"
+     id="text12">是</text>
+  <line
+     x1="415.215"
+     y1="184.28453"
+     x2="252.13174"
+     y2="246.66057"
+     stroke="#ef4444"
+     stroke-width="1.11893"
+     marker-end="url(#arrow-red)"
+     id="line12" />
+  <text
+     x="360.49588"
+     y="198.78453"
+     font-size="9px"
+     fill="#ef4444"
+     id="text13">否</text>
+  <!-- Decision 3: Target band available? -->
+  <polygon
+     points="545,268 480,296 415,268 480,240 "
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1.2"
+     id="polygon13" />
+  <text
+     x="480"
+     y="267"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#f97316"
+     id="text14">目标频段可用?</text>
+  <text
+     x="480"
+     y="280"
+     text-anchor="middle"
+     font-size="8px"
+     fill="#94a3b8"
+     id="text15">对应 Band 有可用信道?</text>
+  <line
+     x1="480"
+     y1="296"
+     x2="480"
+     y2="325"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="line15" />
+  <text
+     x="498"
+     y="305.5"
+     font-size="9px"
+     fill="#10b981"
+     id="text16">是</text>
+  <line
+     x1="547.45654"
+     y1="266.61301"
+     x2="727.27356"
+     y2="263.55444"
+     stroke="#ef4444"
+     stroke-width="1"
+     marker-end="url(#arrow-red)"
+     id="line16" />
+  <text
+     x="626.0293"
+     y="261.58737"
+     font-size="9px"
+     fill="#ef4444"
+     id="text17">否</text>
+  <!-- NEW: getBestIfaceCreationProposal section -->
+  <rect
+     x="230"
+     y="335"
+     width="500"
+     height="180"
+     rx="6"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1"
+     stroke-dasharray="4, 2"
+     opacity="0.8"
+     id="rect17" />
+  <text
+     x="480"
+     y="352"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="700"
+     fill="#f97316"
+     id="text18">getBestIfaceCreationProposal()</text>
+  <!-- Inner flow -->
+  <rect
+     x="260"
+     y="360"
+     width="180"
+     height="30"
+     rx="4"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="0.8"
+     id="rect18" />
+  <text
+     x="350"
+     y="379"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#e2e8f0"
+     id="text19">遍历芯片/模式/组合</text>
+  <line
+     x1="350"
+     y1="404"
+     x2="350"
+     y2="414"
+     stroke="#94a3b8"
+     stroke-width="0.8"
+     marker-end="url(#arrow-orange)"
+     id="line19" />
+  <!-- Diamond: canCreateTypeComboSupportRequest -->
+  <polygon
+     points="350,384 410,410 350,436 290,410 "
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1"
+     id="polygon19"
+     transform="translate(0,14)" />
+  <text
+     x="350"
+     y="422"
+     text-anchor="middle"
+     font-size="8px"
+     fill="#f97316"
+     id="text20">canCreateType</text>
+  <text
+     x="350"
+     y="433"
+     text-anchor="middle"
+     font-size="8px"
+     fill="#f97316"
+     id="text21">ComboSupport?</text>
+  <!-- compareIfaceCreationData 比较 → 选中最优提案 -->
+  <line
+     x1="530"
+     y1="390"
+     x2="400"
+     y2="463"
+     stroke="#10b981"
+     stroke-width="0.9"
+     marker-end="url(#arrow-green)"
+     id="line21" />
+  <text
+     x="462"
+     y="424"
+     text-anchor="middle"
+     font-size="8px"
+     fill="#10b981"
+     id="text22">比较</text>
+  <line
+     x1="290"
+     y1="424"
+     x2="260"
+     y2="424"
+     stroke="#94a3b8"
+     stroke-width="0.6"
+     opacity="0.5"
+     id="line22" />
+  <!-- Box: compareIfaceCreationData -->
+  <rect
+     x="530"
+     y="360"
+     width="170"
+     height="30"
+     rx="4"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="0.8"
+     id="rect22" />
+  <text
+     x="615"
+     y="369"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#e2e8f0"
+     id="text23">compareIfaceCreationData</text>
+  <text
+     x="615"
+     y="385"
+     text-anchor="middle"
+     font-size="8px"
+     fill="#94a3b8"
+     id="text24">比较所有可行提案</text>
+  <!-- Arrow: loop back -->
+  <path
+     d="M 409.33211,424.6935 527.34675,377.67155"
+     stroke="#94a3b8"
+     stroke-width="1"
+     fill="none"
+     marker-end="url(#arrow-orange)"
+     opacity="0.5"
+     id="path24" />
+  <text
+     x="448.62762"
+     y="397.3504"
+     font-size="7px"
+     fill="#94a3b8"
+     id="text25">所有提案</text>
+  <!-- Result box: best proposal -->
+  <rect
+     x="300"
+     y="463"
+     width="100"
+     height="24"
+     rx="4"
+     fill="#052e16"
+     stroke="#059669"
+     stroke-width="0.8"
+     id="rect25" />
+  <text
+     x="350"
+     y="479"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#10b981"
+     id="text26">选中最优提案</text>
+  <!-- Comparison criteria -->
+  <rect
+     x="530"
+     y="420"
+     width="170"
+     height="48"
+     rx="4"
+     fill="#1c1917"
+     stroke="#334155"
+     stroke-width="0.8"
+     opacity="0.7"
+     id="rect26" />
+  <text
+     x="615"
+     y="435"
+     text-anchor="middle"
+     font-size="8px"
+     fill="#94a3b8"
+     id="text27">排序策略：</text>
+  <text
+     x="615"
+     y="448"
+     text-anchor="middle"
+     font-size="8px"
+     fill="#94a3b8"
+     id="text28">1. 需移除高优先级接口最少</text>
+  <text
+     x="615"
+     y="461"
+     text-anchor="middle"
+     font-size="8px"
+     fill="#94a3b8"
+     id="text29">2. 需降级接口最少</text>
+  <!-- Arrow from proposal search to configureChip -->
+  <line
+     x1="480"
+     y1="515"
+     x2="480"
+     y2="540"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="line29" />
+  <!-- Failure: no proposal -->
+  <line
+     x1="730"
+     y1="440"
+     x2="790"
+     y2="440"
+     stroke="#ef4444"
+     stroke-width="1.2"
+     marker-end="url(#arrow-red)"
+     id="line30" />
+  <rect
+     x="790"
+     y="425"
+     width="140"
+     height="32"
+     rx="4"
+     fill="#1f0a02"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect30" />
+  <text
+     x="860"
+     y="445"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#ef4444"
+     id="text30">无可用方案</text>
+  <!-- Failure: no ChipMode -->
+  <rect
+     x="110"
+     y="240"
+     width="140"
+     height="36"
+     rx="6"
+     fill="#1f0a02"
+     stroke="#ef4444"
+     stroke-width="1.2"
+     id="rect31" />
+  <text
+     x="180"
+     y="262"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#ef4444"
+     id="text31">无可用 ChipMode</text>
+  <!-- Failure: HAL unavailable -->
+  <rect
+     x="110"
+     y="170"
+     width="140"
+     height="36"
+     rx="6"
+     fill="#1f0a02"
+     stroke="#ef4444"
+     stroke-width="1.2"
+     id="rect32" />
+  <text
+     x="180"
+     y="192"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#ef4444"
+     id="text32">HAL 不可用</text>
+  <!-- Failure: band not supported -->
+  <rect
+     x="730"
+     y="246"
+     width="140"
+     height="36"
+     rx="6"
+     fill="#1f0a02"
+     stroke="#ef4444"
+     stroke-width="1.2"
+     id="rect33" />
+  <text
+     x="800"
+     y="268"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#ef4444"
+     id="text33">频段不支持</text>
+  <!-- configureChip -->
+  <rect
+     x="410"
+     y="542"
+     width="160"
+     height="36"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1.2"
+     id="rect34" />
+  <text
+     x="490"
+     y="564"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#e2e8f0"
+     id="text34">configureChip(modeId)</text>
+  <line
+     x1="480"
+     y1="578"
+     x2="480"
+     y2="595"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="line34" />
+  <!-- Success: createApIface -->
+  <rect
+     x="410"
+     y="597"
+     width="180"
+     height="50"
+     rx="6"
+     fill="#052e16"
+     stroke="#059669"
+     stroke-width="1.2"
+     id="rect35" />
+  <text
+     x="490"
+     y="619"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#10b981"
+     id="text35">chip.createApIface()</text>
+  <text
+     x="490"
+     y="635"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#94a3b8"
+     id="text36">返回 WifiApIface (wlan1)</text>
+  <!-- Legend (bottom-left, away from failure paths) -->
+  <rect
+     x="20"
+     y="550"
+     width="200"
+     height="80"
+     rx="5"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     opacity="0.8"
+     id="rect36" />
+  <text
+     x="120"
+     y="570"
+     text-anchor="middle"
+     font-size="10px"
+     font-weight="700"
+     fill="#94a3b8"
+     id="text37">图例</text>
+  <polygon
+     points="60,620 34,612 34,628 "
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="0.5"
+     id="polygon37"
+     transform="translate(-4,-36)" />
+  <text
+     x="62"
+     y="587"
+     font-size="9px"
+     fill="#e2e8f0"
+     id="text38">决策</text>
+  <rect
+     x="30"
+     y="600"
+     width="18"
+     height="10"
+     rx="2"
+     fill="#052e16"
+     stroke="#059669"
+     stroke-width="0.5"
+     id="rect38" />
+  <text
+     x="60"
+     y="609"
+     font-size="9px"
+     fill="#e2e8f0"
+     id="text39">成功</text>
+  <rect
+     x="100"
+     y="600"
+     width="18"
+     height="10"
+     rx="2"
+     fill="#1f0a02"
+     stroke="#ef4444"
+     stroke-width="0.5"
+     id="rect39" />
+  <text
+     x="130"
+     y="609"
+     font-size="9px"
+     fill="#e2e8f0"
+     id="text40">失败</text>
+  <rect
+     x="30"
+     y="615"
+     width="18"
+     height="10"
+     rx="2"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="0.5"
+     stroke-dasharray="2, 1"
+     id="rect40" />
+  <text
+     x="60"
+     y="624"
+     font-size="9px"
+     fill="#e2e8f0"
+     id="text41">搜索区域</text>
+</svg>

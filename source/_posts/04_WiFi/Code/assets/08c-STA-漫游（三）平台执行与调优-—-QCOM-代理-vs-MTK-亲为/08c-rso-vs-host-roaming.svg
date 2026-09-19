@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1100 1120"
+   version="1.1"
+   id="svg86"
+   sodipodi:docname="08-rso-vs-host-roaming.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview86"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.97589286"
+     inkscape:cx="550.26532"
+     inkscape:cy="560"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg86" />
+  <style
+     id="style1">text{font-family:'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif}</style>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="mb"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0,8 3,0 6"
+         fill="#3b82f6"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="mo"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0,8 3,0 6"
+         fill="#f97316"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="mp"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0,8 3,0 6"
+         fill="#a855f7"
+         id="polygon4" />
+    </marker>
+  </defs>
+  <rect
+     width="1100"
+     height="1120"
+     fill="url(#bg)"
+     id="rect4" />
+  <text
+     x="550"
+     y="34"
+     text-anchor="middle"
+     font-size="17"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text4">QCOM RSO vs MTK Host Roaming — 架构对比</text>
+  <line
+     x1="550"
+     y1="48"
+     x2="550"
+     y2="540"
+     stroke="#334155"
+     stroke-width="2"
+     stroke-dasharray="8,4"
+     id="line4" />
+  <text
+     x="280"
+     y="72"
+     text-anchor="middle"
+     font-size="15"
+     font-weight="700"
+     fill="#3b82f6"
+     id="text5">QCOM RSO — 固件全权代理</text>
+  <rect
+     x="25"
+     y="90"
+     width="515"
+     height="140"
+     rx="6"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect5" />
+  <text
+     x="40"
+     y="110"
+     font-size="12"
+     fill="#3b82f6"
+     font-weight="600"
+     id="text6">Host 配置层</text>
+  <text
+     x="50"
+     y="130"
+     font-size="10"
+     fill="#94a3b8"
+     id="text7">cm_roam_send_rso_cmd() → WMI 下发 rso_config</text>
+  <text
+     x="50"
+     y="148"
+     font-size="10"
+     fill="#94a3b8"
+     id="text8">配置: RSSI 阈值、扫描参数、候选评分权重、黑名单</text>
+  <text
+     x="50"
+     y="166"
+     font-size="10"
+     fill="#94a3b8"
+     id="text9">扫描调度: gNeighborScanTimerPeriod=100s, FirstTimer=10s</text>
+  <text
+     x="50"
+     y="184"
+     font-size="10"
+     fill="#94a3b8"
+     id="text10">RoamScan_ActiveCH_DwellTime=40ms, HomeTime=45-50ms</text>
+  <text
+     x="50"
+     y="202"
+     font-size="10"
+     fill="#94a3b8"
+     id="text11">wlan_mlme_roam_scoring_cfg: score_delta, min_score_delta, algorithm</text>
+  <line
+     x1="282"
+     y1="230"
+     x2="282"
+     y2="260"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#mb)"
+     id="line11" />
+  <rect
+     x="25"
+     y="265"
+     width="515"
+     height="170"
+     rx="6"
+     fill="#0f172a"
+     stroke="#7c3aed"
+     stroke-width="1.2"
+     stroke-dasharray="4,3"
+     id="rect11" />
+  <text
+     x="40"
+     y="285"
+     font-size="12"
+     fill="#a855f7"
+     font-weight="600"
+     id="text12">Firmware 执行层 (黑盒)</text>
+  <text
+     x="50"
+     y="305"
+     font-size="10"
+     fill="#94a3b8"
+     id="text13">持续监控 RSSI / PER / BMISS (低功耗逐信道驻留)</text>
+  <text
+     x="50"
+     y="323"
+     font-size="10"
+     fill="#94a3b8"
+     id="text14">自主定向扫描 → 候选评分 → 选出最佳目标</text>
+  <text
+     x="50"
+     y="341"
+     font-size="10"
+     fill="#94a3b8"
+     id="text15">执行 Auth + Reassoc + EAPOL (全程不唤醒 Host)</text>
+  <text
+     x="50"
+     y="359"
+     font-size="10"
+     fill="#94a3b8"
+     id="text16">扫描调度: 周期 100s + 快速重试 10s</text>
+  <text
+     x="50"
+     y="377"
+     font-size="10"
+     fill="#94a3b8"
+     id="text17">DwellTime 40ms, HomeTime 45-50ms, AwayTime 0-100ms</text>
+  <path
+     d="m 540,340 h 18.72827 V 160 H 540"
+     stroke="#f97316"
+     stroke-width="1.02714"
+     stroke-dasharray="5, 3"
+     fill="none"
+     marker-end="url(#mo)"
+     id="path17" />
+  <text
+     x="462.60385"
+     y="226"
+     font-size="9px"
+     fill="#f97316"
+     id="text18">WMI_ROAM_EVENTID</text>
+  <text
+     x="363.50412"
+     y="255.77676"
+     font-size="8px"
+     fill="#64748b"
+     id="text19">trigger_reason, rssi, roam_fail_reason</text>
+  <rect
+     x="25"
+     y="455"
+     width="515"
+     height="65"
+     rx="4"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect19" />
+  <text
+     x="40"
+     y="473"
+     font-size="10"
+     fill="#10b981"
+     id="text20">✓ 优点: 低延迟 (固件直控射频) + 低功耗 (不唤醒 AP 处理器)</text>
+  <text
+     x="40"
+     y="491"
+     font-size="10"
+     fill="#10b981"
+     id="text21">✓ 优点: 实时性好 — 专用处理器不受 Host CPU 负载波动影响</text>
+  <text
+     x="40"
+     y="509"
+     font-size="10"
+     fill="#dc2626"
+     id="text22">✗ 缺点: 黑盒 — Host 看不到决策过程，出问题定位困难</text>
+  <text
+     x="825"
+     y="72"
+     text-anchor="middle"
+     font-size="15"
+     font-weight="700"
+     fill="#f97316"
+     id="text23">MTK Host Roaming — 驱动亲自下场</text>
+  <rect
+     x="590"
+     y="100"
+     width="480"
+     height="65"
+     rx="6"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect23" />
+  <rect
+     x="595"
+     y="105"
+     width="200"
+     height="22"
+     rx="4"
+     fill="#ea580c"
+     id="rect24" />
+  <text
+     x="695"
+     y="120"
+     text-anchor="middle"
+     font-size="10"
+     font-weight="700"
+     fill="#ffffff"
+     id="text24">ROAMING_STATE_IDLE</text>
+  <text
+     x="605"
+     y="138"
+     font-size="9"
+     fill="#94a3b8"
+     id="text25">空闲，无漫游活动</text>
+  <line
+     x1="830"
+     y1="165"
+     x2="830"
+     y2="178"
+     stroke="#f97316"
+     stroke-width="1.2"
+     marker-end="url(#mo)"
+     id="line25" />
+  <rect
+     x="590"
+     y="188"
+     width="480"
+     height="65"
+     rx="6"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect25" />
+  <rect
+     x="595"
+     y="193"
+     width="200"
+     height="22"
+     rx="4"
+     fill="#ea580c"
+     id="rect26" />
+  <text
+     x="695"
+     y="208"
+     text-anchor="middle"
+     font-size="10"
+     font-weight="700"
+     fill="#ffffff"
+     id="text26">ROAMING_STATE_DECISION</text>
+  <text
+     x="605"
+     y="226"
+     font-size="9"
+     fill="#94a3b8"
+     id="text27">检查 RSSI/PER/BTM 触发条件, cuFactor 权重 65:35</text>
+  <line
+     x1="830"
+     y1="253"
+     x2="830"
+     y2="266"
+     stroke="#f97316"
+     stroke-width="1.2"
+     marker-end="url(#mo)"
+     id="line27" />
+  <rect
+     x="590"
+     y="276"
+     width="480"
+     height="65"
+     rx="6"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect27" />
+  <rect
+     x="595"
+     y="281"
+     width="200"
+     height="22"
+     rx="4"
+     fill="#ea580c"
+     id="rect28" />
+  <text
+     x="695"
+     y="296"
+     text-anchor="middle"
+     font-size="10"
+     font-weight="700"
+     fill="#ffffff"
+     id="text28">ROAMING_STATE_DISCOVERY</text>
+  <text
+     x="605"
+     y="314"
+     font-size="9"
+     fill="#94a3b8"
+     id="text29">启动漫游扫描 (4种 Scan Cadence: 全量/非活跃/单次/周期)</text>
+  <line
+     x1="830"
+     y1="341"
+     x2="830"
+     y2="354"
+     stroke="#f97316"
+     stroke-width="1.2"
+     marker-end="url(#mo)"
+     id="line29" />
+  <rect
+     x="590"
+     y="364"
+     width="480"
+     height="65"
+     rx="6"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect29" />
+  <rect
+     x="595"
+     y="369"
+     width="200"
+     height="22"
+     rx="4"
+     fill="#ea580c"
+     id="rect30" />
+  <text
+     x="695"
+     y="384"
+     text-anchor="middle"
+     font-size="10"
+     font-weight="700"
+     fill="#ffffff"
+     id="text30">ROAMING_STATE_ROAM</text>
+  <text
+     x="605"
+     y="402"
+     font-size="9"
+     fill="#94a3b8"
+     id="text31">执行 Auth + Assoc + EAPOL</text>
+  <line
+     x1="830"
+     y1="429"
+     x2="830"
+     y2="442"
+     stroke="#f97316"
+     stroke-width="1.2"
+     marker-end="url(#mo)"
+     id="line31" />
+  <rect
+     x="590"
+     y="452"
+     width="480"
+     height="65"
+     rx="6"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect31" />
+  <rect
+     x="595"
+     y="457"
+     width="210.24702"
+     height="22"
+     rx="4.2049403"
+     fill="#ea580c"
+     id="rect32"
+     style="stroke-width:1.0253" />
+  <text
+     x="699"
+     y="472"
+     text-anchor="middle"
+     font-size="10px"
+     font-weight="700"
+     fill="#ffffff"
+     id="text32">ROAMING_STATE_HANDLE_NEW_CANDIDATE</text>
+  <text
+     x="605"
+     y="490"
+     font-size="9"
+     fill="#94a3b8"
+     id="text33">候选异常/重选 | BTM四级紧急 STATE_0→1→2→3</text>
+  <text
+     x="605"
+     y="504"
+     font-size="9"
+     fill="#94a3b8"
+     id="text34">STATE_1: 偏好加权 | STATE_2: goal=6000 | STATE_3: goal=0 (有得选就选)</text>
+  <line
+     x1="830"
+     y1="517"
+     x2="830"
+     y2="530"
+     stroke="#f97316"
+     stroke-width="1.2"
+     marker-end="url(#mo)"
+     id="line34" />
+  <rect
+     x="590"
+     y="540"
+     width="480"
+     height="65"
+     rx="6"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect34" />
+  <rect
+     x="595"
+     y="545"
+     width="320.91492"
+     height="18.925892"
+     rx="6.4182982"
+     fill="#ea580c"
+     id="rect35"
+     style="stroke-width:1.17489" />
+  <text
+     x="754.43274"
+     y="556.9259"
+     text-anchor="middle"
+     font-size="10px"
+     font-weight="700"
+     fill="#ffffff"
+     id="text35">ROAMING_STATE_FT: SEND_FT_REQUEST → WAIT_FT_RESPONSE</text>
+  <text
+     x="605"
+     y="578"
+     font-size="9"
+     fill="#94a3b8"
+     id="text36">FT 快速切换 (Over-the-Air / Over-the-DS)</text>
+  <line
+     x1="830"
+     y1="605"
+     x2="830"
+     y2="618"
+     stroke="#f97316"
+     stroke-width="1.2"
+     marker-end="url(#mo)"
+     id="line36" />
+  <rect
+     x="590"
+     y="628"
+     width="520"
+     height="65"
+     rx="6"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect36" />
+  <rect
+     x="595"
+     y="633"
+     width="200"
+     height="22"
+     rx="4"
+     fill="#ea580c"
+     id="rect37" />
+  <text
+     x="695"
+     y="648"
+     text-anchor="middle"
+     font-size="10"
+     font-weight="700"
+     fill="#ffffff"
+     id="text37">ROAMING_STATE_BTM: SEND_WNM_RESP</text>
+  <text
+     x="605"
+     y="666"
+     font-size="9"
+     fill="#94a3b8"
+     id="text38">BTM Response 发送与管理</text>
+  <rect
+     x="590"
+     y="716"
+     width="520"
+     height="65"
+     rx="4"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect38" />
+  <text
+     x="605"
+     y="734"
+     font-size="10"
+     fill="#10b981"
+     id="text39">✓ 优点: 可观测性高 — roamingFsmSteps 每步打日志 (TRANSITION: [OLD] → [NEW])</text>
+  <text
+     x="605"
+     y="752"
+     font-size="10"
+     fill="#10b981"
+     id="text40">✓ 优点: roamingFsmNotifyEvent() 上报完整快照 (BSSID/Channel/RCPI/BW/Status)</text>
+  <text
+     x="605"
+     y="770"
+     font-size="10"
+     fill="#dc2626"
+     id="text41">✗ 缺点: 延迟大 — 每次决策 Host→固件→Host 来回, 总时延 100-300ms</text>
+  <rect
+     x="25"
+     y="828.93872"
+     width="1050"
+     height="278.14731"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.885163"
+     id="rect41" />
+  <text
+     x="551.02472"
+     y="810.80145"
+     text-anchor="middle"
+     font-size="13px"
+     fill="#e2e8f0"
+     font-weight="600"
+     id="text42">架构选择背后的硬件约束与工程权衡</text>
+  <text
+     x="40"
+     y="918"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text43">决策位置</text>
+  <text
+     x="155"
+     y="918"
+     font-size="10px"
+     fill="#3b82f6"
+     id="text44">固件 (Firmware)</text>
+  <text
+     x="550"
+     y="918"
+     font-size="10px"
+     fill="#475569"
+     id="text45">│</text>
+  <text
+     x="575"
+     y="918"
+     font-size="10px"
+     fill="#f97316"
+     id="text46">驱动 (Driver/Host)</text>
+  <text
+     x="40"
+     y="854"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text47">状态管理</text>
+  <text
+     x="155"
+     y="854"
+     font-size="10px"
+     fill="#3b82f6"
+     id="text48">roam_offload_state 枚举，固件内部</text>
+  <text
+     x="550"
+     y="854"
+     font-size="10px"
+     fill="#475569"
+     id="text49">│</text>
+  <text
+     x="575"
+     y="854"
+     font-size="10px"
+     fill="#f97316"
+     id="text50">8 状态枚举 + roamingFsmSteps 转移</text>
+  <text
+     x="40"
+     y="880"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text51">触发源</text>
+  <text
+     x="155"
+     y="880"
+     font-size="10px"
+     fill="#3b82f6"
+     id="text52">固件检测 → WMI_ROAM 通知 Host</text>
+  <text
+     x="550"
+     y="880"
+     font-size="10px"
+     fill="#475569"
+     id="text53">│</text>
+  <text
+     x="575"
+     y="880"
+     font-size="10px"
+     fill="#f97316"
+     id="text54">驱动检测 → roamingFsmProcessEvent 分发</text>
+  <text
+     x="40"
+     y="906"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text55">扫描执行</text>
+  <text
+     x="155"
+     y="906"
+     font-size="10px"
+     fill="#3b82f6"
+     id="text56">固件自主调度，Host 只下发配置</text>
+  <text
+     x="550"
+     y="906"
+     font-size="10px"
+     fill="#475569"
+     id="text57">│</text>
+  <text
+     x="575"
+     y="906"
+     font-size="10px"
+     fill="#f97316"
+     id="text58">驱动 Scan Cadence (4 种扫描源)</text>
+  <text
+     x="40"
+     y="932"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text59">FT 处理</text>
+  <text
+     x="155"
+     y="932"
+     font-size="10px"
+     fill="#3b82f6"
+     id="text60">KEY_MGMT_OFFLOAD 固件自动</text>
+  <text
+     x="550"
+     y="932"
+     font-size="10px"
+     fill="#475569"
+     id="text61">│</text>
+  <text
+     x="575"
+     y="932"
+     font-size="10px"
+     fill="#f97316"
+     id="text62">显式状态: FT_REQUEST → WAIT_RESPONSE</text>
+  <text
+     x="40"
+     y="958"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text63">BTM 处理</text>
+  <text
+     x="155"
+     y="958"
+     font-size="10px"
+     fill="#3b82f6"
+     id="text64">固件处理 + WMI_ROAM_REASON_BTM</text>
+  <text
+     x="550"
+     y="958"
+     font-size="10px"
+     fill="#475569"
+     id="text65">│</text>
+  <text
+     x="575"
+     y="958"
+     font-size="10px"
+     fill="#f97316"
+     id="text66">驱动解析 BTM + FSM 管理响应</text>
+  <text
+     x="40"
+     y="984"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text67">延迟</text>
+  <text
+     x="155"
+     y="984"
+     font-size="10px"
+     fill="#3b82f6"
+     id="text68">低 (固件直控射频, 总 50-100ms)</text>
+  <text
+     x="550"
+     y="984"
+     font-size="10px"
+     fill="#475569"
+     id="text69">│</text>
+  <text
+     x="575"
+     y="984"
+     font-size="10px"
+     fill="#f97316"
+     id="text70">高 (Host↔固件来回, 总 100-300ms)</text>
+  <text
+     x="40"
+     y="1010"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text71">可观测性</text>
+  <text
+     x="155"
+     y="1010"
+     font-size="10px"
+     fill="#3b82f6"
+     id="text72">低 (黑盒，关键字段回传 Host)</text>
+  <text
+     x="550"
+     y="1010"
+     font-size="10px"
+     fill="#475569"
+     id="text73">│</text>
+  <text
+     x="575"
+     y="1010"
+     font-size="10px"
+     fill="#f97316"
+     id="text74">高 (每步可控，漫游前后完整快照)</text>
+  <text
+     x="40"
+     y="1036"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text75">适合场景</text>
+  <text
+     x="155"
+     y="1036"
+     font-size="10px"
+     fill="#3b82f6"
+     id="text76">手机厂商 (功耗敏感，信任自家固件)</text>
+  <text
+     x="550"
+     y="1036"
+     font-size="10px"
+     fill="#475569"
+     id="text77">│</text>
+  <text
+     x="575"
+     y="1036"
+     font-size="10px"
+     fill="#f97316"
+     id="text78">企业 AP/路由器 (调试和策略灵活优先)</text>
+  <text
+     x="40"
+     y="1062"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text79">硬件约束</text>
+  <text
+     x="155"
+     y="1062"
+     font-size="10px"
+     fill="#3b82f6"
+     id="text80">固件 SRAM/Flash 有限 → 算法精简</text>
+  <text
+     x="550"
+     y="1062"
+     font-size="10px"
+     fill="#475569"
+     id="text81">│</text>
+  <text
+     x="575"
+     y="1062"
+     font-size="10px"
+     fill="#f97316"
+     id="text82">Host CPU/内存充裕 → 可用复杂算法</text>
+  <text
+     x="40"
+     y="1088"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text83">故障恢复</text>
+  <text
+     x="155"
+     y="1088"
+     font-size="10px"
+     fill="#3b82f6"
+     id="text84">固件自恢复 + SSR 三级恢复</text>
+  <text
+     x="550"
+     y="1088"
+     font-size="10px"
+     fill="#475569"
+     id="text85">│</text>
+  <text
+     x="575"
+     y="1088"
+     font-size="10px"
+     fill="#f97316"
+     id="text86">驱动可精确重试 + 逐帧调试</text>
+</svg>

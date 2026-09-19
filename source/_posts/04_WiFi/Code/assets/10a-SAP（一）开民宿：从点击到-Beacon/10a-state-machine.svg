@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" viewBox="0 0 960 620" width="960" height="620" version="1.1" id="svg38" sodipodi:docname="10a-state-machine.svg" inkscape:version="1.4.3 (0d15f75, 2025-12-25)"><sodipodi:namedview id="namedview38" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:zoom="1.36" inkscape:cx="447.79412" inkscape:cy="325.36765" inkscape:window-width="2240" inkscape:window-height="1337" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="svg38" />
+<style id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; fill: #e2e8f0; }
+  </style>
+<defs id="defs6">
+  <linearGradient id="bg-grad" x1="0" y1="0" x2="789.93671" y2="789.93671" gradientTransform="scale(1.2152872,0.78487301)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#0f0f1a" id="stop1" />
+    <stop offset="100%" stop-color="#1a1a2e" id="stop2" />
+  </linearGradient>
+  <marker id="arrow-orange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0,6 0,0 8,3 " fill="#f97316" id="polygon2" />
+  </marker>
+  <marker id="arrow-red" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0,6 0,0 8,3 " fill="#ef4444" id="polygon3" />
+  </marker>
+  <marker id="arrow-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0,6 0,0 8,3 " fill="#10b981" id="polygon4" />
+  </marker>
+  <marker id="arrow-yellow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0,6 0,0 8,3 " fill="#eab308" id="polygon5" />
+  </marker>
+  <marker id="arrow-dim" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0,6 0,0 8,3 " fill="#64748b" id="polygon6" />
+  </marker>
+</defs>
+<rect width="960" height="620" fill="url(#bg-grad)" id="rect6" style="fill:url(#bg-grad);stroke-width:0.97665" x="0" y="0" />
+<text x="480" y="32" text-anchor="middle" font-size="17px" font-weight="700" fill="#f97316" id="text6">SoftApStateMachine 状态迁移图</text>
+<line x1="360" y1="40" x2="600" y2="40" stroke="#f97316" stroke-width="1" opacity="0.4" id="line6" />
+
+<circle cx="150" cy="70" r="8" fill="#0f0f1a" stroke="#f97316" stroke-width="2" id="circle6" />
+<circle cx="150" cy="70" r="3" fill="#f97316" id="circle7" />
+<line x1="158" y1="70" x2="182" y2="70" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrow-orange)" id="line7" />
+<text x="155" y="58" font-size="9px" fill="#94a3b8" id="text7">构造</text>
+
+<rect x="60" y="85" width="840" height="420" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1.5" stroke-dasharray="6, 3" opacity="0.5" id="rect7" />
+<rect x="60" y="85" width="180" height="22" rx="4" fill="#0f172a" stroke="#475569" stroke-width="1" id="rect8" />
+<text x="150" y="100" text-anchor="middle" font-size="11px" fill="#64748b" id="text8">ActiveState（父状态）</text>
+
+
+  # IdleState: left
+  <rect x="210" y="125" width="200" height="100" rx="8" fill="#1e1b4b" stroke="#7c3aed" stroke-width="1.5" id="rect9" />
+<text x="310" y="148" text-anchor="middle" font-size="13px" font-weight="700" fill="#a855f7" id="text9">IdleState</text>
+<text x="310" y="168" text-anchor="middle" font-size="9px" fill="#94a3b8" id="text10">entry / 清空 iface 名称</text>
+<text x="310" y="184" text-anchor="middle" font-size="9px" fill="#94a3b8" id="text11">CMD_START</text>
+<text x="310" y="200" text-anchor="middle" font-size="9px" fill="#94a3b8" id="text12">→ setupInterfaceForSoftApMode</text>
+
+
+  # WaitingForDriverCountryCodeChangedState: right-top
+  <rect x="530" y="125" width="220" height="80" rx="8" fill="#1c1917" stroke="#ea580c" stroke-width="1.5" id="rect12" />
+<text x="640" y="148" text-anchor="middle" font-size="12px" font-weight="700" fill="#f97316" id="text13">WaitingForDriver</text>
+<text x="640" y="165" text-anchor="middle" font-size="12px" font-weight="700" fill="#f97316" id="text14">CountryCodeChanged</text>
+<text x="640" y="185" text-anchor="middle" font-size="9px" fill="#94a3b8" id="text15">等待驱动上报国家码</text>
+
+
+  # WaitingForIcmDialogState: right-middle
+  <rect x="530" y="250" width="220" height="80" rx="8" fill="#1c1917" stroke="#eab308" stroke-width="1.5" id="rect15" />
+<text x="640" y="273" text-anchor="middle" font-size="12px" font-weight="700" fill="#eab308" id="text16">WaitingForIcmDialog</text>
+<text x="640" y="293" text-anchor="middle" font-size="9px" fill="#94a3b8" id="text17">等待用户确认 ICM 冲突</text>
+<text x="640" y="310" text-anchor="middle" font-size="9px" fill="#94a3b8" id="text18">用户拒绝 → FAILURE</text>
+
+
+  # StartedState: bottom-center
+  <rect x="320" y="380" width="300" height="100" rx="8" fill="#052e16" stroke="#059669" stroke-width="1.5" id="rect18" />
+<text x="470" y="403" text-anchor="middle" font-size="13px" font-weight="700" fill="#10b981" id="text19">StartedState</text>
+<text x="470" y="423" text-anchor="middle" font-size="9px" fill="#94a3b8" id="text20">entry / 注册 CoexListener · 清空客户端</text>
+<text x="470" y="439" text-anchor="middle" font-size="9px" fill="#94a3b8" id="text21">SAR 设置 · 记录 SUCCESS</text>
+<text x="470" y="460" text-anchor="middle" font-size="9px" fill="#94a3b8" id="text22">运行中：客户端连接/断开事件</text>
+
+
+  # --- Transitions ---
+  # Idle → DriverCode: horizontal arrow between boxes
+  <line x1="410" y1="155" x2="530" y2="155" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrow-orange)" id="line22" />
+<text x="470" y="148" text-anchor="middle" font-size="8px" fill="#f97316" id="text23">[国家码未就绪]</text>
+
+
+  # Idle → IcmDialog: path going around right of Idle then down
+  <path d="m 410,211.5645 h 60 v 65.20021 h 60" stroke="#eab308" stroke-width="1.56365" fill="none" marker-end="url(#arrow-yellow)" id="path23" />
+<text x="442.6441" y="224.07594" text-anchor="middle" font-size="8px" fill="#eab308" id="text24">[ICM 冲突]</text>
+
+
+  # Idle → Started: direct path down
+  <path d="m 310,225 v 115 h 139.55882 v 40" stroke="#10b981" stroke-width="1.32079" fill="none" marker-end="url(#arrow-green)" id="path24" />
+<text x="362.02652" y="269.3678" text-anchor="middle" font-size="8px" fill="#10b981" id="text25">[就绪：startSoftAp()]</text>
+
+
+  # DriverCode → IcmDialog: direct down arrow
+  <line x1="640" y1="205" x2="640" y2="250" stroke="#eab308" stroke-width="1.5" marker-end="url(#arrow-yellow)" id="line25" />
+<text x="565" y="228" font-size="8px" fill="#94a3b8" id="text26">[ICM 冲突]</text>
+
+
+  # DriverCode → Started: path going around right side down to Started
+  <path d="m 750,165 h 90 V 430 H 620" stroke="#10b981" stroke-width="1.5" fill="none" marker-end="url(#arrow-green)" id="path26" />
+<text x="806.17645" y="176.32353" text-anchor="middle" font-size="8px" fill="#10b981" id="text27">[就绪+无ICM]</text>
+
+
+  # IcmDialog → Started: path going left then down
+  <path d="M 530,307.79708 H 470 V 380" stroke="#10b981" stroke-width="1.34353" fill="none" marker-end="url(#arrow-green)" id="path27" />
+<text x="500" y="318.91675" text-anchor="middle" font-size="8px" fill="#10b981" id="text28">[用户确认]</text>
+
+
+  # Failed state (outside ActiveState - bottom left)
+  <rect x="210" y="525" width="180" height="50" rx="8" fill="#1f0a02" stroke="#ef4444" stroke-width="1.5" id="rect28" />
+<text x="300" y="548" text-anchor="middle" font-size="12px" font-weight="700" fill="#ef4444" id="text29">启动失败</text>
+<text x="300" y="565" text-anchor="middle" font-size="9px" fill="#94a3b8" id="text30">返回 StartResult 错误码</text>
+
+
+  # Idle → Failed
+  <path d="M 294,225 V 525" stroke="#ef4444" stroke-width="1.2" fill="none" stroke-dasharray="4, 2" marker-end="url(#arrow-red)" id="path30" />
+<text x="240" y="387.13632" font-size="8px" fill="#ef4444" id="text31">[setup失败]</text>
+<text x="195" y="422" font-size="8px" fill="#ef4444" id="text32" />
+
+
+  # IcmDialog → Failed (user rejected)
+  <path d="M 528.81061,295.66923 H 280.59469 l 0.5947,196.92326 L 280.37511,525" stroke="#ef4444" stroke-width="1.24043" fill="none" stroke-dasharray="4, 2" marker-end="url(#arrow-red)" id="path32" sodipodi:nodetypes="cccc" />
+<text x="281.67429" y="320.24704" font-size="8px" fill="#ef4444" id="text33">[用户拒绝]</text>
+
+
+  # Interface down: back from Started to Idle (on the left side)
+  <path d="M 320,440 H 100 V 175 h 110" stroke="#64748b" stroke-width="1.2" fill="none" stroke-dasharray="4, 2" marker-end="url(#arrow-dim)" id="path33" />
+<text x="102.70588" y="432.64706" font-size="9px" fill="#64748b" id="text34">接口 down</text>
+
+<rect x="700" y="510" width="200" height="90" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" opacity="0.8" id="rect34" />
+<text x="800" y="530" text-anchor="middle" font-size="11px" font-weight="700" fill="#94a3b8" id="text35">图例</text>
+<line x1="712" y1="545" x2="740" y2="545" stroke="#10b981" stroke-width="1.5" id="line35" />
+<polygon points="737,572 745,575 737,578 " fill="#10b981" id="polygon35" transform="translate(0,-30)" />
+<text x="750" y="549" font-size="9px" fill="#e2e8f0" id="text36">正常流转</text>
+<line x1="712" y1="565" x2="740" y2="565" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4, 2" id="line36" />
+<polygon points="737,592 745,595 737,598 " fill="#ef4444" id="polygon36" transform="translate(0,-30)" />
+<text x="750" y="569" font-size="9px" fill="#e2e8f0" id="text37">失败路径</text>
+<line x1="712" y1="585" x2="740" y2="585" stroke="#64748b" stroke-width="1.2" stroke-dasharray="4, 2" id="line37" />
+<text x="750" y="589" font-size="9px" fill="#e2e8f0" id="text38">异常恢复</text>
+</svg>

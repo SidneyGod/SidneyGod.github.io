@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 960 840"
+   width="960"
+   height="840"
+   version="1.1"
+   id="svg34"
+   sodipodi:docname="07e-dscp-up-ac-mapping.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview34"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.3011905"
+     inkscape:cx="479.94511"
+     inkscape:cy="420"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg34" />
+  <defs
+     id="defs8">
+    <marker
+       id="arrowA"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#a855f7"
+         id="polygon1" />
+    </marker>
+    <marker
+       id="arrowB"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#22c55e"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arrowC"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#38bdf8"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arrowE"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#fb7185"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arrowF"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#f59e0b"
+         id="polygon5" />
+    </marker>
+    <marker
+       id="arrowG"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#f97316"
+         id="polygon6" />
+    </marker>
+    <marker
+       id="arrowH"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#94a3b8"
+         id="polygon7" />
+    </marker>
+    <linearGradient
+       id="terminalGradient"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop7" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop8" />
+    </linearGradient>
+    <filter
+       id="glowBlue"
+       x="-30%"
+       y="-30%"
+       width="160%"
+       height="160%">
+      <feDropShadow
+         dx="0"
+         dy="0"
+         stdDeviation="5"
+         flood-color="#3b82f6"
+         flood-opacity="0.65" />
+    </filter>
+    <filter
+       id="glowPurple"
+       x="-30%"
+       y="-30%"
+       width="160%"
+       height="160%">
+      <feDropShadow
+         dx="0"
+         dy="0"
+         stdDeviation="5"
+         flood-color="#a855f7"
+         flood-opacity="0.72" />
+    </filter>
+    <filter
+       id="glowGreen"
+       x="-30%"
+       y="-30%"
+       width="160%"
+       height="160%">
+      <feDropShadow
+         dx="0"
+         dy="0"
+         stdDeviation="5"
+         flood-color="#22c55e"
+         flood-opacity="0.62" />
+    </filter>
+    <filter
+       id="glowOrange"
+       x="-30%"
+       y="-30%"
+       width="160%"
+       height="160%">
+      <feDropShadow
+         dx="0"
+         dy="0"
+         stdDeviation="5"
+         flood-color="#f97316"
+         flood-opacity="0.62" />
+    </filter>
+    <style
+       id="style8">
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; }
+    .title { font-size: 30px; font-weight: 700; fill: #e2e8f0; }
+    .subtitle { font-size: 14px; font-weight: 500; fill: #94a3b8; }
+    .section { font-size: 13px; font-weight: 700; fill: #38bdf8; letter-spacing: 1.4px; }
+    .section-sub { font-size: 12px; font-weight: 500; fill: #64748b; }
+    .node-title { font-size: 18px; font-weight: 700; fill: #e2e8f0; }
+    .node-sub { font-size: 12px; font-weight: 500; fill: #94a3b8; }
+    .node-type { font-size: 12px; font-weight: 700; fill: #64748b; letter-spacing: 0.08em; }
+    .arrow-label { font-size: 12px; font-weight: 600; fill: #cbd5e1; }
+    .legend { font-size: 12px; font-weight: 500; fill: #94a3b8; }
+    .footnote { font-size: 12px; font-weight: 500; fill: #64748b; }
+    </style>
+  </defs>
+  <rect
+     width="960.0"
+     height="840.0"
+     fill="url(#terminalGradient)"
+     id="rect8" />
+  <text
+     x="480.0"
+     y="56"
+     text-anchor="middle"
+     class="title"
+     id="text8">DSCP → UP → AC 映射流程</text>
+  <text
+     x="480.0"
+     y="82"
+     text-anchor="middle"
+     class="subtitle"
+     id="text9">Exception 表精确匹配 → Range 表范围匹配 → dscp&gt;&gt;5 回退 → WMM AC 队列</text>
+  <path
+     d="M 480.0,164.0 L 450.0,210.0"
+     fill="none"
+     stroke="#fb7185"
+     stroke-width="2.3"
+     marker-end="url(#arrowE)"
+     id="path9" />
+  <path
+     d="M 580.0,237.0 L 600.4,237.0 L 659.6,233.0 L 680.0,233.0"
+     fill="none"
+     stroke="#22c55e"
+     stroke-width="2.3"
+     marker-end="url(#arrowB)"
+     id="path10" />
+  <path
+     d="M 450.0,264.0 L 450.0,320.0"
+     fill="none"
+     stroke="#94a3b8"
+     stroke-width="2.3"
+     marker-end="url(#arrowH)"
+     id="path11" />
+  <path
+     d="M 580.0,347.0 L 600.4,347.0 L 659.6,343.0 L 680.0,343.0"
+     fill="none"
+     stroke="#22c55e"
+     stroke-width="2.3"
+     marker-end="url(#arrowB)"
+     id="path12" />
+  <path
+     d="M 450.0,374.0 L 450.0,440.0"
+     fill="none"
+     stroke="#94a3b8"
+     stroke-width="2.3"
+     marker-end="url(#arrowH)"
+     id="path13" />
+  <path
+     d="M 450.0,494.0 L 450.0,560.0"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="2.3"
+     marker-end="url(#arrowG)"
+     id="path14" />
+  <path
+     d="M 880.0,233.0 L 780.0,233.0 L 780.0,587.0 L 550.0,587.0"
+     fill="none"
+     stroke="#22c55e"
+     stroke-width="2.3"
+     marker-end="url(#arrowB)"
+     id="path15" />
+  <path
+     d="M 880.0,343.0 L 780.0,343.0 L 780.0,587.0 L 550.0,587.0"
+     fill="none"
+     stroke="#22c55e"
+     stroke-width="2.3"
+     marker-end="url(#arrowB)"
+     id="path16" />
+  <path
+     d="M 450.0,614.0 L 190.0,700.0"
+     fill="none"
+     stroke="#fb7185"
+     stroke-width="2.3"
+     marker-end="url(#arrowE)"
+     id="path17" />
+  <path
+     d="M 450.0,614.0 L 530.0,700.0"
+     fill="none"
+     stroke="#f59e0b"
+     stroke-width="2.3"
+     marker-end="url(#arrowF)"
+     id="path18" />
+  <rect
+     x="380.0"
+     y="110.0"
+     width="200.0"
+     height="54.0"
+     rx="10.0"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="1.8"
+     id="rect18" />
+  <text
+     x="480.0"
+     y="137.0"
+     text-anchor="middle"
+     class="node-title"
+     id="text18">DSCP 值</text>
+  <rect
+     x="320.0"
+     y="210.0"
+     width="260.0"
+     height="54.0"
+     rx="10.0"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="1.8"
+     id="rect19" />
+  <text
+     x="450.0"
+     y="237.0"
+     text-anchor="middle"
+     class="node-title"
+     id="text19">① Exception 表</text>
+  <rect
+     x="680.01471"
+     y="204.76129"
+     width="233.82024"
+     height="46"
+     rx="11.691012"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.94625"
+     id="rect20"
+     transform="matrix(0.99997839,0.00657365,0,1,0,0)" />
+  <text
+     x="798"
+     y="239"
+     text-anchor="middle"
+     class="node-title"
+     id="text20">UP = Exception[dscp]</text>
+  <rect
+     x="320.0"
+     y="320.0"
+     width="260.0"
+     height="54.0"
+     rx="10.0"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="1.8"
+     id="rect21" />
+  <text
+     x="450.0"
+     y="347.0"
+     text-anchor="middle"
+     class="node-title"
+     id="text21">② Range 表</text>
+  <rect
+     x="680.0"
+     y="320.0"
+     width="200.0"
+     height="46.0"
+     rx="10.0"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect22" />
+  <text
+     x="780.0"
+     y="343.0"
+     text-anchor="middle"
+     class="node-title"
+     id="text22">UP = Range[dscp]</text>
+  <rect
+     x="340.0"
+     y="440.0"
+     width="220.0"
+     height="54.0"
+     rx="10.0"
+     fill="#78350f"
+     stroke="#f97316"
+     stroke-width="1.8"
+     id="rect23" />
+  <text
+     x="450.0"
+     y="467.0"
+     text-anchor="middle"
+     class="node-title"
+     id="text23">③ dscp &gt;&gt; 5 回退</text>
+  <rect
+     x="350.0"
+     y="560.0"
+     width="200.0"
+     height="54.0"
+     rx="10.0"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="1.8"
+     id="rect24" />
+  <text
+     x="450.0"
+     y="587.0"
+     text-anchor="middle"
+     class="node-title"
+     id="text24">UP 值 (0-7)</text>
+  <rect
+     x="120.0"
+     y="700.0"
+     width="140.0"
+     height="50.0"
+     rx="10.0"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect25" />
+  <text
+     x="190.0"
+     y="725.0"
+     text-anchor="middle"
+     class="node-title"
+     id="text25">BK</text>
+  <rect
+     x="290.0"
+     y="700.0"
+     width="140.0"
+     height="50.0"
+     rx="10.0"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect26" />
+  <text
+     x="360.0"
+     y="725.0"
+     text-anchor="middle"
+     class="node-title"
+     id="text26">BE</text>
+  <rect
+     x="460.0"
+     y="700.0"
+     width="140.0"
+     height="50.0"
+     rx="10.0"
+     fill="#7c2d12"
+     stroke="#f97316"
+     stroke-width="1.8"
+     id="rect27" />
+  <text
+     x="530.0"
+     y="725.0"
+     text-anchor="middle"
+     class="node-title"
+     id="text27">VI</text>
+  <rect
+     x="630.0"
+     y="700.0"
+     width="140.0"
+     height="50.0"
+     rx="10.0"
+     fill="#7c2d12"
+     stroke="#f97316"
+     stroke-width="1.8"
+     id="rect28" />
+  <text
+     x="700.0"
+     y="725.0"
+     text-anchor="middle"
+     class="node-title"
+     id="text28">VO</text>
+  <rect
+     x="612.0"
+     y="205.0"
+     width="36"
+     height="20"
+     rx="6"
+     fill="#0f172a"
+     opacity="0.92"
+     id="rect29" />
+  <text
+     x="630.0"
+     y="219.0"
+     text-anchor="middle"
+     class="arrow-label"
+     id="text29">是</text>
+  <rect
+     x="414.0"
+     y="278.0"
+     width="36"
+     height="20"
+     rx="6"
+     fill="#0f172a"
+     opacity="0.92"
+     id="rect30" />
+  <text
+     x="432.0"
+     y="292.0"
+     text-anchor="middle"
+     class="arrow-label"
+     id="text30">否</text>
+  <rect
+     x="612.0"
+     y="315.0"
+     width="36"
+     height="20"
+     rx="6"
+     fill="#0f172a"
+     opacity="0.92"
+     id="rect31" />
+  <text
+     x="630.0"
+     y="329.0"
+     text-anchor="middle"
+     class="arrow-label"
+     id="text31">是</text>
+  <rect
+     x="414.0"
+     y="393.0"
+     width="36"
+     height="20"
+     rx="6"
+     fill="#0f172a"
+     opacity="0.92"
+     id="rect32" />
+  <text
+     x="432.0"
+     y="407.0"
+     text-anchor="middle"
+     class="arrow-label"
+     id="text32">否</text>
+  <rect
+     x="295.5"
+     y="627.0"
+     width="49"
+     height="20"
+     rx="6"
+     fill="#0f172a"
+     opacity="0.92"
+     id="rect33" />
+  <text
+     x="320.0"
+     y="641.0"
+     text-anchor="middle"
+     class="arrow-label"
+     id="text33">BE/BK</text>
+  <rect
+     x="465.5"
+     y="627.0"
+     width="49"
+     height="20"
+     rx="6"
+     fill="#0f172a"
+     opacity="0.92"
+     id="rect34" />
+  <text
+     x="490.0"
+     y="641.0"
+     text-anchor="middle"
+     class="arrow-label"
+     id="text34">VI/VO</text>
+</svg>

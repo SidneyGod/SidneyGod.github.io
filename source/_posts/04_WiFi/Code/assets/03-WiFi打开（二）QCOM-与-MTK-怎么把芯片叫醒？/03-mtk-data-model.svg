@@ -1,0 +1,1597 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 1020"
+   width="1200"
+   height="1020"
+   version="1.1"
+   id="svg150"
+   sodipodi:docname="03-mtk-data-model.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview150"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.15"
+     inkscape:cx="516.95652"
+     inkscape:cy="471.73913"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg150" />
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN', monospace;; }
+  .mono { font-family: 'Maple Mono Normal NL NF CN', monospace;; }
+  .title { fill: #e2e8f0; font-size: 20px; font-weight: bold; text-anchor: middle; }
+  .subtitle { fill: #64748b; font-size: 12px; text-anchor: middle; }
+</style>
+  <defs
+     id="defs18">
+    <linearGradient
+       id="bgGrad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <filter
+       id="shadow">
+      <feDropShadow
+         dx="2"
+         dy="2"
+         stdDeviation="4"
+         flood-color="#000"
+         flood-opacity="0.5" />
+    </filter>
+    <filter
+       id="shadowLg"
+       x="-0.0096153846"
+       y="-0.013020833"
+       width="1.0192308"
+       height="1.0260417">
+      <feDropShadow
+         dx="3"
+         dy="3"
+         stdDeviation="6"
+         flood-color="#000"
+         flood-opacity="0.6" />
+    </filter>
+    <linearGradient
+       id="glueGrad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#e8a840"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#c4882c"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="adapterGrad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#3b82f6"
+         id="stop5" />
+      <stop
+         offset="100%"
+         stop-color="#1d4ed8"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       id="chipGrad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#14b8a6"
+         id="stop7" />
+      <stop
+         offset="100%"
+         stop-color="#0d9488"
+         id="stop8" />
+    </linearGradient>
+    <linearGradient
+       id="bssGrad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#10b981"
+         id="stop9" />
+      <stop
+         offset="100%"
+         stop-color="#059669"
+         id="stop10" />
+    </linearGradient>
+    <linearGradient
+       id="staGrad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#34d399"
+         id="stop11" />
+      <stop
+         offset="100%"
+         stop-color="#10b981"
+         id="stop12" />
+    </linearGradient>
+    <linearGradient
+       id="threadGrad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#a855f7"
+         id="stop13" />
+      <stop
+         offset="100%"
+         stop-color="#7c3aed"
+         id="stop14" />
+    </linearGradient>
+    <linearGradient
+       id="conninfraGrad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#d4756a"
+         id="stop15" />
+      <stop
+         offset="100%"
+         stop-color="#b5443d"
+         id="stop16" />
+    </linearGradient>
+    <linearGradient
+       id="opsGrad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#06b6d4"
+         id="stop17" />
+      <stop
+         offset="100%"
+         stop-color="#0891b2"
+         id="stop18" />
+    </linearGradient>
+    <marker
+       id="arrowDn"
+       markerWidth="8"
+       markerHeight="6"
+       refX="4"
+       refY="6"
+       orient="auto">
+      <polygon
+         points="0 0, 8 0, 4 6"
+         fill="#475569"
+         id="polygon18" />
+    </marker>
+  </defs>
+  <rect
+     width="1200"
+     height="1020"
+     fill="url(#bgGrad)"
+     id="rect18" />
+  <pattern
+     id="grid"
+     width="40"
+     height="40"
+     patternUnits="userSpaceOnUse">
+    <path
+       d="M 40 0 L 0 0 0 40"
+       fill="none"
+       stroke="#ffffff06"
+       stroke-width="0.5"
+       id="path18" />
+  </pattern>
+  <rect
+     width="1200"
+     height="1020"
+     fill="url(#grid)"
+     id="rect19" />
+  <text
+     x="600"
+     y="36"
+     class="title"
+     id="text19">MTK WiFi 驱动数据结构模型</text>
+  <text
+     x="600"
+     y="58"
+     class="subtitle"
+     id="text20">wlan-core-gen4m — 以 ADAPTER 为中心的扁平互联架构</text>
+  <rect
+     x="30"
+     y="74"
+     width="1140"
+     height="120"
+     rx="8"
+     fill="rgba(232,168,64,0.04)"
+     stroke="rgba(232,168,64,0.10)"
+     stroke-width="1"
+     id="rect20" />
+  <rect
+     x="30"
+     y="204"
+     width="1140"
+     height="170"
+     rx="8"
+     fill="rgba(59,130,246,0.04)"
+     stroke="rgba(59,130,246,0.10)"
+     stroke-width="1"
+     id="rect21" />
+  <rect
+     x="30"
+     y="386"
+     width="1140"
+     height="340"
+     rx="8"
+     fill="rgba(100,116,139,0.03)"
+     stroke="rgba(100,116,139,0.06)"
+     stroke-width="1"
+     id="rect22" />
+  <rect
+     x="30"
+     y="742"
+     width="1140"
+     height="116"
+     rx="8"
+     fill="rgba(248,113,113,0.04)"
+     stroke="rgba(248,113,113,0.10)"
+     stroke-width="1"
+     id="rect23" />
+  <text
+     x="48"
+     y="96"
+     fill="rgba(232,168,64,0.5)"
+     font-size="9"
+     font-weight="bold"
+     id="text23">OS 适配层</text>
+  <text
+     x="48"
+     y="224"
+     fill="rgba(59,130,246,0.5)"
+     font-size="9"
+     font-weight="bold"
+     id="text24">驱动核心</text>
+  <text
+     x="48"
+     y="406"
+     fill="rgba(100,116,139,0.5)"
+     font-size="9"
+     font-weight="bold"
+     id="text25">硬件抽象 + 连接状态 + 执行模型</text>
+  <text
+     x="48"
+     y="762"
+     fill="rgba(248,113,113,0.5)"
+     font-size="9"
+     font-weight="bold"
+     id="text26">共享基础设施</text>
+  <rect
+     x="300"
+     y="84"
+     width="600"
+     height="100"
+     rx="10"
+     fill="#1a1a2e"
+     stroke="url(#glueGrad)"
+     stroke-width="2.5"
+     id="rect26" />
+  <rect
+     x="300"
+     y="84"
+     width="600"
+     height="30"
+     rx="10"
+     fill="url(#glueGrad)"
+     id="rect27" />
+  <rect
+     x="300"
+     y="102"
+     width="600"
+     height="12"
+     fill="url(#glueGrad)"
+     id="rect28" />
+  <text
+     x="600"
+     y="98"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="14px"
+     font-weight="bold"
+     id="text28">struct GLUE_INFO</text>
+  <text
+     x="600"
+     y="110"
+     text-anchor="middle"
+     fill="rgba(255,255,255,0.55)"
+     font-size="8px"
+     id="text29">OS Glue Layer — 连接 Linux 网络栈与驱动核心的「翻译官」</text>
+  <text
+     x="335"
+     y="148"
+     fill="#94a3b8"
+     font-size="10"
+     class="mono"
+     id="text30"><tspan
+   fill="#e8a840"
+   id="tspan29">prDevHandler</tspan> → net_device</text>
+  <text
+     x="335"
+     y="166"
+     fill="#94a3b8"
+     font-size="10"
+     class="mono"
+     id="text31"><tspan
+   fill="#3b82f6"
+   id="tspan30">prAdapter</tspan> → ADAPTER</text>
+  <text
+     x="545"
+     y="148"
+     fill="#94a3b8"
+     font-size="10"
+     class="mono"
+     id="text32"><tspan
+   fill="#e8a840"
+   id="tspan31">rHifInfo</tspan> (GL_HIF_INFO)</text>
+  <text
+     x="545"
+     y="166"
+     fill="#94a3b8"
+     font-size="10"
+     class="mono"
+     id="text33"><tspan
+   fill="#e8a840"
+   id="tspan32">rRegInfo</tspan> / rTxPwr</text>
+  <text
+     x="755"
+     y="148"
+     fill="#94a3b8"
+     font-size="10"
+     class="mono"
+     id="text34"><tspan
+   fill="#a855f7"
+   id="tspan33">main_thread</tspan> / hif_thread</text>
+  <text
+     x="755"
+     y="166"
+     fill="#94a3b8"
+     font-size="10"
+     class="mono"
+     id="text35"><tspan
+   fill="#a855f7"
+   id="tspan34">rx_thread</tspan> / waitq(s)</text>
+  <line
+     x1="540"
+     y1="184"
+     x2="480"
+     y2="214"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#arrowDn)"
+     id="line35" />
+  <text
+     x="518"
+     y="202"
+     fill="#64748b"
+     font-size="9px"
+     id="text36">prAdapter</text>
+  <rect
+     x="140"
+     y="220"
+     width="920"
+     height="152"
+     rx="10"
+     fill="#1a1a2e"
+     stroke="url(#adapterGrad)"
+     stroke-width="2.5"
+     id="rect36" />
+  <rect
+     x="140"
+     y="220"
+     width="920"
+     height="30"
+     rx="10"
+     fill="url(#adapterGrad)"
+     id="rect37" />
+  <rect
+     x="140"
+     y="238"
+     width="920"
+     height="12"
+     fill="url(#adapterGrad)"
+     id="rect38" />
+  <text
+     x="600"
+     y="234"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="15px"
+     font-weight="bold"
+     id="text38">struct ADAPTER</text>
+  <text
+     x="600"
+     y="246"
+     text-anchor="middle"
+     fill="rgba(255,255,255,0.55)"
+     font-size="8px"
+     id="text39">Central Data Hub — 扁平超级结构体，承载所有驱动状态（≈ QCOM hdd_context + psoc + pdev）</text>
+  <rect
+     x="160"
+     y="268"
+     width="215"
+     height="82"
+     rx="5"
+     fill="rgba(59,130,246,0.06)"
+     stroke="rgba(59,130,246,0.12)"
+     stroke-width="0.5"
+     id="rect39" />
+  <text
+     x="267"
+     y="283"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="9"
+     font-weight="bold"
+     id="text40">指针引用</text>
+  <text
+     x="168"
+     y="299"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text41"><tspan
+       fill="#14b8a6"
+       id="tspan40">chip_info → mt66xx_chip_info</tspan></text>
+  <text
+     x="168"
+     y="313"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text42"><tspan
+       fill="#e8a840"
+       id="tspan41">prGlueInfo → GLUE_INFO</tspan></text>
+  <text
+     x="168"
+     y="327"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text43">prWlanCfg / fw_flavor</text>
+  <rect
+     x="385"
+     y="268"
+     width="215"
+     height="82"
+     rx="5"
+     fill="rgba(59,130,246,0.06)"
+     stroke="rgba(59,130,246,0.12)"
+     stroke-width="0.5"
+     id="rect43" />
+  <text
+     x="492"
+     y="283"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="9"
+     font-weight="bold"
+     id="text44">嵌入式数组</text>
+  <text
+     x="393"
+     y="299"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text45"><tspan
+       fill="#10b981"
+       id="tspan44">aprBssInfo[MAX_BSSID+1]</tspan></text>
+  <text
+     x="393"
+     y="313"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text46"><tspan
+       fill="#34d399"
+       id="tspan45">arStaRec[CFG_STA_REC_NUM]</tspan></text>
+  <text
+     x="393"
+     y="327"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text47"><tspan
+       fill="#64748b"
+       id="tspan46">arMbox[MBOX_ID_TOTAL_NUM]</tspan></text>
+  <rect
+     x="610"
+     y="268"
+     width="215"
+     height="82"
+     rx="5"
+     fill="rgba(59,130,246,0.06)"
+     stroke="rgba(59,130,246,0.12)"
+     stroke-width="0.5"
+     id="rect47" />
+  <text
+     x="717"
+     y="283"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="9"
+     font-weight="bold"
+     id="text48">控制与状态</text>
+  <text
+     x="618"
+     y="299"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text49">rTxCtrl / rRxCtrl</text>
+  <text
+     x="618"
+     y="313"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text50">rWifiVar (配置变量)</text>
+  <text
+     x="618"
+     y="327"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text51">rLinkQuality / rVerInfo</text>
+  <rect
+     x="835"
+     y="268"
+     width="215"
+     height="82"
+     rx="5"
+     fill="rgba(59,130,246,0.06)"
+     stroke="rgba(59,130,246,0.12)"
+     stroke-width="0.5"
+     id="rect51" />
+  <text
+     x="942"
+     y="283"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="9"
+     font-weight="bold"
+     id="text52">FW / 复位标志</text>
+  <text
+     x="843"
+     y="299"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text53"><tspan
+       fill="#f87171"
+       id="tspan52">fgIsFwDownloaded</tspan></text>
+  <text
+     x="843"
+     y="313"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text54"><tspan
+       fill="#f87171"
+       id="tspan53">fgIsFwOwn / fgIsCr4FwDownloaded</tspan></text>
+  <text
+     x="843"
+     y="327"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text55"><tspan
+       fill="#f87171"
+       id="tspan54">eWfsysResetState</tspan></text>
+  <line
+     x1="300"
+     y1="372"
+     x2="230"
+     y2="408"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#arrowDn)"
+     id="line55" />
+  <text
+     x="296"
+     y="382"
+     fill="#64748b"
+     font-size="9px"
+     id="text56">chip_info</text>
+  <line
+     x1="550"
+     y1="372"
+     x2="550"
+     y2="408"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#arrowDn)"
+     id="line56" />
+  <text
+     x="565"
+     y="386"
+     fill="#64748b"
+     font-size="9"
+     id="text57">aprBssInfo[]</text>
+  <line
+     x1="780"
+     y1="372"
+     x2="780"
+     y2="408"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#arrowDn)"
+     id="line57" />
+  <text
+     x="795"
+     y="386"
+     fill="#64748b"
+     font-size="9"
+     id="text58">arStaRec[]</text>
+  <line
+     x1="1050"
+     y1="372"
+     x2="1050"
+     y2="408"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#arrowDn)"
+     id="line58" />
+  <text
+     x="1065"
+     y="386"
+     fill="#64748b"
+     font-size="9"
+     id="text59">线程管理</text>
+  <rect
+     x="50"
+     y="412"
+     width="380"
+     height="130"
+     rx="10"
+     fill="#1a1a2e"
+     stroke="url(#chipGrad)"
+     stroke-width="2.5"
+     id="rect59" />
+  <rect
+     x="50"
+     y="412"
+     width="380"
+     height="30"
+     rx="10"
+     fill="url(#chipGrad)"
+     id="rect60" />
+  <rect
+     x="50"
+     y="430"
+     width="380"
+     height="12"
+     fill="url(#chipGrad)"
+     id="rect61" />
+  <text
+     x="240"
+     y="424"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="14px"
+     font-weight="bold"
+     id="text61">struct mt66xx_chip_info</text>
+  <text
+     x="240"
+     y="440"
+     text-anchor="middle"
+     fill="rgba(255,255,255,0.55)"
+     font-size="8px"
+     id="text62">Chip Operations Table — 芯片差异通过函数指针表实现可插拔</text>
+  <text
+     x="65"
+     y="470"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text63"><tspan
+   fill="#06b6d4"
+   id="tspan62">fw_dl_ops</tspan> → FWDL_OPS_T</text>
+  <text
+     x="65"
+     y="485"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text64"><tspan
+   fill="#06b6d4"
+   id="tspan63">bus_info</tspan> → BUS_INFO</text>
+  <text
+     x="65"
+     y="500"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text65">prTxDescOps / prRxDescOps</text>
+  <text
+     x="65"
+     y="515"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text66"><tspan
+   fill="#f87171"
+   id="tspan65">sw_sync0</tspan>, <tspan
+   fill="#f87171"
+   id="tspan66">sw_ready_bits</tspan></text>
+  <text
+     x="65"
+     y="530"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text67">chip_id / eco_ver / features</text>
+  <text
+     x="230"
+     y="470"
+     fill="#64748b"
+     font-size="9"
+     class="mono"
+     id="text68"><tspan
+   fill="#a78bfa"
+   id="tspan67">queryPmicInfo</tspan>()</text>
+  <text
+     x="230"
+     y="485"
+     fill="#64748b"
+     font-size="9"
+     class="mono"
+     id="text69"><tspan
+   fill="#a78bfa"
+   id="tspan68">get_sw_interrupt_status</tspan>()</text>
+  <text
+     x="230"
+     y="500"
+     fill="#64748b"
+     font-size="9"
+     class="mono"
+     id="text70"><tspan
+   fill="#a78bfa"
+   id="tspan69">asicSerInit</tspan>() / asicCapInit()</text>
+  <text
+     x="230"
+     y="515"
+     fill="#64748b"
+     font-size="9"
+     class="mono"
+     id="text71"><tspan
+   fill="#a78bfa"
+   id="tspan70">trigger_fw_assert</tspan>() / setCrypto()</text>
+  <text
+     x="230"
+     y="530"
+     fill="#64748b"
+     font-size="9"
+     class="mono"
+     id="text72"><tspan
+   fill="#a78bfa"
+   id="tspan71">checkbushang</tspan>() / checkmcuoff()</text>
+  <line
+     x1="170"
+     y1="542"
+     x2="130"
+     y2="582"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#arrowDn)"
+     id="line72" />
+  <line
+     x1="330"
+     y1="542"
+     x2="360"
+     y2="582"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#arrowDn)"
+     id="line73" />
+  <rect
+     x="450"
+     y="412"
+     width="310"
+     height="130"
+     rx="10"
+     fill="#1a1a2e"
+     stroke="url(#bssGrad)"
+     stroke-width="2.5"
+     id="rect73" />
+  <rect
+     x="450"
+     y="412"
+     width="310"
+     height="30"
+     rx="10"
+     fill="url(#bssGrad)"
+     id="rect74" />
+  <rect
+     x="450"
+     y="430"
+     width="310"
+     height="12"
+     fill="url(#bssGrad)"
+     id="rect75" />
+  <text
+     x="605"
+     y="426"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="14px"
+     font-weight="bold"
+     id="text75">struct BSS_INFO</text>
+  <text
+     x="605"
+     y="438"
+     text-anchor="middle"
+     fill="rgba(255,255,255,0.55)"
+     font-size="8px"
+     id="text76">每个 BSS 上下文的网络状态 — SSID / BSSID / 安全 / WMM</text>
+  <text
+     x="465"
+     y="470"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text77"><tspan
+   fill="#10b981"
+   id="tspan76">ucBssIndex</tspan>, eBand, ucPrimaryChannel</text>
+  <text
+     x="465"
+     y="485"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text78">aucSSID[], aucBSSID[], aucOwnMacAddr[]</text>
+  <text
+     x="465"
+     y="500"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text79"><tspan
+   fill="#34d399"
+   id="tspan78">prStaRecOfAP</tspan> → STA_RECORD</text>
+  <text
+     x="465"
+     y="515"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text80"><tspan
+   fill="#34d399"
+   id="tspan79">rStaRecOfClientList</tspan> (LINK 链表)</text>
+  <text
+     x="465"
+     y="530"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text81">eConnectionState / arACQueParms / rPmkidCache</text>
+  <line
+     x1="605"
+     y1="542"
+     x2="605"
+     y2="582"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#arrowDn)"
+     id="line81" />
+  <text
+     x="617"
+     y="568"
+     fill="#64748b"
+     font-size="9"
+     id="text82">prStaRecOfAP</text>
+  <rect
+     x="780"
+     y="412"
+     width="240"
+     height="130"
+     rx="10"
+     fill="#1a1a2e"
+     stroke="url(#staGrad)"
+     stroke-width="2.5"
+     id="rect82" />
+  <rect
+     x="780"
+     y="412"
+     width="240"
+     height="30"
+     rx="10"
+     fill="url(#staGrad)"
+     id="rect83" />
+  <rect
+     x="780"
+     y="430"
+     width="240"
+     height="12"
+     fill="url(#staGrad)"
+     id="rect84" />
+  <text
+     x="900"
+     y="426"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="14px"
+     font-weight="bold"
+     id="text84">struct STA_RECORD</text>
+  <text
+     x="900"
+     y="438"
+     text-anchor="middle"
+     fill="rgba(255,255,255,0.55)"
+     font-size="8px"
+     id="text85">arStaRec[] — 内嵌于 ADAPTER 的所有已知对端</text>
+  <text
+     x="795"
+     y="470"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text86">MAC 地址 / AID / BSS 索引</text>
+  <text
+     x="795"
+     y="485"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text87">Capability Info / 支持速率</text>
+  <text
+     x="795"
+     y="500"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text88">HT/VHT/HE/EHT Capabilities</text>
+  <text
+     x="795"
+     y="515"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text89">BA Session (RxReorder)</text>
+  <text
+     x="795"
+     y="530"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text90">Security Keys / 省电状态</text>
+  <rect
+     x="1035"
+     y="412"
+     width="130"
+     height="130"
+     rx="10"
+     fill="#1a1a2e"
+     stroke="url(#threadGrad)"
+     stroke-width="2.5"
+     id="rect90" />
+  <rect
+     x="1035"
+     y="412"
+     width="130"
+     height="30"
+     rx="10"
+     fill="url(#threadGrad)"
+     id="rect91" />
+  <rect
+     x="1035"
+     y="430"
+     width="130"
+     height="12"
+     fill="url(#threadGrad)"
+     id="rect92" />
+  <text
+     x="1100"
+     y="432"
+     text-anchor="middle"
+     fill="#fff"
+     font-size="11"
+     font-weight="bold"
+     id="text92">消息线程模型</text>
+  <text
+     x="1048"
+     y="460"
+     fill="#c4b5fd"
+     font-size="9"
+     class="mono"
+     id="text93">main_thread</text>
+  <text
+     x="1048"
+     y="472"
+     fill="#64748b"
+     font-size="8px"
+     id="text94">OID / scan / connect</text>
+  <text
+     x="1048"
+     y="484"
+     fill="#c4b5fd"
+     font-size="9px"
+     class="mono"
+     id="text95">hif_thread</text>
+  <text
+     x="1048"
+     y="496"
+     fill="#64748b"
+     font-size="8px"
+     id="text96">HIF 收发处理</text>
+  <text
+     x="1048"
+     y="508"
+     fill="#c4b5fd"
+     font-size="9px"
+     class="mono"
+     id="text97">rx_thread</text>
+  <text
+     x="1048"
+     y="520"
+     fill="#64748b"
+     font-size="8px"
+     id="text98">数据包接收</text>
+  <rect
+     x="50"
+     y="590"
+     width="190"
+     height="140"
+     rx="10"
+     fill="#1a1a2e"
+     stroke="url(#opsGrad)"
+     stroke-width="2.5"
+     id="rect98" />
+  <rect
+     x="50"
+     y="590"
+     width="190"
+     height="30"
+     rx="10"
+     fill="url(#opsGrad)"
+     id="rect99" />
+  <rect
+     x="50"
+     y="608"
+     width="190"
+     height="12"
+     fill="url(#opsGrad)"
+     id="rect100" />
+  <text
+     x="145"
+     y="606"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="11px"
+     font-weight="bold"
+     id="text100">struct FWDL_OPS_T</text>
+  <text
+     x="145"
+     y="616"
+     text-anchor="middle"
+     fill="rgba(255,255,255,0.55)"
+     font-size="8px"
+     id="text101">固件下载操作表（芯片特定）</text>
+  <text
+     x="62"
+     y="634"
+     fill="#67e8f9"
+     font-size="8px"
+     class="mono"
+     id="text102">downloadPatch()</text>
+  <text
+     x="62"
+     y="648"
+     fill="#67e8f9"
+     font-size="8px"
+     class="mono"
+     id="text103">downloadFirmware()</text>
+  <text
+     x="62"
+     y="662"
+     fill="#67e8f9"
+     font-size="8px"
+     class="mono"
+     id="text104">downloadDspFw()</text>
+  <text
+     x="62"
+     y="676"
+     fill="#f87171"
+     font-size="8px"
+     class="mono"
+     id="text105">mcu_init() ← 关键入口</text>
+  <text
+     x="62"
+     y="690"
+     fill="#67e8f9"
+     font-size="8px"
+     class="mono"
+     id="text106">downloadZbPatch()</text>
+  <text
+     x="62"
+     y="704"
+     fill="#67e8f9"
+     font-size="8px"
+     class="mono"
+     id="text107">downloadBtPatch()</text>
+  <text
+     x="62"
+     y="718"
+     fill="#67e8f9"
+     font-size="8px"
+     class="mono"
+     id="text108">phyAction()</text>
+  <rect
+     x="270"
+     y="590"
+     width="175"
+     height="140"
+     rx="10"
+     fill="#1a1a2e"
+     stroke="url(#opsGrad)"
+     stroke-width="2.5"
+     id="rect108" />
+  <rect
+     x="270"
+     y="590"
+     width="175"
+     height="30"
+     rx="10"
+     fill="url(#opsGrad)"
+     id="rect109" />
+  <rect
+     x="270"
+     y="608"
+     width="175"
+     height="12"
+     fill="url(#opsGrad)"
+     id="rect110" />
+  <text
+     x="357"
+     y="600"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="11px"
+     font-weight="bold"
+     id="text110">struct BUS_INFO</text>
+  <text
+     x="357"
+     y="614"
+     text-anchor="middle"
+     fill="rgba(255,255,255,0.55)"
+     font-size="8px"
+     id="text111">总线配置（PCIe/SDIO/USB）</text>
+  <text
+     x="282"
+     y="630"
+     fill="#94a3b8"
+     font-size="8px"
+     class="mono"
+     id="text112">top_cfg_base</text>
+  <text
+     x="282"
+     y="644"
+     fill="#94a3b8"
+     font-size="8px"
+     class="mono"
+     id="text113">tx_ring / rx_ring 配置</text>
+  <text
+     x="282"
+     y="658"
+     fill="#94a3b8"
+     font-size="8px"
+     class="mono"
+     id="text114">prDmashdlCfg</text>
+  <text
+     x="282"
+     y="672"
+     fill="#67e8f9"
+     font-size="8px"
+     class="mono"
+     id="text115">DmaShdlInit()</text>
+  <text
+     x="282"
+     y="686"
+     fill="#67e8f9"
+     font-size="8px"
+     class="mono"
+     id="text116">processAbnormal</text>
+  <text
+     x="282"
+     y="700"
+     fill="#67e8f9"
+     font-size="8px"
+     class="mono"
+     id="text117">Interrupt()</text>
+  <text
+     x="282"
+     y="714"
+     fill="#94a3b8"
+     font-size="8px"
+     class="mono"
+     id="text118">PCIe/SDIO/USB 独立定义</text>
+  <rect
+     x="480"
+     y="590"
+     width="220"
+     height="140"
+     rx="10"
+     fill="#1a1a2e"
+     stroke="url(#staGrad)"
+     stroke-width="2.5"
+     id="rect118" />
+  <rect
+     x="480"
+     y="590"
+     width="220"
+     height="30"
+     rx="10"
+     fill="url(#staGrad)"
+     id="rect119" />
+  <rect
+     x="480"
+     y="608"
+     width="220"
+     height="12"
+     fill="url(#staGrad)"
+     id="rect120" />
+  <text
+     x="590"
+     y="602"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="11px"
+     font-weight="bold"
+     id="text120">struct STA_RECORD</text>
+  <text
+     x="590"
+     y="616"
+     text-anchor="middle"
+     fill="rgba(255,255,255,0.55)"
+     font-size="8px"
+     id="text121">BSS_INFO 指向的 AP 对端详情</text>
+  <text
+     x="492"
+     y="632"
+     fill="#94a3b8"
+     font-size="8px"
+     class="mono"
+     id="text122">MAC 地址 / AID</text>
+  <text
+     x="492"
+     y="646"
+     fill="#94a3b8"
+     font-size="8px"
+     class="mono"
+     id="text123">能力信息 (HT/VHT/HE/EHT)</text>
+  <text
+     x="492"
+     y="660"
+     fill="#94a3b8"
+     font-size="8px"
+     class="mono"
+     id="text124">支持速率集 / MCS Set</text>
+  <text
+     x="492"
+     y="674"
+     fill="#94a3b8"
+     font-size="8px"
+     class="mono"
+     id="text125">BA 会话 (RxReorder)</text>
+  <text
+     x="492"
+     y="688"
+     fill="#94a3b8"
+     font-size="8px"
+     class="mono"
+     id="text126">省电状态 (PS/UAPSD)</text>
+  <text
+     x="492"
+     y="702"
+     fill="#94a3b8"
+     font-size="8px"
+     class="mono"
+     id="text127">安全密钥 (PTK/GTK/IGTK)</text>
+  <rect
+     x="120"
+     y="752"
+     width="960"
+     height="96"
+     rx="10"
+     fill="#1a1a2e"
+     stroke="url(#conninfraGrad)"
+     stroke-width="2.5"
+     id="rect127" />
+  <rect
+     x="120"
+     y="752"
+     width="960"
+     height="30"
+     rx="10"
+     fill="url(#conninfraGrad)"
+     id="rect128" />
+  <rect
+     x="120"
+     y="770"
+     width="960"
+     height="12"
+     fill="url(#conninfraGrad)"
+     id="rect129" />
+  <text
+     x="600"
+     y="764"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="14px"
+     font-weight="bold"
+     id="text129">struct conninfra_ctx</text>
+  <text
+     x="600"
+     y="778"
+     text-anchor="middle"
+     fill="rgba(255,255,255,0.55)"
+     font-size="8px"
+     id="text130">共享连接基础设施 — WiFi / BT / FM / GPS 的「物业管家」，统一管理电源、时钟、复位</text>
+  <text
+     x="140"
+     y="798"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text131"><tspan
+       fill="#fca5a5"
+       id="tspan130">drv_inst[CONNDRV_TYPE_WIFI]</tspan></text>
+  <text
+     x="140"
+     y="813"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text132"><tspan
+       fill="#fca5a5"
+       id="tspan131">msg_ctx (conninfra_cored 线程)</tspan></text>
+  <text
+     x="430"
+     y="798"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text133"><tspan
+       fill="#fca5a5"
+       id="tspan132">cb_ctx (conninfra_cb 回调线程)</tspan></text>
+  <text
+     x="430"
+     y="813"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text134"><tspan
+       fill="#fca5a5"
+       id="tspan133">rst_status / pre_cal_info</tspan></text>
+  <text
+     x="700"
+     y="798"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text135"><tspan
+       fill="#fca5a5"
+       id="tspan134">core_lock / infra_lock</tspan></text>
+  <text
+     x="700"
+     y="813"
+     fill="#94a3b8"
+     font-size="9"
+     class="mono"
+     id="text136"><tspan
+       fill="#fca5a5"
+       id="tspan135">support_drv (bitmask)</tspan></text>
+  <text
+     x="540"
+     y="740"
+     fill="#64748b"
+     font-size="8"
+     font-style="italic"
+     text-anchor="middle"
+     id="text137">ACQUIRE_POWER_CONTROL_FROM_PM() / RECLAIM_POWER_CONTROL_TO_PM()</text>
+  <rect
+     x="80"
+     y="870"
+     width="1040"
+     height="82"
+     rx="10"
+     fill="rgba(100,116,139,0.06)"
+     stroke="rgba(100,116,139,0.12)"
+     stroke-width="1"
+     id="rect137" />
+  <text
+     x="600"
+     y="892"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="11"
+     font-weight="bold"
+     id="text138">架构特征：扁平互联 vs 树状分层（对比 QCOM wlan_objmgr）</text>
+  <text
+     x="96"
+     y="914"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text139"><tspan
+   fill="#e8a840"
+   id="tspan138">●</tspan> ADAPTER 是唯一中心，所有状态通过指针互联（非层次化引用计数）</text>
+  <text
+     x="438"
+     y="914"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text140"><tspan
+   fill="#14b8a6"
+   id="tspan139">●</tspan> 芯片差异通过函数指针表（FWDL_OPS_T / CHIP_INFO_T）注入，不用继承</text>
+  <text
+     x="810"
+     y="914"
+     fill="#94a3b8"
+     font-size="9"
+     id="text141"><tspan
+   fill="#a855f7"
+   id="tspan140">●</tspan> conninfra 外部仲裁共享资源，ADAPTER 不管理电源/时钟</text>
+  <text
+     x="96"
+     y="933"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text142"><tspan
+   fill="#f87171"
+   id="tspan141">●</tspan> 消息线程模型（main / hif / rx）替代 QCOM 的 work queue + sync transition</text>
+  <text
+     x="512"
+     y="933"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text143"><tspan
+   fill="#10b981"
+   id="tspan142">●</tspan> BSS_INFO + STA_RECORD 扁平数组替代 QCOM 的 vdev → peer 树</text>
+  <rect
+     x="1060"
+     y="68"
+     width="100"
+     height="93.19854"
+     rx="6"
+     fill="#0a0a16"
+     stroke="#2a2a3e"
+     stroke-width="1.0661"
+     id="rect143" />
+  <text
+     x="1110"
+     y="84"
+     text-anchor="middle"
+     fill="#8899aa"
+     font-size="9"
+     font-weight="bold"
+     id="text144">图例</text>
+  <rect
+     x="1068"
+     y="98"
+     width="10"
+     height="8"
+     rx="2"
+     fill="url(#glueGrad)"
+     id="rect144" />
+  <text
+     x="1084"
+     y="106"
+     fill="#94a3b8"
+     font-size="8"
+     id="text145">OS 层</text>
+  <rect
+     x="1068"
+     y="110"
+     width="10"
+     height="8"
+     rx="2"
+     fill="url(#adapterGrad)"
+     id="rect145" />
+  <text
+     x="1084"
+     y="118"
+     fill="#94a3b8"
+     font-size="8"
+     id="text146">核心</text>
+  <rect
+     x="1068"
+     y="122"
+     width="10"
+     height="8"
+     rx="2"
+     fill="url(#chipGrad)"
+     id="rect146" />
+  <text
+     x="1084"
+     y="130"
+     fill="#94a3b8"
+     font-size="8"
+     id="text147">硬件</text>
+  <rect
+     x="1068"
+     y="134"
+     width="10"
+     height="8"
+     rx="2"
+     fill="url(#bssGrad)"
+     id="rect147" />
+  <text
+     x="1084"
+     y="142"
+     fill="#94a3b8"
+     font-size="8"
+     id="text148">连接</text>
+  <rect
+     x="1068"
+     y="146"
+     width="10"
+     height="8"
+     rx="2"
+     fill="url(#conninfraGrad)"
+     id="rect148" />
+  <text
+     x="1084"
+     y="154"
+     fill="#94a3b8"
+     font-size="8"
+     id="text149">共享</text>
+  <text
+     x="1184"
+     y="972"
+     text-anchor="end"
+     fill="#334155"
+     font-size="8px"
+     class="mono"
+     id="text150">源码: include/nic/adapter.h:2059 | include/nic/mt66xx_reg.h:1440 | include/chips/fw_dl.h:153 | conninfra_core.h:100</text>
+</svg>

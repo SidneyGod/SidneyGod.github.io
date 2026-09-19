@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="700"
+   height="560"
+   version="1.1"
+   id="svg37"
+   sodipodi:docname="05a-architecture-callchain.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview37"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.5861561"
+     inkscape:cx="401.59982"
+     inkscape:cy="246.82312"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg37" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs3">
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrowBlue">
+      <polygon
+         fill="#4a8eff"
+         points="0,6 0,0 8,3 "
+         id="polygon1" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrowGreen">
+      <polygon
+         fill="#30d158"
+         points="0,6 0,0 8,3 "
+         id="polygon2" />
+    </marker>
+    <linearGradient
+       y2="912.14032"
+       x2="0"
+       y1="0"
+       x1="0"
+       id="bg"
+       gradientTransform="scale(0.76742573,0.6139406)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#0f0f1a"
+         offset="0%"
+         id="stop2" />
+      <stop
+         stop-color="#1a1a2e"
+         offset="100%"
+         id="stop3" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect
+     fill="url(#bg)"
+     width="700"
+     height="560"
+     id="rect3"
+     style="fill:url(#bg);stroke-width:0.686407"
+     x="0"
+     y="0" />
+  <!-- Title -->
+  <text
+     fill="#c0c8d4"
+     font-weight="bold"
+     font-size="18px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="30"
+     x="328"
+     id="text3">WiFi 扫描 4 层调用链 — App → Framework → wificond → Kernel</text>
+  <text
+     fill="#6a737d"
+     font-size="11px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="48"
+     x="328"
+     id="text4">蓝色向下 = 命令下发　　绿色向上 = 结果回调　　灰色标签 = 跨进程/跨层协议</text>
+  <!-- ==================== LAYER 1: App ==================== -->
+  <rect
+     stroke-width="1.2"
+     stroke="#2a5a5a"
+     fill="#121a2a"
+     rx="6"
+     height="55"
+     width="560"
+     y="66"
+     x="50"
+     id="rect4" />
+  <rect
+     fill="#40c8a0"
+     rx="2"
+     height="55"
+     width="4"
+     y="66"
+     x="50"
+     id="rect5" />
+  <text
+     font-weight="bold"
+     font-size="15px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     fill="#40c8a0"
+     y="86"
+     x="68"
+     id="text5">App</text>
+  <text
+     fill="#dde2e8"
+     font-size="11px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     y="106"
+     x="68"
+     id="text6">WifiManager.startScan()</text>
+  <!-- Arrow: App → FWK (blue down) -->
+  <line
+     stroke="#4a8eff"
+     marker-end="url(#arrowBlue)"
+     fill="none"
+     stroke-width="1.8"
+     y2="160"
+     x2="200"
+     y1="121"
+     x1="200"
+     id="line6" />
+  <rect
+     fill="#0d1220"
+     rx="3"
+     height="16"
+     width="90"
+     y="130"
+     x="155"
+     id="rect6" />
+  <text
+     fill="#4a8eff"
+     font-size="10px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="142"
+     x="200"
+     id="text7">startScan()</text>
+  <!-- Callback: FWK → App (green up) -->
+  <line
+     stroke="#30d158"
+     marker-end="url(#arrowGreen)"
+     fill="none"
+     stroke-width="1.8"
+     y2="117"
+     x2="620"
+     y1="156"
+     x1="620"
+     id="line7" />
+  <rect
+     fill="#0d1220"
+     rx="2.4505494"
+     height="16"
+     width="74.333336"
+     y="134"
+     x="584"
+     id="rect7"
+     style="stroke-width:0.903797" />
+  <text
+     fill="#30d158"
+     font-size="10px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="146"
+     x="620"
+     id="text8">onResults()</text>
+  <!-- Protocol: Binder IPC -->
+  <rect
+     fill="#1a1a24"
+     rx="3"
+     height="18"
+     width="96"
+     y="128"
+     x="270"
+     id="rect8" />
+  <text
+     fill="#6a7a8a"
+     font-size="10px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="141"
+     x="318"
+     id="text9">Binder IPC</text>
+  <!-- ==================== LAYER 2: FWK ==================== -->
+  <rect
+     stroke-width="1.2"
+     stroke="#2a5a5a"
+     fill="#121a2a"
+     rx="6"
+     height="82"
+     y="160"
+     x="50"
+     width="560"
+     id="rect9" />
+  <rect
+     fill="#40c8a0"
+     rx="2"
+     height="82"
+     width="4"
+     y="160"
+     x="50"
+     id="rect10" />
+  <text
+     font-weight="bold"
+     font-size="15px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     fill="#40c8a0"
+     y="180"
+     x="68"
+     id="text10">FWK</text>
+  <!-- Component 1: ScanRequestProxy -->
+  <rect
+     stroke-width="0.8"
+     stroke="#1e3a3a"
+     fill="#0e1620"
+     rx="4"
+     height="46"
+     width="155"
+     y="187"
+     x="68"
+     id="rect11" />
+  <text
+     fill="#dde2e8"
+     font-size="11px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="206"
+     x="145"
+     id="text11">ScanRequestProxy</text>
+  <text
+     fill="#6a7a8a"
+     font-size="9px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="222"
+     x="145"
+     id="text12">节流 / 白名单</text>
+  <!-- Component 2: WifiScanningServiceImpl -->
+  <rect
+     stroke-width="0.8"
+     stroke="#1e3a3a"
+     fill="#0e1620"
+     rx="4"
+     height="46"
+     width="170"
+     y="187"
+     x="233"
+     id="rect12" />
+  <text
+     fill="#dde2e8"
+     font-size="11px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="206"
+     x="318"
+     id="text13">WifiScanningSvc</text>
+  <text
+     fill="#6a7a8a"
+     font-size="9px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="222"
+     x="318"
+     id="text14">状态机 Idle→Scanning</text>
+  <!-- Component 3: WifiNl80211Manager -->
+  <rect
+     stroke-width="0.8"
+     stroke="#1e3a3a"
+     fill="#0e1620"
+     rx="4"
+     height="46"
+     width="140"
+     y="187"
+     x="413"
+     id="rect14" />
+  <text
+     fill="#dde2e8"
+     font-size="11px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="206"
+     x="483"
+     id="text15">Nl80211Manager</text>
+  <text
+     fill="#6a7a8a"
+     font-size="9px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="222"
+     x="483"
+     id="text16">scanRequest()</text>
+  <!-- Arrow: FWK → wificond (blue down) -->
+  <line
+     stroke="#4a8eff"
+     marker-end="url(#arrowBlue)"
+     fill="none"
+     stroke-width="1.8"
+     y2="300"
+     x2="200"
+     y1="242"
+     x1="200"
+     id="line16" />
+  <rect
+     fill="#0d1220"
+     rx="3"
+     height="16"
+     width="100"
+     y="262"
+     x="150"
+     id="rect16" />
+  <text
+     fill="#4a8eff"
+     font-size="10px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="274"
+     x="200"
+     id="text17">scanRequest()</text>
+  <!-- Callback: wificond → FWK (green up) -->
+  <line
+     stroke="#30d158"
+     marker-end="url(#arrowGreen)"
+     fill="none"
+     stroke-width="1.8"
+     y2="242"
+     x2="620"
+     y1="300"
+     x1="620"
+     id="line17" />
+  <rect
+     fill="#0d1220"
+     rx="2.3830788"
+     height="16"
+     width="117.56522"
+     y="262"
+     x="561.94202"
+     id="rect17"
+     style="stroke-width:0.891269" />
+  <text
+     fill="#30d158"
+     font-size="9px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="274"
+     x="620"
+     id="text18">onScanResultsReady()</text>
+  <!-- Protocol: AIDL -->
+  <rect
+     fill="#1a1a24"
+     rx="2.6017258"
+     height="18"
+     width="227.21739"
+     y="262"
+     x="270"
+     id="rect18"
+     style="stroke-width:0.931258" />
+  <text
+     fill="#6a7a8a"
+     font-size="10px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="275"
+     x="381"
+     id="text19">AIDL: IWifiScannerImpl.scanRequest()</text>
+  <!-- ==================== LAYER 3: wificond ==================== -->
+  <rect
+     stroke-width="1.2"
+     stroke="#3a2a5f"
+     fill="#1a1220"
+     rx="6"
+     height="82"
+     width="560"
+     y="300"
+     x="50"
+     id="rect19" />
+  <rect
+     fill="#a78bfa"
+     rx="2"
+     height="82"
+     width="4"
+     y="300"
+     x="50"
+     id="rect20" />
+  <text
+     font-weight="bold"
+     font-size="15px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     fill="#a78bfa"
+     y="320"
+     x="68"
+     id="text20">wificond</text>
+  <!-- Component 1: ScannerImpl -->
+  <rect
+     stroke-width="0.8"
+     stroke="#2a1a4a"
+     fill="#140e20"
+     rx="4"
+     height="46"
+     width="200"
+     y="327"
+     x="68"
+     id="rect21" />
+  <text
+     fill="#dde2e8"
+     font-size="11px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="346"
+     x="168"
+     id="text21">ScannerImpl</text>
+  <text
+     fill="#6a7a8a"
+     font-size="9px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="362"
+     x="168"
+     id="text22">构建 SSID + 频段列表</text>
+  <!-- Component 2: ScanUtils -->
+  <rect
+     stroke-width="0.8"
+     stroke="#2a1a4a"
+     fill="#140e20"
+     rx="4"
+     height="46"
+     width="240"
+     y="327"
+     x="278"
+     id="rect22" />
+  <text
+     fill="#dde2e8"
+     font-size="11px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="346"
+     x="398"
+     id="text23">ScanUtils</text>
+  <text
+     fill="#6a7a8a"
+     font-size="9px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="362"
+     x="398"
+     id="text24">NL80211_CMD_TRIGGER_SCAN</text>
+  <!-- Arrow: wificond → Kernel (blue down) -->
+  <line
+     stroke="#4a8eff"
+     marker-end="url(#arrowBlue)"
+     fill="none"
+     stroke-width="1.8"
+     y2="440"
+     x2="200"
+     y1="382"
+     x1="200"
+     id="line24" />
+  <rect
+     fill="#0d1220"
+     rx="3"
+     height="16"
+     width="132"
+     y="402"
+     x="134"
+     id="rect24" />
+  <text
+     fill="#4a8eff"
+     font-size="10px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="414"
+     x="200"
+     id="text25">CMD_TRIGGER_SCAN</text>
+  <!-- Callback: Kernel → wificond (green up) -->
+  <line
+     stroke="#30d158"
+     marker-end="url(#arrowGreen)"
+     fill="none"
+     stroke-width="1.8"
+     y2="382"
+     x2="620"
+     y1="440"
+     x1="620"
+     id="line25" />
+  <rect
+     fill="#0d1220"
+     rx="2.5018115"
+     height="16"
+     width="160.11594"
+     y="402"
+     x="527.94202"
+     id="rect25"
+     style="stroke-width:0.913202" />
+  <text
+     fill="#30d158"
+     font-size="9px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="414"
+     x="608"
+     id="text26">NL80211_CMD_NEW_SCAN_RESULTS</text>
+  <!-- Protocol: netlink -->
+  <rect
+     fill="#1a1a24"
+     rx="3"
+     height="18"
+     width="240"
+     y="402"
+     x="270"
+     id="rect26" />
+  <text
+     fill="#6a7a8a"
+     font-size="10px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="415"
+     x="390"
+     id="text27">netlink: NL80211_CMD_TRIGGER_SCAN</text>
+  <!-- ==================== LAYER 4: Kernel ==================== -->
+  <rect
+     stroke-width="1.2"
+     stroke="#3a3a3a"
+     fill="#141418"
+     rx="6"
+     height="75"
+     width="560"
+     y="440"
+     x="50"
+     id="rect27" />
+  <rect
+     fill="#888888"
+     rx="2"
+     height="75"
+     width="4"
+     y="440"
+     x="50"
+     id="rect28" />
+  <text
+     font-weight="bold"
+     font-size="15px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     fill="#aaaaaa"
+     y="460"
+     x="68"
+     id="text28">Kernel</text>
+  <!-- Component 1: cfg80211 -->
+  <rect
+     stroke-width="0.8"
+     stroke="#2a2a2a"
+     fill="#111114"
+     rx="4"
+     height="42"
+     width="150"
+     y="467"
+     x="68"
+     id="rect29" />
+  <text
+     fill="#dde2e8"
+     font-size="11px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="485"
+     x="143"
+     id="text29">cfg80211</text>
+  <text
+     fill="#6a7a8a"
+     font-size="9px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="500"
+     x="143"
+     id="text30">信道验证 + 分发</text>
+  <!-- Component 2: nl80211 -->
+  <rect
+     stroke-width="0.8"
+     stroke="#2a2a2a"
+     fill="#111114"
+     rx="4"
+     height="42"
+     width="130"
+     y="467"
+     x="228"
+     id="rect30" />
+  <text
+     fill="#dde2e8"
+     font-size="11px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="485"
+     x="293"
+     id="text31">nl80211</text>
+  <text
+     fill="#6a7a8a"
+     font-size="9px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="500"
+     x="293"
+     id="text32">CMD_TRIGGER_SCAN</text>
+  <!-- Component 3: Driver -->
+  <rect
+     stroke-width="0.8"
+     stroke="#2a2a2a"
+     fill="#111114"
+     rx="4"
+     height="42"
+     width="170"
+     y="467"
+     x="368"
+     id="rect32" />
+  <text
+     fill="#dde2e8"
+     font-size="11px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="485"
+     x="453"
+     id="text33">Driver (QCOM/MTK)</text>
+  <text
+     fill="#6a7a8a"
+     font-size="9px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     text-anchor="middle"
+     y="500"
+     x="453"
+     id="text34">ProbeReq → 空口</text>
+  <!-- ==================== LEGEND ==================== -->
+  <line
+     stroke="#4a8eff"
+     stroke-width="2"
+     y1="534"
+     x1="50"
+     y2="534"
+     x2="70"
+     id="line34" />
+  <text
+     fill="#4a8eff"
+     font-size="11px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     y="538"
+     x="78"
+     id="text35">命令下发（蓝色向下）</text>
+  <line
+     stroke="#30d158"
+     stroke-width="2"
+     y1="534"
+     x1="230"
+     y2="534"
+     x2="250"
+     id="line35" />
+  <text
+     fill="#30d158"
+     font-size="11px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     y="538"
+     x="258"
+     id="text36">结果回调（绿色向上）</text>
+  <rect
+     fill="#6a7a8a"
+     rx="2"
+     height="10"
+     width="10"
+     y="529"
+     x="430"
+     id="rect36" />
+  <text
+     fill="#6a7a8a"
+     font-size="11px"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     y="538"
+     x="448"
+     id="text37">跨进程/跨层协议（灰色标签）</text>
+</svg>

@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 960"
+   width="1200"
+   height="960"
+   version="1.1"
+   id="svg84"
+   sodipodi:docname="07c-tx-full-path.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview84"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1385417"
+     inkscape:cx="599.89021"
+     inkscape:cy="480"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg84" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; fill: #e2e8f0; }
+  </style>
+  <defs
+     id="defs10">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrow-blue"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#3b82f6"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arrow-orange"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#f97316"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arrow-green"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#10b981"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arrow-purple"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#a855f7"
+         id="polygon5" />
+    </marker>
+    <marker
+       id="arrow-gold"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#eab308"
+         id="polygon6" />
+    </marker>
+    <marker
+       id="arrow-red"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#ef4444"
+         id="polygon7" />
+    </marker>
+    <filter
+       id="glow-blue"
+       x="-0.03975"
+       y="-0.19875"
+       width="1.0795"
+       height="1.3975">
+      <feGaussianBlur
+         stdDeviation="3"
+         result="blur"
+         id="feGaussianBlur7" />
+      <feMerge
+         id="feMerge8">
+        <feMergeNode
+           in="blur"
+           id="feMergeNode7" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode8" />
+      </feMerge>
+    </filter>
+    <filter
+       id="glow-green"
+       x="-0.03975"
+       y="-0.19875"
+       width="1.0795"
+       height="1.3975">
+      <feGaussianBlur
+         stdDeviation="3"
+         result="blur"
+         id="feGaussianBlur8" />
+      <feMerge
+         id="feMerge10">
+        <feMergeNode
+           in="blur"
+           id="feMergeNode9" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode10" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect
+     width="1200"
+     height="960"
+     fill="url(#bg-grad)"
+     id="rect10" />
+  <text
+     x="600"
+     y="36"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="17"
+     font-weight="700"
+     id="text10">QCOM vs MTK: TX 全路径对比</text>
+  <text
+     x="600"
+     y="54"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="11"
+     id="text11">WiFi 数据帧发送 — 从 ndo_start_xmit 到固件</text>
+  <line
+     x1="600"
+     y1="68"
+     x2="600"
+     y2="844"
+     stroke="#1e293b"
+     stroke-width="1"
+     stroke-dasharray="4,4"
+     id="line11" />
+  <rect
+     x="260"
+     y="68"
+     width="120"
+     height="24"
+     rx="4"
+     fill="#1e3a5f"
+     fill-opacity="0.6"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect11" />
+  <text
+     x="320"
+     y="84"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="12"
+     font-weight="700"
+     id="text12">QCOM TX Path</text>
+  <rect
+     x="820"
+     y="68"
+     width="120"
+     height="24"
+     rx="4"
+     fill="#052e16"
+     fill-opacity="0.6"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect12" />
+  <text
+     x="880"
+     y="84"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="12"
+     font-weight="700"
+     id="text13">MTK TX Path</text>
+  <text
+     x="20"
+     y="130"
+     fill="#475569"
+     font-size="10"
+     font-weight="600"
+     letter-spacing="0.06em"
+     id="text14">协议栈</text>
+  <text
+     x="20"
+     y="210"
+     fill="#475569"
+     font-size="10"
+     font-weight="600"
+     letter-spacing="0.06em"
+     id="text15">HDD / GLUE</text>
+  <text
+     x="20"
+     y="390"
+     fill="#475569"
+     font-size="10"
+     font-weight="600"
+     letter-spacing="0.06em"
+     id="text16">DP / KAL</text>
+  <text
+     x="20"
+     y="641.0"
+     fill="#475569"
+     font-size="10"
+     font-weight="600"
+     letter-spacing="0.06em"
+     id="text17">传输层</text>
+  <text
+     x="20"
+     y="771.0"
+     fill="#475569"
+     font-size="10"
+     font-weight="600"
+     letter-spacing="0.06em"
+     id="text18">固件</text>
+  <rect
+     x="220"
+     y="115"
+     width="200"
+     height="40"
+     rx="6"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1.5"
+     filter="url(#glow-blue)"
+     id="rect18" />
+  <text
+     x="320"
+     y="140"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-size="13"
+     font-weight="600"
+     id="text19">ndo_start_xmit</text>
+  <rect
+     x="200"
+     y="190"
+     width="240"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect19" />
+  <text
+     x="320"
+     y="210"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="12"
+     id="text20">hdd_hard_start_xmit</text>
+  <text
+     x="320"
+     y="223"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="9"
+     id="text21">SSR protect / unprotect</text>
+  <rect
+     x="160"
+     y="250"
+     width="320"
+     height="180"
+     rx="6"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect21" />
+  <text
+     x="320"
+     y="270"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="13"
+     font-weight="600"
+     id="text22">__hdd_hard_start_xmit</text>
+  <text
+     x="320"
+     y="285"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="9"
+     id="text23">core/hdd/src/wlan_hdd_tx_rx.c</text>
+  <line
+     x1="180"
+     y1="295"
+     x2="460"
+     y2="295"
+     stroke="#1e293b"
+     stroke-width="1"
+     id="line23" />
+  <rect
+     x="175"
+     y="303"
+     width="290"
+     height="24"
+     rx="4"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1"
+     id="rect23" />
+  <text
+     x="320"
+     y="319"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="11"
+     id="text24">WMM AC 分类 (hdd_qdisc_ac_to_tl_ac)</text>
+  <rect
+     x="175"
+     y="333"
+     width="290"
+     height="24"
+     rx="4"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1"
+     id="rect24" />
+  <text
+     x="320"
+     y="349"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="11"
+     id="text25">WMM 准入控制 (hdd_wmm_acquire_access)</text>
+  <rect
+     x="175"
+     y="363"
+     width="290"
+     height="24"
+     rx="4"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1"
+     id="rect25" />
+  <text
+     x="320"
+     y="379"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="11"
+     id="text26">降级 fallback (VO→VI→BE→BK)</text>
+  <rect
+     x="175"
+     y="393"
+     width="290"
+     height="24"
+     rx="4"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1"
+     id="rect26" />
+  <text
+     x="320"
+     y="409"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="11"
+     id="text27">EAPOL/WAPI 快速路径</text>
+  <rect
+     x="210"
+     y="450"
+     width="220"
+     height="36"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect27" />
+  <text
+     x="320"
+     y="465"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="12"
+     id="text28">ucfg_dp_start_xmit</text>
+  <text
+     x="320"
+     y="478"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="9"
+     id="text29">dispatcher → vdev 解析</text>
+  <rect
+     x="210"
+     y="506"
+     width="220"
+     height="36"
+     rx="6"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect29" />
+  <text
+     x="320"
+     y="521"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="12"
+     font-weight="600"
+     id="text30">dp_start_xmit</text>
+  <text
+     x="320"
+     y="534"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="9"
+     id="text31">tx_fn() 函数指针 + 包类型分类</text>
+  <rect
+     x="210"
+     y="599"
+     width="220"
+     height="36"
+     rx="6"
+     fill="#0f172a"
+     stroke="#1d4ed8"
+     stroke-width="1"
+     id="rect31" />
+  <text
+     x="320"
+     y="614"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="12px"
+     id="text32">HTT 封装 → CE → PCIe</text>
+  <text
+     x="320"
+     y="627"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="9px"
+     id="text33">HTT 数据通道 + CE DMA</text>
+  <rect
+     x="240"
+     y="669.0"
+     width="160"
+     height="36"
+     rx="6"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1.5"
+     id="rect33" />
+  <text
+     x="320"
+     y="684.0"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-size="12"
+     font-weight="600"
+     id="text34">固件处理</text>
+  <text
+     x="320"
+     y="697.0"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="9"
+     id="text35">802.11 帧构造 → 空口发送</text>
+  <line
+     x1="320"
+     y1="155"
+     x2="320"
+     y2="190"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arrow-blue)"
+     id="line35" />
+  <line
+     x1="320"
+     y1="230"
+     x2="320"
+     y2="250"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arrow-blue)"
+     id="line36" />
+  <line
+     x1="320"
+     y1="430"
+     x2="320"
+     y2="450"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arrow-blue)"
+     id="line37" />
+  <line
+     x1="320"
+     y1="486"
+     x2="320"
+     y2="506"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arrow-blue)"
+     id="line38" />
+  <line
+     x1="320"
+     y1="542"
+     x2="320"
+     y2="596"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arrow-blue)"
+     id="line39" />
+  <line
+     x1="320"
+     y1="632"
+     x2="320"
+     y2="669"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arrow-blue)"
+     id="line40" />
+  <text
+     x="490"
+     y="270"
+     fill="#475569"
+     font-size="9"
+     id="text40">HDD 层</text>
+  <text
+     x="490"
+     y="470"
+     fill="#475569"
+     font-size="9"
+     id="text41">DP 调度层</text>
+  <text
+     x="490"
+     y="521"
+     fill="#475569"
+     font-size="9"
+     id="text42">DP 核心层</text>
+  <text
+     x="490"
+     y="628.0"
+     fill="#475569"
+     font-size="9"
+     id="text43">传输层</text>
+  <rect
+     x="780"
+     y="115"
+     width="200"
+     height="40"
+     rx="6"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1.5"
+     filter="url(#glow-green)"
+     id="rect43" />
+  <text
+     x="880"
+     y="140"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-size="13"
+     font-weight="600"
+     id="text44">ndo_start_xmit</text>
+  <line
+     x1="880"
+     y1="155"
+     x2="880"
+     y2="185"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="line44" />
+  <rect
+     x="760"
+     y="190"
+     width="240"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect44" />
+  <text
+     x="880"
+     y="210"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="12"
+     id="text45">wlanHardStartXmit</text>
+  <text
+     x="880"
+     y="223"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="9"
+     id="text46">gl_init.c — Reset 检查 → GLUE_INFO</text>
+  <line
+     x1="880"
+     y1="230"
+     x2="880"
+     y2="245"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="line46" />
+  <rect
+     x="720"
+     y="250"
+     width="320"
+     height="180"
+     rx="6"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect46" />
+  <text
+     x="880"
+     y="270"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="13"
+     font-weight="600"
+     id="text47">kalHardStartXmit</text>
+  <text
+     x="880"
+     y="285"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="9"
+     id="text48">os/linux/gl_kal.c — TX 发送核心</text>
+  <line
+     x1="740"
+     y1="295"
+     x2="1020"
+     y2="295"
+     stroke="#1e293b"
+     stroke-width="1"
+     id="line48" />
+  <rect
+     x="735"
+     y="303"
+     width="290"
+     height="24"
+     rx="4"
+     fill="#052e16"
+     stroke="#059669"
+     stroke-width="1"
+     id="rect48" />
+  <text
+     x="880"
+     y="319"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     id="text49">AC 分类 (skb_get_queue_mapping)</text>
+  <rect
+     x="735"
+     y="333"
+     width="290"
+     height="24"
+     rx="4"
+     fill="#052e16"
+     stroke="#059669"
+     stroke-width="1"
+     id="rect49" />
+  <text
+     x="880"
+     y="349"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     id="text50">帧解析 (wlanProcessTxFrame) + headroom 分配</text>
+  <rect
+     x="735"
+     y="363"
+     width="290"
+     height="24"
+     rx="4"
+     fill="#052e16"
+     stroke="#059669"
+     stroke-width="1"
+     id="rect50" />
+  <text
+     x="880"
+     y="379"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     id="text51">QUEUE_INSERT_TAIL 入队 (per-BSS per-AC)</text>
+  <rect
+     x="735"
+     y="393"
+     width="290"
+     height="24"
+     rx="4"
+     fill="#052e16"
+     stroke="#059669"
+     stroke-width="1"
+     id="rect51" />
+  <text
+     x="880"
+     y="409"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     id="text52">流控: netif_stop_subqueue → 停止子队列</text>
+  <line
+     x1="880"
+     y1="430"
+     x2="880"
+     y2="462"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="line52" />
+  <polygon
+     points="880,470 940,494 880,518 820,494"
+     fill="#1c1917"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="polygon52" />
+  <text
+     x="880"
+     y="498"
+     text-anchor="middle"
+     fill="#eab308"
+     font-size="11"
+     font-weight="600"
+     id="text53">Direct?</text>
+  <path
+     d="M 820,494 L 730,494 L 730,545"
+     stroke="#eab308"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arrow-gold)"
+     id="path53" />
+  <text
+     x="760"
+     y="487"
+     fill="#eab308"
+     font-size="9"
+     id="text54">YES</text>
+  <rect
+     x="650"
+     y="548"
+     width="160"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="rect54" />
+  <text
+     x="730"
+     y="563"
+     text-anchor="middle"
+     fill="#eab308"
+     font-size="11px"
+     font-weight="600"
+     id="text55">kalTxDirectStartXmit</text>
+  <text
+     x="730"
+     y="578"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="9px"
+     id="text56">Direct 直通模式</text>
+  <path
+     d="M 940,494 L 1010,494 L 1010,545"
+     stroke="#eab308"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arrow-gold)"
+     id="path56" />
+  <text
+     x="965"
+     y="487"
+     fill="#eab308"
+     font-size="9"
+     id="text57">NO</text>
+  <rect
+     x="930"
+     y="548"
+     width="160"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect57" />
+  <text
+     x="1010"
+     y="563"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11px"
+     id="text58">kalSetEvent</text>
+  <text
+     x="1010"
+     y="578"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="9px"
+     id="text59">唤醒 TX Worker</text>
+  <path
+     d="m 808.17017,566.30101 68.5087,-1.86368 0.68618,-0.36414 1.75663,66.80512"
+     stroke="#10b981"
+     stroke-width="0.951933"
+     fill="none"
+     marker-end="url(#arrow-green)"
+     id="path59"
+     sodipodi:nodetypes="cccc" />
+  <path
+     d="m 929.42794,563.64684 -51.9531,0.32938"
+     stroke="#10b981"
+     stroke-width="0.915631"
+     fill="none"
+     id="path60"
+     sodipodi:nodetypes="cc" />
+  <rect
+     x="810"
+     y="633"
+     width="140"
+     height="36"
+     rx="6"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect60" />
+  <text
+     x="880"
+     y="648"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="12px"
+     font-weight="600"
+     id="text60">TX Worker</text>
+  <text
+     x="880"
+     y="661"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="9px"
+     id="text61">异步 DMA 发送</text>
+  <line
+     x1="880"
+     y1="668"
+     x2="880"
+     y2="697"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="line61" />
+  <rect
+     x="810"
+     y="698"
+     width="210"
+     height="36"
+     rx="6"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect61" />
+  <text
+     x="890"
+     y="713"
+     text-anchor="middle"
+     fill="#34d399"
+     font-size="12px"
+     id="text62">HIF (WFDMA)</text>
+  <text
+     x="890"
+     y="726"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="9px"
+     id="text63">MBOX 消息队列 → NIC cmd (TC4)</text>
+  <line
+     x1="890"
+     y1="734.56635"
+     x2="890"
+     y2="758"
+     stroke="#10b981"
+     stroke-width="1.13402"
+     marker-end="url(#arrow-green)"
+     id="line63" />
+  <rect
+     x="810"
+     y="758"
+     width="160"
+     height="36"
+     rx="6"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect63" />
+  <text
+     x="890"
+     y="773"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="12px"
+     font-weight="600"
+     id="text64">固件处理</text>
+  <text
+     x="890"
+     y="786"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="9px"
+     id="text65">802.11 帧构造 → 空口发送</text>
+  <text
+     x="1050"
+     y="270"
+     fill="#475569"
+     font-size="9"
+     id="text66">GLUE/KAL</text>
+  <text
+     x="1050"
+     y="495"
+     fill="#475569"
+     font-size="9"
+     id="text67">路径决策</text>
+  <text
+     x="1050"
+     y="654"
+     fill="#475569"
+     font-size="9px"
+     id="text68">异步发送</text>
+  <rect
+     x="22"
+     y="828"
+     width="680"
+     height="120"
+     rx="6"
+     fill="#0f172a"
+     fill-opacity="0.85"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect68" />
+  <text
+     x="37"
+     y="848"
+     fill="#94a3b8"
+     font-size="11px"
+     font-weight="600"
+     id="text69">关键差异</text>
+  <text
+     x="37"
+     y="868"
+     fill="#f97316"
+     font-size="10px"
+     id="text70">QCOM</text>
+  <text
+     x="87"
+     y="868"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text71">: HDD→DP Dispatcher→DP Core→tx_fn→HTT/CE | WMM准入+降级 | SSR protect | tx_fn解耦</text>
+  <text
+     x="37"
+     y="886"
+     fill="#10b981"
+     font-size="10px"
+     id="text72">MTK</text>
+  <text
+     x="87"
+     y="886"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text73">: GLUE→KAL→Direct/非Direct→TX Worker→HIF | per-BSS per-AC流控 | Reset flag | 入队即返回</text>
+  <text
+     x="37"
+     y="908"
+     fill="#475569"
+     font-size="9px"
+     id="text74">绑核策略: QCOM侧重RX/NAPI(cds_set_rx_thread_cpu_mask+napi_cpu_affinity) TX用per-CPU ring</text>
+  <text
+     x="37"
+     y="923"
+     fill="#475569"
+     font-size="9px"
+     id="text75">无锁；MTK侧重TX worker绑大核(kalTxWorkSchedule)</text>
+  <rect
+     x="710"
+     y="824"
+     width="460"
+     height="125"
+     rx="6"
+     fill="#0f172a"
+     fill-opacity="0.85"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect75" />
+  <text
+     x="725"
+     y="844"
+     fill="#94a3b8"
+     font-size="11px"
+     font-weight="600"
+     id="text76">图例</text>
+  <rect
+     x="725"
+     y="857"
+     width="12"
+     height="12"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect76" />
+  <text
+     x="743"
+     y="867"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text77">QCOM</text>
+  <rect
+     x="795"
+     y="857"
+     width="12"
+     height="12"
+     rx="3"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect77" />
+  <text
+     x="813"
+     y="867"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text78">MTK</text>
+  <rect
+     x="855"
+     y="857"
+     width="12"
+     height="12"
+     rx="3"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1"
+     id="rect78" />
+  <text
+     x="873"
+     y="867"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text79">WMM</text>
+  <rect
+     x="725"
+     y="877"
+     width="12"
+     height="12"
+     rx="3"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1.5"
+     id="rect79" />
+  <text
+     x="743"
+     y="887"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text80">ndo_start_xmit</text>
+  <polygon
+     points="865,874 873,881 865,888 857,881 "
+     fill="#1c1917"
+     stroke="#eab308"
+     stroke-width="1"
+     id="polygon80"
+     transform="translate(47.429094,-17.407136)" />
+  <text
+     x="925.94696"
+     y="865.40717"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text81">Direct?</text>
+  <rect
+     x="725"
+     y="897"
+     width="12"
+     height="12"
+     rx="3"
+     fill="#0f172a"
+     stroke="#1d4ed8"
+     stroke-width="1"
+     id="rect81" />
+  <text
+     x="743"
+     y="907"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text82">HTT</text>
+  <rect
+     x="795"
+     y="897"
+     width="12"
+     height="12"
+     rx="3"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect82" />
+  <text
+     x="813"
+     y="907"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text83">WFDMA/MBOX</text>
+  <text
+     x="931.21686"
+     y="936.55536"
+     text-anchor="middle"
+     fill="#334155"
+     font-size="9px"
+     id="text84">Source: qcacld-3.0 / qca-wifi-host-cmn / gen4m | IEEE 802.11-2024</text>
+</svg>

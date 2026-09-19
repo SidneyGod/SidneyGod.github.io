@@ -1,0 +1,1219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 830"
+   width="1200"
+   height="830"
+   version="1.1"
+   id="svg65"
+   sodipodi:docname="10d-客户端离开三条路径.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview65"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.82024387"
+     inkscape:cx="546.17903"
+     inkscape:cy="368.79276"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg65" />
+  <defs
+     id="defs6">
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="941.96802"
+       gradientTransform="scale(1.2097168,0.88901583)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrowBlue"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <polygon
+         points="0,0 10,3.5 0,7 "
+         fill="#3b82f6"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arrowOrange"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <polygon
+         points="0,0 10,3.5 0,7 "
+         fill="#f97316"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arrowRed"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <polygon
+         points="0,0 10,3.5 0,7 "
+         fill="#ef4444"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arrowGray"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <polygon
+         points="0,0 10,3.5 0,7 "
+         fill="#94a3b8"
+         id="polygon5" />
+    </marker>
+    <marker
+       id="arrowCyan"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <polygon
+         points="0,0 10,3.5 0,7 "
+         fill="#06b6d4"
+         id="polygon6" />
+    </marker>
+  </defs>
+  <rect
+     x="0"
+     y="0"
+     width="1200"
+     height="830"
+     fill="url(#bg)"
+     id="rect6"
+     style="fill:url(#bg);stroke-width:1.03704" />
+  <text
+     x="600"
+     y="38"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="18px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text6">客户端离开的三条路径</text>
+  <rect
+     x="30"
+     y="55"
+     width="340"
+     height="480"
+     rx="6"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect7" />
+  <text
+     x="200"
+     y="80"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="15px"
+     fill="#3b82f6"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text7">客户端自己走</text>
+  <text
+     x="200"
+     y="105"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="12px"
+     fill="#60a5fa"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text8">Deauth 路径</text>
+  <rect
+     x="50"
+     y="115"
+     width="300"
+     height="32"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect8" />
+  <text
+     x="200"
+     y="136"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text9">发送 Deauth 帧</text>
+  <line
+     x1="200"
+     y1="149"
+     x2="200"
+     y2="165"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arrowBlue)"
+     id="line9" />
+  <rect
+     x="50"
+     y="167"
+     width="300"
+     height="32"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect9" />
+  <text
+     x="200"
+     y="188"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text10">handle_deauth()</text>
+  <line
+     x1="200"
+     y1="201"
+     x2="200"
+     y2="217"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arrowBlue)"
+     id="line10" />
+  <rect
+     x="50"
+     y="219"
+     width="300"
+     height="32"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect10" />
+  <text
+     x="200"
+     y="240"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text11">ap_free_sta() 立即释放</text>
+  <text
+     x="200"
+     y="267"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#60a5fa"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text12">清 AUTH + ASSOC</text>
+  <line
+     x1="50"
+     y1="281"
+     x2="350"
+     y2="281"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4, 3"
+     id="line12" />
+  <text
+     x="200"
+     y="301"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="12px"
+     fill="#93c5fd"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text13">Disassoc 路径</text>
+  <rect
+     x="50"
+     y="311"
+     width="300"
+     height="32"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#60a5fa"
+     stroke-width="1.2"
+     id="rect13" />
+  <text
+     x="200"
+     y="332"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text14">发送 Disassoc 帧</text>
+  <line
+     x1="200"
+     y1="345"
+     x2="200"
+     y2="361"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     marker-end="url(#arrowBlue)"
+     id="line14" />
+  <rect
+     x="50"
+     y="363"
+     width="300"
+     height="32"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#60a5fa"
+     stroke-width="1.2"
+     id="rect14" />
+  <text
+     x="200"
+     y="384"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text15">handle_disassoc()</text>
+  <line
+     x1="200"
+     y1="397"
+     x2="200"
+     y2="413"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     marker-end="url(#arrowBlue)"
+     id="line15" />
+  <rect
+     x="50"
+     y="415"
+     width="300"
+     height="32"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#60a5fa"
+     stroke-width="1.2"
+     id="rect15" />
+  <text
+     x="200"
+     y="436"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text16">保留 AUTH，延迟释放</text>
+  <text
+     x="200"
+     y="461"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#475569"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text17">AP_DEAUTH_DELAY 后触发 ap_handle_timer</text>
+  <rect
+     x="45"
+     y="475"
+     width="310"
+     height="44"
+     rx="4"
+     fill="#0c1629"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect17" />
+  <text
+     x="200"
+     y="493"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="12px"
+     fill="#60a5fa"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text18">Deauth: 永不回来</text>
+  <text
+     x="200"
+     y="510"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="12px"
+     fill="#93c5fd"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text19">Disassoc: 还能再进来</text>
+  <rect
+     x="415"
+     y="55"
+     width="355"
+     height="480"
+     rx="6"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect19" />
+  <text
+     x="592"
+     y="80"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="15px"
+     fill="#f97316"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text20">AP 踢人</text>
+  <rect
+     x="435"
+     y="95"
+     width="315"
+     height="58"
+     rx="4"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.2"
+     id="rect20" />
+  <text
+     x="592"
+     y="113"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text21">不活跃超时</text>
+  <text
+     x="592"
+     y="129"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#fb923c"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text22">Reason 4</text>
+  <text
+     x="592"
+     y="144"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#475569"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text23">ap_max_inactivity</text>
+  <line
+     x1="592"
+     y1="155"
+     x2="592"
+     y2="171"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrowOrange)"
+     id="line23" />
+  <rect
+     x="435"
+     y="173"
+     width="315"
+     height="58"
+     rx="4"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.2"
+     id="rect23" />
+  <text
+     x="592"
+     y="191"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text24">TKIP Countermeasures</text>
+  <text
+     x="592"
+     y="207"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#fb923c"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text25">Reason 14</text>
+  <text
+     x="592"
+     y="222"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#475569"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text26">Michael MIC 攻击检测</text>
+  <line
+     x1="592"
+     y1="233"
+     x2="592"
+     y2="249"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrowOrange)"
+     id="line26" />
+  <rect
+     x="435"
+     y="251"
+     width="315"
+     height="50"
+     rx="4"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.2"
+     id="rect26" />
+  <text
+     x="592"
+     y="269"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text27">手动踢出</text>
+  <text
+     x="592"
+     y="287"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#475569"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text28">hostapd_cli disassociate</text>
+  <line
+     x1="592"
+     y1="303"
+     x2="592"
+     y2="319"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrowOrange)"
+     id="line28" />
+  <rect
+     x="435"
+     y="321"
+     width="315"
+     height="36"
+     rx="4"
+     fill="#272018"
+     stroke="#f97316"
+     stroke-width="1.2"
+     id="rect28" />
+  <text
+     x="592"
+     y="344"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#fbbf24"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text29">STA 断开流程</text>
+  <line
+     x1="592"
+     y1="359"
+     x2="592"
+     y2="377"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrowOrange)"
+     id="line29" />
+  <rect
+     x="435"
+     y="379"
+     width="315"
+     height="36"
+     rx="4"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.2"
+     id="rect29" />
+  <text
+     x="592"
+     y="402"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text30">ap_free_sta()</text>
+  <rect
+     x="815"
+     y="55"
+     width="355"
+     height="480"
+     rx="6"
+     fill="#0f172a"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     id="rect30" />
+  <text
+     x="992"
+     y="80"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="15px"
+     fill="#ef4444"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text31">主动关门</text>
+  <text
+     x="992"
+     y="105"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="12px"
+     fill="#fca5a5"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text32">Framework CMD_STOP</text>
+  <rect
+     x="835"
+     y="115"
+     width="315"
+     height="32"
+     rx="4"
+     fill="#1a0505"
+     stroke="#ef4444"
+     stroke-width="1.2"
+     id="rect32" />
+  <text
+     x="992"
+     y="136"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text33">CMD_STOP</text>
+  <line
+     x1="992"
+     y1="149"
+     x2="992"
+     y2="165"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     marker-end="url(#arrowRed)"
+     id="line33" />
+  <rect
+     x="835"
+     y="167"
+     width="315"
+     height="32"
+     rx="4"
+     fill="#1a0505"
+     stroke="#ef4444"
+     stroke-width="1.2"
+     id="rect33" />
+  <text
+     x="992"
+     y="188"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text34">SoftApManager</text>
+  <line
+     x1="992"
+     y1="201"
+     x2="992"
+     y2="217"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     marker-end="url(#arrowRed)"
+     id="line34" />
+  <rect
+     x="835"
+     y="219"
+     width="315"
+     height="32"
+     rx="4"
+     fill="#1a0505"
+     stroke="#ef4444"
+     stroke-width="1.2"
+     id="rect34" />
+  <text
+     x="992"
+     y="240"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text35">NL80211_CMD_STOP_AP</text>
+  <line
+     x1="992"
+     y1="253"
+     x2="992"
+     y2="269"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     marker-end="url(#arrowRed)"
+     id="line35" />
+  <rect
+     x="835"
+     y="271"
+     width="315"
+     height="42"
+     rx="4"
+     fill="#1a0505"
+     stroke="#ef4444"
+     stroke-width="1.2"
+     id="rect35" />
+  <text
+     x="992"
+     y="289"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text36">所有客户端收到 Deauth</text>
+  <text
+     x="992"
+     y="305"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#f87171"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text37">Reason 3</text>
+  <line
+     x1="835"
+     y1="323"
+     x2="1150"
+     y2="323"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4, 3"
+     id="line37" />
+  <text
+     x="992"
+     y="343"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="12px"
+     fill="#fca5a5"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text38">空闲超时</text>
+  <rect
+     x="835"
+     y="353"
+     width="315"
+     height="42"
+     rx="4"
+     fill="#1a0505"
+     stroke="#ef4444"
+     stroke-width="1.2"
+     id="rect38" />
+  <text
+     x="992"
+     y="371"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text39">CMD_NO_ASSOCIATED</text>
+  <text
+     x="992"
+     y="387"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text40">_STATIONS_TIMEOUT</text>
+  <text
+     x="992"
+     y="405"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#475569"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text41">config_wifiFrameworkSoftAp</text>
+  <text
+     x="992"
+     y="417"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#475569"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text42">ShutDownTimeoutMilliseconds</text>
+  <line
+     x1="992"
+     y1="425"
+     x2="992"
+     y2="441"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     marker-end="url(#arrowRed)"
+     id="line42" />
+  <rect
+     x="835"
+     y="443"
+     width="315"
+     height="32"
+     rx="4"
+     fill="#1a0505"
+     stroke="#ef4444"
+     stroke-width="1.2"
+     id="rect42" />
+  <text
+     x="992"
+     y="464"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text43">回到 IdleState</text>
+  <rect
+     x="30"
+     y="555"
+     width="1140"
+     height="263.79019"
+     rx="6"
+     fill="#0f172a"
+     stroke="#475569"
+     stroke-width="1.4994"
+     id="rect43" />
+  <text
+     x="600"
+     y="530"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="15px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text44">统一善后流程</text>
+  <line
+     x1="200"
+     y1="535"
+     x2="199.13792"
+     y2="555.51721"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arrowBlue)"
+     id="line44" />
+  <line
+     x1="592"
+     y1="535"
+     x2="592"
+     y2="552.93103"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrowOrange)"
+     id="line45" />
+  <line
+     x1="992"
+     y1="535"
+     x2="990.51721"
+     y2="555.51721"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     marker-end="url(#arrowRed)"
+     id="line46" />
+  <rect
+     x="460"
+     y="567"
+     width="280"
+     height="30"
+     rx="4"
+     fill="#1e293b"
+     stroke="#06b6d4"
+     stroke-width="1.2"
+     id="rect46" />
+  <text
+     x="600"
+     y="587"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#06b6d4"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text46">ap_free_sta()</text>
+  <rect
+     x="328"
+     y="613"
+     width="159"
+     height="38"
+     rx="4"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="1.2"
+     id="rect47" />
+  <text
+     x="407"
+     y="629"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#06b6d4"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text47">①</text>
+  <text
+     x="407"
+     y="643"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text48">accounting_sta_stop()</text>
+  <line
+     x1="489"
+     y1="632"
+     x2="493"
+     y2="632"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#arrowGray)"
+     id="line48" />
+  <rect
+     x="495"
+     y="613"
+     width="180"
+     height="38"
+     rx="4"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="1.2"
+     id="rect48" />
+  <text
+     x="585"
+     y="629"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#06b6d4"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text49">②</text>
+  <text
+     x="585"
+     y="643"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text50">hostapd_drv_sta_remove()</text>
+  <line
+     x1="677"
+     y1="632"
+     x2="681"
+     y2="632"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#arrowGray)"
+     id="line50" />
+  <rect
+     x="683"
+     y="613"
+     width="150"
+     height="38"
+     rx="4"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="1.2"
+     id="rect50" />
+  <text
+     x="758"
+     y="629"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#06b6d4"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text51">③</text>
+  <text
+     x="758"
+     y="643"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text52">ap_sta_hash_del()</text>
+  <line
+     x1="835"
+     y1="632"
+     x2="839"
+     y2="632"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#arrowGray)"
+     id="line52" />
+  <rect
+     x="841"
+     y="613"
+     width="140"
+     height="38"
+     rx="4"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="1.2"
+     id="rect52" />
+  <text
+     x="911"
+     y="629"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#06b6d4"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text53">④</text>
+  <text
+     x="911"
+     y="643"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text54">AID 释放 (bitmap)</text>
+  <rect
+     x="328"
+     y="671"
+     width="140"
+     height="38"
+     rx="4"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="1.2"
+     id="rect54" />
+  <text
+     x="398"
+     y="687"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#06b6d4"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text55">⑤</text>
+  <text
+     x="398"
+     y="701"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text56">STA 计数递减</text>
+  <line
+     x1="470"
+     y1="690"
+     x2="474"
+     y2="690"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#arrowGray)"
+     id="line56" />
+  <rect
+     x="476"
+     y="671"
+     width="150"
+     height="38"
+     rx="4"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="1.2"
+     id="rect56" />
+  <text
+     x="551"
+     y="687"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#06b6d4"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text57">⑥</text>
+  <text
+     x="551"
+     y="701"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text58">定时器批量取消</text>
+  <line
+     x1="628"
+     y1="690"
+     x2="632"
+     y2="690"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#arrowGray)"
+     id="line58" />
+  <rect
+     x="634"
+     y="671"
+     width="159"
+     height="38"
+     rx="4"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="1.2"
+     id="rect58" />
+  <text
+     x="713"
+     y="687"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#06b6d4"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text59">⑦</text>
+  <text
+     x="713"
+     y="701"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text60">wpa_auth_sta_deinit()</text>
+  <line
+     x1="795"
+     y1="690"
+     x2="799"
+     y2="690"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#arrowGray)"
+     id="line60" />
+  <rect
+     x="801"
+     y="671"
+     width="155"
+     height="38"
+     rx="4"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="1.2"
+     id="rect60" />
+  <text
+     x="878"
+     y="687"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#06b6d4"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text61">⑧</text>
+  <text
+     x="878"
+     y="701"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="10px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text62">资源释放 os_free(sta)</text>
+  <line
+     x1="457.75861"
+     y1="584.93103"
+     x2="407"
+     y2="607"
+     stroke="#06b6d4"
+     stroke-width="1.5"
+     marker-end="url(#arrowCyan)"
+     id="line62" />
+  <polyline
+     points="911,573 911,575 398,575 398,590"
+     fill="none"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#arrowGray)"
+     id="polyline62"
+     transform="translate(0,80)" />
+  <rect
+     x="380"
+     y="729"
+     width="440"
+     height="34"
+     rx="4"
+     fill="#1e293b"
+     stroke="#06b6d4"
+     stroke-width="1.2"
+     id="rect63" />
+  <text
+     x="600"
+     y="743"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#06b6d4"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text63">wpa_auth_sta_deinit()</text>
+  <text
+     x="600"
+     y="757"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="11px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text64">strict rekey → 0.5s GTK rekey</text>
+  <line
+     x1="600"
+     y1="765"
+     x2="600"
+     y2="777"
+     stroke="#06b6d4"
+     stroke-width="1.5"
+     marker-end="url(#arrowCyan)"
+     id="line64" />
+  <rect
+     x="330"
+     y="779"
+     width="540"
+     height="30"
+     rx="4"
+     fill="#1e293b"
+     stroke="#06b6d4"
+     stroke-width="1.2"
+     id="rect64" />
+  <text
+     x="600"
+     y="799"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="13px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     font-weight="normal"
+     id="text65">Framework onConnectedClientsChanged</text>
+</svg>

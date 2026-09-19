@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 856" width="1100" height="856">
+<style>text{font-family:'Maple Mono Normal NL NF CN','Microsoft YaHei',monospace;}</style>
+<defs>
+  <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#0f0f1a"/><stop offset="100%" stop-color="#1a1a2e"/>
+  </linearGradient>
+  <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#5e9eff"/></marker>
+  <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#10b981"/></marker>
+</defs>
+<rect width="1100" height="856" fill="url(#bgGrad)"/>
+<rect x="1" y="1" width="1098" height="854" rx="8" fill="none" stroke="#2a2d35" stroke-width="1.5"/>
+<text x="550.0" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#e2e8f0">wpa_supplicant 软件分层：从 Java Framework 到内核驱动</text>
+<text x="550.0" y="55" text-anchor="middle" font-size="12" fill="#94a3b8">单进程单线程事件驱动 · binder/AIDL 接入 · nl80211 事件上抛 · cfg80211_ops 回调驱动</text>
+<rect x="60" y="80" width="980" height="96" rx="6" fill="#121a2a" stroke="#1e293b" stroke-width="1.2"/>
+<rect x="60" y="80" width="6" height="96" rx="3" fill="#5e9eff"/>
+<text x="82" y="108" font-size="16" font-weight="bold" fill="#5e9eff">Java Framework（系统服务层）</text>
+<text x="86" y="134" font-size="13" fill="#dde2e8">SupplicantStaIfaceHalAidlImpl · WifiMonitor</text>
+<text x="86" y="156" font-size="13" fill="#dde2e8">AIDL 客户端 / 事件广播：broadcastSupplicantStateChangeEvent() → ClientModeImpl</text>
+<rect x="60" y="212" width="980" height="96" rx="6" fill="#121a2a" stroke="#1e293b" stroke-width="1.2"/>
+<rect x="60" y="212" width="6" height="96" rx="3" fill="#a78bfa"/>
+<text x="82" y="240" font-size="16" font-weight="bold" fill="#a78bfa">binder / AIDL（跨进程边界）</text>
+<text x="86" y="266" font-size="13" fill="#dde2e8">ISupplicant / ISupplicantStaIface / ISupplicantStaNetwork</text>
+<text x="86" y="288" font-size="13" fill="#dde2e8">binder fd 可读 → 触发 eloop 中的 wpas_aidl_sock_handler()</text>
+<rect x="60" y="344" width="980" height="118" rx="6" fill="#121a2a" stroke="#1e293b" stroke-width="1.2"/>
+<rect x="60" y="344" width="6" height="118" rx="3" fill="#10b981"/>
+<text x="82" y="372" font-size="16" font-weight="bold" fill="#10b981">wpa_supplicant 用户态进程</text>
+<text x="86" y="398" font-size="13" fill="#dde2e8">wpas_aidl_init() 注册 AIDL · eloop_register_read_sock(aidl_fd) 挂进事件循环</text>
+<text x="86" y="420" font-size="13" fill="#dde2e8">nl80211 事件回调 wpa_driver_nl80211_event_receive()</text>
+<text x="86" y="442" font-size="13" fill="#dde2e8">wpa_supplicant_event() 分发 30+ 事件（EVENT_ASSOC / SCAN_RESULTS / DISASSOC…）</text>
+<rect x="60" y="498" width="980" height="74" rx="6" fill="#121a2a" stroke="#1e293b" stroke-width="1.2"/>
+<rect x="60" y="498" width="6" height="74" rx="3" fill="#f59e0b"/>
+<text x="82" y="526" font-size="16" font-weight="bold" fill="#f59e0b">nl80211 netlink（Generic Netlink 通道）</text>
+<text x="86" y="552" font-size="13" fill="#dde2e8">命令下发 NL80211_CMD_* · 事件上抛到用户态 socket</text>
+<rect x="60" y="608" width="980" height="96" rx="6" fill="#121a2a" stroke="#1e293b" stroke-width="1.2"/>
+<rect x="60" y="608" width="6" height="96" rx="3" fill="#ef4444"/>
+<text x="82" y="636" font-size="16" font-weight="bold" fill="#ef4444">内核 cfg80211</text>
+<text x="86" y="662" font-size="13" fill="#dde2e8">cfg80211_ops 回调表（驱动注册给 cfg80211 的操作集）</text>
+<text x="86" y="684" font-size="13" fill="#dde2e8">解析 netlink 命令 → 调驱动 → 驱动事件再经 nl80211 上抛</text>
+<rect x="60" y="740" width="980" height="74" rx="6" fill="#121a2a" stroke="#1e293b" stroke-width="1.2"/>
+<rect x="60" y="740" width="6" height="74" rx="3" fill="#38bdf8"/>
+<text x="82" y="768" font-size="16" font-weight="bold" fill="#38bdf8">WLAN 驱动（硬件侧）</text>
+<text x="86" y="794" font-size="13" fill="#dde2e8">scan / connect / set_key 的最终执行者 → 固件 firmware</text>
+<line x1="250" y1="176" x2="250" y2="212" stroke="#5e9eff" stroke-width="2" marker-end="url(#arrowBlue)"/>
+<text x="264" y="198.0" font-size="12" fill="#5e9eff">下发</text>
+<line x1="820" y1="212" x2="820" y2="176" stroke="#10b981" stroke-width="2" marker-end="url(#arrowGreen)"/>
+<text x="834" y="198.0" font-size="12" fill="#10b981">上抛</text>
+<line x1="250" y1="308" x2="250" y2="344" stroke="#5e9eff" stroke-width="2" marker-end="url(#arrowBlue)"/>
+<text x="264" y="330.0" font-size="12" fill="#5e9eff">下发</text>
+<line x1="820" y1="344" x2="820" y2="308" stroke="#10b981" stroke-width="2" marker-end="url(#arrowGreen)"/>
+<text x="834" y="330.0" font-size="12" fill="#10b981">上抛</text>
+<line x1="250" y1="462" x2="250" y2="498" stroke="#5e9eff" stroke-width="2" marker-end="url(#arrowBlue)"/>
+<text x="264" y="484.0" font-size="12" fill="#5e9eff">下发</text>
+<line x1="820" y1="498" x2="820" y2="462" stroke="#10b981" stroke-width="2" marker-end="url(#arrowGreen)"/>
+<text x="834" y="484.0" font-size="12" fill="#10b981">上抛</text>
+<line x1="250" y1="572" x2="250" y2="608" stroke="#5e9eff" stroke-width="2" marker-end="url(#arrowBlue)"/>
+<text x="264" y="594.0" font-size="12" fill="#5e9eff">下发</text>
+<line x1="820" y1="608" x2="820" y2="572" stroke="#10b981" stroke-width="2" marker-end="url(#arrowGreen)"/>
+<text x="834" y="594.0" font-size="12" fill="#10b981">上抛</text>
+<line x1="250" y1="704" x2="250" y2="740" stroke="#5e9eff" stroke-width="2" marker-end="url(#arrowBlue)"/>
+<text x="264" y="726.0" font-size="12" fill="#5e9eff">下发</text>
+<line x1="820" y1="740" x2="820" y2="704" stroke="#10b981" stroke-width="2" marker-end="url(#arrowGreen)"/>
+<text x="834" y="726.0" font-size="12" fill="#10b981">上抛</text>
+<text x="60" y="846" font-size="12" fill="#94a3b8"><tspan fill="#5e9eff">■</tspan> 蓝 = 命令/数据下发（Java→驱动）  <tspan dx="16" fill="#10b981">■</tspan> 绿 = 事件/回调上抛（驱动→Java，经 eloop）</text>
+<text x="1060" y="846" text-anchor="end" font-size="12" fill="#475569">开机链路：main() → wpa_supplicant_init() → add_iface → eloop_run()</text>
+</svg>

@@ -1,0 +1,1393 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1600 780"
+   width="1600"
+   height="780"
+   version="1.1"
+   id="svg74"
+   sodipodi:docname="06d-mtk-ais-state.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview74"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.9325"
+     inkscape:cx="800"
+     inkscape:cy="389.81233"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg74" />
+  <defs
+     id="defs3">
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="1117.1392"
+       y2="1117.1392"
+       gradientTransform="matrix(1.4322297,0,0,0.698212,0.74696545,-2.3734827)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="as"
+       markerWidth="10"
+       markerHeight="8"
+       refX="9"
+       refY="4"
+       orient="auto"
+       markerUnits="userSpaceOnUse">
+      <path
+         d="M0,0.5 L8.5,4 L0,7.5"
+         fill="none"
+         stroke="#10b981"
+         stroke-width="1.5"
+         stroke-linecap="round"
+         id="path2" />
+    </marker>
+    <marker
+       id="ad"
+       markerWidth="10"
+       markerHeight="8"
+       refX="9"
+       refY="4"
+       orient="auto"
+       markerUnits="userSpaceOnUse">
+      <path
+         d="M0,0.5 L8.5,4 L0,7.5"
+         fill="none"
+         stroke="#475569"
+         stroke-width="1.5"
+         stroke-linecap="round"
+         id="path3" />
+    </marker>
+  </defs>
+  <rect
+     width="1600"
+     height="780"
+     fill="url(#bg)"
+     id="rect3"
+     style="fill:url(#bg)"
+     x="0.74696547"
+     y="-2.3734827" />
+  <text
+     x="20"
+     y="26"
+     font-size="15"
+     font-weight="700"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text3">MTK AIS FSM — 连接相关状态流转</text>
+  <text
+     x="20"
+     y="44"
+     font-size="11"
+     fill="#94a3b8"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text4">绿线 = 主连接路径  |  灰虚线 = 其他状态转移  |  绿色节点 = 路径状态  |  琥珀色节点 = 失败/断开状态  |  JOIN 内部 = SAA FSM 执行 Auth/Assoc</text>
+  <!-- ═══════════ EDGE LINES ═══════════ -->
+  <!-- Main path: solid green left→right -->
+  <line
+     x1="150.0"
+     y1="210.0"
+     x2="200.0"
+     y2="210.0"
+     stroke="#10b981"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#as)"
+     id="line4" />
+  <line
+     x1="310.0"
+     y1="210.0"
+     x2="360.0"
+     y2="210.0"
+     stroke="#10b981"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#as)"
+     id="line5" />
+  <line
+     x1="460.0"
+     y1="210.0"
+     x2="510.0"
+     y2="210.0"
+     stroke="#10b981"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#as)"
+     id="line6" />
+  <line
+     x1="660.0"
+     y1="210.0"
+     x2="720.0"
+     y2="210.0"
+     stroke="#10b981"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#as)"
+     id="line7" />
+  <line
+     x1="895.0"
+     y1="210.0"
+     x2="955.0"
+     y2="210.0"
+     stroke="#10b981"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#as)"
+     id="line8" />
+  <line
+     x1="1055.0"
+     y1="210.0"
+     x2="1115.0"
+     y2="210.0"
+     stroke="#10b981"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#as)"
+     id="line9" />
+  <!-- join → join_failure -->
+  <path
+     d="m 990,235 v 99.05506 h -0.24743 v 15.23924"
+     stroke="#10b981"
+     stroke-width="1"
+     fill="none"
+     marker-end="url(#as)"
+     id="path9" />
+  <!-- normal_tr → disconnecting -->
+  <line
+     x1="1255.0"
+     y1="210.0"
+     x2="1315.0"
+     y2="210.0"
+     stroke="#475569"
+     stroke-width="1.5"
+     stroke-dasharray="6,3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="line10" />
+  <!-- disconnecting → idle -->
+  <path
+     d="M 1390,235 C 1390,378.73352 93.133604,378.73352 93.133604,235"
+     stroke="#475569"
+     stroke-width="1.75966"
+     stroke-dasharray="6, 3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="path10" />
+  <!-- join_failure → search -->
+  <path
+     d="M950.0,375.0 C880.0,315.0 310.0,315.0 310.0,235.0"
+     stroke="#475569"
+     stroke-width="1.5"
+     stroke-dasharray="6,3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="path11" />
+  <!-- join_failure → idle -->
+  <path
+     d="M 950,400 C 848.48147,520 137.85176,520 137.85176,235"
+     stroke="#475569"
+     stroke-width="1.51135"
+     stroke-dasharray="6, 3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="path12" />
+  <!-- normal_tr ↔ roaming -->
+  <path
+     d="M 1125.3137,237.2409 V 490.08456 H 1126 V 500"
+     stroke="#475569"
+     stroke-width="1"
+     stroke-dasharray="6, 3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="path13" />
+  <path
+     d="M 1148.5528,502.98786 V 492.87511 H 1148 V 235"
+     stroke="#475569"
+     stroke-width="1"
+     stroke-dasharray="6, 3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="path14" />
+  <!-- normal_tr ↔ online_scan -->
+  <path
+     d="m 1218.0859,235.65826 c 1.0649,56.49923 49.1869,251.84605 50.7936,263.96826"
+     stroke="#475569"
+     stroke-width="1.5"
+     stroke-dasharray="6, 3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="path15"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="M 1290,500 V 490 L 1263.901,374.96732 1232.155,236.49393"
+     stroke="#475569"
+     stroke-width="1.5"
+     stroke-dasharray="6, 3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="path16"
+     sodipodi:nodetypes="cccc" />
+  <!-- normal_tr ↔ off_chnl_tx -->
+  <path
+     d="M 1244.7105,234.9113 1451.614,471.52645 1472.9272,500"
+     stroke="#475569"
+     stroke-width="1.48266"
+     stroke-dasharray="6, 3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="path17"
+     sodipodi:nodetypes="ccc" />
+  <path
+     d="M 1496.2325,503.44538 C 1468.7259,407.72025 1354.693,319.96464 1254.9627,230.89169"
+     stroke="#475569"
+     stroke-width="1.5"
+     stroke-dasharray="6, 3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="path18"
+     sodipodi:nodetypes="cc" />
+  <!-- normal_tr → req_remain -->
+  <path
+     d="m 1169.9798,236.86742 c 0,0 6.7721,2.1136 5.0667,115.49895 2.5226,89.45656 6.3974,180.39835 0.6879,266.51318"
+     stroke="#475569"
+     stroke-width="1"
+     stroke-dasharray="6, 3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="path19"
+     sodipodi:nodetypes="ccc" />
+  <!-- req_remain → remain -->
+  <line
+     x1="1230.0"
+     y1="647.0"
+     x2="1290.0"
+     y2="647.0"
+     stroke="#475569"
+     stroke-width="1.5"
+     stroke-dasharray="6,3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="line19" />
+  <!-- remain → normal_tr -->
+  <path
+     d="M 1294.1872,621.12045 C 1296.1352,614.69047 1179.107,691.40198 1185,235"
+     stroke="#475569"
+     stroke-width="1.14632"
+     stroke-dasharray="6, 3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="path20"
+     sodipodi:nodetypes="cc" />
+  <!-- idle → ibss_alone -->
+  <path
+     d="M 116.96359,185.74697 V 130.19919 H 117.5 V 110"
+     stroke="#475569"
+     stroke-width="1"
+     stroke-dasharray="6, 3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="path21" />
+  <!-- ibss_alone → ibss_merge -->
+  <line
+     x1="185.0"
+     y1="78.0"
+     x2="240.0"
+     y2="78.0"
+     stroke="#475569"
+     stroke-width="1.5"
+     stroke-dasharray="6,3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="line21" />
+  <!-- ibss_merge → ibss_alone -->
+  <line
+     x1="240.0"
+     y1="92.0"
+     x2="185.0"
+     y2="92.0"
+     stroke="#475569"
+     stroke-width="1.5"
+     stroke-dasharray="6,3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="line22" />
+  <!-- scan ↔ wait_next_scan -->
+  <path
+     d="m 450,237.24089 v 94.75048 h -0.45752 v 17.37091"
+     stroke="#475569"
+     stroke-width="1"
+     stroke-dasharray="6, 3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="path22" />
+  <path
+     d="m 385.60224,350.26144 2.44631,-115.03268"
+     stroke="#475569"
+     stroke-width="1"
+     stroke-dasharray="6, 3"
+     fill="none"
+     marker-end="url(#ad)"
+     id="path23"
+     sodipodi:nodetypes="cc" />
+  <!-- ═══════════ NODES ═══════════ -->
+  <!-- Row 0: IBSS branch -->
+  <rect
+     x="50.0"
+     y="60.0"
+     width="135.0"
+     height="50.0"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1.5"
+     id="rect23" />
+  <text
+     x="117.5"
+     y="86.0"
+     font-size="12"
+     font-weight="bold"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text23">IBSS_ALONE</text>
+  <rect
+     x="240.0"
+     y="60.0"
+     width="135.0"
+     height="50.0"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1.5"
+     id="rect24" />
+  <text
+     x="307.5"
+     y="86.0"
+     font-size="12"
+     font-weight="bold"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text24">IBSS_MERGE</text>
+  <!-- Row 1: Main connection path -->
+  <rect
+     x="50.0"
+     y="185.0"
+     width="100.0"
+     height="50.0"
+     rx="8"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="2"
+     id="rect25" />
+  <text
+     x="100.0"
+     y="211.0"
+     font-size="12"
+     font-weight="bold"
+     fill="#6ee7b7"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text25">IDLE</text>
+  <rect
+     x="200.0"
+     y="185.0"
+     width="110.0"
+     height="50.0"
+     rx="8"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="2"
+     id="rect26" />
+  <text
+     x="255.0"
+     y="211.0"
+     font-size="12"
+     font-weight="bold"
+     fill="#6ee7b7"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text26">SEARCH</text>
+  <rect
+     x="360.0"
+     y="185.0"
+     width="100.0"
+     height="50.0"
+     rx="8"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="2"
+     id="rect27" />
+  <text
+     x="410.0"
+     y="211.0"
+     font-size="12"
+     font-weight="bold"
+     fill="#6ee7b7"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text27">SCAN</text>
+  <rect
+     x="510.0"
+     y="185.0"
+     width="150.0"
+     height="50.0"
+     rx="8"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="2"
+     id="rect28" />
+  <text
+     x="585.0"
+     y="211.0"
+     font-size="12"
+     font-weight="bold"
+     fill="#6ee7b7"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text28">LOOKING_FOR</text>
+  <rect
+     x="720.0"
+     y="183.0"
+     width="175.0"
+     height="54.0"
+     rx="8"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="2"
+     id="rect29" />
+  <text
+     x="807.5"
+     y="204.0"
+     font-size="11"
+     font-weight="bold"
+     fill="#6ee7b7"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text29">REQ_CHANNEL</text>
+  <text
+     x="807.5"
+     y="218.0"
+     font-size="11"
+     font-weight="bold"
+     fill="#6ee7b7"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text30">JOIN</text>
+  <rect
+     x="955.0"
+     y="185.0"
+     width="100.0"
+     height="50.0"
+     rx="8"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="2"
+     id="rect30" />
+  <text
+     x="1005.0"
+     y="211.0"
+     font-size="12"
+     font-weight="bold"
+     fill="#6ee7b7"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text31">JOIN</text>
+  <rect
+     x="1115.0"
+     y="185.0"
+     width="140.0"
+     height="50.0"
+     rx="8"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="2"
+     id="rect31" />
+  <text
+     x="1185.0"
+     y="211.0"
+     font-size="12"
+     font-weight="bold"
+     fill="#6ee7b7"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text32">NORMAL_TR</text>
+  <rect
+     x="1315.0"
+     y="185.0"
+     width="150.0"
+     height="50.0"
+     rx="8"
+     fill="#3b2f0a"
+     stroke="#d97706"
+     stroke-width="2"
+     id="rect32" />
+  <text
+     x="1390.0"
+     y="211.0"
+     font-size="12"
+     font-weight="bold"
+     fill="#fcd34d"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text33">DISCONNECTING</text>
+  <!-- Row 2: Failure + scan loop -->
+  <rect
+     x="350.0"
+     y="350.0"
+     width="170.0"
+     height="54.0"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1.5"
+     id="rect33" />
+  <text
+     x="435.0"
+     y="371.0"
+     font-size="11"
+     font-weight="bold"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text34">WAIT_FOR</text>
+  <text
+     x="435.0"
+     y="385.0"
+     font-size="11"
+     font-weight="bold"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text35">NEXT_SCAN</text>
+  <rect
+     x="950.0"
+     y="350.0"
+     width="145.0"
+     height="50.0"
+     rx="8"
+     fill="#3b2f0a"
+     stroke="#d97706"
+     stroke-width="2"
+     id="rect35" />
+  <text
+     x="1022.5"
+     y="376.0"
+     font-size="12"
+     font-weight="bold"
+     fill="#fcd34d"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text36">JOIN_FAILURE</text>
+  <!-- Row 3: Side operations -->
+  <rect
+     x="1050.0"
+     y="500.0"
+     width="120.0"
+     height="50.0"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1.5"
+     id="rect36" />
+  <text
+     x="1110.0"
+     y="526.0"
+     font-size="12"
+     font-weight="bold"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text37">ROAMING</text>
+  <rect
+     x="1220.0"
+     y="500.0"
+     width="140.0"
+     height="50.0"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1.5"
+     id="rect37" />
+  <text
+     x="1290.0"
+     y="526.0"
+     font-size="12"
+     font-weight="bold"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text38">ONLINE_SCAN</text>
+  <rect
+     x="1410.0"
+     y="500.0"
+     width="130.0"
+     height="50.0"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1.5"
+     id="rect38" />
+  <text
+     x="1475.0"
+     y="526.0"
+     font-size="12"
+     font-weight="bold"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text39">OFF_CHNL_TX</text>
+  <!-- Row 4: Remain on channel -->
+  <rect
+     x="1050.0"
+     y="620.0"
+     width="180.0"
+     height="54.0"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1.5"
+     id="rect39" />
+  <text
+     x="1140.0"
+     y="641.0"
+     font-size="11"
+     font-weight="bold"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text40">REQ_REMAIN</text>
+  <text
+     x="1140.0"
+     y="655.0"
+     font-size="11"
+     font-weight="bold"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text41">ON_CHANNEL</text>
+  <rect
+     x="1290.0"
+     y="620.0"
+     width="165.0"
+     height="54.0"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1.5"
+     id="rect41" />
+  <text
+     x="1372.5"
+     y="641.0"
+     font-size="11"
+     font-weight="bold"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text42">REMAIN_ON</text>
+  <text
+     x="1372.5"
+     y="655.0"
+     font-size="11"
+     font-weight="bold"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text43">CHANNEL</text>
+  <!-- ═══════════ EDGE LABELS (drawn after nodes for z-order) ═══════════ -->
+  <!-- Main path labels -->
+  <g
+     id="g74"
+     transform="translate(0,-16)">
+    <rect
+       x="132"
+       y="200"
+       width="86"
+       height="18"
+       rx="3"
+       fill="#0f172a"
+       stroke="#334155"
+       stroke-width="0.5"
+       id="rect43" />
+    <text
+       x="175"
+       y="210"
+       font-size="11px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       dominant-baseline="central"
+       font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+       id="text44">Connect Req</text>
+  </g>
+  <g
+     id="g75"
+     transform="translate(0,-16)">
+    <rect
+       x="285"
+       y="200"
+       width="100"
+       height="18"
+       rx="3"
+       fill="#0f172a"
+       stroke="#334155"
+       stroke-width="0.5"
+       id="rect44" />
+    <text
+       x="335"
+       y="210"
+       font-size="11px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       dominant-baseline="central"
+       font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+       id="text45">Scan Start</text>
+  </g>
+  <g
+     id="g76"
+     transform="translate(0,-16)">
+    <rect
+       x="439"
+       y="200"
+       width="92"
+       height="18"
+       rx="3"
+       fill="#0f172a"
+       stroke="#334155"
+       stroke-width="0.5"
+       id="rect45" />
+    <text
+       x="485"
+       y="210"
+       font-size="11px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       dominant-baseline="central"
+       font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+       id="text46">Scan Done</text>
+  </g>
+  <g
+     id="g77"
+     transform="translate(0,-16)">
+    <rect
+       x="644"
+       y="200"
+       width="92"
+       height="18"
+       rx="3"
+       fill="#0f172a"
+       stroke="#334155"
+       stroke-width="0.5"
+       id="rect46" />
+    <text
+       x="690"
+       y="210"
+       font-size="11px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       dominant-baseline="central"
+       font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+       id="text47">BSS Found</text>
+  </g>
+  <g
+     id="g78"
+     transform="translate(0,-16)">
+    <rect
+       x="875"
+       y="200"
+       width="100"
+       height="18"
+       rx="3"
+       fill="#0f172a"
+       stroke="#334155"
+       stroke-width="0.5"
+       id="rect47" />
+    <text
+       x="925"
+       y="210"
+       font-size="11px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       dominant-baseline="central"
+       font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+       id="text48">Channel OK</text>
+  </g>
+  <g
+     id="g79"
+     transform="translate(0,-16)">
+    <rect
+       x="1047.5"
+       y="200"
+       width="75"
+       height="18"
+       rx="3"
+       fill="#0f172a"
+       stroke="#334155"
+       stroke-width="0.5"
+       id="rect48" />
+    <text
+       x="1085"
+       y="210"
+       font-size="11px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       dominant-baseline="central"
+       font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+       id="text49">Join OK</text>
+  </g>
+  <!-- join → join_failure label -->
+  <g
+     id="g80"
+     transform="translate(17.430083,-48.064775)">
+    <rect
+       x="928.29999"
+       y="315.5"
+       width="92"
+       height="18"
+       rx="3"
+       fill="#0f172a"
+       stroke="#334155"
+       stroke-width="0.5"
+       id="rect49" />
+    <text
+       x="974.29999"
+       y="325.5"
+       font-size="11px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       dominant-baseline="central"
+       font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+       id="text50">Join Fail</text>
+  </g>
+  <!-- normal_tr → disconnecting label -->
+  <g
+     id="g85"
+     transform="translate(0,-16)">
+    <rect
+       x="1235"
+       y="200"
+       width="100"
+       height="18"
+       rx="3"
+       fill="#0f172a"
+       stroke="#334155"
+       stroke-width="0.5"
+       id="rect50" />
+    <text
+       x="1285"
+       y="210"
+       font-size="11px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       dominant-baseline="central"
+       font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+       id="text51">Disconnect</text>
+  </g>
+  <!-- disconnecting → idle label -->
+  <g
+     id="g83"
+     transform="translate(-74.509804,1.4939309)">
+    <rect
+       x="714"
+       y="332"
+       width="112"
+       height="18"
+       rx="3"
+       fill="#0f172a"
+       stroke="#334155"
+       stroke-width="0.5"
+       id="rect51" />
+    <text
+       x="770"
+       y="342"
+       font-size="11px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       dominant-baseline="central"
+       font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+       id="text52">Disconnect Done</text>
+  </g>
+  <!-- Annotation: 断开完成 -->
+  <rect
+     x="650"
+     y="358"
+     width="70"
+     height="18"
+     rx="3"
+     fill="#312e81"
+     stroke="#6366f1"
+     stroke-width="1"
+     id="rect52" />
+  <text
+     x="685"
+     y="368"
+     font-size="10"
+     fill="#a5b4fc"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text53">断开完成</text>
+  <!-- join_failure → search label -->
+  <rect
+     x="571"
+     y="301"
+     width="58"
+     height="18"
+     rx="3"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="rect53" />
+  <text
+     x="600"
+     y="311"
+     font-size="11px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+     id="text54">Retry</text>
+  <!-- join_failure → idle label -->
+  <g
+     id="g82"
+     transform="translate(21.127373,6.338212)">
+    <rect
+       x="391.54156"
+       y="448.55463"
+       width="58"
+       height="18"
+       rx="3"
+       fill="#0f172a"
+       stroke="#334155"
+       stroke-width="0.5"
+       id="rect54" />
+    <text
+       x="420.54156"
+       y="458.55463"
+       font-size="11px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       dominant-baseline="central"
+       font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+       id="text55">Abort</text>
+  </g>
+  <!-- normal_tr ↔ roaming labels -->
+  <rect
+     x="1100.3173"
+     y="364"
+     width="34.682655"
+     height="18"
+     rx="2.0809593"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.416429"
+     id="rect55" />
+  <text
+     x="1117.4551"
+     y="374"
+     font-size="11px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+     id="text56">Roam</text>
+  <rect
+     x="1135.9229"
+     y="364"
+     width="36.795391"
+     height="18"
+     rx="2.2077234"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.428926"
+     id="rect56" />
+  <text
+     x="1153"
+     y="374"
+     font-size="11px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+     id="text57">Done</text>
+  <!-- normal_tr ↔ online_scan labels -->
+  <rect
+     x="1203.5"
+     y="384.0"
+     width="75.0"
+     height="18"
+     rx="3"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="rect57" />
+  <text
+     x="1241.0"
+     y="394.0"
+     font-size="11"
+     fill="#94a3b8"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text58">Bg Scan</text>
+  <rect
+     x="1267"
+     y="384"
+     width="50"
+     height="18"
+     rx="3"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="rect58" />
+  <text
+     x="1292"
+     y="394"
+     font-size="11px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+     id="text59">Done</text>
+  <!-- normal_tr ↔ off_chnl_tx labels -->
+  <rect
+     x="1339.9454"
+     y="364"
+     width="53.554623"
+     height="18"
+     rx="2.3979681"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.447024"
+     id="rect59" />
+  <text
+     x="1366.8988"
+     y="374"
+     font-size="11px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+     id="text60">Off-Ch</text>
+  <rect
+     x="1391.0"
+     y="364.0"
+     width="50.0"
+     height="18"
+     rx="3"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="rect60" />
+  <text
+     x="1416.0"
+     y="374.0"
+     font-size="11"
+     fill="#94a3b8"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text61">Done</text>
+  <!-- normal_tr → req_remain label -->
+  <rect
+     x="1156.5"
+     y="444"
+     width="42"
+     height="18"
+     rx="3"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="rect61" />
+  <text
+     x="1177.5"
+     y="454"
+     font-size="11px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+     id="text62">Req</text>
+  <!-- req_remain → remain label -->
+  <rect
+     x="1243.5"
+     y="637.0"
+     width="33.0"
+     height="18"
+     rx="3"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="rect62" />
+  <text
+     x="1260.0"
+     y="647.0"
+     font-size="11"
+     fill="#94a3b8"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text63">OK</text>
+  <!-- remain → normal_tr label -->
+  <g
+     id="g84"
+     transform="translate(-9.7105509)">
+    <rect
+       x="1200.4155"
+       y="444.3963"
+       width="39.169003"
+       height="18"
+       rx="2.3501401"
+       fill="#0f172a"
+       stroke="#334155"
+       stroke-width="0.442544"
+       id="rect63" />
+    <text
+       x="1219.9615"
+       y="454.3963"
+       font-size="11px"
+       fill="#94a3b8"
+       text-anchor="middle"
+       dominant-baseline="central"
+       font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+       id="text64">Done</text>
+  </g>
+  <!-- idle → ibss_alone label -->
+  <rect
+     x="55.0"
+     y="142.0"
+     width="50.0"
+     height="18"
+     rx="3"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="rect64" />
+  <text
+     x="80.0"
+     y="152.0"
+     font-size="11"
+     fill="#94a3b8"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text65">IBSS</text>
+  <!-- ibss_alone → ibss_merge label -->
+  <rect
+     x="183.5"
+     y="68.0"
+     width="58.0"
+     height="18"
+     rx="3"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="rect65" />
+  <text
+     x="212.5"
+     y="78.0"
+     font-size="11"
+     fill="#94a3b8"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text66">Merge</text>
+  <!-- ibss_merge → ibss_alone label -->
+  <rect
+     x="183.5"
+     y="99"
+     width="58"
+     height="18"
+     rx="3"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="rect66" />
+  <text
+     x="212.5"
+     y="109"
+     font-size="11px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+     id="text67">Split</text>
+  <!-- scan ↔ wait_next_scan labels -->
+  <rect
+     x="430"
+     y="299"
+     width="50"
+     height="18"
+     rx="3"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="rect67" />
+  <text
+     x="455"
+     y="309"
+     font-size="11px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+     id="text68">Wait</text>
+  <rect
+     x="360"
+     y="299"
+     width="50"
+     height="18"
+     rx="3"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.5"
+     id="rect68" />
+  <text
+     x="385"
+     y="309"
+     font-size="11px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', SimHei, monospace"
+     id="text69">Next</text>
+  <!-- ═══════════ LEGEND ═══════════ -->
+  <line
+     x1="20"
+     y1="700"
+     x2="1580"
+     y2="700"
+     stroke="#334155"
+     stroke-width="0.5"
+     stroke-dasharray="4,4"
+     id="line69" />
+  <rect
+     x="20"
+     y="710"
+     width="12"
+     height="12"
+     rx="2"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect69" />
+  <text
+     x="38"
+     y="717"
+     font-size="11"
+     fill="#94a3b8"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text70">主连接路径状态</text>
+  <rect
+     x="170"
+     y="710"
+     width="12"
+     height="12"
+     rx="2"
+     fill="#3b2f0a"
+     stroke="#d97706"
+     stroke-width="1.5"
+     id="rect70" />
+  <text
+     x="188"
+     y="717"
+     font-size="11"
+     fill="#94a3b8"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text71">失败/断开状态</text>
+  <rect
+     x="350"
+     y="710"
+     width="12"
+     height="12"
+     rx="2"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1.5"
+     id="rect71" />
+  <text
+     x="368"
+     y="717"
+     font-size="11"
+     fill="#94a3b8"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text72">其他状态</text>
+  <line
+     x1="500"
+     y1="716"
+     x2="530"
+     y2="716"
+     stroke="#10b981"
+     stroke-width="2"
+     id="line72" />
+  <text
+     x="536"
+     y="717"
+     font-size="11"
+     fill="#94a3b8"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text73">主路径转移</text>
+  <line
+     x1="640"
+     y1="716"
+     x2="670"
+     y2="716"
+     stroke="#475569"
+     stroke-width="1.5"
+     stroke-dasharray="6,3"
+     id="line73" />
+  <text
+     x="676"
+     y="717"
+     font-size="11"
+     fill="#94a3b8"
+     dominant-baseline="central"
+     font-family="'Maple Mono Normal NL NF CN','Noto Sans CJK SC','SF Mono','Fira Code','Cascadia Code','Courier New','Microsoft YaHei','SimHei',monospace"
+     id="text74">其他转移</text>
+</svg>

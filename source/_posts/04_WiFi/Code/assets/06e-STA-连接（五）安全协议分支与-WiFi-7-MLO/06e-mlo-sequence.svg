@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1080 900"
+   width="1080"
+   height="900"
+   version="1.1"
+   id="svg61"
+   sodipodi:docname="06e-mlo-sequence.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview61"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.2144444"
+     inkscape:cx="540.16468"
+     inkscape:cy="450"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg61" />
+  <title
+     id="title1">MLO 多链路建立时序</title>
+  <!-- validate: skip-container-nesting skip-orphan-boxes -->
+  <defs
+     id="defs1">
+    <marker
+       id="arrow"
+       markerWidth="8"
+       markerHeight="6"
+       refX="8"
+       refY="3"
+       orient="auto">
+      <path
+         d="M0,0.5 L7,3 L0,5.5"
+         fill="none"
+         stroke="#475569"
+         stroke-width="1.2"
+         stroke-linecap="round"
+         id="path1" />
+    </marker>
+  </defs>
+  <rect
+     width="1080"
+     height="900"
+     fill="#1e293b"
+     id="rect1" />
+  <text
+     x="15"
+     y="18"
+     font-size="15"
+     font-weight="700"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text1">MLO Multi-Link Setup Sequence: Anchor → Partner → EAPOL → Key Sync</text>
+  <text
+     x="15"
+     y="36"
+     font-size="10"
+     fill="#94a3b8"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text2"
+     style="font-size:10.66666667px">mlo_connect() → wlan_cm_start_connect(Link1) → mlo_send_link_connect(Link2) → mlo_defer_set_keys()</text>
+  <text
+     x="15"
+     y="118"
+     font-size="8.5"
+     font-weight="700"
+     fill="#38bdf8"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text3"
+     style="font-size:10.6667px">Phase 1: Anchor Link (Auth+Assoc)</text>
+  <line
+     x1="100"
+     y1="106"
+     x2="100"
+     y2="818"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4 3"
+     id="line5" />
+  <line
+     x1="300"
+     y1="106"
+     x2="300"
+     y2="818"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4 3"
+     id="line6" />
+  <line
+     x1="500"
+     y1="106"
+     x2="500"
+     y2="818"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4 3"
+     id="line7" />
+  <line
+     x1="700"
+     y1="106"
+     x2="700"
+     y2="818"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4 3"
+     id="line8" />
+  <line
+     x1="900"
+     y1="106"
+     x2="900"
+     y2="818"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4 3"
+     id="line9" />
+  <rect
+     x="97.0"
+     y="135"
+     width="6"
+     height="641"
+     rx="2"
+     fill="rgba(56,189,248,0.12)"
+     stroke="#38bdf8"
+     stroke-width="1"
+     id="rect9" />
+  <text
+     x="15"
+     y="658"
+     font-size="8.5"
+     font-weight="700"
+     fill="#a78bfa"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text5"
+     style="font-size:10.66666667px">Phase 3: EAPOL + Key Defer/Sync</text>
+  <text
+     x="15"
+     y="423"
+     font-size="8.5"
+     font-weight="700"
+     fill="#10b981"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text4"
+     style="font-size:10.66666667px">Phase 2: Partner Links (逐条建立)</text>
+  <rect
+     x="297.0"
+     y="135"
+     width="6"
+     height="641"
+     rx="2"
+     fill="rgba(59,130,246,0.12)"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect10" />
+  <rect
+     x="497"
+     y="276"
+     width="6"
+     height="482.29187"
+     rx="2"
+     fill="rgba(129,140,248,0.12)"
+     stroke="#818cf8"
+     stroke-width="1.01842"
+     id="rect11" />
+  <rect
+     x="697"
+     y="304"
+     width="26.603842"
+     height="360"
+     rx="0.36443624"
+     fill="rgba(249,115,22,0.12)"
+     stroke="#f97316"
+     stroke-width="0.42687"
+     id="rect12" />
+  <rect
+     x="897.0"
+     y="548"
+     width="6"
+     height="82"
+     rx="2"
+     fill="rgba(249,115,22,0.12)"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect13" />
+  <line
+     x1="103.0"
+     y1="151.4"
+     x2="297.0"
+     y2="151.4"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line13" />
+  <text
+     x="200.0"
+     y="135"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text13"
+     style="font-size:10.66666667px">mlo_connect()</text>
+  <text
+     x="200"
+     y="147"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text14"
+     style="font-size:10.6667px">wlan_mlo_mgr_sta.c:770</text>
+  <path
+     d="M303.0,165 L325.0,165 Q330.0,165 330.0,170 L330.0,178 Q330.0,183 325.0,183 L303.0,183"
+     stroke="#94a3b8"
+     stroke-width="1"
+     fill="none"
+     id="path14" />
+  <text
+     x="335.0"
+     y="169.0"
+     font-size="7.5"
+     fill="#94a3b8"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text15"
+     style="font-size:10.66666667px">mlo_validate_mlo_cap()</text>
+  <text
+     x="335"
+     y="181"
+     font-size="7.5"
+     fill="#94a3b8"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text16"
+     style="font-size:10.6667px">+ mlo_validate_connect_req()</text>
+  <path
+     d="M303.0,218 L325.0,218 Q330.0,218 330.0,223 L330.0,231 Q330.0,236 325.0,236 L303.0,236"
+     stroke="#94a3b8"
+     stroke-width="1"
+     fill="none"
+     id="path16" />
+  <text
+     x="335.0"
+     y="222.0"
+     font-size="7.5"
+     fill="#94a3b8"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text17"
+     style="font-size:10.66666667px">保存 copied_conn_req</text>
+  <text
+     x="335"
+     y="236"
+     font-size="7.5"
+     fill="#94a3b8"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text18"
+     style="font-size:10.6667px">+ 清零 links bitmap</text>
+  <line
+     x1="303.0"
+     y1="292.4"
+     x2="497.0"
+     y2="292.4"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line18" />
+  <text
+     x="400"
+     y="274"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text19"
+     style="font-size:10.6667px">wlan_cm_start_connect()</text>
+  <text
+     x="400"
+     y="288"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text20"
+     style="font-size:10.6667px">(Link 1, anchor)</text>
+  <line
+     x1="503.0"
+     y1="306"
+     x2="697.0"
+     y2="306"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line20" />
+  <text
+     x="600.0"
+     y="302"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text21"
+     style="font-size:10.66666667px">Auth Req (Link 1)</text>
+  <line
+     x1="697.0"
+     y1="332"
+     x2="503.0"
+     y2="332"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line21" />
+  <text
+     x="600.0"
+     y="328"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text22"
+     style="font-size:10.66666667px">Auth Resp (Link 1)</text>
+  <line
+     x1="503.0"
+     y1="358"
+     x2="697.0"
+     y2="358"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line22" />
+  <text
+     x="600.0"
+     y="354"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text23"
+     style="font-size:10.66666667px">Assoc Req (Link 1)</text>
+  <line
+     x1="697.0"
+     y1="405.4"
+     x2="503.0"
+     y2="405.4"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line23" />
+  <text
+     x="600"
+     y="387"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text24"
+     style="font-size:10.6667px">Assoc Resp (Link 1)</text>
+  <text
+     x="600.0"
+     y="399"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text25"
+     style="font-size:10.66666667px">(含 Basic ML Element)</text>
+  <line
+     x1="497.0"
+     y1="448.4"
+     x2="303.0"
+     y2="448.4"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line25" />
+  <text
+     x="400.0"
+     y="432"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text26"
+     style="font-size:10.66666667px">mlo_sta_link_</text>
+  <text
+     x="400.0"
+     y="442"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text27"
+     style="font-size:10.66666667px">connect_notify()</text>
+  <path
+     d="M303.0,462 L325.0,462 Q330.0,462 330.0,467 L330.0,475 Q330.0,480 325.0,480 L303.0,480"
+     stroke="#94a3b8"
+     stroke-width="1"
+     fill="none"
+     id="path27" />
+  <text
+     x="335.0"
+     y="466.0"
+     font-size="7.5"
+     fill="#94a3b8"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text28"
+     style="font-size:10.66666667px">mlo_send_link_connect()</text>
+  <text
+     x="335"
+     y="478"
+     font-size="7.5"
+     fill="#94a3b8"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text29"
+     style="font-size:10.6667px">逐条建立伙伴链路</text>
+  <line
+     x1="303.0"
+     y1="536.4"
+     x2="497.0"
+     y2="536.4"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line29" />
+  <text
+     x="400"
+     y="518"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text30"
+     style="font-size:10.6667px">wlan_cm_start_connect()</text>
+  <text
+     x="400.0"
+     y="530"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text31"
+     style="font-size:10.66666667px">(Link 2, partner)</text>
+  <line
+     x1="503.0"
+     y1="550"
+     x2="897.0"
+     y2="550"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line31" />
+  <text
+     x="700.0"
+     y="546"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text32"
+     style="font-size:10.66666667px">Auth Req (Link 2)</text>
+  <line
+     x1="897.0"
+     y1="576"
+     x2="503.0"
+     y2="576"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line32" />
+  <text
+     x="700.0"
+     y="572"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text33"
+     style="font-size:10.66666667px">Auth Resp (Link 2)</text>
+  <line
+     x1="503.0"
+     y1="602"
+     x2="897.0"
+     y2="602"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line33" />
+  <text
+     x="700.0"
+     y="598"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text34"
+     style="font-size:10.66666667px">Assoc Req (Link 2)</text>
+  <line
+     x1="897.0"
+     y1="628"
+     x2="503.0"
+     y2="628"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line34" />
+  <text
+     x="700.0"
+     y="624"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text35"
+     style="font-size:10.66666667px">Assoc Resp (Link 2)</text>
+  <line
+     x1="697.0"
+     y1="683.4"
+     x2="103.0"
+     y2="683.4"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line35" />
+  <text
+     x="400.0"
+     y="667"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text36"
+     style="font-size:10.66666667px">EAPOL 4-Way HS</text>
+  <text
+     x="400.0"
+     y="677"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text37"
+     style="font-size:10.66666667px">(only on Link 1)</text>
+  <line
+     x1="103.0"
+     y1="718.4"
+     x2="297.0"
+     y2="718.4"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line37" />
+  <text
+     x="200.0"
+     y="702"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text38"
+     style="font-size:10.66666667px">mlo_defer_set_keys()</text>
+  <text
+     x="200"
+     y="714"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text39"
+     style="font-size:10.6667px">密钥延迟安装</text>
+  <line
+     x1="303.0"
+     y1="753.4"
+     x2="497.0"
+     y2="753.4"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line39" />
+  <text
+     x="400.0"
+     y="737"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text40"
+     style="font-size:10.66666667px">密钥同步</text>
+  <text
+     x="400.0"
+     y="747"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text41"
+     style="font-size:10.66666667px">(Link 1 → Link 2)</text>
+  <line
+     x1="103"
+     y1="772.40002"
+     x2="297"
+     y2="772.40002"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line41" />
+  <text
+     x="200"
+     y="756"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text42"
+     style="font-size:10.6667px">mlo_defer_set_keys(false)</text>
+  <text
+     x="200"
+     y="768"
+     text-anchor="middle"
+     font-size="7.5"
+     fill="#cbd5e1"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text43"
+     style="font-size:10.6667px">允许安装</text>
+  <rect
+     x="60.0"
+     y="56"
+     width="80"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#38bdf8"
+     stroke-width="1.5"
+     id="rect43" />
+  <text
+     x="100"
+     y="78.0"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text44">Supplicant</text>
+  <rect
+     x="60.0"
+     y="824"
+     width="80"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#38bdf8"
+     stroke-width="1.5"
+     id="rect44" />
+  <text
+     x="100"
+     y="846.0"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text45">Supplicant</text>
+  <rect
+     x="260.0"
+     y="56"
+     width="80"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect45" />
+  <text
+     x="300"
+     y="71.0"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text46">QCOM</text>
+  <text
+     x="300"
+     y="83.0"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text47">Driver</text>
+  <rect
+     x="260.0"
+     y="824"
+     width="80"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect47" />
+  <text
+     x="300"
+     y="839.0"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text48">QCOM</text>
+  <text
+     x="300"
+     y="851.0"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text49">Driver</text>
+  <rect
+     x="460.0"
+     y="56"
+     width="80"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#818cf8"
+     stroke-width="1.5"
+     id="rect49" />
+  <text
+     x="500"
+     y="71.0"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text50">QCOM</text>
+  <text
+     x="500"
+     y="83.0"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text51">FW</text>
+  <rect
+     x="460.0"
+     y="824"
+     width="80"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#818cf8"
+     stroke-width="1.5"
+     id="rect51" />
+  <text
+     x="500"
+     y="839.0"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text52">QCOM</text>
+  <text
+     x="500"
+     y="851.0"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text53">FW</text>
+  <rect
+     x="660.0"
+     y="56"
+     width="80"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect53" />
+  <text
+     x="700"
+     y="71.0"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text54">AP</text>
+  <text
+     x="700"
+     y="83.0"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text55">(Link 1)</text>
+  <rect
+     x="660.0"
+     y="824"
+     width="80"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect55" />
+  <text
+     x="700"
+     y="839.0"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text56">AP</text>
+  <text
+     x="700"
+     y="851.0"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text57">(Link 1)</text>
+  <rect
+     x="860.0"
+     y="56"
+     width="80"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect57" />
+  <text
+     x="900"
+     y="71.0"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text58">AP</text>
+  <text
+     x="900"
+     y="83.0"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text59">(Link 2)</text>
+  <rect
+     x="860.0"
+     y="824"
+     width="80"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect59" />
+  <text
+     x="900"
+     y="839.0"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text60">AP</text>
+  <text
+     x="900"
+     y="851.0"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     id="text61">(Link 2)</text>
+</svg>

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1000 420"
+   width="1000"
+   height="420"
+   version="1.1"
+   id="svg30"
+   sodipodi:docname="09-deauth-disassoc-state-machine.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview30"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.41"
+     inkscape:cx="500"
+     inkscape:cy="210.28369"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg30" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; fill: #e2e8f0; }
+  </style>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrow-green"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="10,3.5 0,7 0,0"
+         fill="#10b981"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arrow-orange"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="10,3.5 0,7 0,0"
+         fill="#f59e0b"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arrow-red"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="10,3.5 0,7 0,0"
+         fill="#ef4444"
+         id="polygon4" />
+    </marker>
+    <filter
+       id="shadow"
+       x="-0.004"
+       y="-0.01"
+       width="1.008"
+       height="1.02">
+      <feDropShadow
+         dx="0"
+         dy="2"
+         stdDeviation="3"
+         flood-color="#000000"
+         flood-opacity="0.4" />
+    </filter>
+  </defs>
+  <rect
+     width="1000"
+     height="420"
+     fill="url(#bg-grad)"
+     id="rect4" />
+  <text
+     x="500"
+     y="28"
+     fill="#e2e8f0"
+     font-size="18px"
+     font-weight="600"
+     text-anchor="middle"
+     id="text4">802.11 STA 状态机 — Deauth 与 Disassoc</text>
+  <text
+     x="500"
+     y="48"
+     fill="#94a3b8"
+     font-size="12px"
+     text-anchor="middle"
+     id="text5">正向流程建立连接，反向 Deauth/Disassoc 帧触发状态回退</text>
+  <circle
+     cx="25"
+     cy="119"
+     r="8"
+     fill="#e2e8f0"
+     id="circle5" />
+  <line
+     x1="33"
+     y1="119"
+     x2="60"
+     y2="119"
+     stroke="#e2e8f0"
+     stroke-width="1.5"
+     id="line5" />
+  <rect
+     x="65"
+     y="69"
+     width="250"
+     height="100"
+     rx="10"
+     ry="10"
+     fill="#052e16"
+     stroke="#059669"
+     stroke-width="2"
+     id="rect5" />
+  <text
+     x="190"
+     y="96"
+     fill="#10b981"
+     font-size="14px"
+     font-weight="600"
+     text-anchor="middle"
+     id="text6">State 1</text>
+  <text
+     x="190"
+     y="116"
+     fill="#e2e8f0"
+     font-size="13px"
+     font-weight="600"
+     text-anchor="middle"
+     id="text7">Unauthenticated</text>
+  <text
+     x="190"
+     y="134"
+     fill="#e2e8f0"
+     font-size="13px"
+     font-weight="600"
+     text-anchor="middle"
+     id="text8">Unassociated</text>
+  <text
+     x="190"
+     y="156"
+     fill="#94a3b8"
+     font-size="11px"
+     text-anchor="middle"
+     id="text9">未认证 · 未关联</text>
+  <rect
+     x="375"
+     y="69"
+     width="250"
+     height="100"
+     rx="10"
+     ry="10"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="2"
+     id="rect9" />
+  <text
+     x="500"
+     y="96"
+     fill="#3b82f6"
+     font-size="14px"
+     font-weight="600"
+     text-anchor="middle"
+     id="text10">State 2</text>
+  <text
+     x="500"
+     y="116"
+     fill="#e2e8f0"
+     font-size="13px"
+     font-weight="600"
+     text-anchor="middle"
+     id="text11">Authenticated</text>
+  <text
+     x="500"
+     y="134"
+     fill="#e2e8f0"
+     font-size="13px"
+     font-weight="600"
+     text-anchor="middle"
+     id="text12">Unassociated</text>
+  <text
+     x="500"
+     y="156"
+     fill="#94a3b8"
+     font-size="11px"
+     text-anchor="middle"
+     id="text13">已认证 · 未关联</text>
+  <rect
+     x="685"
+     y="69"
+     width="250"
+     height="100"
+     rx="10"
+     ry="10"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="2"
+     id="rect13" />
+  <text
+     x="810"
+     y="96"
+     fill="#a855f7"
+     font-size="14px"
+     font-weight="600"
+     text-anchor="middle"
+     id="text14">State 3</text>
+  <text
+     x="810"
+     y="116"
+     fill="#e2e8f0"
+     font-size="13px"
+     font-weight="600"
+     text-anchor="middle"
+     id="text15">Authenticated</text>
+  <text
+     x="810"
+     y="134"
+     fill="#e2e8f0"
+     font-size="13px"
+     font-weight="600"
+     text-anchor="middle"
+     id="text16">Associated</text>
+  <text
+     x="810"
+     y="156"
+     fill="#94a3b8"
+     font-size="11px"
+     text-anchor="middle"
+     id="text17">已认证 · 已关联（正常连接）</text>
+  <line
+     x1="315"
+     y1="88"
+     x2="370"
+     y2="88"
+     stroke="#10b981"
+     stroke-width="2"
+     marker-end="url(#arrow-green)"
+     id="line17" />
+  <text
+     x="342"
+     y="78"
+     fill="#10b981"
+     font-size="11px"
+     font-weight="600"
+     text-anchor="middle"
+     id="text18">Auth 认证</text>
+  <text
+     x="342"
+     y="68"
+     fill="#10b981"
+     font-size="10px"
+     text-anchor="middle"
+     id="text19">成功认证</text>
+  <line
+     x1="625"
+     y1="88"
+     x2="680"
+     y2="88"
+     stroke="#10b981"
+     stroke-width="2"
+     marker-end="url(#arrow-green)"
+     id="line19" />
+  <text
+     x="652"
+     y="78"
+     fill="#10b981"
+     font-size="11px"
+     font-weight="600"
+     text-anchor="middle"
+     id="text20">Assoc 关联</text>
+  <text
+     x="652"
+     y="68"
+     fill="#10b981"
+     font-size="10px"
+     text-anchor="middle"
+     id="text21">成功关联</text>
+  <text
+     x="645"
+     y="202"
+     fill="#f59e0b"
+     font-size="12px"
+     font-weight="600"
+     text-anchor="middle"
+     id="text22">Disassoc 取消关联帧</text>
+  <text
+     x="645"
+     y="219"
+     fill="#f59e0b"
+     font-size="11px"
+     text-anchor="middle"
+     id="text23">回退到 State 2（保留认证）</text>
+  <path
+     d="M 733,219 C 688,244 578,244 548,219"
+     stroke="#f59e0b"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrow-orange)"
+     id="path23" />
+  <text
+     x="341"
+     y="194"
+     fill="#ef4444"
+     font-size="12px"
+     font-weight="600"
+     text-anchor="middle"
+     id="text24">Deauth 取消认证帧</text>
+  <text
+     x="341"
+     y="211"
+     fill="#ef4444"
+     font-size="11px"
+     text-anchor="middle"
+     id="text25">回退到 State 1（清除认证）</text>
+  <path
+     d="m 433,215 c -35,25 -145,25 -175,0"
+     stroke="#ef4444"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrow-red)"
+     id="path25" />
+  <text
+     x="488"
+     y="288"
+     fill="#ef4444"
+     font-size="12px"
+     font-weight="600"
+     text-anchor="middle"
+     id="text26">Deauth 取消认证帧 — 从 State 3 直接踢回 State 1</text>
+  <path
+     d="m 717,278 c -23.40264,20.23466 -399.39036,80.00753 -483.65248,-5.67376"
+     stroke="#ef4444"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrow-red)"
+     id="path26"
+     sodipodi:nodetypes="cc" />
+  <rect
+     x="620"
+     y="326"
+     width="360"
+     height="82"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect26" />
+  <text
+     x="636"
+     y="346"
+     fill="#94a3b8"
+     font-size="12px"
+     font-weight="600"
+     id="text27">图例</text>
+  <line
+     x1="636"
+     y1="362"
+     x2="670"
+     y2="362"
+     stroke="#10b981"
+     stroke-width="2"
+     marker-end="url(#arrow-green)"
+     id="line27" />
+  <text
+     x="678"
+     y="366"
+     fill="#e2e8f0"
+     font-size="11px"
+     id="text28">正向：Auth / Assoc 建立连接</text>
+  <line
+     x1="636"
+     y1="378"
+     x2="670"
+     y2="378"
+     stroke="#f59e0b"
+     stroke-width="2"
+     marker-end="url(#arrow-orange)"
+     id="line28" />
+  <text
+     x="678"
+     y="382"
+     fill="#e2e8f0"
+     font-size="11px"
+     id="text29">Disassoc 回退（保留认证关系）</text>
+  <line
+     x1="636"
+     y1="394"
+     x2="670"
+     y2="394"
+     stroke="#ef4444"
+     stroke-width="2"
+     marker-end="url(#arrow-red)"
+     id="line29" />
+  <text
+     x="678"
+     y="398"
+     fill="#e2e8f0"
+     font-size="11px"
+     id="text30">Deauth 回退（彻底清除认证）</text>
+</svg>

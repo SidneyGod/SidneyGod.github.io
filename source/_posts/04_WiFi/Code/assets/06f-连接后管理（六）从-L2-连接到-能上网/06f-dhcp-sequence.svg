@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 960 695"
+   width="960"
+   height="695"
+   version="1.1"
+   id="svg43"
+   sodipodi:docname="06f-dhcp-sequence.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview43"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.5541667"
+     inkscape:cx="480"
+     inkscape:cy="399.24933"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg43" />
+  <title
+     id="title1">DHCP 四步流程时序图</title>
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN',Monaco,'Microsoft YaHei',monospace; }
+  </style>
+  <defs
+     id="defs4">
+    <marker
+       id="arrow-blue"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#60a5fa"
+         id="polygon1" />
+    </marker>
+    <marker
+       id="arrow-orange"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#f97316"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arrow-purple"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#a78bfa"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arrow-green"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#10b981"
+         id="polygon4" />
+    </marker>
+  </defs>
+  <!-- Background -->
+  <rect
+     width="960"
+     height="695"
+     fill="#0d1117"
+     id="rect4"
+     x="0"
+     y="0"
+     style="stroke-width:1.01097" />
+  <!-- Title -->
+  <text
+     x="480"
+     y="28"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="18"
+     font-weight="600"
+     id="text4">DHCP 四步流程时序图</text>
+  <!-- Participants (lifeline headers) -->
+  <!-- ClientModeImpl -->
+  <rect
+     x="50"
+     y="48"
+     width="140"
+     height="36"
+     rx="6"
+     fill="#1a2535"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="rect5" />
+  <text
+     x="120"
+     y="70"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="13"
+     font-weight="600"
+     id="text5">ClientModeImpl</text>
+  <line
+     x1="120"
+     y1="84"
+     x2="120"
+     y2="640"
+     stroke="#475569"
+     stroke-width="1"
+     stroke-dasharray="6,4"
+     id="line5" />
+  <!-- IpClient -->
+  <rect
+     x="280"
+     y="48"
+     width="120"
+     height="36"
+     rx="6"
+     fill="#0a2a18"
+     stroke="#22c55e"
+     stroke-width="1.5"
+     id="rect6" />
+  <text
+     x="340"
+     y="70"
+     text-anchor="middle"
+     fill="#4ade80"
+     font-size="13"
+     font-weight="600"
+     id="text6">IpClient</text>
+  <line
+     x1="340"
+     y1="84"
+     x2="340"
+     y2="640"
+     stroke="#475569"
+     stroke-width="1"
+     stroke-dasharray="6,4"
+     id="line6" />
+  <!-- DhcpClient -->
+  <rect
+     x="510"
+     y="48"
+     width="120"
+     height="36"
+     rx="6"
+     fill="#1a1812"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect7" />
+  <text
+     x="570"
+     y="70"
+     text-anchor="middle"
+     fill="#fb923c"
+     font-size="13"
+     font-weight="600"
+     id="text7">DhcpClient</text>
+  <line
+     x1="570"
+     y1="84"
+     x2="570"
+     y2="640"
+     stroke="#475569"
+     stroke-width="1"
+     stroke-dasharray="6,4"
+     id="line7" />
+  <!-- DHCP Server -->
+  <rect
+     x="740"
+     y="48"
+     width="140"
+     height="36"
+     rx="6"
+     fill="#1a1525"
+     stroke="#8b5cf6"
+     stroke-width="1.5"
+     id="rect8" />
+  <text
+     x="810"
+     y="70"
+     text-anchor="middle"
+     fill="#a78bfa"
+     font-size="13"
+     font-weight="600"
+     id="text8">DHCP Server</text>
+  <line
+     x1="810"
+     y1="84"
+     x2="810"
+     y2="640"
+     stroke="#475569"
+     stroke-width="1"
+     stroke-dasharray="6,4"
+     id="line8" />
+  <!-- ===== Phase 1: Init ===== -->
+  <rect
+     x="30"
+     y="95"
+     width="900"
+     height="65"
+     rx="6"
+     fill="#161b22"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect9" />
+  <text
+     x="45"
+     y="112"
+     fill="#94a3b8"
+     font-size="11"
+     font-weight="600"
+     id="text9">阶段 1：DhcpInitState — 广播探测</text>
+  <!-- CMD_START_DHCP -->
+  <rect
+     x="324"
+     y="118"
+     width="16"
+     height="10"
+     rx="2"
+     fill="#60a5fa"
+     id="rect10" />
+  <path
+     d="M 340,123 L 555,123"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     marker-end="url(#arrow-blue)"
+     id="path10" />
+  <text
+     x="430"
+     y="115"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="10"
+     id="text10">CMD_START_DHCP</text>
+  <text
+     x="430"
+     y="136"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text11">进入 DhcpInitState</text>
+  <!-- DHCPDISCOVER -->
+  <rect
+     x="560"
+     y="140"
+     width="16"
+     height="10"
+     rx="2"
+     fill="#f97316"
+     id="rect11" />
+  <path
+     d="M 570,145 L 795,145"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="path11" />
+  <text
+     x="683"
+     y="138"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="10"
+     id="text12">DHCPDISCOVER（广播）</text>
+  <!-- ===== Phase 2: Offer ===== -->
+  <rect
+     x="30"
+     y="170"
+     width="900"
+     height="60"
+     rx="6"
+     fill="#161b22"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect12" />
+  <text
+     x="45"
+     y="187"
+     fill="#94a3b8"
+     font-size="11"
+     font-weight="600"
+     id="text13">阶段 2：服务器响应 Offer</text>
+  <!-- DHCPOFFER -->
+  <rect
+     x="800"
+     y="193"
+     width="16"
+     height="10"
+     rx="2"
+     fill="#8b5cf6"
+     id="rect13" />
+  <path
+     d="M 800,198 L 585,198"
+     stroke="#a78bfa"
+     stroke-width="1.5"
+     marker-end="url(#arrow-purple)"
+     id="path13" />
+  <text
+     x="693"
+     y="191"
+     text-anchor="middle"
+     fill="#a78bfa"
+     font-size="10"
+     id="text14">DHCPOFFER（携带可用 IP）</text>
+  <text
+     x="693"
+     y="215"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text15">保存 mOffer，进入 DhcpRequestingState</text>
+  <!-- ===== Phase 3: Request ===== -->
+  <rect
+     x="30"
+     y="240"
+     width="900"
+     height="60"
+     rx="6"
+     fill="#161b22"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect15" />
+  <text
+     x="45"
+     y="257"
+     fill="#94a3b8"
+     font-size="11"
+     font-weight="600"
+     id="text16">阶段 3：DhcpRequestingState — 正式申请</text>
+  <!-- DHCPREQUEST -->
+  <rect
+     x="560"
+     y="263"
+     width="16"
+     height="10"
+     rx="2"
+     fill="#f97316"
+     id="rect16" />
+  <path
+     d="M 570,268 L 795,268"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="path16" />
+  <text
+     x="683"
+     y="257"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="10px"
+     id="text17">DHCPREQUEST（广播，携带 Option 50/54）</text>
+  <!-- DHCPACK -->
+  <rect
+     x="800"
+     y="283"
+     width="16"
+     height="10"
+     rx="2"
+     fill="#8b5cf6"
+     id="rect17" />
+  <path
+     d="M 800,288 L 585,288"
+     stroke="#a78bfa"
+     stroke-width="1.5"
+     marker-end="url(#arrow-purple)"
+     id="path17" />
+  <text
+     x="693"
+     y="281"
+     text-anchor="middle"
+     fill="#a78bfa"
+     font-size="10"
+     id="text18">DHCPACK（yiaddr + 租期 + DNS）</text>
+  <!-- ===== Phase 4: ARP + Config ===== -->
+  <rect
+     x="30"
+     y="310"
+     width="900"
+     height="165"
+     rx="6"
+     fill="#161b22"
+     stroke="#334155"
+     stroke-width="1.14892"
+     id="rect18" />
+  <text
+     x="45"
+     y="327"
+     fill="#94a3b8"
+     font-size="11"
+     font-weight="600"
+     id="text19">阶段 4：ARP 冲突检测 + 接口配置</text>
+  <!-- confirmDhcpLease (internal) -->
+  <text
+     x="570"
+     y="332"
+     text-anchor="middle"
+     fill="#fb923c"
+     font-size="10px"
+     id="text20">→ IpAddressConflictDetectingState</text>
+  <text
+     x="570"
+     y="348"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text21">ARP Probe（sender=0.0.0.0, target=分配IP）</text>
+  <!-- ARP Announce -->
+  <text
+     x="570"
+     y="369"
+     text-anchor="middle"
+     fill="#4ade80"
+     font-size="10px"
+     id="text22">ARP Announce（无冲突 → 宣告 IP）</text>
+  <text
+     x="570"
+     y="385"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9px"
+     id="text23">→ ConfiguringInterfaceState</text>
+  <!-- notifySuccess (DhcpClient → IpClient) -->
+  <rect
+     x="560"
+     y="407"
+     width="16"
+     height="10"
+     rx="2"
+     fill="#10b981"
+     id="rect23" />
+  <path
+     d="M 556,412 H 355"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="path23" />
+  <text
+     x="455"
+     y="405"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10px"
+     id="text24">notifySuccess()</text>
+  <!-- CMD_CONFIGURE_LINKADDRESS (IpClient → DhcpClient) -->
+  <rect
+     x="328"
+     y="428"
+     width="16"
+     height="10"
+     rx="2"
+     fill="#10b981"
+     id="rect24" />
+  <path
+     d="M 344,433 L 555,433"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="path24" />
+  <text
+     x="452"
+     y="424"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10px"
+     id="text25">CMD_CONFIGURE_LINKADDRESS</text>
+  <!-- EVENT_LINKADDRESS_CONFIGURED -->
+  <rect
+     x="560"
+     y="448"
+     width="16"
+     height="10"
+     rx="2"
+     fill="#10b981"
+     id="rect25" />
+  <path
+     d="M 556,453 L 355,453"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="path25" />
+  <text
+     x="455"
+     y="446"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10"
+     id="text26">EVENT_LINKADDRESS_CONFIGURED</text>
+  <text
+     x="455"
+     y="468"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text27">接口 IP 配置完毕</text>
+  <!-- ===== Phase 5: Bound + Renewal ===== -->
+  <rect
+     x="30"
+     y="485"
+     width="900"
+     height="160"
+     rx="6"
+     fill="#161b22"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect27" />
+  <text
+     x="45"
+     y="502"
+     fill="#94a3b8"
+     font-size="11"
+     font-weight="600"
+     id="text28">阶段 5：租约绑定 + T1/T2 续期</text>
+  <!-- DhcpBoundState -->
+  <text
+     x="570"
+     y="519"
+     text-anchor="middle"
+     fill="#4ade80"
+     font-size="12px"
+     font-weight="600"
+     id="text29">DhcpBoundState</text>
+  <text
+     x="570"
+     y="533"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text30">scheduleLeaseTimers() 安排 T1/T2 定时器</text>
+  <!-- T1 Timeline -->
+  <rect
+     x="200"
+     y="550"
+     width="660"
+     height="90"
+     rx="4"
+     fill="#0d1117"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect30" />
+  <text
+     x="215"
+     y="570"
+     fill="#94a3b8"
+     font-size="9"
+     id="text31">租约期</text>
+  <line
+     x1="260"
+     y1="555"
+     x2="260"
+     y2="580"
+     stroke="#475569"
+     stroke-width="1"
+     id="line31" />
+  <line
+     x1="260"
+     y1="555"
+     x2="840"
+     y2="555"
+     stroke="#475569"
+     stroke-width="1"
+     id="line32" />
+  <rect
+     x="260"
+     y="552"
+     width="80"
+     height="6"
+     rx="3"
+     fill="#10b981"
+     opacity="0.5"
+     id="rect32" />
+  <text
+     x="300"
+     y="548"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="8"
+     id="text32">T1 (.5)</text>
+  <rect
+     x="260"
+     y="552"
+     width="575"
+     height="6"
+     rx="3"
+     fill="#f59e0b"
+     opacity="0.3"
+     id="rect33" />
+  <text
+     x="548"
+     y="548"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="8"
+     id="text33">T2 (.875)</text>
+  <text
+     x="850"
+     y="548"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="8"
+     id="text34">到期</text>
+  <!-- T1: Renew (unicast) -->
+  <rect
+     x="555"
+     y="588"
+     width="16"
+     height="10"
+     rx="2"
+     fill="#f97316"
+     id="rect34" />
+  <path
+     d="M 565,593 L 800,593"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="path34" />
+  <text
+     x="683"
+     y="586"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="9"
+     id="text35">T1: 单播续期 Request</text>
+  <text
+     x="683"
+     y="605"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text36">DhcpRenewingState</text>
+  <!-- T2: Rebind (broadcast) if T1 fails -->
+  <rect
+     x="555"
+     y="615"
+     width="16"
+     height="10"
+     rx="2"
+     fill="#f97316"
+     id="rect36" />
+  <path
+     d="M 565,620 L 800,620"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="path36" />
+  <text
+     x="683"
+     y="616"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="9"
+     id="text37">T2: 广播续期 Rebind（如 T1 失败）</text>
+  <text
+     x="683"
+     y="635"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text38">DhcpRebindingState</text>
+  <!-- Legend -->
+  <g
+     transform="translate(30, 654)"
+     id="g43">
+    <rect
+       x="0"
+       y="0"
+       width="900"
+       height="30"
+       rx="4"
+       fill="#161b22"
+       stroke="#334155"
+       stroke-width="1"
+       id="rect38" />
+    <line
+       x1="10"
+       y1="10"
+       x2="28"
+       y2="10"
+       stroke="#60a5fa"
+       stroke-width="1.5"
+       marker-end="url(#arrow-blue)"
+       id="line38" />
+    <text
+       x="34"
+       y="14"
+       fill="#94a3b8"
+       font-size="10"
+       id="text39">内部控制流</text>
+    <line
+       x1="115"
+       y1="10"
+       x2="133"
+       y2="10"
+       stroke="#f97316"
+       stroke-width="1.5"
+       marker-end="url(#arrow-orange)"
+       id="line39" />
+    <text
+       x="139"
+       y="14"
+       fill="#94a3b8"
+       font-size="10"
+       id="text40">DhcpClient → Server</text>
+    <line
+       x1="270"
+       y1="10"
+       x2="288"
+       y2="10"
+       stroke="#a78bfa"
+       stroke-width="1.5"
+       marker-end="url(#arrow-purple)"
+       id="line40" />
+    <text
+       x="294"
+       y="14"
+       fill="#94a3b8"
+       font-size="10"
+       id="text41">Server → DhcpClient</text>
+    <rect
+       x="410"
+       y="5"
+       width="12"
+       height="10"
+       rx="2"
+       fill="#10b981"
+       id="rect41" />
+    <text
+       x="428"
+       y="14"
+       fill="#94a3b8"
+       font-size="10"
+       id="text42">成功确认</text>
+    <rect
+       x="500"
+       y="5"
+       width="12"
+       height="10"
+       rx="2"
+       fill="#60a5fa"
+       id="rect42" />
+    <text
+       x="518"
+       y="14"
+       fill="#94a3b8"
+       font-size="10"
+       id="text43">激活框</text>
+  </g>
+  <metadata
+     id="metadata43">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>DHCP 四步流程时序图</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

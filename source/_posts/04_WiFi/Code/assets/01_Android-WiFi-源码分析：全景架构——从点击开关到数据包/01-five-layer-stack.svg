@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" width="960" height="620">
+<title>Android WiFi 全栈分层：5 层蛋糕</title>
+<style>text{font-family:'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif;}</style>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0f0f1a"/>
+    <stop offset="100%" stop-color="#1a1a2e"/>
+  </linearGradient>
+</defs>
+<rect width="960" height="620" fill="url(#bg)"/>
+<rect x="1" y="1" width="958" height="618" rx="8" fill="none" stroke="#2a2d35" stroke-width="1.5"/>
+<text x="480" y="32" text-anchor="middle" style="font-size:18px;fill:#c0c8d4;font-weight:bold;">Android WiFi 全栈分层：5 层蛋糕</text>
+
+<!-- ══════════════════════ Layer 1: App / Framework ══════════════════════ -->
+<rect x="60" y="50" width="840" height="95" rx="6" fill="#121a2a" stroke="#1e3a5f" stroke-width="1.2"/>
+<rect x="60" y="50" width="5" height="95" rx="2" fill="#5e9eff"/>
+<text x="80" y="72" style="font-size:15px;fill:#5e9eff;font-weight:bold;">App / Framework</text>
+<text x="80" y="90" style="font-size:11px;fill:#dde2e8;">WifiManager → WifiServiceImpl → ClientModeImpl → WifiNative</text>
+<text x="80" y="106" style="font-size:11px;fill:#8b95a5;">ActiveModeWarden / WifiController / ConcreteClientModeManager</text>
+<text x="80" y="122" style="font-size:10px;fill:#5e9eff;">▶ Java / Kotlin | 权限检查、状态机调度、模式管理 | ~293K 行</text>
+<text x="80" y="136" style="font-size:10px;fill:#5e9eff;">↓ AIDL / HIDL Binder 调用</text>
+
+<!-- Connector: App/Framework → HAL -->
+<rect x="340" y="150" width="280" height="16" rx="3" fill="#0f1520" stroke="#1e3a5f" stroke-width="0.6"/>
+<text x="480" y="162" text-anchor="middle" style="font-size:9px;fill:#5e9eff;">AIDL / HIDL Binder (IWifi, ISupplicant)</text>
+<line x1="480" y1="145" x2="480" y2="150" stroke="#5e9eff" stroke-width="1"/>
+<line x1="480" y1="166" x2="480" y2="171" stroke="#a78bfa" stroke-width="1"/>
+
+<!-- ══════════════════════ Layer 2: HAL ══════════════════════ -->
+<rect x="60" y="173" width="840" height="90" rx="6" fill="#1a1220" stroke="#3a2a5f" stroke-width="1.2"/>
+<rect x="60" y="173" width="5" height="90" rx="2" fill="#a78bfa"/>
+<text x="80" y="195" style="font-size:15px;fill:#a78bfa;font-weight:bold;">HAL — 硬件抽象层</text>
+<text x="80" y="213" style="font-size:11px;fill:#dde2e8;">IWifi → HalDeviceManager → WifiLegacyHalFactory → dlopen("vendor-hal.so")</text>
+<text x="80" y="229" style="font-size:11px;fill:#8b95a5;">wifi_hal_common / driver_tool / hal_tool — 与内核通信：nl80211 + ioctl (SIOCDEVPRIVATE+1)</text>
+<text x="80" y="245" style="font-size:11px;fill:#8b95a5;">wificond — 独立的 C++ 守护进程，接口管理 + 扫描调度（Binder IPC + nl80211）</text>
+<text x="80" y="258" style="font-size:10px;fill:#a78bfa;">▶ C++ / AIDL | 硬件抽象、厂商适配 | ~140K 行 | ↓ AIDL Binder + nl80211 + ioctl</text>
+
+<!-- Connector: HAL → Supplicant -->
+<rect x="280" y="268" width="400" height="32" rx="3" fill="#0f1520" stroke="#2a2a4a" stroke-width="0.6"/>
+<text x="480" y="282" text-anchor="middle" style="font-size:9px;fill:#a78bfa;">AIDL Binder (ISupplicant.addStaInterface) — HAL 发起</text>
+<text x="480" y="294" text-anchor="middle" style="font-size:9px;fill:#888;">nl80211 (Generic Netlink) + ioctl (SIOCDEVPRIVATE+1, SIOCGIFFLAGS…)</text>
+<line x1="480" y1="263" x2="480" y2="268" stroke="#a78bfa" stroke-width="1"/>
+<line x1="480" y1="300" x2="480" y2="305" stroke="#30d158" stroke-width="1"/>
+
+<!-- ══════════════════════ Layer 3: Supplicant / Hostapd ══════════════════════ -->
+<rect x="60" y="307" width="840" height="80" rx="6" fill="#121820" stroke="#2a4a2a" stroke-width="1.2"/>
+<rect x="60" y="307" width="5" height="80" rx="2" fill="#30d158"/>
+<text x="80" y="329" style="font-size:15px;fill:#30d158;font-weight:bold;">Supplicant / Hostapd</text>
+<text x="80" y="347" style="font-size:11px;fill:#dde2e8;">wpa_supplicant (STA) — 认证、密钥管理、漫游决策、eloop 事件循环</text>
+<text x="80" y="363" style="font-size:11px;fill:#8b95a5;">hostapd (SoftAP) — SAP 专题展开 | 与内核通信: nl80211 + ioctl (linux_ioctl.c)</text>
+<text x="80" y="378" style="font-size:10px;fill:#30d158;">▶ C | 独立进程 | ~669K 行 | ↓ nl80211 (Generic Netlink)</text>
+
+<!-- Connector: Supplicant → Kernel Driver -->
+<rect x="340" y="392" width="280" height="16" rx="3" fill="#0f1520" stroke="#2a4a2a" stroke-width="0.6"/>
+<text x="480" y="404" text-anchor="middle" style="font-size:9px;fill:#30d158;">NL80211_CMD_* (Generic Netlink) — scan/connect/set_key 等标准操作</text>
+<line x1="480" y1="387" x2="480" y2="392" stroke="#30d158" stroke-width="1"/>
+<line x1="480" y1="408" x2="480" y2="413" stroke="#f0a040" stroke-width="1"/>
+
+<!-- ══════════════════════ Layer 4: Kernel Driver ══════════════════════ -->
+<rect x="60" y="415" width="840" height="100" rx="6" fill="#1a1408" stroke="#5a4020" stroke-width="1.2"/>
+<rect x="60" y="415" width="5" height="100" rx="2" fill="#f0a040"/>
+<text x="80" y="437" style="font-size:15px;fill:#f0a040;font-weight:bold;">Kernel Driver</text>
+<text x="80" y="455" style="font-size:11px;fill:#dde2e8;">cfg80211 + mac80211 (Linux 无线核心) → 厂商驱动 (qcacld-3.0 / gen4m)</text>
+<text x="80" y="471" style="font-size:11px;fill:#8b95a5;">QCOM: qcacld-3.0 + qca-wifi-host-cmn + platform/cnss2 (PCIe 枚举、固件下载、SSR)</text>
+<text x="80" y="487" style="font-size:11px;fill:#8b95a5;">MTK: gen4m + conninfra + adaptor (统一连接管理，WiFi/BT/FM/GPS 共享硬件)</text>
+<text x="80" y="503" style="font-size:10px;fill:#f0a040;">▶ C | 内核模块 (insmod) | ioctl: SIOCDEVPRIVATE+1 / WEXT (SIOCIWFIRSTPRIV+N) | QCOM ~323K / MTK ~87K 行</text>
+
+<!-- Connector: Driver → Firmware -->
+<rect x="340" y="520" width="280" height="16" rx="3" fill="#0f1520" stroke="#5a4020" stroke-width="0.6"/>
+<text x="480" y="532" text-anchor="middle" style="font-size:9px;fill:#f0a040;">WMI (QCOM: 命令/事件异步模型) / HIF+MCR (MTK: 命令/响应同步模型) → PCIe/SDIO/AXI</text>
+<line x1="480" y1="515" x2="480" y2="520" stroke="#f0a040" stroke-width="1"/>
+<line x1="480" y1="536" x2="480" y2="541" stroke="#40c870" stroke-width="1"/>
+
+<!-- ══════════════════════ Layer 5: Firmware ══════════════════════ -->
+<rect x="60" y="543" width="840" height="65" rx="6" fill="#0f1a12" stroke="#203a28" stroke-width="1.2"/>
+<rect x="60" y="543" width="5" height="65" rx="2" fill="#40c870"/>
+<text x="80" y="565" style="font-size:15px;fill:#40c870;font-weight:bold;">Firmware (闭源)</text>
+<text x="80" y="583" style="font-size:11px;fill:#dde2e8;">射频控制、帧过滤、功耗管理、硬件扫描、密钥安装、漫游辅助</text>
+<text x="80" y="599" style="font-size:10px;fill:#40c870;">▶ 闭源二进制 | WMI/HIF 接口与驱动通信 | 运行在芯片内部独立处理器上</text>
+
+<!-- Side annotations (line counts) -->
+<text x="920" y="100" text-anchor="end" style="font-size:9px;fill:#8b95a5;">~293K 行</text>
+<text x="920" y="220" text-anchor="end" style="font-size:9px;fill:#8b95a5;">~140K 行</text>
+<text x="920" y="350" text-anchor="end" style="font-size:9px;fill:#8b95a5;">~669K 行</text>
+<text x="920" y="470" text-anchor="end" style="font-size:9px;fill:#8b95a5;">QCOM ~323K</text>
+<text x="920" y="483" text-anchor="end" style="font-size:9px;fill:#8b95a5;">MTK ~87K</text>
+<text x="920" y="578" text-anchor="end" style="font-size:9px;fill:#8b95a5;">闭源</text>
+</svg>

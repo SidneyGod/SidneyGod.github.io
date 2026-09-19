@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 860 700"
+   version="1.1"
+   id="svg43"
+   sodipodi:docname="10b-hostapd-modules.svg"
+   width="860"
+   height="700"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview43"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.4710633"
+     inkscape:cx="523.77081"
+     inkscape:cy="371.5"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg43" />
+  <defs
+     id="defs3">
+    <linearGradient
+       id="bg-grad"
+       x1="0"
+       y1="0"
+       x2="819.75604"
+       y2="819.75604"
+       gradientTransform="scale(1.0490926,0.85391256)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrow-green"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <path
+         d="M 0,0 8,3 0,6 Z"
+         fill="#10b981"
+         id="path2" />
+    </marker>
+    <marker
+       id="arrow-gray"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <path
+         d="M 0,0 8,3 0,6 Z"
+         fill="#64748b"
+         id="path3" />
+    </marker>
+  </defs>
+  <rect
+     width="860"
+     height="700"
+     fill="url(#bg-grad)"
+     id="rect3"
+     style="fill:url(#bg-grad);stroke-width:0.946485"
+     x="0"
+     y="0" />
+  <!-- title -->
+  <text
+     x="368"
+     y="35"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="20px"
+     font-weight="700"
+     id="text3">hostapd 内部模块关系图</text>
+  <line
+     x1="188"
+     y1="48"
+     x2="548"
+     y2="48"
+     stroke="#10b981"
+     stroke-width="2"
+     id="line3" />
+  <!-- ===== 顶层: AIDL 适配层 ===== -->
+  <rect
+     x="188"
+     y="70"
+     width="360"
+     height="60"
+     rx="8"
+     ry="8"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="2"
+     id="rect4" />
+  <text
+     x="368"
+     y="95"
+     text-anchor="middle"
+     fill="#10b981"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="15px"
+     font-weight="700"
+     id="text4">Hostapd (AIDL 适配层)</text>
+  <text
+     x="368"
+     y="117"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="11px"
+     id="text5">addAccessPoint() / removeAccessPoint()</text>
+  <!-- arrow: Hostapd → hostapd_add_iface -->
+  <line
+     x1="368"
+     y1="130"
+     x2="368"
+     y2="165"
+     stroke="#10b981"
+     stroke-width="2"
+     marker-end="url(#arrow-green)"
+     id="line5" />
+  <text
+     x="374"
+     y="145"
+     fill="#10b981"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="11px"
+     id="text6">hostapd_add_iface()</text>
+  <!-- ===== hostapd_add_iface 桥接 ===== -->
+  <rect
+     x="233"
+     y="168"
+     width="270"
+     height="36"
+     rx="6"
+     ry="6"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1.5"
+     id="rect6" />
+  <text
+     x="368"
+     y="191"
+     text-anchor="middle"
+     fill="#f97316"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="13px"
+     font-weight="700"
+     id="text7">hostapd_add_iface()</text>
+  <!-- arrow: hostapd_add_iface → hostapd_iface -->
+  <line
+     x1="368"
+     y1="204"
+     x2="368"
+     y2="240"
+     stroke="#10b981"
+     stroke-width="2"
+     marker-end="url(#arrow-green)"
+     id="line7" />
+  <!-- ===== hostapd_iface ===== -->
+  <rect
+     x="68"
+     y="243"
+     width="600"
+     height="150"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="2"
+     id="rect7" />
+  <text
+     x="368"
+     y="268"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="15px"
+     font-weight="700"
+     id="text8">hostapd_iface（接口管理）</text>
+  <text
+     x="368"
+     y="288"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="11px"
+     id="text9">state / phy / drv_flags / freq / num_bss</text>
+  <!-- hostapd_iface 子模块 -->
+  <rect
+     x="88"
+     y="300"
+     width="160"
+     height="30"
+     rx="4"
+     ry="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect9" />
+  <text
+     x="168"
+     y="320"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="11px"
+     id="text10">hw_features[]</text>
+  <rect
+     x="268"
+     y="300"
+     width="200"
+     height="30"
+     rx="4"
+     ry="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect10" />
+  <text
+     x="368"
+     y="320"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="11px"
+     id="text11">bss[] (hostapd_data)</text>
+  <rect
+     x="488"
+     y="300"
+     width="160"
+     height="30"
+     rx="4"
+     ry="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect11" />
+  <text
+     x="568"
+     y="320"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="11px"
+     id="text12">conf (hostapd_config)</text>
+  <rect
+     x="88"
+     y="340"
+     width="250"
+     height="30"
+     rx="4"
+     ry="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect12" />
+  <text
+     x="213"
+     y="360"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="11px"
+     id="text13">chans_surveyed / lowest_nf (ACS)</text>
+  <rect
+     x="358"
+     y="340"
+     width="290"
+     height="30"
+     rx="4"
+     ry="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect13" />
+  <text
+     x="503"
+     y="360"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="11px"
+     id="text14">dfs_cac_ms / dfs_cac_start (DFS)</text>
+  <!-- arrow: hostapd_iface.bss[] → hostapd_data -->
+  <line
+     x1="368"
+     y1="393"
+     x2="368"
+     y2="463"
+     stroke="#10b981"
+     stroke-width="2"
+     marker-end="url(#arrow-green)"
+     id="line14" />
+  <text
+     x="376"
+     y="440"
+     fill="#10b981"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="11px"
+     id="text15">num_bss 个实例</text>
+  <!-- ===== hostapd_data ===== -->
+  <rect
+     x="118"
+     y="466"
+     width="500"
+     height="85"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="2"
+     id="rect15" />
+  <text
+     x="368"
+     y="491"
+     text-anchor="middle"
+     fill="#10b981"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="15px"
+     font-weight="700"
+     id="text16">hostapd_data（BSS 实例）</text>
+  <text
+     x="368"
+     y="511"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="11px"
+     id="text17">own_addr / started / driver / drv_priv</text>
+  <rect
+     x="138"
+     y="521"
+     width="210"
+     height="22"
+     rx="3"
+     ry="3"
+     fill="#052e16"
+     stroke="#059669"
+     stroke-width="0.5"
+     id="rect17" />
+  <text
+     x="243"
+     y="536"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="10px"
+     id="text18">conf → hostapd_bss_config</text>
+  <rect
+     x="358"
+     y="521"
+     width="240"
+     height="22"
+     rx="3"
+     ry="3"
+     fill="#052e16"
+     stroke="#059669"
+     stroke-width="0.5"
+     id="rect18" />
+  <text
+     x="478"
+     y="536"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="10px"
+     id="text19">wpa_auth / eapol_auth / msg_ctx</text>
+  <!-- arrow: hostapd_data → hostapd_bss_config -->
+  <line
+     x1="243"
+     y1="551"
+     x2="242.38245"
+     y2="576.24701"
+     stroke="#64748b"
+     stroke-width="1.5"
+     marker-end="url(#arrow-gray)"
+     id="line19" />
+  <text
+     x="210"
+     y="564"
+     fill="#64748b"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="10px"
+     id="text20">指向</text>
+  <!-- ===== hostapd_bss_config ===== -->
+  <rect
+     x="72"
+     y="579"
+     width="560"
+     height="70"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect20" />
+  <text
+     x="352"
+     y="604"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="14px"
+     font-weight="700"
+     id="text21">hostapd_bss_config（BSS 配置）</text>
+  <rect
+     x="87"
+     y="614"
+     width="120"
+     height="22"
+     rx="3"
+     ry="3"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="0.5"
+     id="rect21" />
+  <text
+     x="147"
+     y="629"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="9px"
+     id="text22">ssid / bssid</text>
+  <rect
+     x="222"
+     y="614"
+     width="120"
+     height="22"
+     rx="3"
+     ry="3"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="0.5"
+     id="rect22" />
+  <text
+     x="282"
+     y="629"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="9px"
+     id="text23">wpa / wpa_key_mgmt</text>
+  <rect
+     x="357"
+     y="614"
+     width="135"
+     height="22"
+     rx="3"
+     ry="3"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="0.5"
+     id="rect23" />
+  <text
+     x="424"
+     y="629"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="9px"
+     id="text24">auth_algs / ieee802_1x</text>
+  <rect
+     x="507"
+     y="614"
+     width="110"
+     height="22"
+     rx="3"
+     ry="3"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="0.5"
+     id="rect24" />
+  <text
+     x="562"
+     y="629"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="9px"
+     id="text25">bridge / isolate</text>
+  <!-- ===== driver_ops 侧边栏 ===== -->
+  <rect
+     x="678"
+     y="300"
+     width="170"
+     height="180"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect25" />
+  <text
+     x="763"
+     y="325"
+     text-anchor="middle"
+     fill="#f97316"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="14px"
+     font-weight="700"
+     id="text26">driver_ops</text>
+  <text
+     x="763"
+     y="345"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="10px"
+     id="text27">驱动操作接口</text>
+  <rect
+     x="693"
+     y="358"
+     width="140"
+     height="22"
+     rx="3"
+     ry="3"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="0.5"
+     id="rect27" />
+  <text
+     x="763"
+     y="374"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="10px"
+     id="text28">set_ap()</text>
+  <rect
+     x="693"
+     y="385"
+     width="140"
+     height="22"
+     rx="3"
+     ry="3"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="0.5"
+     id="rect28" />
+  <text
+     x="763"
+     y="401"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="10px"
+     id="text29">do_acs()</text>
+  <rect
+     x="693"
+     y="412"
+     width="140"
+     height="22"
+     rx="3"
+     ry="3"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="0.5"
+     id="rect29" />
+  <text
+     x="763"
+     y="428"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="10px"
+     id="text30">sta_deauth()</text>
+  <rect
+     x="693"
+     y="439"
+     width="140"
+     height="22"
+     rx="3"
+     ry="3"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="0.5"
+     id="rect30" />
+  <text
+     x="763"
+     y="455"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="10px"
+     id="text31">send_mlme()</text>
+  <!-- ===== sta_info 侧边栏 ===== -->
+  <rect
+     x="676"
+     y="500"
+     width="171.44922"
+     height="110"
+     rx="6.8579688"
+     ry="8"
+     fill="#0f172a"
+     stroke="#7c3aed"
+     stroke-width="1.38882"
+     id="rect31" />
+  <text
+     x="761"
+     y="525"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="14px"
+     font-weight="700"
+     id="text32">sta_info</text>
+  <text
+     x="761"
+     y="545"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="10px"
+     id="text33">STA 信息链表</text>
+  <rect
+     x="683"
+     y="558"
+     width="156.99451"
+     height="18"
+     rx="3.3641682"
+     ry="3"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="0.529478"
+     id="rect33" />
+  <text
+     x="761"
+     y="571"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="9px"
+     id="text34">addr / aid / flags / ht_cap</text>
+  <rect
+     x="691"
+     y="580"
+     width="140"
+     height="18"
+     rx="3"
+     ry="3"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="0.5"
+     id="rect34" />
+  <text
+     x="761"
+     y="593"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="9px"
+     id="text35">wpa_sm / eapol_sm (安全)</text>
+  <!-- arrows: hostapd_data ↔ driver_ops / sta_info -->
+  <line
+     x1="618"
+     y1="470"
+     x2="675.19122"
+     y2="443.02289"
+     stroke="#64748b"
+     stroke-width="1.5"
+     stroke-dasharray="4, 2"
+     marker-end="url(#arrow-gray)"
+     id="line35" />
+  <line
+     x1="618"
+     y1="480"
+     x2="675.87103"
+     y2="510.28638"
+     stroke="#64748b"
+     stroke-width="1.5"
+     stroke-dasharray="4, 2"
+     marker-end="url(#arrow-gray)"
+     id="line36" />
+  <text
+     x="636"
+     y="488"
+     fill="#64748b"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="9px"
+     id="text37">持有</text>
+  <text
+     x="622.39154"
+     y="454.54065"
+     fill="#64748b"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="9px"
+     id="text37-2">调用</text>
+  <!-- legend -->
+  <rect
+     x="6"
+     y="657"
+     width="669.55444"
+     height="27.084171"
+     rx="2.9757974"
+     ry="2.7084172"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.70974"
+     id="rect37" />
+  <rect
+     x="26"
+     y="662"
+     width="12"
+     height="12"
+     rx="2"
+     ry="2"
+     fill="#10b981"
+     id="rect38" />
+  <text
+     x="44"
+     y="673"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="11px"
+     id="text38">数据/调用流</text>
+  <rect
+     x="136"
+     y="662"
+     width="12"
+     height="12"
+     rx="2"
+     ry="2"
+     fill="#64748b"
+     id="rect39" />
+  <text
+     x="154"
+     y="673"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="11px"
+     id="text39">关联/指向</text>
+  <rect
+     x="246"
+     y="662"
+     width="12"
+     height="12"
+     rx="2"
+     ry="2"
+     fill="#3b82f6"
+     id="rect40" />
+  <text
+     x="264"
+     y="673"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="11px"
+     id="text40">容器/接口</text>
+  <rect
+     x="356"
+     y="662"
+     width="12"
+     height="12"
+     rx="2"
+     ry="2"
+     fill="#10b981"
+     id="rect41" />
+  <text
+     x="374"
+     y="673"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="11px"
+     id="text41">BSS 实例</text>
+  <rect
+     x="461"
+     y="662"
+     width="12"
+     height="12"
+     rx="2"
+     ry="2"
+     fill="#a855f7"
+     id="rect42" />
+  <text
+     x="479"
+     y="673"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="11px"
+     id="text42">配置</text>
+  <rect
+     x="556"
+     y="662"
+     width="12"
+     height="12"
+     rx="2"
+     ry="2"
+     fill="#f97316"
+     id="rect43" />
+  <text
+     x="574"
+     y="673"
+     fill="#e2e8f0"
+     font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+     font-size="11px"
+     id="text43">驱动接口/桥接</text>
+</svg>

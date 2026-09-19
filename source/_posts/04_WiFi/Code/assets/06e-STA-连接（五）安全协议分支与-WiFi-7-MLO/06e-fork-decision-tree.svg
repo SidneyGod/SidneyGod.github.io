@@ -1,0 +1,1739 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1375 1355"
+   width="1375"
+   height="1355"
+   version="1.1"
+   id="svg135"
+   sodipodi:docname="06e-fork-decision-tree.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview135"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.80664207"
+     inkscape:cx="688.03751"
+     inkscape:cy="379.97027"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg135" />
+  <title
+     id="title1">安全协议分叉决策树</title>
+  <!-- validate: skip-gap-consistency skip-orphan-boxes -->
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  .title { font-size: 19px; font-weight: 700; fill: #22d3ee; letter-spacing: 0.03em; }
+  .node-title { font-size: 13px; font-weight: 700; fill: #e2e8f0; }
+  .node-label { font-size: 11px; fill: #94a3b8; }
+  .node-code { font-size: 10px; fill: #64748b; font-style: italic; }
+  .edge-label { font-size: 10px; fill: #94a3b8; }
+  .edge-label-yes { font-size: 10px; fill: #10b981; font-weight: 700; }
+  .edge-label-no { font-size: 10px; fill: #ef4444; font-weight: 700; }
+  .small-label { font-size: 9px; fill: #475569; }
+</style>
+  <defs
+     id="defs11">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect145"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="1549.1934"
+       y2="1549.1934"
+       gradientTransform="scale(0.88755872,0.87464877)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="title-grad"
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="0">
+      <stop
+         offset="0%"
+         stop-color="#22d3ee"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#a855f7"
+         id="stop4" />
+    </linearGradient>
+    <marker
+       id="arr-purple"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto"
+       viewBox="0 0 8 6"
+       preserveAspectRatio="xMidYMid">
+      <polygon
+         points="8,3 0,6 0,0 "
+         fill="#a855f7"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arr-orange"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="8,3 0,6 0,0 "
+         fill="#f97316"
+         id="polygon5" />
+    </marker>
+    <marker
+       id="arr-blue"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="8,3 0,6 0,0 "
+         fill="#3b82f6"
+         id="polygon6" />
+    </marker>
+    <marker
+       id="arr-green"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="8,3 0,6 0,0 "
+         fill="#10b981"
+         id="polygon7" />
+    </marker>
+    <marker
+       id="arr-gold"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="8,3 0,6 0,0 "
+         fill="#eab308"
+         id="polygon8" />
+    </marker>
+    <marker
+       id="arr-cyan"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="8,3 0,6 0,0 "
+         fill="#22d3ee"
+         id="polygon9" />
+    </marker>
+    <marker
+       id="arr-gray"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="8,3 0,6 0,0 "
+         fill="#64748b"
+         id="polygon10" />
+    </marker>
+    <filter
+       id="glow-purple"
+       x="-0.30000001"
+       y="-0.30000001"
+       width="1.6"
+       height="1.6">
+      <feGaussianBlur
+         stdDeviation="3"
+         result="blur"
+         id="feGaussianBlur10" />
+      <feMerge
+         id="feMerge11">
+        <feMergeNode
+           in="blur"
+           id="feMergeNode10" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode11" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect
+     width="1375"
+     height="1355"
+     fill="url(#bg)"
+     id="rect11"
+     style="fill:url(#bg);stroke-width:0.88108"
+     x="0"
+     y="0" />
+  <!-- TITLE -->
+  <text
+     x="750"
+     y="50"
+     text-anchor="middle"
+     class="title"
+     fill="url(#title-grad)"
+     id="text11">sme_send_authentication() 安全协议分叉决策树</text>
+  <line
+     x1="250"
+     y1="68"
+     x2="1250"
+     y2="68"
+     stroke="#334155"
+     stroke-width="1"
+     id="line11" />
+  <!-- Entry node -->
+  <rect
+     x="110"
+     y="88"
+     width="340"
+     height="53"
+     rx="6"
+     ry="6"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1.5"
+     id="rect12" />
+  <text
+     x="280"
+     y="103"
+     text-anchor="middle"
+     class="node-title"
+     id="text12">sme_send_authentication()</text>
+  <text
+     x="280"
+     y="119"
+     text-anchor="middle"
+     class="node-code"
+     id="text13"
+     style="font-size:10.6667px">wpa_supplicant/sme.c:551</text>
+  <text
+     x="280"
+     y="135"
+     text-anchor="middle"
+     class="node-label"
+     id="text14">所有 802.11 认证方式的代码级分岔口</text>
+  <!-- MLO detection -->
+  <polygon
+     points="400,215 280,253 160,215 280,177 "
+     fill="#1c1917"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="polygon14"
+     transform="matrix(1.2927722,0,0,0.90369336,-83.440074,17.046275)" />
+  <text
+     x="280"
+     y="201"
+     text-anchor="middle"
+     class="node-title"
+     id="text15">MLO 检测?</text>
+  <text
+     x="280"
+     y="215"
+     text-anchor="middle"
+     class="node-code"
+     id="text16"
+     style="font-size:10.6667px">drv_flags2 &amp; MLO &amp;&amp; Basic ML Element</text>
+  <line
+     x1="280"
+     y1="140.24702"
+     x2="280"
+     y2="175"
+     stroke="#a855f7"
+     stroke-width="1.3182"
+     fill="none"
+     marker-end="url(#arr-purple)"
+     id="line16" />
+  <!-- MLO YES -->
+  <g
+     id="g135"
+     transform="translate(104)">
+    <rect
+       x="420"
+       y="193"
+       width="294"
+       height="44"
+       rx="6"
+       ry="6"
+       fill="#1c1917"
+       stroke="#eab308"
+       stroke-width="1.5"
+       id="rect16" />
+    <text
+       x="550"
+       y="208"
+       text-anchor="middle"
+       class="node-title"
+       id="text17">params.mld = true</text>
+    <text
+       x="558"
+       y="224"
+       text-anchor="middle"
+       class="node-code"
+       id="text18"
+       style="font-size:10.6667px">params.mld_link_id, ap_mld_addr, MLO 标记</text>
+  </g>
+  <text
+     x="467.82251"
+     y="194.02104"
+     text-anchor="middle"
+     class="edge-label-yes"
+     id="text19"
+     style="font-size:10.6667px">Yes</text>
+  <line
+     x1="430.00916"
+     y1="211"
+     x2="520"
+     y2="211"
+     stroke="#eab308"
+     stroke-width="1.29897"
+     fill="none"
+     marker-end="url(#arr-gold)"
+     id="line19" />
+  <polyline
+     points="550,237 550,260 280,260 280,250"
+     stroke="#eab308"
+     stroke-width="1.5"
+     stroke-dasharray="4, 3"
+     fill="none"
+     marker-end="url(#arr-gold)"
+     id="polyline19"
+     transform="matrix(0.99999999,0,0,1.0318231,1.3959658e-7,-8.2739966)" />
+  <!-- Default OPEN -->
+  <rect
+     x="110"
+     y="295"
+     width="340"
+     height="40.978958"
+     rx="6"
+     ry="8.1957912"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.75312"
+     id="rect19" />
+  <text
+     x="280"
+     y="307"
+     text-anchor="middle"
+     class="node-title"
+     id="text20">params.auth_alg = WPA_AUTH_ALG_OPEN</text>
+  <text
+     x="280"
+     y="325"
+     text-anchor="middle"
+     class="node-code"
+     id="text21"
+     style="font-size:10.6667px">默认值: Algorithm Number = 0 (Open System)</text>
+  <text
+     x="220"
+     y="268"
+     text-anchor="middle"
+     class="edge-label-no"
+     id="text22"
+     style="font-size:10.6667px">No/Continue</text>
+  <line
+     x1="280"
+     y1="247.87648"
+     x2="280"
+     y2="295"
+     stroke="#ef4444"
+     stroke-width="1.58886"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line22" />
+  <!-- LEAP decision (expanded with ssid->leap check) -->
+  <polygon
+     points="280,427 180,395 280,363 380,395 "
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="polygon22" />
+  <text
+     x="280"
+     y="386"
+     text-anchor="middle"
+     class="node-title"
+     id="text23">LEAP?</text>
+  <text
+     x="280"
+     y="400"
+     text-anchor="middle"
+     class="node-code"
+     id="text24">key_mgmt &amp; IEEE8021X_NO_WPA</text>
+  <line
+     x1="280"
+     y1="333.78317"
+     x2="280"
+     y2="363"
+     stroke="#3b82f6"
+     stroke-width="1.31527"
+     fill="none"
+     marker-end="url(#arr-blue)"
+     id="line24" />
+  <!-- LEAP YES: ssid->leap sub-branch -->
+  <polygon
+     points="530,377 630,405 530,433 430,405 "
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.2"
+     id="polygon24"
+     transform="matrix(0.73284538,0,0,1,139.76212,-10.978957)" />
+  <text
+     x="528.40515"
+     y="397"
+     text-anchor="middle"
+     class="node-code"
+     id="text25">ssid-&gt;leap?</text>
+  <text
+     x="400"
+     y="388"
+     text-anchor="middle"
+     class="edge-label-yes"
+     id="text26">Yes</text>
+  <line
+     x1="380"
+     y1="395"
+     x2="454.86734"
+     y2="395"
+     stroke="#f97316"
+     stroke-width="1.23749"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line26" />
+  <!-- non_leap == 0: = (replace) -->
+  <g
+     id="g136"
+     transform="translate(31.990851,-5.8554437)">
+    <rect
+       x="660"
+       y="361.55719"
+       width="200"
+       height="40.442818"
+       rx="6"
+       ry="8.6663179"
+       fill="#1c1917"
+       stroke="#f97316"
+       stroke-width="1.44219"
+       id="rect26" />
+    <text
+       x="760.73193"
+       y="376.21683"
+       text-anchor="middle"
+       class="node-code"
+       id="text27"
+       style="font-size:10.6667px">non_leap == 0: = (replace)</text>
+    <text
+       x="758.53613"
+       y="393.14456"
+       text-anchor="middle"
+       class="small-label"
+       id="text28"
+       style="font-size:10.6667px">auth_alg = WPA_AUTH_ALG_LEAP</text>
+  </g>
+  <text
+     x="644.42175"
+     y="377.05124"
+     text-anchor="middle"
+     class="edge-label-no"
+     id="text29"
+     style="font-size:10.6667px">=0</text>
+  <line
+     x1="600"
+     y1="393"
+     x2="690"
+     y2="376"
+     stroke="#f97316"
+     stroke-width="1"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line29" />
+  <!-- non_leap != 0: |= (OR) -->
+  <g
+     id="g137"
+     transform="translate(32.936871,-10.247027)">
+    <rect
+       x="660"
+       y="412"
+       width="200"
+       height="37.515095"
+       rx="6"
+       ry="8.038949"
+       fill="#1c1917"
+       stroke="#f97316"
+       stroke-width="1.38901"
+       id="rect29" />
+    <text
+       x="760"
+       y="425"
+       text-anchor="middle"
+       class="node-code"
+       id="text30"
+       style="font-size:10.6667px">non_leap != 0: |= (OR)</text>
+    <text
+       x="760"
+       y="441"
+       text-anchor="middle"
+       class="small-label"
+       id="text31"
+       style="font-size:10.6667px">auth_alg |= WPA_AUTH_ALG_LEAP</text>
+  </g>
+  <text
+     x="645"
+     y="418"
+     text-anchor="middle"
+     class="edge-label-yes"
+     id="text32"
+     style="font-size:10.6667px">!=0</text>
+  <line
+     x1="602"
+     y1="395"
+     x2="692"
+     y2="416"
+     stroke="#f97316"
+     stroke-width="1"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line32" />
+  <!-- LEAP NO -->
+  <polygon
+     points="280,527 180,495 280,463 380,495 "
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="polygon32" />
+  <text
+     x="280"
+     y="490"
+     text-anchor="middle"
+     class="node-title"
+     id="text33">用户覆盖?</text>
+  <text
+     x="280"
+     y="504"
+     text-anchor="middle"
+     class="node-code"
+     id="text34">ssid-&gt;auth_alg != 0</text>
+  <text
+     x="220"
+     y="448"
+     text-anchor="middle"
+     class="edge-label-no"
+     id="text35">No</text>
+  <line
+     x1="280"
+     y1="427"
+     x2="280"
+     y2="463"
+     stroke="#f97316"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line35" />
+  <!-- User override YES -->
+  <g
+     id="g138"
+     transform="translate(38)">
+    <rect
+       x="420"
+       y="477.07227"
+       width="220"
+       height="37.319305"
+       rx="6"
+       ry="7.463861"
+       fill="#1c1917"
+       stroke="#f97316"
+       stroke-width="1.673"
+       id="rect35" />
+    <text
+       x="530"
+       y="492"
+       text-anchor="middle"
+       class="node-title"
+       id="text36">auth_alg = ssid-&gt;auth_alg</text>
+    <text
+       x="530"
+       y="508"
+       text-anchor="middle"
+       class="node-code"
+       id="text37"
+       style="font-size:10.6667px">用户显式覆盖, 跳过后续检测</text>
+  </g>
+  <text
+     x="400"
+     y="485"
+     text-anchor="middle"
+     class="edge-label-yes"
+     id="text38">Yes</text>
+  <line
+     x1="380"
+     y1="495"
+     x2="456.08417"
+     y2="495"
+     stroke="#f97316"
+     stroke-width="1.19439"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line38" />
+  <polyline
+     points="530,510 530,530 280,530 280,525"
+     stroke="#f97316"
+     stroke-width="1.5"
+     stroke-dasharray="4, 3"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="polyline38"
+     transform="matrix(1,0,0,0.81701738,0,96.980787)" />
+  <!-- SAE decision -->
+  <polygon
+     points="280,626 180,590 280,554 380,590 "
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="2"
+     id="polygon38" />
+  <text
+     x="280"
+     y="583"
+     text-anchor="middle"
+     class="node-title"
+     id="text39">SAE?</text>
+  <text
+     x="280"
+     y="599"
+     text-anchor="middle"
+     class="node-code"
+     id="text40">wpa_key_mgmt_sae(key_mgmt)</text>
+  <text
+     x="280"
+     y="613"
+     text-anchor="middle"
+     class="small-label"
+     id="text41">+ AP RSNE 含 SAE AKM</text>
+  <text
+     x="220"
+     y="540"
+     text-anchor="middle"
+     class="edge-label-no"
+     id="text42">No</text>
+  <line
+     x1="280"
+     y1="527"
+     x2="280"
+     y2="554"
+     stroke="#f97316"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line42" />
+  <!-- SAE result -->
+  <g
+     id="g141"
+     transform="translate(48.307411,-2.9277219)">
+    <rect
+       x="410"
+       y="572"
+       width="282.49405"
+       height="40.391582"
+       rx="6.4693298"
+       ry="6.7319303"
+       fill="#1c1917"
+       stroke="#ea580c"
+       stroke-width="2.19978"
+       id="rect42" />
+    <text
+       x="550"
+       y="585"
+       text-anchor="middle"
+       class="node-title"
+       id="text43">params.auth_alg = WPA_AUTH_ALG_SAE</text>
+    <text
+       x="530"
+       y="603"
+       text-anchor="middle"
+       class="node-code"
+       id="text44"
+       style="font-size:10.6667px">line 666: Algorithm Number = 3 (SAE)</text>
+  </g>
+  <text
+     x="400"
+     y="573"
+     text-anchor="middle"
+     class="edge-label-yes"
+     id="text45">Yes (Auth 阶段分叉)</text>
+  <line
+     x1="380"
+     y1="590"
+     x2="456.08417"
+     y2="590"
+     stroke="#ea580c"
+     stroke-width="1.19439"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line45" />
+  <!-- PMKSA cache check (moved here, after SAE, before FT) -->
+  <g
+     id="g140"
+     transform="translate(93.6871,-1.4638607)">
+    <polygon
+       points="910,590 800,622 690,590 800,558 "
+       fill="#1c1917"
+       stroke="#f97316"
+       stroke-width="1.5"
+       id="polygon45" />
+    <text
+       x="800"
+       y="585"
+       text-anchor="middle"
+       class="node-title"
+       id="text46">PMKSA 缓存?</text>
+    <text
+       x="800"
+       y="595"
+       text-anchor="middle"
+       class="node-code"
+       id="text47"
+       style="font-size:10.6667px">pmksa_cache_set_current()</text>
+  </g>
+  <text
+     x="913.86548"
+     y="634.64777"
+     text-anchor="middle"
+     class="edge-label-no"
+     id="text48">No</text>
+  <line
+     x1="741.49127"
+     y1="587.80426"
+     x2="781.49127"
+     y2="587.80426"
+     stroke="#f97316"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line48" />
+  <!-- PMKSA YES: downgrade -->
+  <g
+     id="g139"
+     transform="translate(100.27447,-26.349497)">
+    <rect
+       x="880"
+       y="545"
+       width="240"
+       height="38.783165"
+       rx="6"
+       ry="7.7566333"
+       fill="#1c1917"
+       stroke="#f97316"
+       stroke-width="1.7055"
+       id="rect48" />
+    <text
+       x="1000"
+       y="557"
+       text-anchor="middle"
+       class="node-title"
+       id="text49">auth_alg 降级 = OPEN</text>
+    <text
+       x="1000"
+       y="573"
+       text-anchor="middle"
+       class="node-code"
+       id="text50"
+       style="font-size:10.6667px">复用缓存 PMK, 跳过 Dragonfly</text>
+  </g>
+  <text
+     x="926.47302"
+     y="539.50598"
+     text-anchor="middle"
+     class="edge-label-yes"
+     id="text51">Yes</text>
+  <line
+     x1="892.32843"
+     y1="556.57819"
+     x2="977.32843"
+     y2="538.57819"
+     stroke="#10b981"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-green)"
+     id="line51" />
+  <!-- SAE Commit (PMKSA NO path) -->
+  <line
+     x1="893.68707"
+     y1="622"
+     x2="893.68707"
+     y2="646"
+     stroke="#7c3aed"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-purple)"
+     id="line54" />
+  <!-- SAE Confirm -->
+  <g
+     id="g143"
+     transform="translate(90.054221,0.964894)">
+    <rect
+       x="670"
+       y="752"
+       width="284"
+       height="46.351059"
+       rx="6"
+       ry="7.7251768"
+       fill="#1e1b4b"
+       stroke="#7c3aed"
+       stroke-width="1.70204"
+       id="rect54" />
+    <text
+       x="800"
+       y="770"
+       text-anchor="middle"
+       class="node-title"
+       id="text55">sme_auth_build_sae_confirm()</text>
+    <text
+       x="804"
+       y="788"
+       text-anchor="middle"
+       class="node-code"
+       id="text56"
+       style="font-size:10.6667px">HMAC(KCK, 双方 Commit 数据) → Confirm 帧</text>
+  </g>
+  <line
+     x1="906"
+     y1="729.1936"
+     x2="906"
+     y2="752"
+     stroke="#7c3aed"
+     stroke-width="1"
+     fill="none"
+     marker-end="url(#arr-purple)"
+     id="line56" />
+  <g
+     id="g142"
+     transform="translate(49.039341,-0.73193047)">
+    <rect
+       x="660"
+       y="646"
+       width="398"
+       height="83"
+       rx="6"
+       ry="6"
+       fill="#1e1b4b"
+       stroke="#7c3aed"
+       stroke-width="1.5"
+       id="rect51" />
+    <text
+       x="800"
+       y="660"
+       text-anchor="middle"
+       class="node-title"
+       id="text52">sme_auth_build_sae_commit()</text>
+    <text
+       x="800"
+       y="682"
+       text-anchor="middle"
+       class="node-code"
+       id="text53"
+       style="font-size:10.6667px">PWE 计算 (H2E/HnP) → Scalar + Element</text>
+    <text
+       x="864"
+       y="704"
+       text-anchor="middle"
+       class="node-code"
+       id="text54"
+       style="font-size:10.6667px">H2E: sae_prepare_commit_pt() | HnP: sae_prepare_commit()</text>
+    <text
+       x="815"
+       y="721"
+       text-anchor="middle"
+       class="node-code"
+       id="text57"
+       style="font-size:10.6667px">AP 回复后触发</text>
+  </g>
+  <!-- FT decision (moved below SAE, after PMKSA/Commit/Confirm chain) -->
+  <polygon
+     points="280,732 190,700 280,668 370,700 "
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="polygon57" />
+  <text
+     x="280"
+     y="695"
+     text-anchor="middle"
+     class="node-title"
+     id="text58">FT?</text>
+  <text
+     x="280"
+     y="709"
+     text-anchor="middle"
+     class="node-code"
+     id="text59">IEEE80211R + prev_bssid + ft_used</text>
+  <text
+     x="220"
+     y="640"
+     text-anchor="middle"
+     class="edge-label-no"
+     id="text60">No</text>
+  <line
+     x1="280"
+     y1="626"
+     x2="280"
+     y2="668"
+     stroke="#f97316"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line60" />
+  <!-- FT YES (with overwrite annotation) -->
+  <g
+     id="g144"
+     transform="translate(32.204941,-2.5617566)">
+    <rect
+       x="420"
+       y="685"
+       width="243.56267"
+       height="36"
+       rx="3.6717989"
+       ry="6"
+       fill="#1c1917"
+       stroke="#f97316"
+       stroke-width="1.17342"
+       id="rect60" />
+    <text
+       x="535"
+       y="698"
+       text-anchor="middle"
+       class="node-title"
+       id="text61">auth_alg = WPA_AUTH_ALG_FT</text>
+    <text
+       x="545"
+       y="714"
+       text-anchor="middle"
+       class="node-code"
+       id="text62"
+       style="font-size:10.6667px">FT 可覆盖 SAE 的 auth_alg (sme.c:828)</text>
+  </g>
+  <text
+     x="404.51511"
+     y="692.07227"
+     text-anchor="middle"
+     class="edge-label-yes"
+     id="text63"
+     style="font-size:10.6667px">Yes (覆盖 SAE)</text>
+  <line
+     x1="370"
+     y1="699.40002"
+     x2="450.1098"
+     y2="699.40002"
+     stroke="#f97316"
+     stroke-width="1.22558"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line63" />
+  <polyline
+     points="535,721 535,740 280,740 280,730"
+     stroke="#f97316"
+     stroke-width="1.5"
+     stroke-dasharray="4, 3"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="polyline63" />
+  <!-- FILS decision -->
+  <polygon
+     points="280,817 190,785 280,753 370,785 "
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="polygon63" />
+  <text
+     x="280"
+     y="778"
+     text-anchor="middle"
+     class="node-title"
+     id="text64">FILS?</text>
+  <text
+     x="280"
+     y="792"
+     text-anchor="middle"
+     class="node-code"
+     id="text65">wpa_key_mgmt_fils()</text>
+  <text
+     x="220"
+     y="745"
+     text-anchor="middle"
+     class="edge-label-no"
+     id="text66">No</text>
+  <line
+     x1="280"
+     y1="732"
+     x2="280"
+     y2="753"
+     stroke="#f97316"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line66" />
+  <!-- FILS YES (height increased to 50px) -->
+  <g
+     id="g145"
+     transform="translate(62,-8)">
+    <rect
+       x="390"
+       y="767"
+       width="260"
+       height="50"
+       rx="6"
+       ry="6"
+       fill="#1c1917"
+       stroke="#f97316"
+       stroke-width="1.5"
+       id="rect66" />
+    <text
+       x="520"
+       y="780"
+       text-anchor="middle"
+       class="node-title"
+       id="text67">auth_alg = FILS / FILS_SK_PFS</text>
+    <text
+       x="520"
+       y="796"
+       text-anchor="middle"
+       class="node-code"
+       id="text68"
+       style="font-size:10.6667px">+DH → FILS_SK_PFS | -DH → FILS</text>
+    <text
+       x="520"
+       y="810"
+       text-anchor="middle"
+       class="node-code"
+       id="text69"
+       style="font-size:10.6667px">only if auth_alg == OPEN (sme.c:1076)</text>
+  </g>
+  <text
+     x="395"
+     y="796"
+     text-anchor="middle"
+     class="edge-label-yes"
+     id="text70"
+     style="font-size:10.6667px">Yes</text>
+  <line
+     x1="370"
+     y1="785.40002"
+     x2="451.94876"
+     y2="785.40002"
+     stroke="#f97316"
+     stroke-width="1.43133"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line70" />
+  <polyline
+     points="520,817 520,840 280,840 280,815"
+     stroke="#f97316"
+     stroke-width="1.5"
+     stroke-dasharray="4, 3"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="polyline70"
+     transform="matrix(1.0137237,0,0,0.72186642,-3.842635,228.87466)" />
+  <!-- Dispatch -->
+  <rect
+     x="120"
+     y="855"
+     width="320"
+     height="30"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#22d3ee"
+     stroke-width="1.5"
+     id="rect70" />
+  <text
+     x="280"
+     y="867"
+     text-anchor="middle"
+     class="node-title"
+     id="text71">wpa_drv_authenticate()</text>
+  <text
+     x="280"
+     y="881"
+     text-anchor="middle"
+     class="node-code"
+     id="text72">下发最终 auth_alg + auth_data 到驱动</text>
+  <line
+     x1="280"
+     y1="817"
+     x2="280"
+     y2="855"
+     stroke="#22d3ee"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-cyan)"
+     id="line72" />
+  <!-- SAE Confirm → dispatch connector -->
+  <text
+     x="648.95245"
+     y="840.9248"
+     text-anchor="middle"
+     class="node-code"
+     id="text73"
+     style="font-size:10.6667px">SAE result merges into dispatch</text>
+  <!-- Leaf nodes -->
+  <text
+     x="142"
+     y="922"
+     text-anchor="middle"
+     class="node-title"
+     id="text74">Auth 完成后, key_mgmt 决定后续路径:</text>
+  <!-- Open -->
+  <g
+     id="g146"
+     transform="translate(8)">
+    <rect
+       x="0"
+       y="945"
+       width="230"
+       height="90"
+       rx="6"
+       ry="6"
+       fill="#052e16"
+       stroke="#10b981"
+       stroke-width="1.5"
+       id="rect74" />
+    <text
+       x="115"
+       y="959"
+       text-anchor="middle"
+       class="node-title"
+       id="text75">Open 网络</text>
+    <text
+       x="115"
+       y="978"
+       text-anchor="middle"
+       class="node-code"
+       id="text76"
+       style="font-size:10.6667px">key_mgmt = NONE</text>
+    <text
+       x="115"
+       y="993"
+       text-anchor="middle"
+       class="node-label"
+       id="text77"
+       style="font-size:10.6667px">Auth (Open) → Assoc</text>
+    <text
+       x="115"
+       y="1008"
+       text-anchor="middle"
+       class="node-label"
+       id="text78"
+       style="font-size:10.6667px">→ WPA_COMPLETED</text>
+    <text
+       x="115"
+       y="1023"
+       text-anchor="middle"
+       class="small-label"
+       id="text79"
+       style="font-size:10.6667px">(无加密, 跳过四次握手)</text>
+  </g>
+  <!-- OWE -->
+  <rect
+     x="265"
+     y="945"
+     width="230"
+     height="90"
+     rx="6"
+     ry="6"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect79" />
+  <text
+     x="380"
+     y="957"
+     text-anchor="middle"
+     class="node-title"
+     id="text80">OWE</text>
+  <text
+     x="380"
+     y="978"
+     text-anchor="middle"
+     class="node-code"
+     id="text81"
+     style="font-size:10.6667px">key_mgmt = OWE</text>
+  <text
+     x="380"
+     y="993"
+     text-anchor="middle"
+     class="node-label"
+     id="text82"
+     style="font-size:10.6667px">Auth (Open) → Assoc (+DH IE)</text>
+  <text
+     x="380"
+     y="1008"
+     text-anchor="middle"
+     class="node-label"
+     id="text83"
+     style="font-size:10.6667px">→ owe_build_assoc_req()</text>
+  <text
+     x="380"
+     y="1023"
+     text-anchor="middle"
+     class="small-label"
+     id="text84"
+     style="font-size:10.6667px">(DH 密钥交换, 四次握手)</text>
+  <!-- WPA2-PSK -->
+  <rect
+     x="545"
+     y="945"
+     width="230"
+     height="90"
+     rx="6"
+     ry="6"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect84" />
+  <text
+     x="660"
+     y="957"
+     text-anchor="middle"
+     class="node-title"
+     id="text85">WPA2-PSK</text>
+  <text
+     x="660"
+     y="976"
+     text-anchor="middle"
+     class="node-code"
+     id="text86"
+     style="font-size:10.6667px">key_mgmt = PSK</text>
+  <text
+     x="660"
+     y="991"
+     text-anchor="middle"
+     class="node-label"
+     id="text87"
+     style="font-size:10.6667px">Auth (Open) → Assoc</text>
+  <text
+     x="660"
+     y="1006"
+     text-anchor="middle"
+     class="node-label"
+     id="text88"
+     style="font-size:10.6667px">→ 四次握手</text>
+  <text
+     x="660"
+     y="1021"
+     text-anchor="middle"
+     class="small-label"
+     id="text89"
+     style="font-size:10.6667px">(PMK = PBKDF2, 本地派生)</text>
+  <!-- SAE leaf -->
+  <rect
+     x="825"
+     y="945"
+     width="230"
+     height="90"
+     rx="6"
+     ry="6"
+     fill="#1e1b4b"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect89" />
+  <text
+     x="940"
+     y="959"
+     text-anchor="middle"
+     class="node-title"
+     id="text90">SAE / WPA3</text>
+  <text
+     x="940"
+     y="978"
+     text-anchor="middle"
+     class="node-code"
+     id="text91"
+     style="font-size:10.6667px">key_mgmt = SAE</text>
+  <text
+     x="940"
+     y="993"
+     text-anchor="middle"
+     class="node-label"
+     id="text92"
+     style="font-size:10.6667px">Dragonfly 4帧 → Assoc</text>
+  <text
+     x="940"
+     y="1008"
+     text-anchor="middle"
+     class="node-label"
+     id="text93"
+     style="font-size:10.6667px">→ 四次握手</text>
+  <text
+     x="940"
+     y="1023"
+     text-anchor="middle"
+     class="small-label"
+     id="text94"
+     style="font-size:10.6667px">(PMK = ECC 在线协商, PFS)</text>
+  <!-- EAP-TLS (dashed cyan border) -->
+  <rect
+     x="1105"
+     y="945"
+     width="230"
+     height="164"
+     rx="6"
+     ry="6"
+     fill="#052e16"
+     stroke="#22d3ee"
+     stroke-width="1.5"
+     stroke-dasharray="6, 3"
+     id="rect94" />
+  <text
+     x="1220"
+     y="959"
+     text-anchor="middle"
+     class="node-title"
+     id="text95">EAP-TLS</text>
+  <text
+     x="1220"
+     y="974"
+     text-anchor="middle"
+     class="node-code"
+     id="text96"
+     style="font-size:10.6667px">key_mgmt = IEEE8021X</text>
+  <text
+     x="1220"
+     y="989"
+     text-anchor="middle"
+     class="node-label"
+     id="text97"
+     style="font-size:10.6667px">Auth (Open) → Assoc</text>
+  <text
+     x="1220"
+     y="1004"
+     text-anchor="middle"
+     class="node-label"
+     id="text98"
+     style="font-size:10.6667px">→ EAPOL 认证 → 四次握手</text>
+  <text
+     x="1220"
+     y="1019"
+     text-anchor="middle"
+     class="small-label"
+     id="text99"
+     style="font-size:10.6667px">(PMK 来自 RADIUS 服务器)</text>
+  <!-- EAP-SIM (dashed amber border) -->
+  <rect
+     x="1105"
+     y="1035"
+     width="230"
+     height="85.693085"
+     rx="6"
+     ry="6.4269814"
+     fill="#052e16"
+     stroke="#eab308"
+     stroke-width="1.55246"
+     stroke-dasharray="6, 3"
+     id="rect99" />
+  <text
+     x="1220"
+     y="1047"
+     text-anchor="middle"
+     class="node-title"
+     id="text100">EAP-SIM</text>
+  <text
+     x="1220"
+     y="1064"
+     text-anchor="middle"
+     class="node-code"
+     id="text101"
+     style="font-size:10.6667px">key_mgmt = IEEE8021X (SIM)</text>
+  <text
+     x="1220"
+     y="1079"
+     text-anchor="middle"
+     class="node-label"
+     id="text102"
+     style="font-size:10.6667px">Auth (Open) → Assoc</text>
+  <text
+     x="1220"
+     y="1094"
+     text-anchor="middle"
+     class="node-label"
+     id="text103"
+     style="font-size:10.6667px">→ EAPOL (GSM triplet) → 四次握手</text>
+  <text
+     x="1220"
+     y="1109"
+     text-anchor="middle"
+     class="small-label"
+     id="text104"
+     style="font-size:10.6667px">(PMK 来自 HLR/AuC via RADIUS)</text>
+  <!-- Dispatch → leaf connectors -->
+  <polyline
+     points="280,885 280,930 115,930 115,945"
+     stroke="#10b981"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-green)"
+     id="polyline104" />
+  <polyline
+     points="280,885 280,930 380,930 380,945"
+     stroke="#10b981"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-green)"
+     id="polyline105" />
+  <polyline
+     points="280,885 280,930 660,930 660,945"
+     stroke="#10b981"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-green)"
+     id="polyline106" />
+  <polyline
+     points="280,885 280,930 1220,930 1220,945"
+     stroke="#10b981"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-green)"
+     id="polyline108" />
+  <line
+     x1="1220"
+     y1="1025"
+     x2="1220"
+     y2="1035"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arr-green)"
+     id="line108" />
+  <!-- SAE Confirm → SAE leaf connector -->
+  <!-- Legend -->
+  <rect
+     x="14.621829"
+     y="1085.1793"
+     width="500"
+     height="235"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect109" />
+  <text
+     x="29.62183"
+     y="1109.1793"
+     class="node-title"
+     fill="#22d3ee"
+     id="text109">图例</text>
+  <rect
+     x="34.62183"
+     y="1130.1793"
+     width="24"
+     height="14"
+     rx="3"
+     ry="3"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1"
+     id="rect110" />
+  <text
+     x="68.621826"
+     y="1141.1793"
+     class="node-label"
+     id="text110">入口 / SAE 分支</text>
+  <rect
+     x="34.62183"
+     y="1155.1793"
+     width="24"
+     height="14"
+     rx="3"
+     ry="3"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect111" />
+  <text
+     x="68.621826"
+     y="1166.1793"
+     class="node-label"
+     id="text111">决策判断 (Diamond)</text>
+  <rect
+     x="34.62183"
+     y="1180.1793"
+     width="24"
+     height="14"
+     rx="3"
+     ry="3"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect112" />
+  <text
+     x="68.621826"
+     y="1191.1793"
+     class="node-label"
+     id="text112">流程步骤</text>
+  <rect
+     x="34.62183"
+     y="1205.1793"
+     width="24"
+     height="14"
+     rx="3"
+     ry="3"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect113" />
+  <text
+     x="68.621826"
+     y="1216.1793"
+     class="node-label"
+     id="text113">协议叶节点 (WPA2/OWE/Open)</text>
+  <rect
+     x="34.62183"
+     y="1230.1793"
+     width="24"
+     height="14"
+     rx="3"
+     ry="3"
+     fill="#1e1b4b"
+     stroke="#a855f7"
+     stroke-width="1"
+     id="rect114" />
+  <text
+     x="68.621826"
+     y="1241.1793"
+     class="node-label"
+     id="text114">SAE/WPA3 叶节点</text>
+  <rect
+     x="34.62183"
+     y="1255.1793"
+     width="24"
+     height="14"
+     rx="3"
+     ry="3"
+     fill="#052e16"
+     stroke="#22d3ee"
+     stroke-width="1"
+     stroke-dasharray="4, 2"
+     id="rect115" />
+  <text
+     x="68.621826"
+     y="1266.1793"
+     class="node-label"
+     id="text115">EAP-TLS 叶节点 (X.509 证书认证)</text>
+  <rect
+     x="34.62183"
+     y="1280.1793"
+     width="24"
+     height="14"
+     rx="3"
+     ry="3"
+     fill="#052e16"
+     stroke="#eab308"
+     stroke-width="1"
+     stroke-dasharray="4, 2"
+     id="rect116" />
+  <text
+     x="68.621826"
+     y="1291.1793"
+     class="node-label"
+     id="text116">EAP-SIM 叶节点 (GSM SIM 卡认证)</text>
+  <rect
+     x="34.62183"
+     y="1303.1793"
+     width="24"
+     height="14"
+     rx="3"
+     ry="3"
+     fill="#1c1917"
+     stroke="#eab308"
+     stroke-width="1"
+     id="rect117" />
+  <text
+     x="68.621826"
+     y="1314.1793"
+     class="node-label"
+     id="text117">MLO 标记</text>
+  <!-- auth_alg enum (correct BIT values) -->
+  <rect
+     x="1138"
+     y="74"
+     width="207"
+     height="310"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect118" />
+  <text
+     x="1150"
+     y="96"
+     class="node-title"
+     fill="#22d3ee"
+     id="text118">auth_alg 枚举 (BIT)</text>
+  <text
+     x="1150"
+     y="118"
+     class="node-code"
+     id="text119"
+     style="font-size:10.6667px">OPEN = BIT(0) = 0x01</text>
+  <text
+     x="1150"
+     y="133"
+     class="node-code"
+     id="text120"
+     style="font-size:10.6667px">SHARED = BIT(1) = 0x02</text>
+  <text
+     x="1150"
+     y="148"
+     class="node-code"
+     id="text121"
+     style="font-size:10.6667px">LEAP = BIT(2) = 0x04</text>
+  <text
+     x="1150"
+     y="163"
+     class="node-code"
+     id="text122"
+     style="font-size:10.6667px">FT = BIT(3) = 0x08</text>
+  <text
+     x="1150"
+     y="178"
+     class="node-code"
+     id="text123"
+     style="font-size:10.6667px">SAE = BIT(4) = 0x10</text>
+  <text
+     x="1150"
+     y="193"
+     class="node-code"
+     id="text124"
+     style="font-size:10.6667px">FILS = BIT(5) = 0x20</text>
+  <text
+     x="1150"
+     y="208"
+     class="node-code"
+     id="text125"
+     style="font-size:10.6667px">FILS_SK_PFS = BIT(6) = 0x40</text>
+  <text
+     x="1150"
+     y="230"
+     class="node-label"
+     id="text126">位掩码设计: 支持 |= (OR) 操作</text>
+  <text
+     x="1150"
+     y="245"
+     class="node-label"
+     id="text127">auth_alg = OPEN (0x01)</text>
+  <text
+     x="1150"
+     y="260"
+     class="node-label"
+     id="text128">→ Open / OWE / WPA2 / EAP</text>
+  <text
+     x="1150"
+     y="275"
+     class="node-label"
+     id="text129">auth_alg = SAE (0x10)</text>
+  <text
+     x="1150"
+     y="290"
+     class="node-label"
+     id="text130">→ WPA3-Personal (line 666)</text>
+  <text
+     x="1150"
+     y="305"
+     class="node-label"
+     id="text131">auth_alg = FT (0x08)</text>
+  <text
+     x="1150"
+     y="320"
+     class="node-label"
+     id="text132">→ Fast Transition (line 828)</text>
+  <text
+     x="1150"
+     y="335"
+     class="node-label"
+     id="text133">auth_alg = FILS (0x20)</text>
+  <text
+     x="1150"
+     y="350"
+     class="node-label"
+     id="text134">→ Fast Initial Link Setup</text>
+  <text
+     x="1150"
+     y="372"
+     class="small-label"
+     id="text135"
+     style="font-size:10.6667px">defs.h: BIT() 宏定义位掩码</text>
+  <path
+     style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#a855f7;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:4, 1;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#arr-purple)"
+     d="m 996.52333,799.26807 0.73193,145.2882"
+     id="path146"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#a855f7;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:4, 1;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#arr-purple)"
+     d="M 802.92772,801.0979 440.62215,873.19305"
+     id="path148"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#a855f7;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#arr-purple)"
+     d="m 440,881.38617 h 489.52518 v 61.59539"
+     id="path149"
+     inkscape:connector-type="orthogonal"
+     inkscape:connector-curvature="0" />
+  <metadata
+     id="metadata149">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>安全协议分叉决策树</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

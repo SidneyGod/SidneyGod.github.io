@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1100 800"
+   version="1.1"
+   id="svg56"
+   sodipodi:docname="05c-mtk-scan-sequence.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview56"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.36625"
+     inkscape:cx="549.67978"
+     inkscape:cy="400"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg56" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrow-blue"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#3b82f6"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arrow-green"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#10b981"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arrow-red"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#ef4444"
+         id="polygon4" />
+    </marker>
+  </defs>
+  <rect
+     width="1100"
+     height="800"
+     fill="url(#bg-grad)"
+     id="rect4" />
+  <text
+     x="550"
+     y="28"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="17"
+     font-weight="700"
+     id="text4">MTK 驱动扫描时序图</text>
+  <text
+     x="550"
+     y="46"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="12"
+     id="text5">Framework → wificond → 内核 → gl → AIS → SCN → 固件 → 返回</text>
+  <rect
+     x="40"
+     y="70"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect5" />
+  <text
+     x="100"
+     y="88"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text6">Framework</text>
+  <text
+     x="100"
+     y="103"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text7">(Java)</text>
+  <line
+     x1="100"
+     y1="110"
+     x2="100"
+     y2="740"
+     stroke="#3b82f6"
+     stroke-width="0.8"
+     stroke-dasharray="4,4"
+     id="line7" />
+  <rect
+     x="40"
+     y="740"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect7" />
+  <text
+     x="100"
+     y="758"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     font-weight="700"
+     id="text8">Framework</text>
+  <text
+     x="100"
+     y="773"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text9">(Java)</text>
+  <rect
+     x="180"
+     y="70"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect9" />
+  <text
+     x="240"
+     y="88"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text10">wificond</text>
+  <text
+     x="240"
+     y="103"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text11">(C++)</text>
+  <line
+     x1="240"
+     y1="110"
+     x2="240"
+     y2="740"
+     stroke="#f97316"
+     stroke-width="0.8"
+     stroke-dasharray="4,4"
+     id="line11" />
+  <rect
+     x="180"
+     y="740"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect11" />
+  <text
+     x="240"
+     y="758"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     font-weight="700"
+     id="text12">wificond</text>
+  <text
+     x="240"
+     y="773"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text13">(C++)</text>
+  <rect
+     x="320"
+     y="70"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect13" />
+  <text
+     x="380"
+     y="88"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text14">内核 cfg80211</text>
+  <text
+     x="380"
+     y="103"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text15">(Kernel)</text>
+  <line
+     x1="380"
+     y1="110"
+     x2="380"
+     y2="740"
+     stroke="#10b981"
+     stroke-width="0.8"
+     stroke-dasharray="4,4"
+     id="line15" />
+  <rect
+     x="320"
+     y="740"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect15" />
+  <text
+     x="380"
+     y="758"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     font-weight="700"
+     id="text16">内核 cfg80211</text>
+  <text
+     x="380"
+     y="773"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text17">(Kernel)</text>
+  <rect
+     x="460"
+     y="70"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#1e293b"
+     stroke="#94a3b8"
+     stroke-width="1.5"
+     id="rect17" />
+  <text
+     x="520"
+     y="88"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text18">gl_cfg80211</text>
+  <text
+     x="520"
+     y="103"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text19">(ioctl)</text>
+  <line
+     x1="520"
+     y1="110"
+     x2="520"
+     y2="740"
+     stroke="#94a3b8"
+     stroke-width="0.8"
+     stroke-dasharray="4,4"
+     id="line19" />
+  <rect
+     x="460"
+     y="740"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#1e293b"
+     stroke="#94a3b8"
+     stroke-width="1.5"
+     id="rect19" />
+  <text
+     x="520"
+     y="758"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     font-weight="700"
+     id="text20">gl_cfg80211</text>
+  <text
+     x="520"
+     y="773"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text21">(ioctl)</text>
+  <rect
+     x="600"
+     y="70"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#3b2f00"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="rect21" />
+  <text
+     x="660"
+     y="88"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text22">AIS FSM</text>
+  <text
+     x="660"
+     y="103"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text23">(OID)</text>
+  <line
+     x1="660"
+     y1="110"
+     x2="660"
+     y2="740"
+     stroke="#eab308"
+     stroke-width="0.8"
+     stroke-dasharray="4,4"
+     id="line23" />
+  <rect
+     x="600"
+     y="740"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#3b2f00"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="rect23" />
+  <text
+     x="660"
+     y="758"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     font-weight="700"
+     id="text24">AIS FSM</text>
+  <text
+     x="660"
+     y="773"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text25">(OID)</text>
+  <rect
+     x="740"
+     y="70"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#1e1b4b"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect25" />
+  <text
+     x="800"
+     y="88"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text26">SCN FSM</text>
+  <text
+     x="800"
+     y="103"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text27">(scan_fsm)</text>
+  <line
+     x1="800"
+     y1="110"
+     x2="800"
+     y2="740"
+     stroke="#a855f7"
+     stroke-width="0.8"
+     stroke-dasharray="4,4"
+     id="line27" />
+  <rect
+     x="740"
+     y="740"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#1e1b4b"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect27" />
+  <text
+     x="800"
+     y="758"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     font-weight="700"
+     id="text28">SCN FSM</text>
+  <text
+     x="800"
+     y="773"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text29">(scan_fsm)</text>
+  <rect
+     x="880"
+     y="70"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#450a0a"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     id="rect29" />
+  <text
+     x="940"
+     y="88"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text30">固件 (FW)</text>
+  <text
+     x="940"
+     y="103"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text31">(FW)</text>
+  <line
+     x1="940"
+     y1="110"
+     x2="940"
+     y2="740"
+     stroke="#ef4444"
+     stroke-width="0.8"
+     stroke-dasharray="4,4"
+     id="line31" />
+  <rect
+     x="880"
+     y="740"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#450a0a"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     id="rect31" />
+  <text
+     x="940"
+     y="758"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     font-weight="700"
+     id="text32">固件 (FW)</text>
+  <text
+     x="940"
+     y="773"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text33">(FW)</text>
+  <rect
+     x="97"
+     y="130"
+     width="6"
+     height="560"
+     rx="3"
+     fill="#3b82f6"
+     opacity="0.5"
+     id="rect33" />
+  <rect
+     x="237"
+     y="175"
+     width="6"
+     height="500"
+     rx="3"
+     fill="#f97316"
+     opacity="0.5"
+     id="rect34" />
+  <rect
+     x="377"
+     y="220"
+     width="6"
+     height="480"
+     rx="3"
+     fill="#10b981"
+     opacity="0.5"
+     id="rect35" />
+  <rect
+     x="517"
+     y="265"
+     width="6"
+     height="20"
+     rx="3"
+     fill="#94a3b8"
+     opacity="0.5"
+     id="rect36" />
+  <rect
+     x="657"
+     y="310"
+     width="6"
+     height="130"
+     rx="3"
+     fill="#eab308"
+     opacity="0.5"
+     id="rect37" />
+  <rect
+     x="797"
+     y="400"
+     width="6"
+     height="120"
+     rx="3"
+     fill="#a855f7"
+     opacity="0.5"
+     id="rect38" />
+  <rect
+     x="937"
+     y="490"
+     width="6"
+     height="120"
+     rx="3"
+     fill="#ef4444"
+     opacity="0.5"
+     id="rect39" />
+  <line
+     x1="103"
+     y1="135"
+     x2="237"
+     y2="135"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arrow-blue)"
+     id="line39" />
+  <text
+     x="148"
+     y="130"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9px"
+     id="text39">1. scanRequest()</text>
+  <line
+     x1="243"
+     y1="180"
+     x2="377"
+     y2="180"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-blue)"
+     id="line40" />
+  <text
+     x="263"
+     y="171"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9px"
+     id="text40">2. NL80211_CMD_TRIGGER_SCAN [netlink]</text>
+  <line
+     x1="383"
+     y1="225"
+     x2="517"
+     y2="225"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-blue)"
+     id="line41" />
+  <text
+     x="390"
+     y="218"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text41">3. rdev-&gt;ops-&gt;scan = mtk_cfg80211_scan()</text>
+  <text
+     x="384"
+     y="237"
+     text-anchor="middle"
+     fill="#eab308"
+     font-size="8px"
+     id="text42">参数三重转换: PARAM→MSG→CMD</text>
+  <line
+     x1="523"
+     y1="270"
+     x2="657"
+     y2="270"
+     stroke="#94a3b8"
+     stroke-width="1.5"
+     marker-end="url(#arrow-blue)"
+     id="line42" />
+  <text
+     x="529"
+     y="263"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9px"
+     id="text43">4. kalIoctl → wlanoidSetBssidListScanAdv [ioctl]</text>
+  <line
+     x1="663"
+     y1="320"
+     x2="797"
+     y2="320"
+     stroke="#eab308"
+     stroke-width="1.5"
+     marker-end="url(#arrow-blue)"
+     id="line43" />
+  <text
+     x="670"
+     y="313"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text44">5. aisFsmScanRequestAdv → hem mailbox</text>
+  <text
+     x="712"
+     y="332"
+     text-anchor="middle"
+     fill="#eab308"
+     font-size="8px"
+     id="text45">[MSG_SCN_SCAN_REQ_V2]</text>
+  <line
+     x1="803"
+     y1="370"
+     x2="937"
+     y2="370"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     marker-end="url(#arrow-blue)"
+     id="line45" />
+  <text
+     x="815"
+     y="363"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text46">6. scnSendScanReqV2 → CMD_SCAN_REQ_V2 [WFDMA]</text>
+  <line
+     x1="937"
+     y1="445"
+     x2="803"
+     y2="445"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     marker-end="url(#arrow-red)"
+     id="line46" />
+  <text
+     x="815"
+     y="438"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="9"
+     id="text47">7. [结果] Probe Response / Beacon 逐信道返回</text>
+  <line
+     x1="797"
+     y1="490"
+     x2="663"
+     y2="490"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     marker-end="url(#arrow-red)"
+     id="line47" />
+  <text
+     x="670"
+     y="483"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="9"
+     id="text48">8. scnEventScanDone() → scanReportBss2Cfg80211()</text>
+  <line
+     x1="657"
+     y1="540"
+     x2="383"
+     y2="540"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     marker-end="url(#arrow-red)"
+     id="line48" />
+  <text
+     x="510"
+     y="533"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="9px"
+     id="text49">9. cfg80211_inform_bss_frame() [逐个BSS]</text>
+  <path
+     d="M 377 585 Q 350 585, 350 610 Q 350 635, 377 635"
+     stroke="#10b981"
+     stroke-width="1.5"
+     stroke-dasharray="5,3"
+     fill="none"
+     id="path49" />
+  <text
+     x="362"
+     y="612"
+     fill="#10b981"
+     font-size="9px"
+     id="text50">10. cfg80211_scan_done()</text>
+  <line
+     x1="377"
+     y1="600"
+     x2="243"
+     y2="600"
+     stroke="#10b981"
+     stroke-width="1.5"
+     stroke-dasharray="5,3"
+     marker-end="url(#arrow-green)"
+     id="line50" />
+  <text
+     x="235"
+     y="593"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9px"
+     id="text51">11. NL80211_CMD_NEW_SCAN_RESULTS [multicast]</text>
+  <line
+     x1="237"
+     y1="645"
+     x2="103"
+     y2="645"
+     stroke="#10b981"
+     stroke-width="1.5"
+     stroke-dasharray="5,3"
+     marker-end="url(#arrow-green)"
+     id="line51" />
+  <text
+     x="126"
+     y="636"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9px"
+     id="text52">12. IScanEvent.OnScanResultReady() [AIDL]</text>
+  <rect
+     x="850"
+     y="620"
+     width="210"
+     height="100"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect52" />
+  <text
+     x="955"
+     y="640"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="11"
+     font-weight="700"
+     id="text53">图例</text>
+  <line
+     x1="865"
+     y1="660"
+     x2="895"
+     y2="660"
+     stroke="#3b82f6"
+     stroke-width="2"
+     id="line53" />
+  <text
+     x="905"
+     y="664"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text54">扫描命令下发</text>
+  <line
+     x1="865"
+     y1="680"
+     x2="895"
+     y2="680"
+     stroke="#ef4444"
+     stroke-width="2"
+     id="line54" />
+  <text
+     x="905"
+     y="684"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text55">扫描结果回报</text>
+  <line
+     x1="865"
+     y1="700"
+     x2="895"
+     y2="700"
+     stroke="#10b981"
+     stroke-width="2"
+     stroke-dasharray="5,3"
+     id="line55" />
+  <text
+     x="905"
+     y="704"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text56">扫描完成通知</text>
+</svg>
