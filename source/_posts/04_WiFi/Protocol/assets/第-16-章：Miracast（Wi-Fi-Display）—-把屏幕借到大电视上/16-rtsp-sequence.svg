@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1160"
+   height="864"
+   version="1.1"
+   id="svg35"
+   sodipodi:docname="16-rtsp-sequence.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview35"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.2650463"
+     inkscape:cx="579.82068"
+     inkscape:cy="432"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg35" />
+  <defs
+     id="defs6">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card"
+       x1="29.728673"
+       y1="3213.7409"
+       x2="29.728673"
+       y2="3442.8631"
+       gradientTransform="matrix(4.0196884,0,0,0.2487755,0,-6)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+    <style
+       id="style4">text{font-family:'Maple Mono Normal NL NF CN', monospace;}</style>
+    <marker
+       id="aReq"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="7"
+       markerHeight="7"
+       orient="auto">
+      <path
+         d="M0 0 L10 5 L0 10 z"
+         fill="#e2e8f0"
+         id="path4" />
+    </marker>
+    <marker
+       id="aRsp"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="7"
+       markerHeight="7"
+       orient="auto">
+      <path
+         d="M0 0 L10 5 L0 10 z"
+         fill="#94a3b8"
+         id="path5" />
+    </marker>
+    <marker
+       id="aStream"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M0 0 L10 5 L0 10 z"
+         fill="#fdba74"
+         id="path6" />
+    </marker>
+  </defs>
+  <rect
+     width="1160"
+     height="864"
+     fill="url(#bg)"
+     id="rect6" />
+  <text
+     x="580"
+     y="32"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="20"
+     font-weight="700"
+     id="text6">RTSP M1–M16 消息序列 — 每个 Mx 都是 Request/Response 一对</text>
+  <text
+     x="580"
+     y="54"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="12"
+     id="text7">实线=Mx Request（发起方→对端）　虚线=Mx Response（对端回，带状态码 RTSP OK）</text>
+  <!-- actors -->
+  <rect
+     x="190"
+     y="68"
+     width="200"
+     height="44"
+     rx="6"
+     fill="#0f766e"
+     stroke="#14b8a6"
+     stroke-width="2"
+     id="rect7" />
+  <text
+     x="290"
+     y="95"
+     text-anchor="middle"
+     fill="#fff"
+     font-size="15"
+     font-weight="700"
+     id="text8">WFD Source（手机）</text>
+  <rect
+     x="770"
+     y="68"
+     width="200"
+     height="44"
+     rx="6"
+     fill="#1d4ed8"
+     stroke="#3b82f6"
+     stroke-width="2"
+     id="rect8" />
+  <text
+     x="870"
+     y="95"
+     text-anchor="middle"
+     fill="#fff"
+     font-size="15"
+     font-weight="700"
+     id="text9">WFD Sink（电视）</text>
+  <line
+     x1="290"
+     y1="112"
+     x2="290"
+     y2="788"
+     stroke="#334155"
+     stroke-width="2"
+     id="line9" />
+  <line
+     x1="870"
+     y1="112"
+     x2="870"
+     y2="788"
+     stroke="#334155"
+     stroke-width="2"
+     id="line10" />
+  <!-- ===== phase: capability M1-M4 ===== -->
+  <rect
+     x="60"
+     y="124"
+     width="1040"
+     height="2"
+     fill="#22d3ee"
+     opacity="0.4"
+     id="rect10" />
+  <text
+     x="70"
+     y="142"
+     fill="#67e8f9"
+     font-size="12"
+     font-weight="700"
+     id="text10">能力协商（M1–M4）</text>
+  <!-- M1 Source->Sink req + resp -->
+  <line
+     x1="290"
+     y1="160"
+     x2="864"
+     y2="160"
+     stroke="#14b8a6"
+     stroke-width="2"
+     marker-end="url(#aReq)"
+     id="line11" />
+  <text
+     x="580"
+     y="154"
+     text-anchor="middle"
+     fill="#5eead4"
+     font-size="11.5"
+     id="text11">M1 Request · OPTIONS —&quot;你会哪些指令?&quot;</text>
+  <line
+     x1="864"
+     y1="180"
+     x2="296"
+     y2="180"
+     stroke="#64748b"
+     stroke-width="1.3"
+     stroke-dasharray="5,3"
+     marker-end="url(#aRsp)"
+     id="line12" />
+  <text
+     x="580"
+     y="174"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text12">M1 Response（Sink 回支持的方法列表）</text>
+  <!-- M2 Sink->Source -->
+  <line
+     x1="870"
+     y1="210"
+     x2="296"
+     y2="210"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#aReq)"
+     id="line13" />
+  <text
+     x="580"
+     y="204"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="11.5"
+     id="text13">M2 Request · OPTIONS —&quot;你又会哪些?&quot;（这次 Sink 发起）</text>
+  <line
+     x1="296"
+     y1="230"
+     x2="864"
+     y2="230"
+     stroke="#64748b"
+     stroke-width="1.3"
+     stroke-dasharray="5,3"
+     marker-end="url(#aRsp)"
+     id="line14" />
+  <text
+     x="580"
+     y="224"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text14">M2 Response（Source 回）</text>
+  <!-- M3 Source->Sink -->
+  <line
+     x1="290"
+     y1="260"
+     x2="864"
+     y2="260"
+     stroke="#14b8a6"
+     stroke-width="2"
+     marker-end="url(#aReq)"
+     id="line15" />
+  <text
+     x="580"
+     y="254"
+     text-anchor="middle"
+     fill="#5eead4"
+     font-size="11.5"
+     id="text15">M3 Request · GET_PARAMETER — 查 Sink 能力</text>
+  <line
+     x1="864"
+     y1="280"
+     x2="296"
+     y2="280"
+     stroke="#64748b"
+     stroke-width="1.3"
+     stroke-dasharray="5,3"
+     marker-end="url(#aRsp)"
+     id="line16" />
+  <text
+     x="580"
+     y="274"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text16">M3 Response — 分辨率/编解码/端口/UIBC 如实回答（关键!）</text>
+  <!-- M4 Source->Sink -->
+  <line
+     x1="290"
+     y1="310"
+     x2="864"
+     y2="310"
+     stroke="#14b8a6"
+     stroke-width="2"
+     marker-end="url(#aReq)"
+     id="line17" />
+  <text
+     x="580"
+     y="304"
+     text-anchor="middle"
+     fill="#5eead4"
+     font-size="11.5"
+     id="text17">M4 Request · SET_PARAMETER — 选定格式(1080p60/H.264)+presentation-url</text>
+  <line
+     x1="864"
+     y1="330"
+     x2="296"
+     y2="330"
+     stroke="#64748b"
+     stroke-width="1.3"
+     stroke-dasharray="5,3"
+     marker-end="url(#aRsp)"
+     id="line18" />
+  <text
+     x="580"
+     y="324"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text18">M4 Response（Sink 确认）</text>
+  <!-- ===== phase: session M5-M7 ===== -->
+  <rect
+     x="60"
+     y="352"
+     width="1040"
+     height="2"
+     fill="#fbbf24"
+     opacity="0.4"
+     id="rect18" />
+  <text
+     x="70"
+     y="370"
+     fill="#fde68a"
+     font-size="12"
+     font-weight="700"
+     id="text19">会话建立（M5–M7）· 注意 Request 方向会&quot;换边&quot;</text>
+  <!-- M5 Source->Sink trigger -->
+  <line
+     x1="290"
+     y1="388"
+     x2="864"
+     y2="388"
+     stroke="#f59e0b"
+     stroke-width="2"
+     marker-end="url(#aReq)"
+     id="line19" />
+  <text
+     x="580"
+     y="382"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="11.5"
+     id="text20">M5 Request · SET_PARAMETER(trigger=SETUP) — Source 递眼色&quot;你去发 SETUP&quot;</text>
+  <line
+     x1="864"
+     y1="408"
+     x2="296"
+     y2="408"
+     stroke="#64748b"
+     stroke-width="1.3"
+     stroke-dasharray="5,3"
+     marker-end="url(#aRsp)"
+     id="line20" />
+  <text
+     x="580"
+     y="402"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text21">M5 Response（Sink 回 OK）</text>
+  <!-- M6 Sink->Source -->
+  <line
+     x1="870"
+     y1="438"
+     x2="296"
+     y2="438"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#aReq)"
+     id="line21" />
+  <text
+     x="580"
+     y="432"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="11.5"
+     id="text22">M6 Request · SETUP（改由 Sink 发起!）</text>
+  <line
+     x1="296"
+     y1="458"
+     x2="864"
+     y2="458"
+     stroke="#64748b"
+     stroke-width="1.3"
+     stroke-dasharray="5,3"
+     marker-end="url(#aRsp)"
+     id="line22" />
+  <text
+     x="580"
+     y="452"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text23">M6 Response — Source 返回 session id</text>
+  <!-- M7 Sink->Source -->
+  <line
+     x1="870"
+     y1="488"
+     x2="296"
+     y2="488"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#aReq)"
+     id="line23" />
+  <text
+     x="580"
+     y="482"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="11.5"
+     id="text24">M7 Request · PLAY（Sink 发起）</text>
+  <line
+     x1="296"
+     y1="508"
+     x2="864"
+     y2="508"
+     stroke="#64748b"
+     stroke-width="1.3"
+     stroke-dasharray="5,3"
+     marker-end="url(#aRsp)"
+     id="line24" />
+  <text
+     x="580"
+     y="502"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text25">M7 Response — Source 回 OK 后开播</text>
+  <!-- streaming -->
+  <rect
+     x="290"
+     y="528"
+     width="580"
+     height="42"
+     rx="6"
+     fill="#7c2d12"
+     opacity="0.55"
+     stroke="#f97316"
+     id="rect25" />
+  <line
+     x1="296"
+     y1="534"
+     x2="860"
+     y2="534"
+     stroke="#fdba74"
+     stroke-width="1.4"
+     marker-end="url(#aStream)"
+     id="line25" />
+  <text
+     x="580"
+     y="548"
+     text-anchor="middle"
+     fill="#fdba74"
+     font-size="12"
+     font-weight="700"
+     id="text26">▶ 音视频串流：H.264 + MPEG2-TS over RTP/UDP（Source→Sink）</text>
+  <text
+     x="580"
+     y="564"
+     text-anchor="middle"
+     fill="#fed7aa"
+     font-size="10"
+     id="text27">首帧为带 SPS/PPS 的 IDR 帧；受保护内容先过 HDCP 2.x</text>
+  <!-- ===== phase: control M8-M16 ===== -->
+  <rect
+     x="60"
+     y="588"
+     width="1040"
+     height="2"
+     fill="#a855f7"
+     opacity="0.4"
+     id="rect27" />
+  <text
+     x="70"
+     y="606"
+     fill="#d8b4fe"
+     font-size="12"
+     font-weight="700"
+     id="text28">播放控制与保活（M8–M16）· 同样每条都 Req/Resp 成对（下方略画 Response）</text>
+  <!-- M13 Sink->Source -->
+  <line
+     x1="870"
+     y1="630"
+     x2="296"
+     y2="630"
+     stroke="#3b82f6"
+     stroke-width="1.6"
+     marker-end="url(#aReq)"
+     id="line28" />
+  <text
+     x="580"
+     y="624"
+     text-anchor="middle"
+     fill="#cbd5e1"
+     font-size="11"
+     id="text29">M13 Request · wfd-idr-request — 花屏时请求 IDR 刷新（Sink 发，Source 回）</text>
+  <!-- M9 Sink->Source (triggered) -->
+  <line
+     x1="870"
+     y1="658"
+     x2="296"
+     y2="658"
+     stroke="#3b82f6"
+     stroke-width="1.6"
+     marker-end="url(#aReq)"
+     id="line29" />
+  <text
+     x="580"
+     y="652"
+     text-anchor="middle"
+     fill="#cbd5e1"
+     font-size="11"
+     id="text30">M9 Request · PAUSE 暂停（Sink 发，可由 M5 trigger 触发或主动发起）</text>
+  <!-- M14 either -->
+  <line
+     x1="290"
+     y1="686"
+     x2="864"
+     y2="686"
+     stroke="#a855f7"
+     stroke-width="1.6"
+     marker-end="url(#aReq)"
+     id="line30" />
+  <text
+     x="580"
+     y="680"
+     text-anchor="middle"
+     fill="#d8b4fe"
+     font-size="11"
+     id="text31">M14 Request · wfd-uibc-capability — 建立 UIBC 反向输入通道（任一方可发）</text>
+  <!-- M16 Source->Sink keepalive -->
+  <line
+     x1="290"
+     y1="714"
+     x2="864"
+     y2="714"
+     stroke="#10b981"
+     stroke-width="1.6"
+     stroke-dasharray="6,3"
+     marker-end="url(#aReq)"
+     id="line31" />
+  <text
+     x="580"
+     y="708"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="11"
+     id="text32">M16 Request · GET_PARAMETER(空body) — Source 周期心跳保活（默认 60s 超时）</text>
+  <!-- M8 Sink->Source teardown -->
+  <line
+     x1="870"
+     y1="742"
+     x2="296"
+     y2="742"
+     stroke="#ef4444"
+     stroke-width="1.6"
+     marker-end="url(#aReq)"
+     id="line32" />
+  <text
+     x="580"
+     y="736"
+     text-anchor="middle"
+     fill="#fca5a5"
+     font-size="11"
+     id="text33">M8 Request · TEARDOWN — 结束会话（Sink 发，可由 M5 trigger 触发或主动发起）</text>
+  <!-- note -->
+  <rect
+     x="120"
+     y="794"
+     width="920"
+     height="56"
+     rx="8"
+     fill="url(#card)"
+     stroke="#fbbf24"
+     id="rect33"
+     style="fill:url(#card)" />
+  <text
+     x="580"
+     y="818"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="12px"
+     font-weight="700"
+     id="text34">读图两个要点：① 每个 Mx = 一次 Request + 一次 Response（不是 16 条单向消息）</text>
+  <text
+     x="580"
+     y="839"
+     text-anchor="middle"
+     fill="#cbd5e1"
+     font-size="11px"
+     id="text35">② M5 trigger 机制：SETUP 的 Request 由 Sink 发需 Source 先用 M5 &quot;递眼色&quot;触发；PLAY/TEARDOWN/PAUSE 也可由 Sink 主动发起</text>
+</svg>

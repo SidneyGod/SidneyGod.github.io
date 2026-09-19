@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1100"
+   height="620"
+   version="1.1"
+   id="svg24"
+   sodipodi:docname="16-wfd-session-flow.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview24"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.5301741"
+     inkscape:cx="550.26418"
+     inkscape:cy="310.09543"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg24" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+    <style
+       id="style4">text{font-family:'Maple Mono Normal NL NF CN', monospace;}</style>
+  </defs>
+  <rect
+     width="1100"
+     height="620"
+     fill="url(#bg)"
+     id="rect4" />
+  <text
+     x="550"
+     y="38"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="20"
+     font-weight="700"
+     id="text4">WFD 会话建立流程 — 从发现到开播的 11 步</text>
+  <!-- vertical flow -->
+  <g
+     font-size="13"
+     id="g22">
+    <!-- step boxes -->
+    <rect
+       x="120"
+       y="70"
+       width="860"
+       height="40"
+       rx="6"
+       fill="url(#card)"
+       stroke="#14b8a6"
+       id="rect5" />
+    <text
+       x="150"
+       y="95"
+       fill="#5eead4"
+       font-weight="700"
+       id="text5">1-3</text>
+    <text
+       x="230"
+       y="95"
+       fill="#e2e8f0"
+       id="text6">Device Discovery → Service Discovery(可选) → Device Selection（用户选定对端）</text>
+    <rect
+       x="120"
+       y="124"
+       width="860"
+       height="40"
+       rx="6"
+       fill="url(#card)"
+       stroke="#14b8a6"
+       id="rect6" />
+    <text
+       x="150"
+       y="149"
+       fill="#5eead4"
+       font-weight="700"
+       id="text7">4</text>
+    <text
+       x="230"
+       y="149"
+       fill="#e2e8f0"
+       id="text8">Connection Setup — 建 L2 连接(Wi-Fi Direct/TDLS/Infra) + 建 TCP 连接(默认端口 7236)</text>
+    <rect
+       x="120"
+       y="178"
+       width="860"
+       height="40"
+       rx="6"
+       fill="#0f3a3a"
+       stroke="#22d3ee"
+       stroke-width="2"
+       id="rect8" />
+    <text
+       x="150"
+       y="203"
+       fill="#67e8f9"
+       font-weight="700"
+       id="text9">5</text>
+    <text
+       x="230"
+       y="203"
+       fill="#e2e8f0"
+       id="text10">Capability Negotiation — RTSP M1/M2(互报)→M3(查能力)→M4(选定格式)</text>
+    <rect
+       x="120"
+       y="232"
+       width="860"
+       height="40"
+       rx="6"
+       fill="#0f3a3a"
+       stroke="#22d3ee"
+       stroke-width="2"
+       id="rect10" />
+    <text
+       x="150"
+       y="257"
+       fill="#67e8f9"
+       font-weight="700"
+       id="text11">6</text>
+    <text
+       x="230"
+       y="257"
+       fill="#e2e8f0"
+       id="text12">Session Establishment — RTSP M5(trigger)→M6(SETUP)→M7(PLAY) 开播</text>
+    <rect
+       x="120"
+       y="286"
+       width="860"
+       height="40"
+       rx="6"
+       fill="url(#card)"
+       stroke="#3b82f6"
+       id="rect12" />
+    <text
+       x="150"
+       y="311"
+       fill="#93c5fd"
+       font-weight="700"
+       id="text13">7</text>
+    <text
+       x="230"
+       y="311"
+       fill="#e2e8f0"
+       id="text14">UIBC Setup(可选) — RTSP M14 建立反向输入通道</text>
+    <rect
+       x="120"
+       y="340"
+       width="860"
+       height="40"
+       rx="6"
+       fill="url(#card)"
+       stroke="#3b82f6"
+       id="rect14" />
+    <text
+       x="150"
+       y="365"
+       fill="#93c5fd"
+       font-weight="700"
+       id="text15">8</text>
+    <text
+       x="230"
+       y="365"
+       fill="#e2e8f0"
+       id="text16">Link Content Protection(可选) — HDCP 2.x 会话密钥协商(独立 TCP 连接)</text>
+    <rect
+       x="120"
+       y="394"
+       width="860"
+       height="40"
+       rx="6"
+       fill="url(#card)"
+       stroke="#a855f7"
+       id="rect16" />
+    <text
+       x="150"
+       y="419"
+       fill="#d8b4fe"
+       font-weight="700"
+       id="text17">9</text>
+    <text
+       x="230"
+       y="419"
+       fill="#e2e8f0"
+       id="text18">Payload Control — 播放期间控制:暂停(M9)/IDR刷新(M13)/码率调整/音频路由(M10)</text>
+    <rect
+       x="120"
+       y="448"
+       width="860"
+       height="40"
+       rx="6"
+       fill="url(#card)"
+       stroke="#a855f7"
+       id="rect18" />
+    <text
+       x="150"
+       y="473"
+       fill="#d8b4fe"
+       font-weight="700"
+       id="text19">10</text>
+    <text
+       x="230"
+       y="473"
+       fill="#e2e8f0"
+       id="text20">Standby/Resume(可选) — RTSP M12 待机与唤醒;M16 心跳保活</text>
+    <rect
+       x="120"
+       y="502"
+       width="860"
+       height="40"
+       rx="6"
+       fill="url(#card)"
+       stroke="#ef4444"
+       id="rect20" />
+    <text
+       x="150"
+       y="527"
+       fill="#fca5a5"
+       font-weight="700"
+       id="text21">11</text>
+    <text
+       x="230"
+       y="527"
+       fill="#e2e8f0"
+       id="text22">Session Teardown — RTSP TEARDOWN(M8 由 Sink，或 M5 trigger 由 Source)</text>
+  </g>
+  <!-- side note -->
+  <text
+     x="550"
+     y="580"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="12"
+     id="text23">青色 = RTSP 核心协商 · 蓝色 = 可选增强 · 紫色 = 播放期管理 · 红色 = 结束</text>
+  <text
+     x="550"
+     y="602"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="11"
+     id="text24">控制面全程跑在 TCP 上(RTSP)，数据面跑在 RTP/UDP 上(MPEG2-TS)</text>
+</svg>

@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="850"
+   height="460"
+   version="1.1"
+   id="svg33"
+   sodipodi:docname="14-p2p-discovery.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview33"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.48"
+     inkscape:cx="550"
+     inkscape:cy="300.33784"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg33" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="812.40387"
+       y2="812.40387"
+       gradientTransform="scale(1.0462777,0.56622086)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="1">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+    <style
+       id="style4">text{font-family:'Maple Mono Normal NL NF CN', monospace;}</style>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#card"
+       id="linearGradient33"
+       x1="88.489357"
+       y1="691.83746"
+       x2="88.489357"
+       y2="946.9472"
+       gradientTransform="matrix(1.3921392,0,0,0.59190204,-47.601508,-116)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#card"
+       id="linearGradient34"
+       x1="360.76428"
+       y1="691.83746"
+       x2="360.76428"
+       y2="946.9472"
+       gradientTransform="matrix(1.2594028,0,0,0.59190204,-0.720301,-116)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <rect
+     width="850"
+     height="460"
+     fill="url(#bg)"
+     id="rect4"
+     style="fill:url(#bg);stroke-width:0.769691"
+     x="0"
+     y="0" />
+  <text
+     x="476"
+     y="36"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="20px"
+     font-weight="700"
+     id="text4">设备发现 — Find 阶段在社交信道&quot;对上眼&quot;</text>
+  <text
+     x="476"
+     y="60"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="13px"
+     id="text5">两台设备交替 Listen（张望）/ Search（喊话），靠随机化避免锁步</text>
+  <!-- social channels bar -->
+  <text
+     x="476"
+     y="92"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="13px"
+     font-weight="700"
+     id="text6">社交信道（Social Channels）= 2.4 GHz 的 1 / 6 / 11</text>
+  <rect
+     x="226"
+     y="104"
+     width="150"
+     height="30"
+     rx="5"
+     fill="#a855f7"
+     opacity="0.25"
+     stroke="#a855f7"
+     id="rect6" />
+  <text
+     x="301"
+     y="124"
+     text-anchor="middle"
+     fill="#e9d5ff"
+     font-size="13px"
+     id="text7">CH 1</text>
+  <rect
+     x="401"
+     y="104"
+     width="150"
+     height="30"
+     rx="5"
+     fill="#a855f7"
+     opacity="0.25"
+     stroke="#a855f7"
+     id="rect7" />
+  <text
+     x="476"
+     y="124"
+     text-anchor="middle"
+     fill="#e9d5ff"
+     font-size="13px"
+     id="text8">CH 6</text>
+  <rect
+     x="576"
+     y="104"
+     width="150"
+     height="30"
+     rx="5"
+     fill="#a855f7"
+     opacity="0.25"
+     stroke="#a855f7"
+     id="rect8" />
+  <text
+     x="651"
+     y="124"
+     text-anchor="middle"
+     fill="#e9d5ff"
+     font-size="13px"
+     id="text9">CH 11</text>
+  <!-- Device A timeline -->
+  <text
+     x="14"
+     y="176"
+     fill="#3b82f6"
+     font-size="14px"
+     font-weight="700"
+     id="text10">设备 A</text>
+  <line
+     x1="76"
+     y1="170"
+     x2="839.64862"
+     y2="170"
+     stroke="#475569"
+     stroke-width="0.9263"
+     id="line10" />
+  <rect
+     x="86"
+     y="150"
+     width="120"
+     height="40"
+     rx="4"
+     fill="#1d4ed8"
+     id="rect10" />
+  <text
+     x="146"
+     y="175"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="12px"
+     id="text11">Search 喊话</text>
+  <rect
+     x="216"
+     y="150"
+     width="170"
+     height="40"
+     rx="4"
+     fill="#10b981"
+     id="rect11" />
+  <text
+     x="301"
+     y="169"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="12px"
+     id="text12">Listen 张望</text>
+  <text
+     x="301"
+     y="184"
+     text-anchor="middle"
+     fill="#d1fae5"
+     font-size="9px"
+     id="text13">随机 N×100 TU</text>
+  <rect
+     x="396"
+     y="150"
+     width="120"
+     height="40"
+     rx="4"
+     fill="#1d4ed8"
+     id="rect13" />
+  <text
+     x="456"
+     y="175"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="12px"
+     id="text14">Search</text>
+  <rect
+     x="526"
+     y="150"
+     width="120"
+     height="40"
+     rx="4"
+     fill="#10b981"
+     id="rect14" />
+  <text
+     x="586"
+     y="175"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="12px"
+     id="text15">Listen</text>
+  <rect
+     x="656"
+     y="150"
+     width="150"
+     height="40"
+     rx="4"
+     fill="#eab308"
+     id="rect15" />
+  <text
+     x="731"
+     y="175"
+     text-anchor="middle"
+     fill="#1a1a2e"
+     font-size="12px"
+     font-weight="700"
+     id="text16">对上眼!</text>
+  <!-- Device B timeline -->
+  <text
+     x="12"
+     y="262"
+     fill="#f97316"
+     font-size="14px"
+     font-weight="700"
+     id="text17">设备 B</text>
+  <line
+     x1="76"
+     y1="256"
+     x2="843.02704"
+     y2="256"
+     stroke="#475569"
+     stroke-width="0.928347"
+     id="line17" />
+  <rect
+     x="86"
+     y="236"
+     width="180"
+     height="40"
+     rx="4"
+     fill="#10b981"
+     id="rect17" />
+  <text
+     x="176"
+     y="255"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="12px"
+     id="text18">Listen 张望</text>
+  <text
+     x="176"
+     y="270"
+     text-anchor="middle"
+     fill="#d1fae5"
+     font-size="9px"
+     id="text19">随机 N×100 TU</text>
+  <rect
+     x="276"
+     y="236"
+     width="120"
+     height="40"
+     rx="4"
+     fill="#c2410c"
+     id="rect19" />
+  <text
+     x="336"
+     y="261"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="12px"
+     id="text20">Search</text>
+  <rect
+     x="406"
+     y="236"
+     width="140"
+     height="40"
+     rx="4"
+     fill="#10b981"
+     id="rect20" />
+  <text
+     x="476"
+     y="261"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="12px"
+     id="text21">Listen</text>
+  <rect
+     x="556"
+     y="236"
+     width="100"
+     height="40"
+     rx="4"
+     fill="#c2410c"
+     id="rect21" />
+  <text
+     x="606"
+     y="261"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="12px"
+     id="text22">Search</text>
+  <rect
+     x="656"
+     y="236"
+     width="150"
+     height="40"
+     rx="4"
+     fill="#eab308"
+     id="rect22" />
+  <text
+     x="731"
+     y="261"
+     text-anchor="middle"
+     fill="#1a1a2e"
+     font-size="12px"
+     font-weight="700"
+     id="text23">收到 Probe!</text>
+  <!-- meet arrow -->
+  <line
+     x1="731"
+     y1="192"
+     x2="731"
+     y2="226.78378"
+     stroke="#eab308"
+     stroke-width="2"
+     stroke-dasharray="4, 3"
+     id="line23" />
+  <polygon
+     points="805,318 800,308 810,308 "
+     fill="#eab308"
+     id="polygon23"
+     transform="translate(-74,-82)" />
+  <!-- explain boxes -->
+  <rect
+     x="76"
+     y="294"
+     width="354.32431"
+     height="150"
+     rx="6.5920806"
+     fill="url(#card)"
+     stroke="#3b82f6"
+     id="rect23"
+     style="fill:url(#linearGradient33);stroke-width:0.90775" />
+  <text
+     x="237"
+     y="320"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="14px"
+     font-weight="700"
+     id="text24">Listen State（监听）</text>
+  <text
+     x="96"
+     y="346"
+     fill="#cbd5e1"
+     font-size="12px"
+     id="text25">· 停在固定的 Listen Channel（从 1/6/11 选一）</text>
+  <text
+     x="96"
+     y="370"
+     fill="#cbd5e1"
+     font-size="12px"
+     id="text26">· 持续时间 = 随机整数 × 100 TU</text>
+  <text
+     x="96"
+     y="394"
+     fill="#cbd5e1"
+     font-size="12px"
+     id="text27">· 范围 [min=1, max=3]，回复 Probe Request</text>
+  <text
+     x="96"
+     y="424"
+     fill="#fbbf24"
+     font-size="12px"
+     id="text28">· 随机化打破锁步，保证迟早碰头</text>
+  <rect
+     x="454"
+     y="294"
+     width="320.54053"
+     height="150"
+     rx="5.9635448"
+     fill="url(#card)"
+     stroke="#f97316"
+     id="rect28"
+     style="fill:url(#linearGradient34);stroke-width:0.863391" />
+  <text
+     x="623"
+     y="320"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="14px"
+     font-weight="700"
+     id="text29">Search State（搜索）</text>
+  <text
+     x="474"
+     y="346"
+     fill="#cbd5e1"
+     font-size="12px"
+     id="text30">· 在社交信道列表上依次发 Probe Request</text>
+  <text
+     x="474"
+     y="370"
+     fill="#cbd5e1"
+     font-size="12px"
+     id="text31">· 主动&quot;喊话&quot;找对端</text>
+  <text
+     x="474"
+     y="394"
+     fill="#cbd5e1"
+     font-size="12px"
+     id="text32">· 持续时间由实现决定</text>
+  <text
+     x="474"
+     y="424"
+     fill="#94a3b8"
+     font-size="12px"
+     id="text33">· Scan 阶段则扫所有信道、不回复</text>
+</svg>

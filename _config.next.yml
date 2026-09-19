@@ -463,7 +463,7 @@ fancybox: true
 mediumzoom: false  # 使用 fancybox 代替
 # Vanilla JavaScript plugin for lazyloading images.
 # For more information: https://apoorv.pro/lozad.js/demo/
-lazyload: true
+lazyload: false
 # Pangu Support
 # For more information: https://github.com/vinta/pangu.js
 # Server-side plugin: https://github.com/next-theme/hexo-pangu
@@ -495,7 +495,7 @@ comments:
   style: tabs
   # Choose a comment system to be displayed by default.
   # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances
-  active:
+  active: utterances
   # Setting `true` means remembering the comment system selected by the visitor.
   storage: true
   # Lazyload all comment systems.
@@ -507,6 +507,46 @@ comments:
     #  order: -1
     #gitalk:
     #  order: -2
+
+# Changyan
+# For more information: https://changyan.kuaizhan.com
+changyan:
+  enable: false
+  appid: cyw6GhFAo
+  appkey: 39c16599e32c872d8661763f6b93d932
+
+# Gitalk
+# For more information: https://gitalk.github.io
+gitalk:
+  enable: false
+  github_id: SidneyGod # GitHub repo owner
+  repo: ImagePlace # Repository name to store issues
+  client_id: Ov23li4OzQCcZjFqMZMN # GitHub Application Client ID
+  client_secret: b015b0fd6547e9c1f34b3104e5cdbb69b608a87d # GitHub Application Client Secret
+  admin_user: SidneyGod # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
+  distraction_free_mode: true # Facebook-like distraction free mode
+  # When the official proxy is not available, you can change it to your own proxy address
+  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token # This is official proxy address
+  # Gitalk's display language depends on user's browser or system environment
+  # If you want everyone visiting your site to see a uniform language, you can set a force language value
+  # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
+  language: zh-CN
+
+# Utterances
+# For more information: https://utteranc.es
+utterances:
+  enable: true
+  repo: SidneyGod/ImagePlace # Github repository owner and name
+  # Available values: pathname | url | title | og:title
+  issue_term: pathname
+  # Available values: github-light | github-dark | preferred-color-scheme | github-dark-orange | icy-dark | dark-blue | photon-dark | boxy-light
+  theme: github-light
+  label: 💬  # 给对应 Issue 加的标签，可选
+
+### ignore below comments system
+# LiveRe comments system
+# You can get your uid from https://livere.com/insight/myCode (General web site)
+livere_uid: # <your_uid>
 # Disqus
 # For more information: https://disqus.com
 disqus:
@@ -524,42 +564,6 @@ disqusjs:
   api:
   apikey: # Register new application from https://disqus.com/api/applications/
   shortname: # See: https://disqus.com/admin/settings/general/
-
-# Changyan
-# For more information: https://changyan.kuaizhan.com
-changyan:
-  enable: true
-  appid: cyw6GhFAo
-  appkey: 39c16599e32c872d8661763f6b93d932
-
-# LiveRe comments system
-# You can get your uid from https://livere.com/insight/myCode (General web site)
-livere_uid: # <your_uid>
-# Gitalk
-# For more information: https://gitalk.github.io
-gitalk:
-  enable: false
-  github_id: # GitHub repo owner
-  repo: # Repository name to store issues
-  client_id: # GitHub Application Client ID
-  client_secret: # GitHub Application Client Secret
-  admin_user: # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
-  distraction_free_mode: true # Facebook-like distraction free mode
-  # When the official proxy is not available, you can change it to your own proxy address
-  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token # This is official proxy address
-  # Gitalk's display language depends on user's browser or system environment
-  # If you want everyone visiting your site to see a uniform language, you can set a force language value
-  # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
-  language:
-# Utterances
-# For more information: https://utteranc.es
-utterances:
-  enable: false
-  repo: user-name/repo-name # Github repository owner and name
-  # Available values: pathname | url | title | og:title
-  issue_term: pathname
-  # Available values: github-light | github-dark | preferred-color-scheme | github-dark-orange | icy-dark | dark-blue | photon-dark | boxy-light
-  theme: github-light
 # Isso
 # For more information: https://posativ.org/isso/
 isso: # <data_isso>

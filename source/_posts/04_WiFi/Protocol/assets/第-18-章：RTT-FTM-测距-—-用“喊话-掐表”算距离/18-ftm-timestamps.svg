@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="900"
+   height="560"
+   version="1.1"
+   id="svg30"
+   sodipodi:docname="18-ftm-timestamps.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview30"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.48"
+     inkscape:cx="550"
+     inkscape:cy="280.06757"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg30" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="784.85669"
+       y2="784.85669"
+       gradientTransform="scale(1.1467062,0.71350607)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="1">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+    <style
+       id="style4">text{font-family:'Maple Mono Normal NL NF CN', monospace;}</style>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#card"
+       id="linearGradient30"
+       x1="58.727528"
+       y1="863.78143"
+       x2="58.727528"
+       y2="1109.9948"
+       gradientTransform="matrix(2.0348208,0,0,0.49144376,-104,0)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#card"
+       id="linearGradient31"
+       x1="392.69724"
+       y1="702.10004"
+       x2="392.69724"
+       y2="902.22754"
+       gradientTransform="matrix(1.6539459,0,0,0.60461468,-104,0)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <rect
+     width="900"
+     height="560"
+     fill="url(#bg)"
+     id="rect4"
+     style="fill:url(#bg);stroke-width:0.904534"
+     x="0"
+     y="0" />
+  <text
+     x="446"
+     y="34"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="20px"
+     font-weight="700"
+     id="text4">FTM 测距 — t1/t2/t3/t4 四个时间戳的舞蹈</text>
+  <text
+     x="446"
+     y="58"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="13px"
+     id="text5">发一帧、收一帧，各自掐表；RTT =（t4'−t1'）−（t3−t2）</text>
+  <!-- actors -->
+  <rect
+     x="46"
+     y="80"
+     width="200"
+     height="46"
+     rx="6"
+     fill="#c2410c"
+     stroke="#f97316"
+     stroke-width="2"
+     id="rect5" />
+  <text
+     x="146"
+     y="102"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="14px"
+     font-weight="700"
+     id="text6">RSTA（响应方）</text>
+  <text
+     x="146"
+     y="119"
+     text-anchor="middle"
+     fill="#fed7aa"
+     font-size="10px"
+     id="text7">位置已知的 AP</text>
+  <rect
+     x="646"
+     y="80"
+     width="200"
+     height="46"
+     rx="6"
+     fill="#1d4ed8"
+     stroke="#3b82f6"
+     stroke-width="2"
+     id="rect7" />
+  <text
+     x="746"
+     y="102"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="14px"
+     font-weight="700"
+     id="text8">ISTA（发起方）</text>
+  <text
+     x="746"
+     y="119"
+     text-anchor="middle"
+     fill="#bfdbfe"
+     font-size="10px"
+     id="text9">想定位的手机</text>
+  <line
+     x1="146"
+     y1="126"
+     x2="146"
+     y2="400"
+     stroke="#334155"
+     stroke-width="2"
+     id="line9" />
+  <line
+     x1="746"
+     y1="126"
+     x2="746"
+     y2="400"
+     stroke="#334155"
+     stroke-width="2"
+     id="line10" />
+  <!-- FTM frame -->
+  <line
+     x1="146"
+     y1="170"
+     x2="746"
+     y2="230"
+     stroke="#f97316"
+     stroke-width="2.5"
+     id="line11" />
+  <polygon
+     points="850,230 836,226 841,214 "
+     fill="#f97316"
+     id="polygon11"
+     transform="translate(-104)" />
+  <text
+     x="416"
+     y="186"
+     fill="#fdba74"
+     font-size="13px"
+     font-weight="700"
+     id="text11">FTM 帧</text>
+  <circle
+     cx="146"
+     cy="170"
+     r="5"
+     fill="#fbbf24"
+     id="circle11" />
+  <text
+     x="96"
+     y="166"
+     fill="#fbbf24"
+     font-size="14px"
+     font-weight="700"
+     id="text12">t1</text>
+  <text
+     x="46"
+     y="184"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text13">发出 FTM</text>
+  <circle
+     cx="746"
+     cy="230"
+     r="5"
+     fill="#fbbf24"
+     id="circle13" />
+  <text
+     x="764"
+     y="228"
+     fill="#fbbf24"
+     font-size="14px"
+     font-weight="700"
+     id="text14">t2</text>
+  <text
+     x="764"
+     y="244"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text15">收到 FTM</text>
+  <!-- Ack -->
+  <line
+     x1="746"
+     y1="280"
+     x2="146"
+     y2="340"
+     stroke="#38bdf8"
+     stroke-width="2.5"
+     id="line15" />
+  <polygon
+     points="250,340 264,336 259,324 "
+     fill="#38bdf8"
+     id="polygon15"
+     transform="translate(-104)" />
+  <text
+     x="436"
+     y="324"
+     fill="#7dd3fc"
+     font-size="13px"
+     font-weight="700"
+     id="text16">Ack</text>
+  <circle
+     cx="746"
+     cy="280"
+     r="5"
+     fill="#fbbf24"
+     id="circle16" />
+  <text
+     x="764"
+     y="285"
+     fill="#fbbf24"
+     font-size="14px"
+     font-weight="700"
+     id="text17">t3</text>
+  <text
+     x="764"
+     y="299"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text18">发出 Ack</text>
+  <circle
+     cx="146"
+     cy="340"
+     r="5"
+     fill="#fbbf24"
+     id="circle18" />
+  <text
+     x="96"
+     y="338"
+     fill="#fbbf24"
+     font-size="14px"
+     font-weight="700"
+     id="text19">t4</text>
+  <text
+     x="46"
+     y="356"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text20">收到 Ack</text>
+  <!-- follow up -->
+  <line
+     x1="146"
+     y1="375"
+     x2="746"
+     y2="390"
+     stroke="#a855f7"
+     stroke-width="2"
+     stroke-dasharray="6, 3"
+     id="line20" />
+  <polygon
+     points="850,390 836,385 839,374 "
+     fill="#a855f7"
+     id="polygon20"
+     transform="translate(-104)" />
+  <text
+     x="446"
+     y="372"
+     text-anchor="middle"
+     fill="#d8b4fe"
+     font-size="12px"
+     font-weight="700"
+     id="text21">follow-up FTM 帧：RSTA 把 t1、t4 告诉 ISTA</text>
+  <!-- processing time annotation -->
+  <text
+     x="754"
+     y="258"
+     fill="#86efac"
+     font-size="10px"
+     id="text22">t3−t2 = ISTA 处理停留</text>
+  <!-- formula card -->
+  <rect
+     x="16"
+     y="425"
+     width="500"
+     height="120"
+     rx="8"
+     fill="url(#card)"
+     stroke="#f97316"
+     id="rect22"
+     style="fill:url(#linearGradient30)" />
+  <text
+     x="266"
+     y="451"
+     text-anchor="middle"
+     fill="#fdba74"
+     font-size="14px"
+     font-weight="700"
+     id="text23">RTT 计算</text>
+  <text
+     x="36"
+     y="481"
+     fill="#e2e8f0"
+     font-size="14px"
+     id="text24">RTT = (t4' − t1') − (t3 − t2)</text>
+  <text
+     x="36"
+     y="506"
+     fill="#cbd5e1"
+     font-size="11px"
+     id="text25">t1/t4 由 RSTA 钟换算到 ISTA 钟，(t3−t2) 本就在 ISTA 钟上</text>
+  <text
+     x="36"
+     y="528"
+     fill="#86efac"
+     font-size="11px"
+     id="text26">折算到同一时钟基准 → 免对表；扣掉处理停留 = 纯飞行时间</text>
+  <rect
+     x="546"
+     y="425"
+     width="330"
+     height="120"
+     rx="8"
+     fill="url(#card)"
+     stroke="#22c55e"
+     id="rect26"
+     style="fill:url(#linearGradient31)" />
+  <text
+     x="711"
+     y="451"
+     text-anchor="middle"
+     fill="#86efac"
+     font-size="14px"
+     font-weight="700"
+     id="text27">距离换算</text>
+  <text
+     x="566"
+     y="481"
+     fill="#e2e8f0"
+     font-size="14px"
+     id="text28">距离 = c × RTT / 2</text>
+  <text
+     x="566"
+     y="506"
+     fill="#cbd5e1"
+     font-size="11px"
+     id="text29">c ≈ 3×10⁸ m/s；1 ns ≈ 0.3 m</text>
+  <text
+     x="566"
+     y="528"
+     fill="#fbbf24"
+     font-size="11px"
+     id="text30">时间戳字段以皮秒为单位</text>
+</svg>

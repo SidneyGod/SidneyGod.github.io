@@ -15,7 +15,6 @@ hexo.extend.filter.register('theme_inject', injects => {
 
   let config = utils.defaultConfigFile('sidney', '../source/_data/sidney/default.yml');
   if (!config.enable) return;
-
   injects.bodyEnd.raw('sidney_bodyEnd',
       utils.getFileContent('../source/_data/sidney/sidney_bodyEnd.njk'));
 });

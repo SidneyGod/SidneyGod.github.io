@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1030"
+   height="900"
+   version="1.1"
+   id="svg32"
+   sodipodi:docname="17-nan-frames.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview32"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.01"
+     inkscape:cx="590.09901"
+     inkscape:cy="469.80198"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg32" />
+  <defs
+     id="defs3">
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="1053.1855"
+       y2="1053.1855"
+       gradientTransform="scale(0.97798526,0.8545502)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <style
+       id="style2">text{font-family:'Maple Mono Normal NL NF CN', monospace;}</style>
+    <marker
+       id="ar"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="7"
+       markerHeight="7"
+       orient="auto">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#cbd5e1"
+         id="path2" />
+    </marker>
+    <marker
+       id="arc"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="7"
+       markerHeight="7"
+       orient="auto">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#5eead4"
+         id="path3" />
+    </marker>
+  </defs>
+  <rect
+     width="1030"
+     height="900"
+     fill="url(#bg)"
+     id="rect3"
+     style="fill:url(#bg);stroke-width:0.914187"
+     x="0"
+     y="0" />
+  <text
+     x="516"
+     y="34"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="20px"
+     font-weight="700"
+     id="text3">Wi-Fi Aware 完整帧交互 — 从同步到建链传数据</text>
+  <text
+     x="516"
+     y="58"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="12px"
+     id="text4">没有 AP、没有 association；全靠 Beacon 对表 + SDF 发现 + NAF 建链。所有帧 ToDS=FromDS=0，A3 都填 Cluster ID</text>
+  <!-- lifelines: A(300) / 空口(590 中央广播带) / B(880) -->
+  <rect
+     x="106"
+     y="84"
+     width="240"
+     height="50"
+     rx="8"
+     fill="#3f2d6b"
+     stroke="#a78bfa"
+     stroke-width="2"
+     id="rect4" />
+  <text
+     x="226"
+     y="105"
+     text-anchor="middle"
+     fill="#ddd6fe"
+     font-size="14px"
+     font-weight="700"
+     id="text5">设备 A（手机）</text>
+  <text
+     x="226"
+     y="124"
+     text-anchor="middle"
+     fill="#c4b5fd"
+     font-size="10px"
+     id="text6">Publisher / NDP Responder</text>
+  <rect
+     x="686"
+     y="84"
+     width="240"
+     height="50"
+     rx="8"
+     fill="#0c3a2e"
+     stroke="#34d399"
+     stroke-width="2"
+     id="rect6" />
+  <text
+     x="806"
+     y="105"
+     text-anchor="middle"
+     fill="#a7f3d0"
+     font-size="14px"
+     font-weight="700"
+     id="text7">设备 B（手机）</text>
+  <text
+     x="806"
+     y="124"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="10px"
+     id="text8">Subscriber / NDP Initiator</text>
+  <line
+     x1="226"
+     y1="134"
+     x2="226"
+     y2="862"
+     stroke="#475569"
+     stroke-width="1.5"
+     stroke-dasharray="4, 4"
+     id="line8" />
+  <line
+     x1="806"
+     y1="134"
+     x2="806"
+     y2="862"
+     stroke="#475569"
+     stroke-width="1.5"
+     stroke-dasharray="4, 4"
+     id="line9" />
+  <!-- (opt) trigger -->
+  <rect
+     x="21"
+     y="148"
+     width="990"
+     height="30"
+     rx="6"
+     fill="#0c1e3a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     stroke-dasharray="5, 3"
+     id="rect9" />
+  <text
+     x="516"
+     y="168"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="11px"
+     id="text9">⓪（可选）BLE TDS / NFC 碰一碰 先&quot;叫醒&quot;对方 NAN 射频（§11/§12，见 6.10 节）</text>
+  <!-- ① 同步 -->
+  <rect
+     x="21"
+     y="188"
+     width="990"
+     height="118"
+     rx="8"
+     fill="#0c2a2a"
+     stroke="#14b8a6"
+     stroke-width="1.5"
+     id="rect10" />
+  <text
+     x="39"
+     y="208"
+     fill="#5eead4"
+     font-size="13px"
+     font-weight="700"
+     id="text10">① 同步 · 靠 Beacon 对表，无 AP（§3.3）— 在 DW（每 512 TU 的 16 TU，信道 6）内进行</text>
+  <line
+     x1="226"
+     y1="234"
+     x2="802"
+     y2="234"
+     stroke="#5eead4"
+     stroke-width="1.6"
+     marker-end="url(#arc)"
+     id="line10" />
+  <text
+     x="514"
+     y="228"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11px"
+     id="text11">NAN Synchronization Beacon（DW 内，A1=广播 · A2=NMI · A3=Cluster ID）</text>
+  <line
+     x1="806"
+     y1="262"
+     x2="230"
+     y2="262"
+     stroke="#5eead4"
+     stroke-width="1.6"
+     marker-end="url(#arc)"
+     id="line11" />
+  <text
+     x="514"
+     y="256"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11px"
+     id="text12">NAN Synchronization Beacon（双向互发，收敛出 Anchor Master 作时间基准）</text>
+  <text
+     x="39"
+     y="288"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text13">DW 之间，Master 角色还周期发 NAN Discovery Beacon（A1=广播），让簇外新设备发现本 Cluster</text>
+  <text
+     x="39"
+     y="301"
+     fill="#64748b"
+     font-size="9.5px"
+     id="text14">没有 Cluster 时：被动扫描 → 扫不到就自己建簇、自当 Anchor Master（6.2.2 节）</text>
+  <!-- ② 服务发现 -->
+  <rect
+     x="21"
+     y="316"
+     width="990"
+     height="120"
+     rx="8"
+     fill="#332b0a"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="rect14" />
+  <text
+     x="39"
+     y="336"
+     fill="#fde68a"
+     font-size="13px"
+     font-weight="700"
+     id="text15">② 服务发现 · SDF（Service Discovery Frame，§4）— 在 DW 内收发，承载 Service Descriptor 属性</text>
+  <line
+     x1="226"
+     y1="362"
+     x2="802"
+     y2="362"
+     stroke="#fbbf24"
+     stroke-width="2"
+     marker-end="url(#ar)"
+     id="line15" />
+  <text
+     x="514"
+     y="356"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11px"
+     id="text16">SDF：Publish &quot;我有文件分享&quot;（服务名哈希 + Matching Filter）</text>
+  <line
+     x1="806"
+     y1="392"
+     x2="230"
+     y2="392"
+     stroke="#fbbf24"
+     stroke-width="2"
+     marker-end="url(#ar)"
+     id="line16" />
+  <text
+     x="514"
+     y="386"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11px"
+     id="text17">SDF：Subscribe &quot;谁能分享文件&quot;（订阅方主动找；二者经 Matching Filter 匹配）</text>
+  <text
+     x="514"
+     y="418"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text18">A1=对端 NMI 或 NAN Network ID（组播 51:6F:9A:01:00:00） · A2=NMI · A3=Cluster ID　|　可选 Follow-up 私聊细节</text>
+  <!-- ③ 建数据通道 NAF -->
+  <rect
+     x="21"
+     y="446"
+     width="990"
+     height="210"
+     rx="8"
+     fill="#1e1b4b"
+     stroke="#818cf8"
+     stroke-width="1.5"
+     id="rect18" />
+  <text
+     x="39"
+     y="466"
+     fill="#c7d2fe"
+     font-size="13px"
+     font-weight="700"
+     id="text19">③ 建数据通道 · NAF（NAN Action Frame，§6.2）— 订阅方(B)作 NDP Initiator 发起</text>
+  <line
+     x1="806"
+     y1="492"
+     x2="230"
+     y2="492"
+     stroke="#a5b4fc"
+     stroke-width="2"
+     marker-end="url(#ar)"
+     id="line19" />
+  <text
+     x="514"
+     y="486"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11px"
+     id="text20">Data Path Request NAF（NDP/NDPE 属性 Type=Request + 设备能力 + 安全要求）</text>
+  <line
+     x1="226"
+     y1="520"
+     x2="802"
+     y2="520"
+     stroke="#a5b4fc"
+     stroke-width="2"
+     marker-end="url(#ar)"
+     id="line20" />
+  <text
+     x="514"
+     y="514"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11px"
+     id="text21">Data Path Response NAF（Accepted / Rejected）</text>
+  <line
+     x1="806"
+     y1="552"
+     x2="230"
+     y2="552"
+     stroke="#a5b4fc"
+     stroke-width="1.7"
+     marker-end="url(#ar)"
+     id="line21" />
+  <text
+     x="514"
+     y="546"
+     text-anchor="middle"
+     fill="#cbd5e1"
+     font-size="10.5px"
+     id="text22">Data Path Confirm NAF（确认 NDL；含密钥确认）</text>
+  <line
+     x1="226"
+     y1="578"
+     x2="802"
+     y2="578"
+     stroke="#a5b4fc"
+     stroke-width="1.7"
+     marker-end="url(#ar)"
+     id="line22" />
+  <text
+     x="514"
+     y="572"
+     text-anchor="middle"
+     fill="#cbd5e1"
+     font-size="10.5px"
+     id="text23">Data Path Security Install NAF（下发 GTK，仅安全 NDP）</text>
+  <text
+     x="39"
+     y="606"
+     fill="#facc15"
+     font-size="10.5px"
+     font-weight="700"
+     id="text24">非安全：Request→Response(→Confirm) 即可　|　安全：四帧握手 Request→Response→Confirm→Security Install，建 ND-TKSA</text>
+  <text
+     x="39"
+     y="624"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text25">同时建立 NDL Schedule（双方 CRB 重叠窗）；带 NDPE 属性互换 IPv6 链路本地地址 → 升级成 IP 链路（6.6.4 节）</text>
+  <text
+     x="39"
+     y="642"
+     fill="#64748b"
+     font-size="9.5px"
+     id="text26">这些帧用 NMI 收发；A1=对端 NMI/Network ID · A2=NMI · A3=Cluster ID</text>
+  <!-- ④ 传数据 -->
+  <rect
+     x="21"
+     y="666"
+     width="990"
+     height="96"
+     rx="8"
+     fill="#0c2a16"
+     stroke="#22c55e"
+     stroke-width="1.5"
+     id="rect26" />
+  <text
+     x="39"
+     y="686"
+     fill="#86efac"
+     font-size="13px"
+     font-weight="700"
+     id="text27">④ 传数据 · NDP 数据帧（用 NDI，不再用 NMI）— 全程不经 AP</text>
+  <line
+     x1="226"
+     y1="712"
+     x2="802"
+     y2="712"
+     stroke="#4ade80"
+     stroke-width="3"
+     marker-end="url(#ar)"
+     id="line27" />
+  <line
+     x1="806"
+     y1="738"
+     x2="230"
+     y2="738"
+     stroke="#4ade80"
+     stroke-width="3"
+     marker-end="url(#ar)"
+     id="line28" />
+  <text
+     x="514"
+     y="706"
+     text-anchor="middle"
+     fill="#bbf7d0"
+     font-size="11px"
+     font-weight="700"
+     id="text28">App 用 TCP/UDP socket 直接收发（A1=对端 NDI · A2=本端 NDI · A3=Cluster ID）</text>
+  <text
+     x="514"
+     y="756"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text29">在 NDC 约定的资源块/信道（2.4G 用 6，5G 用 149/44）收发；其余时间休眠省电</text>
+  <!-- key: address roles -->
+  <rect
+     x="21"
+     y="776"
+     width="990"
+     height="58"
+     rx="6"
+     fill="#0f172a"
+     stroke="#475569"
+     stroke-width="1"
+     id="rect29" />
+  <text
+     x="39"
+     y="796"
+     fill="#cbd5e1"
+     font-size="11px"
+     font-weight="700"
+     id="text30">关键：管理面用 NMI（同步/发现/建链），数据面用 NDI（NDP 数据）——两套身份分离</text>
+  <text
+     x="39"
+     y="816"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text31">NAN Network ID = 51:6F:9A:01:00:00（组播 SDF/NAF 用）　Cluster ID = 50:6F:9A:01:xx:xx（始终填在 A3）</text>
+  <text
+     x="516"
+     y="864"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="10.5px"
+     id="text32">对照前几章：NAN 没有&quot;关联 + 4 次握手&quot;那一套；同步靠 Beacon 自组织，发现靠 SDF，建链靠 NAF，安全在 NDP 握手里就地完成</text>
+</svg>
