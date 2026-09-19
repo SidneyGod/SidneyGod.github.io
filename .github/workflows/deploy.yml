@@ -12,11 +12,11 @@ env:
 jobs:
   build:
     name: Build on node ${{ matrix.node_version }} and ${{ matrix.os }}
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
-        os: [ubuntu-18.04]
-        node_version: [16.14.2]
+        os: [ubuntu-22.04]
+        node_version: [22.13.0]
 
     steps:
       - name: Checkout source
