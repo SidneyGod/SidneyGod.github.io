@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640">
+  <style>
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; }
+    .title { fill: #e2e8f0; font-size: 17px; font-weight: bold; }
+    .subtitle { fill: #94a3b8; font-size: 12px; }
+    .col-label { fill: #e2e8f0; font-size: 11px; font-weight: bold; }
+    .node-primary { fill: #e2e8f0; font-size: 12px; }
+    .node-primary-sm { fill: #e2e8f0; font-size: 11px; }
+    .node-sub { fill: #94a3b8; font-size: 10px; }
+    .note { fill: #cbd5e1; font-size: 12px; }
+  </style>
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1a"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#10b981"/>
+    </marker>
+  </defs>
+  <rect width="960" height="640" fill="url(#bg-grad)"/>
+  <text x="480" y="34" text-anchor="middle" class="title">两条下行通道对比：管理帧 vs 数据帧（WPS M1-M8）</text>
+  <text x="480" y="54" text-anchor="middle" class="subtitle">PD / GO-Neg 走管理帧链；WPS M1-M8 走 EAPOL 数据帧链，两者分离</text>
+  <rect x="40" y="110" width="420" height="420" fill="rgba(51,65,85,0.05)" stroke="#334155" stroke-width="1" stroke-dasharray="4,4" rx="4"/>
+  <rect x="500" y="110" width="420" height="420" fill="rgba(51,65,85,0.05)" stroke="#334155" stroke-width="1" stroke-dasharray="4,4" rx="4"/>
+  <rect x="48" y="107" width="210" height="18" rx="3" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+  <text x="153" y="120" text-anchor="middle" class="col-label">管理帧通道（PD / GO-Neg）</text>
+  <rect x="508" y="107" width="224" height="18" rx="3" fill="#1e293b" stroke="#10b981" stroke-width="1"/>
+  <text x="620" y="120" text-anchor="middle" class="col-label">数据帧通道（WPS M1-M8 EAPOL）</text>
+  <rect x="100.0" y="150" width="300" height="56" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="250.0" y="175" text-anchor="middle" class="node-primary">wpas_p2p 构建 Action 帧</text>
+  <text x="250.0" y="194" text-anchor="middle" class="node-sub">supplicant 层</text>
+  <rect x="100.0" y="250" width="300" height="56" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="250.0" y="275" text-anchor="middle" class="node-primary">nl80211</text>
+  <text x="250.0" y="294" text-anchor="middle" class="node-sub">NL80211_CMD_FRAME</text>
+  <rect x="100.0" y="350" width="300" height="56" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="250.0" y="370" text-anchor="middle" class="node-primary-sm">__wlan_hdd_mgmt_tx()</text>
+  <text x="250.0" y="384" text-anchor="middle" class="node-primary-sm">p2pFuncTxMgmtFrame()</text>
+  <text x="250.0" y="397" text-anchor="middle" class="node-sub">QCOM / MTK · 驱动下发</text>
+  <rect x="100.0" y="450" width="300" height="56" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="250.0" y="475" text-anchor="middle" class="node-primary">空中（管理帧）</text>
+  <text x="250.0" y="494" text-anchor="middle" class="node-sub">Action 帧</text>
+  <rect x="560.0" y="150" width="300" height="56" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+  <text x="710.0" y="175" text-anchor="middle" class="node-primary">wpa_supplicant_eapol_send()</text>
+  <text x="710.0" y="194" text-anchor="middle" class="node-sub">supplicant EAP 层</text>
+  <rect x="560.0" y="250" width="300" height="56" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+  <text x="710.0" y="275" text-anchor="middle" class="node-primary">control port / L2</text>
+  <text x="710.0" y="294" text-anchor="middle" class="node-sub">数据帧下发</text>
+  <rect x="560.0" y="350" width="300" height="56" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+  <text x="710.0" y="375" text-anchor="middle" class="node-primary">驱动数据路径</text>
+  <text x="710.0" y="394" text-anchor="middle" class="node-sub">数据帧</text>
+  <rect x="560.0" y="450" width="300" height="56" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+  <text x="710.0" y="475" text-anchor="middle" class="node-primary">空中（数据帧）</text>
+  <text x="710.0" y="494" text-anchor="middle" class="node-sub">EAPOL</text>
+  <line x1="250.0" y1="206" x2="250.0" y2="248" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+  <line x1="710.0" y1="206" x2="710.0" y2="248" stroke="#10b981" stroke-width="1.8" marker-end="url(#arrow-green)"/>
+  <line x1="250.0" y1="306" x2="250.0" y2="348" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+  <line x1="710.0" y1="306" x2="710.0" y2="348" stroke="#10b981" stroke-width="1.8" marker-end="url(#arrow-green)"/>
+  <line x1="250.0" y1="406" x2="250.0" y2="448" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+  <line x1="710.0" y1="406" x2="710.0" y2="448" stroke="#10b981" stroke-width="1.8" marker-end="url(#arrow-green)"/>
+  <rect x="40" y="560" width="880" height="58" rx="6" fill="rgba(234,179,8,0.08)" stroke="#eab308" stroke-width="1"/>
+  <text x="480" y="581" text-anchor="middle" class="note">M1-M8 走 EAPOL 数据帧通道，与 PD / GO-Neg 的管理帧通道分离</text>
+  <text x="480" y="600" text-anchor="middle" class="note">不经 nl80211 FRAME —— 走 EAPOL / 数据帧</text>
+</svg>

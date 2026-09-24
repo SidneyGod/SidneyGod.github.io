@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 965" width="960" height="965">
+<!-- validate: skip-gap-consistency -->
+<style>
+  text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; letter-spacing: 0.02em; }
+  .arrow-blue { fill:none; stroke:#3b82f6; stroke-width:2; marker-end:url(#arrow-blue); }
+  .arrow-green { fill:none; stroke:#10b981; stroke-width:2; marker-end:url(#arrow-green); }
+</style>
+<defs>
+<linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#0f0f1a"/>
+<stop offset="100%" stop-color="#1a1a2e"/>
+</linearGradient>
+<marker id="arrow-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+<polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/>
+</marker>
+<marker id="arrow-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+<polygon points="0 0, 8 3, 0 6" fill="#10b981"/>
+</marker>
+<filter id="glow-gold" x="-20%" y="-20%" width="140%" height="140%">
+<feGaussianBlur stdDeviation="3" result="blur"/>
+<feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+</defs>
+<rect width="960" height="965" fill="url(#bg-grad)"/>
+<text x="480" y="28" text-anchor="middle" font-size="18" font-weight="700" fill="#e2e8f0">WiFi RTT（802.11mc FTM）Android 全链路调用链</text>
+<text x="480" y="48" text-anchor="middle" font-size="12" fill="#94a3b8">蓝箭头 = 请求下发 · 绿箭头 = 结果回传（distanceInMm 逆流）</text>
+<text x="20" y="97" font-size="11" fill="#94a3b8">App</text>
+<text x="20" y="290" font-size="11" fill="#94a3b8">Framework</text>
+<text x="20" y="530" font-size="11" fill="#94a3b8">Vendor HAL</text>
+<text x="20" y="725" font-size="11" fill="#94a3b8">驱动层</text>
+<text x="20" y="845" font-size="11" fill="#94a3b8">固件</text>
+<rect x="100" y="70" width="760" height="48" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+<rect x="280" y="80" width="400" height="36" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="480" y="103" text-anchor="middle" font-size="12" fill="#e2e8f0">WifiRttManager.startRanging（构造 RangingRequest）</text>
+<rect x="100" y="150" width="760" height="280" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+<text x="120" y="172" font-size="13" font-weight="700" fill="#e2e8f0">Framework 层（system_server 进程）</text>
+<rect x="220" y="190" width="440" height="42" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="440" y="215" text-anchor="middle" font-size="12" fill="#e2e8f0">RttServiceImpl.startRanging（校验+权限）</text>
+<rect x="220" y="244" width="440" height="42" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="440" y="269" text-anchor="middle" font-size="12" fill="#e2e8f0">RttServiceSynchronized.queueRangingRequest（队列状态机）</text>
+<rect x="220" y="298" width="440" height="42" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="440" y="323" text-anchor="middle" font-size="12" fill="#e2e8f0">RttServiceSynchronized.startRanging（分配 cmdId + 超时）</text>
+<rect x="220" y="352" width="440" height="42" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="440" y="377" text-anchor="middle" font-size="12" fill="#e2e8f0">WifiRttController.rangeRequest（HAL 门面）</text>
+<path class="arrow-blue" d="M 440 232 V 244"/>
+<path class="arrow-blue" d="M 440 286 V 298"/>
+<path class="arrow-blue" d="M 440 340 V 352"/>
+<text x="712" y="296" font-size="10.5" fill="#10b981">回调逆流（cmdId 对账）</text>
+<line x1="110" y1="442" x2="850" y2="442" stroke="#475569" stroke-width="1.2" stroke-dasharray="6,4"/>
+<text x="480" y="452" text-anchor="middle" font-size="11" fill="#94a3b8">AIDL Binder：android.hardware.wifi.IWifiRttController</text>
+<path class="arrow-blue" d="M 480 116 V 150"/>
+<path class="arrow-blue" d="M 440 394 V 458"/>
+<rect x="100" y="458" width="760" height="150" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+<text x="120" y="480" font-size="13" font-weight="700" fill="#e2e8f0">Vendor HAL 层（wifi 进程）</text>
+<rect x="190" y="492" width="500" height="30" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="440" y="512" text-anchor="middle" font-size="12" fill="#e2e8f0">WifiRttController::rangeRequest（aidl default）</text>
+<rect x="190" y="528" width="500" height="30" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="440" y="548" text-anchor="middle" font-size="12" fill="#e2e8f0">WifiLegacyHal::startRttRangeRequest</text>
+<rect x="190" y="564" width="500" height="30" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="440" y="584" text-anchor="middle" font-size="12" fill="#e2e8f0">厂商函数表 wifi_rtt_range_request</text>
+<path class="arrow-blue" d="M 440 522 V 528"/>
+<path class="arrow-blue" d="M 440 558 V 564"/>
+<text x="712" y="525" font-size="10.5" fill="#10b981">回调：legacy→AIDL 转换</text>
+<path class="arrow-blue" d="M 440 594 V 616 H 300 V 688"/>
+<path class="arrow-blue" d="M 440 594 V 616 H 580 V 688"/>
+<text x="480" y="636" text-anchor="middle" font-size="11" fill="#94a3b8">nl80211 vendor command 边界</text>
+<rect x="100" y="650" width="760" height="150" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+<text x="120" y="672" font-size="13" font-weight="700" fill="#e2e8f0">驱动层（nl80211 vendor 命令分发）</text>
+<rect x="100" y="688" width="350" height="96" rx="6" fill="#0b1220" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="120" y="708" font-size="11" font-weight="700" fill="#60a5fa">QCOM 分支 · 瘦主机胖固件（引擎驱动）</text>
+<text x="120" y="728" font-size="10.5" fill="#cbd5e1">rtt.cpp → getLowiCallbackTable → LOWI</text>
+<text x="120" y="748" font-size="10.5" fill="#cbd5e1">→ wifi_pos → WMI（ucfg_wifi_pos_process_req）</text>
+<rect x="510" y="688" width="350" height="96" rx="6" fill="#0b1220" stroke="#ea580c" stroke-width="1.5"/>
+<text x="525" y="708" font-size="11" font-weight="700" fill="#fb923c">MTK 分支 · 主机组命令 / 固件算距离</text>
+<text x="525" y="728" font-size="10.5" fill="#cbd5e1">gl_vendor.c:mtk_cfg80211_vendor_set_rtt_config</text>
+<text x="525" y="748" font-size="10.5" fill="#cbd5e1">→ rttHandleRttRequest → rttSendCmd</text>
+<rect x="100" y="810" width="760" height="90" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+<rect x="240" y="820" width="480" height="68" rx="6" fill="#0b1220" stroke="#eab308" stroke-width="2" filter="url(#glow-gold)"/>
+<text x="480" y="844" text-anchor="middle" font-size="14" font-weight="700" fill="#fcd34d">FTM 帧交换 + T1-T4 时间戳</text>
+<text x="480" y="866" text-anchor="middle" font-size="11" fill="#94a3b8">（主机不可见 · 核心在这）</text>
+<path class="arrow-blue" d="M 300 784 V 820"/>
+<path class="arrow-blue" d="M 580 784 V 820"/>
+<path class="arrow-green" d="M 260 820 V 784"/>
+<path class="arrow-green" d="M 680 820 V 784"/>
+<path class="arrow-green" d="M 250 688 V 594"/>
+<path class="arrow-green" d="M 650 688 V 594"/>
+<path class="arrow-green" d="M 700 594 V 146 H 660 V 116"/>
+<text x="712" y="142" font-size="10.5" fill="#10b981">结果 distanceInMm 逆流</text>
+<text x="480" y="926" text-anchor="middle" font-size="11" fill="#94a3b8">两处跨进程边界：Binder（Framework↔Vendor HAL）· nl80211 vendor command（HAL↔驱动）</text>
+<text x="480" y="948" text-anchor="middle" font-size="11" fill="#94a3b8">固件框最小但高亮——FTM 距离真相（T1-T4）在固件；主机只做参数透传 + 结果聚合</text>
+</svg>

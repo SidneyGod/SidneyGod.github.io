@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620">
+<!-- validate: skip-gap-consistency -->
+<style>
+  text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; letter-spacing: 0.02em; }
+  .lifeline { stroke:#475569; stroke-width:1.5; stroke-dasharray:4,4; }
+  .msg-orange { fill:none; stroke:#f97316; stroke-width:2; marker-end:url(#arrow-orange); }
+  .msg-green { fill:none; stroke:#10b981; stroke-width:2; marker-end:url(#arrow-green); }
+</style>
+<defs>
+<linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#0f0f1a"/>
+<stop offset="100%" stop-color="#1a1a2e"/>
+</linearGradient>
+<marker id="arrow-orange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+<polygon points="0 0, 8 3, 0 6" fill="#f97316"/>
+</marker>
+<marker id="arrow-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+<polygon points="0 0, 8 3, 0 6" fill="#10b981"/>
+</marker>
+</defs>
+<rect width="1200" height="620" fill="url(#bg-grad)"/>
+<text x="600" y="28" text-anchor="middle" font-size="18" font-weight="700" fill="#e2e8f0">NAN NDP 的 4-way handshake（M1-M4）：ND-TKSA 建立</text>
+<text x="600" y="48" text-anchor="middle" font-size="12" fill="#94a3b8">载体 = NAN Action Frame（Data Path Key Installment）· 地址用双方 NDI 而非 NMI</text>
+<rect x="180" y="68" width="300" height="80" rx="6" fill="#1c1917" stroke="#ea580c" stroke-width="1.5"/>
+<text x="330" y="92" text-anchor="middle" font-size="14" font-weight="700" fill="#fb923c">NDP Initiator</text>
+<text x="330" y="114" text-anchor="middle" font-size="11" fill="#94a3b8">扮演 Authenticator（hostapd / AP 侧）</text>
+<text x="330" y="136" text-anchor="middle" font-size="11" fill="#64748b">wpa_auth（hostapd 状态机）</text>
+<rect x="720" y="68" width="300" height="80" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="870" y="92" text-anchor="middle" font-size="14" font-weight="700" fill="#34d399">NDP Responder</text>
+<text x="870" y="114" text-anchor="middle" font-size="11" fill="#94a3b8">扮演 Supplicant（STA 侧）</text>
+<text x="870" y="136" text-anchor="middle" font-size="11" fill="#64748b">wpa_sm（supplicant 状态机）</text>
+<path class="lifeline" d="M 330 148 V 470"/>
+<path class="lifeline" d="M 870 148 V 470"/>
+<path class="msg-orange" d="M 348 190 H 852"/>
+<text x="600" y="180" text-anchor="middle" font-size="13" font-weight="700" fill="#fb923c">M1 · INonce + SCIA/CSIA</text>
+<text x="600" y="206" text-anchor="middle" font-size="11" fill="#94a3b8">Initiator 发 Nonce + 安全上下文（Data Path 帧）</text>
+<path class="msg-green" d="M 852 270 H 348"/>
+<text x="600" y="260" text-anchor="middle" font-size="13" font-weight="700" fill="#34d399">M2 · RNonce + SCIA（确认 Cipher Suite）</text>
+<path class="msg-orange" d="M 348 350 H 852"/>
+<text x="600" y="340" text-anchor="middle" font-size="13" font-weight="700" fill="#fb923c">M3 · install bit + MIC + GTK KDE</text>
+<path class="msg-green" d="M 852 430 H 348"/>
+<text x="600" y="420" text-anchor="middle" font-size="13" font-weight="700" fill="#34d399">M4 · install bit + MIC</text>
+<rect x="150" y="480" width="900" height="110" rx="6" fill="#0f172a" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="600" y="506" text-anchor="middle" font-size="12" font-weight="700" fill="#a855f7">PTK 派生（MTK 复用 wpa_pmk_to_ptk / wpa_common.c）</text>
+<text x="600" y="534" text-anchor="middle" font-size="14" fill="#e2e8f0">PTK = PRF(PMK, "NAN Pairwise key expansion", IAddr || RAddr || INonce || RNonce)</text>
+<text x="600" y="558" text-anchor="middle" font-size="11" fill="#94a3b8">IAddr / RAddr = 双方 NDI 地址（非 NMI）· SCID = PMKID（类型 1）· Cipher：NCS-SK-CCM-128 / NCS-SK-GCM-256</text>
+<text x="600" y="578" text-anchor="middle" font-size="11" fill="#94a3b8">入口：nanSecNotify4wayBegin（Initiator 走 hostapd 侧 · Responder 走 supplicant 侧）</text>
+</svg>

@@ -1,0 +1,1042 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1080 700"
+   width="1080"
+   height="700"
+   version="1.1"
+   id="svg53"
+   sodipodi:docname="10d-QCOM-SAP-FSM状态机.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview53"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.92"
+     inkscape:cx="479.34783"
+     inkscape:cy="363.58696"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg53" />
+  <defs
+     id="defs7">
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="954.3584"
+       gradientTransform="scale(1.1316505,0.73347704)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <!-- Arrow markers -->
+    <marker
+       id="arrow-purple"
+       viewBox="0 0 10 828"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#7c3aed"
+         id="path2" />
+    </marker>
+    <marker
+       id="arrow-orange"
+       viewBox="0 0 10 828"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#ea580c"
+         id="path3" />
+    </marker>
+    <marker
+       id="arrow-green"
+       viewBox="0 0 10 828"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#059669"
+         id="path4" />
+    </marker>
+    <marker
+       id="arrow-red"
+       viewBox="0 0 10 828"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#dc2626"
+         id="path5" />
+    </marker>
+    <marker
+       id="arrow-slate"
+       viewBox="0 0 10 828"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#64748b"
+         id="path6" />
+    </marker>
+    <marker
+       id="arrow-muted"
+       viewBox="0 0 10 828"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#475569"
+         id="path7" />
+    </marker>
+  </defs>
+  <!-- Background -->
+  <rect
+     width="1080"
+     height="700"
+     fill="url(#bg)"
+     id="rect7"
+     style="fill:url(#bg);stroke-width:0.911068"
+     x="0"
+     y="0" />
+  <!-- Title -->
+  <text
+     x="530"
+     y="26"
+     text-anchor="middle"
+     font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+     font-size="18px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text7">QCOM SAP FSM 状态机</text>
+  <!-- ========== STATE 1: SAP_INIT ========== -->
+  <g
+     id="g15"
+     transform="translate(-20,-16)">
+    <rect
+       x="50"
+       y="100"
+       width="200"
+       height="180"
+       rx="6"
+       fill="#1e1b4b"
+       stroke="#7c3aed"
+       stroke-width="2"
+       id="rect8" />
+    <!-- State name header -->
+    <rect
+       x="50"
+       y="100"
+       width="200"
+       height="180"
+       rx="6"
+       fill="#7c3aed"
+       fill-opacity="0.2"
+       id="rect9" />
+    <text
+       x="150"
+       y="121"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="15px"
+       font-weight="bold"
+       fill="#7c3aed"
+       id="text9">SAP_INIT</text>
+    <!-- Entry actions -->
+    <text
+       x="66"
+       y="152"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#a78bfa"
+       font-style="italic"
+       id="text10">entry/</text>
+    <text
+       x="106"
+       y="152"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#c4b5fd"
+       id="text11">fsm_state = SAP_INIT</text>
+    <text
+       x="66"
+       y="174"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#a78bfa"
+       font-style="italic"
+       id="text12">entry/</text>
+    <text
+       x="106"
+       y="174"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#c4b5fd"
+       id="text13">解析加密 IE</text>
+    <text
+       x="66"
+       y="196"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#a78bfa"
+       font-style="italic"
+       id="text14">entry/</text>
+    <text
+       x="106"
+       y="196"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#c4b5fd"
+       id="text15">ACL 配置</text>
+    <!-- Subtle divider -->
+    <line
+       x1="66"
+       y1="138"
+       x2="234"
+       y2="138"
+       stroke="#7c3aed"
+       stroke-opacity="0.3"
+       stroke-width="1"
+       id="line15" />
+  </g>
+  <!-- ========== STATE 2: SAP_STARTING ========== -->
+  <g
+     id="g22"
+     transform="translate(-20,-16)">
+    <rect
+       x="330"
+       y="100"
+       width="200"
+       height="180"
+       rx="6"
+       fill="#1c1917"
+       stroke="#ea580c"
+       stroke-width="2"
+       id="rect15" />
+    <rect
+       x="330"
+       y="100"
+       width="200"
+       height="180"
+       rx="6"
+       fill="#ea580c"
+       fill-opacity="0.2"
+       id="rect16" />
+    <text
+       x="430"
+       y="121"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="15px"
+       font-weight="bold"
+       fill="#ea580c"
+       id="text16">SAP_STARTING</text>
+    <!-- Entry actions -->
+    <text
+       x="346"
+       y="152"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#fb923c"
+       font-style="italic"
+       id="text17">entry/</text>
+    <text
+       x="386"
+       y="152"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#fed7aa"
+       id="text18">信道校验</text>
+    <text
+       x="346"
+       y="174"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#fb923c"
+       font-style="italic"
+       id="text19">entry/</text>
+    <text
+       x="386"
+       y="174"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#fed7aa"
+       id="text20">并发覆盖</text>
+    <text
+       x="346"
+       y="196"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#fb923c"
+       font-style="italic"
+       id="text21">entry/</text>
+    <text
+       x="388"
+       y="196"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#fed7aa"
+       id="text22">DFS NOL 检查</text>
+    <line
+       x1="346"
+       y1="138"
+       x2="514"
+       y2="138"
+       stroke="#ea580c"
+       stroke-opacity="0.3"
+       stroke-width="1"
+       id="line22" />
+  </g>
+  <!-- ========== STATE 3: SAP_STARTED ========== -->
+  <g
+     id="g27"
+     transform="translate(-20,-16)">
+    <rect
+       x="610"
+       y="100"
+       width="200"
+       height="180"
+       rx="6"
+       fill="#052e16"
+       stroke="#059669"
+       stroke-width="2"
+       id="rect22" />
+    <rect
+       x="610"
+       y="100"
+       width="200"
+       height="180"
+       rx="6"
+       fill="#059669"
+       fill-opacity="0.2"
+       id="rect23" />
+    <text
+       x="710"
+       y="121"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="15px"
+       font-weight="bold"
+       fill="#059669"
+       id="text23">SAP_STARTED</text>
+    <!-- Do activity -->
+    <text
+       x="626"
+       y="152"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#34d399"
+       font-style="italic"
+       id="text24">do/</text>
+    <text
+       x="654"
+       y="152"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#a7f3d0"
+       id="text25">发射 Beacon</text>
+    <text
+       x="626"
+       y="174"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#34d399"
+       font-style="italic"
+       id="text26">do/</text>
+    <text
+       x="654"
+       y="174"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#a7f3d0"
+       id="text27">处理 Auth/Assoc</text>
+    <line
+       x1="626"
+       y1="138"
+       x2="794"
+       y2="138"
+       stroke="#059669"
+       stroke-opacity="0.3"
+       stroke-width="1"
+       id="line27" />
+  </g>
+  <!-- ========== STATE 4: SAP_STOPPING ========== -->
+  <g
+     id="g32"
+     transform="translate(-20,-16)">
+    <rect
+       x="890"
+       y="100"
+       width="170"
+       height="180"
+       rx="6"
+       fill="#1a0505"
+       stroke="#dc2626"
+       stroke-width="2"
+       id="rect27" />
+    <rect
+       x="890"
+       y="100"
+       width="170"
+       height="180"
+       rx="6"
+       fill="#dc2626"
+       fill-opacity="0.2"
+       id="rect28" />
+    <text
+       x="975"
+       y="121"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="15px"
+       font-weight="bold"
+       fill="#dc2626"
+       id="text28">SAP_STOPPING</text>
+    <!-- Entry actions -->
+    <text
+       x="906"
+       y="152"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#f87171"
+       font-style="italic"
+       id="text29">entry/</text>
+    <text
+       x="946"
+       y="152"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="10px"
+       fill="#fecaca"
+       id="text30">wlansap_stop_bss()</text>
+    <text
+       x="906"
+       y="174"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#f87171"
+       font-style="italic"
+       id="text31">entry/</text>
+    <text
+       x="946"
+       y="174"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#fecaca"
+       id="text32">释放资源</text>
+    <line
+       x1="906"
+       y1="138"
+       x2="1044"
+       y2="138"
+       stroke="#dc2626"
+       stroke-opacity="0.3"
+       stroke-width="1"
+       id="line32" />
+  </g>
+  <!-- ========== TRANSITION ARROWS ========== -->
+  <!-- INIT → STARTING: eSAP_HDD_START_INFRA_BSS -->
+  <g
+     id="g33"
+     transform="translate(-40,-16)">
+    <line
+       x1="270"
+       y1="198"
+       x2="345"
+       y2="198"
+       stroke="#7c3aed"
+       stroke-width="1.5"
+       marker-end="url(#arrow-purple)"
+       id="line33" />
+    <rect
+       x="233"
+       y="206"
+       width="170"
+       height="18"
+       rx="3"
+       fill="#0f0f1a"
+       fill-opacity="0.8"
+       id="rect33" />
+    <text
+       x="318"
+       y="219"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="10px"
+       fill="#a78bfa"
+       id="text33">eSAP_HDD_START_INFRA_BSS</text>
+  </g>
+  <!-- STARTING → STARTED: eSAP_MAC_START_BSS_SUCCESS -->
+  <g
+     id="g34"
+     transform="translate(-20,-16)">
+    <line
+       x1="530"
+       y1="190"
+       x2="605"
+       y2="190"
+       stroke="#059669"
+       stroke-width="1.5"
+       marker-end="url(#arrow-green)"
+       id="line34" />
+    <rect
+       x="486"
+       y="198"
+       width="185"
+       height="18"
+       rx="3"
+       fill="#0f0f1a"
+       fill-opacity="0.8"
+       id="rect34" />
+    <text
+       x="578"
+       y="211"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="10px"
+       fill="#34d399"
+       id="text34">eSAP_MAC_START_BSS_SUCCESS</text>
+  </g>
+  <!-- STARTING self-loop: DFS CAC (curved right) -->
+  <g
+     id="g36"
+     transform="translate(-20,-16)">
+    <path
+       d="m 530,160 c 50,-50 50,-70 0,-60"
+       fill="none"
+       stroke="#ea580c"
+       stroke-width="1.5"
+       stroke-dasharray="6, 3"
+       marker-end="url(#arrow-orange)"
+       id="path34" />
+    <rect
+       x="555"
+       y="88"
+       width="75"
+       height="16"
+       rx="3"
+       fill="#1c1917"
+       fill-opacity="0.9"
+       id="rect35" />
+    <text
+       x="592"
+       y="100"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="10px"
+       fill="#fb923c"
+       id="text35">DFS CAC</text>
+    <!-- 60s CAC timer annotation -->
+    <text
+       x="592"
+       y="82"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="10px"
+       fill="#9a3412"
+       id="text36">60s CAC 计时器</text>
+  </g>
+  <!-- STARTED → STOPPING: eSAP_HDD_STOP_INFRA_BSS -->
+  <g
+     id="g37"
+     transform="translate(-20,-16)">
+    <line
+       x1="810"
+       y1="190"
+       x2="885"
+       y2="190"
+       stroke="#059669"
+       stroke-width="1.5"
+       marker-end="url(#arrow-green)"
+       id="line36" />
+    <rect
+       x="764"
+       y="198"
+       width="175"
+       height="18"
+       rx="3"
+       fill="#0f0f1a"
+       fill-opacity="0.8"
+       id="rect36" />
+    <text
+       x="851"
+       y="211"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="10px"
+       fill="#34d399"
+       id="text37">eSAP_HDD_STOP_INFRA_BSS</text>
+  </g>
+  <!-- STOPPING → terminal (down arrow) -->
+  <g
+     id="g39">
+    <line
+       x1="975"
+       y1="280"
+       x2="975"
+       y2="310"
+       stroke="#dc2626"
+       stroke-width="1.5"
+       marker-end="url(#arrow-red)"
+       id="line37" />
+    <rect
+       x="905"
+       y="296"
+       width="149.87607"
+       height="18"
+       rx="2.417356"
+       fill="#0f0f1a"
+       fill-opacity="0.8"
+       id="rect37"
+       style="stroke-width:0.897655" />
+    <text
+       x="975"
+       y="309"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="10px"
+       fill="#f87171"
+       id="text38">eSAP_MAC_STOP_BSS_SUCCESS</text>
+    <!-- Terminal circle -->
+    <circle
+       cx="975"
+       cy="326"
+       r="8"
+       fill="none"
+       stroke="#dc2626"
+       stroke-width="2"
+       id="circle38" />
+    <circle
+       cx="975"
+       cy="326"
+       r="4"
+       fill="#dc2626"
+       id="circle39" />
+  </g>
+  <!-- STARTED → STARTING: eSAP_DFS_RADAR_DETECT (back arrow, dashed) -->
+  <g
+     id="g40"
+     transform="translate(-20,-16)">
+    <path
+       d="m 710,280 c 0,50 -280,50 -280,0"
+       fill="none"
+       stroke="#dc2626"
+       stroke-width="1.5"
+       stroke-dasharray="6, 3"
+       marker-end="url(#arrow-red)"
+       id="path39" />
+    <line
+       x1="595"
+       y1="316"
+       x2="595"
+       y2="330"
+       stroke="#dc2626"
+       stroke-width="0.8"
+       opacity="0.5"
+       id="line39" />
+    <rect
+       x="510"
+       y="306"
+       width="170"
+       height="18"
+       rx="3"
+       fill="#0f0f1a"
+       fill-opacity="0.8"
+       id="rect39" />
+    <text
+       x="595"
+       y="319"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="10px"
+       fill="#f87171"
+       id="text39">eSAP_DFS_RADAR_DETECT</text>
+  </g>
+  <!-- STARTING → STOPPING: failure path (red dashed) -->
+  <g
+     id="g41"
+     transform="translate(-20,-16)">
+    <path
+       d="m 430,280 c 0,80 545,80 545,0"
+       fill="none"
+       stroke="#dc2626"
+       stroke-width="1.5"
+       stroke-dasharray="6, 3"
+       marker-end="url(#arrow-red)"
+       id="path40" />
+    <line
+       x1="727"
+       y1="352"
+       x2="727"
+       y2="360"
+       stroke="#dc2626"
+       stroke-width="0.8"
+       opacity="0.5"
+       id="line40" />
+    <rect
+       x="640"
+       y="338"
+       width="193"
+       height="18"
+       rx="3"
+       fill="#0f0f1a"
+       fill-opacity="0.8"
+       id="rect40" />
+    <text
+       x="727"
+       y="351"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="10px"
+       fill="#f87171"
+       id="text40">eSAP_MAC_START_BSS_FAILURE</text>
+  </g>
+  <!-- Initial state dot (left of SAP_INIT) -->
+  <circle
+     cx="10"
+     cy="174"
+     r="8"
+     fill="#7c3aed"
+     id="circle41" />
+  <line
+     x1="18"
+     y1="174"
+     x2="25"
+     y2="174"
+     stroke="#7c3aed"
+     stroke-width="1.5"
+     marker-end="url(#arrow-purple)"
+     id="line41" />
+  <!-- ========== BOTTOM SECTION: Async Callback Chain ========== -->
+  <g
+     id="g50"
+     transform="translate(-20,-88)">
+    <!-- Panel background -->
+    <rect
+       x="30"
+       y="468"
+       width="1040"
+       height="296.52173"
+       rx="6"
+       fill="#0f172a"
+       stroke="#334155"
+       stroke-width="1.40081"
+       id="rect41" />
+    <!-- Panel title -->
+    <text
+       x="550"
+       y="498"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="15px"
+       font-weight="bold"
+       fill="#e2e8f0"
+       id="text41">异步回调链：FSM → HDD 同步等待</text>
+    <line
+       x1="30"
+       y1="510"
+       x2="1070"
+       y2="510"
+       stroke="#334155"
+       stroke-width="1"
+       id="line42" />
+    <!-- Row 1: sap_fsm() → sap_signal_hdd_event() → sap_ctx->sap_event_cb() → hdd_hostapd_sap_event_cb() -->
+    <!-- Box 1: sap_fsm() -->
+    <rect
+       x="60"
+       y="528"
+       width="160"
+       height="40"
+       rx="6"
+       fill="#1e293b"
+       stroke="#64748b"
+       stroke-width="1.5"
+       id="rect42" />
+    <text
+       x="140"
+       y="553"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="13px"
+       fill="#e2e8f0"
+       id="text42">sap_fsm()</text>
+    <!-- Arrow 1→2 -->
+    <line
+       x1="220"
+       y1="548"
+       x2="260"
+       y2="548"
+       stroke="#64748b"
+       stroke-width="1.5"
+       marker-end="url(#arrow-slate)"
+       id="line43" />
+    <!-- Box 2: sap_signal_hdd_event() -->
+    <rect
+       x="260"
+       y="528"
+       width="180"
+       height="40"
+       rx="6"
+       fill="#1e293b"
+       stroke="#64748b"
+       stroke-width="1.5"
+       id="rect43" />
+    <text
+       x="350"
+       y="553"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="13px"
+       fill="#e2e8f0"
+       id="text43">sap_signal_hdd_event()</text>
+    <!-- Arrow 2→3 -->
+    <line
+       x1="440"
+       y1="548"
+       x2="480"
+       y2="548"
+       stroke="#64748b"
+       stroke-width="1.5"
+       marker-end="url(#arrow-slate)"
+       id="line44" />
+    <!-- Box 3: sap_ctx->sap_event_cb() -->
+    <rect
+       x="480"
+       y="528"
+       width="200"
+       height="40"
+       rx="6"
+       fill="#1e293b"
+       stroke="#64748b"
+       stroke-width="1.5"
+       id="rect44" />
+    <text
+       x="580"
+       y="553"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="13px"
+       fill="#e2e8f0"
+       id="text44">sap_ctx-&gt;sap_event_cb()</text>
+    <!-- Arrow 3→4 -->
+    <line
+       x1="680"
+       y1="548"
+       x2="720"
+       y2="548"
+       stroke="#64748b"
+       stroke-width="1.5"
+       marker-end="url(#arrow-slate)"
+       id="line45" />
+    <!-- Box 4: hdd_hostapd_sap_event_cb() -->
+    <rect
+       x="720"
+       y="528"
+       width="220"
+       height="40"
+       rx="6"
+       fill="#1e293b"
+       stroke="#64748b"
+       stroke-width="1.5"
+       id="rect45" />
+    <text
+       x="830"
+       y="553"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="12px"
+       fill="#e2e8f0"
+       id="text45">hdd_hostapd_sap_event_cb()</text>
+    <!-- Row 2: qdf_event_set() → qdf_wait_single_event() -->
+    <!-- Arrow down from box 4 -->
+    <path
+       d="m 734,568 v 27.17418 H 345.93691 v 27.17419"
+       fill="none"
+       stroke="#64748b"
+       stroke-width="1.40614"
+       marker-end="url(#arrow-slate)"
+       id="path45" />
+    <!-- Box 5: qdf_event_set() -->
+    <rect
+       x="250"
+       y="623"
+       width="200"
+       height="40"
+       rx="6"
+       fill="#1e293b"
+       stroke="#059669"
+       stroke-width="1.5"
+       id="rect46" />
+    <text
+       x="350"
+       y="648"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="13px"
+       fill="#e2e8f0"
+       id="text46">qdf_event_set()</text>
+    <!-- Arrow 5→6 -->
+    <line
+       x1="450"
+       y1="643"
+       x2="530"
+       y2="643"
+       stroke="#059669"
+       stroke-width="1.5"
+       marker-end="url(#arrow-green)"
+       id="line46" />
+    <!-- Box 6: qdf_wait_single_event() -->
+    <rect
+       x="530"
+       y="623"
+       width="230"
+       height="40"
+       rx="6"
+       fill="#1e293b"
+       stroke="#059669"
+       stroke-width="1.5"
+       id="rect47" />
+    <text
+       x="645"
+       y="648"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="12px"
+       fill="#e2e8f0"
+       id="text47">qdf_wait_single_event() 唤醒</text>
+    <!-- Dashed line from box 6 back up to box 4 to show completion -->
+    <path
+       d="m 747.30313,623.38621 -0.26296,-19.99878 83.0408,-0.77579 -0.46018,-34.99785"
+       fill="none"
+       stroke="#475569"
+       stroke-width="1.08921"
+       stroke-dasharray="4, 3"
+       id="path47"
+       inkscape:transform-center-x="-4.421256" />
+    <!-- Annotations -->
+    <text
+       x="60"
+       y="690"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="12px"
+       fill="#475569"
+       id="text48">超时 11s (8000ms + 2000ms + 1000ms)</text>
+    <text
+       x="60"
+       y="712"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="12px"
+       fill="#475569"
+       id="text49">stop_bss 超时 ≈12s</text>
+    <!-- Flow direction hint -->
+    <text
+       x="550"
+       y="746"
+       text-anchor="middle"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="11px"
+       fill="#334155"
+       id="text50">FSM 线程发出事件 → HDD 线程回调处理 → 信号量唤醒 → FSM 线程继续</text>
+  </g>
+  <!-- Legend -->
+  <g
+     id="g53"
+     transform="translate(-20,-88)">
+    <rect
+       x="60"
+       y="428"
+       width="420"
+       height="28"
+       rx="4"
+       fill="#0f172a"
+       fill-opacity="0.6"
+       stroke="#334155"
+       stroke-width="0.5"
+       id="rect50" />
+    <!-- Legend items -->
+    <line
+       x1="75"
+       y1="442"
+       x2="105"
+       y2="442"
+       stroke="#059669"
+       stroke-width="2"
+       id="line50" />
+    <text
+       x="110"
+       y="446"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="10px"
+       fill="#94a3b8"
+       id="text51">正常路径</text>
+    <line
+       x1="175"
+       y1="442"
+       x2="205"
+       y2="442"
+       stroke="#dc2626"
+       stroke-width="2"
+       stroke-dasharray="6, 3"
+       id="line51" />
+    <text
+       x="210"
+       y="446"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="10px"
+       fill="#94a3b8"
+       id="text52">失败 / 雷达检测</text>
+    <line
+       x1="320"
+       y1="442"
+       x2="350"
+       y2="442"
+       stroke="#ea580c"
+       stroke-width="2"
+       stroke-dasharray="6, 3"
+       id="line52" />
+    <text
+       x="355"
+       y="446"
+       font-family="'Maple Mono Normal NL NF CN', Monaco, 'Microsoft YaHei', monospace"
+       font-size="10px"
+       fill="#94a3b8"
+       id="text53">DFS CAC 循环</text>
+  </g>
+</svg>

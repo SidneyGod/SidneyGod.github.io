@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 500"
+   width="1200"
+   height="500"
+   version="1.1"
+   id="svg38"
+   sodipodi:docname="07-preamble-puncturing.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview38"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.45"
+     inkscape:cx="600"
+     inkscape:cy="250"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg38" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card-grad"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+  </defs>
+  <rect
+     width="1200"
+     height="500"
+     fill="url(#bg-grad)"
+     id="rect4" />
+  <!-- Title -->
+  <text
+     x="600"
+     y="35"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="18"
+     font-weight="700"
+     id="text4">Preamble Puncturing — Skip the Construction Zone</text>
+  <text
+     x="600"
+     y="55"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="13"
+     id="text5">Preamble Puncturing — 避开堵塞的路段，继续使用其余道路</text>
+  <!-- Without Puncturing -->
+  <rect
+     x="40"
+     y="75"
+     width="1120"
+     height="170"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect5" />
+  <text
+     x="80"
+     y="100"
+     fill="#ef4444"
+     font-size="14"
+     font-weight="700"
+     id="text6">传统方式（无 Preamble Puncturing）</text>
+  <text
+     x="80"
+     y="118"
+     fill="#94a3b8"
+     font-size="11"
+     id="text7">320 MHz 信道，中间 80 MHz 被雷达占用 → 整条路都不能用</text>
+  <!-- 320 MHz channel with blocked section -->
+  <rect
+     x="60"
+     y="135"
+     width="160"
+     height="45"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect7" />
+  <text
+     x="140"
+     y="155"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="10"
+     id="text8">80 MHz</text>
+  <text
+     x="140"
+     y="170"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9"
+     id="text9">可用 ✓</text>
+  <rect
+     x="225"
+     y="135"
+     width="160"
+     height="45"
+     rx="4"
+     fill="#7f1d1d"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     id="rect9" />
+  <text
+     x="305"
+     y="155"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="10"
+     id="text10">80 MHz</text>
+  <text
+     x="305"
+     y="170"
+     text-anchor="middle"
+     fill="#f87171"
+     font-size="9"
+     id="text11">雷达占用 ✗</text>
+  <rect
+     x="390"
+     y="135"
+     width="160"
+     height="45"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect11" />
+  <text
+     x="470"
+     y="155"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="10"
+     id="text12">80 MHz</text>
+  <text
+     x="470"
+     y="170"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9"
+     id="text13">可用 ✓</text>
+  <rect
+     x="555"
+     y="135"
+     width="160"
+     height="45"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect13" />
+  <text
+     x="635"
+     y="155"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="10"
+     id="text14">80 MHz</text>
+  <text
+     x="635"
+     y="170"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9"
+     id="text15">可用 ✓</text>
+  <!-- X mark -->
+  <line
+     x1="70"
+     y1="140"
+     x2="700"
+     y2="175"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     id="line15" />
+  <line
+     x1="70"
+     y1="175"
+     x2="700"
+     y2="140"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     id="line16" />
+  <text
+     x="380"
+     y="200"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="12"
+     font-weight="600"
+     id="text16">整条 320 MHz 信道无法使用！</text>
+  <text
+     x="380"
+     y="218"
+     text-anchor="middle"
+     fill="#f87171"
+     font-size="10"
+     id="text17">只能降级使用 160 MHz 甚至 80 MHz</text>
+  <text
+     x="850"
+     y="170"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="11"
+     id="text18">比喻：一条高速公路上有一段施工</text>
+  <text
+     x="850"
+     y="188"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="11"
+     id="text19">传统方式：整条路都不能走</text>
+  <!-- With Puncturing -->
+  <rect
+     x="40"
+     y="265"
+     width="1120"
+     height="170"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect19" />
+  <text
+     x="80"
+     y="290"
+     fill="#10b981"
+     font-size="14"
+     font-weight="700"
+     id="text20">Preamble Puncturing（802.11be）</text>
+  <text
+     x="80"
+     y="308"
+     fill="#94a3b8"
+     font-size="11"
+     id="text21">跳过被占用的子信道，使用剩余带宽 → 240 MHz 仍然可用！</text>
+  <!-- 320 MHz channel with punctured section -->
+  <rect
+     x="60"
+     y="325"
+     width="160"
+     height="45"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect21" />
+  <text
+     x="140"
+     y="345"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="10"
+     id="text22">80 MHz</text>
+  <text
+     x="140"
+     y="360"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9"
+     id="text23">可用 ✓</text>
+  <!-- Punctured section - different style -->
+  <rect
+     x="225"
+     y="325"
+     width="160"
+     height="45"
+     rx="4"
+     fill="#1c1917"
+     stroke="#475569"
+     stroke-width="1"
+     stroke-dasharray="6,3"
+     id="rect23" />
+  <text
+     x="305"
+     y="345"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="10"
+     id="text24">80 MHz</text>
+  <text
+     x="305"
+     y="360"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="9"
+     id="text25">跳过 (Punctured)</text>
+  <rect
+     x="390"
+     y="325"
+     width="160"
+     height="45"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect25" />
+  <text
+     x="470"
+     y="345"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="10"
+     id="text26">80 MHz</text>
+  <text
+     x="470"
+     y="360"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9"
+     id="text27">可用 ✓</text>
+  <rect
+     x="555"
+     y="325"
+     width="160"
+     height="45"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect27" />
+  <text
+     x="635"
+     y="345"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="10"
+     id="text28">80 MHz</text>
+  <text
+     x="635"
+     y="360"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9"
+     id="text29">可用 ✓</text>
+  <!-- Result -->
+  <rect
+     x="60"
+     y="380"
+     width="660"
+     height="30"
+     rx="4"
+     fill="#065f46"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect29" />
+  <text
+     x="390"
+     y="400"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text30">实际使用: 80 + 80 + 80 = 240 MHz (跳过被占的 80 MHz)</text>
+  <text
+     x="850"
+     y="360"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="11"
+     id="text31">比喻：跳过施工路段</text>
+  <text
+     x="850"
+     y="378"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="11"
+     id="text32">其他路段继续使用</text>
+  <!-- Benefit stats -->
+  <rect
+     x="850"
+     y="390"
+     width="290"
+     height="35"
+     rx="4"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect32" />
+  <text
+     x="995"
+     y="412"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     id="text33">效率: 240/320 = 75% (vs 传统 0%)</text>
+  <!-- Bottom: Use cases -->
+  <rect
+     x="40"
+     y="450"
+     width="1120"
+     height="40"
+     rx="8"
+     fill="url(#card-grad)"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect33" />
+  <text
+     x="100"
+     y="475"
+     fill="#60a5fa"
+     font-size="10"
+     id="text34">应用场景:</text>
+  <text
+     x="250"
+     y="475"
+     fill="#94a3b8"
+     font-size="10"
+     id="text35">DFS 信道被雷达占用</text>
+  <text
+     x="470"
+     y="475"
+     fill="#94a3b8"
+     font-size="10"
+     id="text36">相邻网络干扰</text>
+  <text
+     x="650"
+     y="475"
+     fill="#94a3b8"
+     font-size="10"
+     id="text37">频谱碎片化环境</text>
+  <text
+     x="850"
+     y="475"
+     fill="#94a3b8"
+     font-size="10"
+     id="text38">6 GHz 频段动态共享</text>
+</svg>

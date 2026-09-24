@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1220 830"
+   width="1220"
+   height="830"
+   version="1.1"
+   id="svg49"
+   sodipodi:docname="06e-eapol-statemachine.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview49"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1385417"
+     inkscape:cx="494.49222"
+     inkscape:cy="366.69716"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg49" />
+  <title
+     id="title1">EAPOL 四子状态机架构</title>
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN',Monaco,'Microsoft YaHei',monospace; }
+</style>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg-grad"
+       x1="0"
+       y1="0"
+       x2="1082.2198"
+       y2="1082.2198"
+       gradientTransform="scale(1.1273124,0.76694209)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="ag"
+       markerWidth="8"
+       markerHeight="6"
+       refX="8"
+       refY="3"
+       orient="auto">
+      <path
+         d="M 0,0.5 7,3 0,5.5"
+         fill="none"
+         stroke="#10b981"
+         stroke-width="1.2"
+         id="path2" />
+    </marker>
+    <marker
+       id="ar"
+       markerWidth="8"
+       markerHeight="6"
+       refX="8"
+       refY="3"
+       orient="auto">
+      <path
+         d="M 0,0.5 7,3 0,5.5"
+         fill="none"
+         stroke="#ef4444"
+         stroke-width="1.2"
+         id="path3" />
+    </marker>
+    <marker
+       id="an"
+       markerWidth="8"
+       markerHeight="6"
+       refX="8"
+       refY="3"
+       orient="auto">
+      <path
+         d="M 0,0.5 7,3 0,5.5"
+         fill="none"
+         stroke="#475569"
+         stroke-width="1.2"
+         id="path4" />
+    </marker>
+  </defs>
+  <rect
+     width="1220"
+     height="830"
+     fill="url(#bg-grad)"
+     id="rect4"
+     style="fill:url(#bg-grad);stroke-width:0.92983"
+     x="0"
+     y="0" />
+  <text
+     x="8"
+     y="20"
+     font-size="16px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text4">EAPOL Sub-State Machines (SUPP_BE not expanded) — Driven by eapol_sm_step()</text>
+  <text
+     x="12"
+     y="38"
+     font-size="11px"
+     fill="#94a3b8"
+     id="text5">SUPP_PAE / KEY_RX / SUPP_BE / EAP Peer → green path=success, → red path=failure, → gray=fallback</text>
+  <rect
+     x="510"
+     y="55"
+     width="200"
+     height="36"
+     rx="6"
+     fill="#1e293b"
+     stroke="#38bdf8"
+     stroke-width="2"
+     id="rect5" />
+  <text
+     x="610"
+     y="75"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="12px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text6">eapol_sm_step()</text>
+  <rect
+     x="90"
+     y="105"
+     width="260"
+     height="48"
+     rx="4"
+     fill="#1e293b"
+     stroke="#38bdf8"
+     stroke-width="1.5"
+     stroke-dasharray="3, 2"
+     id="rect6" />
+  <text
+     x="220"
+     y="122"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="10px"
+     font-weight="600"
+     fill="#38bdf8"
+     id="text7">SUPP_PAE</text>
+  <rect
+     x="440"
+     y="105"
+     width="240"
+     height="32"
+     rx="4"
+     fill="#1e293b"
+     stroke="#f97316"
+     stroke-width="1.5"
+     stroke-dasharray="3, 2"
+     id="rect7" />
+  <text
+     x="560"
+     y="122"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="10px"
+     font-weight="600"
+     fill="#f97316"
+     id="text8">KEY_RX</text>
+  <rect
+     x="775"
+     y="105"
+     width="250"
+     height="48"
+     rx="4"
+     fill="#1e293b"
+     stroke="#a78bfa"
+     stroke-width="1.5"
+     stroke-dasharray="3, 2"
+     id="rect8" />
+  <text
+     x="900"
+     y="122"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="10px"
+     font-weight="600"
+     fill="#a78bfa"
+     id="text9">EAP Peer</text>
+  <rect
+     x="150"
+     y="130"
+     width="140"
+     height="30"
+     rx="5"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect9" />
+  <text
+     x="220"
+     y="147"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="12px"
+     font-weight="600"
+     fill="#d1fae5"
+     id="text10">LOGOFF</text>
+  <rect
+     x="150"
+     y="200"
+     width="140"
+     height="30"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     id="rect10" />
+  <text
+     x="220"
+     y="217"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="12px"
+     font-weight="600"
+     fill="#dbeafe"
+     id="text11">DISCONNECTED</text>
+  <rect
+     x="105"
+     y="280"
+     width="231"
+     height="30"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     id="rect11" />
+  <text
+     x="220"
+     y="289"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="12px"
+     font-weight="600"
+     fill="#dbeafe"
+     id="text12">CONNECTING</text>
+  <text
+     x="220"
+     y="304"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#dbeafe"
+     opacity="0.7"
+     id="text13">(send EAPOL-Start)</text>
+  <rect
+     x="150"
+     y="370"
+     width="140"
+     height="30"
+     rx="5"
+     fill="#78350f"
+     stroke="#f97316"
+     stroke-width="1.8"
+     id="rect13" />
+  <text
+     x="220"
+     y="387"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="12px"
+     font-weight="600"
+     fill="#ffedd5"
+     id="text14">AUTHENTICATING</text>
+  <rect
+     x="150"
+     y="460"
+     width="140"
+     height="30"
+     rx="5"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect14" />
+  <text
+     x="220"
+     y="477"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="12px"
+     font-weight="600"
+     fill="#d1fae5"
+     id="text15">AUTHENTICATED</text>
+  <rect
+     x="150"
+     y="540"
+     width="140"
+     height="30"
+     rx="5"
+     fill="#78350f"
+     stroke="#f97316"
+     stroke-width="1.8"
+     id="rect15" />
+  <text
+     x="220"
+     y="557"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="12px"
+     font-weight="600"
+     fill="#ffedd5"
+     id="text16">HELD</text>
+  <rect
+     x="150"
+     y="615"
+     width="140"
+     height="30"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     id="rect16" />
+  <text
+     x="220"
+     y="632"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="12px"
+     font-weight="600"
+     fill="#dbeafe"
+     id="text17">RESTART</text>
+  <rect
+     x="490"
+     y="200"
+     width="140"
+     height="30"
+     rx="5"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect17" />
+  <text
+     x="560"
+     y="217"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="12px"
+     font-weight="600"
+     fill="#d1fae5"
+     id="text18">NO_KEY_RECEIVE</text>
+  <rect
+     x="469"
+     y="428"
+     width="182"
+     height="30"
+     rx="5"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect18" />
+  <text
+     x="560"
+     y="437"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="12px"
+     font-weight="600"
+     fill="#d1fae5"
+     id="text19">KEY_RECEIVE</text>
+  <text
+     x="560"
+     y="452"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#d1fae5"
+     opacity="0.7"
+     id="text20">(4-way HS)</text>
+  <rect
+     x="830"
+     y="130"
+     width="140"
+     height="30"
+     rx="5"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect20" />
+  <text
+     x="900"
+     y="147"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="12px"
+     font-weight="600"
+     fill="#d1fae5"
+     id="text21">IDENTITY</text>
+  <rect
+     x="778.31201"
+     y="210"
+     width="291.71454"
+     height="44.931381"
+     rx="5.4424357"
+     fill="#1e293b"
+     stroke="#6366f1"
+     stroke-width="2.29826"
+     id="rect21" />
+  <text
+     x="900"
+     y="219"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="12px"
+     font-weight="600"
+     fill="#cbd5e1"
+     id="text22">NOTIFICATION</text>
+  <text
+     x="906"
+     y="236"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#cbd5e1"
+     opacity="0.7"
+     id="text23"
+     style="font-size:10.6667px">Notification displayed / acknowledged</text>
+  <rect
+     x="809"
+     y="310"
+     width="182"
+     height="30"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     id="rect23" />
+  <text
+     x="900"
+     y="319"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="12px"
+     font-weight="600"
+     fill="#dbeafe"
+     id="text24">METHOD</text>
+  <text
+     x="900"
+     y="334"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#dbeafe"
+     opacity="0.7"
+     id="text25">(TLS handshake)</text>
+  <rect
+     x="830"
+     y="440"
+     width="140"
+     height="30"
+     rx="5"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect25" />
+  <text
+     x="900"
+     y="457"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="12px"
+     font-weight="600"
+     fill="#d1fae5"
+     id="text26">SUCCESS</text>
+  <rect
+     x="830"
+     y="530"
+     width="140"
+     height="30"
+     rx="5"
+     fill="#7f1d1d"
+     stroke="#ef4444"
+     stroke-width="1.8"
+     id="rect26" />
+  <text
+     x="900"
+     y="547"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-size="12px"
+     font-weight="600"
+     fill="#fee2e2"
+     id="text27">FAILURE</text>
+  <rect
+     x="460"
+     y="685"
+     width="300"
+     height="40"
+     rx="6"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="2"
+     id="rect27" />
+  <text
+     x="610"
+     y="699"
+     text-anchor="middle"
+     font-size="12px"
+     font-weight="700"
+     fill="#d1fae5"
+     id="text28">Callback to upper layer</text>
+  <text
+     x="610"
+     y="713"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#d1fae5"
+     opacity="0.8"
+     id="text29">SUCCESS / FAILURE</text>
+  <line
+     x1="506.35864"
+     y1="76.068619"
+     x2="290.26532"
+     y2="126.48673"
+     stroke="#475569"
+     stroke-width="1.26952"
+     marker-end="url(#an)"
+     id="line29" />
+  <line
+     x1="605.6084"
+     y1="91"
+     x2="593.37604"
+     y2="118.55535"
+     stroke="#475569"
+     stroke-width="1"
+     marker-end="url(#an)"
+     id="line30" />
+  <line
+     x1="710.12811"
+     y1="72.555351"
+     x2="834.12628"
+     y2="131.75664"
+     stroke="#475569"
+     stroke-width="1.20846"
+     marker-end="url(#an)"
+     id="line31" />
+  <line
+     x1="220"
+     y1="162"
+     x2="220"
+     y2="198"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     stroke-dasharray="5, 3"
+     marker-end="url(#ar)"
+     id="line32" />
+  <text
+     x="242"
+     y="184"
+     text-anchor="start"
+     font-size="8"
+     fill="#cbd5e1"
+     id="text32"
+     style="font-size:10.6667px">portEnabled=FALSE</text>
+  <line
+     x1="220"
+     y1="232"
+     x2="220"
+     y2="278"
+     stroke="#10b981"
+     stroke-width="1.5"
+     stroke-dasharray="none"
+     marker-end="url(#ag)"
+     id="line33" />
+  <text
+     x="176"
+     y="256"
+     text-anchor="start"
+     font-size="9"
+     fill="#cbd5e1"
+     id="text33"
+     style="font-size:13.3333px">EAPOL_start</text>
+  <line
+     x1="220"
+     y1="312"
+     x2="220"
+     y2="368"
+     stroke="#10b981"
+     stroke-width="1.5"
+     stroke-dasharray="none"
+     marker-end="url(#ag)"
+     id="line34" />
+  <text
+     x="222"
+     y="343"
+     text-anchor="start"
+     font-size="9"
+     fill="#cbd5e1"
+     id="text34"
+     style="font-size:13.3333px">txStart</text>
+  <line
+     x1="220"
+     y1="402"
+     x2="220"
+     y2="458"
+     stroke="#10b981"
+     stroke-width="1.5"
+     stroke-dasharray="none"
+     marker-end="url(#ag)"
+     id="line35" />
+  <text
+     x="222"
+     y="431"
+     text-anchor="start"
+     font-size="9"
+     fill="#cbd5e1"
+     id="text35"
+     style="font-size:13.3333px">EAP-Success</text>
+  <line
+     x1="220"
+     y1="492"
+     x2="220"
+     y2="198"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     stroke-dasharray="none"
+     marker-end="url(#ar)"
+     id="line36" />
+  <text
+     x="122.77219"
+     y="344.24338"
+     text-anchor="end"
+     font-size="9px"
+     fill="#cbd5e1"
+     id="text36"
+     style="font-size:13.3333px">EAPOL-Logoff</text>
+  <line
+     x1="540.48981"
+     y1="231.84016"
+     x2="540.48981"
+     y2="428.7825"
+     stroke="#10b981"
+     stroke-width="1.74215"
+     stroke-dasharray="none"
+     marker-end="url(#ag)"
+     id="line37" />
+  <text
+     x="498.51785"
+     y="306"
+     text-anchor="start"
+     font-size="9px"
+     fill="#cbd5e1"
+     id="text37"
+     style="font-size:13.3333px">Key Rx</text>
+  <line
+     x1="560"
+     y1="426.67703"
+     x2="560"
+     y2="232"
+     stroke="#ef4444"
+     stroke-width="1.43068"
+     stroke-dasharray="none"
+     marker-end="url(#ar)"
+     id="line38" />
+  <text
+     x="460"
+     y="338"
+     text-anchor="end"
+     font-size="9px"
+     fill="#cbd5e1"
+     id="text38"
+     style="font-size:13.3333px">timeout</text>
+  <line
+     x1="900"
+     y1="162"
+     x2="900"
+     y2="208"
+     stroke="#475569"
+     stroke-width="1.5"
+     stroke-dasharray="none"
+     marker-end="url(#an)"
+     id="line39" />
+  <text
+     x="908"
+     y="186"
+     text-anchor="start"
+     font-size="9"
+     fill="#cbd5e1"
+     id="text39"
+     style="font-size:13.3333px">notification</text>
+  <line
+     x1="854"
+     y1="212.13724"
+     x2="854"
+     y2="146.44464"
+     stroke="#475569"
+     stroke-width="1.13866"
+     stroke-dasharray="5, 3"
+     marker-end="url(#an)"
+     id="line40" />
+  <text
+     x="830"
+     y="186"
+     text-anchor="end"
+     font-size="9"
+     fill="#cbd5e1"
+     id="text40"
+     style="font-size:13.3333px">displayed</text>
+  <path
+     d="M 989.58829,142.67704 H 1101.6834 V 325.56633 H 989.58829"
+     stroke="#10b981"
+     stroke-width="1.6226"
+     fill="none"
+     marker-end="url(#ag)"
+     id="path40" />
+  <text
+     x="1008"
+     y="252"
+     text-anchor="start"
+     font-size="9px"
+     fill="#cbd5e1"
+     id="text41"
+     style="font-size:13.3333px">EAP method</text>
+  <line
+     x1="900"
+     y1="342"
+     x2="900"
+     y2="438"
+     stroke="#10b981"
+     stroke-width="1.5"
+     stroke-dasharray="none"
+     marker-end="url(#ag)"
+     id="line41" />
+  <path
+     d="M 832.91426,456.66892 288.50869,481.71454"
+     stroke="#10b981"
+     stroke-width="1.41629"
+     stroke-dasharray="none"
+     fill="none"
+     marker-end="url(#ag)"
+     id="path41"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 856.61492,529.8661 0.20444,-141.93169 -577.9288,1.74249 -0.92167,-184.65037"
+     stroke="#ef4444"
+     stroke-width="1.31378"
+     stroke-dasharray="none"
+     fill="none"
+     marker-end="url(#ar)"
+     id="path42"
+     sodipodi:nodetypes="cccc" />
+  <line
+     x1="289.38702"
+     y1="459.98904"
+     x2="490.61301"
+     y2="233.37602"
+     stroke="#10b981"
+     stroke-width="1.0097"
+     marker-end="url(#ag)"
+     id="line42" />
+  <path
+     d="m 290,385 h 20 v 170 h -20"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     stroke-dasharray="5, 3"
+     fill="none"
+     marker-end="url(#ar)"
+     id="path43" />
+  <text
+     x="315"
+     y="475"
+     text-anchor="start"
+     font-size="8"
+     fill="#cbd5e1"
+     id="text43"
+     style="font-size:13.3333px">EAP-Failure</text>
+  <line
+     x1="220"
+     y1="572"
+     x2="220"
+     y2="613"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#ag)"
+     id="line43" />
+  <text
+     x="228"
+     y="596"
+     text-anchor="start"
+     font-size="8"
+     fill="#cbd5e1"
+     id="text44"
+     style="font-size:13.3333px">heldAuthWhile=0</text>
+  <path
+     d="m 220,647 v 13 H 126.0796 V 311.6194"
+     stroke="#10b981"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#ag)"
+     id="path44"
+     sodipodi:nodetypes="cccc" />
+  <text
+     x="80"
+     y="470"
+     text-anchor="end"
+     font-size="8"
+     fill="#cbd5e1"
+     id="text45"
+     style="font-size:13.3333px">restart</text>
+  <path
+     d="m 543.44922,461.46752 -7.02653,223.2591"
+     stroke="#10b981"
+     stroke-width="1.0245"
+     fill="none"
+     marker-end="url(#ag)"
+     id="path45"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 220,490 -1.75663,266.14821 324.12625,0.87832 -1.75663,-31.18481"
+     stroke="#10b981"
+     stroke-width="1.49569"
+     fill="none"
+     marker-end="url(#ag)"
+     id="path46"
+     sodipodi:nodetypes="cccc" />
+  <path
+     d="m 900,560 0.87832,202.09515 -291.75664,-0.87832 1.75664,-33.17932"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#ar)"
+     id="path47"
+     sodipodi:nodetypes="cccc" />
+  <line
+     x1="44"
+     y1="802"
+     x2="74"
+     y2="802"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#an)"
+     id="line47" />
+  <text
+     x="80"
+     y="806"
+     font-size="9px"
+     fill="#cbd5e1"
+     id="text47"
+     style="font-size:13.3333px">→ success path</text>
+  <line
+     x1="224"
+     y1="802"
+     x2="254"
+     y2="802"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     marker-end="url(#an)"
+     id="line48" />
+  <text
+     x="260"
+     y="806"
+     font-size="9px"
+     fill="#cbd5e1"
+     id="text48"
+     style="font-size:13.3333px">→ failure path</text>
+  <line
+     x1="404"
+     y1="802"
+     x2="434"
+     y2="802"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#an)"
+     id="line49" />
+  <text
+     x="440"
+     y="806"
+     font-size="9px"
+     fill="#cbd5e1"
+     id="text49"
+     style="font-size:13.3333px">→ eapol_sm_step() dispatches</text>
+  <path
+     d="m 900.09395,473.10532 0.44826,56.04087"
+     id="path49"
+     stroke="#ef4444" />
+  <metadata
+     id="metadata49">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>EAPOL 四子状态机架构</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

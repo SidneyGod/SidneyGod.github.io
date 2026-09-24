@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 620 720"
+   width="620"
+   height="720"
+   version="1.1"
+   id="svg24"
+   sodipodi:docname="17-rtsp-sequence.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview24"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.42"
+     inkscape:cx="480.28169"
+     inkscape:cy="360.21127"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg24" />
+  <!-- validate: skip-gap-consistency -->
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; letter-spacing: 0.02em; }
+</style>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg-grad"
+       x1="0"
+       y1="0"
+       x2="831.3844"
+       y2="831.3844"
+       gradientTransform="scale(0.74574406,0.8660254)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrow-orange"
+       markerWidth="10"
+       markerHeight="7"
+       refX="8.5"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0,7 0,0 10,3.5 "
+         fill="#ea580c"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arrow-blue"
+       markerWidth="10"
+       markerHeight="7"
+       refX="8.5"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0,7 0,0 10,3.5 "
+         fill="#3b82f6"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arrow-green"
+       markerWidth="10"
+       markerHeight="7"
+       refX="8.5"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0,7 0,0 10,3.5 "
+         fill="#10b981"
+         id="polygon4" />
+    </marker>
+  </defs>
+  <rect
+     width="620"
+     height="720"
+     fill="url(#bg-grad)"
+     id="rect4"
+     style="fill:url(#bg-grad);stroke-width:0.803637"
+     x="0"
+     y="0" />
+  <text
+     x="310"
+     y="30"
+     text-anchor="middle"
+     font-size="18px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text4">RTSP 握手时序 — M1 OPTIONS → M7 PLAY（控制面）</text>
+  <rect
+     x="20"
+     y="52"
+     width="140"
+     height="46"
+     rx="6"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1.5"
+     id="rect5" />
+  <text
+     x="90"
+     y="72"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="700"
+     fill="#f97316"
+     id="text5">source</text>
+  <text
+     x="90"
+     y="89"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text6">WifiDisplaySource</text>
+  <rect
+     x="460"
+     y="52"
+     width="140"
+     height="46"
+     rx="6"
+     fill="#1c1917"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect6" />
+  <text
+     x="530"
+     y="72"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="700"
+     fill="#60a5fa"
+     id="text7">sink</text>
+  <text
+     x="530"
+     y="89"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text8">WifiDisplaySink</text>
+  <line
+     x1="90"
+     y1="104"
+     x2="90"
+     y2="668"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="5, 4"
+     id="line8" />
+  <line
+     x1="530"
+     y1="104"
+     x2="530"
+     y2="668"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="5, 4"
+     id="line9" />
+  <line
+     x1="90"
+     y1="130"
+     x2="530"
+     y2="130"
+     stroke="#ea580c"
+     stroke-width="1.6"
+     marker-end="url(#arrow-orange)"
+     id="line10" />
+  <text
+     x="310"
+     y="122"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#f97316"
+     id="text10">M1 OPTIONS</text>
+  <line
+     x1="530"
+     y1="170"
+     x2="90"
+     y2="170"
+     stroke="#10b981"
+     stroke-width="1.6"
+     stroke-dasharray="5, 3"
+     marker-end="url(#arrow-green)"
+     id="line11" />
+  <text
+     x="310"
+     y="162"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#10b981"
+     id="text11">200</text>
+  <line
+     x1="530"
+     y1="210"
+     x2="90"
+     y2="210"
+     stroke="#3b82f6"
+     stroke-width="1.6"
+     marker-end="url(#arrow-blue)"
+     id="line12" />
+  <text
+     x="310"
+     y="202"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#60a5fa"
+     id="text12">M2 OPTIONS</text>
+  <line
+     x1="90"
+     y1="250"
+     x2="530"
+     y2="250"
+     stroke="#10b981"
+     stroke-width="1.6"
+     stroke-dasharray="5, 3"
+     marker-end="url(#arrow-green)"
+     id="line13" />
+  <text
+     x="310"
+     y="242"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#10b981"
+     id="text13">200 + Public</text>
+  <line
+     x1="90"
+     y1="290"
+     x2="530"
+     y2="290"
+     stroke="#ea580c"
+     stroke-width="1.6"
+     marker-end="url(#arrow-orange)"
+     id="line14" />
+  <text
+     x="310"
+     y="282"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#f97316"
+     id="text14">M3 GET_PARAMETER</text>
+  <line
+     x1="530"
+     y1="330"
+     x2="90"
+     y2="330"
+     stroke="#10b981"
+     stroke-width="1.6"
+     stroke-dasharray="5, 3"
+     marker-end="url(#arrow-green)"
+     id="line15" />
+  <text
+     x="310"
+     y="322"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#10b981"
+     id="text15">200 + 能力</text>
+  <line
+     x1="90"
+     y1="370"
+     x2="530"
+     y2="370"
+     stroke="#ea580c"
+     stroke-width="1.6"
+     marker-end="url(#arrow-orange)"
+     id="line16" />
+  <text
+     x="310"
+     y="362"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#f97316"
+     id="text16">M4 SET_PARAMETER 定参数</text>
+  <line
+     x1="530"
+     y1="410"
+     x2="90"
+     y2="410"
+     stroke="#10b981"
+     stroke-width="1.6"
+     stroke-dasharray="5, 3"
+     marker-end="url(#arrow-green)"
+     id="line17" />
+  <text
+     x="310"
+     y="402"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#10b981"
+     id="text17">200</text>
+  <line
+     x1="90"
+     y1="450"
+     x2="530"
+     y2="450"
+     stroke="#ea580c"
+     stroke-width="1.6"
+     marker-end="url(#arrow-orange)"
+     id="line18" />
+  <text
+     x="310"
+     y="442"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#f97316"
+     id="text18">M5 SET_PARAMETER wfd_trigger_method:SETUP</text>
+  <line
+     x1="530"
+     y1="490"
+     x2="90"
+     y2="490"
+     stroke="#10b981"
+     stroke-width="1.6"
+     stroke-dasharray="5, 3"
+     marker-end="url(#arrow-green)"
+     id="line19" />
+  <text
+     x="310"
+     y="482"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#10b981"
+     id="text19">200</text>
+  <line
+     x1="530"
+     y1="530"
+     x2="90"
+     y2="530"
+     stroke="#3b82f6"
+     stroke-width="1.6"
+     marker-end="url(#arrow-blue)"
+     id="line20" />
+  <text
+     x="310"
+     y="522"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#60a5fa"
+     id="text20">M6 SETUP</text>
+  <line
+     x1="90"
+     y1="570"
+     x2="530"
+     y2="570"
+     stroke="#10b981"
+     stroke-width="1.6"
+     stroke-dasharray="5, 3"
+     marker-end="url(#arrow-green)"
+     id="line21" />
+  <text
+     x="310"
+     y="562"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#10b981"
+     id="text21">200 + Session</text>
+  <line
+     x1="530"
+     y1="610"
+     x2="90"
+     y2="610"
+     stroke="#3b82f6"
+     stroke-width="1.6"
+     marker-end="url(#arrow-blue)"
+     id="line22" />
+  <text
+     x="310"
+     y="602"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#60a5fa"
+     id="text22">M7 PLAY</text>
+  <line
+     x1="90"
+     y1="650"
+     x2="530"
+     y2="650"
+     stroke="#10b981"
+     stroke-width="1.6"
+     stroke-dasharray="5, 3"
+     marker-end="url(#arrow-green)"
+     id="line23" />
+  <text
+     x="310"
+     y="642"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#10b981"
+     id="text23">200 → PLAYING</text>
+  <text
+     x="310"
+     y="698"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#94a3b8"
+     id="text24">橙实线 = source 发起请求（M1/M3/M4/M5） · 蓝实线 = sink 发起（M2/M6/M7） · 绿虚线 = 响应</text>
+</svg>

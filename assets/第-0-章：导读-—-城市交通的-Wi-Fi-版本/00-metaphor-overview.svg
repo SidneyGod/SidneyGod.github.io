@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 800"
+   width="1200"
+   height="800"
+   version="1.1"
+   id="svg104"
+   sodipodi:docname="00-metaphor-overview.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview104"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.36625"
+     inkscape:cx="600.18298"
+     inkscape:cy="400"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg104" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="hdr"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="0%">
+      <stop
+         offset="0%"
+         stop-color="#1e1b4b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#172554"
+         id="stop4" />
+    </linearGradient>
+  </defs>
+  <rect
+     width="1200"
+     height="800"
+     fill="url(#bg-grad)"
+     id="rect4" />
+  <!-- Title -->
+  <text
+     x="600"
+     y="40"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="20"
+     font-weight="700"
+     id="text4">Wi-Fi and City Traffic: Complete Metaphor Map</text>
+  <text
+     x="600"
+     y="62"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="13"
+     id="text5">Wi-Fi 与城市交通：比喻映射全景图</text>
+  <!-- ========== Section 1: Infrastructure (top-left) ========== -->
+  <rect
+     x="30"
+     y="85"
+     width="350"
+     height="280"
+     rx="6"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect5" />
+  <rect
+     x="30"
+     y="85"
+     width="350"
+     height="30"
+     rx="6"
+     fill="url(#hdr)"
+     id="rect6" />
+  <rect
+     x="30"
+     y="109"
+     width="350"
+     height="6"
+     fill="#0f172a"
+     id="rect7" />
+  <text
+     x="205"
+     y="106"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="13"
+     font-weight="700"
+     id="text7">Infrastructure / 基础设施</text>
+  <text
+     x="50"
+     y="140"
+     fill="#3b82f6"
+     font-size="12"
+     font-weight="700"
+     id="text8">Wi-Fi</text>
+  <text
+     x="50"
+     y="160"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text9">Spectrum (频谱)</text>
+  <text
+     x="50"
+     y="180"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text10">Channel (信道)</text>
+  <text
+     x="50"
+     y="200"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text11">Band (频段)</text>
+  <text
+     x="50"
+     y="220"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text12">  2.4 / 5 / 6 GHz</text>
+  <text
+     x="50"
+     y="240"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text13">Bandwidth (带宽)</text>
+  <text
+     x="50"
+     y="260"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text14">  20/40/80/160/320 MHz</text>
+  <text
+     x="205"
+     y="300"
+     text-anchor="middle"
+     fill="#334155"
+     font-size="11"
+     id="text15">⟷</text>
+  <line
+     x1="175"
+     y1="305"
+     x2="235"
+     y2="305"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="line15" />
+  <text
+     x="230"
+     y="140"
+     fill="#f97316"
+     font-size="12"
+     font-weight="700"
+     id="text16">Traffic</text>
+  <text
+     x="230"
+     y="160"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text17">Road (道路)</text>
+  <text
+     x="230"
+     y="180"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text18">Lane (车道)</text>
+  <text
+     x="230"
+     y="200"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text19">Road type (道路类型)</text>
+  <text
+     x="230"
+     y="220"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text20">  乡路/快速路/高速</text>
+  <text
+     x="230"
+     y="240"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text21">Road width (路宽)</text>
+  <text
+     x="230"
+     y="260"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text22">  窄路/双车道/多车道</text>
+  <!-- ========== Section 2: Devices (top-right) ========== -->
+  <rect
+     x="410"
+     y="85"
+     width="350"
+     height="280"
+     rx="6"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect22" />
+  <rect
+     x="410"
+     y="85"
+     width="350"
+     height="30"
+     rx="6"
+     fill="url(#hdr)"
+     id="rect23" />
+  <rect
+     x="410"
+     y="109"
+     width="350"
+     height="6"
+     fill="#0f172a"
+     id="rect24" />
+  <text
+     x="585"
+     y="106"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="13"
+     font-weight="700"
+     id="text24">Devices / 设备层</text>
+  <text
+     x="430"
+     y="140"
+     fill="#10b981"
+     font-size="12"
+     font-weight="700"
+     id="text25">Wi-Fi</text>
+  <text
+     x="430"
+     y="160"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text26">AP (Access Point)</text>
+  <text
+     x="430"
+     y="180"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text27">STA (Station)</text>
+  <text
+     x="430"
+     y="200"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text28">BSS (Basic Service Set)</text>
+  <text
+     x="430"
+     y="220"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text29">IBSS (Ad-hoc)</text>
+  <text
+     x="430"
+     y="240"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text30">DS (Distribution System)</text>
+  <text
+     x="585"
+     y="300"
+     text-anchor="middle"
+     fill="#334155"
+     font-size="11"
+     id="text31">⟷</text>
+  <line
+     x1="555"
+     y1="305"
+     x2="615"
+     y2="305"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="line31" />
+  <text
+     x="610"
+     y="140"
+     fill="#f97316"
+     font-size="12"
+     font-weight="700"
+     id="text32">Traffic</text>
+  <text
+     x="610"
+     y="160"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text33">Traffic Hub (交通枢纽)</text>
+  <text
+     x="610"
+     y="180"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text34">Citizen Car (市民车辆)</text>
+  <text
+     x="610"
+     y="200"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text35">Patrol Zone (管辖区域)</text>
+  <text
+     x="610"
+     y="220"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text36">Self-org (自发组织)</text>
+  <text
+     x="610"
+     y="240"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text37">Main Road Net (主干道网)</text>
+  <!-- ========== Section 3: Data (middle-left) ========== -->
+  <rect
+     x="30"
+     y="390"
+     width="350"
+     height="220"
+     rx="6"
+     fill="#0f172a"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect37" />
+  <rect
+     x="30"
+     y="390"
+     width="350"
+     height="30"
+     rx="6"
+     fill="url(#hdr)"
+     id="rect38" />
+  <rect
+     x="30"
+     y="414"
+     width="350"
+     height="6"
+     fill="#0f172a"
+     id="rect39" />
+  <text
+     x="205"
+     y="411"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-size="13"
+     font-weight="700"
+     id="text39">Data / 数据层</text>
+  <text
+     x="50"
+     y="445"
+     fill="#a855f7"
+     font-size="12"
+     font-weight="700"
+     id="text40">Wi-Fi</text>
+  <text
+     x="50"
+     y="465"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text41">Data Frame - Truck (货车)</text>
+  <text
+     x="50"
+     y="485"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text42">Mgmt Frame - Road Sign (路牌)</text>
+  <text
+     x="50"
+     y="505"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text43">Ctrl Frame - Signal (信号灯)</text>
+  <text
+     x="50"
+     y="525"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text44">Frame Header - License Plate (车牌)</text>
+  <text
+     x="50"
+     y="545"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text45">FCS - Inspection (验货)</text>
+  <!-- ========== Section 4: MAC Protocol (middle-right) ========== -->
+  <rect
+     x="410"
+     y="390"
+     width="350"
+     height="220"
+     rx="6"
+     fill="#0f172a"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="rect45" />
+  <rect
+     x="410"
+     y="390"
+     width="350"
+     height="30"
+     rx="6"
+     fill="url(#hdr)"
+     id="rect46" />
+  <rect
+     x="410"
+     y="414"
+     width="350"
+     height="6"
+     fill="#0f172a"
+     id="rect47" />
+  <text
+     x="585"
+     y="411"
+     text-anchor="middle"
+     fill="#eab308"
+     font-size="13"
+     font-weight="700"
+     id="text47">MAC Protocol / 交通规则</text>
+  <text
+     x="430"
+     y="445"
+     fill="#eab308"
+     font-size="12"
+     font-weight="700"
+     id="text48">Wi-Fi</text>
+  <text
+     x="430"
+     y="465"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text49">CSMA/CA - Look First (先看再走)</text>
+  <text
+     x="430"
+     y="485"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text50">NAV - Radio Notice (对讲机通知)</text>
+  <text
+     x="430"
+     y="505"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text51">RTS/CTS - Horn (按喇叭示意)</text>
+  <text
+     x="430"
+     y="525"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text52">IFS - Priority Delay (优先延迟)</text>
+  <text
+     x="430"
+     y="545"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text53">Backoff - Random Wait (随机等待)</text>
+  <text
+     x="430"
+     y="565"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text54">ACK - Sign-off (签收确认)</text>
+  <!-- ========== Section 5: PHY Layer (bottom-left) ========== -->
+  <rect
+     x="30"
+     y="635"
+     width="350"
+     height="150"
+     rx="6"
+     fill="#0f172a"
+     stroke="#dc2626"
+     stroke-width="1.5"
+     id="rect54" />
+  <rect
+     x="30"
+     y="635"
+     width="350"
+     height="30"
+     rx="6"
+     fill="url(#hdr)"
+     id="rect55" />
+  <rect
+     x="30"
+     y="659"
+     width="350"
+     height="6"
+     fill="#0f172a"
+     id="rect56" />
+  <text
+     x="205"
+     y="656"
+     text-anchor="middle"
+     fill="#dc2626"
+     font-size="13"
+     font-weight="700"
+     id="text56">PHY Layer / 车辆与道路技术</text>
+  <text
+     x="50"
+     y="690"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text57">DSSS - Widen Road (拓宽道路)</text>
+  <text
+     x="50"
+     y="710"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text58">FHSS - Hop Lanes (频繁换路)</text>
+  <text
+     x="50"
+     y="730"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text59">OFDM - Parallel Paths (平行小道)</text>
+  <text
+     x="50"
+     y="750"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text60">MIMO - Multi-level Bridge (多层立交)</text>
+  <text
+     x="50"
+     y="770"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text61">Modulation - Cargo Capacity (装载能力)</text>
+  <!-- ========== Section 6: Security & QoS (bottom-right) ========== -->
+  <rect
+     x="410"
+     y="635"
+     width="350"
+     height="150"
+     rx="6"
+     fill="#0f172a"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     id="rect61" />
+  <rect
+     x="410"
+     y="635"
+     width="350"
+     height="30"
+     rx="6"
+     fill="url(#hdr)"
+     id="rect62" />
+  <rect
+     x="410"
+     y="659"
+     width="350"
+     height="6"
+     fill="#0f172a"
+     id="rect63" />
+  <text
+     x="585"
+     y="656"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="13"
+     font-weight="700"
+     id="text63">Security &amp; QoS / 安全与优先级</text>
+  <text
+     x="430"
+     y="690"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text64">WEP - Postcard (明信片)</text>
+  <text
+     x="430"
+     y="710"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text65">WPA2 - Safe (保险柜)</text>
+  <text
+     x="430"
+     y="730"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text66">WPA3 - Strong Safe (强密码箱)</text>
+  <text
+     x="430"
+     y="750"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text67">QoS - Ambulance Lane (急救车道)</text>
+  <text
+     x="430"
+     y="770"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text68">EDCA - Priority Rules (优先级规则)</text>
+  <!-- ========== Right side: Advanced features ========== -->
+  <rect
+     x="790"
+     y="85"
+     width="380"
+     height="700"
+     rx="6"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect68" />
+  <rect
+     x="790"
+     y="85"
+     width="380"
+     height="30"
+     rx="6"
+     fill="url(#hdr)"
+     id="rect69" />
+  <rect
+     x="790"
+     y="109"
+     width="380"
+     height="6"
+     fill="#0f172a"
+     id="rect70" />
+  <text
+     x="980"
+     y="106"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="13"
+     font-weight="700"
+     id="text70">Advanced Features / 高级特性</text>
+  <!-- OFDM/OFDMA -->
+  <rect
+     x="810"
+     y="125"
+     width="170"
+     height="90"
+     rx="4"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1"
+     id="rect71" />
+  <text
+     x="895"
+     y="145"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-size="11"
+     font-weight="700"
+     id="text71">OFDM</text>
+  <text
+     x="895"
+     y="163"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text72">One road, many</text>
+  <text
+     x="895"
+     y="178"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text73">parallel paths</text>
+  <text
+     x="895"
+     y="196"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text74">一条大路分多条小道</text>
+  <rect
+     x="1000"
+     y="125"
+     width="150"
+     height="90"
+     rx="4"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1"
+     id="rect74" />
+  <text
+     x="1075"
+     y="145"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-size="11"
+     font-weight="700"
+     id="text75">OFDMA</text>
+  <text
+     x="1075"
+     y="163"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text76">Each path gets</text>
+  <text
+     x="1075"
+     y="178"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text77">different vehicle</text>
+  <text
+     x="1075"
+     y="196"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text78">每条小道分不同车辆</text>
+  <!-- MIMO -->
+  <rect
+     x="810"
+     y="230"
+     width="340"
+     height="80"
+     rx="4"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect78" />
+  <text
+     x="980"
+     y="252"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="12"
+     font-weight="700"
+     id="text79">MIMO: Multi-level Overpass / 多层立交桥</text>
+  <text
+     x="980"
+     y="272"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text80">Multiple layers transport simultaneously</text>
+  <text
+     x="980"
+     y="290"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text81">多个层次同时运行，互不干扰</text>
+  <!-- Beamforming -->
+  <rect
+     x="810"
+     y="325"
+     width="340"
+     height="70"
+     rx="4"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1"
+     id="rect81" />
+  <text
+     x="980"
+     y="347"
+     text-anchor="middle"
+     fill="#ea580c"
+     font-size="11"
+     font-weight="700"
+     id="text82">Beamforming: Directional Green Light / 定向绿灯</text>
+  <text
+     x="980"
+     y="367"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text83">Concentrate signal toward specific direction</text>
+  <text
+     x="980"
+     y="382"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text84">把信号集中在特定方向</text>
+  <!-- Channel Bonding -->
+  <rect
+     x="810"
+     y="410"
+     width="160"
+     height="70"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect84" />
+  <text
+     x="890"
+     y="432"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="11"
+     font-weight="700"
+     id="text85">Channel Bond</text>
+  <text
+     x="890"
+     y="450"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text86">Merge lanes</text>
+  <text
+     x="890"
+     y="466"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text87">合并车道</text>
+  <!-- Frame Aggregation -->
+  <rect
+     x="990"
+     y="410"
+     width="160"
+     height="70"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect87" />
+  <text
+     x="1070"
+     y="432"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="11"
+     font-weight="700"
+     id="text88">Frame Agg</text>
+  <text
+     x="1070"
+     y="450"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text89">One big truck</text>
+  <text
+     x="1070"
+     y="466"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text90">一辆大卡车</text>
+  <!-- BSS Coloring -->
+  <rect
+     x="810"
+     y="495"
+     width="160"
+     height="70"
+     rx="4"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1"
+     id="rect90" />
+  <text
+     x="890"
+     y="517"
+     text-anchor="middle"
+     fill="#ea580c"
+     font-size="11"
+     font-weight="700"
+     id="text91">BSS Coloring</text>
+  <text
+     x="890"
+     y="535"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text92">Color tags</text>
+  <text
+     x="890"
+     y="551"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text93">颜色标记</text>
+  <!-- TWT -->
+  <rect
+     x="990"
+     y="495"
+     width="160"
+     height="70"
+     rx="4"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1"
+     id="rect93" />
+  <text
+     x="1070"
+     y="517"
+     text-anchor="middle"
+     fill="#ea580c"
+     font-size="11"
+     font-weight="700"
+     id="text94">TWT</text>
+  <text
+     x="1070"
+     y="535"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text95">Scheduled shuttle</text>
+  <text
+     x="1070"
+     y="551"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text96">定时班车</text>
+  <!-- MLO -->
+  <rect
+     x="810"
+     y="580"
+     width="340"
+     height="70"
+     rx="4"
+     fill="#2d0a0a"
+     stroke="#dc2626"
+     stroke-width="1"
+     id="rect96" />
+  <text
+     x="980"
+     y="602"
+     text-anchor="middle"
+     fill="#dc2626"
+     font-size="12"
+     font-weight="700"
+     id="text97">MLO: Multi-Link Operation / 同时走多条路</text>
+  <text
+     x="980"
+     y="622"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text98">Use multiple roads simultaneously</text>
+  <text
+     x="980"
+     y="637"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text99">一次旅程同时利用多条道路</text>
+  <!-- QAM progression -->
+  <rect
+     x="810"
+     y="665"
+     width="340"
+     height="100"
+     rx="4"
+     fill="#0f172a"
+     stroke="#eab308"
+     stroke-width="1"
+     id="rect99" />
+  <text
+     x="980"
+     y="687"
+     text-anchor="middle"
+     fill="#eab308"
+     font-size="11"
+     font-weight="700"
+     id="text100">Modulation Evolution / 调制演进</text>
+  <text
+     x="830"
+     y="707"
+     fill="#94a3b8"
+     font-size="10"
+     id="text101">BPSK(1) - QPSK(2) - 16-QAM(4) - 64-QAM(6)</text>
+  <text
+     x="830"
+     y="725"
+     fill="#94a3b8"
+     font-size="10"
+     id="text102">256-QAM(8) - 1024-QAM(10) - 4096-QAM(12)</text>
+  <text
+     x="830"
+     y="745"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text103">Small car(1 box) to Giant truck(4096 boxes)</text>
+  <text
+     x="830"
+     y="758"
+     fill="#94a3b8"
+     font-size="10"
+     id="text104">小轿车(1箱) 到 巨型卡车(4096箱)</text>
+</svg>

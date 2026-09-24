@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 560" width="1180" height="560">
+<style>text{font-family:'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif;}</style>
+<defs>
+<linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f0f1a"/><stop offset="100%" stop-color="#1a1a2e"/></linearGradient>
+<marker id="m-assoc" markerWidth="10" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7" fill="none" stroke="#3b82f6" stroke-width="1.5"/></marker>
+</defs>
+<rect width="1180" height="560" fill="url(#bg-grad)"/>
+<text x="40" y="42" font-size="18" font-weight="700" fill="#e2e8f0">WifiP2pNative 与 WifiNative 的类职责分工</text>
+<rect x="40" y="110" width="250" height="260" rx="6" ry="6" fill="#1e1b4b" stroke="#a855f7" stroke-width="1.5"/>
+<text x="165" y="138" font-size="14" font-weight="700" fill="#e2e8f0" text-anchor="middle">P2pStateMachine</text>
+<line x1="40" y1="150" x2="290" y2="150" stroke="#334155" stroke-width="1"/>
+<text x="56" y="178" font-size="13" fill="#e2e8f0">mWifiNative</text>
+<text x="56" y="198" font-size="11" fill="#94a3b8">（字段类型 = WifiP2pNative）</text>
+<line x1="40" y1="210" x2="290" y2="210" stroke="#334155" stroke-width="1"/>
+<text x="56" y="236" font-size="12" fill="#e2e8f0">调用 setupInterface()</text>
+<text x="56" y="256" font-size="11" fill="#94a3b8">实际走 WifiP2pNative</text>
+<rect x="400" y="110" width="280" height="260" rx="6" ry="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="540" y="138" font-size="14" font-weight="700" fill="#a7f3d0" text-anchor="middle">WifiP2pNative</text>
+<line x1="400" y1="150" x2="680" y2="150" stroke="#334155" stroke-width="1"/>
+<text x="416" y="178" font-size="13" fill="#e2e8f0">mSupplicantP2pIfaceHal</text>
+<text x="416" y="200" font-size="13" fill="#e2e8f0">mWifiNative : WifiNative</text>
+<line x1="400" y1="214" x2="680" y2="214" stroke="#334155" stroke-width="1"/>
+<text x="416" y="240" font-size="12" fill="#e2e8f0">负责 P2P 特有五步初始化</text>
+<text x="416" y="262" font-size="13" fill="#a7f3d0">setupInterface()</text>
+<text x="416" y="282" font-size="11" fill="#94a3b8">（P2P 专属翻译层）</text>
+<rect x="790" y="110" width="340" height="260" rx="6" ry="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="960" y="138" font-size="14" font-weight="700" fill="#93c5fd" text-anchor="middle">WifiNative</text>
+<line x1="790" y1="150" x2="1130" y2="150" stroke="#334155" stroke-width="1"/>
+<text x="806" y="178" font-size="13" fill="#e2e8f0">mSupplicantStaIfaceHal</text>
+<text x="806" y="200" font-size="11" fill="#94a3b8">（STA 主业直接持有）</text>
+<line x1="790" y1="214" x2="1130" y2="214" stroke="#334155" stroke-width="1"/>
+<text x="806" y="240" font-size="12" fill="#e2e8f0">startHal() / stopHal()</text>
+<text x="806" y="262" font-size="12" fill="#e2e8f0">IfaceManager.allocateIface()</text>
+<text x="806" y="284" font-size="12" fill="#e2e8f0">createP2pIface()</text>
+<text x="806" y="306" font-size="11" fill="#94a3b8">（供 WifiP2pNative 调用）</text>
+<path d="M290,170 L400,170" fill="none" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#m-assoc)"/>
+<text x="345" y="160" font-size="12" fill="#e2e8f0" text-anchor="middle">持有</text>
+<path d="M680,200 L790,200" fill="none" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#m-assoc)"/>
+<text x="735" y="190" font-size="12" fill="#e2e8f0" text-anchor="middle">持有</text>
+<rect x="40" y="400" width="1090" height="140" rx="6" ry="6" fill="#0f172a" stroke="#eab308" stroke-width="1.5"/>
+<text x="56" y="426" font-size="13" font-weight="700" fill="#eab308">STA 侧对照（为什么拆开）</text>
+<text x="56" y="452" font-size="12" fill="#e2e8f0">WifiNative 直接持有 mSupplicantStaIfaceHal —— STA 是 WifiNative 主业，supplicant 交互归它管</text>
+<text x="56" y="478" font-size="12" fill="#e2e8f0">P2P 的 ISupplicantP2pIface 是独立 AIDL 接口，生命周期与 P2pStateMachine 绑定 → 归 WifiP2pNative（mSupplicantP2pIfaceHal）</text>
+<text x="56" y="504" font-size="12" fill="#94a3b8">若全部塞进 WifiNative → 万能类（STA/P2P/SAP/NAN 共享类背上 P2P 专用状态），违反单一职责</text>
+</svg>

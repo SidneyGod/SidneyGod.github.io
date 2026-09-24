@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 980 1100"
+   width="980"
+   height="1100"
+   version="1.1"
+   id="svg37"
+   sodipodi:docname="11d-channel-priority.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview37"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.96725664"
+     inkscape:cx="490.04575"
+     inkscape:cy="565"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg37" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; fill: #e2e8f0; }
+  </style>
+  <defs
+     id="defs2">
+    <linearGradient
+       id="bg-grad"
+       x1="0"
+       y1="0"
+       x2="1052.3307"
+       y2="1052.3307"
+       gradientTransform="scale(0.93126615,1.0452988)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="mk-gray"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0,7 0,0 10,3.5 "
+         fill="#475569"
+         id="polygon2" />
+    </marker>
+  </defs>
+  <rect
+     width="980"
+     height="1100"
+     fill="url(#bg-grad)"
+     id="rect2"
+     style="fill:url(#bg-grad);stroke-width:0.986636"
+     x="0"
+     y="0" />
+  <!-- title -->
+  <text
+     x="490"
+     y="44"
+     text-anchor="middle"
+     font-size="18px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text2">p2p_reselect_channel() 十级信道优先级链</text>
+  <text
+     x="490"
+     y="70"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#94a3b8"
+     id="text3">命中即返回 · 从「理想」到「现实」逐级妥协 · 优先级 ① 高 → ⑩ 低</text>
+  <rect
+     x="40"
+     y="100"
+     width="880"
+     height="76"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect3" />
+  <rect
+     x="40"
+     y="100"
+     width="5"
+     height="76"
+     rx="2.5"
+     fill="#a855f7"
+     id="rect4" />
+  <circle
+     cx="86"
+     cy="138"
+     r="18"
+     fill="none"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="circle4" />
+  <text
+     x="86"
+     y="143"
+     text-anchor="middle"
+     font-size="14px"
+     font-weight="700"
+     fill="#a855f7"
+     id="text4">①</text>
+  <text
+     x="130"
+     y="132"
+     font-size="14px"
+     font-weight="700"
+     fill="#a855f7"
+     id="text5">我方首选频率</text>
+  <text
+     x="130"
+     y="156"
+     font-size="12px"
+     fill="#94a3b8"
+     id="text6">own_freq_preference &gt; 0（wpas_p2p_setup_freqs 选出的 force/pref_freq）</text>
+  <line
+     x1="480"
+     y1="176"
+     x2="480"
+     y2="198"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#mk-gray)"
+     id="line6" />
+  <rect
+     x="40"
+     y="198"
+     width="880"
+     height="76"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect6" />
+  <rect
+     x="40"
+     y="198"
+     width="5"
+     height="76"
+     rx="2.5"
+     fill="#3b82f6"
+     id="rect7" />
+  <circle
+     cx="86"
+     cy="236"
+     r="18"
+     fill="none"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="circle7" />
+  <text
+     x="86"
+     y="241"
+     text-anchor="middle"
+     font-size="14px"
+     font-weight="700"
+     fill="#3b82f6"
+     id="text7">②</text>
+  <text
+     x="130"
+     y="230"
+     font-size="14px"
+     font-weight="700"
+     fill="#3b82f6"
+     id="text8">best_freq_overall</text>
+  <text
+     x="130"
+     y="254"
+     font-size="12px"
+     fill="#94a3b8"
+     id="text9">驱动 vendor cmd 上报（干扰 / DFS / 共存综合推荐）</text>
+  <line
+     x1="480"
+     y1="274"
+     x2="480"
+     y2="296"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#mk-gray)"
+     id="line9" />
+  <rect
+     x="40"
+     y="296"
+     width="880"
+     height="76"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect9" />
+  <rect
+     x="40"
+     y="296"
+     width="5"
+     height="76"
+     rx="2.5"
+     fill="#3b82f6"
+     id="rect10" />
+  <circle
+     cx="86"
+     cy="334"
+     r="18"
+     fill="none"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="circle10" />
+  <text
+     x="86"
+     y="339"
+     text-anchor="middle"
+     font-size="14px"
+     font-weight="700"
+     fill="#3b82f6"
+     id="text10">③</text>
+  <text
+     x="130"
+     y="328"
+     font-size="14px"
+     font-weight="700"
+     fill="#3b82f6"
+     id="text11">2.4↔5 跨频段</text>
+  <text
+     x="130"
+     y="352"
+     font-size="12px"
+     fill="#94a3b8"
+     id="text12">2.4G(2400-2500) 不匹配→best_freq_5；5G(4900-6000)→best_freq_24</text>
+  <line
+     x1="480"
+     y1="372"
+     x2="480"
+     y2="394"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#mk-gray)"
+     id="line12" />
+  <rect
+     x="40"
+     y="394"
+     width="880"
+     height="76"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect12" />
+  <rect
+     x="40"
+     y="394"
+     width="5"
+     height="76"
+     rx="2.5"
+     fill="#3b82f6"
+     id="rect13" />
+  <circle
+     cx="86"
+     cy="432"
+     r="18"
+     fill="none"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="circle13" />
+  <text
+     x="86"
+     y="437"
+     text-anchor="middle"
+     font-size="14px"
+     font-weight="700"
+     fill="#3b82f6"
+     id="text13">④</text>
+  <text
+     x="130"
+     y="426"
+     font-size="14px"
+     font-weight="700"
+     fill="#3b82f6"
+     id="text14">pref_chan</text>
+  <text
+     x="130"
+     y="450"
+     font-size="12px"
+     fill="#94a3b8"
+     id="text15">cfg-&gt;pref_chan 数组（p2p_pref_chan 参数）按序遍历</text>
+  <line
+     x1="480"
+     y1="470"
+     x2="480"
+     y2="492"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#mk-gray)"
+     id="line15" />
+  <rect
+     x="40"
+     y="492"
+     width="880"
+     height="76"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect15" />
+  <rect
+     x="40"
+     y="492"
+     width="5"
+     height="76"
+     rx="2.5"
+     fill="#eab308"
+     id="rect16" />
+  <circle
+     cx="86"
+     cy="530"
+     r="18"
+     fill="none"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="circle16" />
+  <text
+     x="86"
+     y="535"
+     text-anchor="middle"
+     font-size="14px"
+     font-weight="700"
+     fill="#eab308"
+     id="text16">⑤</text>
+  <text
+     x="130"
+     y="524"
+     font-size="14px"
+     font-weight="700"
+     fill="#eab308"
+     id="text17">EDMG</text>
+  <text
+     x="910"
+     y="524"
+     text-anchor="end"
+     font-size="12px"
+     fill="#eab308"
+     id="text18">op_classes_edmg[] = { 181, 182, 183, 0 }</text>
+  <text
+     x="130"
+     y="548"
+     font-size="12px"
+     fill="#94a3b8"
+     id="text19">支持 60GHz 频段（干扰最小 / 速率最高）</text>
+  <line
+     x1="480"
+     y1="568"
+     x2="480"
+     y2="590"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#mk-gray)"
+     id="line19" />
+  <rect
+     x="40"
+     y="590"
+     width="880"
+     height="76"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect19" />
+  <rect
+     x="40"
+     y="590"
+     width="5"
+     height="76"
+     rx="2.5"
+     fill="#eab308"
+     id="rect20" />
+  <circle
+     cx="86"
+     cy="628"
+     r="18"
+     fill="none"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="circle20" />
+  <text
+     x="86"
+     y="633"
+     text-anchor="middle"
+     font-size="14px"
+     font-weight="700"
+     fill="#eab308"
+     id="text20">⑥</text>
+  <text
+     x="130"
+     y="622"
+     font-size="14px"
+     font-weight="700"
+     fill="#eab308"
+     id="text21">VHT</text>
+  <text
+     x="910"
+     y="622"
+     text-anchor="end"
+     font-size="12px"
+     fill="#eab308"
+     id="text22">op_classes_vht[] = { 128, 129, 130, 0 }</text>
+  <text
+     x="130"
+     y="646"
+     font-size="12px"
+     fill="#94a3b8"
+     id="text23">802.11ac 80/160MHz 带宽</text>
+  <line
+     x1="480"
+     y1="666"
+     x2="480"
+     y2="688"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#mk-gray)"
+     id="line23" />
+  <rect
+     x="40"
+     y="688"
+     width="880"
+     height="76"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect23" />
+  <rect
+     x="40"
+     y="688"
+     width="5"
+     height="76"
+     rx="2.5"
+     fill="#eab308"
+     id="rect24" />
+  <circle
+     cx="86"
+     cy="726"
+     r="18"
+     fill="none"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="circle24" />
+  <text
+     x="86"
+     y="731"
+     text-anchor="middle"
+     font-size="14px"
+     font-weight="700"
+     fill="#eab308"
+     id="text24">⑦</text>
+  <text
+     x="130"
+     y="720"
+     font-size="14px"
+     font-weight="700"
+     fill="#eab308"
+     id="text25">HT40</text>
+  <text
+     x="910"
+     y="720"
+     text-anchor="end"
+     font-size="12px"
+     fill="#eab308"
+     id="text26">op_classes_ht40[] = { 126, 127, 116, 117, 0 }</text>
+  <text
+     x="130"
+     y="744"
+     font-size="12px"
+     fill="#94a3b8"
+     id="text27">802.11n 40MHz 带宽（2.4G / 5G）</text>
+  <line
+     x1="480"
+     y1="764"
+     x2="480"
+     y2="786"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#mk-gray)"
+     id="line27" />
+  <rect
+     x="40"
+     y="786"
+     width="880"
+     height="76"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect27" />
+  <rect
+     x="40"
+     y="786"
+     width="5"
+     height="76"
+     rx="2.5"
+     fill="#eab308"
+     id="rect28" />
+  <circle
+     cx="86"
+     cy="824"
+     r="18"
+     fill="none"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="circle28" />
+  <text
+     x="86"
+     y="829"
+     text-anchor="middle"
+     font-size="14px"
+     font-weight="700"
+     fill="#eab308"
+     id="text28">⑧</text>
+  <text
+     x="130"
+     y="818"
+     font-size="14px"
+     font-weight="700"
+     fill="#eab308"
+     id="text29">任意 5GHz</text>
+  <text
+     x="910"
+     y="818"
+     text-anchor="end"
+     font-size="12px"
+     fill="#eab308"
+     id="text30">op_classes_5ghz[] = { 124, 125, 115, 0 }</text>
+  <text
+     x="130"
+     y="842"
+     font-size="12px"
+     fill="#94a3b8"
+     id="text31">只要能工作在 5GHz，不限带宽</text>
+  <line
+     x1="480"
+     y1="862"
+     x2="480"
+     y2="884"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#mk-gray)"
+     id="line31" />
+  <rect
+     x="40"
+     y="884"
+     width="880"
+     height="76"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect31" />
+  <rect
+     x="40"
+     y="884"
+     width="5"
+     height="76"
+     rx="2.5"
+     fill="#10b981"
+     id="rect32" />
+  <circle
+     cx="86"
+     cy="922"
+     r="18"
+     fill="none"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="circle32" />
+  <text
+     x="86"
+     y="927"
+     text-anchor="middle"
+     font-size="14px"
+     font-weight="700"
+     fill="#10b981"
+     id="text32">⑨</text>
+  <text
+     x="130"
+     y="916"
+     font-size="14px"
+     font-weight="700"
+     fill="#10b981"
+     id="text33">原始信道</text>
+  <text
+     x="130"
+     y="940"
+     font-size="12px"
+     fill="#94a3b8"
+     id="text34">当前 op_channel 在交集中（p2p_prepare_channel 已随机化）</text>
+  <line
+     x1="480"
+     y1="960"
+     x2="480"
+     y2="982"
+     stroke="#475569"
+     stroke-width="1.5"
+     marker-end="url(#mk-gray)"
+     id="line34" />
+  <rect
+     x="40"
+     y="982"
+     width="880"
+     height="76"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect34" />
+  <rect
+     x="40"
+     y="982"
+     width="5"
+     height="76"
+     rx="2.5"
+     fill="#f97316"
+     id="rect35" />
+  <circle
+     cx="86"
+     cy="1020"
+     r="18"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="circle35" />
+  <text
+     x="86"
+     y="1025"
+     text-anchor="middle"
+     font-size="14px"
+     font-weight="700"
+     fill="#f97316"
+     id="text35">⑩</text>
+  <text
+     x="130"
+     y="1014"
+     font-size="14px"
+     font-weight="700"
+     fill="#f97316"
+     id="text36">交集兜底</text>
+  <text
+     x="130"
+     y="1038"
+     font-size="12px"
+     fill="#94a3b8"
+     id="text37">intersection-&gt;reg_class[0].channel[0]（前十级全未命中）</text>
+</svg>

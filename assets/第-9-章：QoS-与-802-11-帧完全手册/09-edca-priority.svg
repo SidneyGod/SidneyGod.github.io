@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 600"
+   width="1200"
+   height="600"
+   version="1.1"
+   id="svg71"
+   sodipodi:docname="09-edca-priority.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview71"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.785"
+     inkscape:cx="600"
+     inkscape:cy="300"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg71" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs7">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card-grad"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+    <marker
+       id="arrow-red"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#ef4444"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arrow-orange"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#f97316"
+         id="polygon5" />
+    </marker>
+    <marker
+       id="arrow-blue"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#3b82f6"
+         id="polygon6" />
+    </marker>
+    <marker
+       id="arrow-gray"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#6b7280"
+         id="polygon7" />
+    </marker>
+  </defs>
+  <rect
+     width="1200"
+     height="600"
+     fill="url(#bg-grad)"
+     id="rect7" />
+  <!-- Title -->
+  <text
+     x="600"
+     y="35"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="18"
+     font-weight="700"
+     id="text7">802.11e EDCA — Emergency Vehicle Priority System</text>
+  <text
+     x="600"
+     y="55"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="13"
+     id="text8">EDCA 接入优先级 — 急救车 &gt; 警车 &gt; 私家车 &gt; 自行车</text>
+  <!-- 4 AC Cards -->
+  <!-- AC_VO -->
+  <rect
+     x="40"
+     y="75"
+     width="270"
+     height="230"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#ef4444"
+     stroke-width="2"
+     id="rect8" />
+  <text
+     x="175"
+     y="100"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="16"
+     font-weight="700"
+     id="text9">AC_VO</text>
+  <text
+     x="175"
+     y="118"
+     text-anchor="middle"
+     fill="#fca5a5"
+     font-size="12"
+     id="text10">Voice (语音)</text>
+  <text
+     x="175"
+     y="135"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="11"
+     id="text11">急救车 (120)</text>
+  <line
+     x1="60"
+     y1="145"
+     x2="290"
+     y2="145"
+     stroke="#334155"
+     stroke-width="1"
+     id="line11" />
+  <text
+     x="60"
+     y="168"
+     fill="#94a3b8"
+     font-size="10"
+     id="text12">AIFSN: 2</text>
+  <text
+     x="200"
+     y="168"
+     fill="#10b981"
+     font-size="10"
+     id="text13">最短等待!</text>
+  <text
+     x="60"
+     y="190"
+     fill="#94a3b8"
+     font-size="10"
+     id="text14">AIFS: 34 µs</text>
+  <text
+     x="200"
+     y="190"
+     fill="#94a3b8"
+     font-size="10"
+     id="text15">(SIFS + 2×Slot)</text>
+  <text
+     x="60"
+     y="212"
+     fill="#94a3b8"
+     font-size="10"
+     id="text16">CWmin: 3</text>
+  <text
+     x="200"
+     y="212"
+     fill="#94a3b8"
+     font-size="10"
+     id="text17">CWmax: 7</text>
+  <text
+     x="60"
+     y="234"
+     fill="#94a3b8"
+     font-size="10"
+     id="text18">TXOP: 2.080 ms</text>
+  <!-- Traffic light -->
+  <rect
+     x="60"
+     y="248"
+     width="210"
+     height="30"
+     rx="4"
+     fill="#7f1d1d"
+     id="rect18" />
+  <text
+     x="175"
+     y="268"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="11"
+     font-weight="600"
+     id="text19">VoIP / 通话</text>
+  <!-- AC_VI -->
+  <rect
+     x="330"
+     y="75"
+     width="270"
+     height="230"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect19" />
+  <text
+     x="465"
+     y="100"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="16"
+     font-weight="700"
+     id="text20">AC_VI</text>
+  <text
+     x="465"
+     y="118"
+     text-anchor="middle"
+     fill="#fdba74"
+     font-size="12"
+     id="text21">Video (视频)</text>
+  <text
+     x="465"
+     y="135"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="11"
+     id="text22">警车 (110)</text>
+  <line
+     x1="350"
+     y1="145"
+     x2="580"
+     y2="145"
+     stroke="#334155"
+     stroke-width="1"
+     id="line22" />
+  <text
+     x="350"
+     y="168"
+     fill="#94a3b8"
+     font-size="10"
+     id="text23">AIFSN: 3</text>
+  <text
+     x="490"
+     y="168"
+     fill="#10b981"
+     font-size="10"
+     id="text24">短等待</text>
+  <text
+     x="350"
+     y="190"
+     fill="#94a3b8"
+     font-size="10"
+     id="text25">AIFS: 43 µs</text>
+  <text
+     x="490"
+     y="190"
+     fill="#94a3b8"
+     font-size="10"
+     id="text26">(SIFS + 3×Slot)</text>
+  <text
+     x="350"
+     y="212"
+     fill="#94a3b8"
+     font-size="10"
+     id="text27">CWmin: 7</text>
+  <text
+     x="490"
+     y="212"
+     fill="#94a3b8"
+     font-size="10"
+     id="text28">CWmax: 15</text>
+  <text
+     x="350"
+     y="234"
+     fill="#94a3b8"
+     font-size="10"
+     id="text29">TXOP: 4.096 ms</text>
+  <rect
+     x="350"
+     y="248"
+     width="210"
+     height="30"
+     rx="4"
+     fill="#7c2d12"
+     id="rect29" />
+  <text
+     x="465"
+     y="268"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="11"
+     font-weight="600"
+     id="text30">视频流 / 视频会议</text>
+  <!-- AC_BE -->
+  <rect
+     x="620"
+     y="75"
+     width="270"
+     height="230"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect30" />
+  <text
+     x="755"
+     y="100"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="16"
+     font-weight="700"
+     id="text31">AC_BE</text>
+  <text
+     x="755"
+     y="118"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="12"
+     id="text32">Best Effort (尽力而为)</text>
+  <text
+     x="755"
+     y="135"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="11"
+     id="text33">私家车</text>
+  <line
+     x1="640"
+     y1="145"
+     x2="870"
+     y2="145"
+     stroke="#334155"
+     stroke-width="1"
+     id="line33" />
+  <text
+     x="640"
+     y="168"
+     fill="#94a3b8"
+     font-size="10"
+     id="text34">AIFSN: 7</text>
+  <text
+     x="780"
+     y="168"
+     fill="#f97316"
+     font-size="10"
+     id="text35">中等等待</text>
+  <text
+     x="640"
+     y="190"
+     fill="#94a3b8"
+     font-size="10"
+     id="text36">AIFS: 79 µs</text>
+  <text
+     x="780"
+     y="190"
+     fill="#94a3b8"
+     font-size="10"
+     id="text37">(SIFS + 7×Slot)</text>
+  <text
+     x="640"
+     y="212"
+     fill="#94a3b8"
+     font-size="10"
+     id="text38">CWmin: 15</text>
+  <text
+     x="780"
+     y="212"
+     fill="#94a3b8"
+     font-size="10"
+     id="text39">CWmax: 1023</text>
+  <text
+     x="640"
+     y="234"
+     fill="#94a3b8"
+     font-size="10"
+     id="text40">TXOP: 无限制</text>
+  <rect
+     x="640"
+     y="248"
+     width="210"
+     height="30"
+     rx="4"
+     fill="#1e3a5f"
+     id="rect40" />
+  <text
+     x="755"
+     y="268"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="11"
+     font-weight="600"
+     id="text41">网页 / 邮件</text>
+  <!-- AC_BK -->
+  <rect
+     x="910"
+     y="75"
+     width="250"
+     height="230"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#6b7280"
+     stroke-width="1"
+     id="rect41" />
+  <text
+     x="1035"
+     y="100"
+     text-anchor="middle"
+     fill="#6b7280"
+     font-size="16"
+     font-weight="700"
+     id="text42">AC_BK</text>
+  <text
+     x="1035"
+     y="118"
+     text-anchor="middle"
+     fill="#9ca3af"
+     font-size="12"
+     id="text43">Background (后台)</text>
+  <text
+     x="1035"
+     y="135"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="11"
+     id="text44">自行车</text>
+  <line
+     x1="930"
+     y1="145"
+     x2="1140"
+     y2="145"
+     stroke="#334155"
+     stroke-width="1"
+     id="line44" />
+  <text
+     x="930"
+     y="168"
+     fill="#94a3b8"
+     font-size="10"
+     id="text45">AIFSN: 10</text>
+  <text
+     x="1060"
+     y="168"
+     fill="#ef4444"
+     font-size="10"
+     id="text46">最长等待!</text>
+  <text
+     x="930"
+     y="190"
+     fill="#94a3b8"
+     font-size="10"
+     id="text47">AIFS: 106 µs</text>
+  <text
+     x="1060"
+     y="190"
+     fill="#94a3b8"
+     font-size="10"
+     id="text48">(SIFS + 10×Slot)</text>
+  <text
+     x="930"
+     y="212"
+     fill="#94a3b8"
+     font-size="10"
+     id="text49">CWmin: 15</text>
+  <text
+     x="1060"
+     y="212"
+     fill="#94a3b8"
+     font-size="10"
+     id="text50">CWmax: 1023</text>
+  <text
+     x="930"
+     y="234"
+     fill="#94a3b8"
+     font-size="10"
+     id="text51">TXOP: 无限制</text>
+  <rect
+     x="930"
+     y="248"
+     width="200"
+     height="30"
+     rx="4"
+     fill="#1f2937"
+     id="rect51" />
+  <text
+     x="1030"
+     y="268"
+     text-anchor="middle"
+     fill="#6b7280"
+     font-size="11"
+     font-weight="600"
+     id="text52">文件下载 / 备份</text>
+  <!-- Channel access timing -->
+  <rect
+     x="40"
+     y="325"
+     width="1120"
+     height="130"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect52" />
+  <text
+     x="600"
+     y="350"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="14"
+     font-weight="700"
+     id="text53">信道接入时序（谁先获得信道？）</text>
+  <!-- Timeline -->
+  <line
+     x1="100"
+     y1="410"
+     x2="1100"
+     y2="410"
+     stroke="#475569"
+     stroke-width="1"
+     id="line53" />
+  <!-- DIFS/AIFS zones -->
+  <rect
+     x="100"
+     y="395"
+     width="60"
+     height="30"
+     rx="3"
+     fill="#7f1d1d"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect53" />
+  <text
+     x="130"
+     y="414"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="8"
+     id="text54">AIFS[VO]</text>
+  <rect
+     x="100"
+     y="425"
+     width="90"
+     height="30"
+     rx="3"
+     fill="#7c2d12"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect54" />
+  <text
+     x="145"
+     y="444"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="8"
+     id="text55">AIFS[VI]</text>
+  <rect
+     x="100"
+     y="432"
+     width="200"
+     height="12"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="0.5"
+     id="rect55" />
+  <text
+     x="200"
+     y="440"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="7"
+     id="text56">AIFS[BE]</text>
+  <rect
+     x="100"
+     y="446"
+     width="280"
+     height="8"
+     rx="3"
+     fill="#1f2937"
+     stroke="#6b7280"
+     stroke-width="0.5"
+     id="rect56" />
+  <text
+     x="240"
+     y="452"
+     text-anchor="middle"
+     fill="#6b7280"
+     font-size="7"
+     id="text57">AIFS[BK]</text>
+  <!-- Backoff arrows -->
+  <!-- VO wins -->
+  <line
+     x1="165"
+     y1="395"
+     x2="220"
+     y2="395"
+     stroke="#ef4444"
+     stroke-width="2"
+     marker-end="url(#arrow-red)"
+     id="line57" />
+  <text
+     x="192"
+     y="390"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="8"
+     id="text58">短退避</text>
+  <rect
+     x="220"
+     y="380"
+     width="120"
+     height="25"
+     rx="4"
+     fill="#065f46"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect58" />
+  <text
+     x="280"
+     y="397"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9"
+     id="text59">VO 获得信道 ✓</text>
+  <!-- VO transmits -->
+  <rect
+     x="350"
+     y="375"
+     width="100"
+     height="30"
+     rx="4"
+     fill="#7f1d1d"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect59" />
+  <text
+     x="400"
+     y="394"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="9"
+     id="text60">VO 数据</text>
+  <!-- Others wait -->
+  <text
+     x="600"
+     y="395"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="10"
+     id="text61">VI/BE/BK 继续等待...</text>
+  <!-- After VO done, VI wins -->
+  <rect
+     x="700"
+     y="375"
+     width="100"
+     height="30"
+     rx="4"
+     fill="#7c2d12"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect61" />
+  <text
+     x="750"
+     y="394"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="9"
+     id="text62">VI 数据</text>
+  <rect
+     x="850"
+     y="375"
+     width="100"
+     height="30"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect62" />
+  <text
+     x="900"
+     y="394"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="9"
+     id="text63">BE 数据</text>
+  <!-- Priority indicator -->
+  <text
+     x="600"
+     y="450"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="11"
+     id="text64">AIFS 越短 + CW 越小 → 越快获得信道 → 优先级越高</text>
+  <!-- Bottom: TXOP -->
+  <rect
+     x="40"
+     y="475"
+     width="1120"
+     height="110"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect64" />
+  <text
+     x="600"
+     y="500"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="14"
+     font-weight="700"
+     id="text65">TXOP — 传输机会（绿灯持续时间）</text>
+  <rect
+     x="60"
+     y="515"
+     width="340"
+     height="55"
+     rx="6"
+     fill="#0f172a"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect65" />
+  <text
+     x="230"
+     y="535"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="11"
+     font-weight="600"
+     id="text66">AC_VO: 2.080 ms</text>
+  <text
+     x="230"
+     y="555"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text67">可以发多个语音帧（短但够用）</text>
+  <rect
+     x="430"
+     y="515"
+     width="340"
+     height="55"
+     rx="6"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect67" />
+  <text
+     x="600"
+     y="535"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="11"
+     font-weight="600"
+     id="text68">AC_VI: 4.096 ms</text>
+  <text
+     x="600"
+     y="555"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text69">可以发多个视频帧（较长）</text>
+  <rect
+     x="800"
+     y="515"
+     width="340"
+     height="55"
+     rx="6"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect69" />
+  <text
+     x="970"
+     y="535"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="11"
+     font-weight="600"
+     id="text70">AC_BE/BK: 无限制</text>
+  <text
+     x="970"
+     y="555"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text71">但受其他 AC 竞争影响</text>
+</svg>

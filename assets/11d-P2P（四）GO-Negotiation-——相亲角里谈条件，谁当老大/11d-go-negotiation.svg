@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 900"
+   width="1200"
+   height="900"
+   version="1.1"
+   id="svg42"
+   sodipodi:docname="11d-go-negotiation.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview42"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.2144444"
+     inkscape:cx="600.27447"
+     inkscape:cy="581.74748"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg42" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; fill: #e2e8f0; }
+  </style>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="mk-purple"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#a855f7"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="mk-blue"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#3b82f6"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="mk-orange"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#f97316"
+         id="polygon4" />
+    </marker>
+  </defs>
+  <rect
+     width="1200"
+     height="900"
+     fill="url(#bg-grad)"
+     id="rect4" />
+  <!-- title -->
+  <text
+     x="600"
+     y="44"
+     text-anchor="middle"
+     font-size="18"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text4">P2P GO Negotiation 三次握手</text>
+  <text
+     x="600"
+     y="70"
+     text-anchor="middle"
+     font-size="12"
+     fill="#94a3b8"
+     id="text5">GO Neg Request / Response / Confirm · dialog_token 配对 · tie_breaker 翻转</text>
+  <!-- lifeline headers -->
+  <rect
+     x="110"
+     y="92"
+     width="240"
+     height="52"
+     rx="8"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1.5"
+     id="rect5" />
+  <text
+     x="230"
+     y="118"
+     text-anchor="middle"
+     font-size="14"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text6">Initiator 发起方</text>
+  <text
+     x="230"
+     y="136"
+     text-anchor="middle"
+     font-size="11"
+     fill="#a855f7"
+     id="text7">本地 P2P 设备</text>
+  <rect
+     x="850"
+     y="92"
+     width="240"
+     height="52"
+     rx="8"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect7" />
+  <text
+     x="970"
+     y="118"
+     text-anchor="middle"
+     font-size="14"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text8">Responder 响应方</text>
+  <text
+     x="970"
+     y="136"
+     text-anchor="middle"
+     font-size="11"
+     fill="#3b82f6"
+     id="text9">对端 P2P 设备</text>
+  <!-- lifelines -->
+  <line
+     x1="230"
+     y1="144"
+     x2="230"
+     y2="872"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="6 6"
+     id="line9" />
+  <line
+     x1="970"
+     y1="144"
+     x2="970"
+     y2="872"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="6 6"
+     id="line10" />
+  <!-- M1: GO Neg Request -->
+  <line
+     x1="230"
+     y1="200"
+     x2="970"
+     y2="200"
+     stroke="#a855f7"
+     stroke-width="2"
+     marker-end="url(#mk-purple)"
+     id="line11" />
+  <text
+     x="600"
+     y="186"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="700"
+     fill="#a855f7"
+     id="text11">① GO Neg Request · 8 个 P2P Attributes</text>
+  <text
+     x="600"
+     y="220"
+     text-anchor="middle"
+     font-size="12"
+     fill="#94a3b8"
+     id="text12">dialog_token · tie_breaker = <tspan
+   fill="#f97316"
+   id="tspan11">TB</tspan></text>
+  <!-- left note 1: initiator send -->
+  <rect
+     x="16"
+     y="232"
+     width="198"
+     height="92"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect12" />
+  <text
+     x="28"
+     y="252"
+     font-size="12"
+     fill="#a855f7"
+     id="text13">p2p_connect_send()</text>
+  <text
+     x="28"
+     y="270"
+     font-size="12"
+     fill="#e2e8f0"
+     id="text14">p2p_build_go_neg_req()</text>
+  <text
+     x="28"
+     y="288"
+     font-size="11"
+     fill="#475569"
+     id="text15">→ p2p_send_action()</text>
+  <text
+     x="28"
+     y="306"
+     font-size="11"
+     fill="#475569"
+     id="text16">状态 P2P_CONNECT</text>
+  <!-- left state pill 1 -->
+  <rect
+     x="16"
+     y="332"
+     width="198"
+     height="26"
+     rx="6"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect16" />
+  <text
+     x="115"
+     y="349"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="700"
+     fill="#10b981"
+     id="text17">WAIT_GO_NEG_RESPONSE</text>
+  <!-- right note 1: responder process req -->
+  <rect
+     x="986"
+     y="232"
+     width="198"
+     height="132"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect17" />
+  <text
+     x="998"
+     y="252"
+     font-size="12"
+     fill="#3b82f6"
+     id="text18">p2p_process_go_neg_req()</text>
+  <text
+     x="998"
+     y="270"
+     font-size="11"
+     fill="#94a3b8"
+     id="text19">解析 8 个 Attribute</text>
+  <text
+     x="998"
+     y="288"
+     font-size="11"
+     fill="#94a3b8"
+     id="text20">SA 校验 · WPS 配对</text>
+  <text
+     x="998"
+     y="308"
+     font-size="12"
+     font-weight="700"
+     fill="#f97316"
+     id="text21">p2p_go_det() 决策 ①</text>
+  <text
+     x="998"
+     y="326"
+     font-size="12"
+     fill="#3b82f6"
+     id="text22">p2p_build_go_neg_resp()</text>
+  <text
+     x="998"
+     y="344"
+     font-size="11"
+     fill="#475569"
+     id="text23">→ 发 Response</text>
+  <!-- middle: 8 attributes box -->
+  <rect
+     x="280"
+     y="368"
+     width="640"
+     height="64"
+     rx="8"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4 4"
+     id="rect23" />
+  <text
+     x="600"
+     y="388"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#eab308"
+     id="text24">8 个 P2P Attributes（TLV 编码）</text>
+  <text
+     x="600"
+     y="408"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text25">1 Capability · 2 GO Intent · 3 Config Timeout · 4 Listen Channel</text>
+  <text
+     x="600"
+     y="424"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text26">5 Intended Addr · 6 Channel List · 7 Device Info · 8 Operating Channel</text>
+  <!-- M2: GO Neg Response -->
+  <line
+     x1="970"
+     y1="470"
+     x2="230"
+     y2="470"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#mk-blue)"
+     id="line26" />
+  <text
+     x="600"
+     y="454"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="700"
+     fill="#3b82f6"
+     id="text27">② GO Neg Response</text>
+  <text
+     x="600"
+     y="492"
+     text-anchor="middle"
+     font-size="12"
+     fill="#94a3b8"
+     id="text28">dialog_token 匹配 · tie_breaker = <tspan
+   fill="#f97316"
+   id="tspan27">!TB（翻转）</tspan></text>
+  <!-- left note 2: initiator process resp -->
+  <rect
+     x="16"
+     y="504"
+     width="198"
+     height="112"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect28" />
+  <text
+     x="28"
+     y="524"
+     font-size="12"
+     fill="#3b82f6"
+     id="text29">p2p_process_go_neg_resp()</text>
+  <text
+     x="28"
+     y="542"
+     font-size="11"
+     fill="#94a3b8"
+     id="text30">匹配 dialog_token</text>
+  <text
+     x="28"
+     y="560"
+     font-size="11"
+     fill="#94a3b8"
+     id="text31">清 WAIT_GO_NEG_RESPONSE</text>
+  <text
+     x="28"
+     y="580"
+     font-size="12"
+     font-weight="700"
+     fill="#f97316"
+     id="text32">p2p_go_det() 决策 ②</text>
+  <text
+     x="28"
+     y="598"
+     font-size="12"
+     fill="#a855f7"
+     id="text33">p2p_build_go_neg_conf()</text>
+  <!-- right state pill 2 -->
+  <rect
+     x="986"
+     y="504"
+     width="198"
+     height="26"
+     rx="6"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect33" />
+  <text
+     x="1085"
+     y="521"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="700"
+     fill="#10b981"
+     id="text34">WAIT_GO_NEG_CONFIRM</text>
+  <!-- M3: GO Neg Confirm -->
+  <line
+     x1="230"
+     y1="646"
+     x2="970"
+     y2="646"
+     stroke="#a855f7"
+     stroke-width="2"
+     marker-end="url(#mk-purple)"
+     id="line34" />
+  <text
+     x="600"
+     y="632"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="700"
+     fill="#a855f7"
+     id="text35">③ GO Neg Confirm</text>
+  <text
+     x="600"
+     y="666"
+     text-anchor="middle"
+     font-size="12"
+     fill="#94a3b8"
+     id="text36">dialog_token 匹配 · 锁定 Operating Channel</text>
+  <!-- right note 3: responder handle confirm -->
+  <rect
+     x="986"
+     y="680"
+     width="198"
+     height="100"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect36" />
+  <text
+     x="998"
+     y="700"
+     font-size="12"
+     fill="#3b82f6"
+     id="text37">p2p_handle_go_neg_conf()</text>
+  <text
+     x="998"
+     y="718"
+     font-size="11"
+     fill="#94a3b8"
+     id="text38">清 WAIT_GO_NEG_CONFIRM</text>
+  <text
+     x="998"
+     y="736"
+     font-size="11"
+     fill="#94a3b8"
+     id="text39">os_sleep 20ms（等重传）</text>
+  <text
+     x="998"
+     y="756"
+     font-size="12"
+     fill="#10b981"
+     id="text40">p2p_go_complete()</text>
+  <!-- bottom legend -->
+  <rect
+     x="239.65233"
+     y="800"
+     width="715.11163"
+     height="56"
+     rx="8.5514088"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1.03389"
+     id="rect40" />
+  <text
+     x="600"
+     y="822"
+     text-anchor="middle"
+     font-size="12"
+     fill="#94a3b8"
+     id="text41">p2p_go_det() 在 Request 与 Response 两个时机各决策一次，输入相同 → 结论一致（LOCAL_GO / REMOTE_GO）</text>
+  <text
+     x="600"
+     y="842"
+     text-anchor="middle"
+     font-size="12"
+     fill="#94a3b8"
+     id="text42">tie_breaker 在 Request(TB) 与 Response(!TB) 间翻转 → 双方角色互斥，不出现双 GO</text>
+</svg>

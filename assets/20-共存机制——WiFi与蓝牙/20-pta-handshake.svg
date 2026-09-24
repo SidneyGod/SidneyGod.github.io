@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="1200" height="820">
+<!-- validate: skip-orphan-boxes skip-row-centering skip-gap-consistency -->
+<style>text { font-family: 'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif; fill: #e2e8f0; }</style>
+<defs>
+  <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#0f0f1a"/>
+    <stop offset="100%" stop-color="#1a1a2e"/>
+  </linearGradient>
+  <marker id="arrow-blue" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto">
+    <polygon points="0 0, 10 4, 0 8" fill="#3b82f6"/>
+  </marker>
+  <marker id="arrow-green" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto">
+    <polygon points="0 0, 10 4, 0 8" fill="#10b981"/>
+  </marker>
+  <marker id="arrow-gray" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto">
+    <polygon points="0 0, 10 4, 0 8" fill="#64748b"/>
+  </marker>
+</defs>
+<rect width="1200" height="820" fill="url(#bg-grad)"/>
+<text x="600" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#e2e8f0">PTA 逐包握手时序 · WiFi 每发一帧都与 BT 过一遍 3-wire 信号</text>
+<text x="600" y="53" text-anchor="middle" font-size="12" fill="#94a3b8">微秒级握手发生在 WiFi MAC 与 BT MAC 的硬件信号线上，主机（WMI 往返 ~100µs）全程不下场</text>
+<rect x="250" y="96" width="120" height="28" rx="6" fill="#0f172a" stroke="#64748b" stroke-width="1.2"/>
+<text x="310" y="114" text-anchor="middle" font-size="11.5" fill="#94a3b8">微秒级 · µs</text>
+<rect x="390" y="96" width="130" height="28" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.3"/>
+<text x="455" y="114" text-anchor="middle" font-size="11.5" fill="#34d399">BT_ACTIVE</text>
+<rect x="540" y="96" width="150" height="28" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.3"/>
+<text x="615" y="114" text-anchor="middle" font-size="11.5" fill="#34d399">BT_PRIORITY</text>
+<rect x="710" y="96" width="190" height="28" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.3"/>
+<text x="805" y="114" text-anchor="middle" font-size="11.5" fill="#60a5fa">WLAN_DENY / GRANT</text>
+<rect x="90" y="150" width="520" height="540" fill="#1e3a5f" opacity="0.10"/>
+<rect x="610" y="150" width="520" height="540" fill="#052e16" opacity="0.10"/>
+<rect x="150" y="150" width="200" height="42" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="250" y="168" text-anchor="middle" font-size="13" font-weight="bold" fill="#60a5fa">WiFi MAC</text>
+<text x="250" y="184" text-anchor="middle" font-size="11" fill="#94a3b8">申请方</text>
+<rect x="880" y="150" width="200" height="42" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="980" y="168" text-anchor="middle" font-size="13" font-weight="bold" fill="#34d399">BT MAC</text>
+<text x="980" y="184" text-anchor="middle" font-size="11" fill="#94a3b8">竞争方</text>
+<line x1="260" y1="192" x2="260" y2="680" stroke="#3b82f6" stroke-width="1.2" stroke-dasharray="3,4"/>
+<line x1="980" y1="192" x2="980" y2="680" stroke="#10b981" stroke-width="1.2" stroke-dasharray="3,4"/>
+<rect x="92" y="196" width="92" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1.2"/>
+<text x="138" y="211" text-anchor="middle" font-size="10.5" fill="#64748b">时间 ↓（µs）</text>
+<rect x="253" y="196" width="14" height="60" rx="2" fill="#3b82f6"/>
+<rect x="280" y="196" width="200" height="34" rx="6" fill="#0f172a" stroke="#3b82f6" stroke-width="1.2"/>
+<text x="380" y="217" text-anchor="middle" font-size="11.5" fill="#93c5fd">WiFi 想发帧</text>
+<line x1="980" y1="270" x2="260" y2="270" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+<text x="620" y="260" text-anchor="middle" font-size="11.5" fill="#34d399">BT_ACTIVE 拉高 = BT 在活动</text>
+<line x1="980" y1="330" x2="260" y2="330" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+<text x="620" y="320" text-anchor="middle" font-size="11.5" fill="#34d399">BT_PRIORITY 高 = A2DP 需避让</text>
+<rect x="280" y="344" width="680" height="54" rx="6" fill="#0f172a" opacity="0.8" stroke="#64748b" stroke-width="1.2" stroke-dasharray="4,3"/>
+<text x="300" y="364" font-size="11" fill="#94a3b8">判断：BT 高优先级（A2DP）→ WiFi 等几十 µs</text>
+<text x="300" y="382" font-size="11" fill="#a7f3d0">　　　BT 低优先级 → WiFi 直接发</text>
+<line x1="980" y1="430" x2="260" y2="430" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+<text x="620" y="420" text-anchor="middle" font-size="11.5" fill="#60a5fa">GRANT（WLAN_DENY 低 = 授权）</text>
+<text x="620" y="452" text-anchor="middle" font-size="10.5" fill="#94a3b8">若 WLAN_DENY 拉高 → WiFi 退避等待</text>
+<rect x="253" y="460" width="14" height="70" rx="2" fill="#3b82f6"/>
+<rect x="270" y="476" width="310" height="52" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.2"/>
+<text x="425" y="496" text-anchor="middle" font-size="12" fill="#93c5fd">发射数据帧</text>
+<text x="425" y="516" text-anchor="middle" font-size="10.5" fill="#60a5fa">申请 duration = wlan_request_duration</text>
+<rect x="270" y="556" width="310" height="46" rx="6" fill="#0f172a" stroke="#3b82f6" stroke-width="1.2"/>
+<text x="425" y="574" text-anchor="middle" font-size="11" fill="#93c5fd">coex_tx_status</text>
+<text x="425" y="592" text-anchor="middle" font-size="10.5" fill="#a5f3fc">tx_antenna_mask / shared_ant_tx_pwr</text>
+<rect x="270" y="626" width="310" height="46" rx="6" fill="#0f172a" stroke="#3b82f6" stroke-width="1.2"/>
+<text x="425" y="644" text-anchor="middle" font-size="11" fill="#93c5fd">coex_rx_status（RX 也参与）</text>
+<text x="425" y="662" text-anchor="middle" font-size="10.5" fill="#a5f3fc">remain_rx_packet_time</text>
+<path d="M 260 690 C 180 690, 180 240, 260 240 L 260 206" fill="none" stroke="#3b82f6" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#arrow-blue)"/>
+<text x="180" y="430" text-anchor="end" font-size="11" fill="#94a3b8">逐帧循环（RX 也参与）</text>
+<rect x="850" y="706" width="300" height="98" rx="8" fill="#1e1b4b" opacity="0.5" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,4"/>
+<text x="870" y="728" font-size="12" font-weight="bold" fill="#94a3b8">主机（被排除）</text>
+<text x="870" y="750" font-size="11" fill="#cbd5e1">WMI 命令往返 ~100µs</text>
+<text x="870" y="770" font-size="11" fill="#94a3b8">来不及参与微秒级握手</text>
+<text x="870" y="790" font-size="10.5" fill="#64748b">灰色虚线箭头 = 被斜杠划掉</text>
+<line x1="900" y1="706" x2="640" y2="520" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-gray)"/>
+<line x1="793" y1="581" x2="747" y2="645" stroke="#ef4444" stroke-width="3"/>
+<rect x="90" y="752" width="26" height="12" rx="2" fill="#3b82f6"/>
+<text x="124" y="762" font-size="11.5" fill="#94a3b8">蓝 = WiFi 侧 / 授权</text>
+<rect x="330" y="752" width="26" height="12" rx="2" fill="#10b981"/>
+<text x="364" y="762" font-size="11.5" fill="#94a3b8">绿 = BT 侧 / BT 状态信号</text>
+<rect x="620" y="752" width="26" height="12" rx="2" fill="none" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3"/>
+<text x="654" y="762" font-size="11.5" fill="#94a3b8">灰虚线 = 主机被排除</text>
+</svg>

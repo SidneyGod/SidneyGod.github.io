@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- validate: skip-row-centering -->
+
+<!-- 三阶段子卡嵌套于右侧 Secure Access 容器(x=320..1060)，其行心=容器心=690；两状态主盒行(x=40..1060)已居中于 550 -->
+
+<svg
+   width="1000"
+   height="400"
+   viewBox="0 0 1000 400"
+   version="1.1"
+   id="svg33"
+   sodipodi:docname="13-passpoint-states.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview33"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.48"
+     inkscape:cx="583.78378"
+     inkscape:cy="250.33784"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg33" />
+  <defs
+     id="defs5">
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="741.61987"
+       y2="741.61987"
+       gradientTransform="scale(1.3483997,0.53935989)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="1">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+    <marker
+       id="arr-cyan"
+       markerWidth="10"
+       markerHeight="7"
+       refX="8"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="10,3.5 0,7 0,0 "
+         fill="#22d3ee"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arr-gray"
+       markerWidth="10"
+       markerHeight="7"
+       refX="8"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="10,3.5 0,7 0,0 "
+         fill="#94a3b8"
+         id="polygon5" />
+    </marker>
+    <style
+       id="style5">text{font-family:'Maple Mono Normal NL NF CN', monospace;}</style>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#card"
+       id="linearGradient33"
+       x1="42.694096"
+       y1="90.434052"
+       x2="42.694096"
+       y2="366.30359"
+       gradientTransform="matrix(0.74806219,0,0,1.0947204,7.2432432,0)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#card"
+       id="linearGradient34"
+       x1="203.51302"
+       y1="155.17926"
+       x2="203.51302"
+       y2="628.55438"
+       gradientTransform="scale(1.5674673,0.63797185)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <rect
+     width="1000"
+     height="400"
+     fill="url(#bg)"
+     id="rect5"
+     style="fill:url(#bg);stroke-width:0.852803"
+     x="0"
+     y="0" />
+  <text
+     x="476"
+     y="30"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="20px"
+     font-weight="700"
+     id="text5">Passpoint 两状态</text>
+  <text
+     x="476"
+     y="52"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="13px"
+     id="text6">设备只有两个状态：Discovery（发现选网）→ Secure Access（安全接入）；签约与凭证下发不在此状态机内</text>
+  <!-- 状态① Discovery -->
+  <g
+     id="g12"
+     transform="translate(-26,-34)">
+    <rect
+       x="40"
+       y="100"
+       width="204.72974"
+       height="300"
+       rx="8.189189"
+       fill="url(#card)"
+       stroke="#38bdf8"
+       stroke-width="1.80988"
+       id="rect6"
+       style="fill:url(#linearGradient33)" />
+    <text
+       x="143"
+       y="140"
+       text-anchor="middle"
+       fill="#7dd3fc"
+       font-size="19px"
+       font-weight="700"
+       id="text7">Discovery</text>
+    <text
+       x="143"
+       y="166"
+       text-anchor="middle"
+       fill="#94a3b8"
+       font-size="12px"
+       id="text8">发现 — 搜索 · 查询 · 选网</text>
+    <text
+       x="143"
+       y="222"
+       text-anchor="middle"
+       fill="#cbd5e1"
+       font-size="12px"
+       id="text9">扫描周边 AP</text>
+    <text
+       x="143"
+       y="260"
+       text-anchor="middle"
+       fill="#cbd5e1"
+       font-size="12px"
+       id="text10">用 ANQP 查询身份/能力</text>
+    <text
+       x="143"
+       y="298"
+       text-anchor="middle"
+       fill="#cbd5e1"
+       font-size="12px"
+       id="text11">比对预存凭证 → 选网</text>
+    <text
+       x="143"
+       y="375"
+       text-anchor="middle"
+       fill="#64748b"
+       font-size="11px"
+       id="text12">打听各家、挑一家</text>
+  </g>
+  <!-- 状态② Secure Access（内含三阶段） -->
+  <g
+     id="g31"
+     transform="translate(-74,-34)">
+    <rect
+       x="320"
+       y="100"
+       width="740"
+       height="300"
+       rx="10"
+       fill="url(#card)"
+       stroke="#22d3ee"
+       stroke-width="2"
+       id="rect12"
+       style="fill:url(#linearGradient34)" />
+    <text
+       x="690"
+       y="140"
+       text-anchor="middle"
+       fill="#67e8f9"
+       font-size="19px"
+       font-weight="700"
+       id="text13">Secure Access</text>
+    <text
+       x="690"
+       y="166"
+       text-anchor="middle"
+       fill="#94a3b8"
+       font-size="12px"
+       id="text14">安全接入 — 一个状态，内部再分三阶段</text>
+    <rect
+       x="345"
+       y="188"
+       width="210"
+       height="158"
+       rx="8"
+       fill="#0f172a"
+       stroke="#60a5fa"
+       stroke-width="1.5"
+       id="rect14" />
+    <rect
+       x="345"
+       y="188"
+       width="210"
+       height="4"
+       rx="2"
+       fill="#60a5fa"
+       id="rect15" />
+    <text
+       x="450"
+       y="224"
+       text-anchor="middle"
+       fill="#93c5fd"
+       font-size="11px"
+       id="text15">Association and</text>
+    <text
+       x="450"
+       y="240"
+       text-anchor="middle"
+       fill="#93c5fd"
+       font-size="11px"
+       id="text16">Authentication</text>
+    <text
+       x="450"
+       y="266"
+       text-anchor="middle"
+       fill="#e2e8f0"
+       font-size="15px"
+       font-weight="700"
+       id="text17">关联与认证</text>
+    <text
+       x="450"
+       y="296"
+       text-anchor="middle"
+       fill="#cbd5e1"
+       font-size="12px"
+       id="text18">关联热点，用 EAP</text>
+    <text
+       x="450"
+       y="316"
+       text-anchor="middle"
+       fill="#cbd5e1"
+       font-size="12px"
+       id="text19">与 AAA 互相认证</text>
+    <text
+       x="450"
+       y="338"
+       text-anchor="middle"
+       fill="#64748b"
+       font-size="11px"
+       id="text20">≈ 刷卡 → 银行端核验</text>
+    <rect
+       x="585"
+       y="188"
+       width="210"
+       height="158"
+       rx="8"
+       fill="#0f172a"
+       stroke="#fbbf24"
+       stroke-width="1.5"
+       id="rect20" />
+    <rect
+       x="585"
+       y="188"
+       width="210"
+       height="4"
+       rx="2"
+       fill="#fbbf24"
+       id="rect21" />
+    <text
+       x="690"
+       y="224"
+       text-anchor="middle"
+       fill="#fcd34d"
+       font-size="11px"
+       id="text21">Access in Progress</text>
+    <text
+       x="690"
+       y="266"
+       text-anchor="middle"
+       fill="#e2e8f0"
+       font-size="15px"
+       font-weight="700"
+       id="text22">接入中</text>
+    <text
+       x="690"
+       y="296"
+       text-anchor="middle"
+       fill="#cbd5e1"
+       font-size="12px"
+       id="text23">按热点要求交换附加信息</text>
+    <text
+       x="690"
+       y="316"
+       text-anchor="middle"
+       fill="#cbd5e1"
+       font-size="12px"
+       id="text24">接受服务条款（T&amp;C）</text>
+    <text
+       x="690"
+       y="338"
+       text-anchor="middle"
+       fill="#64748b"
+       font-size="11px"
+       id="text25">≈ 弹窗点“同意”</text>
+    <rect
+       x="825"
+       y="188"
+       width="210"
+       height="158"
+       rx="8"
+       fill="#0f172a"
+       stroke="#34d399"
+       stroke-width="1.5"
+       id="rect25" />
+    <rect
+       x="825"
+       y="188"
+       width="210"
+       height="4"
+       rx="2"
+       fill="#34d399"
+       id="rect26" />
+    <text
+       x="930"
+       y="224"
+       text-anchor="middle"
+       fill="#6ee7b7"
+       font-size="11px"
+       id="text26">Connected</text>
+    <text
+       x="930"
+       y="266"
+       text-anchor="middle"
+       fill="#e2e8f0"
+       font-size="15px"
+       font-weight="700"
+       id="text27">已连接</text>
+    <text
+       x="930"
+       y="296"
+       text-anchor="middle"
+       fill="#cbd5e1"
+       font-size="12px"
+       id="text28">拿到完整网络访问权</text>
+    <text
+       x="930"
+       y="316"
+       text-anchor="middle"
+       fill="#cbd5e1"
+       font-size="12px"
+       id="text29">正常上网</text>
+    <text
+       x="930"
+       y="338"
+       text-anchor="middle"
+       fill="#64748b"
+       font-size="11px"
+       id="text30">≈ 门开、畅通无阻</text>
+    <text
+       x="690"
+       y="384"
+       text-anchor="middle"
+       fill="#94a3b8"
+       font-size="12px"
+       id="text31">不接受服务条款 → 退出，回到 Discovery 重新选网</text>
+  </g>
+  <line
+     x1="485"
+     y1="233"
+     x2="506"
+     y2="233"
+     stroke="#94a3b8"
+     stroke-width="1.5"
+     marker-end="url(#arr-gray)"
+     id="line31" />
+  <line
+     x1="725"
+     y1="233"
+     x2="746"
+     y2="233"
+     stroke="#94a3b8"
+     stroke-width="1.5"
+     marker-end="url(#arr-gray)"
+     id="line32" />
+  <!-- 状态转移 Discovery → Secure Access -->
+  <line
+     x1="220"
+     y1="216"
+     x2="242"
+     y2="216"
+     stroke="#22d3ee"
+     stroke-width="1.5"
+     marker-end="url(#arr-cyan)"
+     id="line33" />
+  <text
+     x="476"
+     y="387"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="12px"
+     id="text33">换地点/换热点时重复 Discovery + Secure Access，全程无感 —— 体验如手机蜂窝漫游</text>
+</svg>

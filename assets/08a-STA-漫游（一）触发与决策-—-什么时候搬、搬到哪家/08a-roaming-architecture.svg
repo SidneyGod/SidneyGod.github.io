@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 920" role="img" aria-label="漫游触发与决策架构图（RSSI/Beacon Loss/BTM 三种触发源到漫游决策的调用链）">
+<title>漫游触发与决策架构图（RSSI/Beacon Loss/BTM 三种触发源到漫游决策的调用链）</title>
+<desc>展示 wpa_supplicant、QCOM、MTK 三侧在漫游触发与决策中的角色与调用关系</desc>
+<style>text{font-family:'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif}</style>
+<defs>
+<linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f0f1a"/><stop offset="100%" stop-color="#1a1a2e"/></linearGradient>
+<marker id="ma" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#a855f7"/></marker>
+<marker id="mb" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#3b82f6"/></marker>
+<marker id="mc" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#10b981"/></marker>
+<marker id="md" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#f97316"/></marker>
+</defs>
+<rect width="1000" height="920" fill="url(#bg)"/>
+<text x="500" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#e2e8f0">WiFi 漫游整体架构</text>
+<rect x="30" y="55" width="940" height="155" rx="6" fill="none" stroke="#334155" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="46" y="73" font-size="11" fill="#64748b">触发层</text>
+<rect x="30" y="230" width="940" height="170" rx="6" fill="none" stroke="#334155" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="46" y="248" font-size="11" fill="#64748b">决策层</text>
+<rect x="30" y="420" width="940" height="200" rx="6" fill="none" stroke="#334155" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="46" y="438" font-size="11" fill="#64748b">执行层</text>
+<rect x="30" y="640" width="940" height="260" rx="6" fill="none" stroke="#334155" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="46" y="658" font-size="11" fill="#64748b">平台对比</text>
+<rect x="50" y="74" width="280" height="120" rx="6" fill="#1e1b4b" stroke="#7c3aed" stroke-width="1.2"/>
+<text x="190.0" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#e2e8f0">RSSI/PER 下降</text>
+<text x="190.0" y="120" text-anchor="middle" font-size="10" fill="#94a3b8">驱动持续监控信号质量</text>
+<text x="190.0" y="138" text-anchor="middle" font-size="10" fill="#94a3b8">ROAM_TRIGGER_REASON_LOW_RSSI</text>
+<text x="190.0" y="156" text-anchor="middle" font-size="10" fill="#94a3b8">ROAM_TRIGGER_REASON_PER</text>
+<rect x="360" y="74" width="280" height="120" rx="6" fill="#1e1b4b" stroke="#7c3aed" stroke-width="1.2"/>
+<text x="500.0" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#e2e8f0">Beacon Loss</text>
+<text x="500.0" y="120" text-anchor="middle" font-size="10" fill="#94a3b8">连续丢失 Beacon 帧</text>
+<text x="500.0" y="138" text-anchor="middle" font-size="10" fill="#94a3b8">first bmiss: 10 个 (启动扫描)</text>
+<text x="500.0" y="156" text-anchor="middle" font-size="10" fill="#94a3b8">final bmiss: 20 个 (紧急切换)</text>
+<rect x="670" y="74" width="290" height="120" rx="6" fill="#1e1b4b" stroke="#7c3aed" stroke-width="1.2"/>
+<text x="815.0" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#e2e8f0">BTM Request (802.11v)</text>
+<text x="815.0" y="120" text-anchor="middle" font-size="10" fill="#94a3b8">AP 主动发送 Action 帧</text>
+<text x="815.0" y="138" text-anchor="middle" font-size="10" fill="#94a3b8">携带候选 BSSID/Channel</text>
+<text x="815.0" y="156" text-anchor="middle" font-size="10" fill="#94a3b8">ROAM_TRIGGER_REASON_BTM</text>
+<rect x="50" y="250" width="560" height="130" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="330.0" y="272" text-anchor="middle" font-size="13" font-weight="700" fill="#e2e8f0">wpa_supplicant_need_to_roam_within_ess()</text>
+<text x="330.0" y="296" text-anchor="middle" font-size="11" fill="#94a3b8">min_diff 五阶梯 | cur&lt;-85→1 · -85~-80→2 · -80~-75→3 · -75~-70→4 · ≥-70→5</text>
+<text x="330.0" y="314" text-anchor="middle" font-size="11" fill="#94a3b8">+ est_throughput 吞吐量微调 + 频段偏好</text>
+<text x="330.0" y="332" text-anchor="middle" font-size="11" fill="#94a3b8">→ diff ≥ min_diff 才允许漫游 (supplicant 层决策)</text>
+<rect x="640" y="270" width="320" height="80" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" stroke-dasharray="4,2"/>
+<text x="800.0" y="292" text-anchor="middle" font-size="12" fill="#94a3b8">Driver-based BSS Selection</text>
+<text x="800.0" y="314" text-anchor="middle" font-size="10" fill="#64748b">驱动自管 supplicant 不插手 (QCOM RSO)</text>
+<text x="800.0" y="332" text-anchor="middle" font-size="10" fill="#64748b">wpas_driver_bss_selection() → return 0</text>
+<line x1="190" y1="194" x2="190" y2="248" stroke="#a855f7" stroke-width="1.2" marker-end="url(#ma)"/>
+<line x1="500" y1="194" x2="500" y2="248" stroke="#a855f7" stroke-width="1.2" marker-end="url(#ma)"/>
+<line x1="815" y1="194" x2="815" y2="248" stroke="#a855f7" stroke-width="1.2" marker-end="url(#ma)"/>
+<path d="M 610,315.0 L 640,310.0" stroke="#334155" stroke-width="1" stroke-dasharray="4,3" fill="none" marker-end="url(#ma)"/>
+<text x="585" y="309.0" font-size="9" fill="#64748b">或走驱动旁路</text>
+<rect x="50" y="440" width="440" height="160" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.2"/>
+<text x="270.0" y="462" text-anchor="middle" font-size="13" font-weight="700" fill="#e2e8f0">路径1: 802.11k 信息收集</text>
+<text x="270.0" y="486" text-anchor="middle" font-size="10" fill="#94a3b8">Neighbor Report → wpas_rrm_send_neighbor_rep_request()</text>
+<text x="270.0" y="504" text-anchor="middle" font-size="10" fill="#94a3b8">Beacon Report → PASSIVE / ACTIVE / TABLE</text>
+<text x="270.0" y="522" text-anchor="middle" font-size="10" fill="#94a3b8">测量字段: RCPI (功率) + RSNI (信噪比)</text>
+<text x="270.0" y="540" text-anchor="middle" font-size="10" fill="#94a3b8">→ wpas_beacon_rep_scan_process / wpas_beacon_rep_table</text>
+<text x="270.0" y="558" text-anchor="middle" font-size="10" fill="#94a3b8">结果汇入 BTM 候选列表，经实地测量验证</text>
+<rect x="520" y="440" width="440" height="160" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.2"/>
+<text x="740.0" y="462" text-anchor="middle" font-size="13" font-weight="700" fill="#e2e8f0">路径2: 802.11r FT 快速切换</text>
+<text x="740.0" y="486" text-anchor="middle" font-size="10" fill="#94a3b8">密钥分层: PMK → PMK-R0(MDID) → PMK-R1(BSSID) → PTK</text>
+<text x="740.0" y="504" text-anchor="middle" font-size="10" fill="#94a3b8">Over-the-Air / Over-the-DS 两种模式</text>
+<text x="740.0" y="522" text-anchor="middle" font-size="10" fill="#94a3b8">FT Auth Req/Resp(2帧) + Reassoc(2帧)</text>
+<text x="740.0" y="540" text-anchor="middle" font-size="10" fill="#94a3b8">跳过 802.1X → 切换时延 20-50ms</text>
+<text x="740.0" y="558" text-anchor="middle" font-size="10" fill="#94a3b8">FT 失败 → 回退标准 Auth/Assoc/EAPOL</text>
+<line x1="236.66666666666666" y1="380" x2="236.66666666666666" y2="440" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#mb)"/>
+<line x1="740.0" y1="440" x2="800.0" y2="350" stroke="#3b82f6" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#mb)"/>
+<text x="775.0" y="395" font-size="9" fill="#64748b">D2→E2</text>
+<rect x="50" y="660" width="440" height="120" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<rect x="50" y="660" width="440" height="26" rx="6" fill="#1d4ed8"/>
+<rect x="50" y="678" width="440" height="8" fill="#1d4ed8"/>
+<text x="270.0" y="678" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">QCOM RSO — 固件全权代理</text>
+<text x="270.0" y="706" text-anchor="middle" font-size="10" fill="#94a3b8">Host 下发 rso_config → WMI → 固件自主扫描/评分/切换</text>
+<text x="270.0" y="722" text-anchor="middle" font-size="10" fill="#94a3b8">→ WMI_ROAM_EVENTID 通知 (trigger_reason + rssi + roam_fail_reason)</text>
+<text x="270.0" y="738" text-anchor="middle" font-size="10" fill="#94a3b8">✓ 低延迟 (固件直控射频) + 低功耗</text>
+<text x="270.0" y="754" text-anchor="middle" font-size="10" fill="#94a3b8">✗ 黑盒 — 固件决策过程对 Host 不可见</text>
+<rect x="520" y="660" width="440" height="120" rx="6" fill="#1c1917" stroke="#f97316" stroke-width="1.5"/>
+<rect x="520" y="660" width="440" height="26" rx="6" fill="#ea580c"/>
+<rect x="520" y="678" width="440" height="8" fill="#ea580c"/>
+<text x="740.0" y="678" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">MTK Host Roaming — 驱动亲自下场</text>
+<text x="740.0" y="706" text-anchor="middle" font-size="10" fill="#94a3b8">8状态FSM: IDLE→DECISION→DISCOVERY→ROAM→HANDLE→FT/BTM</text>
+<text x="740.0" y="722" text-anchor="middle" font-size="10" fill="#94a3b8">roamingFsmProcessEvent 分发 6 类事件, roamingFsmNotifyEvent 上报</text>
+<text x="740.0" y="738" text-anchor="middle" font-size="10" fill="#94a3b8">✓ 可观测性高 — Host 掌控每一步, 日志完整</text>
+<text x="740.0" y="754" text-anchor="middle" font-size="10" fill="#94a3b8">✗ 延迟大 — 每次决策需 Host↔固件来回</text>
+<line x1="270.0" y1="600" x2="270.0" y2="660" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#mb)"/>
+<line x1="740.0" y1="600" x2="740.0" y2="660" stroke="#f97316" stroke-width="1.5" marker-end="url(#md)"/>
+<path d="M 740.0,600 L 740.0,640 L 270,640 L 270,660" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,3" fill="none" marker-end="url(#mb)"/>
+<text x="748.0" y="627" font-size="8" fill="#64748b">QCOM 也可走 FT</text>
+<rect x="50" y="800" width="380" height="90" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<line x1="65" y1="820" x2="95" y2="820" stroke="#a855f7" stroke-width="1.5"/>
+<text x="105" y="824" font-size="10" fill="#94a3b8">触发信号</text>
+<line x1="65" y1="836" x2="95" y2="836" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="105" y="840" font-size="10" fill="#94a3b8">控制/调用</text>
+<line x1="65" y1="852" x2="95" y2="852" stroke="#10b981" stroke-width="1.5"/>
+<text x="105" y="856" font-size="10" fill="#94a3b8">执行/完成</text>
+<line x1="65" y1="868" x2="95" y2="868" stroke="#334155" stroke-width="1.5"/>
+<text x="105" y="872" font-size="10" fill="#94a3b8">备选/异常</text>
+</svg>

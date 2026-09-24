@@ -1,0 +1,1396 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1000"
+   height="840"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="01-architecture-callchain.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.3011905"
+     inkscape:cx="499.92681"
+     inkscape:cy="420"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g2" />
+  <defs
+     id="defs2">
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrowBlue">
+      <polygon
+         id="svg_1"
+         fill="#4a8eff"
+         points="0,0 8,3 0,6" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrowOrange">
+      <polygon
+         id="svg_2"
+         fill="#f0a040"
+         points="0,0 8,3 0,6" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrowPurple">
+      <polygon
+         id="svg_3"
+         fill="#a78bfa"
+         points="0,0 8,3 0,6" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrowGreen">
+      <polygon
+         id="svg_4"
+         fill="#30d158"
+         points="0,0 8,3 0,6" />
+    </marker>
+    <linearGradient
+       y2="1"
+       x2="0"
+       y1="0"
+       x1="0"
+       id="bg">
+      <stop
+         stop-color="#0f0f1a"
+         offset="0%"
+         id="stop1" />
+      <stop
+         stop-color="#1a1a2e"
+         offset="100%"
+         id="stop2" />
+    </linearGradient>
+  </defs>
+  <!-- Title -->
+  <!-- ===== MAIN COLUMN (x:40..600) ===== -->
+  <!-- Layer 1: App / Framework (y:62..172) -->
+  <!-- Transport 1: Framework -> wpa_supplicant (left) -->
+  <!-- Transport 1b: Framework -> Vendor HAL (right) -->
+  <!-- Layer 2a: wpa_supplicant (left, y:190..290) -->
+  <!-- Layer 2b: Vendor HAL (right, y:190..290) -->
+  <!-- Transport 2: Both -> cfg80211 (two arrows merging) -->
+  <!-- Layer 3: cfg80211 (kernel, y:308..368) -->
+  <!-- Split Point -->
+  <!-- QCOM Branch (y:390..490) -->
+  <!-- MTK Branch (y:390..490) -->
+  <!-- Merge -->
+  <!-- Layer 5: Firmware (y:524..604) -->
+  <!-- Air Interface -->
+  <!-- ===== SIDEBAR (x:625..965) ===== -->
+  <!-- Sidebar: App -->
+  <!-- Sidebar: Framework -->
+  <!-- Sidebar: Supplicant (left) -->
+  <!-- Sidebar: HAL (right) -->
+  <!-- Sidebar: Parallel indicator -->
+  <!-- Sidebar: cfg80211 -->
+  <!-- Sidebar: QCOM -->
+  <!-- Sidebar: MTK -->
+  <!-- Sidebar: Firmware -->
+  <!-- Sidebar: PHY -->
+  <!-- Sidebar: Timeline -->
+  <!-- Connection timeline bar -->
+  <!-- Timeline markers -->
+  <!-- Progress bar -->
+  <!-- Legend -->
+  <g
+     id="g2">
+    <title
+       id="title2">跨层调用链：从点击连接到空中帧</title>
+    <rect
+       stroke="null"
+       x="0"
+       y="-0.31035"
+       id="svg_5"
+       fill="url(#bg)"
+       height="840.68964"
+       width="1000" />
+    <text
+       id="svg_7"
+       fill="#c0c8d4"
+       font-weight="bold"
+       font-size="18px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="title"
+       text-anchor="middle"
+       y="35"
+       x="500">Android WiFi 跨层调用链：从点击连接到空中帧</text>
+    <text
+       id="svg_8"
+       fill="#6a737d"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="subtitle"
+       text-anchor="middle"
+       y="52"
+       x="500">WifiManager.connect() → Authentication → Association → 4-Way Handshake → DHCP</text>
+    <rect
+       id="svg_9"
+       stroke-width="1.2"
+       stroke="#1e3a5f"
+       fill="#121a2a"
+       rx="6"
+       height="118"
+       width="560"
+       y="62"
+       x="40" />
+    <rect
+       id="svg_10"
+       fill="#5e9eff"
+       rx="2"
+       height="118"
+       width="4"
+       y="62"
+       x="40" />
+    <text
+       id="svg_11"
+       font-weight="bold"
+       font-size="15px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#5e9eff"
+       class="layer-name"
+       y="82"
+       x="56">App / Framework</text>
+    <text
+       id="svg_12"
+       fill="#dde2e8"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="comp"
+       y="100"
+       x="56">WifiManager.connect() → WifiServiceImpl → ConnectHelper</text>
+    <text
+       id="svg_13"
+       fill="#dde2e8"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="comp"
+       y="115"
+       x="56">→ ClientModeImpl.connectToNetwork()</text>
+    <text
+       id="svg_14"
+       fill="#dde2e8"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="comp"
+       y="130"
+       x="56">→ WifiNative (dispatcher: fork to Supplicant &amp; HAL)</text>
+    <text
+       id="svg_15"
+       fill="#8b95a5"
+       font-size="9px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="iface"
+       y="150"
+       x="56">▶ Supplicant path: ISupplicantStaIface / ISupplicantStaNetwork</text>
+    <text
+       id="svg_16"
+       fill="#8b95a5"
+       font-size="9px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="iface"
+       y="165"
+       x="56">▶ HAL path: IWifiChip (接口创建/芯片模式管理)</text>
+    <line
+       stroke="#4a8eff"
+       id="svg_17"
+       marker-end="url(#arrowBlue)"
+       fill="none"
+       stroke-width="1.8"
+       class="arrow-line"
+       y2="214.48274"
+       x2="200"
+       y1="172"
+       x1="200" />
+    <line
+       stroke="#a78bfa"
+       id="svg_20"
+       marker-end="url(#arrowPurple)"
+       fill="none"
+       stroke-width="1.8"
+       class="arrow-hal"
+       y2="215.86205"
+       x2="480"
+       y1="172"
+       x1="480" />
+    <rect
+       id="svg_23"
+       stroke-width="1.2"
+       stroke="#2a4a2a"
+       fill="#121820"
+       rx="6"
+       height="100"
+       width="328"
+       y="220.5862"
+       x="40" />
+    <rect
+       id="svg_24"
+       fill="#30d158"
+       rx="2"
+       height="100"
+       width="4"
+       y="220.5862"
+       x="40" />
+    <text
+       id="svg_25"
+       font-weight="bold"
+       font-size="15px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#30d158"
+       class="layer-name"
+       y="240.5862"
+       x="56">wpa_supplicant</text>
+    <text
+       id="svg_26"
+       fill="#dde2e8"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="comp"
+       y="258.5862"
+       x="56">wpa_supplicant_connect() → wpa_drv_associate()</text>
+    <text
+       id="svg_27"
+       fill="#dde2e8"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="comp"
+       y="273.5862"
+       x="56">EAPOL: AUTHENTICATING → 4WAY_HANDSHAKE → COMPLETED</text>
+    <text
+       id="svg_28"
+       fill="#8b95a5"
+       font-size="9px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="iface"
+       y="292.5862"
+       x="56">▶ NL80211_CMD_CONNECT (标准 nl80211 命令)</text>
+    <text
+       id="svg_29"
+       fill="#8b95a5"
+       font-size="9px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="iface"
+       y="307.5862"
+       x="56">▶ EAPOL over L2 (sock_raw)</text>
+    <rect
+       id="svg_30"
+       stroke-width="1.2"
+       stroke="#3a2a5f"
+       fill="#1a1220"
+       rx="6"
+       height="100"
+       width="208"
+       y="220.5862"
+       x="392" />
+    <rect
+       id="svg_31"
+       fill="#a78bfa"
+       rx="2"
+       height="100"
+       width="4"
+       y="220.5862"
+       x="392" />
+    <text
+       id="svg_32"
+       font-weight="bold"
+       font-size="15px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#a78bfa"
+       class="layer-name"
+       y="240.5862"
+       x="408">Vendor HAL</text>
+    <text
+       id="svg_33"
+       fill="#dde2e8"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="comp"
+       y="258.5862"
+       x="408">HalDeviceManager</text>
+    <text
+       id="svg_34"
+       fill="#dde2e8"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="comp"
+       y="273.5862"
+       x="408">WifiChip → IWifiChip</text>
+    <text
+       id="svg_35"
+       fill="#8b95a5"
+       font-size="9px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="iface"
+       y="292.5862"
+       x="408">▶ NL80211_CMD_VENDOR</text>
+    <text
+       id="svg_36"
+       fill="#8b95a5"
+       font-size="9px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="iface"
+       y="307.5862"
+       x="408">▶ vendor subcmd</text>
+    <line
+       id="svg_37"
+       marker-end="url(#arrowBlue)"
+       fill="none"
+       stroke-width="1.8"
+       stroke="#4a8eff"
+       class="arrow-line"
+       y2="340.5862"
+       x2="200"
+       y1="320.5862"
+       x1="200" />
+    <line
+       id="svg_38"
+       marker-end="url(#arrowPurple)"
+       fill="none"
+       stroke-width="1.8"
+       stroke="#a78bfa"
+       class="arrow-hal"
+       y2="340.5862"
+       x2="496"
+       y1="320.5862"
+       x1="496" />
+    <line
+       id="svg_39"
+       fill="none"
+       stroke-width="1.8"
+       stroke="#30d158"
+       y2="348.5862"
+       x2="496"
+       y1="348.5862"
+       x1="200" />
+    <line
+       id="svg_40"
+       fill="none"
+       stroke-width="1.8"
+       stroke="#30d158"
+       y2="356.5862"
+       x2="348"
+       y1="348.5862"
+       x1="348" />
+    <rect
+       id="svg_41"
+       stroke-width="0.6"
+       stroke="#2a4a2a"
+       fill="#0f1520"
+       rx="3"
+       height="14"
+       width="196"
+       y="324.5862"
+       x="250" />
+    <text
+       id="svg_42"
+       letter-spacing="0.5px"
+       fill="#8b95a5"
+       font-size="9px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="transport"
+       text-anchor="middle"
+       y="335.5862"
+       x="348">NL80211 Netlink (标准 + vendor 命令)</text>
+    <rect
+       id="svg_43"
+       stroke-width="1.2"
+       stroke="#2a5a4a"
+       fill="#0f1a18"
+       rx="6"
+       height="60"
+       width="560"
+       y="348.5862"
+       x="40" />
+    <rect
+       id="svg_44"
+       fill="#40c8a0"
+       rx="2"
+       height="60"
+       width="4"
+       y="348.5862"
+       x="40" />
+    <text
+       id="svg_45"
+       font-weight="bold"
+       font-size="15px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#40c8a0"
+       class="layer-name"
+       y="368.5862"
+       x="56">cfg80211 (Kernel)</text>
+    <text
+       id="svg_46"
+       fill="#dde2e8"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="comp"
+       y="386.5862"
+       x="56">cfg80211_connect() → 验证参数 → 调用驱动 .connect 回调</text>
+    <text
+       id="svg_47"
+       fill="#8b95a5"
+       font-size="9px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="iface"
+       y="401.5862"
+       x="56">▶ struct cfg80211_ops 函数表 (内核态 Netlink 接口层)</text>
+    <line
+       id="svg_48"
+       marker-end="url(#arrowBlue)"
+       fill="none"
+       stroke-width="1.8"
+       stroke="#4a8eff"
+       class="arrow-line"
+       y2="442.58621"
+       x2="320"
+       y1="424.58621"
+       x1="320" />
+    <rect
+       id="svg_49"
+       stroke-width="0.642274"
+       stroke="#f0a040"
+       fill="#1a1808"
+       rx="2.5782251"
+       height="16"
+       width="103.12901"
+       y="412.58621"
+       x="271.97256" />
+    <text
+       id="svg_50"
+       font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+       fill="#f0a040"
+       font-size="9px"
+       text-anchor="middle"
+       y="425.58621"
+       x="322">▼ 平台驱动分叉 ▼</text>
+    <rect
+       id="svg_51"
+       stroke-width="1.2"
+       stroke="#5a4020"
+       fill="#1a1408"
+       rx="6"
+       height="100"
+       width="265"
+       y="438.5862"
+       x="40" />
+    <rect
+       id="svg_52"
+       fill="#f0a040"
+       rx="2"
+       height="100"
+       width="4"
+       y="438.5862"
+       x="40" />
+    <text
+       id="svg_53"
+       font-weight="bold"
+       font-size="15px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#f0a040"
+       class="layer-name"
+       y="456.5862"
+       x="56">QCOM qcacld-3.0</text>
+    <text
+       id="svg_54"
+       fill="#8b95a5"
+       font-size="8.5px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="func"
+       y="474.5862"
+       x="56">wlan_hdd_cfg80211_connect() → cm_connect_start()</text>
+    <text
+       id="svg_55"
+       fill="#8b95a5"
+       font-size="8.5px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="func"
+       y="488.5862"
+       x="56">→ cm_csr_connect_rsp() → mlme_cm_connect_start_ind()</text>
+    <text
+       id="svg_56"
+       fill="#8b95a5"
+       font-size="8.5px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="func"
+       y="502.5862"
+       x="56">→ wma_send_msg() → wmi_unified_cmd_send()</text>
+    <text
+       id="svg_57"
+       fill="#8b95a5"
+       font-size="9px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="iface"
+       y="520.5862"
+       x="56">WMI_SERVICE_ID → firmware</text>
+    <text
+       id="svg_58"
+       letter-spacing="0.5px"
+       fill="#8b95a5"
+       font-size="9px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="transport"
+       y="534.5862"
+       x="56">↑ ↓ PCIe / SDIO (MSI/SDIO IRQ)</text>
+    <rect
+       id="svg_59"
+       stroke-width="1.2"
+       stroke="#3a2a5f"
+       fill="#150f22"
+       rx="6"
+       height="100"
+       width="265"
+       y="438.5862"
+       x="335" />
+    <rect
+       id="svg_60"
+       fill="#a78bfa"
+       rx="2"
+       height="100"
+       width="4"
+       y="438.5862"
+       x="335" />
+    <text
+       id="svg_61"
+       font-weight="bold"
+       font-size="15px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#a78bfa"
+       class="layer-name"
+       y="456.5862"
+       x="351">MTK gen4m</text>
+    <text
+       id="svg_62"
+       fill="#8b95a5"
+       font-size="8.5px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="func"
+       y="474.5862"
+       x="351">wlanoidSetConnect() → aisFsmSteps()</text>
+    <text
+       id="svg_63"
+       fill="#8b95a5"
+       font-size="8.5px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="func"
+       y="488.5862"
+       x="351">→ aisStateJOIN → saaFsmRunEventStart()</text>
+    <text
+       id="svg_64"
+       fill="#8b95a5"
+       font-size="8.5px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="func"
+       y="502.5862"
+       x="351">→ Auth/Assoc frame → nicTxEnqueueMsdu()</text>
+    <text
+       id="svg_65"
+       fill="#8b95a5"
+       font-size="9px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="iface"
+       y="520.5862"
+       x="351">HIF_CMD → firmware (MCU)</text>
+    <text
+       id="svg_66"
+       letter-spacing="0.5px"
+       fill="#8b95a5"
+       font-size="9px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="transport"
+       y="534.5862"
+       x="351">↑ ↓ AXI / SDIO (AP2CONN MBOX)</text>
+    <line
+       id="svg_67"
+       marker-end="url(#arrowOrange)"
+       fill="none"
+       stroke-dasharray="6,3"
+       stroke-width="1.8"
+       stroke="#f0a040"
+       class="arrow-split"
+       y2="568.5862"
+       x2="172"
+       y1="538.5862"
+       x1="172" />
+    <line
+       id="svg_68"
+       marker-end="url(#arrowPurple)"
+       fill="none"
+       stroke-dasharray="6,3"
+       stroke-width="1.8"
+       stroke="#a78bfa"
+       class="arrow-mtk"
+       y2="568.5862"
+       x2="467"
+       y1="538.5862"
+       x1="467" />
+    <line
+       id="svg_69"
+       fill="none"
+       stroke-width="1.8"
+       stroke="#30d158"
+       y2="568.5862"
+       x2="467"
+       y1="568.5862"
+       x1="172" />
+    <line
+       id="svg_70"
+       fill="none"
+       stroke-width="1.8"
+       stroke="#30d158"
+       y2="580.5862"
+       x2="320"
+       y1="568.5862"
+       x1="320" />
+    <rect
+       id="svg_71"
+       stroke-width="1.2"
+       stroke="#203a28"
+       fill="#0f1a12"
+       rx="6"
+       height="80"
+       width="560"
+       y="582.5862"
+       x="40" />
+    <rect
+       id="svg_72"
+       fill="#40c870"
+       rx="2"
+       height="80"
+       width="4"
+       y="582.5862"
+       x="40" />
+    <text
+       id="svg_73"
+       font-weight="bold"
+       font-size="15px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#40c870"
+       class="layer-name"
+       y="602.5862"
+       x="56">Firmware</text>
+    <text
+       id="svg_74"
+       fill="#dde2e8"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="comp"
+       y="620.5862"
+       x="56">Auth/Assoc → EAPOL relay → Key install → Port open</text>
+    <text
+       id="svg_75"
+       fill="#8b95a5"
+       font-size="9px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="iface"
+       y="638.5862"
+       x="56">QCOM: WMI event callback</text>
+    <text
+       id="svg_76"
+       fill="#8b95a5"
+       font-size="9px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="iface"
+       y="656.5862"
+       x="56">MTK: MCU + nicRxProcessRFBs()</text>
+    <line
+       id="svg_77"
+       marker-end="url(#arrowGreen)"
+       fill="none"
+       stroke-dasharray="4,3"
+       stroke-width="1.4"
+       stroke="#30d158"
+       class="arrow-air"
+       y2="700.5862"
+       x2="320"
+       y1="662.5862"
+       x1="320" />
+    <text
+       id="svg_78"
+       font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+       fill="#30d158"
+       font-size="9px"
+       text-anchor="middle"
+       y="683.58618"
+       x="292">• 802.11 Auth/Assoc • EAPOL •</text>
+    <text
+       id="svg_79"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-weight="bold"
+       fill="#30d158"
+       font-size="10px"
+       text-anchor="middle"
+       y="714.5862"
+       x="320">✈ 空中接口 (802.11 PHY)</text>
+    <rect
+       id="svg_80"
+       stroke-width="0.8"
+       stroke="#2a2d35"
+       fill="#0f1018"
+       rx="6"
+       height="520"
+       width="340"
+       y="62"
+       x="625" />
+    <text
+       id="svg_81"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-weight="bold"
+       fill="#8b95a5"
+       font-size="13px"
+       text-anchor="middle"
+       y="84"
+       x="795">🏥 医院体系比喖</text>
+    <rect
+       id="svg_82"
+       stroke-width="0.6"
+       stroke="#1e3a5f"
+       fill="#121a2a"
+       rx="4"
+       height="34"
+       width="300"
+       y="98"
+       x="645" />
+    <text
+       id="svg_83"
+       fill="#6a737d"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="city"
+       y="114"
+       x="660">🏥 患者 → 就诊挂号</text>
+    <text
+       id="svg_84"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#4a5568"
+       font-size="9px"
+       y="128"
+       x="660">WifiManager.connect()</text>
+    <rect
+       id="svg_85"
+       stroke-width="0.6"
+       stroke="#1e3a5f"
+       fill="#121a2a"
+       rx="4"
+       height="34"
+       width="300"
+       y="140"
+       x="645" />
+    <text
+       id="svg_86"
+       fill="#6a737d"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="city"
+       y="156"
+       x="660">🏥 门诊部 → 接诊分诊</text>
+    <text
+       id="svg_87"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#4a5568"
+       font-size="9px"
+       y="170"
+       x="660">ClientModeImpl + WifiNative (dispatcher)</text>
+    <rect
+       id="svg_88"
+       stroke-width="0.6"
+       stroke="#2a4a2a"
+       fill="#121820"
+       rx="4"
+       height="46"
+       width="145"
+       y="192"
+       x="645" />
+    <text
+       id="svg_89"
+       fill="#6a737d"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="city"
+       y="208"
+       x="660">🩺 主治医师</text>
+    <text
+       id="svg_90"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#4a5568"
+       font-size="9px"
+       y="222"
+       x="660">Auth → Assoc → 4-Way</text>
+    <text
+       id="svg_91"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#4a5568"
+       font-size="9px"
+       y="234"
+       x="660">ISupplicantStaIface</text>
+    <rect
+       id="svg_92"
+       stroke-width="0.6"
+       stroke="#3a2a5f"
+       fill="#1a1220"
+       rx="4"
+       height="46"
+       width="145"
+       y="192"
+       x="800" />
+    <text
+       id="svg_93"
+       fill="#6a737d"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="city"
+       y="208"
+       x="815">🔬 设备管理</text>
+    <text
+       id="svg_94"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#4a5568"
+       font-size="9px"
+       y="222"
+       x="815">芯片模式 + 接口调度</text>
+    <text
+       id="svg_95"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#4a5568"
+       font-size="9px"
+       y="234"
+       x="815">IWifiChip</text>
+    <rect
+       id="svg_96"
+       stroke-width="0.4"
+       stroke="#1e3a5f"
+       fill="#0a1520"
+       rx="4"
+       height="22"
+       width="300"
+       y="244"
+       x="645" />
+    <text
+       id="svg_97"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#4a8eff"
+       font-size="9px"
+       text-anchor="middle"
+       y="260"
+       x="795">↓ 并行路径，各自独立 ↓</text>
+    <rect
+       id="svg_98"
+       stroke-width="0.6"
+       stroke="#2a5a4a"
+       fill="#0f1a18"
+       rx="4"
+       height="34"
+       width="300"
+       y="272"
+       x="645" />
+    <text
+       id="svg_99"
+       fill="#6a737d"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="city"
+       y="288"
+       x="660">📋 内核接待处 (cfg80211)</text>
+    <text
+       id="svg_100"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#4a5568"
+       font-size="9px"
+       y="302.34484"
+       x="660">统一接收 nl80211 ，分发到驱动回调</text>
+    <rect
+       id="svg_101"
+       stroke-width="0.6"
+       stroke="#5a4020"
+       fill="#1a1408"
+       rx="4"
+       height="46"
+       width="145"
+       y="324"
+       x="645" />
+    <text
+       id="svg_102"
+       fill="#6a737d"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="city"
+       y="340"
+       x="660">🏥 QCOM 专科通道</text>
+    <text
+       id="svg_103"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#4a5568"
+       font-size="9px"
+       y="354"
+       x="660">HDD→CM→SME→WMA</text>
+    <text
+       id="svg_104"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#4a5568"
+       font-size="9px"
+       y="366"
+       x="660">快速专用路径</text>
+    <rect
+       id="svg_105"
+       stroke-width="0.6"
+       stroke="#3a2a5f"
+       fill="#150f22"
+       rx="4"
+       height="46"
+       width="145"
+       y="324"
+       x="800" />
+    <text
+       id="svg_106"
+       fill="#6a737d"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="city"
+       y="340"
+       x="815">🏥 MTK 综合通道</text>
+    <text
+       id="svg_107"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#4a5568"
+       font-size="9px"
+       y="354"
+       x="815">OID→AIS→SAA FSM</text>
+    <text
+       id="svg_108"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#4a5568"
+       font-size="9px"
+       y="366"
+       x="815">综合调度路径</text>
+    <rect
+       id="svg_109"
+       stroke-width="0.6"
+       stroke="#203a28"
+       fill="#0f1a12"
+       rx="4"
+       height="34"
+       width="300"
+       y="378"
+       x="645" />
+    <text
+       id="svg_110"
+       fill="#6a737d"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="city"
+       y="392.34484"
+       x="660">🏥 治疗室 → 执行治疗</text>
+    <text
+       id="svg_111"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#4a5568"
+       font-size="9px"
+       y="407.72415"
+       x="660">Firmware: Auth/Assoc + Key install</text>
+    <rect
+       id="svg_112"
+       stroke-width="0.6"
+       stroke="#2a5a2a"
+       fill="#0a1a0a"
+       rx="4"
+       height="34"
+       width="300"
+       y="428"
+       x="645" />
+    <text
+       id="svg_113"
+       fill="#6a737d"
+       font-size="11px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="city"
+       y="444"
+       x="660">🏥 嵌入式控制 → 无线治疗</text>
+    <text
+       id="svg_114"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#4a5568"
+       font-size="9px"
+       y="458"
+       x="660">802.11 PHY: Auth → Assoc → EAPOL</text>
+    <text
+       id="svg_115"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#6a737d"
+       font-size="10px"
+       text-anchor="middle"
+       y="484"
+       x="795">⏱️ 典型耗时: 0ms → 505ms</text>
+    <text
+       id="svg_116"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#4a5568"
+       font-size="9px"
+       text-anchor="middle"
+       y="500"
+       x="795">Auth(50ms) Assoc(20ms) 4-Way(50ms) DHCP(200ms)</text>
+    <text
+       id="svg_117"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#4a5568"
+       font-size="9px"
+       text-anchor="middle"
+       y="514"
+       x="795">其中 DHCP 占 40%，是最大瓶颈</text>
+    <rect
+       id="svg_118"
+       stroke-width="0.8"
+       stroke="#2a2d35"
+       fill="#0f1018"
+       rx="4"
+       height="46"
+       width="560"
+       y="706.5862"
+       x="40" />
+    <text
+       id="svg_119"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-weight="bold"
+       fill="#8b95a5"
+       font-size="10px"
+       y="728.5862"
+       x="45">⏱️ 连接时序</text>
+    <line
+       id="svg_120"
+       stroke-width="1.2"
+       stroke="#5e9eff"
+       y2="752.5862"
+       x2="110"
+       y1="738.5862"
+       x1="110" />
+    <text
+       id="svg_121"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#5e9eff"
+       font-size="7.5px"
+       text-anchor="middle"
+       y="760.5862"
+       x="110">0ms</text>
+    <text
+       id="svg_122"
+       font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+       fill="#8b95a5"
+       font-size="7px"
+       text-anchor="middle"
+       y="746.58618"
+       x="88">connect()</text>
+    <line
+       id="svg_123"
+       stroke-width="1.2"
+       stroke="#30d158"
+       y2="752.5862"
+       x2="220"
+       y1="738.5862"
+       x1="220" />
+    <text
+       id="svg_124"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#30d158"
+       font-size="7.5px"
+       text-anchor="middle"
+       y="760.5862"
+       x="220">50ms</text>
+    <text
+       id="svg_125"
+       font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+       fill="#8b95a5"
+       font-size="7px"
+       text-anchor="middle"
+       y="748.58618"
+       x="216">Auth OK</text>
+    <line
+       id="svg_126"
+       stroke-width="1.2"
+       stroke="#30d158"
+       y2="752.5862"
+       x2="290"
+       y1="738.5862"
+       x1="290" />
+    <text
+       id="svg_127"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#30d158"
+       font-size="7.5px"
+       text-anchor="middle"
+       y="760.5862"
+       x="290">70ms</text>
+    <text
+       id="svg_128"
+       font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+       fill="#8b95a5"
+       font-size="7px"
+       text-anchor="middle"
+       y="748.58618"
+       x="284">Assoc OK</text>
+    <line
+       id="svg_129"
+       stroke-width="1.2"
+       stroke="#30d158"
+       y2="752.5862"
+       x2="380"
+       y1="738.5862"
+       x1="380" />
+    <text
+       id="svg_130"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#30d158"
+       font-size="7.5px"
+       text-anchor="middle"
+       y="760.5862"
+       x="380">120ms</text>
+    <text
+       id="svg_131"
+       font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+       fill="#8b95a5"
+       font-size="7px"
+       text-anchor="middle"
+       y="748.58618"
+       x="374">4-Way OK</text>
+    <line
+       id="svg_132"
+       stroke-width="1.2"
+       stroke="#30d158"
+       y2="752.5862"
+       x2="520"
+       y1="738.5862"
+       x1="520" />
+    <text
+       id="svg_133"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#30d158"
+       font-size="7.5px"
+       text-anchor="middle"
+       y="760.5862"
+       x="520">505ms</text>
+    <text
+       id="svg_134"
+       font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+       fill="#8b95a5"
+       font-size="7px"
+       text-anchor="middle"
+       y="748.58618"
+       x="524">IP 就绪</text>
+    <rect
+       id="svg_135"
+       fill="#1a2a3a"
+       rx="1.5"
+       height="3"
+       width="410"
+       y="735.5862"
+       x="110" />
+    <rect
+       id="svg_136"
+       fill="#5e9eff"
+       rx="1.5"
+       height="3"
+       width="70"
+       y="735.5862"
+       x="110" />
+    <rect
+       id="svg_137"
+       fill="#30d158"
+       rx="1.5"
+       height="3"
+       width="40"
+       y="735.5862"
+       x="180" />
+    <rect
+       id="svg_138"
+       fill="#30d158"
+       rx="1.5"
+       height="3"
+       width="70"
+       y="735.5862"
+       x="220" />
+    <rect
+       id="svg_139"
+       fill="#30d158"
+       rx="1.5"
+       height="3"
+       width="90"
+       y="735.5862"
+       x="290" />
+    <rect
+       id="svg_140"
+       fill="#f0a040"
+       rx="1.5"
+       height="3"
+       width="140"
+       y="735.5862"
+       x="380" />
+    <text
+       id="svg_141"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       fill="#f0a040"
+       font-size="7px"
+       text-anchor="middle"
+       y="751.5862"
+       x="450">DHCP DORA (40%)</text>
+    <rect
+       id="svg_142"
+       stroke="#2a2d35"
+       fill="#0d0d1a"
+       class="legend-box"
+       rx="5"
+       height="38"
+       width="560"
+       y="772.5862"
+       x="40" />
+    <line
+       id="svg_143"
+       stroke-width="1.8"
+       stroke="#4a8eff"
+       y2="787.5862"
+       x2="85"
+       y1="787.5862"
+       x1="55" />
+    <text
+       id="svg_144"
+       fill="#8b95a5"
+       font-size="10px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="legend-text"
+       y="791.5862"
+       x="90">调用链 (主路径)</text>
+    <line
+       id="svg_145"
+       stroke-width="1.8"
+       stroke="#a78bfa"
+       y2="787.5862"
+       x2="215"
+       y1="787.5862"
+       x1="185" />
+    <text
+       id="svg_146"
+       fill="#8b95a5"
+       font-size="10px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="legend-text"
+       y="791.5862"
+       x="220">HAL 路径</text>
+    <line
+       id="svg_147"
+       stroke-dasharray="6,3"
+       stroke-width="1.8"
+       stroke="#f0a040"
+       y2="787.5862"
+       x2="335"
+       y1="787.5862"
+       x1="305" />
+    <text
+       id="svg_148"
+       fill="#8b95a5"
+       font-size="10px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="legend-text"
+       y="791.5862"
+       x="340">QCOM</text>
+    <line
+       id="svg_149"
+       stroke-dasharray="6,3"
+       stroke-width="1.8"
+       stroke="#a78bfa"
+       y2="787.5862"
+       x2="425"
+       y1="787.5862"
+       x1="395" />
+    <text
+       id="svg_150"
+       fill="#8b95a5"
+       font-size="10px"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       class="legend-text"
+       y="791.5862"
+       x="430">MTK</text>
+    <line
+       id="svg_151"
+       stroke-width="1.8"
+       stroke="#30d158"
+       y2="787.5862"
+       x2="500"
+       y1="787.5862"
+       x1="470" />
+    <g
+       id="svg_153">
+      <rect
+         id="svg_21"
+         stroke-width="0.6"
+         stroke="#3a2a5f"
+         fill="#150f20"
+         rx="3"
+         height="14"
+         width="170"
+         y="184.3793"
+         x="395" />
+      <text
+         id="svg_22"
+         letter-spacing="0.5px"
+         fill="#8b95a5"
+         font-size="9px"
+         font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+         class="transport"
+         text-anchor="middle"
+         y="195.3793"
+         x="480">AIDL Binder (IWifiChip)</text>
+    </g>
+    <g
+       id="svg_154">
+      <rect
+         stroke="#1e3a5f"
+         id="svg_18"
+         stroke-width="0.6"
+         fill="#0f1520"
+         rx="3"
+         height="14"
+         width="212.75859"
+         y="183.68965"
+         x="82.24141" />
+      <text
+         stroke="null"
+         id="svg_19"
+         letter-spacing="0.5px"
+         fill="#8b95a5"
+         font-size="9px"
+         font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+         class="transport"
+         text-anchor="middle"
+         y="194.68965"
+         x="187.58622">AIDL Binder (ISupplicantStaIface)</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1100"
+   height="650"
+   version="1.1"
+   id="svg18"
+   sodipodi:docname="03-qcom-module-relationships.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview18"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.46"
+     inkscape:cx="550"
+     inkscape:cy="325"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g18" />
+  <defs
+     id="defs18">
+    <filter
+       id="shadow"
+       x="-0.0041666667"
+       y="-0.010714286"
+       width="1.0083333"
+       height="1.0214286" />
+    <marker
+       orient="auto"
+       refY="3"
+       refX="8"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrRed">
+      <path
+         id="svg_1"
+         fill="#e74c3c"
+         d="m0,0l8,3l-8,3l0,-6z" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="8"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrOrange">
+      <path
+         id="svg_2"
+         fill="#e67e22"
+         d="m0,0l8,3l-8,3l0,-6z" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="8"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrYellow">
+      <path
+         id="svg_3"
+         fill="#f1c40f"
+         d="m0,0l8,3l-8,3l0,-6z" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="8"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrGreen">
+      <path
+         id="svg_4"
+         fill="#2ecc71"
+         d="m0,0l8,3l-8,3l0,-6z" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="8"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrBlue">
+      <path
+         id="svg_5"
+         fill="#3498db"
+         d="m0,0l8,3l-8,3l0,-6z" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="8"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrPurple">
+      <path
+         id="svg_6"
+         fill="#9b59b6"
+         d="m0,0l8,3l-8,3l0,-6z" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="8"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrCyan">
+      <path
+         id="svg_7"
+         fill="#1abc9c"
+         d="m0,0l8,3l-8,3l0,-6z" />
+    </marker>
+    <linearGradient
+       y2="1"
+       x2="0"
+       y1="0"
+       x1="0"
+       id="bg">
+      <stop
+         stop-color="#0f0f1a"
+         offset="0%"
+         id="stop1" />
+      <stop
+         stop-color="#1a1a2e"
+         offset="100%"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       y2="1"
+       x2="1"
+       y1="0"
+       x1="0"
+       id="hddGrad">
+      <stop
+         stop-color="#e74c3c"
+         offset="0%"
+         id="stop3" />
+      <stop
+         stop-color="#c0392b"
+         offset="100%"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       y2="1"
+       x2="1"
+       y1="0"
+       x1="0"
+       id="pldGrad">
+      <stop
+         stop-color="#e67e22"
+         offset="0%"
+         id="stop5" />
+      <stop
+         stop-color="#d35400"
+         offset="100%"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       y2="1"
+       x2="1"
+       y1="0"
+       x1="0"
+       id="cnssGrad">
+      <stop
+         stop-color="#f1c40f"
+         offset="0%"
+         id="stop7" />
+      <stop
+         stop-color="#d4ac0d"
+         offset="100%"
+         id="stop8" />
+    </linearGradient>
+    <linearGradient
+       y2="1"
+       x2="1"
+       y1="0"
+       x1="0"
+       id="objmgrGrad">
+      <stop
+         stop-color="#2ecc71"
+         offset="0%"
+         id="stop9" />
+      <stop
+         stop-color="#27ae60"
+         offset="100%"
+         id="stop10" />
+    </linearGradient>
+    <linearGradient
+       y2="1"
+       x2="1"
+       y1="0"
+       x1="0"
+       id="wmiGrad">
+      <stop
+         stop-color="#3498db"
+         offset="0%"
+         id="stop11" />
+      <stop
+         stop-color="#2980b9"
+         offset="100%"
+         id="stop12" />
+    </linearGradient>
+    <linearGradient
+       y2="1"
+       x2="1"
+       y1="0"
+       x1="0"
+       id="qdfGrad">
+      <stop
+         stop-color="#9b59b6"
+         offset="0%"
+         id="stop13" />
+      <stop
+         stop-color="#8e44ad"
+         offset="100%"
+         id="stop14" />
+    </linearGradient>
+    <linearGradient
+       y2="0"
+       x2="1"
+       y1="0"
+       x1="0"
+       id="cmnGrad">
+      <stop
+         stop-color="#1a3a4a"
+         offset="0%"
+         id="stop15" />
+      <stop
+         stop-color="#1a3a5a"
+         offset="100%"
+         id="stop16" />
+    </linearGradient>
+    <linearGradient
+       y2="0"
+       x2="1"
+       y1="0"
+       x1="0"
+       id="cldGrad">
+      <stop
+         stop-color="#3a1a1a"
+         offset="0%"
+         id="stop17" />
+      <stop
+         stop-color="#4a1a1a"
+         offset="100%"
+         id="stop18" />
+    </linearGradient>
+  </defs>
+  <!-- Title -->
+  <!-- Repo Legend -->
+  <!-- HDD (top center) x=400 w=300 -->
+  <!-- PLD (left) x=55 w=220 -->
+  <!-- CDS/WMA (right) x=825 w=220 -->
+  <!-- cnss2 x=55 w=220 y=320 h=110 -->
+  <!-- objmgr x=305 w=280 y=320 h=110 -->
+  <!-- HIF x=615 w=180 y=320 h=80 -->
+  <!-- WMI x=825 w=220 y=320 h=110 -->
+  <!-- QDF x=380 w=340 y=470 h=70 -->
+  <!-- ═══════════ DEPENDENCY ARROWS ═══════════ -->
+  <!-- ── HDD 出发的 3 条箭头 ── -->
+  <!-- HDD → PLD -->
+  <!-- HDD → CDS/WMA -->
+  <!-- HDD → objmgr (直线) -->
+  <!-- ── 中间层连接 ── -->
+  <!-- PLD → cnss2 (垂直) -->
+  <!-- CDS/WMA → objmgr (斜线) -->
+  <!-- CDS/WMA → WMI (垂直) -->
+  <!-- ── 底层连接 ── -->
+  <!-- cnss2 → HIF (走顶部，不穿过任何模块) -->
+  <!-- CDS/WMA → HIF (虚线，蓝色区分) -->
+  <!-- HIF → WMI (水平实线) -->
+  <!-- objmgr → WMI (水平虚线) -->
+  <!-- ── QDF 连接 ── -->
+  <!-- objmgr → QDF（实线，强依赖，单独路径） -->
+  <!-- 其他模块 → QDF（虚线，汇聚成一条总线再进 QDF） -->
+  <!-- 水平总线 -->
+  <!-- 总线 → QDF（一个箭头） -->
+  <!-- ── 底部注释 ── -->
+  <g
+     id="g18">
+    <title
+       id="title18">Layer 1</title>
+    <rect
+       x="0"
+       y="0"
+       id="svg_8"
+       fill="url(#bg)"
+       height="650"
+       width="1100" />
+    <text
+       id="svg_9"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-weight="bold"
+       font-size="18"
+       fill="#ffffff"
+       text-anchor="middle"
+       y="32"
+       x="550">QCOM WiFi 驱动模块依赖关系</text>
+    <text
+       id="svg_10"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="11"
+       fill="#888888"
+       text-anchor="middle"
+       y="50"
+       x="550">qcacld-3.0 (芯片特定) + qca-wifi-host-cmn (公共库) + platform/cnss2 (平台层)</text>
+    <rect
+       id="svg_11"
+       stroke="#e74c3c"
+       fill="url(#cldGrad)"
+       rx="4"
+       height="28"
+       width="220"
+       y="60"
+       x="130" />
+    <text
+       id="svg_12"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="9"
+       fill="#f1948a"
+       text-anchor="middle"
+       y="78"
+       x="240">qcacld-3.0（芯片特定）</text>
+    <rect
+       id="svg_13"
+       stroke="#3498db"
+       fill="url(#cmnGrad)"
+       rx="4"
+       height="28"
+       width="220"
+       y="60"
+       x="370" />
+    <text
+       id="svg_14"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="9"
+       fill="#85c1e9"
+       text-anchor="middle"
+       y="78"
+       x="480">qca-wifi-host-cmn（公共库）</text>
+    <rect
+       id="svg_15"
+       stroke="#2ecc71"
+       fill="#1a2a1a"
+       rx="4"
+       height="28"
+       width="220"
+       y="60"
+       x="610" />
+    <text
+       id="svg_16"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="9"
+       fill="#82e0aa"
+       text-anchor="middle"
+       y="78"
+       x="720">platform/cnss2（平台层）</text>
+    <rect
+       id="svg_17"
+       filter="url(#shadow)"
+       stroke-width="1.5"
+       stroke="#e74c3c"
+       fill="#2c0a0a"
+       rx="8"
+       height="75"
+       width="300"
+       y="105"
+       x="400" />
+    <rect
+       id="svg_18"
+       fill="url(#hddGrad)"
+       rx="8"
+       height="22"
+       width="300"
+       y="105"
+       x="400" />
+    <text
+       id="svg_19"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-weight="bold"
+       font-size="11"
+       fill="#ffffff"
+       text-anchor="middle"
+       y="121"
+       x="550">HDD — Host Device Driver</text>
+    <text
+       id="svg_20"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="9"
+       fill="#f1948a"
+       text-anchor="middle"
+       y="142"
+       x="550">用户空间接口层</text>
+    <text
+       id="svg_21"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#aaaaaa"
+       text-anchor="middle"
+       y="157"
+       x="550">cfg80211/nl80211 | wiphy | netdev</text>
+    <text
+       id="svg_22"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#888888"
+       text-anchor="middle"
+       y="172"
+       x="550">core/hdd/</text>
+    <rect
+       id="svg_23"
+       filter="url(#shadow)"
+       stroke-width="1.5"
+       stroke="#e67e22"
+       fill="#2c1a0a"
+       rx="8"
+       height="75"
+       width="220"
+       y="210"
+       x="55" />
+    <rect
+       id="svg_24"
+       fill="url(#pldGrad)"
+       rx="8"
+       height="22"
+       width="220"
+       y="210"
+       x="55" />
+    <text
+       id="svg_25"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-weight="bold"
+       font-size="11"
+       fill="#ffffff"
+       text-anchor="middle"
+       y="226"
+       x="165">PLD — Platform Layer Driver</text>
+    <text
+       id="svg_26"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="9"
+       fill="#f0b27a"
+       text-anchor="middle"
+       y="248"
+       x="165">平台抽象层</text>
+    <text
+       id="svg_27"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#aaaaaa"
+       text-anchor="middle"
+       y="263"
+       x="165">统一 cnss2/icnss2/SDIO/USB 接口</text>
+    <text
+       id="svg_28"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#888888"
+       text-anchor="middle"
+       y="278"
+       x="165">core/pld/</text>
+    <rect
+       id="svg_29"
+       filter="url(#shadow)"
+       stroke-width="1.5"
+       stroke="#e74c3c"
+       fill="#2c0a0a"
+       rx="8"
+       height="75"
+       width="220"
+       y="210"
+       x="825" />
+    <rect
+       id="svg_30"
+       fill="url(#hddGrad)"
+       rx="8"
+       height="22"
+       width="220"
+       y="210"
+       x="825" />
+    <text
+       id="svg_31"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-weight="bold"
+       font-size="11"
+       fill="#ffffff"
+       text-anchor="middle"
+       y="226"
+       x="935">CDS / WMA / SME / PE</text>
+    <text
+       id="svg_32"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="9"
+       fill="#f1948a"
+       text-anchor="middle"
+       y="248"
+       x="935">子系统调度中枢</text>
+    <text
+       id="svg_33"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#aaaaaa"
+       text-anchor="middle"
+       y="263"
+       x="935">WMA: WMI 命令封装 | SME: 会话管理</text>
+    <text
+       id="svg_34"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#888888"
+       text-anchor="middle"
+       y="278"
+       x="935">core/</text>
+    <rect
+       id="svg_35"
+       filter="url(#shadow)"
+       stroke-width="1.5"
+       stroke="#f1c40f"
+       fill="#2c2a0a"
+       rx="8"
+       height="110"
+       width="220"
+       y="320"
+       x="55" />
+    <rect
+       id="svg_36"
+       fill="url(#cnssGrad)"
+       rx="8"
+       height="22"
+       width="220"
+       y="320"
+       x="55" />
+    <text
+       id="svg_37"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-weight="bold"
+       font-size="11"
+       fill="#ffffff"
+       text-anchor="middle"
+       y="336"
+       x="165">cnss2 / icnss2</text>
+    <text
+       id="svg_38"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="9"
+       fill="#f9e79f"
+       text-anchor="middle"
+       y="358"
+       x="165">PCIe / SNOC 平台驱动</text>
+    <text
+       id="svg_39"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#aaaaaa"
+       text-anchor="middle"
+       y="375"
+       x="165">PCIe 枚举 | 上电 | SMMU/DART</text>
+    <text
+       id="svg_40"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#aaaaaa"
+       text-anchor="middle"
+       y="390"
+       x="165">MHI 通道 | QMI 固件下载</text>
+    <text
+       id="svg_41"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#aaaaaa"
+       text-anchor="middle"
+       y="405"
+       x="165">SSR 框架 | ramdump 收集</text>
+    <text
+       id="svg_42"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#888888"
+       text-anchor="middle"
+       y="423"
+       x="165">platform/cnss2/</text>
+    <rect
+       id="svg_43"
+       filter="url(#shadow)"
+       stroke-width="1.5"
+       stroke="#2ecc71"
+       fill="#0a2c14"
+       rx="8"
+       height="110"
+       width="280"
+       y="320"
+       x="305" />
+    <rect
+       id="svg_44"
+       fill="url(#objmgrGrad)"
+       rx="8"
+       height="22"
+       width="280"
+       y="320"
+       x="305" />
+    <text
+       id="svg_45"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-weight="bold"
+       font-size="11"
+       fill="#ffffff"
+       text-anchor="middle"
+       y="336"
+       x="445">objmgr — Object Manager</text>
+    <text
+       id="svg_46"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="9"
+       fill="#82e0aa"
+       text-anchor="middle"
+       y="358"
+       x="445">四层对象模型</text>
+    <text
+       id="svg_47"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#aaaaaa"
+       text-anchor="middle"
+       y="375"
+       x="445">psoc → pdev → vdev → peer</text>
+    <text
+       id="svg_48"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#aaaaaa"
+       text-anchor="middle"
+       y="392"
+       x="445">组件回调: create/destroy/status</text>
+    <text
+       id="svg_49"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#aaaaaa"
+       text-anchor="middle"
+       y="407"
+       x="445">引用计数生命周期 | 两阶段创建模型</text>
+    <text
+       id="svg_50"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#888888"
+       text-anchor="middle"
+       y="423"
+       x="445">cmn_services/obj_mgr/</text>
+    <rect
+       id="svg_51"
+       filter="url(#shadow)"
+       stroke-width="1.5"
+       stroke="#1abc9c"
+       fill="#0a2c2c"
+       rx="8"
+       height="80"
+       width="180"
+       y="320"
+       x="615" />
+    <rect
+       id="svg_52"
+       fill="#1abc9c"
+       rx="8"
+       height="22"
+       width="180"
+       y="320"
+       x="615" />
+    <text
+       id="svg_53"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-weight="bold"
+       font-size="10"
+       fill="#ffffff"
+       text-anchor="middle"
+       y="336"
+       x="705">HIF — Host Interface</text>
+    <text
+       id="svg_54"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="9"
+       fill="#76d7c4"
+       text-anchor="middle"
+       y="358"
+       x="705">PCIe/SDIO/USB 总线抽象</text>
+    <text
+       id="svg_55"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#888888"
+       text-anchor="middle"
+       y="369"
+       x="705">CE | DMA 通道</text>
+    <text
+       id="svg_56"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#888888"
+       text-anchor="middle"
+       y="386"
+       x="705">qca-wifi-host-cmn/hif/</text>
+    <rect
+       id="svg_57"
+       filter="url(#shadow)"
+       stroke-width="1.5"
+       stroke="#3498db"
+       fill="#0a1a2c"
+       rx="8"
+       height="110"
+       width="220"
+       y="320"
+       x="825" />
+    <rect
+       id="svg_58"
+       fill="url(#wmiGrad)"
+       rx="8"
+       height="22"
+       width="220"
+       y="320"
+       x="825" />
+    <text
+       id="svg_59"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-weight="bold"
+       font-size="11"
+       fill="#ffffff"
+       text-anchor="middle"
+       y="336"
+       x="935">WMI — Wireless Module Interface</text>
+    <text
+       id="svg_60"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="9"
+       fill="#85c1e9"
+       text-anchor="middle"
+       y="358"
+       x="935">固件通信协议层</text>
+    <text
+       id="svg_61"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#aaaaaa"
+       text-anchor="middle"
+       y="375"
+       x="935">Host ↔ Firmware 命令/事件通道</text>
+    <text
+       id="svg_62"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#aaaaaa"
+       text-anchor="middle"
+       y="392"
+       x="935">TLV 编码 | 数百种命令和事件</text>
+    <text
+       id="svg_63"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#aaaaaa"
+       text-anchor="middle"
+       y="407"
+       x="935">五事件握手</text>
+    <text
+       id="svg_64"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#888888"
+       text-anchor="middle"
+       y="423"
+       x="935">qca-wifi-host-cmn/wmi/</text>
+    <rect
+       id="svg_65"
+       filter="url(#shadow)"
+       stroke-width="1.5"
+       stroke="#9b59b6"
+       fill="#1a0a2c"
+       rx="8"
+       height="70"
+       width="340"
+       y="470"
+       x="380" />
+    <rect
+       id="svg_66"
+       fill="url(#qdfGrad)"
+       rx="8"
+       height="22"
+       width="340"
+       y="470"
+       x="380" />
+    <text
+       id="svg_67"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-weight="bold"
+       font-size="11"
+       fill="#ffffff"
+       text-anchor="middle"
+       y="486"
+       x="550">QDF — Qualcomm Driver Framework</text>
+    <text
+       id="svg_68"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#d2b4de"
+       text-anchor="middle"
+       y="508"
+       x="550">内存 | 定时器 | work queue | spinlock | 链表</text>
+    <text
+       id="svg_69"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="7"
+       fill="#888888"
+       text-anchor="middle"
+       y="523"
+       x="550">qca-wifi-host-cmn/qdf/ — 所有模块的共同依赖</text>
+    <path
+       transform="rotate(-18.254 343.5 174.5)"
+       stroke="#e74c3c"
+       id="svg_70"
+       marker-end="url(#arrRed)"
+       fill="none"
+       stroke-width="2"
+       d="m416.14524,162.99364l-145.29048,23.01272" />
+    <text
+       id="svg_71"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#e74c3c"
+       y="167"
+       x="284">pld_register</text>
+    <path
+       transform="rotate(12.8646 767.5 176.5)"
+       stroke="#e74c3c"
+       id="svg_72"
+       marker-end="url(#arrRed)"
+       fill="none"
+       stroke-width="2"
+       d="m699.59853,155.01006l135.80293,42.97989" />
+    <text
+       id="svg_73"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#e74c3c"
+       y="169"
+       x="765">cds_open / wma</text>
+    <path
+       id="svg_74"
+       marker-end="url(#arrRed)"
+       fill="none"
+       stroke-width="2"
+       stroke="#e74c3c"
+       d="m520,180l-75,139" />
+    <text
+       id="svg_75"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#e74c3c"
+       y="229"
+       x="501">objmgr_create</text>
+    <path
+       id="svg_76"
+       marker-end="url(#arrOrange)"
+       fill="none"
+       stroke-width="2"
+       stroke="#e67e22"
+       d="m165,285l0,34" />
+    <text
+       id="svg_77"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#e67e22"
+       y="307"
+       x="173">注册回调</text>
+    <path
+       id="svg_78"
+       marker-end="url(#arrRed)"
+       fill="none"
+       stroke-width="2"
+       stroke="#e74c3c"
+       d="m825,260l-240,59" />
+    <text
+       id="svg_79"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="8"
+       fill="#e74c3c"
+       y="275"
+       x="711">访问对象</text>
+    <path
+       id="svg_80"
+       marker-end="url(#arrRed)"
+       fill="none"
+       stroke-width="2"
+       stroke="#e74c3c"
+       d="m935,285l0,34" />
+    <text
+       id="svg_81"
+       font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+       font-size="8px"
+       fill="#e74c3c"
+       y="296"
+       x="941">WMI 命令/事件</text>
+    <path
+       id="svg_82"
+       marker-end="url(#arrYellow)"
+       fill="none"
+       stroke-width="2"
+       stroke="#f1c40f"
+       d="m230,319l0,-39l475,0l0,39" />
+    <text
+       id="svg_83"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-weight="bold"
+       font-size="9"
+       fill="#f1c40f"
+       text-anchor="middle"
+       y="275"
+       x="435">MHI 通道</text>
+    <path
+       id="svg_84"
+       stroke-dasharray="5,3"
+       marker-end="url(#arrBlue)"
+       fill="none"
+       stroke-width="1.5"
+       stroke="#3498db"
+       d="m825,270l-30,50" />
+    <text
+       id="svg_85"
+       font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+       font-size="8px"
+       fill="#3498db"
+       y="296"
+       x="819">WMI via HIF</text>
+    <path
+       id="svg_86"
+       marker-end="url(#arrCyan)"
+       fill="none"
+       stroke-width="2"
+       stroke="#1abc9c"
+       d="m795,360l29,0" />
+    <text
+       id="svg_87"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="7"
+       fill="#1abc9c"
+       y="350"
+       x="810">传输</text>
+    <path
+       id="svg_88"
+       stroke-dasharray="5,3"
+       marker-end="url(#arrGreen)"
+       fill="none"
+       stroke-width="1.5"
+       stroke="#2ecc71"
+       d="m585,415l239,0" />
+    <text
+       id="svg_89"
+       font-family="'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif"
+       font-size="8px"
+       fill="#2ecc71"
+       y="426"
+       x="688">WMI handle 绑定</text>
+    <line
+       id="svg_90"
+       marker-end="url(#arrPurple)"
+       stroke-width="2.5"
+       stroke="#c39bd3"
+       y2="469"
+       x2="445"
+       y1="430"
+       x1="445" />
+    <line
+       id="svg_91"
+       stroke-dasharray="3,3"
+       stroke="#9b59b6"
+       y2="450"
+       x2="165"
+       y1="430"
+       x1="165" />
+    <line
+       id="svg_92"
+       stroke-dasharray="3,3"
+       stroke="#9b59b6"
+       y2="450"
+       x2="705"
+       y1="400"
+       x1="705" />
+    <line
+       id="svg_93"
+       stroke-dasharray="3,3"
+       stroke="#9b59b6"
+       y2="450"
+       x2="935"
+       y1="430"
+       x1="935" />
+    <line
+       id="svg_94"
+       stroke-dasharray="3,3"
+       stroke="#9b59b6"
+       y2="450"
+       x2="935"
+       y1="450"
+       x1="165" />
+    <line
+       id="svg_95"
+       marker-end="url(#arrPurple)"
+       stroke-dasharray="3,3"
+       stroke-width="1.5"
+       stroke="#9b59b6"
+       y2="469"
+       x2="550"
+       y1="450"
+       x1="550" />
+    <text
+       id="svg_96"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="7"
+       fill="#9b59b6"
+       text-anchor="middle"
+       y="445"
+       x="550">全部依赖 QDF</text>
+    <rect
+       id="svg_97"
+       stroke="#333366"
+       fill="#16162a"
+       rx="4"
+       height="32"
+       width="440"
+       y="570"
+       x="30" />
+    <text
+       id="svg_98"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="9"
+       fill="#1abc9c"
+       y="588"
+       x="50">箭头说明:</text>
+    <text
+       id="svg_99"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="9"
+       fill="#aaaaaa"
+       y="588"
+       x="120">实线 = 直接调用/强依赖</text>
+    <line
+       id="svg_100"
+       stroke-dasharray="5,3"
+       stroke="#aaaaaa"
+       y2="585"
+       x2="305"
+       y1="585"
+       x1="265" />
+    <text
+       id="svg_101"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="9"
+       fill="#aaaaaa"
+       y="588"
+       x="310">虚线 = 间接依赖/弱依赖</text>
+    <rect
+       id="svg_102"
+       stroke="#333366"
+       fill="#16162a"
+       rx="4"
+       height="50"
+       width="450"
+       y="570"
+       x="500" />
+    <text
+       id="svg_103"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="9"
+       fill="#f1948a"
+       y="588"
+       x="520">qcacld-3.0:</text>
+    <text
+       id="svg_104"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="9"
+       fill="#aaaaaa"
+       y="588"
+       x="590">HDD / PLD / CDS / WMA / SME / PE</text>
+    <text
+       id="svg_105"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="9"
+       fill="#85c1e9"
+       y="602"
+       x="520">qca-wifi-host-cmn:</text>
+    <text
+       id="svg_106"
+       font-family="'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif"
+       font-size="9"
+       fill="#aaaaaa"
+       y="602"
+       x="650">objmgr / WMI / HIF / QDF / UMAC</text>
+  </g>
+</svg>

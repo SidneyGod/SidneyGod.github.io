@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 790"
+   width="1200"
+   height="790"
+   version="1.1"
+   id="svg48"
+   sodipodi:docname="01-connection-flow.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview48"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.2036126"
+     inkscape:cx="599.86081"
+     inkscape:cy="395.06068"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg48" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs6">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrow-blue"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#3b82f6"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arrow-green"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#10b981"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arrow-orange"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#f97316"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arrow-purple"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#a78bfa"
+         id="polygon5" />
+    </marker>
+    <marker
+       id="arrow-red"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#ef4444"
+         id="polygon6" />
+    </marker>
+  </defs>
+  <rect
+     width="1200"
+     height="800"
+     fill="url(#bg-grad)"
+     id="rect6" />
+  <!-- Title -->
+  <text
+     x="600"
+     y="28"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="18"
+     font-weight="700"
+     id="text6">Complete WiFi Connection Flow (IEEE 802.11 Section 11)</text>
+  <text
+     x="600"
+     y="48"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="13"
+     id="text7">完整连接流程 — 从发现网络到开始传输数据（802.11i/WPA2 安全流程）</text>
+  <!-- STA and AP headers -->
+  <rect
+     x="60"
+     y="60"
+     width="160"
+     height="45"
+     rx="8"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect7" />
+  <text
+     x="140"
+     y="80"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="14"
+     font-weight="700"
+     id="text8">STA (设备)</text>
+  <text
+     x="140"
+     y="96"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text9">想加入 WiFi 网络</text>
+  <rect
+     x="980"
+     y="60"
+     width="160"
+     height="45"
+     rx="8"
+     fill="#0e4429"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect9" />
+  <text
+     x="1060"
+     y="80"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="14"
+     font-weight="700"
+     id="text10">AP (接入点)</text>
+  <text
+     x="1060"
+     y="96"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text11">WiFi 网络提供者</text>
+  <!-- Lifelines -->
+  <line
+     x1="140"
+     y1="105"
+     x2="140"
+     y2="775"
+     stroke="#3b82f6"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line11" />
+  <line
+     x1="1060"
+     y1="105"
+     x2="1060"
+     y2="775"
+     stroke="#10b981"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line12" />
+  <!-- ===== Phase 1: Discovery ===== -->
+  <rect
+     x="30"
+     y="115"
+     width="10"
+     height="90"
+     rx="3"
+     fill="#60a5fa"
+     id="rect12" />
+  <text
+     x="25"
+     y="165"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="10"
+     transform="rotate(-90 25 165)"
+     id="text12">发现</text>
+  <!-- Probe Request (broadcast) -->
+  <line
+     x1="150"
+     y1="135"
+     x2="1050"
+     y2="135"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#arrow-blue)"
+     id="line13" />
+  <text
+     x="600"
+     y="128"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="11"
+     font-weight="600"
+     id="text13">1. Probe Request (广播 to FF:FF:FF:FF:FF:FF)</text>
+  <text
+     x="600"
+     y="150"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text14">&quot;附近有 WiFi 吗？我的能力是 XXX&quot;</text>
+  <!-- Probe Response -->
+  <line
+     x1="1050"
+     y1="175"
+     x2="150"
+     y2="175"
+     stroke="#10b981"
+     stroke-width="2"
+     marker-end="url(#arrow-green)"
+     id="line14" />
+  <text
+     x="600"
+     y="168"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     font-weight="600"
+     id="text15">2. Probe Response (单播回 STA)</text>
+  <text
+     x="600"
+     y="190"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text16">&quot;我在这里，我的信息是 XXX&quot;</text>
+  <!-- ===== Phase 2: Authentication ===== -->
+  <rect
+     x="30"
+     y="215"
+     width="10"
+     height="90"
+     rx="3"
+     fill="#f97316"
+     id="rect16" />
+  <text
+     x="25"
+     y="265"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="10"
+     transform="rotate(-90 25 265)"
+     id="text17">认证</text>
+  <!-- Auth: Open System (2 frames) -->
+  <line
+     x1="150"
+     y1="235"
+     x2="1050"
+     y2="235"
+     stroke="#f97316"
+     stroke-width="2"
+     marker-end="url(#arrow-orange)"
+     id="line17" />
+  <text
+     x="600"
+     y="228"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="11"
+     font-weight="600"
+     id="text18">3. Auth Request (Seq=1)</text>
+  <line
+     x1="1050"
+     y1="265"
+     x2="150"
+     y2="265"
+     stroke="#10b981"
+     stroke-width="2"
+     marker-end="url(#arrow-green)"
+     id="line18" />
+  <text
+     x="600"
+     y="258"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     font-weight="600"
+     id="text19">4. Auth Response (Seq=2)</text>
+  <!-- Open System vs Shared Key explanation -->
+  <rect
+     x="200"
+     y="280"
+     width="350"
+     height="60"
+     rx="4"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect19" />
+  <text
+     x="210"
+     y="296"
+     fill="#f97316"
+     font-size="10"
+     font-weight="700"
+     id="text20">Open System（开放系统）</text>
+  <text
+     x="210"
+     y="312"
+     fill="#94a3b8"
+     font-size="9"
+     id="text21">以上 2 帧即可。不验证身份，</text>
+  <text
+     x="210"
+     y="327"
+     fill="#94a3b8"
+     font-size="9"
+     id="text22">相当于&quot;敲门就进&quot;。WPA2 推荐用此模式。</text>
+  <rect
+     x="600"
+     y="280"
+     width="420"
+     height="60"
+     rx="4"
+     fill="#0f172a"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect22" />
+  <text
+     x="610"
+     y="296"
+     fill="#ef4444"
+     font-size="10"
+     font-weight="700"
+     id="text23">Shared Key（共享密钥）</text>
+  <text
+     x="610"
+     y="312"
+     fill="#94a3b8"
+     font-size="9"
+     id="text24">需额外 2 帧：AP 发 Challenge 明文，STA 用</text>
+  <text
+     x="610"
+     y="327"
+     fill="#94a3b8"
+     font-size="9"
+     id="text25">WEP 密钥加密后发回。共 4 帧。WPA3 用 SAE 替代。</text>
+  <!-- ===== Phase 3: Association ===== -->
+  <rect
+     x="30"
+     y="350"
+     width="10"
+     height="80"
+     rx="3"
+     fill="#a78bfa"
+     id="rect25" />
+  <text
+     x="25"
+     y="395"
+     text-anchor="middle"
+     fill="#a78bfa"
+     font-size="10"
+     transform="rotate(-90 25 395)"
+     id="text26">关联</text>
+  <!-- Assoc Request -->
+  <line
+     x1="150"
+     y1="365"
+     x2="1050"
+     y2="365"
+     stroke="#a78bfa"
+     stroke-width="2"
+     marker-end="url(#arrow-purple)"
+     id="line26" />
+  <text
+     x="600"
+     y="358"
+     text-anchor="middle"
+     fill="#a78bfa"
+     font-size="11"
+     font-weight="600"
+     id="text27">5. Association Request</text>
+  <text
+     x="600"
+     y="380"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text28">&quot;申请通行证&quot; (SSID + 能力 + 支持的速率)</text>
+  <!-- Assoc Response -->
+  <line
+     x1="1050"
+     y1="400"
+     x2="150"
+     y2="400"
+     stroke="#10b981"
+     stroke-width="2"
+     marker-end="url(#arrow-green)"
+     id="line28" />
+  <text
+     x="600"
+     y="393"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     font-weight="600"
+     id="text29">6. Association Response</text>
+  <text
+     x="600"
+     y="415"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text30">&quot;通行证办好了&quot; (Status + AID + 支持的速率)</text>
+  <!-- ===== Phase 4: 4-Way Handshake (802.11i/WPA2) ===== -->
+  <rect
+     x="30"
+     y="425"
+     width="10"
+     height="195"
+     rx="3"
+     fill="#ef4444"
+     id="rect30" />
+  <text
+     x="25"
+     y="525"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="10"
+     transform="rotate(-90 25 525)"
+     id="text31">密钥协商</text>
+  <!-- Note: WEP era has no 4-way handshake -->
+  <rect
+     x="200"
+     y="425"
+     width="800"
+     height="22"
+     rx="4"
+     fill="#2d0a0a"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect31" />
+  <text
+     x="600"
+     y="441"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="10"
+     id="text32">802.11i/WPA2 四次握手 (EAPOL) — WEP 时代无此步骤，密钥预配置无协商</text>
+  <!-- Msg 1: AP -> STA (ANonce) -->
+  <line
+     x1="1050"
+     y1="463"
+     x2="150"
+     y2="463"
+     stroke="#ef4444"
+     stroke-width="2"
+     marker-end="url(#arrow-red)"
+     id="line32" />
+  <text
+     x="600"
+     y="457"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="11"
+     font-weight="600"
+     id="text33">7. EAPOL Msg 1: AP → STA</text>
+  <text
+     x="600"
+     y="479"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text34">AP 发送 ANonce (AP 随机数)</text>
+  <!-- Msg 2: STA -> AP (SNonce + MIC) -->
+  <line
+     x1="150"
+     y1="500"
+     x2="1050"
+     y2="500"
+     stroke="#ef4444"
+     stroke-width="2"
+     marker-end="url(#arrow-red)"
+     id="line34" />
+  <text
+     x="600"
+     y="494"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="11"
+     font-weight="600"
+     id="text35">8. EAPOL Msg 2: STA → AP</text>
+  <text
+     x="600"
+     y="516"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text36">STA 发送 SNonce + MIC (STA 推导 PTK)</text>
+  <!-- Msg 3: AP -> STA (GTK + MIC) -->
+  <line
+     x1="1050"
+     y1="537"
+     x2="150"
+     y2="537"
+     stroke="#ef4444"
+     stroke-width="2"
+     marker-end="url(#arrow-red)"
+     id="line36" />
+  <text
+     x="600"
+     y="531"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="11"
+     font-weight="600"
+     id="text37">9. EAPOL Msg 3: AP → STA</text>
+  <text
+     x="600"
+     y="553"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text38">AP 发送 GTK(加密) + MIC (AP 推导 PTK)</text>
+  <!-- Msg 4: STA -> AP (ACK) -->
+  <line
+     x1="150"
+     y1="575"
+     x2="1050"
+     y2="575"
+     stroke="#ef4444"
+     stroke-width="2"
+     marker-end="url(#arrow-red)"
+     id="line38" />
+  <text
+     x="600"
+     y="569"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="11"
+     font-weight="600"
+     id="text39">10. EAPOL Msg 4: STA → AP</text>
+  <text
+     x="600"
+     y="591"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text40">STA 确认密钥安装完成</text>
+  <!-- Secure tunnel -->
+  <rect
+     x="200"
+     y="605"
+     width="800"
+     height="25"
+     rx="6"
+     fill="#065f46"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect40" />
+  <text
+     x="600"
+     y="623"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     font-weight="600"
+     id="text41">安全通道建立 (AES-CCMP 加密) — PTK 保护单播，GTK 保护组播</text>
+  <!-- ===== Phase 5: Data Transfer ===== -->
+  <rect
+     x="30"
+     y="640"
+     width="10"
+     height="120"
+     rx="3"
+     fill="#10b981"
+     id="rect41" />
+  <text
+     x="25"
+     y="700"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10"
+     transform="rotate(-90 25 700)"
+     id="text42">数据</text>
+  <!-- QoS Data BE -->
+  <line
+     x1="150"
+     y1="655"
+     x2="1050"
+     y2="655"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#arrow-blue)"
+     id="line42" />
+  <text
+     x="400"
+     y="648"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="11"
+     font-weight="600"
+     id="text43">11. QoS Data (AC_BE)</text>
+  <text
+     x="700"
+     y="670"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text44">普通数据传输</text>
+  <!-- ACK -->
+  <line
+     x1="1050"
+     y1="685"
+     x2="150"
+     y2="685"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="line44" />
+  <text
+     x="600"
+     y="678"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10"
+     id="text45">12. ACK</text>
+  <!-- QoS Data VO -->
+  <line
+     x1="150"
+     y1="715"
+     x2="1050"
+     y2="715"
+     stroke="#ef4444"
+     stroke-width="2"
+     marker-end="url(#arrow-red)"
+     id="line45" />
+  <text
+     x="400"
+     y="708"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="11"
+     font-weight="600"
+     id="text46">13. QoS Data (AC_VO)</text>
+  <text
+     x="700"
+     y="730"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="9"
+     id="text47">高优先级数据（更快获得信道）</text>
+  <!-- ACK -->
+  <line
+     x1="1050"
+     y1="745"
+     x2="150"
+     y2="745"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="line47" />
+  <text
+     x="600"
+     y="738"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10"
+     id="text48">14. ACK</text>
+</svg>

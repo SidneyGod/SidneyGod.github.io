@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 800"
+   width="1200"
+   height="800"
+   version="1.1"
+   id="svg47"
+   sodipodi:docname="14-qcom-mtk-compare.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview47"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.36625"
+     inkscape:cx="600.18298"
+     inkscape:cy="400"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg47" />
+  <!-- validate: skip-gap-consistency -->
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; fill: #e2e8f0; }
+  </style>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arr-b"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#3b82f6"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arr-o"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#f97316"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arr-g"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#94a3b8"
+         id="polygon4" />
+    </marker>
+  </defs>
+  <rect
+     width="1200"
+     height="800"
+     fill="url(#bg-grad)"
+     id="rect4" />
+  <rect
+     x="85"
+     y="228"
+     width="430"
+     height="499.85544"
+     rx="10"
+     fill="#0a0a18"
+     fill-opacity="0.55"
+     stroke="#1a1a2e"
+     stroke-width="1.00591"
+     stroke-dasharray="4, 4"
+     id="rect5" />
+  <rect
+     x="685"
+     y="228"
+     width="430"
+     height="502.78317"
+     rx="10"
+     fill="#0a0a18"
+     fill-opacity="0.55"
+     stroke="#1a1a2e"
+     stroke-width="1.00885"
+     stroke-dasharray="4, 4"
+     id="rect6" />
+  <text
+     x="600"
+     y="38"
+     text-anchor="middle"
+     font-size="17"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text6">TDLS 管理帧路径对比：QCOM 固件卸载 vs MTK 主机组帧</text>
+  <text
+     x="600"
+     y="60"
+     text-anchor="middle"
+     font-size="12"
+     fill="#94a3b8"
+     id="text7">第 14 章 · nl80211 边界以下的两条施工队</text>
+  <rect
+     x="430"
+     y="80"
+     width="340"
+     height="46"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect7" />
+  <text
+     x="600"
+     y="99"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text8">nl80211_send_tdls_mgmt</text>
+  <text
+     x="600"
+     y="116"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text9">supplicant（用户态）</text>
+  <path
+     d="M600,126 V150"
+     stroke="#94a3b8"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-g)"
+     id="path9" />
+  <rect
+     x="440"
+     y="150"
+     width="320"
+     height="46"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect9" />
+  <text
+     x="600"
+     y="169"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text10">NL80211_CMD_TDLS_MGMT</text>
+  <text
+     x="600"
+     y="186"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text11">nl80211 边界（netlink）</text>
+  <path
+     d="M600,196 V226"
+     stroke="#94a3b8"
+     stroke-width="1.5"
+     fill="none"
+     id="path11" />
+  <path
+     d="M600,226 H300 V236"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arr-b)"
+     id="path12" />
+  <path
+     d="M600,226 H900 V236"
+     stroke="#f97316"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arr-o)"
+     id="path13" />
+  <rect
+     x="150"
+     y="236"
+     width="300"
+     height="36"
+     rx="6"
+     fill="#0f2a4a"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect13" />
+  <text
+     x="300"
+     y="259"
+     text-anchor="middle"
+     font-size="14"
+     font-weight="700"
+     fill="#93c5fd"
+     id="text13">QCOM · full-MAC / 固件卸载</text>
+  <rect
+     x="750"
+     y="236"
+     width="300"
+     height="36"
+     rx="6"
+     fill="#2a1608"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect14" />
+  <text
+     x="900"
+     y="259"
+     text-anchor="middle"
+     font-size="14"
+     font-weight="700"
+     fill="#fdba74"
+     id="text14">MTK · 主机型 / 主机重活</text>
+  <path
+     d="M300,272 V288"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arr-b)"
+     id="path14" />
+  <rect
+     x="110"
+     y="288"
+     width="380"
+     height="50"
+     rx="6"
+     fill="#0f2a4a"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect15" />
+  <text
+     x="300"
+     y="307"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text15">wlan_cfg80211_tdls_mgmt</text>
+  <text
+     x="300"
+     y="326"
+     text-anchor="middle"
+     font-size="11"
+     fill="#93c5fd"
+     id="text16"># os_if 桥接</text>
+  <path
+     d="M300,338 V362"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arr-b)"
+     id="path16" />
+  <rect
+     x="110"
+     y="362"
+     width="380"
+     height="50"
+     rx="6"
+     fill="#0f2a4a"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect16" />
+  <text
+     x="300"
+     y="381"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text17">ucfg_tdls_send_mgmt_frame</text>
+  <text
+     x="300"
+     y="400"
+     text-anchor="middle"
+     font-size="11"
+     fill="#93c5fd"
+     id="text18"># TDLS 组件</text>
+  <path
+     d="M300,412 V436"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arr-b)"
+     id="path18" />
+  <rect
+     x="110"
+     y="436"
+     width="380"
+     height="74"
+     rx="6"
+     fill="#0f2a4a"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect18" />
+  <text
+     x="300"
+     y="458"
+     text-anchor="middle"
+     font-size="14"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text19">WMI 下发</text>
+  <text
+     x="300"
+     y="477"
+     text-anchor="middle"
+     font-size="11"
+     fill="#93c5fd"
+     id="text20">WMI_TDLS_ENABLE_CONNECTION_TRACKER_IN_HOST</text>
+  <text
+     x="300"
+     y="497"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text21">状态镜像在 host，帧在固件</text>
+  <path
+     d="M300,510 V530"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arr-b)"
+     id="path21" />
+  <rect
+     x="110"
+     y="530"
+     width="380"
+     height="132"
+     rx="6"
+     fill="#0a1a30"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     stroke-dasharray="5 3"
+     id="rect21" />
+  <text
+     x="300"
+     y="556"
+     text-anchor="middle"
+     font-size="14"
+     font-weight="700"
+     fill="#60a5fa"
+     id="text22">固件（firmware）</text>
+  <text
+     x="300"
+     y="580"
+     text-anchor="middle"
+     font-size="12"
+     fill="#bfdbfe"
+     id="text23">· TDLS action 帧收发</text>
+  <text
+     x="300"
+     y="602"
+     text-anchor="middle"
+     font-size="12"
+     fill="#bfdbfe"
+     id="text24">· TCLAS 分类</text>
+  <text
+     x="300"
+     y="624"
+     text-anchor="middle"
+     font-size="12"
+     fill="#bfdbfe"
+     id="text25">· 直连数据路径</text>
+  <text
+     x="300"
+     y="648"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text26">数据面下沉固件，host 负载低</text>
+  <path
+     d="M900,272 V288"
+     stroke="#f97316"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arr-o)"
+     id="path26" />
+  <rect
+     x="710"
+     y="288"
+     width="380"
+     height="50"
+     rx="6"
+     fill="#2a1608"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect26" />
+  <text
+     x="900"
+     y="307"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text27">mtk_cfg80211_tdls_mgmt</text>
+  <text
+     x="900"
+     y="326"
+     text-anchor="middle"
+     font-size="11"
+     fill="#fdba74"
+     id="text28"># gl_cfg80211 桥接</text>
+  <path
+     d="M900,338 V362"
+     stroke="#f97316"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arr-o)"
+     id="path28" />
+  <rect
+     x="710"
+     y="362"
+     width="380"
+     height="50"
+     rx="6"
+     fill="#2a1608"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect28" />
+  <text
+     x="900"
+     y="381"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text29">kalIoctl → TdlsexLinkMgt</text>
+  <text
+     x="900"
+     y="400"
+     text-anchor="middle"
+     font-size="11"
+     fill="#fdba74"
+     id="text30"># 按 action code 分发</text>
+  <path
+     d="M900,412 V436"
+     stroke="#f97316"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arr-o)"
+     id="path30" />
+  <rect
+     x="710"
+     y="436"
+     width="380"
+     height="50"
+     rx="6"
+     fill="#2a1608"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect30" />
+  <text
+     x="900"
+     y="457"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text31">TdlsDataFrameSend_SETUP_REQ/RSP/CONFIRM</text>
+  <text
+     x="900"
+     y="476"
+     text-anchor="middle"
+     font-size="11"
+     fill="#fdba74"
+     id="text32"># 主机手动组帧</text>
+  <path
+     d="M900,486 V510"
+     stroke="#f97316"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arr-o)"
+     id="path32" />
+  <rect
+     x="710"
+     y="510"
+     width="380"
+     height="152"
+     rx="6"
+     fill="#2a1608"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect32" />
+  <text
+     x="900"
+     y="536"
+     text-anchor="middle"
+     font-size="14"
+     font-weight="700"
+     fill="#fdba74"
+     id="text33">主机状态机</text>
+  <text
+     x="900"
+     y="554"
+     text-anchor="middle"
+     font-size="11"
+     fill="#fdba74"
+     id="text34">enum STA_TDLS_STATUS</text>
+  <rect
+     x="730"
+     y="572"
+     width="150"
+     height="30"
+     rx="15"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect34" />
+  <text
+     x="805"
+     y="591"
+     text-anchor="middle"
+     font-size="10.5"
+     fill="#fdba74"
+     id="text35">NOT_SETUP</text>
+  <rect
+     x="910"
+     y="572"
+     width="150"
+     height="30"
+     rx="15"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect35" />
+  <text
+     x="985"
+     y="591"
+     text-anchor="middle"
+     font-size="10.5"
+     fill="#fdba74"
+     id="text36">SETUP_INPROCESS</text>
+  <rect
+     x="910"
+     y="612"
+     width="150"
+     height="30"
+     rx="15"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect36" />
+  <text
+     x="985"
+     y="631"
+     text-anchor="middle"
+     font-size="10.5"
+     fill="#fdba74"
+     id="text37">SETUP_COMPLETE</text>
+  <rect
+     x="730"
+     y="612"
+     width="150"
+     height="30"
+     rx="15"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect37" />
+  <text
+     x="805"
+     y="631"
+     text-anchor="middle"
+     font-size="10.5"
+     fill="#fdba74"
+     id="text38">LINK_ENABLE</text>
+  <path
+     d="M880,587 H906"
+     stroke="#f97316"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-o)"
+     id="path38" />
+  <path
+     d="M985,602 V612"
+     stroke="#f97316"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-o)"
+     id="path39" />
+  <path
+     d="M910,627 H884"
+     stroke="#f97316"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-o)"
+     id="path40" />
+  <path
+     d="M300,662 V682"
+     stroke="#3b82f6"
+     stroke-width="1"
+     stroke-dasharray="3 3"
+     fill="none"
+     opacity="0.6"
+     id="path41" />
+  <text
+     x="300"
+     y="694"
+     text-anchor="middle"
+     font-size="12"
+     fill="#93c5fd"
+     id="text41">· TPK 密钥装固件</text>
+  <text
+     x="300"
+     y="716"
+     text-anchor="middle"
+     font-size="12"
+     fill="#93c5fd"
+     id="text42">· peer 列表 16</text>
+  <path
+     d="M900,662 V682"
+     stroke="#f97316"
+     stroke-width="1"
+     stroke-dasharray="3 3"
+     fill="none"
+     opacity="0.6"
+     id="path42" />
+  <text
+     x="900"
+     y="694"
+     text-anchor="middle"
+     font-size="12"
+     fill="#fdba74"
+     id="text43">· 密钥装 rTdlsKeyTemp</text>
+  <text
+     x="900"
+     y="716"
+     text-anchor="middle"
+     font-size="12"
+     fill="#fdba74"
+     id="text44">· g_arTdlsLink[] 上限 4</text>
+  <rect
+     x="406"
+     y="738"
+     width="387.09973"
+     height="49.216835"
+     rx="7.7419944"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1.04639"
+     id="rect44" />
+  <text
+     x="422"
+     y="753"
+     font-size="12px"
+     font-weight="700"
+     fill="#94a3b8"
+     id="text45">图例</text>
+  <rect
+     x="422"
+     y="764"
+     width="12"
+     height="12"
+     rx="2"
+     fill="#3b82f6"
+     id="rect45" />
+  <text
+     x="442"
+     y="774"
+     font-size="12px"
+     fill="#e2e8f0"
+     id="text46">蓝色 = QCOM 固件路径</text>
+  <rect
+     x="622"
+     y="764"
+     width="12"
+     height="12"
+     rx="2"
+     fill="#f97316"
+     id="rect46" />
+  <text
+     x="642"
+     y="774"
+     font-size="12px"
+     fill="#e2e8f0"
+     id="text47">橙色 = MTK 主机路径</text>
+</svg>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 260" width="650" height="260">
+<title>AIDL HAL 接口层</title>
+<style>text{font-family:'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif;}</style>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0f0f1a"/>
+    <stop offset="100%" stop-color="#1a1a2e"/>
+  </linearGradient>
+  <marker id="ar" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0,0 8,3 0,6" fill="#a78bfa"/>
+  </marker>
+</defs>
+<rect width="650" height="260" fill="url(#bg)"/>
+<rect x="1" y="1" width="648" height="258" rx="8" fill="none" stroke="#2a2d35" stroke-width="1.5"/>
+<text x="325" y="30" text-anchor="middle" style="font-size:15px;fill:#c0c8d4;font-weight:bold;">AIDL HAL &#x63A5;&#x53E3;&#x5C42;&#x7EA7;</text>
+
+<!-- IWifi -->
+<rect x="240" y="50" width="170" height="44" rx="8" fill="#1a1220" stroke="#3a2a5f" stroke-width="1.2"/>
+<text x="325" y="64" text-anchor="middle" style="font-size:8px;fill:#6a737d;">&#x9876;&#x5C42;&#x63A5;&#x53E3;</text>
+<text x="325" y="82" text-anchor="middle" style="font-size:14px;fill:#a78bfa;font-weight:bold;">IWifi</text>
+
+<!-- Arrow down -->
+<line x1="325" y1="94" x2="325" y2="114" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#ar)"/>
+
+<!-- IWifiChip -->
+<rect x="240" y="116" width="170" height="44" rx="8" fill="#1a1220" stroke="#3a2a5f" stroke-width="1.2"/>
+<text x="325" y="130" text-anchor="middle" style="font-size:8px;fill:#6a737d;">&#x82AF;&#x7247;&#x80FD;&#x529B;&#x67E5;&#x8BE2;</text>
+<text x="325" y="148" text-anchor="middle" style="font-size:14px;fill:#a78bfa;font-weight:bold;">IWifiChip</text>
+
+<!-- Three branches -->
+<line x1="325" y1="160" x2="120" y2="183" stroke="#a78bfa" stroke-width="1.2" marker-end="url(#ar)"/>
+<line x1="325" y1="160" x2="325" y2="183" stroke="#a78bfa" stroke-width="1.2" marker-end="url(#ar)"/>
+<line x1="325" y1="160" x2="530" y2="183" stroke="#a78bfa" stroke-width="1.2" marker-end="url(#ar)"/>
+
+<!-- IWifiStaIface -->
+<rect x="50" y="186" width="140" height="44" rx="8" fill="#121820" stroke="#2a4a2a" stroke-width="1"/>
+<text x="120" y="200" text-anchor="middle" style="font-size:8px;fill:#6a737d;">STA &#x63A5;&#x53E3;</text>
+<text x="120" y="218" text-anchor="middle" style="font-size:12px;fill:#30d158;font-weight:bold;">IWifiStaIface</text>
+
+<!-- IWifiApIface -->
+<rect x="255" y="186" width="140" height="44" rx="8" fill="#1a1408" stroke="#5a4020" stroke-width="1"/>
+<text x="325" y="200" text-anchor="middle" style="font-size:8px;fill:#6a737d;">AP &#x63A5;&#x53E3;</text>
+<text x="325" y="218" text-anchor="middle" style="font-size:12px;fill:#f0a040;font-weight:bold;">IWifiApIface</text>
+
+<!-- IWifiNanIface -->
+<rect x="460" y="186" width="140" height="44" rx="8" fill="#1a0808" stroke="#5a2020" stroke-width="1"/>
+<text x="530" y="200" text-anchor="middle" style="font-size:8px;fill:#6a737d;">NAN &#x63A5;&#x53E3;</text>
+<text x="530" y="218" text-anchor="middle" style="font-size:12px;fill:#ff6060;font-weight:bold;">IWifiNanIface</text>
+
+<text x="325" y="250" text-anchor="middle" style="font-size:9px;fill:#6a737d;">hardware/interfaces/wifi/aidl/ | &#x5382;&#x5546;&#x5B9E;&#x73B0;&#x52A0;&#x8F7D; wifi_hal.so</text>
+</svg>

@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1100 780"
+   width="1100"
+   height="780"
+   version="1.1"
+   id="svg39"
+   sodipodi:docname="10a-sequence.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+   id="namedview39"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="1.2144444"
+   inkscape:cx="550.04577"
+   inkscape:cy="384.12627"
+   inkscape:window-width="2240"
+   inkscape:window-height="1337"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg39" />
+<style
+   id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; fill: #e2e8f0; }
+  </style>
+<defs
+   id="defs4">
+  <linearGradient
+     id="bg-grad"
+     x1="0"
+     y1="0"
+     x2="994.98743"
+     y2="994.98743"
+     gradientTransform="scale(1.1055416,0.78392949)"
+     gradientUnits="userSpaceOnUse">
+    <stop
+       offset="0%"
+       stop-color="#0f0f1a"
+       id="stop1" />
+    <stop
+       offset="100%"
+       stop-color="#1a1a2e"
+       id="stop2" />
+  </linearGradient>
+  <marker
+     id="arrow-orange"
+     markerWidth="8"
+     markerHeight="6"
+     refX="7"
+     refY="3"
+     orient="auto">
+    <polygon
+       points="0,6 0,0 8,3 "
+       fill="#f97316"
+       id="polygon2" />
+  </marker>
+  <marker
+     id="arrow-blue"
+     markerWidth="8"
+     markerHeight="6"
+     refX="7"
+     refY="3"
+     orient="auto">
+    <polygon
+       points="0,6 0,0 8,3 "
+       fill="#3b82f6"
+       id="polygon3" />
+  </marker>
+  <marker
+     id="arrow-green"
+     markerWidth="8"
+     markerHeight="6"
+     refX="7"
+     refY="3"
+     orient="auto">
+    <polygon
+       points="0,6 0,0 8,3 "
+       fill="#10b981"
+       id="polygon4" />
+  </marker>
+</defs>
+<rect
+   width="1100"
+   height="780"
+   fill="url(#bg-grad)"
+   id="rect4"
+   style="fill:url(#bg-grad);stroke-width:0.930949"
+   x="0"
+   y="0" />
+<!-- Title -->
+<text
+   x="550"
+   y="30"
+   text-anchor="middle"
+   font-size="17px"
+   font-weight="700"
+   fill="#f97316"
+   id="text4">SAP 启动时序：从点击到 addAccessPoint()</text>
+<line
+   x1="380"
+   y1="38"
+   x2="720"
+   y2="38"
+   stroke="#f97316"
+   stroke-width="1"
+   opacity="0.4"
+   id="line4" />
+<!-- Lifelines: x positions -->
+<!-- Settings: 80, WifiService: 240, ActiveModeWarden: 400, SoftApManager: 560, WifiNative: 720, HDM: 880, HostapdHal: 1040 -->
+
+
+
+  # Define lifeline data
+  <rect
+   x="30"
+   y="52"
+   width="100"
+   height="24"
+   rx="4"
+   fill="#0f172a"
+   stroke="#334155"
+   stroke-width="1"
+   id="rect5" />
+<text
+   x="80"
+   y="69"
+   text-anchor="middle"
+   font-size="10px"
+   fill="#94a3b8"
+   id="text5">Settings App</text>
+<line
+   x1="80"
+   y1="76"
+   x2="80"
+   y2="770"
+   stroke="#334155"
+   stroke-width="1"
+   stroke-dasharray="3, 4"
+   opacity="0.4"
+   id="line5" />
+<rect
+   x="181"
+   y="52"
+   width="118"
+   height="24"
+   rx="4"
+   fill="#0f172a"
+   stroke="#334155"
+   stroke-width="1"
+   id="rect6" />
+<text
+   x="240"
+   y="69"
+   text-anchor="middle"
+   font-size="10px"
+   fill="#94a3b8"
+   id="text6">WifiServiceImpl</text>
+<line
+   x1="240"
+   y1="76"
+   x2="240"
+   y2="770"
+   stroke="#334155"
+   stroke-width="1"
+   stroke-dasharray="3, 4"
+   opacity="0.4"
+   id="line6" />
+<rect
+   x="337"
+   y="52"
+   width="126"
+   height="24"
+   rx="4"
+   fill="#0f172a"
+   stroke="#334155"
+   stroke-width="1"
+   id="rect7" />
+<text
+   x="400"
+   y="69"
+   text-anchor="middle"
+   font-size="10px"
+   fill="#94a3b8"
+   id="text7">ActiveModeWarden</text>
+<line
+   x1="400"
+   y1="76"
+   x2="400"
+   y2="770"
+   stroke="#334155"
+   stroke-width="1"
+   stroke-dasharray="3, 4"
+   opacity="0.4"
+   id="line7" />
+<rect
+   x="510"
+   y="52"
+   width="100"
+   height="24"
+   rx="4"
+   fill="#0f172a"
+   stroke="#334155"
+   stroke-width="1"
+   id="rect8" />
+<text
+   x="560"
+   y="69"
+   text-anchor="middle"
+   font-size="10px"
+   fill="#94a3b8"
+   id="text8">SoftApManager</text>
+<line
+   x1="560"
+   y1="76"
+   x2="560"
+   y2="770"
+   stroke="#334155"
+   stroke-width="1"
+   stroke-dasharray="3, 4"
+   opacity="0.4"
+   id="line8" />
+<rect
+   x="670"
+   y="52"
+   width="100"
+   height="24"
+   rx="4"
+   fill="#0f172a"
+   stroke="#334155"
+   stroke-width="1"
+   id="rect9" />
+<text
+   x="720"
+   y="69"
+   text-anchor="middle"
+   font-size="10px"
+   fill="#94a3b8"
+   id="text9">WifiNative</text>
+<line
+   x1="720"
+   y1="76"
+   x2="720"
+   y2="770"
+   stroke="#334155"
+   stroke-width="1"
+   stroke-dasharray="3, 4"
+   opacity="0.4"
+   id="line9" />
+<rect
+   x="830"
+   y="52"
+   width="125"
+   height="24"
+   rx="4"
+   fill="#0f172a"
+   stroke="#334155"
+   stroke-width="1"
+   id="rect10" />
+<text
+   x="892"
+   y="69"
+   text-anchor="middle"
+   font-size="10px"
+   fill="#94a3b8"
+   id="text10">HalDeviceManager</text>
+<line
+   x1="880"
+   y1="76"
+   x2="880"
+   y2="770"
+   stroke="#334155"
+   stroke-width="1"
+   stroke-dasharray="3, 4"
+   opacity="0.4"
+   id="line10" />
+<rect
+   x="990"
+   y="52"
+   width="100"
+   height="24"
+   rx="4"
+   fill="#0f172a"
+   stroke="#334155"
+   stroke-width="1"
+   id="rect11" />
+<text
+   x="1040"
+   y="69"
+   text-anchor="middle"
+   font-size="10px"
+   fill="#94a3b8"
+   id="text11">HostapdHal</text>
+<line
+   x1="1040"
+   y1="76"
+   x2="1040"
+   y2="770"
+   stroke="#334155"
+   stroke-width="1"
+   stroke-dasharray="3, 4"
+   opacity="0.4"
+   id="line11" />
+<line
+   x1="80"
+   y1="109"
+   x2="240"
+   y2="109"
+   stroke="#f97316"
+   stroke-width="1.2"
+   marker-end="url(#arrow-orange)"
+   id="line12" />
+<text
+   x="174"
+   y="105"
+   text-anchor="middle"
+   font-size="9px"
+   fill="#f97316"
+   id="text12">startSoftAp(config)</text>
+<line
+   x1="240"
+   y1="147"
+   x2="400"
+   y2="147"
+   stroke="#f97316"
+   stroke-width="1.2"
+   marker-end="url(#arrow-orange)"
+   id="line13" />
+<text
+   x="320"
+   y="143"
+   text-anchor="middle"
+   font-size="9px"
+   fill="#f97316"
+   id="text13">startSoftApInternal()</text>
+<path
+   d="m 430,175 c 30,-15 30,15 0,0"
+   stroke="#eab308"
+   stroke-width="1.2"
+   fill="none"
+   marker-end="url(#arrow-orange)"
+   id="path13" />
+<text
+   x="465"
+   y="178"
+   font-size="9px"
+   fill="#eab308"
+   id="text14">sendMessage(CMD_SET_AP)</text>
+<line
+   x1="400"
+   y1="237"
+   x2="560"
+   y2="237"
+   stroke="#f97316"
+   stroke-width="1.2"
+   marker-end="url(#arrow-orange)"
+   id="line14" />
+<text
+   x="480"
+   y="233"
+   text-anchor="middle"
+   font-size="9px"
+   fill="#f97316"
+   id="text15">new SoftApManager()</text>
+<path
+   d="m 590,290 c 30,-15 30,15 0,0"
+   stroke="#eab308"
+   stroke-width="1.2"
+   fill="none"
+   marker-end="url(#arrow-orange)"
+   id="path15" />
+<text
+   x="625"
+   y="293"
+   font-size="9px"
+   fill="#eab308"
+   id="text16">sendMessage(CMD_START)</text>
+<line
+   x1="560"
+   y1="327"
+   x2="720"
+   y2="327"
+   stroke="#f97316"
+   stroke-width="1.2"
+   marker-end="url(#arrow-orange)"
+   id="line16" />
+<text
+   x="640"
+   y="323"
+   text-anchor="middle"
+   font-size="9px"
+   fill="#f97316"
+   id="text17">setupInterfaceForSoftApMode()</text>
+<line
+   x1="720"
+   y1="388"
+   x2="880"
+   y2="388"
+   stroke="#f97316"
+   stroke-width="1.2"
+   marker-end="url(#arrow-orange)"
+   id="line17" />
+<text
+   x="800"
+   y="384"
+   text-anchor="middle"
+   font-size="9px"
+   fill="#f97316"
+   id="text18">createApIface()</text>
+<path
+   d="m 910,425 c 30,-15 30,15 0,0"
+   stroke="#eab308"
+   stroke-width="1.2"
+   fill="none"
+   marker-end="url(#arrow-orange)"
+   id="path18" />
+<text
+   x="945"
+   y="428"
+   font-size="9px"
+   fill="#eab308"
+   id="text19">configureChip(modeId)</text>
+<line
+   x1="880"
+   y1="478"
+   x2="720"
+   y2="478"
+   stroke="#10b981"
+   stroke-width="1.2"
+   marker-end="url(#arrow-green)"
+   id="line19" />
+<text
+   x="800"
+   y="474"
+   text-anchor="middle"
+   font-size="9px"
+   fill="#10b981"
+   id="text20">WifiApIface (wlan1)</text>
+<path
+   d="m 750,515 c 30,-15 30,15 0,0"
+   stroke="#eab308"
+   stroke-width="1.2"
+   fill="none"
+   marker-end="url(#arrow-orange)"
+   id="path20" />
+<text
+   x="785"
+   y="518"
+   font-size="9px"
+   fill="#eab308"
+   id="text21">wificond setup</text>
+<line
+   x1="720"
+   y1="568"
+   x2="560"
+   y2="568"
+   stroke="#10b981"
+   stroke-width="1.2"
+   marker-end="url(#arrow-green)"
+   id="line21" />
+<text
+   x="640"
+   y="564"
+   text-anchor="middle"
+   font-size="9px"
+   fill="#10b981"
+   id="text22">iface name (wlan1)</text>
+<path
+   d="m 590,605 c 30,-15 30,15 0,0"
+   stroke="#eab308"
+   stroke-width="1.2"
+   fill="none"
+   marker-end="url(#arrow-orange)"
+   id="path22" />
+<text
+   x="625"
+   y="608"
+   font-size="9px"
+   fill="#eab308"
+   id="text23">startSoftAp()</text>
+<line
+   x1="560"
+   y1="658"
+   x2="720"
+   y2="658"
+   stroke="#f97316"
+   stroke-width="1.2"
+   marker-end="url(#arrow-orange)"
+   id="line23" />
+<text
+   x="640"
+   y="654"
+   text-anchor="middle"
+   font-size="9px"
+   fill="#f97316"
+   id="text24">startSoftAp(iface, config)</text>
+<line
+   x1="720"
+   y1="687"
+   x2="1040"
+   y2="687"
+   stroke="#3b82f6"
+   stroke-width="1.2"
+   marker-end="url(#arrow-blue)"
+   id="line24" />
+<text
+   x="880"
+   y="683"
+   text-anchor="middle"
+   font-size="9px"
+   fill="#3b82f6"
+   id="text25">registerApCallback()</text>
+<line
+   x1="720"
+   y1="748"
+   x2="1040"
+   y2="748"
+   stroke="#f97316"
+   stroke-width="1.2"
+   marker-end="url(#arrow-orange)"
+   id="line25" />
+<text
+   x="880"
+   y="744"
+   text-anchor="middle"
+   font-size="9px"
+   fill="#f97316"
+   id="text26">addAccessPoint()</text>
+<text
+   x="20"
+   y="95"
+   font-size="9px"
+   fill="#94a3b8"
+   id="text27">1. 权限检查 + 参数组装</text>
+<text
+   x="20"
+   y="157"
+   font-size="9px"
+   fill="#94a3b8"
+   id="text28">2. 状态机消息调度</text>
+<text
+   x="20"
+   y="202"
+   font-size="9px"
+   fill="#94a3b8"
+   id="text29">3. 创建 Manager 实例</text>
+<text
+   x="20"
+   y="337"
+   font-size="9px"
+   fill="#94a3b8"
+   id="text30">4. 接口搭建 6 步</text>
+<text
+   x="20"
+   y="380"
+   font-size="9px"
+   fill="#94a3b8"
+   id="text31">5. 能力检查 + ChipMode</text>
+<text
+   x="20"
+   y="607"
+   font-size="9px"
+   fill="#94a3b8"
+   id="text32">6. 频段配置 + MAC</text>
+<text
+   x="20"
+   y="697"
+   font-size="9px"
+   fill="#3b82f6"
+   id="text33">7. 回调注册</text>
+<text
+   x="20"
+   y="742"
+   font-size="9px"
+   fill="#f97316"
+   id="text34">8. AIDL 跨进程 ← 本文终点</text>
+<line
+   x1="680"
+   y1="310"
+   x2="1100"
+   y2="310"
+   stroke="#f97316"
+   stroke-width="0.5"
+   stroke-dasharray="4, 3"
+   opacity="0.4"
+   id="line34" />
+<text
+   x="710"
+   y="306"
+   font-size="9px"
+   fill="#f97316"
+   opacity="0.6"
+   id="text35">--- AIDL (Framework → HAL)</text>
+<line
+   x1="680"
+   y1="535"
+   x2="1100"
+   y2="535"
+   stroke="#f97316"
+   stroke-width="0.5"
+   stroke-dasharray="4, 3"
+   opacity="0.4"
+   id="line35" />
+<text
+   x="710"
+   y="531"
+   font-size="9px"
+   fill="#f97316"
+   opacity="0.6"
+   id="text36">--- AIDL (HAL → hostapd)</text>
+<!-- Legend -->
+<rect
+   x="860"
+   y="10"
+   width="220"
+   height="36"
+   rx="4"
+   fill="#0f172a"
+   stroke="#334155"
+   stroke-width="1"
+   opacity="0.7"
+   id="rect36" />
+<line
+   x1="872"
+   y1="23"
+   x2="895"
+   y2="23"
+   stroke="#f97316"
+   stroke-width="1.2"
+   id="line36" />
+<text
+   x="902"
+   y="27"
+   font-size="9px"
+   fill="#94a3b8"
+   id="text37">调用</text>
+<line
+   x1="942"
+   y1="23"
+   x2="965"
+   y2="23"
+   stroke="#10b981"
+   stroke-width="1.2"
+   id="line37" />
+<text
+   x="972"
+   y="27"
+   font-size="9px"
+   fill="#94a3b8"
+   id="text38">返回</text>
+<line
+   x1="1012"
+   y1="23"
+   x2="1035"
+   y2="23"
+   stroke="#eab308"
+   stroke-width="1.2"
+   id="line38" />
+<text
+   x="1042"
+   y="27"
+   font-size="9px"
+   fill="#94a3b8"
+   id="text39">内部</text>
+</svg>

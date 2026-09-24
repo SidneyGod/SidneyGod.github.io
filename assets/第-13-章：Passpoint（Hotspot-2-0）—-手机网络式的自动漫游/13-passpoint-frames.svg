@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1120"
+   height="880"
+   version="1.1"
+   id="svg39"
+   sodipodi:docname="13-passpoint-frames.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview39"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.16"
+     inkscape:cx="560.34483"
+     inkscape:cy="509.05172"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg39" />
+  <defs
+     id="defs3">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <style
+       id="style2">text{font-family:'Maple Mono Normal NL NF CN', monospace;}</style>
+    <marker
+       id="ar"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="7"
+       markerHeight="7"
+       orient="auto">
+      <path
+         d="M0 0 L10 5 L0 10 z"
+         fill="#cbd5e1"
+         id="path2" />
+    </marker>
+    <marker
+       id="ard"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="7"
+       markerHeight="7"
+       orient="auto">
+      <path
+         d="M0 0 L10 5 L0 10 z"
+         fill="#7dd3fc"
+         id="path3" />
+    </marker>
+  </defs>
+  <rect
+     width="1120"
+     height="880"
+     fill="url(#bg)"
+     id="rect3" />
+  <text
+     x="560"
+     y="36"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="20"
+     font-weight="700"
+     id="text3">Passpoint 完整帧交互 — 从 Beacon 到上网</text>
+  <text
+     x="560"
+     y="60"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="12"
+     id="text4">四段：① Beacon 招手 → ② ANQP 细问（通常 1 轮）→ ③ 关联 → ④ EAP 认证 + 四次握手（全程不输密码）</text>
+  <!-- lifelines -->
+  <rect
+     x="120"
+     y="78"
+     width="200"
+     height="46"
+     rx="8"
+     fill="#075985"
+     stroke="#38bdf8"
+     stroke-width="2"
+     id="rect4" />
+  <text
+     x="220"
+     y="99"
+     text-anchor="middle"
+     fill="#7dd3fc"
+     font-size="14"
+     font-weight="700"
+     id="text5">手机 STA</text>
+  <text
+     x="220"
+     y="116"
+     text-anchor="middle"
+     fill="#bae6fd"
+     font-size="10"
+     id="text6">存有运营商凭证（SIM/证书/账号）</text>
+  <rect
+     x="600"
+     y="78"
+     width="200"
+     height="46"
+     rx="8"
+     fill="#134e4a"
+     stroke="#2dd4bf"
+     stroke-width="2"
+     id="rect6" />
+  <text
+     x="700"
+     y="99"
+     text-anchor="middle"
+     fill="#5eead4"
+     font-size="14"
+     font-weight="700"
+     id="text7">Passpoint AP</text>
+  <text
+     x="700"
+     y="116"
+     text-anchor="middle"
+     fill="#99f6e4"
+     font-size="10"
+     id="text8">Hotspot 运营商热点</text>
+  <rect
+     x="900"
+     y="78"
+     width="180"
+     height="46"
+     rx="8"
+     fill="#3f2d6b"
+     stroke="#a78bfa"
+     stroke-width="2"
+     id="rect8" />
+  <text
+     x="990"
+     y="99"
+     text-anchor="middle"
+     fill="#ddd6fe"
+     font-size="14"
+     font-weight="700"
+     id="text9">AAA / 运营商</text>
+  <text
+     x="990"
+     y="116"
+     text-anchor="middle"
+     fill="#c4b5fd"
+     font-size="10"
+     id="text10">RADIUS 后端</text>
+  <line
+     x1="220"
+     y1="124"
+     x2="220"
+     y2="828"
+     stroke="#475569"
+     stroke-width="1.5"
+     stroke-dasharray="4,4"
+     id="line10" />
+  <line
+     x1="700"
+     y1="124"
+     x2="700"
+     y2="828"
+     stroke="#475569"
+     stroke-width="1.5"
+     stroke-dasharray="4,4"
+     id="line11" />
+  <line
+     x1="990"
+     y1="124"
+     x2="990"
+     y2="828"
+     stroke="#475569"
+     stroke-width="1.5"
+     stroke-dasharray="4,4"
+     id="line12" />
+  <!-- ============ ① Beacon / Probe (green-teal) ============ -->
+  <rect
+     x="95"
+     y="138"
+     width="715"
+     height="124"
+     rx="8"
+     fill="#0c2a2a"
+     stroke="#14b8a6"
+     stroke-width="1.5"
+     id="rect12" />
+  <text
+     x="113"
+     y="158"
+     fill="#5eead4"
+     font-size="13"
+     font-weight="700"
+     id="text12">① 招手 · Beacon / Probe Response（管理帧 · type 0）</text>
+  <line
+     x1="700"
+     y1="182"
+     x2="224"
+     y2="182"
+     stroke="#5eead4"
+     stroke-width="2"
+     marker-end="url(#ar)"
+     id="line13" />
+  <text
+     x="462"
+     y="176"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text13">Beacon（周期广播） / Probe Response</text>
+  <text
+     x="462"
+     y="197"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9.5px"
+     id="text14">Interworking 位 · Interworking element(HESSID) · HS2.0 Indication(221) · Roaming Consortium</text>
+  <text
+     x="113"
+     y="226"
+     fill="#cbd5e1"
+     font-size="10.5"
+     id="text15">STA 据此初筛：这是个 Passpoint AP，值得细问</text>
+  <text
+     x="113"
+     y="246"
+     fill="#64748b"
+     font-size="9.5"
+     id="text16">Wireshark: wlan.fc.type_subtype==0x08（Beacon）/ 0x05（Probe Resp） · wlan.tag.number==221 &amp;&amp; wlan.tag.oui==0x506f9a</text>
+  <!-- ============ ② GAS/ANQP (cyan) — expanded to show "1 round + optional fragment" ============ -->
+  <rect
+     x="95"
+     y="274"
+     width="715"
+     height="210"
+     rx="8"
+     fill="#082f3f"
+     stroke="#38bdf8"
+     stroke-width="1.5"
+     id="rect16" />
+  <text
+     x="113"
+     y="294"
+     fill="#7dd3fc"
+     font-size="13"
+     font-weight="700"
+     id="text17">② 细问 · GAS / ANQP（Public Action · Category 4）— 仍在关联前，通常 1 轮问答</text>
+  <line
+     x1="220"
+     y1="320"
+     x2="696"
+     y2="320"
+     stroke="#7dd3fc"
+     stroke-width="2"
+     marker-end="url(#ar)"
+     id="line17" />
+  <text
+     x="458"
+     y="314"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text18">GAS Initial Request（Action 0x0A）</text>
+  <text
+     x="458"
+     y="333"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9.5"
+     id="text19">Query List：一帧打包问 NAI Realm + Roaming Consortium + Operator Name + 3GPP …</text>
+  <line
+     x1="700"
+     y1="362"
+     x2="224"
+     y2="362"
+     stroke="#7dd3fc"
+     stroke-width="2"
+     marker-end="url(#ar)"
+     id="line19" />
+  <text
+     x="458"
+     y="356"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text20">GAS Initial Response（Action 0x0B）</text>
+  <text
+     x="458"
+     y="375"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9.5"
+     id="text21">一帧打包答完：realm 列表 / 运营商名 / 各自的 EAP 方法</text>
+  <!-- optional fragmentation sub-step (dashed) -->
+  <rect
+     x="150"
+     y="388"
+     width="510"
+     height="56"
+     rx="6"
+     fill="#0a1f2b"
+     stroke="#38bdf8"
+     stroke-width="1"
+     stroke-dasharray="5,3"
+     id="rect21" />
+  <text
+     x="405"
+     y="404"
+     text-anchor="middle"
+     fill="#7dd3fc"
+     font-size="10"
+     font-weight="700"
+     id="text22">仅当应答过大装不下时（可选分片，非新一轮）</text>
+  <line
+     x1="220"
+     y1="420"
+     x2="656"
+     y2="420"
+     stroke="#7dd3fc"
+     stroke-width="1.3"
+     stroke-dasharray="4,3"
+     marker-end="url(#ard)"
+     id="line22" />
+  <text
+     x="438"
+     y="416"
+     text-anchor="middle"
+     fill="#bae6fd"
+     font-size="9"
+     id="text23">GAS Comeback Request 0x0C</text>
+  <line
+     x1="660"
+     y1="436"
+     x2="224"
+     y2="436"
+     stroke="#7dd3fc"
+     stroke-width="1.3"
+     stroke-dasharray="4,3"
+     marker-end="url(#ard)"
+     id="line23" />
+  <text
+     x="442"
+     y="432"
+     text-anchor="middle"
+     fill="#bae6fd"
+     font-size="9"
+     id="text24">GAS Comeback Response 0x0D（续传分片，循环至取完）</text>
+  <text
+     x="113"
+     y="464"
+     fill="#cbd5e1"
+     font-size="10.5"
+     id="text25">STA 比对凭证 → 确认&quot;这网我能用、该用哪种 EAP&quot;</text>
+  <text
+     x="113"
+     y="478"
+     fill="#64748b"
+     font-size="9.5"
+     id="text26">Wireshark: wlan.fixed.category_code==4 &amp;&amp; wlan.fixed.publicact&gt;=10 &amp;&amp; wlan.fixed.publicact&lt;=13 · wlan.anqp · wlan.hs20.anqp</text>
+  <!-- ============ ③ Association (indigo) ============ -->
+  <rect
+     x="95"
+     y="496"
+     width="715"
+     height="96"
+     rx="8"
+     fill="#1e1b4b"
+     stroke="#818cf8"
+     stroke-width="1.5"
+     id="rect26" />
+  <text
+     x="113"
+     y="516"
+     fill="#c7d2fe"
+     font-size="13"
+     font-weight="700"
+     id="text27">③ 关联 · Association（管理帧 · type 0）</text>
+  <line
+     x1="220"
+     y1="540"
+     x2="696"
+     y2="540"
+     stroke="#a5b4fc"
+     stroke-width="2"
+     marker-end="url(#ar)"
+     id="line27" />
+  <text
+     x="458"
+     y="534"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text28">Association Request（subtype 0x00，带 HS2.0 Indication）</text>
+  <line
+     x1="700"
+     y1="570"
+     x2="224"
+     y2="570"
+     stroke="#a5b4fc"
+     stroke-width="2"
+     marker-end="url(#ar)"
+     id="line28" />
+  <text
+     x="458"
+     y="564"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text29">Association Response（subtype 0x01）</text>
+  <text
+     x="113"
+     y="588"
+     fill="#64748b"
+     font-size="9.5"
+     id="text30">Wireshark: wlan.fc.type_subtype==0x00 / 0x01</text>
+  <!-- ============ ④ EAP + 4-way (purple/indigo) ============ -->
+  <rect
+     x="95"
+     y="604"
+     width="985"
+     height="170"
+     rx="8"
+     fill="#2e1065"
+     stroke="#a78bfa"
+     stroke-width="1.5"
+     id="rect30" />
+  <text
+     x="113"
+     y="624"
+     fill="#ddd6fe"
+     font-size="13"
+     font-weight="700"
+     id="text31">④ 认证 · 802.1X/EAP（AP 转发到 AAA）+ 四次握手 — 标准 802.11，非 HS2.0 私有</text>
+  <line
+     x1="220"
+     y1="650"
+     x2="986"
+     y2="650"
+     stroke="#c4b5fd"
+     stroke-width="2"
+     marker-end="url(#ar)"
+     id="line31" />
+  <text
+     x="560"
+     y="644"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text32">EAP 认证来回（EAP-SIM / AKA / TLS / TTLS，按 ② 查到的方法）</text>
+  <text
+     x="560"
+     y="663"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9.5"
+     id="text33">AP 把 EAP 透传给运营商 AAA（RADIUS）核验凭证</text>
+  <line
+     x1="990"
+     y1="692"
+     x2="224"
+     y2="692"
+     stroke="#c4b5fd"
+     stroke-width="2"
+     marker-end="url(#ar)"
+     id="line33" />
+  <text
+     x="560"
+     y="686"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text34">EAP Success + 下发 MSK → 推出 PMK</text>
+  <line
+     x1="220"
+     y1="724"
+     x2="696"
+     y2="724"
+     stroke="#818cf8"
+     stroke-width="2.5"
+     marker-end="url(#ar)"
+     id="line34" />
+  <line
+     x1="700"
+     y1="738"
+     x2="224"
+     y2="738"
+     stroke="#818cf8"
+     stroke-width="2.5"
+     marker-end="url(#ar)"
+     id="line35" />
+  <text
+     x="458"
+     y="760"
+     text-anchor="middle"
+     fill="#c7d2fe"
+     font-size="11"
+     font-weight="700"
+     id="text35">WPA2/WPA3-Enterprise 四次握手 → 建 PTK → 加密上网（802.11 第 8 章）</text>
+  <text
+     x="113"
+     y="760"
+     fill="#64748b"
+     font-size="9.5"
+     id="text36">eap</text>
+  <text
+     x="640"
+     y="760"
+     fill="#64748b"
+     font-size="9.5"
+     id="text37">eapol</text>
+  <!-- one-shot filter -->
+  <rect
+     x="95"
+     y="788"
+     width="985"
+     height="34"
+     rx="6"
+     fill="#0f172a"
+     stroke="#475569"
+     stroke-width="1"
+     id="rect37" />
+  <text
+     x="560"
+     y="810"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10.5"
+     id="text38">一条龙过滤：wlan.tag.number==221 || wlan.anqp || wlan.hs20.anqp || eap || eapol　（关联前帧需 monitor mode 抓）</text>
+  <text
+     x="560"
+     y="850"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="10.5"
+     id="text39">①② 在关联前完成（这正是 Passpoint 的精髓）；④ 与普通 WPA2/WPA3-Enterprise 完全一致，Passpoint 只是让&quot;选网+认证&quot;自动化</text>
+</svg>

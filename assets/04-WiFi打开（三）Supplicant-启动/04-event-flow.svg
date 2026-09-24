@@ -1,0 +1,1224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1000 820"
+   width="1000"
+   height="820"
+   version="1.1"
+   id="svg80"
+   sodipodi:docname="04-event-flow.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview80"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.3329268"
+     inkscape:cx="500.02745"
+     inkscape:cy="349.9817"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg80" />
+  <style
+     id="style1">
+    text { font-family: 'Noto Sans CJK SC', 'Maple Mono Normal NL NF CN', 'AR PL UKai CN', monospace; }
+  </style>
+  <defs
+     id="defs27">
+    <!-- Background gradient -->
+    <linearGradient
+       id="bgGrad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         style="stop-color:#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <!-- eloop box gradient -->
+    <linearGradient
+       id="eloopGrad"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#1a1a30"
+         id="stop3" />
+      <stop
+         offset="100%"
+         style="stop-color:#12122a"
+         id="stop4" />
+    </linearGradient>
+    <!-- fd box gradients -->
+    <linearGradient
+       id="fdGrad1"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#0f3460"
+         id="stop5" />
+      <stop
+         offset="100%"
+         style="stop-color:#16213e"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       id="fdGrad2"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#533483"
+         id="stop7" />
+      <stop
+         offset="100%"
+         style="stop-color:#3b1f6e"
+         id="stop8" />
+    </linearGradient>
+    <linearGradient
+       id="fdGrad3"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#1a5276"
+         id="stop9" />
+      <stop
+         offset="100%"
+         style="stop-color:#0e3a55"
+         id="stop10" />
+    </linearGradient>
+    <linearGradient
+       id="fdGrad4"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#7d3c00"
+         id="stop11" />
+      <stop
+         offset="100%"
+         style="stop-color:#5a2a00"
+         id="stop12" />
+    </linearGradient>
+    <!-- Timer gradient -->
+    <linearGradient
+       id="timerGrad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#1a8a5c"
+         id="stop13" />
+      <stop
+         offset="100%"
+         style="stop-color:#0d5c3b"
+         id="stop14" />
+    </linearGradient>
+    <!-- Framework gradient -->
+    <linearGradient
+       id="fwGrad"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#2c3e50"
+         id="stop15" />
+      <stop
+         offset="100%"
+         style="stop-color:#1a252f"
+         id="stop16" />
+    </linearGradient>
+    <!-- Kernel gradient -->
+    <linearGradient
+       id="kernGrad"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#1c2833"
+         id="stop17" />
+      <stop
+         offset="100%"
+         style="stop-color:#0e1621"
+         id="stop18" />
+    </linearGradient>
+    <!-- Handler box gradient -->
+    <linearGradient
+       id="handlerGrad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#1e2a3a"
+         id="stop19" />
+      <stop
+         offset="100%"
+         style="stop-color:#141e2e"
+         id="stop20" />
+    </linearGradient>
+    <!-- Filters -->
+    <filter
+       id="glow"
+       x="-0.030454774"
+       y="-0.43186188"
+       width="1.0609095"
+       height="1.8637238">
+      <feGaussianBlur
+         stdDeviation="3"
+         result="blur"
+         id="feGaussianBlur20" />
+      <feMerge
+         id="feMerge21">
+        <feMergeNode
+           in="blur"
+           id="feMergeNode20" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode21" />
+      </feMerge>
+    </filter>
+    <filter
+       id="shadow"
+       x="-0.0048387097"
+       y="-0.009375"
+       width="1.0096774"
+       height="1.01875">
+      <feDropShadow
+         dx="2"
+         dy="2"
+         stdDeviation="4"
+         flood-color="#000"
+         flood-opacity="0.5" />
+    </filter>
+    <filter
+       id="shadowLg"
+       x="-0.0011363636"
+       y="-0.0023255814"
+       width="1.0022727"
+       height="1.0046512">
+      <feDropShadow
+         dx="3"
+         dy="3"
+         stdDeviation="6"
+         flood-color="#000"
+         flood-opacity="0.6" />
+    </filter>
+    <!-- Arrow markers -->
+    <marker
+       id="arrowRed"
+       markerWidth="10"
+       markerHeight="7"
+       refX="10"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#e94560"
+         id="polygon21" />
+    </marker>
+    <marker
+       id="arrowBlue"
+       markerWidth="10"
+       markerHeight="7"
+       refX="10"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#537fe7"
+         id="polygon22" />
+    </marker>
+    <marker
+       id="arrowGreen"
+       markerWidth="10"
+       markerHeight="7"
+       refX="10"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#2ecc71"
+         id="polygon23" />
+    </marker>
+    <marker
+       id="arrowOrange"
+       markerWidth="10"
+       markerHeight="7"
+       refX="10"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#f39c12"
+         id="polygon24" />
+    </marker>
+    <marker
+       id="arrowPurple"
+       markerWidth="10"
+       markerHeight="7"
+       refX="10"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#9b59b6"
+         id="polygon25" />
+    </marker>
+    <marker
+       id="arrowCyan"
+       markerWidth="10"
+       markerHeight="7"
+       refX="10"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#1abc9c"
+         id="polygon26" />
+    </marker>
+    <marker
+       id="arrowGray"
+       markerWidth="10"
+       markerHeight="7"
+       refX="10"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#7f8c8d"
+         id="polygon27" />
+    </marker>
+    <!-- Grid pattern -->
+    <pattern
+       id="grid"
+       width="40"
+       height="40"
+       patternUnits="userSpaceOnUse">
+      <path
+         d="M 40 0 L 0 0 0 40"
+         fill="none"
+         stroke="#ffffff08"
+         stroke-width="0.5"
+         id="path27" />
+    </pattern>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#kernGrad"
+       id="linearGradient80"
+       x1="44.19143"
+       y1="2489.9525"
+       x2="44.19143"
+       y2="2697.6596"
+       gradientTransform="matrix(3.3773516,0,0,0.25906745,0,99.780421)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <!-- Background -->
+  <rect
+     width="1000"
+     height="820"
+     fill="url(#bgGrad)"
+     id="rect27" />
+  <rect
+     width="1000"
+     height="820"
+     fill="url(#grid)"
+     id="rect28" />
+  <!-- ====== Title ====== -->
+  <text
+     x="500"
+     y="38"
+     text-anchor="middle"
+     fill="#c0c8d8"
+     font-size="20"
+     font-weight="bold"
+     id="text28">
+    Supplicant 事件驱动架构全景
+  </text>
+  <text
+     x="500"
+     y="60"
+     text-anchor="middle"
+     fill="#6c7a96"
+     font-size="12"
+     id="text29">
+    eloop = 总机接线员 ｜ fd = 热线 ｜ 单线程事件驱动，所有 I/O 由 epoll 统一调度
+  </text>
+  <!-- ====== Layer 1: Java Framework (top) ====== -->
+  <rect
+     x="60"
+     y="85"
+     width="880"
+     height="80"
+     rx="10"
+     fill="url(#fwGrad)"
+     stroke="#3d5a80"
+     stroke-width="1.5"
+     filter="url(#shadow)"
+     id="rect29" />
+  <text
+     x="500"
+     y="108"
+     text-anchor="middle"
+     fill="#a0c4ff"
+     font-size="14"
+     font-weight="bold"
+     id="text30">
+    Java Framework
+  </text>
+  <text
+     x="500"
+     y="128"
+     text-anchor="middle"
+     fill="#8098cc"
+     font-size="11"
+     id="text31">
+    WifiNative → SupplicantStaIfaceHalAidlImpl → ISupplicant.aidl
+  </text>
+  <text
+     x="500"
+     y="150"
+     text-anchor="middle"
+     fill="#5c7a9e"
+     font-size="10"
+     font-style="italic"
+     id="text32">
+    addStaInterface(“wlan0”) / disconnect() / reconnect() / addNetwork() / select()
+  </text>
+  <!-- ====== Arrow: Framework → eloop (AIDL binder) ====== -->
+  <line
+     x1="500"
+     y1="165"
+     x2="500"
+     y2="198"
+     stroke="#f39c12"
+     stroke-width="2"
+     marker-end="url(#arrowOrange)"
+     id="line32" />
+  <rect
+     x="420"
+     y="170"
+     width="160"
+     height="18"
+     rx="4"
+     fill="#1a1a2e"
+     stroke="none"
+     id="rect32" />
+  <text
+     x="500"
+     y="183"
+     text-anchor="middle"
+     fill="#f39c12"
+     font-size="10"
+     font-weight="bold"
+     id="text33">
+    AIDL binder (IPC)
+  </text>
+  <!-- ====== Layer 2: eloop (central large box) ====== -->
+  <rect
+     x="60"
+     y="200"
+     width="880"
+     height="430"
+     rx="14"
+     fill="url(#eloopGrad)"
+     stroke="#e94560"
+     stroke-width="2"
+     id="rect33" />
+  <!-- eloop label -->
+  <text
+     x="500"
+     y="228"
+     text-anchor="middle"
+     fill="#e94560"
+     font-size="16"
+     font-weight="bold"
+     filter="url(#glow)"
+     id="text34">
+    eloop （epoll event loop）
+  </text>
+  <text
+     x="500"
+     y="248"
+     text-anchor="middle"
+     fill="#cc8090"
+     font-size="11"
+     id="text35">
+    epoll_wait() 阻塞等待 → fd 可读/timer 到期 → 分发到对应 callback → 继续等待
+  </text>
+  <!-- ====== fd 1: binder fd (top-left) ====== -->
+  <rect
+     x="90"
+     y="275"
+     width="195"
+     height="100"
+     rx="8"
+     fill="url(#fdGrad4)"
+     stroke="#f39c12"
+     stroke-width="1.5"
+     filter="url(#shadow)"
+     id="rect35" />
+  <text
+     x="187"
+     y="298"
+     text-anchor="middle"
+     fill="#ffcc80"
+     font-size="13"
+     font-weight="bold"
+     id="text36">
+    binder fd 热线
+  </text>
+  <text
+     x="187"
+     y="318"
+     text-anchor="middle"
+     fill="#ccaa80"
+     font-size="10"
+     id="text37">
+    来源：Java Framework
+  </text>
+  <text
+     x="187"
+     y="336"
+     text-anchor="middle"
+     fill="#ffa84d"
+     font-size="9"
+     id="text38">
+    wpas_aidl_sock_handler()
+  </text>
+  <text
+     x="187"
+     y="352"
+     text-anchor="middle"
+     fill="#cc8840"
+     font-size="9"
+     id="text39">
+    → addStaInterface / disconnect ...
+  </text>
+  <!-- ====== fd 2: nl80211 fd (top-center) ====== -->
+  <rect
+     x="315"
+     y="275"
+     width="195"
+     height="100"
+     rx="8"
+     fill="url(#fdGrad1)"
+     stroke="#537fe7"
+     stroke-width="1.5"
+     filter="url(#shadow)"
+     id="rect39" />
+  <text
+     x="412"
+     y="298"
+     text-anchor="middle"
+     fill="#a0c4ff"
+     font-size="13"
+     font-weight="bold"
+     id="text40">
+    nl80211 fd 热线
+  </text>
+  <text
+     x="412"
+     y="318"
+     text-anchor="middle"
+     fill="#8098cc"
+     font-size="10"
+     id="text41">
+    来源：内核 cfg80211
+  </text>
+  <text
+     x="412"
+     y="336"
+     text-anchor="middle"
+     fill="#6cb4ff"
+     font-size="9"
+     id="text42">
+    wpa_driver_nl80211_event_receive()
+  </text>
+  <text
+     x="412"
+     y="352"
+     text-anchor="middle"
+     fill="#5090cc"
+     font-size="9"
+     id="text43">
+    → wpa_supplicant_event()
+  </text>
+  <!-- ====== fd 3: EAPOL fd (top-right) ====== -->
+  <rect
+     x="540"
+     y="275"
+     width="195"
+     height="100"
+     rx="8"
+     fill="url(#fdGrad1)"
+     stroke="#2ecc71"
+     stroke-width="1.5"
+     filter="url(#shadow)"
+     id="rect43" />
+  <text
+     x="637"
+     y="298"
+     text-anchor="middle"
+     fill="#a0ffc0"
+     font-size="13"
+     font-weight="bold"
+     id="text44">
+    EAPOL fd 热线
+  </text>
+  <text
+     x="637"
+     y="318"
+     text-anchor="middle"
+     fill="#80cc98"
+     font-size="10"
+     id="text45">
+    来源：AP 的 EAPOL 帧
+  </text>
+  <text
+     x="637"
+     y="336"
+     text-anchor="middle"
+     fill="#5cff8a"
+     font-size="9"
+     id="text46">
+    wpa_supplicant_rx_eapol()
+  </text>
+  <text
+     x="637"
+     y="352"
+     text-anchor="middle"
+     fill="#40b060"
+     font-size="9"
+     id="text47">
+    → WPA 四次握手 / EAP 认证
+  </text>
+  <!-- ====== fd 4: ctrl_iface fd (far right) ====== -->
+  <rect
+     x="765"
+     y="275"
+     width="155"
+     height="100"
+     rx="8"
+     fill="url(#fdGrad2)"
+     stroke="#9b59b6"
+     stroke-width="1.5"
+     filter="url(#shadow)"
+     id="rect47" />
+  <text
+     x="842"
+     y="298"
+     text-anchor="middle"
+     fill="#d4a0ff"
+     font-size="13"
+     font-weight="bold"
+     id="text48">
+    ctrl fd 热线
+  </text>
+  <text
+     x="842"
+     y="318"
+     text-anchor="middle"
+     fill="#a080cc"
+     font-size="10"
+     id="text49">
+    来源：wpa_cli
+  </text>
+  <text
+     x="842"
+     y="336"
+     text-anchor="middle"
+     fill="#c48bff"
+     font-size="9"
+     id="text50">
+    ctrl_iface_receive()
+  </text>
+  <text
+     x="842"
+     y="352"
+     text-anchor="middle"
+     fill="#9a70cc"
+     font-size="9"
+     id="text51">
+    → SCAN / STATUS / ...
+  </text>
+  <!-- ====== Timer box (bottom area inside eloop) ====== -->
+  <rect
+     x="90"
+     y="405"
+     width="340"
+     height="115"
+     rx="10"
+     fill="#0a0a16"
+     stroke="#1a8a5c"
+     stroke-width="1.5"
+     filter="url(#shadow)"
+     id="rect51" />
+  <text
+     x="260"
+     y="428"
+     text-anchor="middle"
+     fill="#70d6a8"
+     font-size="13"
+     font-weight="bold"
+     id="text52">
+    timer 定时器 （eloop timeout）
+  </text>
+  <rect
+     x="110"
+     y="440"
+     width="300"
+     height="22"
+     rx="5"
+     fill="url(#timerGrad)"
+     opacity="0.9"
+     id="rect52" />
+  <text
+     x="260"
+     y="456"
+     text-anchor="middle"
+     fill="#d4ffe8"
+     font-size="10"
+     id="text53">
+    wpas_periodic() — 周期性清理
+  </text>
+  <rect
+     x="110"
+     y="468"
+     width="300"
+     height="22"
+     rx="5"
+     fill="url(#timerGrad)"
+     opacity="0.75"
+     id="rect53" />
+  <text
+     x="260"
+     y="484"
+     text-anchor="middle"
+     fill="#d4ffe8"
+     font-size="10"
+     id="text54">
+    wpa_supplicant_req_scan() — 扫描/重连
+  </text>
+  <rect
+     x="110"
+     y="496"
+     width="300"
+     height="18"
+     rx="5"
+     fill="url(#timerGrad)"
+     opacity="0.6"
+     id="rect54" />
+  <text
+     x="260"
+     y="509"
+     text-anchor="middle"
+     fill="#a0d8b8"
+     font-size="9"
+     font-style="italic"
+     id="text55">
+    按到期时间排序，头节点最先到期
+  </text>
+  <!-- ====== Event dispatchers (inside eloop, right side) ====== -->
+  <rect
+     x="470"
+     y="405"
+     width="450"
+     height="115"
+     rx="10"
+     fill="url(#handlerGrad)"
+     stroke="#e94560"
+     stroke-width="1"
+     filter="url(#shadow)"
+     id="rect55" />
+  <text
+     x="695"
+     y="428"
+     text-anchor="middle"
+     fill="#e94560"
+     font-size="13"
+     font-weight="bold"
+     id="text56">
+    事件分发器
+  </text>
+  <!-- Handler boxes inside dispatcher -->
+  <rect
+     x="485"
+     y="440"
+     width="200"
+     height="28"
+     rx="5"
+     fill="#1a1a30"
+     stroke="#537fe7"
+     stroke-width="1"
+     id="rect56" />
+  <text
+     x="585"
+     y="459"
+     text-anchor="middle"
+     fill="#a0c4ff"
+     font-size="9"
+     id="text57">
+    wpa_supplicant_event() — 30+ 事件
+  </text>
+  <rect
+     x="485"
+     y="475"
+     width="200"
+     height="28"
+     rx="5"
+     fill="#1a1a30"
+     stroke="#2ecc71"
+     stroke-width="1"
+     id="rect57" />
+  <text
+     x="585"
+     y="494"
+     text-anchor="middle"
+     fill="#a0ffc0"
+     font-size="9"
+     id="text58">
+    EAPOL 状态机 — 四次握手
+  </text>
+  <rect
+     x="700"
+     y="440"
+     width="205"
+     height="28"
+     rx="5"
+     fill="#1a1a30"
+     stroke="#f39c12"
+     stroke-width="1"
+     id="rect58" />
+  <text
+     x="802"
+     y="459"
+     text-anchor="middle"
+     fill="#ffcc80"
+     font-size="9"
+     id="text59">
+    Supplicant::addStaInterface()
+  </text>
+  <rect
+     x="700"
+     y="475"
+     width="205"
+     height="28"
+     rx="5"
+     fill="#1a1a30"
+     stroke="#9b59b6"
+     stroke-width="1"
+     id="rect59" />
+  <text
+     x="802"
+     y="494"
+     text-anchor="middle"
+     fill="#d4a0ff"
+     font-size="9"
+     id="text60">
+    ctrl_iface 命令处理
+  </text>
+  <!-- Arrows from fd to dispatchers -->
+  <line
+     x1="187"
+     y1="375"
+     x2="187"
+     y2="400"
+     stroke="#f39c12"
+     stroke-width="1.2"
+     marker-end="url(#arrowOrange)"
+     stroke-dasharray="4,3"
+     id="line60" />
+  <path
+     d="M 220 400 Q 400 420 485 454"
+     fill="none"
+     stroke="#f39c12"
+     stroke-width="1.2"
+     marker-end="url(#arrowOrange)"
+     stroke-dasharray="4,3"
+     id="path60" />
+  <line
+     x1="412"
+     y1="375"
+     x2="412"
+     y2="400"
+     stroke="#537fe7"
+     stroke-width="1.2"
+     stroke-dasharray="4,3"
+     id="line61" />
+  <path
+     d="M 430 400 Q 460 420 485 454"
+     fill="none"
+     stroke="#537fe7"
+     stroke-width="1.2"
+     marker-end="url(#arrowBlue)"
+     stroke-dasharray="4,3"
+     id="path61" />
+  <path
+     d="M 637 375 Q 637 400 585 475"
+     fill="none"
+     stroke="#2ecc71"
+     stroke-width="1.2"
+     marker-end="url(#arrowGreen)"
+     stroke-dasharray="4,3"
+     id="path62" />
+  <path
+     d="M 842 375 Q 842 400 802 475"
+     fill="none"
+     stroke="#9b59b6"
+     stroke-width="1.2"
+     marker-end="url(#arrowPurple)"
+     stroke-dasharray="4,3"
+     id="path63" />
+  <!-- ====== Shared output area (bottom of eloop) ====== -->
+  <rect
+     x="90"
+     y="540"
+     width="800"
+     height="70"
+     rx="8"
+     fill="#0e1621"
+     stroke="#2a2a3e"
+     stroke-width="1"
+     id="rect63" />
+  <text
+     x="490"
+     y="562"
+     text-anchor="middle"
+     fill="#8899aa"
+     font-size="12"
+     font-weight="bold"
+     id="text63">
+    共享输出
+  </text>
+  <text
+     x="490"
+     y="582"
+     text-anchor="middle"
+     fill="#6c7a96"
+     font-size="10"
+     id="text64">
+    wpa_supplicant_add_iface() / wpa_supplicant_scan() / wpa_drv_associate() / 状态机转换
+  </text>
+  <text
+     x="490"
+     y="600"
+     text-anchor="middle"
+     fill="#4a5a6e"
+     font-size="9"
+     font-style="italic"
+     id="text65">
+    单线程：各 callback 共享 struct wpa_supplicant ，无需锁
+  </text>
+  <!-- ====== Arrow: event dispatcher → shared output ====== -->
+  <line
+     x1="695"
+     y1="520"
+     x2="695"
+     y2="537"
+     stroke="#e94560"
+     stroke-width="1.5"
+     marker-end="url(#arrowRed)"
+     id="line65" />
+  <!-- ====== Arrow: eloop → nl80211 netlink (downward) ====== -->
+  <line
+     x1="500"
+     y1="630"
+     x2="500"
+     y2="660"
+     stroke="#537fe7"
+     stroke-width="2"
+     marker-end="url(#arrowBlue)"
+     id="line66" />
+  <rect
+     x="380"
+     y="632"
+     width="240"
+     height="18"
+     rx="4"
+     fill="#1a1a2e"
+     stroke="none"
+     id="rect66" />
+  <text
+     x="500"
+     y="645"
+     text-anchor="middle"
+     fill="#537fe7"
+     font-size="10"
+     font-weight="bold"
+     id="text66">
+    NL80211_CMD_* netlink 命令
+  </text>
+  <!-- ====== Layer 3: nl80211 netlink ====== -->
+  <rect
+     x="200"
+     y="660"
+     width="600"
+     height="50"
+     rx="10"
+     fill="url(#kernGrad)"
+     stroke="#537fe7"
+     stroke-width="1.5"
+     id="rect67" />
+  <text
+     x="500"
+     y="684"
+     text-anchor="middle"
+     fill="#a0c4ff"
+     font-size="14"
+     font-weight="bold"
+     id="text67">
+    nl80211 netlink
+  </text>
+  <text
+     x="500"
+     y="700"
+     text-anchor="middle"
+     fill="#6c8ab0"
+     font-size="10"
+     id="text68">
+    用户态与内核的通信桥梁
+  </text>
+  <!-- ====== Arrow: nl80211 → kernel driver ====== -->
+  <line
+     x1="500"
+     y1="710"
+     x2="500"
+     y2="744.00275"
+     stroke="#537fe7"
+     stroke-width="1.5"
+     marker-end="url(#arrowBlue)"
+     id="line68" />
+  <rect
+     x="410"
+     y="714"
+     width="180"
+     height="16"
+     rx="4"
+     fill="#1a1a2e"
+     stroke="none"
+     id="rect68" />
+  <text
+     x="500"
+     y="726"
+     text-anchor="middle"
+     fill="#537fe7"
+     font-size="9"
+     id="text69">
+    cfg80211_ops / nl80211 分发
+  </text>
+  <!-- ====== Layer 4: Kernel driver (bottom) ====== -->
+  <rect
+     x="150"
+     y="745.50226"
+     width="700"
+     height="52.497711"
+     rx="10"
+     fill="url(#kernGrad)"
+     stroke="#3d5a80"
+     stroke-width="1.40309"
+     id="rect69"
+     style="fill:url(#linearGradient80)" />
+  <text
+     x="500"
+     y="764"
+     text-anchor="middle"
+     fill="#7faacc"
+     font-size="14"
+     font-weight="bold"
+     id="text70">
+    内核驱动
+  </text>
+  <text
+     x="500"
+     y="786"
+     text-anchor="middle"
+     fill="#5c7a9e"
+     font-size="11"
+     id="text71">
+    cfg80211 —— 厂商驱动 （qcacld-3.0 / wmt_drv / mt76）
+  </text>
+  <!-- ====== Metaphor annotations (left side) ====== -->
+  <rect
+     x="60"
+     y="85"
+     width="880"
+     height="80"
+     rx="10"
+     fill="none"
+     stroke="#3d5a80"
+     stroke-width="1.5"
+     id="rect71" />
+  <!-- Metaphor labels along the left margin -->
+  <g
+     transform="translate(18, 125)"
+     id="g72">
+    <text
+       x="0"
+       y="0"
+       fill="#f39c12"
+       font-size="10"
+       font-weight="bold"
+       transform="rotate(-90)"
+       text-anchor="middle"
+       id="text72">
+      客人
+    </text>
+  </g>
+  <g
+     transform="translate(18, 400)"
+     id="g73">
+    <text
+       x="0"
+       y="0"
+       fill="#e94560"
+       font-size="10"
+       font-weight="bold"
+       transform="rotate(-90)"
+       text-anchor="middle"
+       id="text73">
+      总机接线员
+    </text>
+  </g>
+  <g
+     transform="translate(18, 690)"
+     id="g74">
+    <text
+       x="0"
+       y="0"
+       fill="#537fe7"
+       font-size="10"
+       font-weight="bold"
+       transform="rotate(-90)"
+       text-anchor="middle"
+       id="text74">
+      电话线路
+    </text>
+  </g>
+  <g
+     transform="translate(18, 770)"
+     id="g75">
+    <text
+       x="0"
+       y="0"
+       fill="#3d5a80"
+       font-size="10"
+       font-weight="bold"
+       transform="rotate(-90)"
+       text-anchor="middle"
+       id="text75">
+      后台工程师
+    </text>
+  </g>
+  <!-- ====== Legend (bottom-left) ====== -->
+  <rect
+     x="856"
+     y="724"
+     width="120"
+     height="78"
+     rx="8"
+     fill="#0a0a16"
+     stroke="#2a2a3e"
+     stroke-width="1"
+     id="rect75" />
+  <text
+     x="916"
+     y="742"
+     text-anchor="middle"
+     fill="#8899aa"
+     font-size="10px"
+     font-weight="bold"
+     id="text76">图例</text>
+  <rect
+     x="866"
+     y="750"
+     width="10"
+     height="8"
+     rx="1"
+     fill="#f39c12"
+     id="rect76" />
+  <text
+     x="882"
+     y="758"
+     fill="#8899aa"
+     font-size="8px"
+     id="text77">AIDL binder</text>
+  <rect
+     x="866"
+     y="764"
+     width="10"
+     height="8"
+     rx="1"
+     fill="#537fe7"
+     id="rect77" />
+  <text
+     x="882"
+     y="772"
+     fill="#8899aa"
+     font-size="8px"
+     id="text78">nl80211 netlink</text>
+  <rect
+     x="866"
+     y="778"
+     width="10"
+     height="8"
+     rx="1"
+     fill="#2ecc71"
+     id="rect78" />
+  <text
+     x="882"
+     y="786"
+     fill="#8899aa"
+     font-size="8px"
+     id="text79">EAPOL L2</text>
+  <rect
+     x="866"
+     y="792"
+     width="10"
+     height="8"
+     rx="1"
+     fill="#9b59b6"
+     id="rect79" />
+  <text
+     x="882"
+     y="800"
+     fill="#8899aa"
+     font-size="8px"
+     id="text80">ctrl socket</text>
+</svg>

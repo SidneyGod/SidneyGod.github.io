@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 960 950"
+   width="960"
+   height="950"
+   version="1.1"
+   id="svg31"
+   sodipodi:docname="07f-t2lm-negotiation.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview31"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1505263"
+     inkscape:cx="479.78042"
+     inkscape:cy="475"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg31" />
+  <defs
+     id="defs8">
+    <marker
+       id="arrowA"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#a855f7"
+         id="polygon1" />
+    </marker>
+    <marker
+       id="arrowB"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#22c55e"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arrowC"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#38bdf8"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arrowE"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#fb7185"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arrowF"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#f59e0b"
+         id="polygon5" />
+    </marker>
+    <marker
+       id="arrowG"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#f97316"
+         id="polygon6" />
+    </marker>
+    <marker
+       id="arrowH"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#94a3b8"
+         id="polygon7" />
+    </marker>
+    <linearGradient
+       id="terminalGradient"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop7" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop8" />
+    </linearGradient>
+    <filter
+       id="glowBlue"
+       x="-30%"
+       y="-30%"
+       width="160%"
+       height="160%">
+      <feDropShadow
+         dx="0"
+         dy="0"
+         stdDeviation="5"
+         flood-color="#3b82f6"
+         flood-opacity="0.65" />
+    </filter>
+    <filter
+       id="glowPurple"
+       x="-30%"
+       y="-30%"
+       width="160%"
+       height="160%">
+      <feDropShadow
+         dx="0"
+         dy="0"
+         stdDeviation="5"
+         flood-color="#a855f7"
+         flood-opacity="0.72" />
+    </filter>
+    <filter
+       id="glowGreen"
+       x="-30%"
+       y="-30%"
+       width="160%"
+       height="160%">
+      <feDropShadow
+         dx="0"
+         dy="0"
+         stdDeviation="5"
+         flood-color="#22c55e"
+         flood-opacity="0.62" />
+    </filter>
+    <filter
+       id="glowOrange"
+       x="-30%"
+       y="-30%"
+       width="160%"
+       height="160%">
+      <feDropShadow
+         dx="0"
+         dy="0"
+         stdDeviation="5"
+         flood-color="#f97316"
+         flood-opacity="0.62" />
+    </filter>
+    <style
+       id="style8">
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; }
+    .title { font-size: 30px; font-weight: 700; fill: #e2e8f0; }
+    .subtitle { font-size: 14px; font-weight: 500; fill: #94a3b8; }
+    .section { font-size: 13px; font-weight: 700; fill: #38bdf8; letter-spacing: 1.4px; }
+    .section-sub { font-size: 12px; font-weight: 500; fill: #64748b; }
+    .node-title { font-size: 18px; font-weight: 700; fill: #e2e8f0; }
+    .node-sub { font-size: 12px; font-weight: 500; fill: #94a3b8; }
+    .node-type { font-size: 12px; font-weight: 700; fill: #64748b; letter-spacing: 0.08em; }
+    .arrow-label { font-size: 12px; font-weight: 600; fill: #cbd5e1; }
+    .legend { font-size: 12px; font-weight: 500; fill: #94a3b8; }
+    .footnote { font-size: 12px; font-weight: 500; fill: #64748b; }
+    </style>
+  </defs>
+  <rect
+     width="960.0"
+     height="950.0"
+     fill="url(#terminalGradient)"
+     id="rect8" />
+  <text
+     x="480.0"
+     y="56"
+     text-anchor="middle"
+     class="title"
+     id="text8">T2LM 协商时序</text>
+  <text
+     x="480.0"
+     y="82"
+     text-anchor="middle"
+     class="subtitle"
+     id="text9">TID-to-Link Mapping — STA 与 AP 协商 TID→链路映射</text>
+  <path
+     d="M 507.09424,218.44831 508,285"
+     fill="none"
+     stroke="#fb7185"
+     stroke-width="1.5"
+     marker-end="url(#arrowE)"
+     id="path9"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="M 550.0,329.0 L 470.0,390.0"
+     fill="none"
+     stroke="#22c55e"
+     stroke-width="2.3"
+     marker-end="url(#arrowB)"
+     id="path10" />
+  <path
+     d="M 389.20403,308.13998 H 218.26167 v 203.58921 h 40.814"
+     fill="none"
+     stroke="#ef4444"
+     stroke-width="1.86148"
+     marker-end="url(#arrowA)"
+     id="path11"
+     sodipodi:nodetypes="cccc" />
+  <path
+     d="m 699.4602,423.14913 h 57.46569 v 196.10339 l -25.823,1.73833"
+     fill="none"
+     stroke="#22c55e"
+     stroke-width="1.52869"
+     marker-end="url(#arrowB)"
+     id="path12"
+     sodipodi:nodetypes="cccc" />
+  <path
+     d="M 550.0,639.0 L 540.0,700.0"
+     fill="none"
+     stroke="#3b82f6"
+     stroke-width="2.3"
+     marker-end="url(#arrowA)"
+     id="path13" />
+  <path
+     d="m 540,768 0.86917,49.38335"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrowG)"
+     id="path14"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="M 724.70265,307.27081 H 814 v 603.58921 h -22.37146"
+     fill="none"
+     stroke="#ef4444"
+     stroke-width="1.3875"
+     marker-end="url(#arrowA)"
+     id="path15"
+     sodipodi:nodetypes="cccc" />
+  <rect
+     x="165.23331"
+     y="95"
+     width="292.1409"
+     height="40"
+     rx="13.279131"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="2.07423"
+     id="rect15" />
+  <text
+     x="310"
+     y="121"
+     text-anchor="middle"
+     class="node-title"
+     id="text15">STA (wpa_supplicant/驱动)</text>
+  <rect
+     x="620.0"
+     y="95.0"
+     width="110.0"
+     height="40.0"
+     rx="10.0"
+     fill="#3b0764"
+     stroke="#8b5cf6"
+     stroke-width="1.8"
+     id="rect16" />
+  <text
+     x="675"
+     y="121"
+     text-anchor="middle"
+     class="node-title"
+     id="text16">AP</text>
+  <rect
+     x="240"
+     y="185"
+     width="460"
+     height="33.924976"
+     rx="10"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.3535"
+     id="rect17" />
+  <text
+     x="470.76498"
+     y="208.00148"
+     text-anchor="middle"
+     class="node-title"
+     id="text17">T2LM Request (TID2LINK_REQUEST)</text>
+  <rect
+     x="370.0"
+     y="285.0"
+     width="360.0"
+     height="44.0"
+     rx="10.0"
+     fill="#78350f"
+     stroke="#f97316"
+     stroke-width="1.8"
+     id="rect18" />
+  <text
+     x="550.0"
+     y="307.0"
+     text-anchor="middle"
+     class="node-title"
+     id="text18">FSM → REQ_PENDING</text>
+  <rect
+     x="240.0"
+     y="390.0"
+     width="460.0"
+     height="65.0"
+     rx="10.0"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect19" />
+  <text
+     x="470.0"
+     y="412.0"
+     text-anchor="middle"
+     class="node-title"
+     id="text19">T2LM Response (ACCEPT)</text>
+  <rect
+     x="260.0"
+     y="490.0"
+     width="420.0"
+     height="44.0"
+     rx="10.0"
+     fill="#7c2d12"
+     stroke="#ef4444"
+     stroke-width="1.8"
+     id="rect20" />
+  <text
+     x="470.0"
+     y="512.0"
+     text-anchor="middle"
+     class="node-title"
+     id="text20">T2LM Response (DENIED)</text>
+  <rect
+     x="370.0"
+     y="595.0"
+     width="360.0"
+     height="70.0"
+     rx="10.0"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     id="rect21" />
+  <text
+     x="550.0"
+     y="617.0"
+     text-anchor="middle"
+     class="node-title"
+     id="text21">FSM → REQ_SWITCH</text>
+  <rect
+     x="290.0"
+     y="700.0"
+     width="500.0"
+     height="65.0"
+     rx="10.0"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect22" />
+  <text
+     x="540.0"
+     y="722.0"
+     text-anchor="middle"
+     class="node-title"
+     id="text22">MAP_SWITCH_TIMER_EXPIRED</text>
+  <rect
+     x="290"
+     y="818"
+     width="500"
+     height="44"
+     rx="10"
+     fill="#78350f"
+     stroke="#f97316"
+     stroke-width="1.8"
+     id="rect23" />
+  <text
+     x="540"
+     y="840"
+     text-anchor="middle"
+     class="node-title"
+     id="text23">EXPECTED_DUR_EXPIRED</text>
+  <rect
+     x="310.0"
+     y="890.0"
+     width="480.0"
+     height="44.0"
+     rx="10.0"
+     fill="#7c2d12"
+     stroke="#ef4444"
+     stroke-width="1.8"
+     id="rect24" />
+  <text
+     x="550.0"
+     y="912.0"
+     text-anchor="middle"
+     class="node-title"
+     id="text24">超时 · 5s 无响应 → 回 IDLE</text>
+  <rect
+     x="457.5"
+     y="235"
+     width="105"
+     height="20"
+     rx="6"
+     fill="#0f172a"
+     opacity="0.92"
+     id="rect25" />
+  <text
+     x="510"
+     y="249"
+     text-anchor="middle"
+     class="arrow-label"
+     id="text25">STA 发 Request</text>
+  <rect
+     x="464.5"
+     y="340.0"
+     width="91"
+     height="20"
+     rx="6"
+     fill="#0f172a"
+     opacity="0.92"
+     id="rect26" />
+  <text
+     x="510.0"
+     y="354.0"
+     text-anchor="middle"
+     class="arrow-label"
+     id="text26">AP 回 ACCEPT</text>
+  <rect
+     x="174.5"
+     y="397.5"
+     width="91"
+     height="20"
+     rx="6"
+     fill="#0f172a"
+     opacity="0.92"
+     id="rect27" />
+  <text
+     x="220.0"
+     y="411.5"
+     text-anchor="middle"
+     class="arrow-label"
+     id="text27">AP 回 DENIED</text>
+  <rect
+     x="722.5567"
+     y="509.54666"
+     width="67"
+     height="20"
+     rx="6"
+     fill="#0f172a"
+     opacity="0.92"
+     id="rect28" />
+  <text
+     x="756.0567"
+     y="523.54663"
+     text-anchor="middle"
+     class="arrow-label"
+     id="text28">进入切换</text>
+  <rect
+     x="499.5"
+     y="645.0"
+     width="91"
+     height="20"
+     rx="6"
+     fill="#0f172a"
+     opacity="0.92"
+     id="rect29" />
+  <text
+     x="545.0"
+     y="659.0"
+     text-anchor="middle"
+     class="arrow-label"
+     id="text29">Switch Time</text>
+  <rect
+     x="488.5"
+     y="774"
+     width="91"
+     height="20"
+     rx="6"
+     fill="#0f172a"
+     opacity="0.92"
+     id="rect30" />
+  <text
+     x="534"
+     y="788"
+     text-anchor="middle"
+     class="arrow-label"
+     id="text30">Duration 到期</text>
+  <rect
+     x="788.88336"
+     y="595.5"
+     width="49"
+     height="20"
+     rx="6"
+     fill="#0f172a"
+     opacity="0.92"
+     id="rect31" />
+  <text
+     x="813.38336"
+     y="609.5"
+     text-anchor="middle"
+     class="arrow-label"
+     id="text31">5s 超时</text>
+</svg>

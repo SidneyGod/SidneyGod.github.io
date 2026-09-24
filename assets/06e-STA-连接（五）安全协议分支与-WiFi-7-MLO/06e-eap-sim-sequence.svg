@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1400 960"
+   width="1400"
+   height="960"
+   version="1.1"
+   id="svg78"
+   sodipodi:docname="06e-eap-sim-sequence.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview78"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1385417"
+     inkscape:cx="494.49222"
+     inkscape:cy="460.67704"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg78" />
+  <title
+     id="title1">EAP-SIM 完整认证流程时序图</title>
+  <!-- validate: skip-orphan-boxes skip-container-nesting -->
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN',Monaco,'Microsoft YaHei',monospace; }
+</style>
+  <defs
+     id="defs6">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arr-blue"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#3b82f6"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arr-green"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#10b981"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arr-orange"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#f97316"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arr-purple"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#a855f7"
+         id="polygon5" />
+    </marker>
+    <marker
+       id="arr-red"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#ef4444"
+         id="polygon6" />
+    </marker>
+  </defs>
+  <rect
+     width="1400"
+     height="960"
+     fill="url(#bg)"
+     id="rect6" />
+  <!-- Title -->
+  <text
+     x="30"
+     y="26"
+     font-size="15"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text6">EAP-SIM Authentication Flow: Identity → Start → Challenge → Success (RFC 4186)</text>
+  <text
+     x="30"
+     y="44"
+     font-size="11"
+     fill="#94a3b8"
+     id="text7">STA (SIM Card) → AP (Authenticator) → RADIUS Server → HLR/AuC    PMK = MSK[0:32], Key derivation via SHA1 + FIPS 186-2 PRF</text>
+  <!-- Lifeline headers -->
+  <rect
+     x="65"
+     y="62"
+     width="160"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect7" />
+  <text
+     x="145"
+     y="78"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="600"
+     fill="#e2e8f0"
+     id="text8">STA</text>
+  <text
+     x="145"
+     y="93"
+     text-anchor="middle"
+     font-size="10"
+     fill="#94a3b8"
+     id="text9"
+     style="font-size:10.66666667px">SIM Card · eap_sim.c</text>
+  <rect
+     x="335"
+     y="62"
+     width="160"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect9" />
+  <text
+     x="415"
+     y="78"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="600"
+     fill="#e2e8f0"
+     id="text10">AP</text>
+  <text
+     x="415"
+     y="93"
+     text-anchor="middle"
+     font-size="10"
+     fill="#94a3b8"
+     id="text11"
+     style="font-size:10.66666667px">Authenticator · hostapd</text>
+  <rect
+     x="605"
+     y="62"
+     width="160"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect11" />
+  <text
+     x="685"
+     y="78"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="600"
+     fill="#e2e8f0"
+     id="text12">RADIUS</text>
+  <text
+     x="685"
+     y="93"
+     text-anchor="middle"
+     font-size="10"
+     fill="#94a3b8"
+     id="text13"
+     style="font-size:10.66666667px">eap_server_sim.c</text>
+  <rect
+     x="875"
+     y="62"
+     width="160"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     id="rect13" />
+  <text
+     x="955"
+     y="78"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="600"
+     fill="#e2e8f0"
+     id="text14">HLR / AuC</text>
+  <text
+     x="955"
+     y="93"
+     text-anchor="middle"
+     font-size="10"
+     fill="#94a3b8"
+     id="text15"
+     style="font-size:10.66666667px">GSM Triplet DB</text>
+  <rect
+     x="1145"
+     y="62"
+     width="170"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect15" />
+  <text
+     x="1230"
+     y="78"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="600"
+     fill="#10b981"
+     id="text16">Key State</text>
+  <text
+     x="1230"
+     y="93"
+     text-anchor="middle"
+     font-size="10"
+     fill="#94a3b8"
+     id="text17"
+     style="font-size:10.66666667px">Keys &amp; Derived</text>
+  <!-- Lifelines -->
+  <line
+     x1="145"
+     y1="110"
+     x2="145"
+     y2="910"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4 3"
+     id="line17" />
+  <line
+     x1="415"
+     y1="110"
+     x2="415"
+     y2="910"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4 3"
+     id="line18" />
+  <line
+     x1="685"
+     y1="110"
+     x2="685"
+     y2="910"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4 3"
+     id="line19" />
+  <line
+     x1="955"
+     y1="110"
+     x2="955"
+     y2="910"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4 3"
+     id="line20" />
+  <!-- Phase 1: Identity -->
+  <text
+     x="30"
+     y="135"
+     font-size="10"
+     font-weight="600"
+     fill="#475569"
+     id="text20"
+     style="font-size:13.33333333px">PHASE 1</text>
+  <text
+     x="30"
+     y="150"
+     font-size="9"
+     fill="#64748b"
+     id="text21"
+     style="font-size:13.3333px">IDENTITY</text>
+  <line
+     x1="145"
+     y1="166"
+     x2="409"
+     y2="166"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arr-blue)"
+     id="line21" />
+  <text
+     x="277"
+     y="161"
+     text-anchor="middle"
+     font-size="9"
+     fill="#94a3b8"
+     id="text22"
+     style="font-size:10.66666667px">1. EAPOL-Start</text>
+  <line
+     x1="415"
+     y1="183"
+     x2="679"
+     y2="183"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arr-orange)"
+     id="line22" />
+  <text
+     x="547"
+     y="178"
+     text-anchor="middle"
+     font-size="9"
+     fill="#94a3b8"
+     id="text23">2. RADIUS Access-Request</text>
+  <text
+     x="547"
+     y="195"
+     text-anchor="middle"
+     font-size="8"
+     fill="#64748b"
+     id="text24"
+     style="font-size:10.6667px">(EAP-Response/Identity)</text>
+  <line
+     x1="685"
+     y1="210"
+     x2="949"
+     y2="210"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     marker-end="url(#arr-purple)"
+     id="line24" />
+  <text
+     x="817"
+     y="205"
+     text-anchor="middle"
+     font-size="9"
+     fill="#94a3b8"
+     id="text25"
+     style="font-size:10.66666667px">3. Auth Info Req</text>
+  <line
+     x1="949"
+     y1="235"
+     x2="691"
+     y2="235"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     marker-end="url(#arr-red)"
+     id="line25" />
+  <text
+     x="817"
+     y="230"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#94a3b8"
+     id="text26"
+     style="font-size:10.66666667px">4. GSM Triplets</text>
+  <text
+     x="817"
+     y="247"
+     text-anchor="middle"
+     font-size="8px"
+     fill="#64748b"
+     id="text27"
+     style="font-size:10.6667px">(RANDx2-3, SRESx2-3, Kcx2-3)</text>
+  <line
+     x1="685"
+     y1="254"
+     x2="421"
+     y2="254"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     marker-end="url(#arr-purple)"
+     id="line27" />
+  <text
+     x="547"
+     y="249"
+     text-anchor="middle"
+     font-size="9"
+     fill="#94a3b8"
+     id="text28"
+     style="font-size:10.66666667px">5. RADIUS Access-Challenge</text>
+  <text
+     x="547"
+     y="266"
+     text-anchor="middle"
+     font-size="8"
+     fill="#64748b"
+     id="text29"
+     style="font-size:10.6667px">(EAP-Request/Identity)</text>
+  <line
+     x1="415"
+     y1="275"
+     x2="151"
+     y2="275"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arr-orange)"
+     id="line29" />
+  <text
+     x="277"
+     y="270"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#94a3b8"
+     id="text30"
+     style="font-size:10.66666667px">6. EAP-Request/Identity</text>
+  <line
+     x1="145"
+     y1="298"
+     x2="409"
+     y2="298"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arr-blue)"
+     id="line30" />
+  <text
+     x="277"
+     y="293"
+     text-anchor="middle"
+     font-size="9"
+     fill="#94a3b8"
+     id="text31"
+     style="font-size:10.66666667px">7. EAP-Response/Identity</text>
+  <text
+     x="277"
+     y="310"
+     text-anchor="middle"
+     font-size="8"
+     fill="#64748b"
+     id="text32"
+     style="font-size:10.6667px">IMSI or Pseudonym</text>
+  <line
+     x1="415"
+     y1="325"
+     x2="679"
+     y2="325"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arr-orange)"
+     id="line32" />
+  <text
+     x="547"
+     y="320"
+     text-anchor="middle"
+     font-size="9"
+     fill="#94a3b8"
+     id="text33"
+     style="font-size:10.66666667px">8. RADIUS Access-Request (含 EAP-Resp)</text>
+  <!-- Phase 2: Start -->
+  <text
+     x="30"
+     y="352"
+     font-size="10"
+     font-weight="600"
+     fill="#475569"
+     id="text34"
+     style="font-size:13.33333333px">PHASE 2</text>
+  <text
+     x="30"
+     y="367"
+     font-size="9"
+     fill="#64748b"
+     id="text35"
+     style="font-size:13.3333px">START</text>
+  <line
+     x1="685"
+     y1="383"
+     x2="421"
+     y2="383"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     marker-end="url(#arr-purple)"
+     id="line35" />
+  <text
+     x="547"
+     y="378"
+     text-anchor="middle"
+     font-size="9"
+     fill="#94a3b8"
+     id="text36"
+     style="font-size:10.66666667px">9. Access-Challenge (EAP/SIM-Start)</text>
+  <line
+     x1="415"
+     y1="400"
+     x2="151"
+     y2="400"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arr-orange)"
+     id="line36" />
+  <text
+     x="277"
+     y="395"
+     text-anchor="middle"
+     font-size="9"
+     fill="#94a3b8"
+     id="text37"
+     style="font-size:10.66666667px">10. EAP-Request/SIM-Start</text>
+  <text
+     x="277"
+     y="410"
+     text-anchor="middle"
+     font-size="8"
+     fill="#64748b"
+     id="text38"
+     style="font-size:10.66666667px">AT_VERSION_LIST</text>
+  <line
+     x1="145"
+     y1="435"
+     x2="409"
+     y2="435"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arr-blue)"
+     id="line38" />
+  <text
+     x="277"
+     y="430"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#94a3b8"
+     id="text39"
+     style="font-size:10.66666667px">11. EAP-Response/SIM-Start</text>
+  <text
+     x="277"
+     y="449"
+     text-anchor="middle"
+     font-size="8px"
+     fill="#64748b"
+     id="text40"
+     style="font-size:10.6667px">AT_IDENTITY, AT_NONCE_MT, AT_SELECTED_VERSION</text>
+  <line
+     x1="415"
+     y1="454"
+     x2="679"
+     y2="454"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arr-orange)"
+     id="line40" />
+  <text
+     x="547"
+     y="449"
+     text-anchor="middle"
+     font-size="9"
+     fill="#94a3b8"
+     id="text41"
+     style="font-size:10.66666667px">12. RADIUS Access-Request</text>
+  <!-- Phase 2.5: Triplet pre-fetch (triplets already fetched in Phase 1 step 3-4) -->
+  <line
+     x1="685"
+     y1="472"
+     x2="949"
+     y2="472"
+     stroke="#a855f7"
+     stroke-width="1"
+     stroke-dasharray="4 2"
+     marker-end="url(#arr-purple)"
+     id="line41" />
+  <text
+     x="817"
+     y="467"
+     text-anchor="middle"
+     font-size="8"
+     fill="#a855f8"
+     id="text42"
+     style="font-size:10.66666667px">triplets pre-fetched (Phase 1 step 3-4)</text>
+  <!-- Phase 3: Challenge -->
+  <text
+     x="30"
+     y="497"
+     font-size="10"
+     font-weight="600"
+     fill="#475569"
+     id="text43"
+     style="font-size:13.33333333px">PHASE 3</text>
+  <text
+     x="30"
+     y="512"
+     font-size="9"
+     fill="#64748b"
+     id="text44"
+     style="font-size:13.3333px">CHALLENGE</text>
+  <line
+     x1="685"
+     y1="512"
+     x2="421"
+     y2="512"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     marker-end="url(#arr-purple)"
+     id="line44" />
+  <text
+     x="547"
+     y="507"
+     text-anchor="middle"
+     font-size="9"
+     fill="#94a3b8"
+     id="text45"
+     style="font-size:10.66666667px">13. Access-Challenge (EAP/SIM-Challenge)</text>
+  <text
+     x="547"
+     y="524"
+     text-anchor="middle"
+     font-size="8"
+     fill="#64748b"
+     id="text46"
+     style="font-size:10.6667px">AT_RAND × N, AT_MAC (Server)</text>
+  <line
+     x1="415"
+     y1="543"
+     x2="151"
+     y2="543"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arr-orange)"
+     id="line46" />
+  <text
+     x="277"
+     y="538"
+     text-anchor="middle"
+     font-size="9"
+     fill="#e2e8f0"
+     id="text47"
+     style="font-size:10.66666667px">14. EAP-Request/SIM-Challenge</text>
+  <text
+     x="277"
+     y="553"
+     text-anchor="middle"
+     font-size="8"
+     fill="#64748b"
+     id="text48"
+     style="font-size:10.66666667px">AT_RAND, AT_MAC</text>
+  <!-- SIM card computation -->
+  <rect
+     x="80"
+     y="572"
+     width="323"
+     height="94"
+     rx="4"
+     fill="#1e293b"
+     stroke="#3b82f6"
+     stroke-width="0.8"
+     stroke-dasharray="3 2"
+     id="rect48" />
+  <text
+     x="189"
+     y="584"
+     text-anchor="middle"
+     font-size="8px"
+     font-weight="600"
+     fill="#3b82f6"
+     id="text49"
+     style="font-size:10.6667px">SIM Card Computation</text>
+  <text
+     x="189"
+     y="598"
+     text-anchor="middle"
+     font-size="7px"
+     fill="#94a3b8"
+     id="text50"
+     style="font-size:10.6667px">A3(RAND,Ki)→SRES</text>
+  <text
+     x="189"
+     y="610"
+     text-anchor="middle"
+     font-size="7px"
+     fill="#94a3b8"
+     id="text51"
+     style="font-size:10.6667px">A8(RAND,Ki)→Kc</text>
+  <text
+     x="189"
+     y="622"
+     text-anchor="middle"
+     font-size="7px"
+     fill="#94a3b8"
+     id="text52"
+     style="font-size:10.6667px">MK=SHA1(ID||Kc×N||NONCE_MT||Ver)</text>
+  <!-- Key derivation state -->
+  <text
+     x="1150"
+     y="582"
+     font-size="8"
+     fill="#10b981"
+     id="text53"
+     style="font-size:13.3333px">eap_sim_derive_mk()</text>
+  <text
+     x="1150"
+     y="595"
+     font-size="7"
+     fill="#94a3b8"
+     id="text54"
+     style="font-size:10.6667px">→ MK (20 bytes)</text>
+  <text
+     x="1150"
+     y="618"
+     font-size="8"
+     fill="#10b981"
+     id="text55"
+     style="font-size:13.33333333px">eap_sim_derive_keys()</text>
+  <text
+     x="1150"
+     y="631"
+     font-size="7"
+     fill="#94a3b8"
+     id="text56"
+     style="font-size:10.66666667px">FIPS 186-2 PRF(MK)</text>
+  <text
+     x="1150"
+     y="644"
+     font-size="7"
+     fill="#94a3b8"
+     id="text57"
+     style="font-size:10.66666667px">→ K_encr|K_aut|MSK|EMSK</text>
+  <line
+     x1="145"
+     y1="650"
+     x2="409"
+     y2="650"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arr-blue)"
+     id="line57" />
+  <text
+     x="277"
+     y="645"
+     text-anchor="middle"
+     font-size="9"
+     fill="#94a3b8"
+     id="text58"
+     style="font-size:10.66666667px">15. EAP-Response/SIM-Challenge</text>
+  <text
+     x="255"
+     y="660"
+     text-anchor="middle"
+     font-size="8"
+     fill="#64748b"
+     id="text59"
+     style="font-size:10.6667px">AT_MAC (Client: HMAC-SHA1-128 of msg||SRES×N)</text>
+  <line
+     x1="415"
+     y1="681"
+     x2="679"
+     y2="681"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arr-orange)"
+     id="line59" />
+  <text
+     x="547"
+     y="676"
+     text-anchor="middle"
+     font-size="9"
+     fill="#94a3b8"
+     id="text60"
+     style="font-size:10.66666667px">16. RADIUS Access-Request</text>
+  <text
+     x="547"
+     y="693"
+     text-anchor="middle"
+     font-size="8"
+     fill="#64748b"
+     id="text61"
+     style="font-size:10.6667px">Verify Client AT_MAC</text>
+  <!-- Phase 4: Success -->
+  <text
+     x="30"
+     y="716"
+     font-size="10"
+     font-weight="600"
+     fill="#475569"
+     id="text62"
+     style="font-size:13.33333333px">PHASE 4</text>
+  <text
+     x="30"
+     y="731"
+     font-size="9"
+     fill="#64748b"
+     id="text63"
+     style="font-size:13.3333px">SUCCESS</text>
+  <line
+     x1="685"
+     y1="747"
+     x2="421"
+     y2="747"
+     stroke="#10b981"
+     stroke-width="2"
+     marker-end="url(#arr-green)"
+     id="line63" />
+  <text
+     x="547"
+     y="742"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#10b981"
+     id="text64"
+     style="font-size:10.66666667px">17. RADIUS Access-Accept</text>
+  <text
+     x="547"
+     y="759"
+     text-anchor="middle"
+     font-size="8"
+     fill="#64748b"
+     id="text65"
+     style="font-size:10.6667px">MS-MPPE-Send-Key: MSK (encrypted)</text>
+  <line
+     x1="415"
+     y1="778"
+     x2="151"
+     y2="778"
+     stroke="#10b981"
+     stroke-width="2"
+     marker-end="url(#arr-green)"
+     id="line65" />
+  <text
+     x="277"
+     y="777"
+     text-anchor="middle"
+     font-size="9"
+     font-weight="600"
+     fill="#10b981"
+     id="text66"
+     style="font-size:10.6667px">18. EAP-Success</text>
+  <text
+     x="1150"
+     y="780"
+     font-size="8"
+     fill="#10b981"
+     id="text67"
+     style="font-size:13.33333333px">PMK = MSK[0:32]</text>
+  <text
+     x="1150"
+     y="793"
+     font-size="7"
+     fill="#94a3b8"
+     id="text68"
+     style="font-size:10.66666667px">Ready for 4-way handshake</text>
+  <!-- Phase 5: EAPOL 4-Way Handshake -->
+  <text
+     x="30"
+     y="792"
+     font-size="10"
+     font-weight="600"
+     fill="#475569"
+     id="text69"
+     style="font-size:13.33333333px">PHASE 5</text>
+  <text
+     x="30"
+     y="805"
+     font-size="9"
+     fill="#64748b"
+     id="text70"
+     style="font-size:13.3333px">4-WAY HS</text>
+  <line
+     x1="415"
+     y1="818"
+     x2="151"
+     y2="818"
+     stroke="#f97316"
+     stroke-width="1"
+     stroke-dasharray="4 2"
+     marker-end="url(#arr-orange)"
+     id="line70" />
+  <text
+     x="277"
+     y="814"
+     text-anchor="middle"
+     font-size="8"
+     fill="#64748b"
+     id="text71"
+     style="font-size:10.6667px">Msg 1/4: ANonce (AP→STA)</text>
+  <line
+     x1="145"
+     y1="840"
+     x2="409"
+     y2="840"
+     stroke="#3b82f6"
+     stroke-width="1"
+     stroke-dasharray="4 2"
+     marker-end="url(#arr-blue)"
+     id="line71" />
+  <text
+     x="277"
+     y="836"
+     text-anchor="middle"
+     font-size="8"
+     fill="#64748b"
+     id="text72"
+     style="font-size:10.6667px">Msg 2/4: SNonce + MIC (STA→AP)</text>
+  <line
+     x1="415"
+     y1="862"
+     x2="151"
+     y2="862"
+     stroke="#f97316"
+     stroke-width="1"
+     stroke-dasharray="4 2"
+     marker-end="url(#arr-orange)"
+     id="line72" />
+  <text
+     x="277"
+     y="858"
+     text-anchor="middle"
+     font-size="8"
+     fill="#64748b"
+     id="text73"
+     style="font-size:10.6667px">Msg 3/4: Install PTK + GTK (AP→STA)</text>
+  <line
+     x1="145"
+     y1="884"
+     x2="409"
+     y2="884"
+     stroke="#3b82f6"
+     stroke-width="1"
+     stroke-dasharray="4 2"
+     marker-end="url(#arr-blue)"
+     id="line73" />
+  <text
+     x="277"
+     y="880"
+     text-anchor="middle"
+     font-size="8"
+     fill="#64748b"
+     id="text74"
+     style="font-size:10.6667px">Msg 4/4: ACK (STA→AP)</text>
+  <text
+     x="1150"
+     y="878"
+     font-size="8"
+     fill="#10b981"
+     id="text75"
+     style="font-size:13.33333333px">PTK installed</text>
+  <text
+     x="1150"
+     y="891"
+     font-size="7"
+     fill="#94a3b8"
+     id="text76"
+     style="font-size:10.66666667px">Connection established</text>
+  <!-- Summary bar -->
+  <rect
+     x="30"
+     y="900"
+     width="1340"
+     height="45"
+     rx="6"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="0.8"
+     id="rect76" />
+  <text
+     x="700"
+     y="917"
+     text-anchor="middle"
+     font-size="9"
+     fill="#94a3b8"
+     id="text77"
+     style="font-size:10.66666667px">Total: 18 messages (EAPOL + RADIUS + HLR) · PMK derived from MSK[0:32] via GSM triplets · Ki never leaves the SIM card</text>
+  <text
+     x="700"
+     y="935"
+     text-anchor="middle"
+     font-size="8"
+     fill="#64748b"
+     id="text78"
+     style="font-size:10.66666667px">Key chain: GSM Triplet → MK(SHA1) → K_encr|K_aut|MSK|EMSK(FIPS186-2-PRF) → PMK=MSK[0:32] → PTK(HMAC-SHA1, 4-way HS)</text>
+</svg>

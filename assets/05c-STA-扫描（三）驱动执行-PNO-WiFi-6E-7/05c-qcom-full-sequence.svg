@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1000 750"
+   version="1.1"
+   id="svg49"
+   sodipodi:docname="05c-qcom-full-sequence.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview49"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.2689249"
+     inkscape:cx="500.42364"
+     inkscape:cy="374.72668"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg49" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs9">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrow-green"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#10b981"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arrow-gray"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#94a3b8"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arrow-orange"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#f97316"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arrow-purple"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#a855f7"
+         id="polygon5" />
+    </marker>
+    <marker
+       id="arrow-red"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#ef4444"
+         id="polygon6" />
+    </marker>
+    <marker
+       id="arrow-orange-back"
+       markerWidth="10"
+       markerHeight="7"
+       refX="1"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="10 0, 0 3.5, 10 7"
+         fill="#f97316"
+         id="polygon7" />
+    </marker>
+    <marker
+       id="arrow-purple-back"
+       markerWidth="10"
+       markerHeight="7"
+       refX="1"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="10 0, 0 3.5, 10 7"
+         fill="#a855f7"
+         id="polygon8" />
+    </marker>
+    <marker
+       id="arrow-red-back"
+       markerWidth="10"
+       markerHeight="7"
+       refX="1"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="10 0, 0 3.5, 10 7"
+         fill="#ef4444"
+         id="polygon9" />
+    </marker>
+  </defs>
+  <rect
+     width="1000"
+     height="750"
+     fill="url(#bg-grad)"
+     id="rect9" />
+  <text
+     x="500"
+     y="30"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="17"
+     font-weight="700"
+     id="text9">QCOM 扫描完整时序图</text>
+  <text
+     x="500"
+     y="48"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="12"
+     id="text10">Scan Request → Firmware → Dual-Pipe Result Return</text>
+  <rect
+     x="20"
+     y="70"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect10" />
+  <text
+     x="80"
+     y="88"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="12"
+     font-weight="700"
+     id="text11">内核 cfg80211</text>
+  <text
+     x="80"
+     y="103"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text12">(kernel)</text>
+  <line
+     x1="80"
+     y1="110"
+     x2="80"
+     y2="690"
+     stroke="#10b981"
+     stroke-width="0.8"
+     stroke-dasharray="4,4"
+     id="line12" />
+  <rect
+     x="20"
+     y="690"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect12" />
+  <text
+     x="80"
+     y="708"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text13">内核 cfg80211</text>
+  <text
+     x="80"
+     y="723"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text14">(kernel)</text>
+  <rect
+     x="180"
+     y="70"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#1e293b"
+     stroke="#94a3b8"
+     stroke-width="1.5"
+     id="rect14" />
+  <text
+     x="240"
+     y="88"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="12"
+     font-weight="700"
+     id="text15">HDD/OSIF</text>
+  <text
+     x="240"
+     y="103"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text16">(wlan_hdd)</text>
+  <line
+     x1="240"
+     y1="110"
+     x2="240"
+     y2="690"
+     stroke="#94a3b8"
+     stroke-width="0.8"
+     stroke-dasharray="4,4"
+     id="line16" />
+  <rect
+     x="180"
+     y="690"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#1e293b"
+     stroke="#94a3b8"
+     stroke-width="1.5"
+     id="rect16" />
+  <text
+     x="240"
+     y="708"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text17">HDD/OSIF</text>
+  <text
+     x="240"
+     y="723"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text18">(wlan_hdd)</text>
+  <rect
+     x="350"
+     y="70"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect18" />
+  <text
+     x="410"
+     y="88"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="12"
+     font-weight="700"
+     id="text19">Scan Manager</text>
+  <text
+     x="410"
+     y="103"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text20">(SCM)</text>
+  <line
+     x1="410"
+     y1="110"
+     x2="410"
+     y2="690"
+     stroke="#f97316"
+     stroke-width="0.8"
+     stroke-dasharray="4,4"
+     id="line20" />
+  <rect
+     x="350"
+     y="690"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect20" />
+  <text
+     x="410"
+     y="708"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text21">Scan Manager</text>
+  <text
+     x="410"
+     y="723"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text22">(SCM)</text>
+  <rect
+     x="520"
+     y="70"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#1e1b4b"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect22" />
+  <text
+     x="580"
+     y="88"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="12"
+     font-weight="700"
+     id="text23">序列化框架</text>
+  <text
+     x="580"
+     y="103"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text24">(Serial)</text>
+  <line
+     x1="580"
+     y1="110"
+     x2="580"
+     y2="690"
+     stroke="#a855f7"
+     stroke-width="0.8"
+     stroke-dasharray="4,4"
+     id="line24" />
+  <rect
+     x="520"
+     y="690"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#1e1b4b"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect24" />
+  <text
+     x="580"
+     y="708"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text25">序列化框架</text>
+  <text
+     x="580"
+     y="723"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text26">(Serial)</text>
+  <rect
+     x="690"
+     y="70"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#450a0a"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     id="rect26" />
+  <text
+     x="750"
+     y="88"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="12"
+     font-weight="700"
+     id="text27">QCOM 固件</text>
+  <text
+     x="750"
+     y="103"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text28">(FW)</text>
+  <line
+     x1="750"
+     y1="110"
+     x2="750"
+     y2="690"
+     stroke="#ef4444"
+     stroke-width="0.8"
+     stroke-dasharray="4,4"
+     id="line28" />
+  <rect
+     x="690"
+     y="690"
+     width="120"
+     height="40"
+     rx="6"
+     fill="#450a0a"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     id="rect28" />
+  <text
+     x="750"
+     y="708"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text29">QCOM 固件</text>
+  <text
+     x="750"
+     y="723"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text30">(FW)</text>
+  <rect
+     x="77"
+     y="130"
+     width="6"
+     height="520"
+     rx="3"
+     fill="#10b981"
+     opacity="0.6"
+     id="rect30" />
+  <rect
+     x="237"
+     y="130"
+     width="6"
+     height="40"
+     rx="3"
+     fill="#94a3b8"
+     opacity="0.6"
+     id="rect31" />
+  <rect
+     x="407"
+     y="185"
+     width="6"
+     height="400"
+     rx="3"
+     fill="#f97316"
+     opacity="0.6"
+     id="rect32" />
+  <rect
+     x="577"
+     y="240"
+     width="6"
+     height="40"
+     rx="3"
+     fill="#a855f7"
+     opacity="0.6"
+     id="rect33" />
+  <rect
+     x="747"
+     y="300"
+     width="6"
+     height="180"
+     rx="3"
+     fill="#ef4444"
+     opacity="0.6"
+     id="rect34" />
+  <line
+     x1="83"
+     y1="135"
+     x2="237"
+     y2="135"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="line34" />
+  <text
+     x="130"
+     y="128"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text34">1. NL80211_CMD_TRIGGER_SCAN 到达</text>
+  <line
+     x1="243"
+     y1="150"
+     x2="407"
+     y2="150"
+     stroke="#94a3b8"
+     stroke-width="1.5"
+     marker-end="url(#arrow-gray)"
+     id="line35" />
+  <text
+     x="326"
+     y="143"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text35">2. wlan_hdd_cfg80211_scan()</text>
+  <line
+     x1="413"
+     y1="195"
+     x2="577"
+     y2="195"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="line36" />
+  <text
+     x="508"
+     y="186"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10px"
+     id="text36">3. wlan_serialization_request()</text>
+  <line
+     x1="577"
+     y1="220"
+     x2="413"
+     y2="220"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     stroke-dasharray="5,3"
+     marker-end="url(#arrow-purple-back)"
+     id="line37" />
+  <text
+     x="494"
+     y="213"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-size="10px"
+     id="text37">4. ACTIVATE_CMD (轮到你了)</text>
+  <line
+     x1="413"
+     y1="250"
+     x2="747"
+     y2="250"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="line38" />
+  <text
+     x="484"
+     y="243"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10px"
+     id="text38">5. WMI_START_SCAN_CMDID</text>
+  <path
+     d="M 753 290 Q 800 290, 800 330 Q 800 370, 753 370"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     fill="none"
+     id="path38" />
+  <text
+     x="806"
+     y="333"
+     fill="#ef4444"
+     font-size="10"
+     id="text39">6. 逐信道 dwell + Probe</text>
+  <text
+     x="806"
+     y="346"
+     fill="#ef4444"
+     font-size="10"
+     id="text40">   Req/Resp, ~2s</text>
+  <line
+     x1="747"
+     y1="400"
+     x2="413"
+     y2="400"
+     stroke="#10b981"
+     stroke-width="1.5"
+     stroke-dasharray="5,3"
+     marker-end="url(#arrow-green)"
+     id="line40" />
+  <text
+     x="628"
+     y="393"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10px"
+     id="text41">7. [管道A] beacon/probe rx (逐BSS实时)</text>
+  <line
+     x1="407"
+     y1="425"
+     x2="83"
+     y2="425"
+     stroke="#10b981"
+     stroke-width="1.5"
+     stroke-dasharray="5,3"
+     marker-end="url(#arrow-green)"
+     id="line41" />
+  <text
+     x="230"
+     y="418"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10"
+     id="text42">8. cfg80211_inform_bss_frame_data()</text>
+  <line
+     x1="747"
+     y1="455"
+     x2="413"
+     y2="455"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="line42" />
+  <text
+     x="628"
+     y="448"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="10px"
+     id="text43">9. [管道B] WMI_SCAN_EVENTID (扫描完成)</text>
+  <line
+     x1="407"
+     y1="480"
+     x2="83"
+     y2="480"
+     stroke="#f97316"
+     stroke-width="1.5"
+     stroke-dasharray="5,3"
+     marker-end="url(#arrow-orange)"
+     id="line43" />
+  <text
+     x="230"
+     y="473"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="10"
+     id="text44">10. cfg80211_scan_done()</text>
+  <path
+     d="M 77 510 Q 40 510, 40 540 Q 40 570, 77 570"
+     stroke="#10b981"
+     stroke-width="1.5"
+     stroke-dasharray="5,3"
+     fill="none"
+     id="path44" />
+  <text
+     x="86"
+     y="545"
+     fill="#10b981"
+     font-size="10px"
+     id="text45">11. multicast</text>
+  <rect
+     x="810"
+     y="582"
+     width="173.6322"
+     height="100"
+     rx="4.9609203"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.909296"
+     id="rect45" />
+  <text
+     x="895"
+     y="602"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="11px"
+     font-weight="700"
+     id="text46">图例</text>
+  <line
+     x1="825"
+     y1="622"
+     x2="860"
+     y2="622"
+     stroke="#e2e8f0"
+     stroke-width="2"
+     id="line46" />
+  <text
+     x="870"
+     y="626"
+     fill="#e2e8f0"
+     font-size="10px"
+     id="text47">命令下发 (→)</text>
+  <line
+     x1="825"
+     y1="642"
+     x2="860"
+     y2="642"
+     stroke="#e2e8f0"
+     stroke-width="2"
+     stroke-dasharray="5, 3"
+     id="line47" />
+  <text
+     x="870"
+     y="646"
+     fill="#e2e8f0"
+     font-size="10px"
+     id="text48">结果/回调 (--→)</text>
+  <rect
+     x="825"
+     y="657"
+     width="35"
+     height="12"
+     rx="3"
+     fill="#ef4444"
+     opacity="0.6"
+     id="rect48" />
+  <text
+     x="870"
+     y="667"
+     fill="#e2e8f0"
+     font-size="10px"
+     id="text49">激活条 = 活跃处理</text>
+</svg>

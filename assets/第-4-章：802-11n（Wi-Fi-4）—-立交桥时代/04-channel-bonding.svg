@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 550"
+   width="1200"
+   height="550"
+   version="1.1"
+   id="svg93"
+   sodipodi:docname="04-channel-bonding.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview93"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.4462011"
+     inkscape:cx="600.19314"
+     inkscape:cy="274.85803"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg93" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs5">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card-grad"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+    <marker
+       id="arrow-blue"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#3b82f6"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arrow-green"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#10b981"
+         id="polygon5" />
+    </marker>
+  </defs>
+  <rect
+     width="1200"
+     height="550"
+     fill="url(#bg-grad)"
+     id="rect5" />
+  <!-- Title -->
+  <text
+     x="600"
+     y="35"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="18"
+     font-weight="700"
+     id="text5">40 MHz Channel Bonding — Merging Two Lanes into One</text>
+  <text
+     x="600"
+     y="55"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="13"
+     id="text6">信道绑定 — 把两条窄路合并成一条宽路</text>
+  <!-- 20 MHz section -->
+  <rect
+     x="40"
+     y="75"
+     width="1120"
+     height="130"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect6" />
+  <text
+     x="80"
+     y="100"
+     fill="#60a5fa"
+     font-size="14"
+     font-weight="700"
+     id="text7">20 MHz 信道（传统）</text>
+  <text
+     x="80"
+     y="118"
+     fill="#94a3b8"
+     font-size="11"
+     id="text8">单条双车道公路</text>
+  <!-- Single 20 MHz channel -->
+  <rect
+     x="80"
+     y="135"
+     width="500"
+     height="50"
+     rx="6"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect8" />
+  <text
+     x="330"
+     y="155"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="12"
+     id="text9">Channel 6 (2437 MHz)</text>
+  <text
+     x="330"
+     y="172"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="11"
+     id="text10">20 MHz = 56 子载波 (52 data + 4 pilot)</text>
+  <!-- Subcarrier visualization -->
+  <rect
+     x="640"
+     y="130"
+     width="480"
+     height="60"
+     rx="4"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect10" />
+  <text
+     x="880"
+     y="148"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text11">子载波分布</text>
+  <!-- Generate 52 small bars -->
+  <rect
+     x="650"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect11" />
+  <rect
+     x="658"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect12" />
+  <rect
+     x="666"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect13" />
+  <rect
+     x="674"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect14" />
+  <rect
+     x="682"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect15" />
+  <rect
+     x="690"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect16" />
+  <rect
+     x="698"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect17" />
+  <rect
+     x="706"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect18" />
+  <rect
+     x="714"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect19" />
+  <rect
+     x="722"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect20" />
+  <rect
+     x="730"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect21" />
+  <rect
+     x="738"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect22" />
+  <rect
+     x="746"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect23" />
+  <rect
+     x="754"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#f97316"
+     id="rect24" />
+  <rect
+     x="762"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect25" />
+  <rect
+     x="770"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect26" />
+  <rect
+     x="778"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect27" />
+  <rect
+     x="786"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect28" />
+  <rect
+     x="794"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect29" />
+  <rect
+     x="802"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect30" />
+  <rect
+     x="810"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect31" />
+  <rect
+     x="818"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect32" />
+  <!-- DC null -->
+  <rect
+     x="826"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#475569"
+     id="rect33" />
+  <rect
+     x="834"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect34" />
+  <rect
+     x="842"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect35" />
+  <rect
+     x="850"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect36" />
+  <rect
+     x="858"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect37" />
+  <rect
+     x="866"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect38" />
+  <rect
+     x="874"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect39" />
+  <rect
+     x="882"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect40" />
+  <rect
+     x="890"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect41" />
+  <rect
+     x="898"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#f97316"
+     id="rect42" />
+  <rect
+     x="906"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect43" />
+  <rect
+     x="914"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect44" />
+  <rect
+     x="922"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect45" />
+  <rect
+     x="930"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect46" />
+  <rect
+     x="938"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect47" />
+  <rect
+     x="946"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect48" />
+  <rect
+     x="954"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect49" />
+  <rect
+     x="962"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect50" />
+  <rect
+     x="970"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect51" />
+  <rect
+     x="978"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect52" />
+  <rect
+     x="986"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect53" />
+  <rect
+     x="994"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect54" />
+  <rect
+     x="1002"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect55" />
+  <rect
+     x="1010"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect56" />
+  <rect
+     x="1018"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect57" />
+  <rect
+     x="1026"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect58" />
+  <rect
+     x="1034"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect59" />
+  <rect
+     x="1042"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect60" />
+  <rect
+     x="1050"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect61" />
+  <rect
+     x="1058"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect62" />
+  <rect
+     x="1066"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect63" />
+  <rect
+     x="1074"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect64" />
+  <rect
+     x="1082"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect65" />
+  <rect
+     x="1090"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect66" />
+  <rect
+     x="1098"
+     y="155"
+     width="3"
+     height="20"
+     rx="1"
+     fill="#3b82f6"
+     id="rect67" />
+  <!-- Legend -->
+  <rect
+     x="640"
+     y="178"
+     width="10"
+     height="10"
+     rx="2"
+     fill="#3b82f6"
+     id="rect68" />
+  <text
+     x="655"
+     y="187"
+     fill="#94a3b8"
+     font-size="9"
+     id="text68">Data</text>
+  <rect
+     x="690"
+     y="178"
+     width="10"
+     height="10"
+     rx="2"
+     fill="#f97316"
+     id="rect69" />
+  <text
+     x="705"
+     y="187"
+     fill="#94a3b8"
+     font-size="9"
+     id="text69">Pilot</text>
+  <rect
+     x="740"
+     y="178"
+     width="10"
+     height="10"
+     rx="2"
+     fill="#475569"
+     id="rect70" />
+  <text
+     x="755"
+     y="187"
+     fill="#94a3b8"
+     font-size="9"
+     id="text70">DC Null</text>
+  <!-- 40 MHz Bonding section -->
+  <rect
+     x="40"
+     y="220"
+     width="1120"
+     height="150"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect71" />
+  <text
+     x="80"
+     y="245"
+     fill="#10b981"
+     font-size="14"
+     font-weight="700"
+     id="text71">40 MHz 信道绑定（802.11n）</text>
+  <text
+     x="80"
+     y="263"
+     fill="#94a3b8"
+     font-size="11"
+     id="text72">两条窄路合并成一条宽路 → 吞吐量翻倍</text>
+  <!-- Two 20 MHz channels -->
+  <rect
+     x="80"
+     y="280"
+     width="240"
+     height="40"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect72" />
+  <text
+     x="200"
+     y="305"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="11"
+     id="text73">Channel 4 (Primary)</text>
+  <rect
+     x="330"
+     y="280"
+     width="240"
+     height="40"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect73" />
+  <text
+     x="450"
+     y="305"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="11"
+     id="text74">Channel 8 (Secondary)</text>
+  <!-- Bonding arrow -->
+  <line
+     x1="310"
+     y1="300"
+     x2="340"
+     y2="300"
+     stroke="#10b981"
+     stroke-width="2.5"
+     marker-end="url(#arrow-green)"
+     id="line74" />
+  <!-- Combined 40 MHz -->
+  <rect
+     x="640"
+     y="278"
+     width="480"
+     height="44"
+     rx="6"
+     fill="#065f46"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect74" />
+  <text
+     x="880"
+     y="296"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="13"
+     font-weight="600"
+     id="text75">40 MHz = 2 × 20 MHz</text>
+  <text
+     x="880"
+     y="314"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     id="text76">114 子载波 (108 data + 6 pilot)</text>
+  <!-- Rate comparison -->
+  <text
+     x="640"
+     y="350"
+     fill="#94a3b8"
+     font-size="11"
+     id="text77">速率对比 (1SS, Short GI):</text>
+  <text
+     x="640"
+     y="368"
+     fill="#60a5fa"
+     font-size="11"
+     id="text78">20 MHz → 72.2 Mbps</text>
+  <text
+     x="850"
+     y="368"
+     fill="#10b981"
+     font-size="11"
+     id="text79">40 MHz → 150 Mbps (2.08×)</text>
+  <!-- Bottom: Bonding Rules -->
+  <rect
+     x="40"
+     y="390"
+     width="1120"
+     height="145"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect79" />
+  <text
+     x="600"
+     y="415"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="14"
+     font-weight="700"
+     id="text80">信道绑定规则与注意事项</text>
+  <rect
+     x="60"
+     y="430"
+     width="340"
+     height="90"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect80" />
+  <text
+     x="230"
+     y="450"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="12"
+     font-weight="600"
+     id="text81">主/辅信道</text>
+  <text
+     x="80"
+     y="468"
+     fill="#94a3b8"
+     font-size="10"
+     id="text82">控制帧(ACK/RTS/CTS) 仅在主信道发</text>
+  <text
+     x="80"
+     y="484"
+     fill="#94a3b8"
+     font-size="10"
+     id="text83">40 MHz 数据帧同时占用两信道 → 带宽翻倍</text>
+  <text
+     x="80"
+     y="500"
+     fill="#94a3b8"
+     font-size="10"
+     id="text84">CCA 检测: 两个信道都必须空闲才能发 40 MHz</text>
+  <rect
+     x="430"
+     y="430"
+     width="340"
+     height="90"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect84" />
+  <text
+     x="600"
+     y="450"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="12"
+     font-weight="600"
+     id="text85">2.4 GHz 限制</text>
+  <text
+     x="450"
+     y="468"
+     fill="#94a3b8"
+     font-size="10"
+     id="text86">总共只有 83.5 MHz 带宽</text>
+  <text
+     x="450"
+     y="484"
+     fill="#94a3b8"
+     font-size="10"
+     id="text87">3 个不重叠 20 MHz 信道</text>
+  <text
+     x="450"
+     y="500"
+     fill="#94a3b8"
+     font-size="10"
+     id="text88">绑定后只有 1 个 40 MHz 信道可用</text>
+  <rect
+     x="800"
+     y="430"
+     width="340"
+     height="90"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect88" />
+  <text
+     x="970"
+     y="450"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="12"
+     font-weight="600"
+     id="text89">5 GHz 优势</text>
+  <text
+     x="820"
+     y="468"
+     fill="#94a3b8"
+     font-size="10"
+     id="text90">约 500 MHz 可用带宽</text>
+  <text
+     x="820"
+     y="484"
+     fill="#94a3b8"
+     font-size="10"
+     id="text91">12 个 40 MHz 信道</text>
+  <text
+     x="820"
+     y="500"
+     fill="#94a3b8"
+     font-size="10"
+     id="text92">为后续 80/160 MHz 奠定基础</text>
+  <text
+     x="600"
+     y="540"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="11"
+     id="text93">比喻：把双向两车道合并成双向四车道 — 路宽了，但能建的路少了</text>
+</svg>

@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 960 720"
+   width="960"
+   height="720"
+   version="1.1"
+   id="svg48"
+   sodipodi:docname="07a-qcom-dual-path.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview48"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.0734274"
+     inkscape:cx="233.83044"
+     inkscape:cy="451.35797"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg48" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN',Monaco,'Microsoft YaHei',monospace; }
+    .title { font-size: 16px; font-weight: 700; fill: #e2e8f0; }
+    .subtitle { font-size: 11px; fill: #94a3b8; }
+    .section-label { font-size: 12px; font-weight: 700; fill: #e2e8f0; }
+    .node-label { font-size: 12px; fill: #e2e8f0; }
+    .node-sub { font-size: 10px; fill: #94a3b8; }
+    .edge-label { font-size: 10px; fill: #cbd5e1; }
+    .legend-text { font-size: 10px; fill: #94a3b8; }
+    .note-text { font-size: 10px; fill: #64748b; }
+  </style>
+  <defs
+     id="defs7">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrow-green"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#10b981"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arrow-purple"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#a855f7"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arrow-amber"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#f59e0b"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arrow-red"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#ef4444"
+         id="polygon5" />
+    </marker>
+    <marker
+       id="arrow-cyan"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#06b6d4"
+         id="polygon6" />
+    </marker>
+    <filter
+       id="glow-green"
+       x="-0.026428571"
+       y="-0.115625"
+       width="1.0528571"
+       height="1.23125">
+      <feGaussianBlur
+         stdDeviation="2"
+         result="blur"
+         id="feGaussianBlur6" />
+      <feMerge
+         id="feMerge7">
+        <feMergeNode
+           in="blur"
+           id="feMergeNode6" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode7" />
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect
+     width="960"
+     height="720"
+     fill="url(#bg-grad)"
+     id="rect7" />
+  <!-- Title -->
+  <text
+     x="480"
+     y="28"
+     text-anchor="middle"
+     class="title"
+     id="text7">QCOM 管理帧发送双路径：Auth 快速通道 vs Action 标准通道</text>
+  <text
+     x="480"
+     y="46"
+     text-anchor="middle"
+     class="subtitle"
+     id="text8">从 HDD 层到固件——双路径的决策点、通道和汇聚</text>
+  <!-- ===== LEFT: Auth Fast Channel (Green) ===== -->
+  <rect
+     x="25"
+     y="180"
+     width="250"
+     height="200"
+     rx="6"
+     ry="6"
+     fill="#052e16"
+     fill-opacity="0.25"
+     stroke="#10b981"
+     stroke-width="1"
+     stroke-dasharray="5,3"
+     id="rect8" />
+  <text
+     x="164"
+     y="198"
+     text-anchor="middle"
+     class="section-label"
+     fill="#10b981"
+     id="text9">Auth 快速通道</text>
+  <!-- sme_send_mgmt_tx -->
+  <rect
+     x="45"
+     y="220"
+     width="210"
+     height="48"
+     rx="6"
+     ry="6"
+     fill="#0a2e0a"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect9" />
+  <text
+     x="150"
+     y="239"
+     text-anchor="middle"
+     class="node-label"
+     fill="#6ee7b7"
+     id="text10">sme_send_mgmt_tx</text>
+  <text
+     x="150"
+     y="256"
+     text-anchor="middle"
+     class="node-sub"
+     id="text11">sme_api.c:5251 — PE 层入口</text>
+  <!-- Arrow down -->
+  <line
+     x1="150"
+     y1="268"
+     x2="150"
+     y2="298"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="line11" />
+  <!-- PE 层直发固件 -->
+  <rect
+     x="45"
+     y="303"
+     width="210"
+     height="48"
+     rx="6"
+     ry="6"
+     fill="#0a2e0a"
+     stroke="#10b981"
+     stroke-width="1.5"
+     filter="url(#glow-green)"
+     id="rect11" />
+  <text
+     x="150"
+     y="322"
+     text-anchor="middle"
+     class="node-label"
+     fill="#6ee7b7"
+     id="text12">PE 层直发固件</text>
+  <text
+     x="150"
+     y="339"
+     text-anchor="middle"
+     class="node-sub"
+     id="text13">不经 Policy Manager / ROC</text>
+  <!-- ===== CENTER: Action Standard Channel (Purple) ===== -->
+  <rect
+     x="305"
+     y="216"
+     width="250"
+     height="330.24756"
+     rx="6"
+     ry="6.1921415"
+     fill="#1e1b4b"
+     fill-opacity="0.3"
+     stroke="#a855f7"
+     stroke-width="1.01589"
+     stroke-dasharray="5, 3"
+     id="rect13" />
+  <text
+     x="430"
+     y="236"
+     text-anchor="middle"
+     class="section-label"
+     fill="#a855f7"
+     id="text14">Action 标准通道</text>
+  <!-- wlan_cfg80211_mgmt_tx -->
+  <rect
+     x="325"
+     y="256"
+     width="210"
+     height="48"
+     rx="6"
+     ry="6"
+     fill="#1e1a3a"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect14" />
+  <text
+     x="430"
+     y="275"
+     text-anchor="middle"
+     class="node-label"
+     fill="#c4b5fd"
+     id="text15">wlan_cfg80211_mgmt_tx</text>
+  <text
+     x="430"
+     y="292"
+     text-anchor="middle"
+     class="node-sub"
+     id="text16">wlan_cfg80211_p2p.c:421 — 标准入口</text>
+  <!-- Arrow down -->
+  <line
+     x1="430"
+     y1="304"
+     x2="430"
+     y2="334"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     marker-end="url(#arrow-purple)"
+     id="line16" />
+  <!-- P2P 组件调度 -->
+  <rect
+     x="319.41043"
+     y="339"
+     width="222.11073"
+     height="48"
+     rx="6.3460212"
+     ry="6"
+     fill="#1e1a3a"
+     stroke="#a855f7"
+     stroke-width="1.54264"
+     id="rect16" />
+  <text
+     x="430"
+     y="358"
+     text-anchor="middle"
+     class="node-label"
+     fill="#c4b5fd"
+     id="text17">组件调度 / Policy Manager 审批</text>
+  <text
+     x="430"
+     y="375"
+     text-anchor="middle"
+     class="node-sub"
+     id="text18">帧分类、cookie 管理、IE 随机化</text>
+  <!-- Arrow down -->
+  <line
+     x1="430"
+     y1="387"
+     x2="430"
+     y2="417"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     marker-end="url(#arrow-purple)"
+     id="line18" />
+  <!-- ROC 信道驻留申请 -->
+  <rect
+     x="325"
+     y="422"
+     width="210"
+     height="48"
+     rx="6"
+     ry="6"
+     fill="#1e1a3a"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect18" />
+  <text
+     x="430"
+     y="441"
+     text-anchor="middle"
+     class="node-label"
+     fill="#c4b5fd"
+     id="text19">ROC 信道驻留申请</text>
+  <text
+     x="430"
+     y="458"
+     text-anchor="middle"
+     class="node-sub"
+     id="text20">Policy Mgr 审批 → off-channel</text>
+  <!-- Arrow down -->
+  <line
+     x1="430"
+     y1="470"
+     x2="430"
+     y2="484.84903"
+     stroke="#a855f7"
+     stroke-width="1.05531"
+     marker-end="url(#arrow-purple)"
+     id="line20" />
+  <!-- wlan_mgmt_txrx_mgmt_frame_tx -->
+  <rect
+     x="325"
+     y="485"
+     width="210"
+     height="48"
+     rx="6"
+     ry="6"
+     fill="#1e1a3a"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect20" />
+  <text
+     x="430"
+     y="504"
+     text-anchor="middle"
+     class="node-label"
+     fill="#c4b5fd"
+     id="text21">wlan_mgmt_txrx_mgmt_frame_tx</text>
+  <text
+     x="430"
+     y="521"
+     text-anchor="middle"
+     class="node-sub"
+     id="text22">wlan_mgmt_txrx_utils_api.c:458</text>
+  <!-- ===== RIGHT: WMI Send to Firmware (Amber) ===== -->
+  <rect
+     x="585"
+     y="180"
+     width="350"
+     height="266.40396"
+     rx="6"
+     ry="4.7012463"
+     fill="#1c1917"
+     fill-opacity="0.3"
+     stroke="#f59e0b"
+     stroke-width="0.885179"
+     stroke-dasharray="5, 3"
+     id="rect22" />
+  <text
+     x="756"
+     y="196"
+     text-anchor="middle"
+     class="section-label"
+     fill="#f59e0b"
+     id="text23">WMI 下发固件</text>
+  <!-- wma_mgmt_unified_cmd_send -->
+  <rect
+     x="610"
+     y="280"
+     width="300"
+     height="52"
+     rx="6"
+     ry="6"
+     fill="#1c1912"
+     stroke="#f59e0b"
+     stroke-width="1.5"
+     id="rect23" />
+  <text
+     x="760"
+     y="300"
+     text-anchor="middle"
+     class="node-label"
+     fill="#fcd34d"
+     id="text24">wma_mgmt_unified_cmd_send</text>
+  <text
+     x="760"
+     y="318"
+     text-anchor="middle"
+     class="node-sub"
+     id="text25">wma_mgmt.c:4106 — WMI 统一出口</text>
+  <!-- Arrow down -->
+  <line
+     x1="760"
+     y1="332"
+     x2="760"
+     y2="372"
+     stroke="#f59e0b"
+     stroke-width="1.5"
+     marker-end="url(#arrow-amber)"
+     id="line25" />
+  <text
+     x="795"
+     y="356"
+     class="edge-label"
+     fill="#f59e0b"
+     id="text26">WMI 消息</text>
+  <!-- 固件 MAC 层发送 -->
+  <rect
+     x="610"
+     y="377"
+     width="300"
+     height="48"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#475569"
+     stroke-width="1.5"
+     stroke-dasharray="4,2"
+     id="rect26" />
+  <text
+     x="760"
+     y="397"
+     text-anchor="middle"
+     class="node-label"
+     fill="#94a3b8"
+     id="text27">固件 MAC 层发送</text>
+  <text
+     x="760"
+     y="414"
+     text-anchor="middle"
+     class="node-sub"
+     id="text28">硬件/固件边界 — 帧经空口发出</text>
+  <!-- ===== TOP: Entry and Decision ===== -->
+  <!-- __wlan_hdd_mgmt_tx -->
+  <rect
+     x="330"
+     y="55"
+     width="300"
+     height="48"
+     rx="8"
+     ry="8"
+     fill="#164e63"
+     stroke="#06b6d4"
+     stroke-width="2"
+     id="rect28" />
+  <text
+     x="480"
+     y="73"
+     text-anchor="middle"
+     class="node-label"
+     fill="#67e8f9"
+     id="text29">__wlan_hdd_mgmt_tx</text>
+  <text
+     x="480"
+     y="94"
+     text-anchor="middle"
+     class="node-sub"
+     id="text30"
+     style="font-size:10.6667px">HDD 层统一入口（wlan_hdd_p2p.c:272）</text>
+  <!-- Arrow down -->
+  <line
+     x1="480"
+     y1="103"
+     x2="480"
+     y2="128"
+     stroke="#06b6d4"
+     stroke-width="1.5"
+     marker-end="url(#arrow-cyan)"
+     id="line30" />
+  <!-- Decision diamond -->
+  <polygon
+     points="480,143 550,168 480,193 410,168 "
+     fill="#1e1b4b"
+     stroke="#f59e0b"
+     stroke-width="1.5"
+     id="polygon30"
+     transform="translate(0,-16)" />
+  <text
+     x="480"
+     y="149"
+     text-anchor="middle"
+     class="node-label"
+     fill="#fcd34d"
+     font-size="11"
+     id="text31">Auth 帧？</text>
+  <text
+     x="480"
+     y="163"
+     text-anchor="middle"
+     class="node-sub"
+     fill="#fcd34d"
+     id="text32">VALID?</text>
+  <!-- ===== ARROWS FROM DECISION ===== -->
+  <!-- YES -> Auth fast channel (left) -->
+  <line
+     x1="410"
+     y1="152"
+     x2="150.65874"
+     y2="152"
+     stroke="#10b981"
+     stroke-width="1.4981"
+     id="line32" />
+  <line
+     x1="150"
+     y1="152.2141"
+     x2="150"
+     y2="219"
+     stroke="#10b981"
+     stroke-width="1.7512"
+     marker-end="url(#arrow-green)"
+     id="line33" />
+  <rect
+     x="250"
+     y="143"
+     width="30"
+     height="18"
+     rx="3"
+     ry="3"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect33" />
+  <text
+     x="265"
+     y="156"
+     text-anchor="middle"
+     class="edge-label"
+     fill="#10b981"
+     font-size="9"
+     id="text33">是</text>
+  <!-- PASN 例外标注 -->
+  <text
+     x="158.98492"
+     y="145.32431"
+     text-anchor="middle"
+     class="note-text"
+     fill="#f87171"
+     font-size="10"
+     id="text34">（PASN Auth 除外）</text>
+  <!-- NO -> Action standard channel (down then right) -->
+  <line
+     x1="480"
+     y1="178.56027"
+     x2="480"
+     y2="215.6026"
+     stroke="#a855f7"
+     stroke-width="1"
+     marker-end="url(#arrow-purple)"
+     id="line34" />
+  <g
+     id="g48"
+     transform="translate(-26.690225,-10.997564)">
+    <rect
+       x="497"
+       y="194"
+       width="22"
+       height="18"
+       rx="3"
+       ry="3"
+       fill="#1e1b4b"
+       stroke="#a855f7"
+       stroke-width="1"
+       id="rect34" />
+    <text
+       x="508"
+       y="207"
+       text-anchor="middle"
+       class="edge-label"
+       fill="#a855f7"
+       font-size="9"
+       id="text35">否</text>
+  </g>
+  <text
+     x="504.7063"
+     y="249.37694"
+     text-anchor="middle"
+     class="edge-label"
+     fill="#f59e0b"
+     font-size="9"
+     id="text36">goto off_chan_tx</text>
+  <!-- ERROR: -EINVAL dashed red from diamond -->
+  <path
+     d="m 498.49175,160.30997 200.8767,-2.13414 -1.32361,44.06205"
+     stroke="#ef4444"
+     stroke-width="1.48573"
+     stroke-dasharray="5, 3"
+     fill="none"
+     id="path36"
+     sodipodi:nodetypes="ccc" />
+  <rect
+     x="695"
+     y="200"
+     width="105"
+     height="18"
+     rx="3"
+     ry="3"
+     fill="#1c1917"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect36" />
+  <text
+     x="748"
+     y="213"
+     text-anchor="middle"
+     class="edge-label"
+     fill="#ef4444"
+     font-size="9"
+     id="text37">返回 -EINVAL</text>
+  <!-- ===== CONVERGENCE ARROWS (Dashed) ===== -->
+  <!-- Auth -> WMI (dashed green, routed above purple box) -->
+  <path
+     d="M 232.60293,302.62672 V 113.1107 h 398.77035 v 164.77619"
+     stroke="#10b981"
+     stroke-width="1.40404"
+     stroke-dasharray="5, 3"
+     fill="none"
+     marker-end="url(#arrow-green)"
+     id="path37"
+     sodipodi:nodetypes="cccc" />
+  <!-- Action -> WMI (dashed purple, goes up to converge) -->
+  <path
+     d="m 535,510.9902 h 38.41263 L 572.75389,302.15747 607,300"
+     stroke="#a855f7"
+     stroke-width="1.33687"
+     stroke-dasharray="5, 3"
+     fill="none"
+     marker-end="url(#arrow-purple)"
+     id="path38"
+     sodipodi:nodetypes="cccc" />
+  <!-- ===== ANNOTATIONS AT BOTTOM-LEFT ===== -->
+  <rect
+     x="25"
+     y="560"
+     width="330"
+     height="150"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect38" />
+  <text
+     x="37"
+     y="582"
+     class="legend-text"
+     fill="#e2e8f0"
+     font-weight="700"
+     id="text38">设计要点</text>
+  <circle
+     cx="37"
+     cy="600"
+     r="3"
+     fill="#10b981"
+     id="circle38" />
+  <text
+     x="47"
+     y="605"
+     class="note-text"
+     id="text39">Auth 快速通道跳过 ROC 和 Policy Manager 审批，</text>
+  <text
+     x="47"
+     y="618"
+     class="note-text"
+     id="text40">    经 PE 层直发固件（对时延敏感）</text>
+  <circle
+     cx="37"
+     cy="636"
+     r="3"
+     fill="#ef4444"
+     id="circle40" />
+  <text
+     x="47"
+     y="641"
+     class="note-text"
+     id="text41">Fast path 失败时直接返回 -EINVAL，不 fallback</text>
+  <text
+     x="47"
+     y="654"
+     class="note-text"
+     id="text42">    到标准通道（等排队没意义）</text>
+  <circle
+     cx="37"
+     cy="672"
+     r="3"
+     fill="#f59e0b"
+     id="circle42" />
+  <text
+     x="47"
+     y="677"
+     class="note-text"
+     id="text43">PASN Auth 帧通过 goto off_chan_tx 显式跳过</text>
+  <text
+     x="47"
+     y="690"
+     class="note-text"
+     id="text44">    快速路径（需在 off-channel 上发送）</text>
+  <!-- ===== LEGEND (bottom-right) ===== -->
+  <rect
+     x="585"
+     y="560"
+     width="350"
+     height="100"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect44" />
+  <text
+     x="597"
+     y="582"
+     class="legend-text"
+     fill="#e2e8f0"
+     font-weight="700"
+     id="text45">图例</text>
+  <line
+     x1="597"
+     y1="602"
+     x2="627"
+     y2="602"
+     stroke="#10b981"
+     stroke-width="2"
+     id="line45" />
+  <text
+     x="635"
+     y="606"
+     class="legend-text"
+     id="text46">Auth 快速通道（PE 直发）</text>
+  <line
+     x1="597"
+     y1="622"
+     x2="627"
+     y2="622"
+     stroke="#a855f7"
+     stroke-width="2"
+     id="line46" />
+  <text
+     x="635"
+     y="626"
+     class="legend-text"
+     id="text47">Action 标准通道（P2P→ROC→WMI）</text>
+  <line
+     x1="597"
+     y1="642"
+     x2="627"
+     y2="642"
+     stroke="#f59e0b"
+     stroke-width="2"
+     id="line47" />
+  <text
+     x="635"
+     y="646"
+     class="legend-text"
+     id="text48">WMI 下发 / 决策</text>
+</svg>

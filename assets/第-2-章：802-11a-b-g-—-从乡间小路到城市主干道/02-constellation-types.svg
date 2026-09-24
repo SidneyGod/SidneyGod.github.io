@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="700"
+   height="400"
+   version="1.1"
+   id="svg114"
+   sodipodi:docname="02-constellation-types.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview114"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.7325"
+     inkscape:cx="350.04575"
+     inkscape:cy="200"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg114" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+  </defs>
+  <style
+     id="style2">
+  text { font-family: 'Maple Mono Normal NL NF CN',monospace; }
+ </style>
+  <rect
+     width="700"
+     height="400"
+     fill="url(#bg)"
+     id="rect2" />
+  <!-- Title -->
+  <text
+     x="350"
+     y="25"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="15"
+     font-weight="700"
+     id="text2">Modulation &amp; Constellation — 调制方式与星座图</text>
+  <text
+     x="350"
+     y="43"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text3">BPSK → QPSK → 16-QAM → 64-QAM：星座点越多，每符号承载的比特越多</text>
+  <!-- ==================== BPSK ==================== -->
+  <rect
+     x="30"
+     y="60"
+     width="150"
+     height="170"
+     rx="4"
+     fill="#0a0a14"
+     stroke="#1e293b"
+     stroke-width="1"
+     id="rect3" />
+  <!-- Axes -->
+  <line
+     x1="105"
+     y1="70"
+     x2="105"
+     y2="220"
+     stroke="#334155"
+     stroke-width="0.8"
+     id="line3" />
+  <line
+     x1="40"
+     y1="145"
+     x2="170"
+     y2="145"
+     stroke="#334155"
+     stroke-width="0.8"
+     id="line4" />
+  <text
+     x="105"
+     y="233"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="8"
+     id="text4">I</text>
+  <text
+     x="33"
+     y="148"
+     text-anchor="end"
+     fill="#64748b"
+     font-size="8"
+     id="text5">Q</text>
+  <!-- Two points on I axis -->
+  <circle
+     cx="65"
+     cy="145"
+     r="6"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle5" />
+  <circle
+     cx="145"
+     cy="145"
+     r="6"
+     fill="#3b82f6"
+     stroke="#60a5fa"
+     stroke-width="1.5"
+     id="circle6" />
+  <text
+     x="65"
+     y="165"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text6">&quot;0&quot;</text>
+  <text
+     x="145"
+     y="165"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text7">&quot;1&quot;</text>
+  <!-- Label -->
+  <text
+     x="105"
+     y="248"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="11"
+     font-weight="700"
+     id="text8">BPSK</text>
+  <text
+     x="105"
+     y="262"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text9">2 点 → 1 bit/symbol</text>
+  <!-- ==================== QPSK ==================== -->
+  <rect
+     x="195"
+     y="60"
+     width="150"
+     height="170"
+     rx="4"
+     fill="#0a0a14"
+     stroke="#1e293b"
+     stroke-width="1"
+     id="rect9" />
+  <!-- Axes -->
+  <line
+     x1="270"
+     y1="70"
+     x2="270"
+     y2="220"
+     stroke="#334155"
+     stroke-width="0.8"
+     id="line9" />
+  <line
+     x1="205"
+     y1="145"
+     x2="335"
+     y2="145"
+     stroke="#334155"
+     stroke-width="0.8"
+     id="line10" />
+  <text
+     x="270"
+     y="233"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="8"
+     id="text10">I</text>
+  <text
+     x="198"
+     y="148"
+     text-anchor="end"
+     fill="#64748b"
+     font-size="8"
+     id="text11">Q</text>
+  <!-- Four points at corners of a square (rotated 45° visually, but diagonal positions) -->
+  <circle
+     cx="240"
+     cy="115"
+     r="6"
+     fill="#10b981"
+     stroke="#34d399"
+     stroke-width="1.5"
+     id="circle11" />
+  <circle
+     cx="300"
+     cy="115"
+     r="6"
+     fill="#10b981"
+     stroke="#34d399"
+     stroke-width="1.5"
+     id="circle12" />
+  <circle
+     cx="240"
+     cy="175"
+     r="6"
+     fill="#10b981"
+     stroke="#34d399"
+     stroke-width="1.5"
+     id="circle13" />
+  <circle
+     cx="300"
+     cy="175"
+     r="6"
+     fill="#10b981"
+     stroke="#34d399"
+     stroke-width="1.5"
+     id="circle14" />
+  <!-- Bit labels -->
+  <text
+     x="240"
+     y="108"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text14">00</text>
+  <text
+     x="300"
+     y="108"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text15">01</text>
+  <text
+     x="240"
+     y="193"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text16">10</text>
+  <text
+     x="300"
+     y="193"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text17">11</text>
+  <!-- Label -->
+  <text
+     x="270"
+     y="248"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     font-weight="700"
+     id="text18">QPSK</text>
+  <text
+     x="270"
+     y="262"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text19">4 点 → 2 bit/symbol</text>
+  <!-- ==================== 16-QAM ==================== -->
+  <rect
+     x="360"
+     y="60"
+     width="150"
+     height="170"
+     rx="4"
+     fill="#0a0a14"
+     stroke="#1e293b"
+     stroke-width="1"
+     id="rect19" />
+  <!-- Axes -->
+  <line
+     x1="435"
+     y1="70"
+     x2="435"
+     y2="220"
+     stroke="#334155"
+     stroke-width="0.8"
+     id="line19" />
+  <line
+     x1="370"
+     y1="145"
+     x2="500"
+     y2="145"
+     stroke="#334155"
+     stroke-width="0.8"
+     id="line20" />
+  <text
+     x="435"
+     y="233"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="8"
+     id="text20">I</text>
+  <text
+     x="363"
+     y="148"
+     text-anchor="end"
+     fill="#64748b"
+     font-size="8"
+     id="text21">Q</text>
+  <!-- 4x4 grid points -->
+  <!-- Row Q=+3: y=85 -->
+  <circle
+     cx="395"
+     cy="85"
+     r="4.5"
+     fill="#eab308"
+     stroke="#fbbf24"
+     stroke-width="1"
+     id="circle21" />
+  <circle
+     cx="415"
+     cy="85"
+     r="4.5"
+     fill="#eab308"
+     stroke="#fbbf24"
+     stroke-width="1"
+     id="circle22" />
+  <circle
+     cx="455"
+     cy="85"
+     r="4.5"
+     fill="#eab308"
+     stroke="#fbbf24"
+     stroke-width="1"
+     id="circle23" />
+  <circle
+     cx="475"
+     cy="85"
+     r="4.5"
+     fill="#eab308"
+     stroke="#fbbf24"
+     stroke-width="1"
+     id="circle24" />
+  <!-- Row Q=+1: y=115 -->
+  <circle
+     cx="395"
+     cy="115"
+     r="4.5"
+     fill="#eab308"
+     stroke="#fbbf24"
+     stroke-width="1"
+     id="circle25" />
+  <circle
+     cx="415"
+     cy="115"
+     r="4.5"
+     fill="#eab308"
+     stroke="#fbbf24"
+     stroke-width="1"
+     id="circle26" />
+  <circle
+     cx="455"
+     cy="115"
+     r="4.5"
+     fill="#eab308"
+     stroke="#fbbf24"
+     stroke-width="1"
+     id="circle27" />
+  <circle
+     cx="475"
+     cy="115"
+     r="4.5"
+     fill="#eab308"
+     stroke="#fbbf24"
+     stroke-width="1"
+     id="circle28" />
+  <!-- Row Q=-1: y=175 -->
+  <circle
+     cx="395"
+     cy="175"
+     r="4.5"
+     fill="#eab308"
+     stroke="#fbbf24"
+     stroke-width="1"
+     id="circle29" />
+  <circle
+     cx="415"
+     cy="175"
+     r="4.5"
+     fill="#eab308"
+     stroke="#fbbf24"
+     stroke-width="1"
+     id="circle30" />
+  <circle
+     cx="455"
+     cy="175"
+     r="4.5"
+     fill="#eab308"
+     stroke="#fbbf24"
+     stroke-width="1"
+     id="circle31" />
+  <circle
+     cx="475"
+     cy="175"
+     r="4.5"
+     fill="#eab308"
+     stroke="#fbbf24"
+     stroke-width="1"
+     id="circle32" />
+  <!-- Row Q=-3: y=205 -->
+  <circle
+     cx="395"
+     cy="205"
+     r="4.5"
+     fill="#eab308"
+     stroke="#fbbf24"
+     stroke-width="1"
+     id="circle33" />
+  <circle
+     cx="415"
+     cy="205"
+     r="4.5"
+     fill="#eab308"
+     stroke="#fbbf24"
+     stroke-width="1"
+     id="circle34" />
+  <circle
+     cx="455"
+     cy="205"
+     r="4.5"
+     fill="#eab308"
+     stroke="#fbbf24"
+     stroke-width="1"
+     id="circle35" />
+  <circle
+     cx="475"
+     cy="205"
+     r="4.5"
+     fill="#eab308"
+     stroke="#fbbf24"
+     stroke-width="1"
+     id="circle36" />
+  <!-- Label -->
+  <text
+     x="435"
+     y="248"
+     text-anchor="middle"
+     fill="#eab308"
+     font-size="11"
+     font-weight="700"
+     id="text36">16-QAM</text>
+  <text
+     x="435"
+     y="262"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text37">16 点 → 4 bit/symbol</text>
+  <!-- ==================== 64-QAM ==================== -->
+  <rect
+     x="525"
+     y="60"
+     width="150"
+     height="170"
+     rx="4"
+     fill="#0a0a14"
+     stroke="#1e293b"
+     stroke-width="1"
+     id="rect37" />
+  <!-- Axes -->
+  <line
+     x1="600"
+     y1="70"
+     x2="600"
+     y2="220"
+     stroke="#334155"
+     stroke-width="0.8"
+     id="line37" />
+  <line
+     x1="535"
+     y1="145"
+     x2="665"
+     y2="145"
+     stroke="#334155"
+     stroke-width="0.8"
+     id="line38" />
+  <text
+     x="600"
+     y="233"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="8"
+     id="text38">I</text>
+  <text
+     x="528"
+     y="148"
+     text-anchor="end"
+     fill="#64748b"
+     font-size="8"
+     id="text39">Q</text>
+  <!-- 8x8 grid: 8 rows × 8 cols = 64 points -->
+  <!-- Y: 82,100,118,136,154,172,190,208 (18px spacing) -->
+  <!-- X: 550,565,580,595,605,620,635,650 (15px/10px spacing around center 600) -->
+  <!-- Row 1: y=82 -->
+  <circle
+     cx="550"
+     cy="82"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle39" />
+  <circle
+     cx="565"
+     cy="82"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle40" />
+  <circle
+     cx="580"
+     cy="82"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle41" />
+  <circle
+     cx="595"
+     cy="82"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle42" />
+  <circle
+     cx="605"
+     cy="82"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle43" />
+  <circle
+     cx="620"
+     cy="82"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle44" />
+  <circle
+     cx="635"
+     cy="82"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle45" />
+  <circle
+     cx="650"
+     cy="82"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle46" />
+  <!-- Row 2: y=100 -->
+  <circle
+     cx="550"
+     cy="100"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle47" />
+  <circle
+     cx="565"
+     cy="100"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle48" />
+  <circle
+     cx="580"
+     cy="100"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle49" />
+  <circle
+     cx="595"
+     cy="100"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle50" />
+  <circle
+     cx="605"
+     cy="100"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle51" />
+  <circle
+     cx="620"
+     cy="100"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle52" />
+  <circle
+     cx="635"
+     cy="100"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle53" />
+  <circle
+     cx="650"
+     cy="100"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle54" />
+  <!-- Row 3: y=118 -->
+  <circle
+     cx="550"
+     cy="118"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle55" />
+  <circle
+     cx="565"
+     cy="118"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle56" />
+  <circle
+     cx="580"
+     cy="118"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle57" />
+  <circle
+     cx="595"
+     cy="118"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle58" />
+  <circle
+     cx="605"
+     cy="118"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle59" />
+  <circle
+     cx="620"
+     cy="118"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle60" />
+  <circle
+     cx="635"
+     cy="118"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle61" />
+  <circle
+     cx="650"
+     cy="118"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle62" />
+  <!-- Row 4: y=136 -->
+  <circle
+     cx="550"
+     cy="136"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle63" />
+  <circle
+     cx="565"
+     cy="136"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle64" />
+  <circle
+     cx="580"
+     cy="136"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle65" />
+  <circle
+     cx="595"
+     cy="136"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle66" />
+  <circle
+     cx="605"
+     cy="136"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle67" />
+  <circle
+     cx="620"
+     cy="136"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle68" />
+  <circle
+     cx="635"
+     cy="136"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle69" />
+  <circle
+     cx="650"
+     cy="136"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle70" />
+  <!-- Row 5: y=154 -->
+  <circle
+     cx="550"
+     cy="154"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle71" />
+  <circle
+     cx="565"
+     cy="154"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle72" />
+  <circle
+     cx="580"
+     cy="154"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle73" />
+  <circle
+     cx="595"
+     cy="154"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle74" />
+  <circle
+     cx="605"
+     cy="154"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle75" />
+  <circle
+     cx="620"
+     cy="154"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle76" />
+  <circle
+     cx="635"
+     cy="154"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle77" />
+  <circle
+     cx="650"
+     cy="154"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle78" />
+  <!-- Row 6: y=172 -->
+  <circle
+     cx="550"
+     cy="172"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle79" />
+  <circle
+     cx="565"
+     cy="172"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle80" />
+  <circle
+     cx="580"
+     cy="172"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle81" />
+  <circle
+     cx="595"
+     cy="172"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle82" />
+  <circle
+     cx="605"
+     cy="172"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle83" />
+  <circle
+     cx="620"
+     cy="172"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle84" />
+  <circle
+     cx="635"
+     cy="172"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle85" />
+  <circle
+     cx="650"
+     cy="172"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle86" />
+  <!-- Row 7: y=190 -->
+  <circle
+     cx="550"
+     cy="190"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle87" />
+  <circle
+     cx="565"
+     cy="190"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle88" />
+  <circle
+     cx="580"
+     cy="190"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle89" />
+  <circle
+     cx="595"
+     cy="190"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle90" />
+  <circle
+     cx="605"
+     cy="190"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle91" />
+  <circle
+     cx="620"
+     cy="190"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle92" />
+  <circle
+     cx="635"
+     cy="190"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle93" />
+  <circle
+     cx="650"
+     cy="190"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle94" />
+  <!-- Row 8: y=208 -->
+  <circle
+     cx="550"
+     cy="208"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle95" />
+  <circle
+     cx="565"
+     cy="208"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle96" />
+  <circle
+     cx="580"
+     cy="208"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle97" />
+  <circle
+     cx="595"
+     cy="208"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle98" />
+  <circle
+     cx="605"
+     cy="208"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle99" />
+  <circle
+     cx="620"
+     cy="208"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle100" />
+  <circle
+     cx="635"
+     cy="208"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle101" />
+  <circle
+     cx="650"
+     cy="208"
+     r="2.5"
+     fill="#ef4444"
+     stroke="#f87171"
+     stroke-width="0.8"
+     id="circle102" />
+  <!-- Label -->
+  <text
+     x="600"
+     y="248"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="11"
+     font-weight="700"
+     id="text102">64-QAM</text>
+  <text
+     x="600"
+     y="262"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text103">64 点 → 6 bit/symbol</text>
+  <!-- ==================== Bottom insight ==================== -->
+  <rect
+     x="30"
+     y="285"
+     width="645"
+     height="100"
+     rx="4"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect103" />
+  <text
+     x="50"
+     y="305"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text104">规律 / Pattern</text>
+  <text
+     x="50"
+     y="325"
+     fill="#94a3b8"
+     font-size="9"
+     id="text105">星座点数量 = 2^(每符号比特数)</text>
+  <text
+     x="50"
+     y="342"
+     fill="#94a3b8"
+     font-size="9"
+     id="text106">点越多 → 每个格子越小 → 相邻点越近 → 解调越容易出错 → 需要更高的信噪比（SNR）</text>
+  <!-- Visual arrow showing progression -->
+  <text
+     x="50"
+     y="370"
+     fill="#3b82f6"
+     font-size="10"
+     font-weight="600"
+     id="text107">BPSK</text>
+  <text
+     x="105"
+     y="370"
+     fill="#94a3b8"
+     font-size="10"
+     id="text108">→</text>
+  <text
+     x="120"
+     y="370"
+     fill="#10b981"
+     font-size="10"
+     font-weight="600"
+     id="text109">QPSK</text>
+  <text
+     x="180"
+     y="370"
+     fill="#94a3b8"
+     font-size="10"
+     id="text110">→</text>
+  <text
+     x="195"
+     y="370"
+     fill="#eab308"
+     font-size="10"
+     font-weight="600"
+     id="text111">16-QAM</text>
+  <text
+     x="270"
+     y="370"
+     fill="#94a3b8"
+     font-size="10"
+     id="text112">→</text>
+  <text
+     x="285"
+     y="370"
+     fill="#ef4444"
+     font-size="10"
+     font-weight="600"
+     id="text113">64-QAM</text>
+  <text
+     x="360"
+     y="370"
+     fill="#94a3b8"
+     font-size="9"
+     id="text114">速率越来越高，但对信号质量的要求也越来越高</text>
+</svg>

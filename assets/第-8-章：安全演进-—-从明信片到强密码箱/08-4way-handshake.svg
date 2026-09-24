@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 500"
+   width="1200"
+   height="500"
+   version="1.1"
+   id="svg31"
+   sodipodi:docname="08-4way-handshake.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview31"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.35"
+     inkscape:cx="600.37037"
+     inkscape:cy="250"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg31" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs7">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card-grad"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+    <marker
+       id="arrow-blue"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#3b82f6"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arrow-green"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#10b981"
+         id="polygon5" />
+    </marker>
+    <marker
+       id="arrow-orange"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#f97316"
+         id="polygon6" />
+    </marker>
+    <marker
+       id="arrow-purple"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#a78bfa"
+         id="polygon7" />
+    </marker>
+  </defs>
+  <rect
+     width="1200"
+     height="500"
+     fill="url(#bg-grad)"
+     id="rect7" />
+  <!-- Title -->
+  <text
+     x="600"
+     y="35"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="18"
+     font-weight="700"
+     id="text7">WPA2 4-Way Handshake — The Vault Key Exchange</text>
+  <text
+     x="600"
+     y="55"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="13"
+     id="text8">WPA2 4 次握手 — 保险柜的钥匙协商过程</text>
+  <!-- STA and AP boxes -->
+  <rect
+     x="80"
+     y="75"
+     width="140"
+     height="50"
+     rx="8"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect8" />
+  <text
+     x="150"
+     y="95"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="14"
+     font-weight="700"
+     id="text9">STA (客户端)</text>
+  <text
+     x="150"
+     y="112"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text10">拥有: PMK (预共享密钥)</text>
+  <!-- Lifelines -->
+  <line
+     x1="150"
+     y1="125"
+     x2="150"
+     y2="480"
+     stroke="#3b82f6"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line10" />
+  <line
+     x1="950"
+     y1="125"
+     x2="950"
+     y2="480"
+     stroke="#10b981"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line11" />
+  <rect
+     x="880"
+     y="75"
+     width="140"
+     height="50"
+     rx="8"
+     fill="#0e4429"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect11" />
+  <text
+     x="950"
+     y="95"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="14"
+     font-weight="700"
+     id="text11">AP (接入点)</text>
+  <text
+     x="950"
+     y="112"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text12">拥有: PMK + ANonce</text>
+  <!-- Message 1: AP → STA -->
+  <line
+     x1="940"
+     y1="150"
+     x2="160"
+     y2="150"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#arrow-blue)"
+     id="line12" />
+  <rect
+     x="350"
+     y="130"
+     width="370"
+     height="40"
+     rx="4"
+     fill="#1c1917"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect12" />
+  <text
+     x="535"
+     y="148"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="11"
+     font-weight="600"
+     id="text13">Msg 1: ANonce</text>
+  <text
+     x="535"
+     y="163"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text14">AP 发送随机数 → STA 据此计算 PTK</text>
+  <!-- STA computes PTK -->
+  <rect
+     x="49.629631"
+     y="180"
+     width="201.48149"
+     height="35"
+     rx="4.477366"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1.05799"
+     id="rect14" />
+  <text
+     x="150"
+     y="195"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="9"
+     id="text15">STA 计算:</text>
+  <text
+     x="150"
+     y="208"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text16">PTK = PRF(PMK, ANonce, SNonce, MACs)</text>
+  <!-- Message 2: STA → AP -->
+  <line
+     x1="160"
+     y1="235"
+     x2="940"
+     y2="235"
+     stroke="#f97316"
+     stroke-width="2"
+     marker-end="url(#arrow-orange)"
+     id="line16" />
+  <rect
+     x="350"
+     y="215"
+     width="370"
+     height="40"
+     rx="4"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect16" />
+  <text
+     x="535"
+     y="233"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="11"
+     font-weight="600"
+     id="text17">Msg 2: SNonce + MIC</text>
+  <text
+     x="535"
+     y="248"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text18">STA 发送自己的随机数 + 完整性校验</text>
+  <!-- AP computes PTK -->
+  <rect
+     x="860"
+     y="265"
+     width="180"
+     height="35"
+     rx="4"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect18" />
+  <text
+     x="950"
+     y="280"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="9"
+     id="text19">AP 计算:</text>
+  <text
+     x="950"
+     y="293"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text20">PTK, 验证 MIC</text>
+  <!-- Message 3: AP → STA -->
+  <line
+     x1="940"
+     y1="320"
+     x2="160"
+     y2="320"
+     stroke="#a78bfa"
+     stroke-width="2"
+     marker-end="url(#arrow-purple)"
+     id="line20" />
+  <rect
+     x="350"
+     y="300"
+     width="370"
+     height="40"
+     rx="4"
+     fill="#1c1917"
+     stroke="#a78bfa"
+     stroke-width="1"
+     id="rect20" />
+  <text
+     x="535"
+     y="318"
+     text-anchor="middle"
+     fill="#a78bfa"
+     font-size="11"
+     font-weight="600"
+     id="text21">Msg 3: GTK + MIC</text>
+  <text
+     x="535"
+     y="333"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text22">AP 发送组密钥 (加密) + 安装指示</text>
+  <!-- Message 4: STA → AP -->
+  <line
+     x1="160"
+     y1="375"
+     x2="940"
+     y2="375"
+     stroke="#10b981"
+     stroke-width="2"
+     marker-end="url(#arrow-green)"
+     id="line22" />
+  <rect
+     x="350"
+     y="355"
+     width="370"
+     height="40"
+     rx="4"
+     fill="#1c1917"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect22" />
+  <text
+     x="535"
+     y="373"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     font-weight="600"
+     id="text23">Msg 4: ACK (确认安装密钥)</text>
+  <text
+     x="535"
+     y="388"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text24">STA 确认，双方开始加密通信</text>
+  <!-- Secure communication starts -->
+  <rect
+     x="350"
+     y="410"
+     width="370"
+     height="35"
+     rx="6"
+     fill="#065f46"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect24" />
+  <text
+     x="535"
+     y="432"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="12"
+     font-weight="600"
+     id="text25">安全通信开始 (AES-CCMP 加密)</text>
+  <!-- Key hierarchy -->
+  <rect
+     x="60"
+     y="420"
+     width="250"
+     height="50"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect25" />
+  <text
+     x="185"
+     y="440"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="10"
+     id="text26">密钥层次:</text>
+  <text
+     x="185"
+     y="455"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text27">PMK → PTK (会话密钥)</text>
+  <text
+     x="185"
+     y="465"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text28">PTK = KCK + KEK + TK</text>
+  <!-- SAE note -->
+  <rect
+     x="770"
+     y="420"
+     width="370"
+     height="50"
+     rx="6"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect28" />
+  <text
+     x="955"
+     y="440"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10"
+     font-weight="600"
+     id="text29">WPA3-SAE 改进:</text>
+  <text
+     x="955"
+     y="455"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text30">SAE (Dragonfly) 替代 PSK → 前向保密</text>
+  <text
+     x="955"
+     y="465"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text31">每次握手使用不同密钥，无法离线破解</text>
+</svg>

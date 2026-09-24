@@ -1,0 +1,1058 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 1680"
+   width="1200"
+   height="1680"
+   version="1.1"
+   id="svg93"
+   sodipodi:docname="06d-compare-sequence.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview93"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.65059524"
+     inkscape:cx="600.21958"
+     inkscape:cy="841.53705"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg93" />
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  .title { font-size: 16px; font-weight: 700; fill: #e2e8f0; }
+  .subtitle { font-size: 12px; fill: #94a3b8; }
+  .section-label { font-size: 11px; font-weight: 700; }
+  .msg-label { font-size: 10px; fill: #cbd5e1; text-anchor: middle; }
+  .self-label { font-size: 10px; fill: #94a3b8; }
+  .part-text { font-size: 13px; font-weight: 600; fill: #e2e8f0; text-anchor: middle; }
+</style>
+  <defs
+     id="defs2">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrow"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <path
+         d="M0,0.5 L7,3 L0,5.5"
+         fill="none"
+         stroke="#475569"
+         stroke-width="1.2"
+         stroke-linecap="round"
+         id="path2" />
+    </marker>
+  </defs>
+  <rect
+     width="1200"
+     height="1680"
+     fill="url(#bg-grad)"
+     id="rect2" />
+  <text
+     x="20"
+     y="22"
+     class="title"
+     id="text2">双平台 L2 连接时序: Probe -&gt; Auth -&gt; Assoc -&gt; EAPOL -&gt; Key Install</text>
+  <text
+     x="20"
+     y="42"
+     class="subtitle"
+     id="text3">QCOM (固件执行, 蓝) vs MTK (驱动执行, 绿)   Supplicant + AP 共享</text>
+  <text
+     x="8"
+     y="138"
+     class="section-label"
+     fill="#3b82f6"
+     id="text4">QCOM</text>
+  <text
+     x="8"
+     y="776"
+     class="section-label"
+     fill="#10b981"
+     id="text5">MTK</text>
+  <line
+     x1="16"
+     y1="764"
+     x2="1160"
+     y2="764"
+     stroke="#334155"
+     stroke-width="1.5"
+     stroke-dasharray="8,4"
+     id="line5" />
+  <text
+     x="580"
+     y="762"
+     font-size="9px"
+     fill="#475569"
+     text-anchor="middle"
+     id="text6">── QCOM / MTK 分界 ──</text>
+  <line
+     x1="105"
+     y1="112"
+     x2="105"
+     y2="1592"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line6" />
+  <line
+     x1="295"
+     y1="112"
+     x2="295"
+     y2="1592"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line7" />
+  <line
+     x1="475"
+     y1="112"
+     x2="475"
+     y2="1592"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line8" />
+  <line
+     x1="650"
+     y1="112"
+     x2="650"
+     y2="1592"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line9" />
+  <line
+     x1="825"
+     y1="112"
+     x2="825"
+     y2="1592"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line10" />
+  <line
+     x1="1000"
+     y1="112"
+     x2="1000"
+     y2="1592"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line11" />
+  <rect
+     x="101.0"
+     y="140"
+     width="8"
+     height="1368"
+     rx="2"
+     fill="rgba(59,130,246,0.12)"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect11" />
+  <rect
+     x="291.0"
+     y="140"
+     width="8"
+     height="598"
+     rx="2"
+     fill="rgba(59,130,246,0.12)"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect12" />
+  <rect
+     x="471.0"
+     y="258"
+     width="8"
+     height="480"
+     rx="2"
+     fill="rgba(99,102,241,0.12)"
+     stroke="#6366f1"
+     stroke-width="1"
+     id="rect13" />
+  <rect
+     x="646.0"
+     y="296"
+     width="8"
+     height="998"
+     rx="2"
+     fill="rgba(249,115,22,0.12)"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect14" />
+  <rect
+     x="821.0"
+     y="868"
+     width="8"
+     height="678"
+     rx="2"
+     fill="rgba(16,185,129,0.12)"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect15" />
+  <rect
+     x="996.0"
+     y="778"
+     width="8"
+     height="768"
+     rx="2"
+     fill="rgba(6,182,212,0.12)"
+     stroke="#06b6d4"
+     stroke-width="1"
+     id="rect16" />
+  <line
+     x1="109.0"
+     y1="142"
+     x2="291.0"
+     y2="142"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line16" />
+  <text
+     x="200.0"
+     y="138"
+     class="msg-label"
+     id="text16">1. NL80211_CMD_CONNECT</text>
+  <line
+     x1="109.0"
+     y1="170"
+     x2="291.0"
+     y2="170"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line17" />
+  <text
+     x="200.0"
+     y="166"
+     class="msg-label"
+     id="text17">2. osif_cm_connect()</text>
+  <path
+     d="M299.0,198 L319.0,198 Q324.0,198 324.0,203 L324.0,217 Q324.0,222 319.0,222 L299.0,222"
+     stroke="#94a3b8"
+     stroke-width="1"
+     fill="none"
+     id="path17" />
+  <text
+     x="327.0"
+     y="205"
+     class="self-label"
+     id="text18">3. cm_sm_deliver_event</text>
+  <text
+     x="327.0"
+     y="215"
+     class="self-label"
+     id="text19">(EV_CONNECT_REQ)</text>
+  <line
+     x1="299.0"
+     y1="268"
+     x2="471.0"
+     y2="268"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line19" />
+  <text
+     x="385.0"
+     y="251"
+     class="msg-label"
+     id="text20">4. WMI Probe Scan</text>
+  <text
+     x="385.0"
+     y="261"
+     class="msg-label"
+     id="text21">(单播, BSSID定向)</text>
+  <line
+     x1="479.0"
+     y1="298"
+     x2="646.0"
+     y2="298"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line21" />
+  <text
+     x="562.5"
+     y="294"
+     class="msg-label"
+     id="text22">5. Probe Req (单播)</text>
+  <line
+     x1="646.0"
+     y1="326"
+     x2="479.0"
+     y2="326"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line22" />
+  <text
+     x="562.5"
+     y="322"
+     class="msg-label"
+     id="text23">6. Probe Resp</text>
+  <line
+     x1="299.0"
+     y1="354"
+     x2="471.0"
+     y2="354"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line23" />
+  <text
+     x="385.0"
+     y="350"
+     class="msg-label"
+     id="text24">7. WMI_CONNECT_CMDID</text>
+  <line
+     x1="479.0"
+     y1="382"
+     x2="646.0"
+     y2="382"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line24" />
+  <text
+     x="562.5"
+     y="378"
+     class="msg-label"
+     id="text25">8. Auth Req (seq=1, alg=0)</text>
+  <line
+     x1="646.0"
+     y1="410"
+     x2="479.0"
+     y2="410"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line25" />
+  <text
+     x="562.5"
+     y="406"
+     class="msg-label"
+     id="text26">9. Auth Resp (seq=2, status=0)</text>
+  <line
+     x1="479.0"
+     y1="438"
+     x2="646.0"
+     y2="438"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line26" />
+  <text
+     x="562.5"
+     y="434"
+     class="msg-label"
+     id="text27">10. Assoc Req</text>
+  <line
+     x1="646.0"
+     y1="474"
+     x2="479.0"
+     y2="474"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line27" />
+  <text
+     x="562.5"
+     y="457"
+     class="msg-label"
+     id="text28">11. Assoc Resp</text>
+  <text
+     x="562.5"
+     y="467"
+     class="msg-label"
+     id="text29">(status=0, AID=x)</text>
+  <line
+     x1="471.0"
+     y1="512"
+     x2="299.0"
+     y2="512"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line29" />
+  <text
+     x="385.0"
+     y="495"
+     class="msg-label"
+     id="text30">12. WMI_CONNECT_EVENTID</text>
+  <text
+     x="385.0"
+     y="505"
+     class="msg-label"
+     id="text31">(success)</text>
+  <line
+     x1="291.0"
+     y1="542"
+     x2="109.0"
+     y2="542"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line31" />
+  <text
+     x="200.0"
+     y="538"
+     class="msg-label"
+     id="text32">13. cfg80211_connect_result</text>
+  <path
+     d="M109.0,570 L129.0,570 Q134.0,570 134.0,575 L134.0,589 Q134.0,594 129.0,594 L109.0,594"
+     stroke="#94a3b8"
+     stroke-width="1"
+     fill="none"
+     id="path32" />
+  <text
+     x="137.0"
+     y="577"
+     class="self-label"
+     id="text33">14. EAPOL 4-Way</text>
+  <text
+     x="137.0"
+     y="587"
+     class="self-label"
+     id="text34">Handshake Complete</text>
+  <line
+     x1="109.0"
+     y1="632"
+     x2="291.0"
+     y2="632"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line34" />
+  <text
+     x="200.0"
+     y="628"
+     class="msg-label"
+     id="text35">15. add_key (PTK)</text>
+  <line
+     x1="299.0"
+     y1="668"
+     x2="471.0"
+     y2="668"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line35" />
+  <text
+     x="385.0"
+     y="651"
+     class="msg-label"
+     id="text36">16. WMI_VDEV_INSTALL</text>
+  <text
+     x="385.0"
+     y="661"
+     class="msg-label"
+     id="text37">_KEY_CMDID (PTK)</text>
+  <line
+     x1="109.0"
+     y1="698"
+     x2="291.0"
+     y2="698"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line37" />
+  <text
+     x="200.0"
+     y="694"
+     class="msg-label"
+     id="text38">17. add_key (GTK)</text>
+  <line
+     x1="299.0"
+     y1="734"
+     x2="471.0"
+     y2="734"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line38" />
+  <text
+     x="385.0"
+     y="717"
+     class="msg-label"
+     id="text39">18. WMI_VDEV_INSTALL</text>
+  <text
+     x="385.0"
+     y="727"
+     class="msg-label"
+     id="text40">_KEY_CMDID (GTK)</text>
+  <line
+     x1="109.0"
+     y1="795"
+     x2="996.0"
+     y2="795"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line40" />
+  <text
+     x="552.5"
+     y="791"
+     class="msg-label"
+     id="text41">19. NL80211_CMD_CONNECT</text>
+  <path
+     d="M1004.0,808 L1024.0,808 Q1029.0,808 1029.0,813 L1029.0,827 Q1029.0,832 1024.0,832 L1004.0,832"
+     stroke="#94a3b8"
+     stroke-width="1"
+     fill="none"
+     id="path41" />
+  <text
+     x="1032.0"
+     y="815"
+     class="self-label"
+     id="text42">20. AIS: IDLE-&gt;SEARCH</text>
+  <text
+     x="1032.0"
+     y="825"
+     class="self-label"
+     id="text43">-&gt;SCAN-&gt;LOOKING_FOR</text>
+  <line
+     x1="996.0"
+     y1="878"
+     x2="829.0"
+     y2="878"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line43" />
+  <text
+     x="912.5"
+     y="861"
+     class="msg-label"
+     id="text44">21. CMD_SCAN_REQ_V2</text>
+  <text
+     x="912.5"
+     y="871"
+     class="msg-label"
+     id="text45">(单播 Probe, BSSID定向)</text>
+  <line
+     x1="821.0"
+     y1="908"
+     x2="654.0"
+     y2="908"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line45" />
+  <text
+     x="737.5"
+     y="904"
+     class="msg-label"
+     id="text46">22. Probe Req (单播)</text>
+  <line
+     x1="654.0"
+     y1="936"
+     x2="821.0"
+     y2="936"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line46" />
+  <text
+     x="737.5"
+     y="932"
+     class="msg-label"
+     id="text47">23. Probe Resp</text>
+  <path
+     d="M1004.0,964 L1024.0,964 Q1029.0,964 1029.0,969 L1029.0,983 Q1029.0,988 1024.0,988 L1004.0,988"
+     stroke="#94a3b8"
+     stroke-width="1"
+     fill="none"
+     id="path47" />
+  <text
+     x="1032.0"
+     y="971"
+     class="self-label"
+     id="text48">24. AIS: REQ_CHANNEL</text>
+  <text
+     x="1032.0"
+     y="981"
+     class="self-label"
+     id="text49">_JOIN -&gt; JOIN</text>
+  <path
+     d="M1004.0,1026 L1024.0,1026 Q1029.0,1026 1029.0,1031 L1029.0,1045 Q1029.0,1050 1024.0,1050 L1004.0,1050"
+     stroke="#94a3b8"
+     stroke-width="1"
+     fill="none"
+     id="path49" />
+  <text
+     x="1032.0"
+     y="1033"
+     class="self-label"
+     id="text50">25. authSendAuthFrame()</text>
+  <text
+     x="1032.0"
+     y="1043"
+     class="self-label"
+     id="text51">-&gt; nicTxEnqueueMsdu()</text>
+  <line
+     x1="821.0"
+     y1="1088"
+     x2="654.0"
+     y2="1088"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line51" />
+  <text
+     x="737.5"
+     y="1084"
+     class="msg-label"
+     id="text52">26. Auth Req (seq=1, alg=0)</text>
+  <line
+     x1="654.0"
+     y1="1124"
+     x2="821.0"
+     y2="1124"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line52" />
+  <text
+     x="737.5"
+     y="1107"
+     class="msg-label"
+     id="text53">27. Auth Resp</text>
+  <text
+     x="737.5"
+     y="1117"
+     class="msg-label"
+     id="text54">(seq=2, status=0)</text>
+  <line
+     x1="829.0"
+     y1="1162"
+     x2="996.0"
+     y2="1162"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line54" />
+  <text
+     x="912.5"
+     y="1145"
+     class="msg-label"
+     id="text55">28. saaFsmRunEvent</text>
+  <text
+     x="912.5"
+     y="1155"
+     class="msg-label"
+     id="text56">RxAuth()</text>
+  <path
+     d="M1004.0,1192 L1024.0,1192 Q1029.0,1192 1029.0,1197 L1029.0,1211 Q1029.0,1216 1024.0,1216 L1004.0,1216"
+     stroke="#94a3b8"
+     stroke-width="1"
+     fill="none"
+     id="path56" />
+  <text
+     x="1032.0"
+     y="1199"
+     class="self-label"
+     id="text57">29. assocSendReAssoc</text>
+  <text
+     x="1032.0"
+     y="1209"
+     class="self-label"
+     id="text58">ReqFrame()</text>
+  <line
+     x1="821.0"
+     y1="1254"
+     x2="654.0"
+     y2="1254"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line58" />
+  <text
+     x="737.5"
+     y="1250"
+     class="msg-label"
+     id="text59">30. Assoc Req</text>
+  <line
+     x1="654.0"
+     y1="1290"
+     x2="821.0"
+     y2="1290"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line59" />
+  <text
+     x="737.5"
+     y="1273"
+     class="msg-label"
+     id="text60">31. Assoc Resp</text>
+  <text
+     x="737.5"
+     y="1283"
+     class="msg-label"
+     id="text61">(status=0, AID=x)</text>
+  <line
+     x1="829.0"
+     y1="1328"
+     x2="996.0"
+     y2="1328"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line61" />
+  <text
+     x="912.5"
+     y="1311"
+     class="msg-label"
+     id="text62">32. saaFsmRunEvent</text>
+  <text
+     x="912.5"
+     y="1321"
+     class="msg-label"
+     id="text63">RxAssoc()</text>
+  <path
+     d="M109.0,1358 L129.0,1358 Q134.0,1358 134.0,1363 L134.0,1377 Q134.0,1382 129.0,1382 L109.0,1382"
+     stroke="#94a3b8"
+     stroke-width="1"
+     fill="none"
+     id="path63" />
+  <text
+     x="137.0"
+     y="1365"
+     class="self-label"
+     id="text64">33. EAPOL 4-Way</text>
+  <text
+     x="137.0"
+     y="1375"
+     class="self-label"
+     id="text65">Handshake Complete</text>
+  <line
+     x1="109.0"
+     y1="1428"
+     x2="996.0"
+     y2="1428"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line65" />
+  <text
+     x="552.5"
+     y="1411"
+     class="msg-label"
+     id="text66">34. mtk_cfg80211</text>
+  <text
+     x="552.5"
+     y="1421"
+     class="msg-label"
+     id="text67">_add_key (PTK)</text>
+  <line
+     x1="996.0"
+     y1="1466"
+     x2="829.0"
+     y2="1466"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line67" />
+  <text
+     x="912.5"
+     y="1449"
+     class="msg-label"
+     id="text68">35. wlanoidSetAddKey</text>
+  <text
+     x="912.5"
+     y="1459"
+     class="msg-label"
+     id="text69">(PTK)</text>
+  <line
+     x1="109.0"
+     y1="1504"
+     x2="996.0"
+     y2="1504"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line69" />
+  <text
+     x="552.5"
+     y="1487"
+     class="msg-label"
+     id="text70">36. mtk_cfg80211</text>
+  <text
+     x="552.5"
+     y="1497"
+     class="msg-label"
+     id="text71">_add_key (GTK)</text>
+  <line
+     x1="996.0"
+     y1="1542"
+     x2="829.0"
+     y2="1542"
+     stroke="#475569"
+     stroke-width="1.2"
+     marker-end="url(#arrow)"
+     id="line71" />
+  <text
+     x="912.5"
+     y="1525"
+     class="msg-label"
+     id="text72">37. wlanoidSetAddKey</text>
+  <text
+     x="912.5"
+     y="1535"
+     class="msg-label"
+     id="text73">(GTK)</text>
+  <rect
+     x="50"
+     y="60"
+     width="110"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect73" />
+  <text
+     x="105"
+     y="82.0"
+     class="part-text"
+     dominant-baseline="central"
+     id="text74">Supplicant</text>
+  <rect
+     x="245"
+     y="60"
+     width="100"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect74" />
+  <text
+     x="295"
+     y="75"
+     class="part-text"
+     id="text75">QCOM</text>
+  <text
+     x="295"
+     y="87"
+     class="part-text"
+     id="text76">Driver</text>
+  <rect
+     x="435"
+     y="60"
+     width="80"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#6366f1"
+     stroke-width="1.5"
+     id="rect76" />
+  <text
+     x="475"
+     y="75"
+     class="part-text"
+     id="text77">QCOM</text>
+  <text
+     x="475"
+     y="87"
+     class="part-text"
+     id="text78">FW</text>
+  <rect
+     x="610"
+     y="60"
+     width="80"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect78" />
+  <text
+     x="650"
+     y="82.0"
+     class="part-text"
+     dominant-baseline="central"
+     id="text79">AP</text>
+  <rect
+     x="785"
+     y="60"
+     width="80"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect79" />
+  <text
+     x="825"
+     y="75"
+     class="part-text"
+     id="text80">MTK</text>
+  <text
+     x="825"
+     y="87"
+     class="part-text"
+     id="text81">FW</text>
+  <rect
+     x="950"
+     y="60"
+     width="100"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#06b6d4"
+     stroke-width="1.5"
+     id="rect81" />
+  <text
+     x="1000"
+     y="75"
+     class="part-text"
+     id="text82">MTK</text>
+  <text
+     x="1000"
+     y="87"
+     class="part-text"
+     id="text83">Driver</text>
+  <rect
+     x="50"
+     y="1600"
+     width="110"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect83" />
+  <text
+     x="105"
+     y="1622.0"
+     class="part-text"
+     dominant-baseline="central"
+     id="text84">Supplicant</text>
+  <rect
+     x="245"
+     y="1600"
+     width="100"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect84" />
+  <text
+     x="295"
+     y="1615"
+     class="part-text"
+     id="text85">QCOM</text>
+  <text
+     x="295"
+     y="1627"
+     class="part-text"
+     id="text86">Driver</text>
+  <rect
+     x="435"
+     y="1600"
+     width="80"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#6366f1"
+     stroke-width="1.5"
+     id="rect86" />
+  <text
+     x="475"
+     y="1615"
+     class="part-text"
+     id="text87">QCOM</text>
+  <text
+     x="475"
+     y="1627"
+     class="part-text"
+     id="text88">FW</text>
+  <rect
+     x="610"
+     y="1600"
+     width="80"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect88" />
+  <text
+     x="650"
+     y="1622.0"
+     class="part-text"
+     dominant-baseline="central"
+     id="text89">AP</text>
+  <rect
+     x="785"
+     y="1600"
+     width="80"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect89" />
+  <text
+     x="825"
+     y="1615"
+     class="part-text"
+     id="text90">MTK</text>
+  <text
+     x="825"
+     y="1627"
+     class="part-text"
+     id="text91">FW</text>
+  <rect
+     x="950"
+     y="1600"
+     width="100"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#06b6d4"
+     stroke-width="1.5"
+     id="rect91" />
+  <text
+     x="1000"
+     y="1615"
+     class="part-text"
+     id="text92">MTK</text>
+  <text
+     x="1000"
+     y="1627"
+     class="part-text"
+     id="text93">Driver</text>
+</svg>

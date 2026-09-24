@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 730" width="960" height="730">
+  <style>
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; fill: #e2e8f0; }
+    .layer-label { font-size: 13px; fill: #94a3b8; }
+  </style>
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f0f1a"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <marker id="arrow-orange" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0,0 8,3 0,6" fill="#f97316"/>
+    </marker>
+  </defs>
+  <rect width="960" height="730" fill="url(#bg-grad)"/>
+  <text x="480" y="28" text-anchor="middle" font-size="18px" font-weight="700" fill="#f97316">SAP 模式 5 层架构</text>
+  <line x1="400" y1="36" x2="560" y2="36" stroke="#f97316" stroke-width="1" fill="none" opacity="0.5"/>
+  <rect x="40" y="50" width="880" height="56" rx="6" fill="#1a1109" stroke="#ea580c" stroke-width="1" opacity="0.9"/>
+  <text x="62" y="70" text-anchor="start" font-size="13px" font-weight="400" fill="#94a3b8">App 应用层</text>
+  <rect x="64" y="74" width="120" height="28" rx="4" fill="#ea580c" opacity="0.16" stroke="#ea580c" stroke-width="0.6"/>
+  <text x="124" y="94" text-anchor="middle" font-size="12px" font-weight="400" fill="#f97316">Settings App</text>
+  <rect x="216" y="74" width="150" height="28" rx="4" fill="#ea580c" opacity="0.16" stroke="#ea580c" stroke-width="0.6"/>
+  <text x="291" y="94" text-anchor="middle" font-size="12px" font-weight="400" fill="#f97316">TetheringManager</text>
+  <line x1="186" y1="88" x2="214" y2="88" stroke="#f97316" stroke-width="1.2" fill="none" opacity="1"/>
+  <line x1="291" y1="102" x2="291" y2="130" stroke="#f97316" stroke-width="1.5" fill="none" opacity="1" marker-end="url(#arrow-orange)"/>
+  <line x1="40" y1="119" x2="420" y2="119" stroke="#f97316" stroke-width="1" stroke-dasharray="6,3" fill="none" opacity="0.5"/>
+  <line x1="540" y1="119" x2="920" y2="119" stroke="#f97316" stroke-width="1" stroke-dasharray="6,3" fill="none" opacity="0.5"/>
+  <text x="480" y="114" text-anchor="middle" font-size="10px" font-weight="400" fill="#f97316">— Binder IPC（App → system_server）—</text>
+  <rect x="40" y="132" width="880" height="216" rx="6" fill="#17110a" stroke="#ea580c" stroke-width="1" opacity="0.9"/>
+  <text x="62" y="146" text-anchor="start" font-size="13px" font-weight="400" fill="#94a3b8">Framework Java 层（system_server）</text>
+  <rect x="60.0" y="154" width="112" height="40" rx="4" fill="#f97316" opacity="0.12" stroke="#ea580c" stroke-width="0.6"/>
+  <text x="116" y="172" text-anchor="middle" font-size="12px" font-weight="400" fill="#f97316">WifiManager</text>
+  <text x="116" y="188" text-anchor="middle" font-size="10px" font-weight="400" fill="#94a3b8">startSoftAp()</text>
+  <rect x="208.0" y="154" width="128" height="40" rx="4" fill="#f97316" opacity="0.12" stroke="#ea580c" stroke-width="0.6"/>
+  <text x="272" y="172" text-anchor="middle" font-size="12px" font-weight="400" fill="#f97316">WifiServiceImpl</text>
+  <text x="272" y="188" text-anchor="middle" font-size="10px" font-weight="400" fill="#94a3b8">权限检查 · 参数组装</text>
+  <rect x="372.0" y="154" width="128" height="40" rx="4" fill="#f97316" opacity="0.12" stroke="#ea580c" stroke-width="0.6"/>
+  <text x="436" y="172" text-anchor="middle" font-size="12px" font-weight="400" fill="#f97316">ActiveModeWarden</text>
+  <text x="436" y="188" text-anchor="middle" font-size="10px" font-weight="400" fill="#94a3b8">CMD_SET_AP 状态机</text>
+  <rect x="524.0" y="154" width="150" height="40" rx="4" fill="#f97316" opacity="0.12" stroke="#ea580c" stroke-width="0.6"/>
+  <text x="599" y="172" text-anchor="middle" font-size="12px" font-weight="400" fill="#f97316">SoftApManager</text>
+  <text x="599" y="188" text-anchor="middle" font-size="10px" font-weight="400" fill="#94a3b8">5 状态机 · 启动编排</text>
+  <line x1="176" y1="174" x2="206" y2="174" stroke="#f97316" stroke-width="1.2" fill="none" opacity="1"/>
+  <line x1="340" y1="174" x2="370" y2="174" stroke="#f97316" stroke-width="1.2" fill="none" opacity="1"/>
+  <line x1="502" y1="174" x2="522" y2="174" stroke="#f97316" stroke-width="1.2" fill="none" opacity="1"/>
+  <rect x="495.0" y="226" width="180" height="40" rx="4" fill="#f97316" opacity="0.12" stroke="#ea580c" stroke-width="0.6"/>
+  <text x="585" y="244" text-anchor="middle" font-size="12px" font-weight="400" fill="#f97316">WifiNative</text>
+  <text x="585" y="260" text-anchor="middle" font-size="10px" font-weight="400" fill="#94a3b8">setupInterface 6 步</text>
+  <line x1="599" y1="194" x2="599" y2="224" stroke="#f97316" stroke-width="1.5" fill="none" opacity="1" marker-end="url(#arrow-orange)"/>
+  <rect x="200.0" y="300" width="200" height="40" rx="4" fill="#f97316" opacity="0.12" stroke="#ea580c" stroke-width="0.6"/>
+  <text x="300" y="318" text-anchor="middle" font-size="12px" font-weight="400" fill="#f97316">HostapdHal</text>
+  <text x="300" y="334" text-anchor="middle" font-size="10px" font-weight="400" fill="#94a3b8">startHostapd · addAccessPoint</text>
+  <rect x="640.0" y="300" width="200" height="40" rx="4" fill="#f97316" opacity="0.12" stroke="#ea580c" stroke-width="0.6"/>
+  <text x="740" y="318" text-anchor="middle" font-size="12px" font-weight="400" fill="#f97316">HalDeviceManager</text>
+  <text x="740" y="334" text-anchor="middle" font-size="10px" font-weight="400" fill="#94a3b8">createApIface · 能力检查</text>
+  <path d="M 540 266 V 283 H 300 V 300" stroke="#f97316" stroke-width="1.5" fill="none" opacity="1" marker-end="url(#arrow-orange)"/>
+  <path d="M 645 266 V 283 H 740 V 300" stroke="#f97316" stroke-width="1.5" fill="none" opacity="1" marker-end="url(#arrow-orange)"/>
+  <line x1="40" y1="360" x2="420" y2="360" stroke="#f97316" stroke-width="1" stroke-dasharray="6,3" fill="none" opacity="0.5"/>
+  <line x1="540" y1="360" x2="920" y2="360" stroke="#f97316" stroke-width="1" stroke-dasharray="6,3" fill="none" opacity="0.5"/>
+  <text x="480" y="355" text-anchor="middle" font-size="10px" font-weight="400" fill="#f97316">— AIDL 跨进程（Framework → vendor HAL）—</text>
+  <rect x="40" y="372" width="880" height="88" rx="6" fill="#19120b" stroke="#ea580c" stroke-width="1" opacity="0.9"/>
+  <text x="62" y="390" text-anchor="start" font-size="13px" font-weight="400" fill="#94a3b8">wifi vendor HAL 服务层</text>
+  <text x="62" y="424" text-anchor="start" font-size="11px" font-weight="400" fill="#64748b">真正的 HAL：</text>
+  <text x="62" y="442" text-anchor="start" font-size="11px" font-weight="400" fill="#64748b">QCOM / MTK vendor 进程</text>
+  <rect x="640.0" y="404" width="200" height="48" rx="4" fill="#f97316" opacity="0.13" stroke="#ea580c" stroke-width="0.6"/>
+  <text x="740" y="420" text-anchor="middle" font-size="12px" font-weight="400" fill="#f97316">wifi HAL 服务</text>
+  <text x="740" y="436" text-anchor="middle" font-size="10px" font-weight="400" fill="#94a3b8">IWifiChip · WifiApIface</text>
+  <text x="740" y="449" text-anchor="middle" font-size="9px" font-weight="400" fill="#94a3b8">configureChip · createApIface</text>
+  <line x1="740" y1="340" x2="740" y2="402" stroke="#f97316" stroke-width="1.5" fill="none" opacity="1" marker-end="url(#arrow-orange)"/>
+  <line x1="40" y1="468" x2="420" y2="468" stroke="#f97316" stroke-width="1" stroke-dasharray="6,3" fill="none" opacity="0.5"/>
+  <line x1="540" y1="468" x2="920" y2="468" stroke="#f97316" stroke-width="1" stroke-dasharray="6,3" fill="none" opacity="0.5"/>
+  <text x="480" y="463" text-anchor="middle" font-size="10px" font-weight="400" fill="#f97316">— vendor 进程边界 —</text>
+  <rect x="40" y="480" width="880" height="100" rx="6" fill="#1a1407" stroke="#eab308" stroke-width="1" opacity="0.9"/>
+  <text x="62" y="498" text-anchor="start" font-size="13px" font-weight="400" fill="#eab308">hostapd C 守护进程层（vendor）</text>
+  <rect x="200.0" y="512" width="200" height="48" rx="4" fill="#eab308" opacity="0.13" stroke="#eab308" stroke-width="0.6"/>
+  <text x="300" y="528" text-anchor="middle" font-size="12px" font-weight="400" fill="#eab308">hostapd daemon</text>
+  <text x="300" y="544" text-anchor="middle" font-size="10px" font-weight="400" fill="#94a3b8">IHostapd AIDL 服务端</text>
+  <text x="300" y="557" text-anchor="middle" font-size="9px" font-weight="400" fill="#94a3b8">ACS 选频 · BSS · Beacon</text>
+  <line x1="300" y1="340" x2="300" y2="510" stroke="#f97316" stroke-width="1.5" fill="none" opacity="1" marker-end="url(#arrow-orange)"/>
+  <line x1="40" y1="586" x2="420" y2="586" stroke="#f97316" stroke-width="1" stroke-dasharray="6,3" fill="none" opacity="0.5"/>
+  <line x1="540" y1="586" x2="920" y2="586" stroke="#f97316" stroke-width="1" stroke-dasharray="6,3" fill="none" opacity="0.5"/>
+  <text x="480" y="581" text-anchor="middle" font-size="10px" font-weight="400" fill="#f97316">— nl80211 Netlink —</text>
+  <rect x="40" y="598" width="880" height="84" rx="6" fill="#14100b" stroke="#ea580c" stroke-width="1" opacity="0.9"/>
+  <text x="62" y="616" text-anchor="start" font-size="13px" font-weight="400" fill="#94a3b8">内核 / 驱动层</text>
+  <rect x="225.0" y="626" width="150" height="40" rx="4" fill="#f97316" opacity="0.12" stroke="#ea580c" stroke-width="0.6"/>
+  <text x="300" y="644" text-anchor="middle" font-size="12px" font-weight="400" fill="#f97316">nl80211 / cfg80211</text>
+  <text x="300" y="660" text-anchor="middle" font-size="10px" font-weight="400" fill="#94a3b8">NL80211_CMD_START_AP</text>
+  <rect x="435.0" y="626" width="170" height="40" rx="4" fill="#f97316" opacity="0.12" stroke="#ea580c" stroke-width="0.6"/>
+  <text x="520" y="644" text-anchor="middle" font-size="12px" font-weight="400" fill="#f97316">wlan 驱动</text>
+  <text x="520" y="660" text-anchor="middle" font-size="10px" font-weight="400" fill="#94a3b8">QCOM / MTK vendor</text>
+  <rect x="650.0" y="626" width="160" height="40" rx="4" fill="#f97316" opacity="0.12" stroke="#ea580c" stroke-width="0.6"/>
+  <text x="730" y="644" text-anchor="middle" font-size="12px" font-weight="400" fill="#f97316">Firmware 固件</text>
+  <text x="730" y="660" text-anchor="middle" font-size="10px" font-weight="400" fill="#94a3b8">Beacon 发射 · 帧收发</text>
+  <line x1="300" y1="560" x2="300" y2="624" stroke="#f97316" stroke-width="1.5" fill="none" opacity="1" marker-end="url(#arrow-orange)"/>
+  <line x1="378" y1="647" x2="435" y2="647" stroke="#f97316" stroke-width="1.2" fill="none" opacity="1"/>
+  <line x1="605" y1="647" x2="645" y2="647" stroke="#f97316" stroke-width="1.2" fill="none" opacity="1"/>
+  <rect x="690" y="50" width="230" height="120" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" opacity="0.88"/>
+  <text x="805" y="70" text-anchor="middle" font-size="12px" font-weight="700" fill="#94a3b8">图例</text>
+  <rect x="706" y="80" width="14" height="14" rx="2" fill="#ea580c" opacity="0.2" stroke="#ea580c" stroke-width="0.6"/>
+  <text x="729" y="92" text-anchor="start" font-size="11px" font-weight="400" fill="#e2e8f0">SAP / Framework 组件</text>
+  <rect x="706" y="102" width="14" height="14" rx="2" fill="#eab308" opacity="0.2" stroke="#eab308" stroke-width="0.6"/>
+  <text x="729" y="114" text-anchor="start" font-size="11px" font-weight="400" fill="#e2e8f0">hostapd / vendor 组件</text>
+  <line x1="706" y1="133" x2="722" y2="133" stroke="#f97316" stroke-width="1" stroke-dasharray="5,3" fill="none" opacity="0.7"/>
+  <text x="729" y="137" text-anchor="start" font-size="11px" font-weight="400" fill="#e2e8f0">进程边界</text>
+  <line x1="706" y1="152" x2="722" y2="152" stroke="#f97316" stroke-width="1.5" fill="none" opacity="1"/>
+  <polygon points="719,149 727,152 719,155 " fill="#f97316"/>
+  <text x="729" y="156" text-anchor="start" font-size="11px" font-weight="400" fill="#e2e8f0">调用 / AIDL 方向</text>
+</svg>

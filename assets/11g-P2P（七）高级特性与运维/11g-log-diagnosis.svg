@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" width="960" height="760">
+  <style>
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; fill: #e2e8f0; }
+  </style>
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1a"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#a855f7"/>
+    </marker>
+  </defs>
+  <rect width="960" height="760" fill="url(#bg-grad)"/>
+  <text x="540" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#e2e8f0">P2P 四层日志诊断 —— 出问题怎么查</text>
+  <text x="540" y="57" text-anchor="middle" font-size="12" fill="#94a3b8">§5.1 四层日志关键字速查 · 排障从上往下逐层对照</text>
+  <line x1="75" y1="100" x2="75" y2="702" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow-purple)"/>
+  <text transform="rotate(-90 48 400)" x="48" y="400" text-anchor="middle" font-size="13" fill="#c4b5fd">从上往下逐层对照</text>
+<rect x="150" y="70" width="780" height="150" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="170" y="96" width="10" height="10" rx="2" fill="#3b82f6"/>
+<text x="190" y="106" font-size="16" font-weight="700" fill="#93c5fd">Framework</text>
+<text x="283" y="106" font-size="11" fill="#64748b">行为层</text>
+<text x="910" y="106" font-size="11" fill="#64748b" text-anchor="end">adb logcat</text>
+<text x="170" y="134" font-size="11" fill="#64748b">关键字 / TAG</text>
+<rect x="170" y="146" width="120" height="26" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+<text x="230" y="163" text-anchor="middle" font-size="12" fill="#93c5fd">WifiP2pService</text>
+<rect x="300" y="146" width="112" height="26" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+<text x="356" y="163" text-anchor="middle" font-size="12" fill="#93c5fd">WifiP2pNative</text>
+<rect x="422" y="146" width="127" height="26" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+<text x="485" y="163" text-anchor="middle" font-size="12" fill="#93c5fd">P2pStateMachine</text>
+<text x="170" y="198" font-size="12"><tspan fill="#93c5fd" font-weight="700">查什么：</tspan><tspan fill="#94a3b8">状态转移（InactiveState -> GroupCreatingState）、API 调用成败、事件分发</tspan></text>
+<rect x="150" y="240" width="780" height="150" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="170" y="266" width="10" height="10" rx="2" fill="#a855f7"/>
+<text x="190" y="276" font-size="16" font-weight="700" fill="#c4b5fd">Supplicant</text>
+<text x="292" y="276" font-size="11" fill="#64748b">协议层</text>
+<text x="910" y="276" font-size="11" fill="#64748b" text-anchor="end">adb logcat / wpa_cli</text>
+<text x="170" y="304" font-size="11" fill="#64748b">关键字 / TAG</text>
+<rect x="170" y="316" width="134" height="26" rx="5" fill="#1e1b4b" stroke="#a855f7" stroke-width="1"/>
+<text x="237" y="333" text-anchor="middle" font-size="12" fill="#c4b5fd">P2P-DEVICE-FOUND</text>
+<rect x="314" y="316" width="105" height="26" rx="5" fill="#1e1b4b" stroke="#a855f7" stroke-width="1"/>
+<text x="367" y="333" text-anchor="middle" font-size="12" fill="#c4b5fd">P2P-GO-NEG-*</text>
+<rect x="429" y="316" width="142" height="26" rx="5" fill="#1e1b4b" stroke="#a855f7" stroke-width="1"/>
+<text x="500" y="333" text-anchor="middle" font-size="12" fill="#c4b5fd">P2P-GROUP-STARTED</text>
+<rect x="581" y="316" width="134" height="26" rx="5" fill="#1e1b4b" stroke="#a855f7" stroke-width="1"/>
+<text x="648" y="333" text-anchor="middle" font-size="12" fill="#c4b5fd">P2P-INVITATION-*</text>
+<rect x="725" y="316" width="53" height="26" rx="5" fill="#1e1b4b" stroke="#a855f7" stroke-width="1"/>
+<text x="752" y="333" text-anchor="middle" font-size="12" fill="#c4b5fd">WPS-*</text>
+<text x="170" y="368" font-size="12"><tspan fill="#c4b5fd" font-weight="700">查什么：</tspan><tspan fill="#94a3b8">协议事件：设备发现、GO 谈判、WPS 成败、组状态变化</tspan></text>
+<rect x="150" y="410" width="400" height="150" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="170" y="436" width="10" height="10" rx="2" fill="#f97316"/>
+<text x="190" y="446" font-size="15" font-weight="700" fill="#fdba74">QCOM 驱动</text>
+<text x="274" y="446" font-size="11" fill="#64748b">Qualcomm</text>
+<text x="530" y="446" font-size="11" fill="#64748b" text-anchor="end">dmesg / kmsg</text>
+<text x="170" y="474" font-size="11" fill="#64748b">关键字 / TAG</text>
+<rect x="170" y="486" width="46" height="26" rx="5" fill="#3b1d10" stroke="#f97316" stroke-width="1"/>
+<text x="193" y="503" text-anchor="middle" font-size="12" fill="#fdba74">wlan</text>
+<rect x="226" y="486" width="38" height="26" rx="5" fill="#3b1d10" stroke="#f97316" stroke-width="1"/>
+<text x="245" y="503" text-anchor="middle" font-size="12" fill="#fdba74">p2p</text>
+<rect x="274" y="486" width="68" height="26" rx="5" fill="#3b1d10" stroke="#f97316" stroke-width="1"/>
+<text x="308" y="503" text-anchor="middle" font-size="12" fill="#fdba74">sap_fsm</text>
+<rect x="352" y="486" width="38" height="26" rx="5" fill="#3b1d10" stroke="#f97316" stroke-width="1"/>
+<text x="371" y="503" text-anchor="middle" font-size="12" fill="#fdba74">HDD</text>
+<rect x="400" y="486" width="38" height="26" rx="5" fill="#3b1d10" stroke="#f97316" stroke-width="1"/>
+<text x="419" y="503" text-anchor="middle" font-size="12" fill="#fdba74">WMI</text>
+<text x="170" y="538" font-size="12"><tspan fill="#fdba74" font-weight="700">查什么：</tspan><tspan fill="#94a3b8">WMI 命令下发/响应、SAP 状态迁移、NOA 参数、peer 管理</tspan></text>
+<rect x="565" y="410" width="365" height="150" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="585" y="436" width="10" height="10" rx="2" fill="#10b981"/>
+<text x="605" y="446" font-size="15" font-weight="700" fill="#6ee7b7">MTK 驱动</text>
+<text x="681" y="446" font-size="11" fill="#64748b">MediaTek</text>
+<text x="910" y="446" font-size="11" fill="#64748b" text-anchor="end">dmesg / kmsg</text>
+<text x="585" y="474" font-size="11" fill="#64748b">关键字 / TAG</text>
+<rect x="585" y="486" width="38" height="26" rx="5" fill="#052e16" stroke="#10b981" stroke-width="1"/>
+<text x="604" y="503" text-anchor="middle" font-size="12" fill="#6ee7b7">P2P</text>
+<rect x="633" y="486" width="68" height="26" rx="5" fill="#052e16" stroke="#10b981" stroke-width="1"/>
+<text x="667" y="503" text-anchor="middle" font-size="12" fill="#6ee7b7">P2P_FSM</text>
+<rect x="711" y="486" width="97" height="26" rx="5" fill="#052e16" stroke="#10b981" stroke-width="1"/>
+<text x="760" y="503" text-anchor="middle" font-size="12" fill="#6ee7b7">P2P_DEV_FSM</text>
+<rect x="818" y="486" width="38" height="26" rx="5" fill="#052e16" stroke="#10b981" stroke-width="1"/>
+<text x="838" y="503" text-anchor="middle" font-size="12" fill="#6ee7b7">RLM</text>
+<text x="585" y="538" font-size="12"><tspan fill="#6ee7b7" font-weight="700">查什么：</tspan><tspan fill="#94a3b8">P2P 状态机事件、Action 帧收发、信道切换</tspan></text>
+<rect x="150" y="580" width="780" height="130" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="170" y="606" width="10" height="10" rx="2" fill="#eab308"/>
+<text x="190" y="616" font-size="16" font-weight="700" fill="#fde047">固件</text>
+<text x="234" y="616" font-size="11" fill="#64748b">最底层</text>
+<text x="910" y="616" font-size="11" fill="#64748b" text-anchor="end">dmesg / 固件调试口</text>
+<text x="170" y="644" font-size="11" fill="#64748b">关键字 / TAG</text>
+<text x="170" y="674" font-size="12" fill="#475569">—（无独立 TAG，下探固件看底层）</text>
+<text x="170" y="696" font-size="12"><tspan fill="#fde047" font-weight="700">查什么：</tspan><tspan fill="#94a3b8">芯片状态机实际推进</tspan></text>
+</svg>

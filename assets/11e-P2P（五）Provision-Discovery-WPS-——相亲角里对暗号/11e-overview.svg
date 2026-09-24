@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 890 940"
+   width="890"
+   height="940"
+   version="1.1"
+   id="svg65"
+   sodipodi:docname="11e-overview.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview65"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.82219969"
+     inkscape:cx="502.31106"
+     inkscape:cy="572.24541"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg65" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; }
+  </style>
+  <defs
+     id="defs3">
+    <linearGradient
+       id="bg-grad"
+       x1="0"
+       y1="0"
+       x2="949.94739"
+       y2="949.94739"
+       gradientTransform="scale(0.93689395,0.98952845)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrow-orange"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0,7 0,0 10,3.5 "
+         fill="#f97316"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arrow-purple"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0,7 0,0 10,3.5 "
+         fill="#a855f7"
+         id="polygon3" />
+    </marker>
+  </defs>
+  <rect
+     width="890"
+     height="940"
+     fill="url(#bg-grad)"
+     id="rect3"
+     style="fill:url(#bg-grad);stroke-width:0.962851"
+     x="0"
+     y="0" />
+  <text
+     x="448"
+     y="34"
+     text-anchor="middle"
+     font-size="18px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text3">P2P Provision Discovery + WPS 全链路分层架构</text>
+  <text
+     x="448"
+     y="56"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#94a3b8"
+     id="text4">connect() → provisionDiscovery → wpas_p2p_prov_disc → PD 帧 → WPS 配网（Registrar / Enrollee）</text>
+  <rect
+     x="18"
+     y="76"
+     width="840"
+     height="60"
+     rx="8"
+     fill="#0f172a"
+     fill-opacity="0.55"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="6, 4"
+     id="rect4" />
+  <text
+     x="28"
+     y="92"
+     font-size="12px"
+     font-weight="700"
+     fill="#94a3b8"
+     id="text5">App 应用层</text>
+  <rect
+     x="18"
+     y="158"
+     width="840"
+     height="60"
+     rx="8"
+     fill="#0f172a"
+     fill-opacity="0.55"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="6, 4"
+     id="rect5" />
+  <text
+     x="28"
+     y="174"
+     font-size="12px"
+     font-weight="700"
+     fill="#94a3b8"
+     id="text6">SystemServer 系统服务进程</text>
+  <rect
+     x="18"
+     y="240"
+     width="840"
+     height="76"
+     rx="8"
+     fill="#0f172a"
+     fill-opacity="0.55"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="6, 4"
+     id="rect6" />
+  <text
+     x="28"
+     y="256"
+     font-size="12px"
+     font-weight="700"
+     fill="#94a3b8"
+     id="text7">Framework Android 框架（WifiP2pServiceImpl）</text>
+  <rect
+     x="18"
+     y="338"
+     width="840"
+     height="76"
+     rx="8"
+     fill="#0f172a"
+     fill-opacity="0.55"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="6, 4"
+     id="rect7" />
+  <text
+     x="28"
+     y="354"
+     font-size="12px"
+     font-weight="700"
+     fill="#94a3b8"
+     id="text8">HAL 硬件抽象层（AIDL）</text>
+  <rect
+     x="18"
+     y="436"
+     width="840"
+     height="251.18024"
+     rx="8"
+     fill="#0f172a"
+     fill-opacity="0.55"
+     stroke="#334155"
+     stroke-width="1.02303"
+     stroke-dasharray="6, 4"
+     id="rect8" />
+  <text
+     x="28"
+     y="452"
+     font-size="12px"
+     font-weight="700"
+     fill="#94a3b8"
+     id="text9">wpa_supplicant 守护进程</text>
+  <rect
+     x="18"
+     y="712"
+     width="840"
+     height="58"
+     rx="8"
+     fill="#0f172a"
+     fill-opacity="0.55"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="6, 4"
+     id="rect9" />
+  <text
+     x="28"
+     y="728"
+     font-size="12px"
+     font-weight="700"
+     fill="#94a3b8"
+     id="text10">内核 Kernel（cfg80211 / nl80211）</text>
+  <rect
+     x="18"
+     y="778"
+     width="840"
+     height="104"
+     rx="8"
+     fill="#0f172a"
+     fill-opacity="0.55"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="6, 4"
+     id="rect10" />
+  <text
+     x="28"
+     y="794"
+     font-size="12px"
+     font-weight="700"
+     fill="#94a3b8"
+     id="text11">驱动 Driver（QCOM / MTK）</text>
+  <rect
+     x="24"
+     y="137"
+     width="150"
+     height="19"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect11" />
+  <text
+     x="99"
+     y="150"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#93c5fd"
+     id="text12">Binder (IWifiP2pManager)</text>
+  <text
+     x="26"
+     y="232"
+     font-size="9px"
+     fill="#475569"
+     id="text13">同进程 (system_server)</text>
+  <rect
+     x="24"
+     y="317"
+     width="150"
+     height="19"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect13" />
+  <text
+     x="99"
+     y="330"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#93c5fd"
+     id="text14">AIDL (ISupplicantP2pIface)</text>
+  <text
+     x="26"
+     y="428"
+     font-size="9px"
+     fill="#475569"
+     id="text15">同进程 (wpa_supplicant daemon)</text>
+  <rect
+     x="24"
+     y="691"
+     width="150"
+     height="19"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect15" />
+  <text
+     x="99"
+     y="704"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#93c5fd"
+     id="text16">nl80211 (netlink)</text>
+  <rect
+     x="298"
+     y="100"
+     width="300"
+     height="36"
+     rx="6"
+     fill="#1e293b"
+     stroke="#475569"
+     stroke-width="1.2"
+     id="rect16" />
+  <text
+     x="448"
+     y="123"
+     text-anchor="middle"
+     font-size="12px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text17">WifiP2pManager.connect()</text>
+  <rect
+     x="288"
+     y="182"
+     width="320"
+     height="36"
+     rx="6"
+     fill="#1e293b"
+     stroke="#475569"
+     stroke-width="1.2"
+     id="rect17" />
+  <text
+     x="448"
+     y="205"
+     text-anchor="middle"
+     font-size="12px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text18">WifiP2pServiceImpl (IWifiP2pManager)</text>
+  <rect
+     x="58"
+     y="262"
+     width="330"
+     height="44"
+     rx="6"
+     fill="#1e293b"
+     stroke="#475569"
+     stroke-width="1.2"
+     id="rect18" />
+  <text
+     x="223"
+     y="278"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="400"
+     fill="#e2e8f0"
+     id="text19">ProvisionDiscoveryState</text>
+  <text
+     x="223"
+     y="296"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="400"
+     fill="#94a3b8"
+     id="text20">enterImpl()</text>
+  <rect
+     x="508"
+     y="262"
+     width="340"
+     height="44"
+     rx="6"
+     fill="#1e293b"
+     stroke="#475569"
+     stroke-width="1.2"
+     id="rect20" />
+  <text
+     x="678"
+     y="278"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="400"
+     fill="#e2e8f0"
+     id="text21">WifiP2pNative</text>
+  <text
+     x="678"
+     y="296"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="400"
+     fill="#94a3b8"
+     id="text22">p2pProvisionDiscovery()</text>
+  <rect
+     x="58"
+     y="360"
+     width="330"
+     height="44"
+     rx="6"
+     fill="#1e293b"
+     stroke="#475569"
+     stroke-width="1.2"
+     id="rect22" />
+  <text
+     x="223"
+     y="376"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="400"
+     fill="#e2e8f0"
+     id="text23">SupplicantP2pIfaceHal</text>
+  <text
+     x="223"
+     y="394"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="400"
+     fill="#94a3b8"
+     id="text24">provisionDiscovery()</text>
+  <rect
+     x="508"
+     y="360"
+     width="340"
+     height="44"
+     rx="6"
+     fill="#1e293b"
+     stroke="#475569"
+     stroke-width="1.2"
+     id="rect24" />
+  <text
+     x="678"
+     y="376"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="400"
+     fill="#e2e8f0"
+     id="text25">P2pIface::provisionDiscovery()</text>
+  <text
+     x="678"
+     y="394"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="400"
+     fill="#94a3b8"
+     id="text26">→ provisionDiscoveryInternal()</text>
+  <rect
+     x="28"
+     y="462"
+     width="323.78253"
+     height="200"
+     rx="7.0007029"
+     fill="#1c1917"
+     fill-opacity="0.6"
+     stroke="#ea580c"
+     stroke-width="1.2"
+     stroke-dasharray="5, 3"
+     id="rect26" />
+  <rect
+     x="36"
+     y="470"
+     width="67.148132"
+     height="18"
+     rx="3.1231689"
+     fill="#ea580c"
+     id="rect27"
+     style="stroke-width:0.883624" />
+  <text
+     x="69"
+     y="482"
+     text-anchor="middle"
+     font-size="10px"
+     font-weight="700"
+     fill="#ffffff"
+     id="text27">① PD 阶段</text>
+  <rect
+     x="480.77063"
+     y="462"
+     width="367.5675"
+     height="200"
+     rx="7.9474053"
+     fill="#2e1065"
+     fill-opacity="0.45"
+     stroke="#a855f7"
+     stroke-width="1.19605"
+     stroke-dasharray="5, 3"
+     id="rect28" />
+  <rect
+     x="486"
+     y="470"
+     width="70.985634"
+     height="18"
+     rx="2.7837505"
+     fill="#a855f7"
+     id="rect29"
+     style="stroke-width:0.834229" />
+  <text
+     x="521"
+     y="482"
+     text-anchor="middle"
+     font-size="10px"
+     font-weight="700"
+     fill="#ffffff"
+     id="text29">② WPS 配网</text>
+  <rect
+     x="108.81247"
+     y="472"
+     width="227.83505"
+     height="36"
+     rx="4.1424551"
+     fill="#1e293b"
+     stroke="#ea580c"
+     stroke-width="0.997094"
+     id="rect30" />
+  <text
+     x="213"
+     y="495"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="400"
+     fill="#fdba74"
+     id="text30">wpas_p2p_prov_disc()</text>
+  <rect
+     x="106.37997"
+     y="538"
+     width="233.30817"
+     height="36"
+     rx="4.2419662"
+     fill="#1e293b"
+     stroke="#ea580c"
+     stroke-width="1.00899"
+     id="rect31" />
+  <text
+     x="213"
+     y="561"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="400"
+     fill="#fdba74"
+     id="text31">p2p_prov_disc_req()</text>
+  <rect
+     x="105.16373"
+     y="610"
+     width="235.13254"
+     height="36"
+     rx="4.2751369"
+     fill="#1e293b"
+     stroke="#ea580c"
+     stroke-width="1.01294"
+     id="rect32" />
+  <text
+     x="213"
+     y="633"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="400"
+     fill="#fdba74"
+     id="text32">p2p_send_prov_disc_req()</text>
+  <rect
+     x="562.39313"
+     y="472"
+     width="249.38942"
+     height="44"
+     rx="4.4009895"
+     fill="#1e293b"
+     stroke="#a855f7"
+     stroke-width="1.02773"
+     id="rect33" />
+  <text
+     x="688"
+     y="488"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="400"
+     fill="#d8b4fe"
+     id="text33">wpas_start_wps_go() (Registrar)</text>
+  <text
+     x="688"
+     y="506"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="400"
+     fill="#d8b4fe"
+     id="text34">wpas_start_wps_enrollee() (Enrollee)</text>
+  <rect
+     x="491.98688"
+     y="532"
+     width="326.01312"
+     height="36"
+     rx="5.7531729"
+     fill="#1e293b"
+     stroke="#a855f7"
+     stroke-width="1.17506"
+     id="rect34" />
+  <text
+     x="648"
+     y="555"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="400"
+     fill="#d8b4fe"
+     id="text35">wps_registrar_add_pin() / button_pushed()</text>
+  <rect
+     x="491.98688"
+     y="580"
+     width="326.01312"
+     height="36"
+     rx="5.7531729"
+     fill="#1e293b"
+     stroke="#a855f7"
+     stroke-width="1.17506"
+     id="rect35" />
+  <text
+     x="648"
+     y="603"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="400"
+     fill="#d8b4fe"
+     id="text36">EAP-WSC M1-M8 八轮交换（DH 密钥派生）</text>
+  <rect
+     x="491.98688"
+     y="626"
+     width="326.01312"
+     height="24"
+     rx="5.7531729"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.17506"
+     id="rect36" />
+  <text
+     x="648"
+     y="643"
+     text-anchor="middle"
+     font-size="9px"
+     font-weight="400"
+     fill="#6ee7b7"
+     id="text37">成功 → wpas_p2p_wps_success() → p2p_wps_success_cb()</text>
+  <text
+     x="648"
+     y="682.19031"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#f87171"
+     id="text38">15s 超时 → wpas_p2p_group_formation_failed() 兜底</text>
+  <rect
+     x="268"
+     y="726"
+     width="360"
+     height="36"
+     rx="6"
+     fill="#1e293b"
+     stroke="#475569"
+     stroke-width="1.2"
+     id="rect38" />
+  <text
+     x="448"
+     y="744"
+     text-anchor="middle"
+     font-size="12px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text39">cfg80211 / nl80211</text>
+  <text
+     x="448"
+     y="760"
+     text-anchor="middle"
+     font-size="10px"
+     font-weight="400"
+     fill="#94a3b8"
+     id="text40">NL80211_CMD_FRAME (netlink)</text>
+  <rect
+     x="123.67747"
+     y="800"
+     width="212.90193"
+     height="44"
+     rx="3.757093"
+     fill="#1e293b"
+     stroke="#475569"
+     stroke-width="0.949583"
+     id="rect40" />
+  <text
+     x="228"
+     y="816"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="400"
+     fill="#e2e8f0"
+     id="text41">QCOM __wlan_hdd_mgmt_tx()</text>
+  <text
+     x="228"
+     y="834"
+     text-anchor="middle"
+     font-size="9px"
+     font-weight="400"
+     fill="#94a3b8"
+     id="text42">PD / GO-Neg Action 帧下发</text>
+  <rect
+     x="565.16376"
+     y="800"
+     width="226.88879"
+     height="44"
+     rx="4.0039196"
+     fill="#1e293b"
+     stroke="#475569"
+     stroke-width="0.980272"
+     id="rect42" />
+  <text
+     x="678"
+     y="816"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="400"
+     fill="#e2e8f0"
+     id="text43">MTK p2pFuncTxMgmtFrame()</text>
+  <text
+     x="678"
+     y="834"
+     text-anchor="middle"
+     font-size="9px"
+     font-weight="400"
+     fill="#94a3b8"
+     id="text44">PD / GO-Neg Action 帧下发</text>
+  <rect
+     x="122.25934"
+     y="848"
+     width="670.73944"
+     height="28"
+     rx="4.140367"
+     fill="#052e16"
+     fill-opacity="0.8"
+     stroke="#10b981"
+     stroke-width="0.909986"
+     id="rect44" />
+  <text
+     x="433"
+     y="866"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#6ee7b7"
+     id="text45">WPS M1-M8 走 EAPOL 数据帧（wpa_supplicant_eapol_send → control port / L2），不经 nl80211 管理帧链</text>
+  <path
+     d="m 448,136 v 46"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="path45" />
+  <path
+     d="m 448,218 v 30 h -99.43733 v 14"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="path46" />
+  <path
+     d="M 388,284 H 508"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="path47" />
+  <text
+     x="448"
+     y="278"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#94a3b8"
+     id="text47">委托</text>
+  <path
+     d="m 678,306 v 30 H 223 v 24"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="path48" />
+  <path
+     d="M 388,382 H 508"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="path49" />
+  <text
+     x="448"
+     y="376"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#94a3b8"
+     id="text49">AIDL stub 派发</text>
+  <path
+     d="m 678,404 v 35.50985 H 213 v 32.42203"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="path50" />
+  <path
+     d="M 213,507.405 V 536"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="path51" />
+  <path
+     d="M 213,573.93188 V 608"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="path52" />
+  <path
+     d="m 213,646.24374 v 59.3907 h 235 v 18.66565"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="path53" />
+  <text
+     x="333"
+     y="698"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#fdba74"
+     id="text53">PD Action 帧</text>
+  <path
+     d="M 448,762.02013 V 787.9155 H 228 V 800"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="path54" />
+  <path
+     d="m 448,762.45014 v 25.60218 H 678 V 800"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="path55" />
+  <path
+     d="M 337.25564,497.22938 390.03598,497.8375 478.8222,498 h 82.49089"
+     fill="none"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     stroke-dasharray="5, 3"
+     marker-end="url(#arrow-purple)"
+     id="path56"
+     sodipodi:nodetypes="cccc" />
+  <text
+     x="412.18875"
+     y="490.21503"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#c4b5fd"
+     id="text56">GO Neg 完成 → WPS</text>
+  <path
+     d="m 648,520 v 12"
+     fill="none"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     marker-end="url(#arrow-purple)"
+     id="path57" />
+  <path
+     d="m 648,568 v 12"
+     fill="none"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     marker-end="url(#arrow-purple)"
+     id="path58" />
+  <path
+     d="m 648,616 v 10"
+     fill="none"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     marker-end="url(#arrow-purple)"
+     id="path59" />
+  <path
+     d="m 818,598 h 19.12064 v 265.8375 h -43.79017"
+     fill="none"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     stroke-dasharray="5, 3"
+     marker-end="url(#arrow-purple)"
+     id="path60"
+     sodipodi:nodetypes="cccc" />
+  <text
+     x="867.1756"
+     y="704.15186"
+     text-anchor="end"
+     font-size="8px"
+     fill="#d8b4fe"
+     id="text60">EAPOL 数据帧</text>
+  <text
+     x="464.43002"
+     y="683.20038"
+     text-anchor="end"
+     font-size="8px"
+     fill="#6ee7b7"
+     id="text61">↑ GROUP_FORMATION_SUCCESS_EVENT</text>
+  <rect
+     x="18"
+     y="890"
+     width="840"
+     height="36"
+     rx="6"
+     fill="#0f172a"
+     fill-opacity="0.8"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect61" />
+  <path
+     d="M 38,908 H 68"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="2"
+     id="path61" />
+  <text
+     x="74"
+     y="911"
+     font-size="9px"
+     fill="#94a3b8"
+     id="text62">PD 阶段调用链</text>
+  <path
+     d="m 208,908 h 30"
+     fill="none"
+     stroke="#a855f7"
+     stroke-width="2"
+     id="path62" />
+  <text
+     x="244"
+     y="911"
+     font-size="9px"
+     fill="#94a3b8"
+     id="text63">WPS 配网阶段</text>
+  <path
+     d="m 358,908 h 30"
+     fill="none"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     stroke-dasharray="5, 3"
+     id="path63" />
+  <text
+     x="394"
+     y="911"
+     font-size="9px"
+     fill="#94a3b8"
+     id="text64">EAPOL 数据帧</text>
+  <rect
+     x="513"
+     y="902"
+     width="16"
+     height="12"
+     rx="2"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect64" />
+  <text
+     x="535"
+     y="911"
+     font-size="9px"
+     fill="#94a3b8"
+     id="text65">跨进程边界 (Binder/AIDL/nl80211)</text>
+</svg>

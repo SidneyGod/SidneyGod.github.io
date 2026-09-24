@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 660" width="960" height="660">
+  <!-- validate: skip-orphan-boxes -->
+  <style>
+    text { font-family: 'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif; }
+    .title { font-size:18px; font-weight:700; fill:#e2e8f0; letter-spacing:0.02em; }
+    .sub { font-size:12px; fill:#94a3b8; }
+    .lane-label { font-size:13px; font-weight:700; fill:#e2e8f0; }
+    .seg-label { font-size:12px; fill:#e2e8f0; }
+    .seg-label-sm { font-size:12px; fill:#cbd5e1; }
+    .param { font-size:12px; font-weight:700; fill:#c4b5fd; }
+    .param-txt { font-size:12px; fill:#94a3b8; }
+    .axis { font-size:12px; fill:#eab308; }
+    .legend { font-size:12px; fill:#e2e8f0; }
+    .foot { font-size:12px; fill:#94a3b8; }
+  </style>
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1a"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <marker id="arrow-gold" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#eab308"/>
+    </marker>
+  </defs>
+  <rect width="960" height="660" fill="url(#bg-grad)"/>
+  <text x="480" y="36" text-anchor="middle" class="title">NOA 时序：GO 的「暂时离开」公告</text>
+  <text x="480" y="58" text-anchor="middle" class="sub">X 轴 = TSF 时间 · 橙色 = GO 缺席窗口（NOA）</text>
+  <line x1="150" y1="104" x2="150" y2="506" stroke="#eab308" stroke-width="1" stroke-dasharray="4,4" fill="none"/>
+  <line x1="206" y1="104" x2="206" y2="506" stroke="#475569" stroke-width="1" stroke-dasharray="4,4" fill="none"/>
+  <line x1="486" y1="104" x2="486" y2="506" stroke="#475569" stroke-width="1" stroke-dasharray="4,4" fill="none"/>
+  <line x1="766" y1="104" x2="766" y2="506" stroke="#475569" stroke-width="1" stroke-dasharray="4,4" fill="none"/>
+  <line x1="864" y1="104" x2="864" y2="506" stroke="#475569" stroke-width="1" stroke-dasharray="4,4" fill="none"/>
+  <line x1="150" y1="104" x2="890" y2="104" stroke="#eab308" stroke-width="1.5" marker-end="url(#arrow-gold)"/>
+  <text x="158" y="122" class="axis">TSF 时间</text>
+  <text x="156" y="140" class="axis">TSF 锚点</text>
+  <line x1="150" y1="86" x2="290" y2="86" stroke="#a855f7" stroke-width="1.5"/>
+  <line x1="150" y1="86" x2="150" y2="80" stroke="#a855f7" stroke-width="1.5"/>
+  <line x1="290" y1="86" x2="290" y2="80" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="220" y="76" text-anchor="middle" class="param-txt">Beacon 周期 = 100 TU</text>
+  <rect x="148" y="148" width="744" height="94" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <rect x="148" y="270" width="744" height="94" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <rect x="150" y="152" width="56" height="86" rx="3" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="206" y="152" width="98" height="86" rx="3" fill="#431407" stroke="#f97316" stroke-width="1.5"/>
+  <rect x="304" y="152" width="182" height="86" rx="3" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="486" y="152" width="98" height="86" rx="3" fill="#431407" stroke="#f97316" stroke-width="1.5"/>
+  <rect x="584" y="152" width="182" height="86" rx="3" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="766" y="152" width="98" height="86" rx="3" fill="#431407" stroke="#f97316" stroke-width="1.5"/>
+  <rect x="864" y="152" width="26" height="86" rx="3" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="150" y="274" width="56" height="86" rx="3" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="206" y="274" width="98" height="86" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="304" y="274" width="182" height="86" rx="3" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="486" y="274" width="98" height="86" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="584" y="274" width="182" height="86" rx="3" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="766" y="274" width="98" height="86" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="864" y="274" width="26" height="86" rx="3" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+  <text x="20" y="200" class="lane-label">GO（信道 X）</text>
+  <text x="20" y="322" class="lane-label">Client</text>
+  <text x="255" y="190" text-anchor="middle" class="seg-label">缺席</text>
+  <text x="255" y="208" text-anchor="middle" class="seg-label-sm">切 STA 信道</text>
+  <text x="395" y="200" text-anchor="middle" class="seg-label">在场</text>
+  <text x="535" y="200" text-anchor="middle" class="seg-label">缺席</text>
+  <text x="675" y="200" text-anchor="middle" class="seg-label">在场</text>
+  <text x="815" y="200" text-anchor="middle" class="seg-label">缺席</text>
+  <text x="255" y="322" text-anchor="middle" class="seg-label">休眠</text>
+  <text x="395" y="322" text-anchor="middle" class="seg-label">在线</text>
+  <text x="535" y="322" text-anchor="middle" class="seg-label">休眠</text>
+  <text x="675" y="322" text-anchor="middle" class="seg-label">在线</text>
+  <text x="815" y="322" text-anchor="middle" class="seg-label">休眠</text>
+  <line x1="206" y1="392" x2="864" y2="392" stroke="#a855f7" stroke-width="1.5"/>
+  <line x1="206" y1="392" x2="206" y2="398" stroke="#a855f7" stroke-width="1.5"/>
+  <line x1="864" y1="392" x2="864" y2="398" stroke="#a855f7" stroke-width="1.5"/>
+  <line x1="206" y1="430" x2="486" y2="430" stroke="#a855f7" stroke-width="1.5"/>
+  <line x1="206" y1="430" x2="206" y2="436" stroke="#a855f7" stroke-width="1.5"/>
+  <line x1="486" y1="430" x2="486" y2="436" stroke="#a855f7" stroke-width="1.5"/>
+  <line x1="206" y1="468" x2="304" y2="468" stroke="#a855f7" stroke-width="1.5"/>
+  <line x1="206" y1="468" x2="206" y2="474" stroke="#a855f7" stroke-width="1.5"/>
+  <line x1="304" y1="468" x2="304" y2="474" stroke="#a855f7" stroke-width="1.5"/>
+  <line x1="150" y1="506" x2="206" y2="506" stroke="#a855f7" stroke-width="1.5"/>
+  <line x1="150" y1="506" x2="150" y2="512" stroke="#a855f7" stroke-width="1.5"/>
+  <line x1="206" y1="506" x2="206" y2="512" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="425" y="410" text-anchor="start"><tspan class="param" x="425">count</tspan><tspan class="seg-label" x="462"> = 3</tspan><tspan class="param-txt" x="492"> （公告 3 个缺席窗口）</tspan></text>
+  <text x="224" y="448" text-anchor="start"><tspan class="param" x="224">interval</tspan><tspan class="seg-label" x="283"> = 200 TU</tspan><tspan class="param-txt" x="350"> （两次离开间隔）</tspan></text>
+  <text x="137" y="486" text-anchor="start"><tspan class="param" x="137">duration</tspan><tspan class="seg-label" x="196"> ≈ 70 TU</tspan><tspan class="param-txt" x="256"> （每次离开时长）</tspan></text>
+  <text x="150" y="524" text-anchor="start"><tspan class="param">start_time</tspan><tspan class="seg-label"> </tspan><tspan class="param-txt"> （固件锚定的首次离开时刻）</tspan></text>
+  <rect x="150" y="546" width="14" height="14" rx="2" fill="#064e3b" stroke="#10b981"/>
+  <text x="172" y="558" class="legend">GO 在场 / Client 在线</text>
+  <rect x="390" y="546" width="14" height="14" rx="2" fill="#431407" stroke="#f97316"/>
+  <text x="412" y="558" class="legend">GO 缺席 · 切 STA 信道 Y 处理并发事务</text>
+  <rect x="700" y="546" width="14" height="14" rx="2" fill="#1e3a5f" stroke="#3b82f6"/>
+  <text x="722" y="558" class="legend">Client 休眠（省电）</text>
+  <line x1="150" y1="582" x2="176" y2="582" stroke="#eab308" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="184" y="586" class="legend"><tspan class="param">start_time</tspan><tspan class="param-txt"> 由固件锚定 · Host 只传 count / duration / interval</tspan></text>
+  <text x="150" y="618" class="foot">count==1 → 单次 NOA · count&gt;1 → 周期 NOA（duration &lt; interval）· 参数单位 µs（1 TU = 1024 µs）</text>
+</svg>

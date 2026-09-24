@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1000"
+   height="370"
+   viewBox="0 0 1000 370"
+   version="1.1"
+   id="svg18"
+   sodipodi:docname="04-blockack-80211e-flow.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview18"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.74"
+     inkscape:cx="500"
+     inkscape:cy="184.77011"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg18" />
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+ </style>
+  <defs
+     id="defs5">
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="692.82032"
+       y2="692.82032"
+       gradientTransform="scale(1.4433757,0.54848276)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arr-o"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#f97316"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arr-g"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#10b981"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arr-p"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#a855f7"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arr-b"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#3b82f6"
+         id="polygon5" />
+    </marker>
+  </defs>
+  <rect
+     width="1000"
+     height="380"
+     fill="url(#bg)"
+     id="rect5"
+     style="fill:url(#bg);stroke-width:0.889757"
+     x="0"
+     y="0" />
+  <!-- Title -->
+  <text
+     x="500"
+     y="28"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="16"
+     font-weight="700"
+     id="text5">802.11e Block ACK: Why No Immediate ACK?</text>
+  <text
+     x="500"
+     y="46"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="11"
+     id="text6">802.11e 时代 Block ACK 的工作流程 — 接收方为什么不逐帧回 ACK？</text>
+  <!-- ==================== Main Flow ==================== -->
+  <rect
+     x="30"
+     y="60"
+     width="940"
+     height="290"
+     rx="8"
+     fill="#1e293b"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect6" />
+  <!-- Sender & Receiver labels -->
+  <rect
+     x="80"
+     y="78"
+     width="80"
+     height="24"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect7" />
+  <text
+     x="120"
+     y="95"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="11"
+     font-weight="600"
+     id="text7">发送方</text>
+  <rect
+     x="840"
+     y="78"
+     width="80"
+     height="24"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect8" />
+  <text
+     x="880"
+     y="95"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="11"
+     font-weight="600"
+     id="text8">接收方</text>
+  <!-- Lifelines -->
+  <line
+     x1="120"
+     y1="102"
+     x2="120"
+     y2="335"
+     stroke="#3b82f6"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line8" />
+  <line
+     x1="880"
+     y1="102"
+     x2="880"
+     y2="335"
+     stroke="#3b82f6"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line9" />
+  <!-- Phase 0: ADDBA Negotiation -->
+  <rect
+     x="40"
+     y="110"
+     width="260"
+     height="50"
+     rx="5"
+     fill="#0f172a"
+     stroke="#a855f7"
+     stroke-width="1"
+     id="rect9" />
+  <text
+     x="170"
+     y="127"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-size="10"
+     font-weight="600"
+     id="text9">ADDBA 协商</text>
+  <!-- ADDBA Request -->
+  <line
+     x1="130"
+     y1="138"
+     x2="860"
+     y2="138"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     marker-end="url(#arr-p)"
+     id="line10" />
+  <text
+     x="495"
+     y="134"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-size="9"
+     id="text10">ADDBA Request</text>
+  <!-- ADDBA Response -->
+  <line
+     x1="870"
+     y1="152"
+     x2="140"
+     y2="152"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     marker-end="url(#arr-p)"
+     id="line11" />
+  <text
+     x="505"
+     y="148"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-size="9"
+     id="text11">ADDBA Response</text>
+  <!-- Phase 1: Data frames burst -->
+  <rect
+     x="40"
+     y="168"
+     width="920"
+     height="100"
+     rx="5"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect11" />
+  <text
+     x="500"
+     y="186"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="10"
+     font-weight="600"
+     id="text12">连续发送数据帧（帧间只隔 SIFS，不等 ACK）</text>
+  <!-- Frame 1 -->
+  <line
+     x1="130"
+     y1="200"
+     x2="860"
+     y2="200"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arr-o)"
+     id="line12" />
+  <text
+     x="495"
+     y="196"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="9"
+     id="text13">帧 1</text>
+  <!-- Frame 2 -->
+  <line
+     x1="130"
+     y1="220"
+     x2="860"
+     y2="220"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arr-o)"
+     id="line13" />
+  <text
+     x="495"
+     y="216"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="9"
+     id="text14">帧 2</text>
+  <!-- Frame 3 -->
+  <line
+     x1="130"
+     y1="240"
+     x2="860"
+     y2="240"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arr-o)"
+     id="line14" />
+  <text
+     x="495"
+     y="236"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="9"
+     id="text15">帧 3</text>
+  <!-- Dots -->
+  <text
+     x="495"
+     y="260"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="11"
+     id="text16">... 连续发送 N 帧 ...</text>
+  <!-- Phase 2: BAR + Block ACK -->
+  <rect
+     x="40"
+     y="275"
+     width="920"
+     height="55"
+     rx="5"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect16" />
+  <!-- BAR -->
+  <line
+     x1="130"
+     y1="293"
+     x2="860"
+     y2="293"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arr-b)"
+     id="line16" />
+  <text
+     x="495"
+     y="289"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="9"
+     font-weight="600"
+     id="text17">BAR (Block ACK Request)</text>
+  <!-- Block ACK -->
+  <line
+     x1="870"
+     y1="318"
+     x2="140"
+     y2="318"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arr-g)"
+     id="line17" />
+  <text
+     x="505"
+     y="314"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9"
+     font-weight="600"
+     id="text18">Block ACK (bitmap: 帧1✓ 帧2✓ 帧3✗ 帧4✓ ...)</text>
+</svg>

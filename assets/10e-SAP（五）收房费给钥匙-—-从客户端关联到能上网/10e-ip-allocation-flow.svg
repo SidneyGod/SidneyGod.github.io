@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 960 738"
+   width="960"
+   height="738"
+   version="1.1"
+   id="svg34"
+   sodipodi:docname="10e-ip-allocation-flow.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview34"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.4810298"
+     inkscape:cx="480.07136"
+     inkscape:cy="369"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg34" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; }
+    .title { font-size: 17px; font-weight: 700; fill: #e2e8f0; }
+    .section-label { font-size: 14px; font-weight: 700; fill: #94a3b8; }
+    .node-label { font-size: 12px; font-weight: 400; fill: #e2e8f0; }
+    .node-label-sm { font-size: 10px; font-weight: 400; fill: #94a3b8; }
+    .code-label { font-size: 10px; font-family: 'Maple Mono Normal NL NF CN', monospace; fill: #a5b4fc; }
+    .code-label-green { font-size: 10px; font-family: 'Maple Mono Normal NL NF CN', monospace; fill: #6ee7b7; }
+    .arrow-label { font-size: 9px; fill: #64748b; }
+  </style>
+  <defs
+     id="defs6">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arr-purple"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#a855f7"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arr-blue"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#3b82f6"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arr-green"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#10b981"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arr-orange"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#f97316"
+         id="polygon5" />
+    </marker>
+    <marker
+       id="arr-gray"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#64748b"
+         id="polygon6" />
+    </marker>
+  </defs>
+  <rect
+     width="960"
+     height="738"
+     fill="url(#bg)"
+     id="rect6" />
+  <text
+     x="480"
+     y="34"
+     text-anchor="middle"
+     class="title"
+     id="text6">SAP IP 分配全链路 — Tethering → IpServer → DhcpServer</text>
+  <rect
+     x="30"
+     y="50"
+     width="440"
+     height="666"
+     rx="10"
+     fill="none"
+     stroke="#4338ca"
+     stroke-width="1.5"
+     stroke-dasharray="6,3"
+     opacity="0.6"
+     id="rect7" />
+  <text
+     x="48"
+     y="72"
+     class="section-label"
+     fill="#818cf8"
+     id="text7">Tethering 进程 (APEX)</text>
+  <rect
+     x="490"
+     y="50"
+     width="440"
+     height="666"
+     rx="10"
+     fill="none"
+     stroke="#059669"
+     stroke-width="1.5"
+     stroke-dasharray="6,3"
+     opacity="0.6"
+     id="rect8" />
+  <text
+     x="508"
+     y="72"
+     class="section-label"
+     fill="#10b981"
+     id="text8">NetworkStack 进程 (APK)</text>
+  <rect
+     x="50"
+     y="90"
+     width="400"
+     height="36"
+     rx="5"
+     ry="5"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1.5"
+     id="rect9" />
+  <text
+     x="65"
+     y="113"
+     text-anchor="start"
+     class="code-label"
+     id="text9">WifiManager.startTetheredHotspot()</text>
+  <rect
+     x="50"
+     y="140"
+     width="400"
+     height="28"
+     rx="5"
+     ry="5"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect10" />
+  <text
+     x="65"
+     y="158"
+     text-anchor="start"
+     class="node-label-sm"
+     id="text10">→ SoftApManager → hostapd 启动 Beacon</text>
+  <line
+     x1="250"
+     y1="126"
+     x2="250"
+     y2="140"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-purple)"
+     id="line10" />
+  <rect
+     x="50"
+     y="175"
+     width="400"
+     height="36"
+     rx="5"
+     ry="5"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1.5"
+     id="rect11" />
+  <text
+     x="65"
+     y="198"
+     text-anchor="start"
+     class="node-label"
+     id="text11">WIFI_AP_STATE_ENABLED 回调</text>
+  <line
+     x1="250"
+     y1="168"
+     x2="250"
+     y2="175"
+     stroke="#f97316"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line11" />
+  <rect
+     x="50"
+     y="225"
+     width="400"
+     height="36"
+     rx="5"
+     ry="5"
+     fill="#1c1917"
+     stroke="#ea580c"
+     stroke-width="1.5"
+     id="rect12" />
+  <text
+     x="65"
+     y="248"
+     text-anchor="start"
+     class="code-label"
+     id="text12">StartTetheringSoftApCallback.onStateChanged()</text>
+  <line
+     x1="250"
+     y1="211"
+     x2="250"
+     y2="225"
+     stroke="#f97316"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line12" />
+  <rect
+     x="50"
+     y="275"
+     width="400"
+     height="36"
+     rx="5"
+     ry="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect13" />
+  <text
+     x="65"
+     y="298"
+     text-anchor="start"
+     class="code-label"
+     id="text13">enableIpServing() → ensureIpServerStartedForType()</text>
+  <line
+     x1="250"
+     y1="261"
+     x2="250"
+     y2="275"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-purple)"
+     id="line13" />
+  <rect
+     x="70"
+     y="322"
+     width="360"
+     height="28"
+     rx="5"
+     ry="5"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect14" />
+  <text
+     x="85"
+     y="340"
+     text-anchor="start"
+     class="code-label"
+     id="text14">tetherInternal() → ipServer.enable(request)</text>
+  <line
+     x1="250"
+     y1="311"
+     x2="250"
+     y2="322"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-blue)"
+     id="line14" />
+  <rect
+     x="50"
+     y="365"
+     width="400"
+     height="52"
+     rx="5"
+     ry="5"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1.5"
+     id="rect15" />
+  <text
+     x="65"
+     y="383"
+     text-anchor="start"
+     class="node-label"
+     id="text15">IpServer 状态机</text>
+  <text
+     x="65"
+     y="404"
+     text-anchor="start"
+     class="code-label"
+     id="text16">InitialState ──CMD_TETHER_REQUESTED──▶ TetheredState</text>
+  <line
+     x1="250"
+     y1="350"
+     x2="250"
+     y2="365"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-purple)"
+     id="line16" />
+  <rect
+     x="50"
+     y="432"
+     width="400"
+     height="52"
+     rx="5"
+     ry="5"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1.5"
+     id="rect16" />
+  <text
+     x="65"
+     y="450"
+     text-anchor="start"
+     class="node-label"
+     id="text17">enter() → startServingInterface()</text>
+  <text
+     x="65"
+     y="471"
+     text-anchor="start"
+     class="code-label"
+     id="text18">→ startIPv4() → configureIPv4() → configureDhcp()</text>
+  <line
+     x1="250"
+     y1="417"
+     x2="250"
+     y2="432"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-purple)"
+     id="line18" />
+  <rect
+     x="50"
+     y="500"
+     width="360.83807"
+     height="36"
+     rx="4.5104756"
+     ry="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.42468"
+     id="rect18" />
+  <text
+     x="65"
+     y="523"
+     text-anchor="start"
+     class="code-label"
+     id="text19">startDhcp() → mDeps.makeDhcpServer(params, cb)</text>
+  <line
+     x1="250"
+     y1="484"
+     x2="250"
+     y2="500"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-blue)"
+     id="line19" />
+  <line
+     x1="411.51328"
+     y1="518"
+     x2="488"
+     y2="518"
+     stroke="#f97316"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line20" />
+  <text
+     x="443"
+     y="512"
+     text-anchor="middle"
+     class="arrow-label"
+     id="text20">AIDL 跨进程</text>
+  <rect
+     x="510"
+     y="500"
+     width="400"
+     height="36"
+     rx="5"
+     ry="5"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect20" />
+  <text
+     x="525"
+     y="523"
+     text-anchor="start"
+     class="code-label-green"
+     id="text21">NetworkStackService.makeDhcpServer()</text>
+  <line
+     x1="710"
+     y1="536"
+     x2="710"
+     y2="555"
+     stroke="#10b981"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-green)"
+     id="line21" />
+  <rect
+     x="510"
+     y="560"
+     width="400"
+     height="36"
+     rx="5"
+     ry="5"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect21" />
+  <text
+     x="525"
+     y="583"
+     text-anchor="start"
+     class="code-label-green"
+     id="text22">new DhcpServer(params, iface, callbacks)</text>
+  <line
+     x1="710"
+     y1="596"
+     x2="710"
+     y2="615"
+     stroke="#10b981"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-green)"
+     id="line22" />
+  <rect
+     x="510"
+     y="620"
+     width="400"
+     height="52"
+     rx="5"
+     ry="5"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect22" />
+  <text
+     x="525"
+     y="640"
+     text-anchor="start"
+     class="node-label"
+     id="text23">DhcpServer（Stopped → Running）</text>
+  <text
+     x="525"
+     y="661"
+     text-anchor="start"
+     class="node-label-sm"
+     id="text24">UDP:67 收包，等待客户端 DHCPDISCOVER</text>
+  <circle
+     cx="512"
+     cy="646"
+     r="4"
+     fill="#10b981"
+     opacity="0.9"
+     id="circle24" />
+  <rect
+     x="510"
+     y="90"
+     width="400"
+     height="232.32571"
+     rx="8"
+     fill="none"
+     stroke="#475569"
+     stroke-width="0.862922"
+     stroke-dasharray="4, 4"
+     id="rect24" />
+  <text
+     x="528"
+     y="110"
+     class="section-label"
+     fill="#64748b"
+     id="text25">SAP 客户端（关联上来的 STA）</text>
+  <rect
+     x="530"
+     y="125"
+     width="360"
+     height="28"
+     rx="5"
+     ry="5"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect25" />
+  <text
+     x="545"
+     y="144"
+     class="node-label-sm"
+     fill="#e2e8f0"
+     id="text26">客户端关联成功 → 广播 DHCPDISCOVER</text>
+  <rect
+     x="530"
+     y="162"
+     width="360"
+     height="28"
+     rx="5"
+     ry="5"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect26" />
+  <text
+     x="545"
+     y="181"
+     class="node-label-sm"
+     fill="#e2e8f0"
+     id="text27">DhcpServer 收到 → 解析 DHCPDISCOVER</text>
+  <rect
+     x="530"
+     y="199"
+     width="360"
+     height="28"
+     rx="5"
+     ry="5"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect27" />
+  <text
+     x="545"
+     y="218"
+     class="node-label-sm"
+     fill="#e2e8f0"
+     id="text28">↳ 分配地址 → 发送 DHCPOFFER</text>
+  <rect
+     x="530"
+     y="236"
+     width="360"
+     height="28"
+     rx="5"
+     ry="5"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect28" />
+  <text
+     x="545"
+     y="255"
+     class="node-label-sm"
+     fill="#e2e8f0"
+     id="text29">客户端 → DHCPREQUEST（确认地址）</text>
+  <rect
+     x="530"
+     y="273"
+     width="360"
+     height="28"
+     rx="5"
+     ry="5"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect29" />
+  <text
+     x="545"
+     y="292"
+     class="node-label-sm"
+     fill="#e2e8f0"
+     id="text30">DhcpServer → DHCPACK（租约生效，3600s）</text>
+  <line
+     x1="710"
+     y1="153"
+     x2="710"
+     y2="161"
+     stroke="#f97316"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line30" />
+  <line
+     x1="710"
+     y1="190"
+     x2="710"
+     y2="198"
+     stroke="#10b981"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-green)"
+     id="line31" />
+  <line
+     x1="710"
+     y1="227"
+     x2="710"
+     y2="235"
+     stroke="#f97316"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line32" />
+  <line
+     x1="710"
+     y1="264"
+     x2="710"
+     y2="272"
+     stroke="#10b981"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-green)"
+     id="line33" />
+  <path
+     d="M 510,646 H 497.45288 V 103.45654 H 510"
+     stroke="#10b981"
+     stroke-width="1.37405"
+     fill="none"
+     stroke-dasharray="3, 3"
+     marker-end="url(#arr-green)"
+     id="path33" />
+  <rect
+     x="50"
+     y="688"
+     width="400"
+     height="28"
+     rx="5"
+     ry="5"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect33" />
+  <text
+     x="65"
+     y="707"
+     text-anchor="start"
+     class="node-label-sm"
+     id="text33">SAP 接口 (wlan1) — 客户端拿到 IP，可以上网</text>
+  <rect
+     x="510"
+     y="688"
+     width="400"
+     height="28"
+     rx="5"
+     ry="5"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect34" />
+  <text
+     x="525"
+     y="707"
+     text-anchor="start"
+     class="node-label-sm"
+     id="text34">IPv4: 192.168.x.x/24  │  IPv6: RA → /64 前缀</text>
+</svg>

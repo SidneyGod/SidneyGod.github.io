@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 480"
+   width="1200"
+   height="480"
+   version="1.1"
+   id="svg48"
+   sodipodi:docname="08-8021x-arch.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview48"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.4462011"
+     inkscape:cx="599.84741"
+     inkscape:cy="240.2847"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg48" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card-grad"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+    <marker
+       id="arrow-r"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="m0,0l10,5l-10,5l0,-10z"
+         fill="#94a3b8"
+         id="path4" />
+    </marker>
+  </defs>
+  <rect
+     width="1200"
+     height="480"
+     fill="url(#bg-grad)"
+     id="rect4" />
+  <text
+     x="600"
+     y="30"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="16"
+     font-weight="700"
+     id="text4">802.1X / RADIUS 企业级认证架构</text>
+  <text
+     x="600"
+     y="48"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="11"
+     id="text5">802.11-2024 Section 12.6 (RSNA) | WPA2/WPA3 Enterprise</text>
+  <!-- Three entities -->
+  <rect
+     x="60"
+     y="70"
+     width="220"
+     height="120"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#8b5cf6"
+     stroke-width="1.5"
+     id="rect5" />
+  <text
+     x="170"
+     y="95"
+     text-anchor="middle"
+     fill="#c4b5fd"
+     font-size="14"
+     font-weight="700"
+     id="text6">Supplicant</text>
+  <text
+     x="170"
+     y="115"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text7">客户端 STA</text>
+  <text
+     x="170"
+     y="135"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text8">通过 EAP 协议验证身份</text>
+  <text
+     x="170"
+     y="155"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text9">提供认证凭据(证书/密钥)</text>
+  <text
+     x="170"
+     y="175"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text10">会话密钥由 RADIUS 生成</text>
+  <rect
+     x="490"
+     y="70"
+     width="220"
+     height="120"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect10" />
+  <text
+     x="600"
+     y="95"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="14"
+     font-weight="700"
+     id="text11">Authenticator</text>
+  <text
+     x="600"
+     y="115"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text12">AP / 控制器</text>
+  <text
+     x="600"
+     y="135"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text13">中间人：转发 EAP 帧</text>
+  <text
+     x="600"
+     y="155"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text14">不知道密码，只转发</text>
+  <text
+     x="600"
+     y="175"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text15">最终从 RADIUS 获得 PMK</text>
+  <rect
+     x="920"
+     y="70"
+     width="220"
+     height="120"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect15" />
+  <text
+     x="1030"
+     y="95"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="14"
+     font-weight="700"
+     id="text16">Authentication Server</text>
+  <text
+     x="1030"
+     y="115"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text17">RADIUS 服务器</text>
+  <text
+     x="1030"
+     y="135"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text18">验证用户身份</text>
+  <text
+     x="1030"
+     y="155"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text19">生成会话密钥 PMK</text>
+  <text
+     x="1030"
+     y="175"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text20">发送给 AP 安装</text>
+  <!-- Connections -->
+  <line
+     x1="280"
+     y1="130"
+     x2="490"
+     y2="130"
+     stroke="#8b5cf6"
+     stroke-width="2"
+     marker-end="url(#arrow-r)"
+     id="line20" />
+  <text
+     x="385"
+     y="125"
+     text-anchor="middle"
+     fill="#8b5cf6"
+     font-size="10"
+     id="text21">EAP 帧</text>
+  <text
+     x="385"
+     y="140"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text22">(802.1X 框架)</text>
+  <line
+     x1="710"
+     y1="130"
+     x2="920"
+     y2="130"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#arrow-r)"
+     id="line22" />
+  <text
+     x="815"
+     y="125"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="10"
+     id="text23">RADIUS 协议</text>
+  <text
+     x="815"
+     y="140"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text24">(UDP 1812/1813)</text>
+  <!-- EAP Methods -->
+  <rect
+     x="60"
+     y="210"
+     width="1100"
+     height="100"
+     rx="8"
+     fill="url(#card-grad)"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect24" />
+  <text
+     x="600"
+     y="232"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="13"
+     font-weight="700"
+     id="text25">常见 EAP 方法对比</text>
+  <rect
+     x="80"
+     y="245"
+     width="240"
+     height="55"
+     rx="6"
+     fill="#065f46"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect25" />
+  <text
+     x="200"
+     y="265"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="11"
+     font-weight="600"
+     id="text26">EAP-TLS</text>
+  <text
+     x="200"
+     y="280"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text27">双向认证 + 密钥证书</text>
+  <text
+     x="200"
+     y="293"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="9"
+     id="text28">安全性最高(强制密钥)</text>
+  <rect
+     x="350"
+     y="245"
+     width="240"
+     height="55"
+     rx="6"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect28" />
+  <text
+     x="470"
+     y="265"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="11"
+     font-weight="600"
+     id="text29">PEAP</text>
+  <text
+     x="470"
+     y="280"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text30">TLS集道 + 用户名/密码</text>
+  <text
+     x="470"
+     y="293"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text31">最常用(单向认证)</text>
+  <rect
+     x="620"
+     y="245"
+     width="240"
+     height="55"
+     rx="6"
+     fill="#1e3a5f"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect31" />
+  <text
+     x="740"
+     y="265"
+     text-anchor="middle"
+     fill="#fdba74"
+     font-size="11"
+     font-weight="600"
+     id="text32">EAP-TTLS</text>
+  <text
+     x="740"
+     y="280"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text33">类似 PEAP，但更灵活</text>
+  <text
+     x="740"
+     y="293"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text34">支持多种内层认证</text>
+  <rect
+     x="890"
+     y="245"
+     width="240"
+     height="55"
+     rx="6"
+     fill="#1e3a5f"
+     stroke="#a78bfa"
+     stroke-width="1"
+     id="rect34" />
+  <text
+     x="1010"
+     y="265"
+     text-anchor="middle"
+     fill="#c4b5fd"
+     font-size="11"
+     font-weight="600"
+     id="text35">EAP-MSCHAPv2</text>
+  <text
+     x="1010"
+     y="280"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text36">用户名/密码(弱于 TLS)</text>
+  <text
+     x="1010"
+     y="293"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text37">常用于 PEAP 内层</text>
+  <!-- Authentication Flow -->
+  <rect
+     x="60"
+     y="330"
+     width="1100"
+     height="135"
+     rx="8"
+     fill="url(#card-grad)"
+     stroke="#fbbf24"
+     stroke-width="1"
+     id="rect37" />
+  <text
+     x="600"
+     y="352"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="12"
+     font-weight="700"
+     id="text38">认证流程高级视图</text>
+  <text
+     x="80"
+     y="375"
+     fill="#94a3b8"
+     font-size="10"
+     id="text39">1. STA → AP: EAP-Start (802.1X 框架)</text>
+  <text
+     x="80"
+     y="392"
+     fill="#94a3b8"
+     font-size="10"
+     id="text40">2. AP → RADIUS: Access-Request (EAP 帧转发)</text>
+  <text
+     x="80"
+     y="409"
+     fill="#94a3b8"
+     font-size="10"
+     id="text41">3. RADIUS → AP → STA: EAP-Challenge</text>
+  <text
+     x="80"
+     y="426"
+     fill="#94a3b8"
+     font-size="10"
+     id="text42">4. STA → AP → RADIUS: EAP-Response (认证数据)</text>
+  <text
+     x="600"
+     y="375"
+     fill="#94a3b8"
+     font-size="10"
+     id="text43">5. RADIUS 验证用户，生成 PMK</text>
+  <text
+     x="600"
+     y="392"
+     fill="#94a3b8"
+     font-size="10"
+     id="text44">6. RADIUS → AP: Access-Accept + PMK</text>
+  <text
+     x="600"
+     y="409"
+     fill="#94a3b8"
+     font-size="10"
+     id="text45">7. AP 安装 PMK，开始 4-Way Handshake</text>
+  <text
+     x="600"
+     y="426"
+     fill="#94a3b8"
+     font-size="10"
+     id="text46">8. 4-Way Handshake → PTK → 加寅连接</text>
+  <rect
+     x="80"
+     y="438"
+     width="540"
+     height="22"
+     rx="3"
+     fill="#7c2d12"
+     id="rect46" />
+  <text
+     x="350"
+     y="453"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="10"
+     id="text47">比喝：认证是“交给认证中心的身份证”，AP 是“门卫”，只转发不决定</text>
+  <rect
+     x="640"
+     y="438"
+     width="500"
+     height="22"
+     rx="3"
+     fill="#065f46"
+     id="rect47" />
+  <text
+     x="890"
+     y="453"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="10"
+     id="text48">优点：每个用户独立密钥，可单独撑销访问权限</text>
+</svg>

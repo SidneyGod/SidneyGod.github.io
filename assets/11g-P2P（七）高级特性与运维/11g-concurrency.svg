@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" width="1000" height="720"><!-- validate: skip-orphan-boxes -->
+<style>
+text { font-family: 'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif; }
+</style>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f0f1a"/><stop offset="100%" stop-color="#16162b"/></linearGradient>
+<marker id="m-red" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#ef4444"/></marker>
+</defs>
+<rect width="1000" height="720" fill="url(#bg)"/>
+<text x="500" y="34" text-anchor="middle" font-size="18" fill="#e2e8f0" font-weight="bold">STA + P2P 并发策略对比</text>
+<text x="500" y="56" text-anchor="middle" font-size="12" fill="#94a3b8" font-weight="normal">MCC / DBS / SCC 三种分时与并行策略 + NOA 缺席调度</text>
+<rect x="40" y="74" width="300" height="178" rx="8" fill="#0f172a" stroke="#f97316" stroke-width="1.2"/>
+<text x="190" y="98" text-anchor="middle" font-size="13" fill="#f97316" font-weight="bold">MCC 单射频分时</text>
+<text x="190" y="116" text-anchor="middle" font-size="11" fill="#94a3b8" font-weight="normal">一套射频 · 时间片轮转</text>
+<text x="320" y="132" text-anchor="end" font-size="11" fill="#475569" font-weight="normal">时间 →</text>
+<text x="56" y="148" text-anchor="start" font-size="11" fill="#94a3b8" font-weight="normal">STA 信道</text>
+<text x="56" y="198" text-anchor="start" font-size="11" fill="#94a3b8" font-weight="normal">P2P 信道</text>
+<rect x="56" y="154" width="42" height="26" rx="3" fill="#3b82f6"/>
+<rect x="56" y="204" width="42" height="26" rx="3" fill="#1a1a2e"/>
+<rect x="100" y="154" width="42" height="26" rx="3" fill="#1a1a2e"/>
+<rect x="100" y="204" width="42" height="26" rx="3" fill="#f97316"/>
+<rect x="144" y="154" width="42" height="26" rx="3" fill="#3b82f6"/>
+<rect x="144" y="204" width="42" height="26" rx="3" fill="#1a1a2e"/>
+<rect x="188" y="154" width="42" height="26" rx="3" fill="#1a1a2e"/>
+<rect x="188" y="204" width="42" height="26" rx="3" fill="#f97316"/>
+<rect x="232" y="154" width="42" height="26" rx="3" fill="#3b82f6"/>
+<rect x="232" y="204" width="42" height="26" rx="3" fill="#1a1a2e"/>
+<rect x="276" y="154" width="42" height="26" rx="3" fill="#1a1a2e"/>
+<rect x="276" y="204" width="42" height="26" rx="3" fill="#f97316"/>
+<rect x="360" y="74" width="300" height="178" rx="8" fill="#0f172a" stroke="#3b82f6" stroke-width="1.2"/>
+<text x="510" y="98" text-anchor="middle" font-size="13" fill="#3b82f6" font-weight="bold">DBS 双射频并行</text>
+<text x="510" y="116" text-anchor="middle" font-size="11" fill="#94a3b8" font-weight="normal">两套射频 · 真并行</text>
+<text x="640" y="132" text-anchor="end" font-size="11" fill="#475569" font-weight="normal">时间 →</text>
+<text x="376" y="148" text-anchor="start" font-size="11" fill="#94a3b8" font-weight="normal">STA 2.4GHz</text>
+<text x="376" y="198" text-anchor="start" font-size="11" fill="#94a3b8" font-weight="normal">P2P 5GHz</text>
+<rect x="376" y="154" width="264" height="26" rx="3" fill="#3b82f6"/>
+<rect x="376" y="204" width="264" height="26" rx="3" fill="#f97316"/>
+<rect x="680" y="74" width="300" height="178" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.2"/>
+<text x="830" y="98" text-anchor="middle" font-size="13" fill="#10b981" font-weight="bold">SCC 同信道</text>
+<text x="830" y="116" text-anchor="middle" font-size="11" fill="#94a3b8" font-weight="normal">一套射频 · 同一信道共享</text>
+<text x="960" y="132" text-anchor="end" font-size="11" fill="#475569" font-weight="normal">时间 →</text>
+<text x="696" y="168" text-anchor="start" font-size="11" fill="#94a3b8" font-weight="normal">单信道共享</text>
+<rect x="696" y="178" width="264" height="26" rx="3" fill="#10b981"/>
+<text x="828" y="222" text-anchor="middle" font-size="11" fill="#cbd5e1" font-weight="normal">STA + P2P 同信道</text>
+<rect x="40" y="270" width="920" height="440" rx="10" fill="#0f172a" stroke="#eab308" stroke-width="1.2" stroke-dasharray="5,3"/>
+<text x="500" y="296" text-anchor="middle" font-size="15" fill="#eab308" font-weight="bold">NOA（Notice of Absence）调度 —— GO 离开去 STA 信道处理</text>
+<text x="500" y="316" text-anchor="middle" font-size="12" fill="#94a3b8" font-weight="normal">缺席窗口期间 P2P Client 帧无人应答（靠 802.11 重传兜底）</text>
+<text x="64" y="352" text-anchor="start" font-size="12" fill="#cbd5e1" font-weight="normal">GO Beacon</text>
+<text x="64" y="410" text-anchor="start" font-size="12" fill="#cbd5e1" font-weight="normal">GO 空口</text>
+<text x="64" y="476" text-anchor="start" font-size="12" fill="#cbd5e1" font-weight="normal">P2P Client</text>
+<rect x="200" y="340" width="6" height="18" rx="2" fill="#eab308"/>
+<rect x="280" y="340" width="6" height="18" rx="2" fill="#eab308"/>
+<rect x="540" y="340" width="6" height="18" rx="2" fill="#eab308"/>
+<rect x="620" y="340" width="6" height="18" rx="2" fill="#eab308"/>
+<rect x="880" y="340" width="6" height="18" rx="2" fill="#eab308"/>
+<rect x="180" y="396" width="200" height="28" rx="4" fill="#052e16" stroke="#10b981" stroke-width="1"/>
+<rect x="380" y="396" width="140" height="28" rx="4" fill="#3b0a14" stroke="#ef4444" stroke-width="1"/>
+<rect x="520" y="396" width="180" height="28" rx="4" fill="#052e16" stroke="#10b981" stroke-width="1"/>
+<rect x="700" y="396" width="140" height="28" rx="4" fill="#3b0a14" stroke="#ef4444" stroke-width="1"/>
+<rect x="840" y="396" width="100" height="28" rx="4" fill="#052e16" stroke="#10b981" stroke-width="1"/>
+<text x="280" y="390" text-anchor="middle" font-size="11" fill="#10b981" font-weight="normal">Beacon + 服务</text>
+<text x="450" y="390" text-anchor="middle" font-size="11" fill="#ef4444" font-weight="bold">NOA 缺席</text>
+<text x="610" y="390" text-anchor="middle" font-size="11" fill="#10b981" font-weight="normal">Beacon + 服务</text>
+<text x="770" y="390" text-anchor="middle" font-size="11" fill="#ef4444" font-weight="bold">NOA 缺席</text>
+<line x1="450" y1="470" x2="450" y2="432" stroke="#ef4444" stroke-width="1.5" marker-end="url(#m-red)" fill="none"/>
+<line x1="770" y1="470" x2="770" y2="432" stroke="#ef4444" stroke-width="1.5" marker-end="url(#m-red)" fill="none"/>
+<text x="590" y="490" text-anchor="middle" font-size="12" fill="#ef4444" font-weight="bold">Client 帧在缺席窗口发送 → 无人应答</text>
+<rect x="180" y="536" width="200" height="46" rx="8" fill="#1a1a2e" stroke="#eab308" stroke-width="1.2"/>
+<text x="280" y="556" text-anchor="middle" font-size="12" fill="#eab308" font-weight="bold">count = 2</text>
+<text x="280" y="574" text-anchor="middle" font-size="11" fill="#94a3b8" font-weight="normal">本轮缺席窗口数</text>
+<line x1="380" y1="618" x2="520" y2="618" stroke="#eab308" stroke-width="1.2" fill="none"/>
+<line x1="380" y1="613" x2="380" y2="623" stroke="#eab308" stroke-width="1.2" fill="none"/>
+<line x1="520" y1="613" x2="520" y2="623" stroke="#eab308" stroke-width="1.2" fill="none"/>
+<text x="450" y="636" text-anchor="middle" font-size="12" fill="#eab308" font-weight="normal">duration = 单次缺席时长</text>
+<line x1="380" y1="668" x2="700" y2="668" stroke="#eab308" stroke-width="1.2" fill="none"/>
+<line x1="380" y1="663" x2="380" y2="673" stroke="#eab308" stroke-width="1.2" fill="none"/>
+<line x1="700" y1="663" x2="700" y2="673" stroke="#eab308" stroke-width="1.2" fill="none"/>
+<text x="540" y="686" text-anchor="middle" font-size="12" fill="#eab308" font-weight="normal">interval = 缺席窗口间隔</text>
+</svg>

@@ -1,0 +1,2416 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 910 615"
+   width="910"
+   height="615"
+   version="1.1"
+   id="svg389"
+   sodipodi:docname="05-256qam-constellation.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview389"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.7772358"
+     inkscape:cx="455.20128"
+     inkscape:cy="307.5"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg389" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card-grad"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+  </defs>
+  <rect
+     width="910"
+     height="615"
+     fill="url(#bg-grad)"
+     id="rect4" />
+  <!-- Title -->
+  <text
+     x="470"
+     y="35"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="18"
+     font-weight="700"
+     id="text4">QAM Constellation Evolution — Packing More Data per Symbol</text>
+  <text
+     x="470"
+     y="55"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="13"
+     id="text5">QAM 星座图演进 — 每个符号装更多比特</text>
+  <!-- 16-QAM -->
+  <rect
+     x="40"
+     y="75"
+     width="270"
+     height="270"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect5" />
+  <text
+     x="175"
+     y="100"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="14"
+     font-weight="700"
+     id="text6">16-QAM</text>
+  <text
+     x="175"
+     y="118"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="11"
+     id="text7">4 bit/symbol (802.11a/g/n)</text>
+  <!-- 16-QAM constellation (4x4 grid) -->
+  <rect
+     x="80"
+     y="130"
+     width="190"
+     height="190"
+     rx="4"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect7" />
+  <!-- Axes -->
+  <line
+     x1="175"
+     y1="135"
+     x2="175"
+     y2="315"
+     stroke="#475569"
+     stroke-width="0.5"
+     id="line7" />
+  <line
+     x1="85"
+     y1="225"
+     x2="265"
+     y2="225"
+     stroke="#475569"
+     stroke-width="0.5"
+     id="line8" />
+  <text
+     x="268"
+     y="228"
+     fill="#64748b"
+     font-size="9"
+     id="text8">I</text>
+  <text
+     x="172"
+     y="132"
+     fill="#64748b"
+     font-size="9"
+     id="text9">Q</text>
+  <!-- 16 points (4x4) -->
+  <circle
+     cx="115"
+     cy="160"
+     r="4"
+     fill="#3b82f6"
+     id="circle9" />
+  <circle
+     cx="145"
+     cy="160"
+     r="4"
+     fill="#3b82f6"
+     id="circle10" />
+  <circle
+     cx="205"
+     cy="160"
+     r="4"
+     fill="#3b82f6"
+     id="circle11" />
+  <circle
+     cx="235"
+     cy="160"
+     r="4"
+     fill="#3b82f6"
+     id="circle12" />
+  <circle
+     cx="115"
+     cy="190"
+     r="4"
+     fill="#3b82f6"
+     id="circle13" />
+  <circle
+     cx="145"
+     cy="190"
+     r="4"
+     fill="#3b82f6"
+     id="circle14" />
+  <circle
+     cx="205"
+     cy="190"
+     r="4"
+     fill="#3b82f6"
+     id="circle15" />
+  <circle
+     cx="235"
+     cy="190"
+     r="4"
+     fill="#3b82f6"
+     id="circle16" />
+  <circle
+     cx="115"
+     cy="260"
+     r="4"
+     fill="#3b82f6"
+     id="circle17" />
+  <circle
+     cx="145"
+     cy="260"
+     r="4"
+     fill="#3b82f6"
+     id="circle18" />
+  <circle
+     cx="205"
+     cy="260"
+     r="4"
+     fill="#3b82f6"
+     id="circle19" />
+  <circle
+     cx="235"
+     cy="260"
+     r="4"
+     fill="#3b82f6"
+     id="circle20" />
+  <circle
+     cx="115"
+     cy="290"
+     r="4"
+     fill="#3b82f6"
+     id="circle21" />
+  <circle
+     cx="145"
+     cy="290"
+     r="4"
+     fill="#3b82f6"
+     id="circle22" />
+  <circle
+     cx="205"
+     cy="290"
+     r="4"
+     fill="#3b82f6"
+     id="circle23" />
+  <circle
+     cx="235"
+     cy="290"
+     r="4"
+     fill="#3b82f6"
+     id="circle24" />
+  <text
+     x="175"
+     y="358"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10"
+     id="text24">点间距大 → 抗噪声强</text>
+  <text
+     x="175"
+     y="373"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="10"
+     id="text25">SNR 要求: ~18 dB</text>
+  <!-- 64-QAM -->
+  <rect
+     x="330"
+     y="75"
+     width="270"
+     height="270"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect25" />
+  <text
+     x="465"
+     y="100"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="14"
+     font-weight="700"
+     id="text26">64-QAM</text>
+  <text
+     x="465"
+     y="118"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="11"
+     id="text27">6 bit/symbol (802.11n/ac)</text>
+  <rect
+     x="370"
+     y="130"
+     width="190"
+     height="190"
+     rx="4"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect27" />
+  <line
+     x1="465"
+     y1="135"
+     x2="465"
+     y2="315"
+     stroke="#475569"
+     stroke-width="0.5"
+     id="line27" />
+  <line
+     x1="375"
+     y1="225"
+     x2="555"
+     y2="225"
+     stroke="#475569"
+     stroke-width="0.5"
+     id="line28" />
+  <!-- 64 points (8x8 grid) - simplified with small dots -->
+  <circle
+     cx="390"
+     cy="148"
+     r="3"
+     fill="#06b6d4"
+     id="circle28" />
+  <circle
+     cx="410"
+     cy="148"
+     r="3"
+     fill="#06b6d4"
+     id="circle29" />
+  <circle
+     cx="430"
+     cy="148"
+     r="3"
+     fill="#06b6d4"
+     id="circle30" />
+  <circle
+     cx="450"
+     cy="148"
+     r="3"
+     fill="#06b6d4"
+     id="circle31" />
+  <circle
+     cx="480"
+     cy="148"
+     r="3"
+     fill="#06b6d4"
+     id="circle32" />
+  <circle
+     cx="500"
+     cy="148"
+     r="3"
+     fill="#06b6d4"
+     id="circle33" />
+  <circle
+     cx="520"
+     cy="148"
+     r="3"
+     fill="#06b6d4"
+     id="circle34" />
+  <circle
+     cx="540"
+     cy="148"
+     r="3"
+     fill="#06b6d4"
+     id="circle35" />
+  <circle
+     cx="390"
+     cy="168"
+     r="3"
+     fill="#06b6d4"
+     id="circle36" />
+  <circle
+     cx="410"
+     cy="168"
+     r="3"
+     fill="#06b6d4"
+     id="circle37" />
+  <circle
+     cx="430"
+     cy="168"
+     r="3"
+     fill="#06b6d4"
+     id="circle38" />
+  <circle
+     cx="450"
+     cy="168"
+     r="3"
+     fill="#06b6d4"
+     id="circle39" />
+  <circle
+     cx="480"
+     cy="168"
+     r="3"
+     fill="#06b6d4"
+     id="circle40" />
+  <circle
+     cx="500"
+     cy="168"
+     r="3"
+     fill="#06b6d4"
+     id="circle41" />
+  <circle
+     cx="520"
+     cy="168"
+     r="3"
+     fill="#06b6d4"
+     id="circle42" />
+  <circle
+     cx="540"
+     cy="168"
+     r="3"
+     fill="#06b6d4"
+     id="circle43" />
+  <circle
+     cx="390"
+     cy="188"
+     r="3"
+     fill="#06b6d4"
+     id="circle44" />
+  <circle
+     cx="410"
+     cy="188"
+     r="3"
+     fill="#06b6d4"
+     id="circle45" />
+  <circle
+     cx="430"
+     cy="188"
+     r="3"
+     fill="#06b6d4"
+     id="circle46" />
+  <circle
+     cx="450"
+     cy="188"
+     r="3"
+     fill="#06b6d4"
+     id="circle47" />
+  <circle
+     cx="480"
+     cy="188"
+     r="3"
+     fill="#06b6d4"
+     id="circle48" />
+  <circle
+     cx="500"
+     cy="188"
+     r="3"
+     fill="#06b6d4"
+     id="circle49" />
+  <circle
+     cx="520"
+     cy="188"
+     r="3"
+     fill="#06b6d4"
+     id="circle50" />
+  <circle
+     cx="540"
+     cy="188"
+     r="3"
+     fill="#06b6d4"
+     id="circle51" />
+  <circle
+     cx="390"
+     cy="208"
+     r="3"
+     fill="#06b6d4"
+     id="circle52" />
+  <circle
+     cx="410"
+     cy="208"
+     r="3"
+     fill="#06b6d4"
+     id="circle53" />
+  <circle
+     cx="430"
+     cy="208"
+     r="3"
+     fill="#06b6d4"
+     id="circle54" />
+  <circle
+     cx="450"
+     cy="208"
+     r="3"
+     fill="#06b6d4"
+     id="circle55" />
+  <circle
+     cx="480"
+     cy="208"
+     r="3"
+     fill="#06b6d4"
+     id="circle56" />
+  <circle
+     cx="500"
+     cy="208"
+     r="3"
+     fill="#06b6d4"
+     id="circle57" />
+  <circle
+     cx="520"
+     cy="208"
+     r="3"
+     fill="#06b6d4"
+     id="circle58" />
+  <circle
+     cx="540"
+     cy="208"
+     r="3"
+     fill="#06b6d4"
+     id="circle59" />
+  <circle
+     cx="390"
+     cy="242"
+     r="3"
+     fill="#06b6d4"
+     id="circle60" />
+  <circle
+     cx="410"
+     cy="242"
+     r="3"
+     fill="#06b6d4"
+     id="circle61" />
+  <circle
+     cx="430"
+     cy="242"
+     r="3"
+     fill="#06b6d4"
+     id="circle62" />
+  <circle
+     cx="450"
+     cy="242"
+     r="3"
+     fill="#06b6d4"
+     id="circle63" />
+  <circle
+     cx="480"
+     cy="242"
+     r="3"
+     fill="#06b6d4"
+     id="circle64" />
+  <circle
+     cx="500"
+     cy="242"
+     r="3"
+     fill="#06b6d4"
+     id="circle65" />
+  <circle
+     cx="520"
+     cy="242"
+     r="3"
+     fill="#06b6d4"
+     id="circle66" />
+  <circle
+     cx="540"
+     cy="242"
+     r="3"
+     fill="#06b6d4"
+     id="circle67" />
+  <circle
+     cx="390"
+     cy="262"
+     r="3"
+     fill="#06b6d4"
+     id="circle68" />
+  <circle
+     cx="410"
+     cy="262"
+     r="3"
+     fill="#06b6d4"
+     id="circle69" />
+  <circle
+     cx="430"
+     cy="262"
+     r="3"
+     fill="#06b6d4"
+     id="circle70" />
+  <circle
+     cx="450"
+     cy="262"
+     r="3"
+     fill="#06b6d4"
+     id="circle71" />
+  <circle
+     cx="480"
+     cy="262"
+     r="3"
+     fill="#06b6d4"
+     id="circle72" />
+  <circle
+     cx="500"
+     cy="262"
+     r="3"
+     fill="#06b6d4"
+     id="circle73" />
+  <circle
+     cx="520"
+     cy="262"
+     r="3"
+     fill="#06b6d4"
+     id="circle74" />
+  <circle
+     cx="540"
+     cy="262"
+     r="3"
+     fill="#06b6d4"
+     id="circle75" />
+  <circle
+     cx="390"
+     cy="282"
+     r="3"
+     fill="#06b6d4"
+     id="circle76" />
+  <circle
+     cx="410"
+     cy="282"
+     r="3"
+     fill="#06b6d4"
+     id="circle77" />
+  <circle
+     cx="430"
+     cy="282"
+     r="3"
+     fill="#06b6d4"
+     id="circle78" />
+  <circle
+     cx="450"
+     cy="282"
+     r="3"
+     fill="#06b6d4"
+     id="circle79" />
+  <circle
+     cx="480"
+     cy="282"
+     r="3"
+     fill="#06b6d4"
+     id="circle80" />
+  <circle
+     cx="500"
+     cy="282"
+     r="3"
+     fill="#06b6d4"
+     id="circle81" />
+  <circle
+     cx="520"
+     cy="282"
+     r="3"
+     fill="#06b6d4"
+     id="circle82" />
+  <circle
+     cx="540"
+     cy="282"
+     r="3"
+     fill="#06b6d4"
+     id="circle83" />
+  <circle
+     cx="390"
+     cy="302"
+     r="3"
+     fill="#06b6d4"
+     id="circle84" />
+  <circle
+     cx="410"
+     cy="302"
+     r="3"
+     fill="#06b6d4"
+     id="circle85" />
+  <circle
+     cx="430"
+     cy="302"
+     r="3"
+     fill="#06b6d4"
+     id="circle86" />
+  <circle
+     cx="450"
+     cy="302"
+     r="3"
+     fill="#06b6d4"
+     id="circle87" />
+  <circle
+     cx="480"
+     cy="302"
+     r="3"
+     fill="#06b6d4"
+     id="circle88" />
+  <circle
+     cx="500"
+     cy="302"
+     r="3"
+     fill="#06b6d4"
+     id="circle89" />
+  <circle
+     cx="520"
+     cy="302"
+     r="3"
+     fill="#06b6d4"
+     id="circle90" />
+  <circle
+     cx="540"
+     cy="302"
+     r="3"
+     fill="#06b6d4"
+     id="circle91" />
+  <text
+     x="465"
+     y="358"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10"
+     id="text91">点间距中等</text>
+  <text
+     x="465"
+     y="373"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="10"
+     id="text92">SNR 要求: ~24 dB</text>
+  <!-- 256-QAM -->
+  <rect
+     x="620"
+     y="75"
+     width="270"
+     height="270"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect92" />
+  <text
+     x="755"
+     y="100"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="14"
+     font-weight="700"
+     id="text93">256-QAM ★ 802.11ac</text>
+  <text
+     x="755"
+     y="118"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="11"
+     id="text94">8 bit/symbol</text>
+  <rect
+     x="660"
+     y="130"
+     width="190"
+     height="190"
+     rx="4"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect94" />
+  <line
+     x1="755"
+     y1="135"
+     x2="755"
+     y2="315"
+     stroke="#475569"
+     stroke-width="0.5"
+     id="line94" />
+  <line
+     x1="665"
+     y1="225"
+     x2="845"
+     y2="225"
+     stroke="#475569"
+     stroke-width="0.5"
+     id="line95" />
+  <text
+     x="848"
+     y="228"
+     fill="#64748b"
+     font-size="9"
+     id="text95">I</text>
+  <text
+     x="752"
+     y="128"
+     fill="#64748b"
+     font-size="9"
+     id="text96">Q</text>
+  <!-- 256 points (16x16) - 8px margin inside 190x190 box -->
+  <g
+     fill="#f97316"
+     opacity="0.9"
+     id="g351">
+    <circle
+       cx="668.0"
+       cy="138.0"
+       r="2.5"
+       id="circle96" />
+    <circle
+       cx="679.6"
+       cy="138.0"
+       r="2.5"
+       id="circle97" />
+    <circle
+       cx="691.2"
+       cy="138.0"
+       r="2.5"
+       id="circle98" />
+    <circle
+       cx="702.8"
+       cy="138.0"
+       r="2.5"
+       id="circle99" />
+    <circle
+       cx="714.4"
+       cy="138.0"
+       r="2.5"
+       id="circle100" />
+    <circle
+       cx="726.0"
+       cy="138.0"
+       r="2.5"
+       id="circle101" />
+    <circle
+       cx="737.6"
+       cy="138.0"
+       r="2.5"
+       id="circle102" />
+    <circle
+       cx="749.2"
+       cy="138.0"
+       r="2.5"
+       id="circle103" />
+    <circle
+       cx="760.8"
+       cy="138.0"
+       r="2.5"
+       id="circle104" />
+    <circle
+       cx="772.4"
+       cy="138.0"
+       r="2.5"
+       id="circle105" />
+    <circle
+       cx="784.0"
+       cy="138.0"
+       r="2.5"
+       id="circle106" />
+    <circle
+       cx="795.6"
+       cy="138.0"
+       r="2.5"
+       id="circle107" />
+    <circle
+       cx="807.2"
+       cy="138.0"
+       r="2.5"
+       id="circle108" />
+    <circle
+       cx="818.8"
+       cy="138.0"
+       r="2.5"
+       id="circle109" />
+    <circle
+       cx="830.4"
+       cy="138.0"
+       r="2.5"
+       id="circle110" />
+    <circle
+       cx="842.0"
+       cy="138.0"
+       r="2.5"
+       id="circle111" />
+    <circle
+       cx="668.0"
+       cy="149.6"
+       r="2.5"
+       id="circle112" />
+    <circle
+       cx="679.6"
+       cy="149.6"
+       r="2.5"
+       id="circle113" />
+    <circle
+       cx="691.2"
+       cy="149.6"
+       r="2.5"
+       id="circle114" />
+    <circle
+       cx="702.8"
+       cy="149.6"
+       r="2.5"
+       id="circle115" />
+    <circle
+       cx="714.4"
+       cy="149.6"
+       r="2.5"
+       id="circle116" />
+    <circle
+       cx="726.0"
+       cy="149.6"
+       r="2.5"
+       id="circle117" />
+    <circle
+       cx="737.6"
+       cy="149.6"
+       r="2.5"
+       id="circle118" />
+    <circle
+       cx="749.2"
+       cy="149.6"
+       r="2.5"
+       id="circle119" />
+    <circle
+       cx="760.8"
+       cy="149.6"
+       r="2.5"
+       id="circle120" />
+    <circle
+       cx="772.4"
+       cy="149.6"
+       r="2.5"
+       id="circle121" />
+    <circle
+       cx="784.0"
+       cy="149.6"
+       r="2.5"
+       id="circle122" />
+    <circle
+       cx="795.6"
+       cy="149.6"
+       r="2.5"
+       id="circle123" />
+    <circle
+       cx="807.2"
+       cy="149.6"
+       r="2.5"
+       id="circle124" />
+    <circle
+       cx="818.8"
+       cy="149.6"
+       r="2.5"
+       id="circle125" />
+    <circle
+       cx="830.4"
+       cy="149.6"
+       r="2.5"
+       id="circle126" />
+    <circle
+       cx="842.0"
+       cy="149.6"
+       r="2.5"
+       id="circle127" />
+    <circle
+       cx="668.0"
+       cy="161.2"
+       r="2.5"
+       id="circle128" />
+    <circle
+       cx="679.6"
+       cy="161.2"
+       r="2.5"
+       id="circle129" />
+    <circle
+       cx="691.2"
+       cy="161.2"
+       r="2.5"
+       id="circle130" />
+    <circle
+       cx="702.8"
+       cy="161.2"
+       r="2.5"
+       id="circle131" />
+    <circle
+       cx="714.4"
+       cy="161.2"
+       r="2.5"
+       id="circle132" />
+    <circle
+       cx="726.0"
+       cy="161.2"
+       r="2.5"
+       id="circle133" />
+    <circle
+       cx="737.6"
+       cy="161.2"
+       r="2.5"
+       id="circle134" />
+    <circle
+       cx="749.2"
+       cy="161.2"
+       r="2.5"
+       id="circle135" />
+    <circle
+       cx="760.8"
+       cy="161.2"
+       r="2.5"
+       id="circle136" />
+    <circle
+       cx="772.4"
+       cy="161.2"
+       r="2.5"
+       id="circle137" />
+    <circle
+       cx="784.0"
+       cy="161.2"
+       r="2.5"
+       id="circle138" />
+    <circle
+       cx="795.6"
+       cy="161.2"
+       r="2.5"
+       id="circle139" />
+    <circle
+       cx="807.2"
+       cy="161.2"
+       r="2.5"
+       id="circle140" />
+    <circle
+       cx="818.8"
+       cy="161.2"
+       r="2.5"
+       id="circle141" />
+    <circle
+       cx="830.4"
+       cy="161.2"
+       r="2.5"
+       id="circle142" />
+    <circle
+       cx="842.0"
+       cy="161.2"
+       r="2.5"
+       id="circle143" />
+    <circle
+       cx="668.0"
+       cy="172.8"
+       r="2.5"
+       id="circle144" />
+    <circle
+       cx="679.6"
+       cy="172.8"
+       r="2.5"
+       id="circle145" />
+    <circle
+       cx="691.2"
+       cy="172.8"
+       r="2.5"
+       id="circle146" />
+    <circle
+       cx="702.8"
+       cy="172.8"
+       r="2.5"
+       id="circle147" />
+    <circle
+       cx="714.4"
+       cy="172.8"
+       r="2.5"
+       id="circle148" />
+    <circle
+       cx="726.0"
+       cy="172.8"
+       r="2.5"
+       id="circle149" />
+    <circle
+       cx="737.6"
+       cy="172.8"
+       r="2.5"
+       id="circle150" />
+    <circle
+       cx="749.2"
+       cy="172.8"
+       r="2.5"
+       id="circle151" />
+    <circle
+       cx="760.8"
+       cy="172.8"
+       r="2.5"
+       id="circle152" />
+    <circle
+       cx="772.4"
+       cy="172.8"
+       r="2.5"
+       id="circle153" />
+    <circle
+       cx="784.0"
+       cy="172.8"
+       r="2.5"
+       id="circle154" />
+    <circle
+       cx="795.6"
+       cy="172.8"
+       r="2.5"
+       id="circle155" />
+    <circle
+       cx="807.2"
+       cy="172.8"
+       r="2.5"
+       id="circle156" />
+    <circle
+       cx="818.8"
+       cy="172.8"
+       r="2.5"
+       id="circle157" />
+    <circle
+       cx="830.4"
+       cy="172.8"
+       r="2.5"
+       id="circle158" />
+    <circle
+       cx="842.0"
+       cy="172.8"
+       r="2.5"
+       id="circle159" />
+    <circle
+       cx="668.0"
+       cy="184.4"
+       r="2.5"
+       id="circle160" />
+    <circle
+       cx="679.6"
+       cy="184.4"
+       r="2.5"
+       id="circle161" />
+    <circle
+       cx="691.2"
+       cy="184.4"
+       r="2.5"
+       id="circle162" />
+    <circle
+       cx="702.8"
+       cy="184.4"
+       r="2.5"
+       id="circle163" />
+    <circle
+       cx="714.4"
+       cy="184.4"
+       r="2.5"
+       id="circle164" />
+    <circle
+       cx="726.0"
+       cy="184.4"
+       r="2.5"
+       id="circle165" />
+    <circle
+       cx="737.6"
+       cy="184.4"
+       r="2.5"
+       id="circle166" />
+    <circle
+       cx="749.2"
+       cy="184.4"
+       r="2.5"
+       id="circle167" />
+    <circle
+       cx="760.8"
+       cy="184.4"
+       r="2.5"
+       id="circle168" />
+    <circle
+       cx="772.4"
+       cy="184.4"
+       r="2.5"
+       id="circle169" />
+    <circle
+       cx="784.0"
+       cy="184.4"
+       r="2.5"
+       id="circle170" />
+    <circle
+       cx="795.6"
+       cy="184.4"
+       r="2.5"
+       id="circle171" />
+    <circle
+       cx="807.2"
+       cy="184.4"
+       r="2.5"
+       id="circle172" />
+    <circle
+       cx="818.8"
+       cy="184.4"
+       r="2.5"
+       id="circle173" />
+    <circle
+       cx="830.4"
+       cy="184.4"
+       r="2.5"
+       id="circle174" />
+    <circle
+       cx="842.0"
+       cy="184.4"
+       r="2.5"
+       id="circle175" />
+    <circle
+       cx="668.0"
+       cy="196.0"
+       r="2.5"
+       id="circle176" />
+    <circle
+       cx="679.6"
+       cy="196.0"
+       r="2.5"
+       id="circle177" />
+    <circle
+       cx="691.2"
+       cy="196.0"
+       r="2.5"
+       id="circle178" />
+    <circle
+       cx="702.8"
+       cy="196.0"
+       r="2.5"
+       id="circle179" />
+    <circle
+       cx="714.4"
+       cy="196.0"
+       r="2.5"
+       id="circle180" />
+    <circle
+       cx="726.0"
+       cy="196.0"
+       r="2.5"
+       id="circle181" />
+    <circle
+       cx="737.6"
+       cy="196.0"
+       r="2.5"
+       id="circle182" />
+    <circle
+       cx="749.2"
+       cy="196.0"
+       r="2.5"
+       id="circle183" />
+    <circle
+       cx="760.8"
+       cy="196.0"
+       r="2.5"
+       id="circle184" />
+    <circle
+       cx="772.4"
+       cy="196.0"
+       r="2.5"
+       id="circle185" />
+    <circle
+       cx="784.0"
+       cy="196.0"
+       r="2.5"
+       id="circle186" />
+    <circle
+       cx="795.6"
+       cy="196.0"
+       r="2.5"
+       id="circle187" />
+    <circle
+       cx="807.2"
+       cy="196.0"
+       r="2.5"
+       id="circle188" />
+    <circle
+       cx="818.8"
+       cy="196.0"
+       r="2.5"
+       id="circle189" />
+    <circle
+       cx="830.4"
+       cy="196.0"
+       r="2.5"
+       id="circle190" />
+    <circle
+       cx="842.0"
+       cy="196.0"
+       r="2.5"
+       id="circle191" />
+    <circle
+       cx="668.0"
+       cy="207.6"
+       r="2.5"
+       id="circle192" />
+    <circle
+       cx="679.6"
+       cy="207.6"
+       r="2.5"
+       id="circle193" />
+    <circle
+       cx="691.2"
+       cy="207.6"
+       r="2.5"
+       id="circle194" />
+    <circle
+       cx="702.8"
+       cy="207.6"
+       r="2.5"
+       id="circle195" />
+    <circle
+       cx="714.4"
+       cy="207.6"
+       r="2.5"
+       id="circle196" />
+    <circle
+       cx="726.0"
+       cy="207.6"
+       r="2.5"
+       id="circle197" />
+    <circle
+       cx="737.6"
+       cy="207.6"
+       r="2.5"
+       id="circle198" />
+    <circle
+       cx="749.2"
+       cy="207.6"
+       r="2.5"
+       id="circle199" />
+    <circle
+       cx="760.8"
+       cy="207.6"
+       r="2.5"
+       id="circle200" />
+    <circle
+       cx="772.4"
+       cy="207.6"
+       r="2.5"
+       id="circle201" />
+    <circle
+       cx="784.0"
+       cy="207.6"
+       r="2.5"
+       id="circle202" />
+    <circle
+       cx="795.6"
+       cy="207.6"
+       r="2.5"
+       id="circle203" />
+    <circle
+       cx="807.2"
+       cy="207.6"
+       r="2.5"
+       id="circle204" />
+    <circle
+       cx="818.8"
+       cy="207.6"
+       r="2.5"
+       id="circle205" />
+    <circle
+       cx="830.4"
+       cy="207.6"
+       r="2.5"
+       id="circle206" />
+    <circle
+       cx="842.0"
+       cy="207.6"
+       r="2.5"
+       id="circle207" />
+    <circle
+       cx="668.0"
+       cy="219.2"
+       r="2.5"
+       id="circle208" />
+    <circle
+       cx="679.6"
+       cy="219.2"
+       r="2.5"
+       id="circle209" />
+    <circle
+       cx="691.2"
+       cy="219.2"
+       r="2.5"
+       id="circle210" />
+    <circle
+       cx="702.8"
+       cy="219.2"
+       r="2.5"
+       id="circle211" />
+    <circle
+       cx="714.4"
+       cy="219.2"
+       r="2.5"
+       id="circle212" />
+    <circle
+       cx="726.0"
+       cy="219.2"
+       r="2.5"
+       id="circle213" />
+    <circle
+       cx="737.6"
+       cy="219.2"
+       r="2.5"
+       id="circle214" />
+    <circle
+       cx="749.2"
+       cy="219.2"
+       r="2.5"
+       id="circle215" />
+    <circle
+       cx="760.8"
+       cy="219.2"
+       r="2.5"
+       id="circle216" />
+    <circle
+       cx="772.4"
+       cy="219.2"
+       r="2.5"
+       id="circle217" />
+    <circle
+       cx="784.0"
+       cy="219.2"
+       r="2.5"
+       id="circle218" />
+    <circle
+       cx="795.6"
+       cy="219.2"
+       r="2.5"
+       id="circle219" />
+    <circle
+       cx="807.2"
+       cy="219.2"
+       r="2.5"
+       id="circle220" />
+    <circle
+       cx="818.8"
+       cy="219.2"
+       r="2.5"
+       id="circle221" />
+    <circle
+       cx="830.4"
+       cy="219.2"
+       r="2.5"
+       id="circle222" />
+    <circle
+       cx="842.0"
+       cy="219.2"
+       r="2.5"
+       id="circle223" />
+    <circle
+       cx="668.0"
+       cy="230.8"
+       r="2.5"
+       id="circle224" />
+    <circle
+       cx="679.6"
+       cy="230.8"
+       r="2.5"
+       id="circle225" />
+    <circle
+       cx="691.2"
+       cy="230.8"
+       r="2.5"
+       id="circle226" />
+    <circle
+       cx="702.8"
+       cy="230.8"
+       r="2.5"
+       id="circle227" />
+    <circle
+       cx="714.4"
+       cy="230.8"
+       r="2.5"
+       id="circle228" />
+    <circle
+       cx="726.0"
+       cy="230.8"
+       r="2.5"
+       id="circle229" />
+    <circle
+       cx="737.6"
+       cy="230.8"
+       r="2.5"
+       id="circle230" />
+    <circle
+       cx="749.2"
+       cy="230.8"
+       r="2.5"
+       id="circle231" />
+    <circle
+       cx="760.8"
+       cy="230.8"
+       r="2.5"
+       id="circle232" />
+    <circle
+       cx="772.4"
+       cy="230.8"
+       r="2.5"
+       id="circle233" />
+    <circle
+       cx="784.0"
+       cy="230.8"
+       r="2.5"
+       id="circle234" />
+    <circle
+       cx="795.6"
+       cy="230.8"
+       r="2.5"
+       id="circle235" />
+    <circle
+       cx="807.2"
+       cy="230.8"
+       r="2.5"
+       id="circle236" />
+    <circle
+       cx="818.8"
+       cy="230.8"
+       r="2.5"
+       id="circle237" />
+    <circle
+       cx="830.4"
+       cy="230.8"
+       r="2.5"
+       id="circle238" />
+    <circle
+       cx="842.0"
+       cy="230.8"
+       r="2.5"
+       id="circle239" />
+    <circle
+       cx="668.0"
+       cy="242.4"
+       r="2.5"
+       id="circle240" />
+    <circle
+       cx="679.6"
+       cy="242.4"
+       r="2.5"
+       id="circle241" />
+    <circle
+       cx="691.2"
+       cy="242.4"
+       r="2.5"
+       id="circle242" />
+    <circle
+       cx="702.8"
+       cy="242.4"
+       r="2.5"
+       id="circle243" />
+    <circle
+       cx="714.4"
+       cy="242.4"
+       r="2.5"
+       id="circle244" />
+    <circle
+       cx="726.0"
+       cy="242.4"
+       r="2.5"
+       id="circle245" />
+    <circle
+       cx="737.6"
+       cy="242.4"
+       r="2.5"
+       id="circle246" />
+    <circle
+       cx="749.2"
+       cy="242.4"
+       r="2.5"
+       id="circle247" />
+    <circle
+       cx="760.8"
+       cy="242.4"
+       r="2.5"
+       id="circle248" />
+    <circle
+       cx="772.4"
+       cy="242.4"
+       r="2.5"
+       id="circle249" />
+    <circle
+       cx="784.0"
+       cy="242.4"
+       r="2.5"
+       id="circle250" />
+    <circle
+       cx="795.6"
+       cy="242.4"
+       r="2.5"
+       id="circle251" />
+    <circle
+       cx="807.2"
+       cy="242.4"
+       r="2.5"
+       id="circle252" />
+    <circle
+       cx="818.8"
+       cy="242.4"
+       r="2.5"
+       id="circle253" />
+    <circle
+       cx="830.4"
+       cy="242.4"
+       r="2.5"
+       id="circle254" />
+    <circle
+       cx="842.0"
+       cy="242.4"
+       r="2.5"
+       id="circle255" />
+    <circle
+       cx="668.0"
+       cy="254.0"
+       r="2.5"
+       id="circle256" />
+    <circle
+       cx="679.6"
+       cy="254.0"
+       r="2.5"
+       id="circle257" />
+    <circle
+       cx="691.2"
+       cy="254.0"
+       r="2.5"
+       id="circle258" />
+    <circle
+       cx="702.8"
+       cy="254.0"
+       r="2.5"
+       id="circle259" />
+    <circle
+       cx="714.4"
+       cy="254.0"
+       r="2.5"
+       id="circle260" />
+    <circle
+       cx="726.0"
+       cy="254.0"
+       r="2.5"
+       id="circle261" />
+    <circle
+       cx="737.6"
+       cy="254.0"
+       r="2.5"
+       id="circle262" />
+    <circle
+       cx="749.2"
+       cy="254.0"
+       r="2.5"
+       id="circle263" />
+    <circle
+       cx="760.8"
+       cy="254.0"
+       r="2.5"
+       id="circle264" />
+    <circle
+       cx="772.4"
+       cy="254.0"
+       r="2.5"
+       id="circle265" />
+    <circle
+       cx="784.0"
+       cy="254.0"
+       r="2.5"
+       id="circle266" />
+    <circle
+       cx="795.6"
+       cy="254.0"
+       r="2.5"
+       id="circle267" />
+    <circle
+       cx="807.2"
+       cy="254.0"
+       r="2.5"
+       id="circle268" />
+    <circle
+       cx="818.8"
+       cy="254.0"
+       r="2.5"
+       id="circle269" />
+    <circle
+       cx="830.4"
+       cy="254.0"
+       r="2.5"
+       id="circle270" />
+    <circle
+       cx="842.0"
+       cy="254.0"
+       r="2.5"
+       id="circle271" />
+    <circle
+       cx="668.0"
+       cy="265.6"
+       r="2.5"
+       id="circle272" />
+    <circle
+       cx="679.6"
+       cy="265.6"
+       r="2.5"
+       id="circle273" />
+    <circle
+       cx="691.2"
+       cy="265.6"
+       r="2.5"
+       id="circle274" />
+    <circle
+       cx="702.8"
+       cy="265.6"
+       r="2.5"
+       id="circle275" />
+    <circle
+       cx="714.4"
+       cy="265.6"
+       r="2.5"
+       id="circle276" />
+    <circle
+       cx="726.0"
+       cy="265.6"
+       r="2.5"
+       id="circle277" />
+    <circle
+       cx="737.6"
+       cy="265.6"
+       r="2.5"
+       id="circle278" />
+    <circle
+       cx="749.2"
+       cy="265.6"
+       r="2.5"
+       id="circle279" />
+    <circle
+       cx="760.8"
+       cy="265.6"
+       r="2.5"
+       id="circle280" />
+    <circle
+       cx="772.4"
+       cy="265.6"
+       r="2.5"
+       id="circle281" />
+    <circle
+       cx="784.0"
+       cy="265.6"
+       r="2.5"
+       id="circle282" />
+    <circle
+       cx="795.6"
+       cy="265.6"
+       r="2.5"
+       id="circle283" />
+    <circle
+       cx="807.2"
+       cy="265.6"
+       r="2.5"
+       id="circle284" />
+    <circle
+       cx="818.8"
+       cy="265.6"
+       r="2.5"
+       id="circle285" />
+    <circle
+       cx="830.4"
+       cy="265.6"
+       r="2.5"
+       id="circle286" />
+    <circle
+       cx="842.0"
+       cy="265.6"
+       r="2.5"
+       id="circle287" />
+    <circle
+       cx="668.0"
+       cy="277.2"
+       r="2.5"
+       id="circle288" />
+    <circle
+       cx="679.6"
+       cy="277.2"
+       r="2.5"
+       id="circle289" />
+    <circle
+       cx="691.2"
+       cy="277.2"
+       r="2.5"
+       id="circle290" />
+    <circle
+       cx="702.8"
+       cy="277.2"
+       r="2.5"
+       id="circle291" />
+    <circle
+       cx="714.4"
+       cy="277.2"
+       r="2.5"
+       id="circle292" />
+    <circle
+       cx="726.0"
+       cy="277.2"
+       r="2.5"
+       id="circle293" />
+    <circle
+       cx="737.6"
+       cy="277.2"
+       r="2.5"
+       id="circle294" />
+    <circle
+       cx="749.2"
+       cy="277.2"
+       r="2.5"
+       id="circle295" />
+    <circle
+       cx="760.8"
+       cy="277.2"
+       r="2.5"
+       id="circle296" />
+    <circle
+       cx="772.4"
+       cy="277.2"
+       r="2.5"
+       id="circle297" />
+    <circle
+       cx="784.0"
+       cy="277.2"
+       r="2.5"
+       id="circle298" />
+    <circle
+       cx="795.6"
+       cy="277.2"
+       r="2.5"
+       id="circle299" />
+    <circle
+       cx="807.2"
+       cy="277.2"
+       r="2.5"
+       id="circle300" />
+    <circle
+       cx="818.8"
+       cy="277.2"
+       r="2.5"
+       id="circle301" />
+    <circle
+       cx="830.4"
+       cy="277.2"
+       r="2.5"
+       id="circle302" />
+    <circle
+       cx="842.0"
+       cy="277.2"
+       r="2.5"
+       id="circle303" />
+    <circle
+       cx="668.0"
+       cy="288.8"
+       r="2.5"
+       id="circle304" />
+    <circle
+       cx="679.6"
+       cy="288.8"
+       r="2.5"
+       id="circle305" />
+    <circle
+       cx="691.2"
+       cy="288.8"
+       r="2.5"
+       id="circle306" />
+    <circle
+       cx="702.8"
+       cy="288.8"
+       r="2.5"
+       id="circle307" />
+    <circle
+       cx="714.4"
+       cy="288.8"
+       r="2.5"
+       id="circle308" />
+    <circle
+       cx="726.0"
+       cy="288.8"
+       r="2.5"
+       id="circle309" />
+    <circle
+       cx="737.6"
+       cy="288.8"
+       r="2.5"
+       id="circle310" />
+    <circle
+       cx="749.2"
+       cy="288.8"
+       r="2.5"
+       id="circle311" />
+    <circle
+       cx="760.8"
+       cy="288.8"
+       r="2.5"
+       id="circle312" />
+    <circle
+       cx="772.4"
+       cy="288.8"
+       r="2.5"
+       id="circle313" />
+    <circle
+       cx="784.0"
+       cy="288.8"
+       r="2.5"
+       id="circle314" />
+    <circle
+       cx="795.6"
+       cy="288.8"
+       r="2.5"
+       id="circle315" />
+    <circle
+       cx="807.2"
+       cy="288.8"
+       r="2.5"
+       id="circle316" />
+    <circle
+       cx="818.8"
+       cy="288.8"
+       r="2.5"
+       id="circle317" />
+    <circle
+       cx="830.4"
+       cy="288.8"
+       r="2.5"
+       id="circle318" />
+    <circle
+       cx="842.0"
+       cy="288.8"
+       r="2.5"
+       id="circle319" />
+    <circle
+       cx="668.0"
+       cy="300.4"
+       r="2.5"
+       id="circle320" />
+    <circle
+       cx="679.6"
+       cy="300.4"
+       r="2.5"
+       id="circle321" />
+    <circle
+       cx="691.2"
+       cy="300.4"
+       r="2.5"
+       id="circle322" />
+    <circle
+       cx="702.8"
+       cy="300.4"
+       r="2.5"
+       id="circle323" />
+    <circle
+       cx="714.4"
+       cy="300.4"
+       r="2.5"
+       id="circle324" />
+    <circle
+       cx="726.0"
+       cy="300.4"
+       r="2.5"
+       id="circle325" />
+    <circle
+       cx="737.6"
+       cy="300.4"
+       r="2.5"
+       id="circle326" />
+    <circle
+       cx="749.2"
+       cy="300.4"
+       r="2.5"
+       id="circle327" />
+    <circle
+       cx="760.8"
+       cy="300.4"
+       r="2.5"
+       id="circle328" />
+    <circle
+       cx="772.4"
+       cy="300.4"
+       r="2.5"
+       id="circle329" />
+    <circle
+       cx="784.0"
+       cy="300.4"
+       r="2.5"
+       id="circle330" />
+    <circle
+       cx="795.6"
+       cy="300.4"
+       r="2.5"
+       id="circle331" />
+    <circle
+       cx="807.2"
+       cy="300.4"
+       r="2.5"
+       id="circle332" />
+    <circle
+       cx="818.8"
+       cy="300.4"
+       r="2.5"
+       id="circle333" />
+    <circle
+       cx="830.4"
+       cy="300.4"
+       r="2.5"
+       id="circle334" />
+    <circle
+       cx="842.0"
+       cy="300.4"
+       r="2.5"
+       id="circle335" />
+    <circle
+       cx="668.0"
+       cy="312.0"
+       r="2.5"
+       id="circle336" />
+    <circle
+       cx="679.6"
+       cy="312.0"
+       r="2.5"
+       id="circle337" />
+    <circle
+       cx="691.2"
+       cy="312.0"
+       r="2.5"
+       id="circle338" />
+    <circle
+       cx="702.8"
+       cy="312.0"
+       r="2.5"
+       id="circle339" />
+    <circle
+       cx="714.4"
+       cy="312.0"
+       r="2.5"
+       id="circle340" />
+    <circle
+       cx="726.0"
+       cy="312.0"
+       r="2.5"
+       id="circle341" />
+    <circle
+       cx="737.6"
+       cy="312.0"
+       r="2.5"
+       id="circle342" />
+    <circle
+       cx="749.2"
+       cy="312.0"
+       r="2.5"
+       id="circle343" />
+    <circle
+       cx="760.8"
+       cy="312.0"
+       r="2.5"
+       id="circle344" />
+    <circle
+       cx="772.4"
+       cy="312.0"
+       r="2.5"
+       id="circle345" />
+    <circle
+       cx="784.0"
+       cy="312.0"
+       r="2.5"
+       id="circle346" />
+    <circle
+       cx="795.6"
+       cy="312.0"
+       r="2.5"
+       id="circle347" />
+    <circle
+       cx="807.2"
+       cy="312.0"
+       r="2.5"
+       id="circle348" />
+    <circle
+       cx="818.8"
+       cy="312.0"
+       r="2.5"
+       id="circle349" />
+    <circle
+       cx="830.4"
+       cy="312.0"
+       r="2.5"
+       id="circle350" />
+    <circle
+       cx="842.0"
+       cy="312.0"
+       r="2.5"
+       id="circle351" />
+  </g>
+  <text
+     x="755"
+     y="358"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10"
+     id="text351">点间距小 → 需高 SNR</text>
+  <text
+     x="755"
+     y="373"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="10"
+     id="text352">SNR 要求: ~32 dB</text>
+  <!-- Comparison Table -->
+  <rect
+     x="40"
+     y="390"
+     width="860"
+     height="220"
+     rx="10"
+     fill="url(#card-grad)"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect352" />
+  <text
+     x="470"
+     y="415"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="15"
+     font-weight="700"
+     id="text353">QAM 演进对比</text>
+  <!-- Table header -->
+  <rect
+     x="60"
+     y="430"
+     width="820"
+     height="30"
+     rx="4"
+     fill="#1e293b"
+     id="rect353" />
+  <text
+     x="130"
+     y="450"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="11"
+     font-weight="600"
+     id="text354">调制方式</text>
+  <text
+     x="250"
+     y="450"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="11"
+     font-weight="600"
+     id="text355">星座点数</text>
+  <text
+     x="350"
+     y="450"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="11"
+     font-weight="600"
+     id="text356">bit/symbol</text>
+  <text
+     x="450"
+     y="450"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="11"
+     font-weight="600"
+     id="text357">SNR 要求</text>
+  <text
+     x="580"
+     y="450"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="11"
+     font-weight="600"
+     id="text358">首次引入</text>
+  <text
+     x="750"
+     y="450"
+     text-anchor="middle"
+     fill="#60a5fa"
+     font-size="11"
+     font-weight="600"
+     id="text359">交通比喻</text>
+  <!-- Row 1 -->
+  <rect
+     x="60"
+     y="465"
+     width="820"
+     height="28"
+     rx="0"
+     fill="#0f172a"
+     id="rect359" />
+  <text
+     x="130"
+     y="484"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text360">BPSK</text>
+  <text
+     x="250"
+     y="484"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text361">2</text>
+  <text
+     x="350"
+     y="484"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text362">1</text>
+  <text
+     x="450"
+     y="484"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text363">~2 dB</text>
+  <text
+     x="580"
+     y="484"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text364">802.11 (1997)</text>
+  <text
+     x="750"
+     y="484"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="10"
+     id="text365">自行车（1 箱货）</text>
+  <!-- Row 2 -->
+  <rect
+     x="60"
+     y="493"
+     width="820"
+     height="28"
+     rx="0"
+     fill="#1e293b"
+     id="rect365" />
+  <text
+     x="130"
+     y="512"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text366">QPSK</text>
+  <text
+     x="250"
+     y="512"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text367">4</text>
+  <text
+     x="350"
+     y="512"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text368">2</text>
+  <text
+     x="450"
+     y="512"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text369">~5 dB</text>
+  <text
+     x="580"
+     y="512"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text370">802.11 (1997)</text>
+  <text
+     x="750"
+     y="512"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="10"
+     id="text371">摩托车（2 箱货）</text>
+  <!-- Row 3 -->
+  <rect
+     x="60"
+     y="521"
+     width="820"
+     height="28"
+     rx="0"
+     fill="#0f172a"
+     id="rect371" />
+  <text
+     x="130"
+     y="540"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text372">16-QAM</text>
+  <text
+     x="250"
+     y="540"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text373">16</text>
+  <text
+     x="350"
+     y="540"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text374">4</text>
+  <text
+     x="450"
+     y="540"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text375">~18 dB</text>
+  <text
+     x="580"
+     y="540"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text376">802.11a (1999)</text>
+  <text
+     x="750"
+     y="540"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="10"
+     id="text377">小货车（16 箱货）</text>
+  <!-- Row 4 -->
+  <rect
+     x="60"
+     y="549"
+     width="820"
+     height="28"
+     rx="0"
+     fill="#1e293b"
+     id="rect377" />
+  <text
+     x="130"
+     y="568"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text378">64-QAM</text>
+  <text
+     x="250"
+     y="568"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text379">64</text>
+  <text
+     x="350"
+     y="568"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text380">6</text>
+  <text
+     x="450"
+     y="568"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text381">~24 dB</text>
+  <text
+     x="580"
+     y="568"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10"
+     id="text382">802.11a (1999)</text>
+  <text
+     x="750"
+     y="568"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="10"
+     id="text383">中型卡车（64 箱货）</text>
+  <!-- Row 5 - Highlighted -->
+  <rect
+     x="60"
+     y="577"
+     width="820"
+     height="28"
+     rx="0"
+     fill="#1a1a2e"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect383" />
+  <text
+     x="130"
+     y="596"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="10"
+     font-weight="600"
+     id="text384">256-QAM ★</text>
+  <text
+     x="250"
+     y="596"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="10"
+     id="text385">256</text>
+  <text
+     x="350"
+     y="596"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="10"
+     id="text386">8</text>
+  <text
+     x="450"
+     y="596"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="10"
+     id="text387">~32 dB</text>
+  <text
+     x="580"
+     y="596"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="10"
+     id="text388">802.11ac (2013)</text>
+  <text
+     x="750"
+     y="596"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="10"
+     id="text389">大卡车（256 箱货）</text>
+</svg>

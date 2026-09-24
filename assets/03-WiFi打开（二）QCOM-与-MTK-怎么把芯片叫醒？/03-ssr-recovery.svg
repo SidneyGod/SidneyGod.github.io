@@ -1,0 +1,1130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1060"
+   height="900"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="03-ssr-recovery.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.2144444"
+     inkscape:cx="529.87191"
+     inkscape:cy="450"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g8" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs8">
+    <filter
+       id="shadow"
+       x="-0.0098821177"
+       y="-0.025"
+       width="1.0197642"
+       height="1.05" />
+    <marker
+       orient="auto"
+       refY="3"
+       refX="8"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrowWhite">
+      <polygon
+         id="svg_1"
+         fill="#94a3b8"
+         points="0 0, 8 3, 0 6" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="8"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrowGreen">
+      <polygon
+         id="svg_2"
+         fill="#10b981"
+         points="0 0, 8 3, 0 6" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="8"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrowBlue">
+      <polygon
+         id="svg_3"
+         fill="#3b82f6"
+         points="0 0, 8 3, 0 6" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="8"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrowRed">
+      <polygon
+         id="svg_4"
+         fill="#ef4444"
+         points="0 0, 8 3, 0 6" />
+    </marker>
+    <linearGradient
+       y2="100%"
+       x2="100%"
+       y1="0%"
+       x1="0%"
+       id="bgGrad">
+      <stop
+         stop-color="#0f0f1a"
+         offset="0%"
+         id="stop1" />
+      <stop
+         stop-color="#1a1a2e"
+         offset="100%"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       y2="0%"
+       x2="100%"
+       y1="0%"
+       x1="0%"
+       id="l1Grad">
+      <stop
+         stop-color="#10b981"
+         offset="0%"
+         id="stop3" />
+      <stop
+         stop-color="#059669"
+         offset="100%"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       y2="0%"
+       x2="100%"
+       y1="0%"
+       x1="0%"
+       id="l2Grad">
+      <stop
+         stop-color="#3b82f6"
+         offset="0%"
+         id="stop5" />
+      <stop
+         stop-color="#2563eb"
+         offset="100%"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       y2="0%"
+       x2="100%"
+       y1="0%"
+       x1="0%"
+       id="l3Grad">
+      <stop
+         stop-color="#ef4444"
+         offset="0%"
+         id="stop7" />
+      <stop
+         stop-color="#dc2626"
+         offset="100%"
+         id="stop8" />
+    </linearGradient>
+    <pattern
+       patternTransform="matrix(1,0,0,1,0.7142856121063232,-0.714285671710968)"
+       patternUnits="userSpaceOnUse"
+       height="40"
+       width="40"
+       id="grid">
+      <path
+         id="svg_5"
+         stroke-width="0.5"
+         stroke="#ffffff08"
+         fill="none"
+         d="m40,0l-40,0l0,40" />
+    </pattern>
+  </defs>
+  <!-- Background -->
+  <!-- Title -->
+  <!-- ====== Trigger Entry Point ====== -->
+  <!-- ====== Decision: severity ====== -->
+  <!-- ============================================= -->
+  <!-- ====== Level 1: Self Recovery ====== -->
+  <!-- ============================================= -->
+  <!-- Diamond → L1 (gap from diamond tip: 410→398) -->
+  <!-- L1 Box -->
+  <!-- L1 Header -->
+  <!-- L1 Trigger -->
+  <!-- L1 Conditions -->
+  <!-- L1 Action -->
+  <!-- L1 User Impact -->
+  <!-- L1 internal arrows -->
+  <!-- Trunk: action → through user-impact → fork below -->
+  <!-- Fork point -->
+  <!-- Green: fork straight down → success pill -->
+  <!-- Red: fork left → down → right, avoiding green pill -->
+  <!-- L1 result pills -->
+  <!-- L1 failure → escalate to L2 -->
+  <!-- ============================================= -->
+  <!-- ====== Level 2: Platform SSR ====== -->
+  <!-- ============================================= -->
+  <!-- Diamond → L2 -->
+  <!-- L2 Box -->
+  <!-- L2 Header -->
+  <!-- L2 Trigger -->
+  <!-- L2 Conditions -->
+  <!-- L2 Action -->
+  <!-- L2 Key insight -->
+  <!-- L2 User Impact -->
+  <!-- L2 exit pill (inside box) -->
+  <!-- ============================================= -->
+  <!-- ====== Level 3: Panic Shutdown ====== -->
+  <!-- ============================================= -->
+  <!-- Diamond → L3 -->
+  <!-- L3 Box -->
+  <!-- L3 Header -->
+  <!-- L3 Trigger -->
+  <!-- L3 Conditions -->
+  <!-- L3 Action -->
+  <!-- L3 User Impact -->
+  <!-- L3 exit pill (inside box) -->
+  <!-- ============================================= -->
+  <!-- ====== Severity Scale ====== -->
+  <!-- ============================================= -->
+  <!-- Scale bar -->
+  <!-- Tick marks -->
+  <!-- Scale labels -->
+  <!-- Section dividers -->
+  <!-- ============================================= -->
+  <!-- ====== Key Principles ====== -->
+  <!-- ============================================= -->
+  <!-- ====== MTK note (below L3) ====== -->
+  <!-- MTK → L2 connector -->
+  <g
+     id="g8">
+    <title
+       id="title8">Layer 1</title>
+    <rect
+       id="svg_6"
+       fill="url(#bgGrad)"
+       height="900"
+       width="1060" />
+    <rect
+       x="0.71429"
+       y="-0.71429"
+       id="svg_7"
+       fill="url(#grid)"
+       height="900"
+       width="1060" />
+    <text
+       id="svg_8"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="20"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="36"
+       x="530">SSR 三级恢复流程</text>
+    <text
+       id="svg_9"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="12"
+       fill="#64748b"
+       text-anchor="middle"
+       y="58"
+       x="530">QCOM SubSystem Restart 三层恢复体系</text>
+    <rect
+       id="svg_10"
+       filter="url(#shadow)"
+       stroke-width="2"
+       stroke="#f97316"
+       fill="#0f172a"
+       rx="20"
+       height="40"
+       width="240"
+       y="78"
+       x="410" />
+    <text
+       id="svg_11"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="13"
+       fill="#fdba74"
+       text-anchor="middle"
+       y="103"
+       x="530">固件崩溃 / 异常</text>
+    <line
+       id="svg_12"
+       marker-end="url(#arrowWhite)"
+       stroke-width="1.5"
+       stroke="#94a3b8"
+       y2="137"
+       x2="530"
+       y1="118"
+       x1="530" />
+    <polygon
+       id="svg_13"
+       filter="url(#shadow)"
+       stroke-width="1.5"
+       stroke="#eab308"
+       fill="#1a1a2e"
+       points="530,140 650,180 530,220 410,180" />
+    <text
+       id="svg_14"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="11"
+       fill="#fde047"
+       text-anchor="middle"
+       y="176"
+       x="530">严重程度</text>
+    <text
+       id="svg_15"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="9"
+       fill="#a3a3a3"
+       text-anchor="middle"
+       y="192"
+       x="530">判断恢复级别</text>
+    <circle
+       id="svg_16"
+       fill="#10b981"
+       r="3.5"
+       cy="180"
+       cx="398" />
+    <line
+       id="svg_17"
+       marker-end="url(#arrowGreen)"
+       stroke-width="2"
+       stroke="#10b981"
+       y2="180"
+       x2="280"
+       y1="180"
+       x1="395" />
+    <text
+       id="svg_18"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="11"
+       fill="#6ee7b7"
+       text-anchor="middle"
+       y="170"
+       x="338">Level 1</text>
+    <rect
+       id="svg_19"
+       stroke-width="1.5"
+       stroke="#10b981"
+       fill="rgba(16,185,129,0.04)"
+       rx="12"
+       height="322"
+       width="260"
+       y="140"
+       x="20" />
+    <rect
+       id="svg_20"
+       fill="url(#l1Grad)"
+       rx="12"
+       height="38"
+       width="260"
+       y="140"
+       x="20" />
+    <rect
+       id="svg_21"
+       fill="url(#l1Grad)"
+       height="18"
+       width="260"
+       y="160"
+       x="20" />
+    <text
+       id="svg_22"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="14"
+       fill="#fff"
+       text-anchor="middle"
+       y="164"
+       x="150">Level 1：自恢复</text>
+    <rect
+       id="svg_23"
+       stroke="#334155"
+       fill="#0f172a"
+       rx="6"
+       height="28"
+       width="228"
+       y="192"
+       x="36" />
+    <text
+       id="svg_24"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="10"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="210"
+       x="150">触发者：驱动自身</text>
+    <rect
+       id="svg_25"
+       stroke="#10b981"
+       fill="rgba(16,185,129,0.06)"
+       rx="6"
+       height="52"
+       width="228"
+       y="230"
+       x="36" />
+    <text
+       id="svg_26"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="10"
+       fill="#6ee7b7"
+       text-anchor="middle"
+       y="246"
+       x="150">触发条件</text>
+    <text
+       id="svg_27"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="9"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="262"
+       x="150">WMI 命令超时 / credit 耗尽 / TX 超时</text>
+    <text
+       id="svg_28"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="9"
+       fill="#475569"
+       text-anchor="middle"
+       y="276"
+       x="150">（驱动内部检测）</text>
+    <rect
+       id="svg_29"
+       stroke="#10b981"
+       fill="rgba(16,185,129,0.06)"
+       rx="6"
+       height="42"
+       width="228"
+       y="292"
+       x="36" />
+    <text
+       id="svg_30"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="10"
+       fill="#6ee7b7"
+       text-anchor="middle"
+       y="308"
+       x="150">恢复措施</text>
+    <text
+       id="svg_31"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="9"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="324"
+       x="150">重新初始化 WMI 通道 / 清理 pending 命令</text>
+    <rect
+       id="svg_32"
+       stroke="#10b981"
+       fill="rgba(16,185,129,0.12)"
+       rx="6"
+       height="32"
+       width="228"
+       y="344"
+       x="36" />
+    <text
+       id="svg_33"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="11"
+       fill="#6ee7b7"
+       text-anchor="middle"
+       y="364"
+       x="150">用户感知：无感知 (&lt;200ms)</text>
+    <line
+       id="svg_34"
+       stroke-width="1.5"
+       stroke="#94a3b8"
+       y2="390"
+       x2="150"
+       y1="334"
+       x1="150" />
+    <circle
+       id="svg_35"
+       fill="#94a3b8"
+       r="3.5"
+       cy="390"
+       cx="150" />
+    <line
+       id="svg_36"
+       marker-end="url(#arrowGreen)"
+       stroke-width="2"
+       stroke="#10b981"
+       y2="404"
+       x2="150"
+       y1="390"
+       x1="150" />
+    <path
+       stroke="#ef4444"
+       id="svg_37"
+       marker-end="url(#arrowRed)"
+       stroke-dasharray="5,3"
+       stroke-width="2"
+       fill="none"
+       d="m54.28572,384.28571l-24.85715,0l0,58.42857l24.85715,0" />
+    <rect
+       stroke="#10b981"
+       id="svg_38"
+       fill="rgba(16,185,129,0.1)"
+       rx="12"
+       height="24"
+       width="190.85714"
+       y="402"
+       x="54.57143" />
+    <text
+       id="svg_39"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="10"
+       fill="#6ee7b7"
+       text-anchor="middle"
+       y="418"
+       x="150">✓ 恢复完成，继续运行</text>
+    <rect
+       stroke="#ef4444"
+       id="svg_40"
+       fill="rgba(239,68,68,0.08)"
+       rx="12"
+       height="24"
+       width="190.85714"
+       y="432"
+       x="54.57143" />
+    <text
+       id="svg_41"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="9"
+       fill="#fca5a5"
+       text-anchor="middle"
+       y="448"
+       x="150">✗ L1 反复失败</text>
+    <path
+       transform="rotate(3.05784 284.857 354.5)"
+       stroke="#ef4444"
+       id="svg_42"
+       marker-end="url(#arrowRed)"
+       stroke-dasharray="5,3"
+       stroke-width="1.5"
+       fill="none"
+       d="m254.00102,444.0381q39.98259,0 61.71225,-179.0762" />
+    <circle
+       id="svg_43"
+       fill="#ef4444"
+       r="4"
+       cy="265"
+       cx="321.42857" />
+    <text
+       id="svg_44"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="10"
+       fill="#fca5a5"
+       y="350.71429"
+       x="277.85714">升级 → L2</text>
+    <circle
+       stroke="null"
+       id="svg_45"
+       fill="#3b82f6"
+       r="3.5"
+       cy="209.28572"
+       cx="525" />
+    <line
+       transform="rotate(-55.1984 524.782 229.6)"
+       stroke="#3b82f6"
+       id="svg_46"
+       marker-end="url(#arrowBlue)"
+       stroke-width="2"
+       y2="239.08946"
+       x2="510.3931"
+       y1="220.1105"
+       x1="539.17003" />
+    <text
+       id="svg_47"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="11"
+       fill="#93c5fd"
+       y="244"
+       x="555">Level 2</text>
+    <rect
+       id="svg_48"
+       stroke-width="1.5"
+       stroke="#3b82f6"
+       fill="rgba(59,130,246,0.04)"
+       rx="12"
+       height="360"
+       width="360"
+       y="248"
+       x="325" />
+    <rect
+       id="svg_49"
+       fill="url(#l2Grad)"
+       rx="12"
+       height="38"
+       width="360"
+       y="248"
+       x="325" />
+    <rect
+       id="svg_50"
+       fill="url(#l2Grad)"
+       height="18"
+       width="360"
+       y="268"
+       x="325" />
+    <text
+       id="svg_51"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="14"
+       fill="#fff"
+       text-anchor="middle"
+       y="272"
+       x="505">Level 2：平台 SSR</text>
+    <rect
+       id="svg_52"
+       stroke="#334155"
+       fill="#0f172a"
+       rx="6"
+       height="28"
+       width="324"
+       y="300"
+       x="343" />
+    <text
+       id="svg_53"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="10"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="318"
+       x="505">触发者：cnss2 / icnss2 平台驱动</text>
+    <rect
+       id="svg_54"
+       stroke="#3b82f6"
+       fill="rgba(59,130,246,0.06)"
+       rx="6"
+       height="48"
+       width="324"
+       y="338"
+       x="343" />
+    <text
+       id="svg_55"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="10"
+       fill="#93c5fd"
+       text-anchor="middle"
+       y="354"
+       x="505">触发条件</text>
+    <text
+       id="svg_56"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="9"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="370"
+       x="505">固件看门狗 bite / MHI 通道断开（ramdump 收集完成后触发）</text>
+    <rect
+       id="svg_57"
+       stroke="#3b82f6"
+       fill="rgba(59,130,246,0.06)"
+       rx="6"
+       height="72"
+       width="324"
+       y="396"
+       x="343" />
+    <text
+       id="svg_58"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="10"
+       fill="#93c5fd"
+       text-anchor="middle"
+       y="412"
+       x="505">恢复措施</text>
+    <text
+       id="svg_59"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="9"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="430"
+       x="505">① hdd_wlan_shutdown() — 完整关闭驱动</text>
+    <text
+       id="svg_60"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="9"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="446"
+       x="505">② 硬件复位 → hdd_wlan_re_init()</text>
+    <text
+       id="svg_61"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="9"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="462"
+       x="505">③ 重新下载固件 → 重建 WMI 握手</text>
+    <rect
+       id="svg_62"
+       stroke="#eab308"
+       fill="rgba(234,179,8,0.06)"
+       rx="6"
+       height="32"
+       width="324"
+       y="478"
+       x="343" />
+    <text
+       id="svg_63"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="9"
+       fill="#fde047"
+       text-anchor="middle"
+       y="494"
+       x="505">关键：跳过 wiphy_register() — cfg80211 不知道芯片重启了</text>
+    <rect
+       id="svg_64"
+       stroke="#3b82f6"
+       fill="rgba(59,130,246,0.12)"
+       rx="6"
+       height="32"
+       width="324"
+       y="520"
+       x="343" />
+    <text
+       id="svg_65"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="11"
+       fill="#93c5fd"
+       text-anchor="middle"
+       y="540"
+       x="505">用户感知：短暂断连 (2-5s)</text>
+    <rect
+       id="svg_66"
+       stroke="#3b82f6"
+       fill="rgba(59,130,246,0.1)"
+       rx="13"
+       height="26"
+       width="200"
+       y="565"
+       x="405" />
+    <text
+       id="svg_67"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="10"
+       fill="#93c5fd"
+       text-anchor="middle"
+       y="582"
+       x="505">✓ 恢复完成，继续运行</text>
+    <circle
+       id="svg_68"
+       fill="#ef4444"
+       r="3.5"
+       cy="180"
+       cx="662" />
+    <line
+       id="svg_69"
+       marker-end="url(#arrowRed)"
+       stroke-width="2"
+       stroke="#ef4444"
+       y2="180"
+       x2="730"
+       y1="180"
+       x1="665" />
+    <text
+       id="svg_70"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="11"
+       fill="#fca5a5"
+       text-anchor="middle"
+       y="170"
+       x="698">Level 3</text>
+    <rect
+       id="svg_71"
+       stroke-width="1.5"
+       stroke="#ef4444"
+       fill="rgba(239,68,68,0.04)"
+       rx="12"
+       height="295"
+       width="270"
+       y="140"
+       x="730" />
+    <rect
+       id="svg_72"
+       fill="url(#l3Grad)"
+       rx="12"
+       height="38"
+       width="270"
+       y="140"
+       x="730" />
+    <rect
+       id="svg_73"
+       fill="url(#l3Grad)"
+       height="18"
+       width="270"
+       y="160"
+       x="730" />
+    <text
+       id="svg_74"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="14"
+       fill="#fff"
+       text-anchor="middle"
+       y="164"
+       x="865">Level 3：Panic 关闭</text>
+    <rect
+       id="svg_75"
+       stroke="#334155"
+       fill="#0f172a"
+       rx="6"
+       height="28"
+       width="238"
+       y="192"
+       x="746" />
+    <text
+       id="svg_76"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="10"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="210"
+       x="865">触发者：内核 panic 路径</text>
+    <rect
+       id="svg_77"
+       stroke="#ef4444"
+       fill="rgba(239,68,68,0.06)"
+       rx="6"
+       height="42"
+       width="238"
+       y="230"
+       x="746" />
+    <text
+       id="svg_78"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="10"
+       fill="#fca5a5"
+       text-anchor="middle"
+       y="246"
+       x="865">触发条件</text>
+    <text
+       id="svg_79"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="9"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="264"
+       x="865">NOC error / 内存损坏 / 系统级严重错误</text>
+    <rect
+       id="svg_80"
+       stroke="#ef4444"
+       fill="rgba(239,68,68,0.06)"
+       rx="6"
+       height="52"
+       width="238"
+       y="282"
+       x="746" />
+    <text
+       id="svg_81"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="10"
+       fill="#fca5a5"
+       text-anchor="middle"
+       y="298"
+       x="865">恢复措施</text>
+    <text
+       id="svg_82"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="9"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="316"
+       x="865">wlan_hdd_crash_shutdown()</text>
+    <text
+       id="svg_83"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="9"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="330"
+       x="865">→ hif_crash_shutdown() 最小化清理</text>
+    <rect
+       id="svg_84"
+       stroke="#ef4444"
+       fill="rgba(239,68,68,0.12)"
+       rx="6"
+       height="32"
+       width="238"
+       y="344"
+       x="746" />
+    <text
+       id="svg_85"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="11"
+       fill="#fca5a5"
+       text-anchor="middle"
+       y="364"
+       x="865">用户感知：系统重启</text>
+    <rect
+       id="svg_86"
+       stroke="#ef4444"
+       fill="rgba(239,68,68,0.1)"
+       rx="13"
+       height="26"
+       width="190"
+       y="390"
+       x="770" />
+    <text
+       id="svg_87"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="10"
+       fill="#fca5a5"
+       text-anchor="middle"
+       y="407"
+       x="865">✗ 无法恢复，系统重启</text>
+    <rect
+       id="svg_88"
+       stroke="#334155"
+       fill="rgba(255,255,255,0.02)"
+       rx="12"
+       height="80"
+       width="980"
+       y="635"
+       x="40" />
+    <text
+       id="svg_89"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="12"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="659"
+       x="530">严重程度与影响对比</text>
+    <rect
+       id="svg_90"
+       fill="#1e293b"
+       rx="4"
+       height="8"
+       width="900"
+       y="673"
+       x="80" />
+    <rect
+       id="svg_91"
+       opacity="0.6"
+       fill="#10b981"
+       rx="4"
+       height="8"
+       width="225"
+       y="673"
+       x="80" />
+    <rect
+       id="svg_92"
+       opacity="0.6"
+       fill="#3b82f6"
+       height="8"
+       width="450"
+       y="673"
+       x="305" />
+    <rect
+       id="svg_93"
+       opacity="0.6"
+       fill="#ef4444"
+       rx="4"
+       height="8"
+       width="225"
+       y="673"
+       x="755" />
+    <line
+       id="svg_94"
+       stroke-width="1.5"
+       stroke="#6ee7b7"
+       y2="691"
+       x2="192"
+       y1="681"
+       x1="192" />
+    <line
+       id="svg_95"
+       stroke-width="1.5"
+       stroke="#93c5fd"
+       y2="691"
+       x2="530"
+       y1="681"
+       x1="530" />
+    <line
+       id="svg_96"
+       stroke-width="1.5"
+       stroke="#fca5a5"
+       y2="691"
+       x2="867"
+       y1="681"
+       x1="867" />
+    <text
+       id="svg_97"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="10"
+       fill="#6ee7b7"
+       text-anchor="middle"
+       y="705"
+       x="192">L1: &lt;200ms</text>
+    <text
+       id="svg_98"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="10"
+       fill="#93c5fd"
+       text-anchor="middle"
+       y="705"
+       x="530">L2: 2-5s 断连</text>
+    <text
+       id="svg_99"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="10"
+       fill="#fca5a5"
+       text-anchor="middle"
+       y="705"
+       x="867">L3: 系统重启</text>
+    <text
+       id="svg_100"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="8"
+       fill="#475569"
+       text-anchor="middle"
+       y="680"
+       x="297">&lt;</text>
+    <text
+       id="svg_101"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="8"
+       fill="#475569"
+       text-anchor="middle"
+       y="680"
+       x="747">&lt;</text>
+    <rect
+       id="svg_102"
+       stroke="#3b82f6"
+       fill="rgba(59,130,246,0.04)"
+       rx="12"
+       height="110"
+       width="900"
+       y="728"
+       x="80" />
+    <text
+       id="svg_103"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="14"
+       fill="#93c5fd"
+       y="754"
+       x="120">核心设计原则</text>
+    <text
+       id="svg_104"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="10"
+       fill="#94a3b8"
+       y="778"
+       x="120">• L1 → 内部自愈，不让上层知道</text>
+    <text
+       id="svg_105"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="10"
+       fill="#94a3b8"
+       y="798"
+       x="120">• L2 → 透明恢复，wpa_supplicant 和 Framework 无感</text>
+    <text
+       id="svg_106"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="10"
+       fill="#94a3b8"
+       y="818"
+       x="120">• L3 → 最后手段，与其让系统在不可恢复的错误中继续运行，不如重启</text>
+    <rect
+       id="svg_107"
+       stroke="#eab308"
+       fill="rgba(234,179,8,0.04)"
+       rx="8"
+       height="80"
+       width="270"
+       y="445"
+       x="730" />
+    <text
+       id="svg_108"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-weight="bold"
+       font-size="10"
+       fill="#fde047"
+       text-anchor="middle"
+       y="465"
+       x="865">MTK 对应体系（对应 L2 平台 SSR）</text>
+    <text
+       id="svg_109"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="9"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="483"
+       x="865">子系统复位：SW_INT_SUBSYS_RESET</text>
+    <text
+       id="svg_110"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="9"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="499"
+       x="865">整芯片复位：SW_INT_WHOLE_RESET → conninfra 协调</text>
+    <text
+       id="svg_111"
+       font-family="'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+       font-size="8"
+       fill="#64748b"
+       text-anchor="middle"
+       y="517"
+       x="865">固件主动报告 → Host 配合执行</text>
+    <path
+       id="svg_112"
+       stroke-dasharray="3,3"
+       stroke-width="1.2"
+       stroke="#94a3b8"
+       fill="none"
+       d="m730,485l-45,0" />
+    <line
+       transform="rotate(-3.67912 101.637 384.114)"
+       stroke="#ef4444"
+       stroke-dasharray="5,3"
+       stroke-width="2"
+       id="svg_114"
+       y2="386.971"
+       x2="150.44502"
+       y1="381.25672"
+       x1="52.82863"
+       fill="none" />
+  </g>
+</svg>

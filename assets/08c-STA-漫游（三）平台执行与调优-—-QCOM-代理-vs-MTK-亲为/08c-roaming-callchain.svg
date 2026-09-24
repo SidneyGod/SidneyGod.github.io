@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1400 500"
+   version="1.1"
+   id="svg49"
+   sodipodi:docname="08-roaming-callchain.svg"
+   width="1400"
+   height="500"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview49"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.8131728"
+     inkscape:cx="531.86727"
+     inkscape:cy="135.88748"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg49" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="989.94946"
+       y2="989.94946"
+       gradientTransform="scale(1.4142136,0.50507627)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrow"
+       markerWidth="10"
+       markerHeight="7"
+       refX="10"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0,7 0,0 10,3.5 "
+         fill="#64748b"
+         id="polygon2" />
+    </marker>
+  </defs>
+  <style
+     id="style2">
+  text { font-family: &quot;Maple Mono Normal NL NF CN&quot;, &quot;Microsoft YaHei&quot;, sans-serif; }
+  .mono { font-family: &quot;Maple Mono Normal NL NF CN&quot;, &quot;Courier New&quot;, monospace; }
+</style>
+  <rect
+     width="1400"
+     height="500"
+     fill="url(#bg)"
+     id="rect2"
+     style="fill:url(#bg);stroke-width:0.845154"
+     x="0"
+     y="0" />
+  <rect
+     x="610"
+     y="17"
+     width="180"
+     height="40"
+     rx="8"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect3" />
+  <text
+     x="700"
+     y="43"
+     text-anchor="middle"
+     font-size="16px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text3">信号变化触发</text>
+  <line
+     x1="700"
+     y1="57"
+     x2="700"
+     y2="72"
+     stroke="#64748b"
+     stroke-width="1.5"
+     id="line3" />
+  <line
+     x1="100"
+     y1="72"
+     x2="1150"
+     y2="72"
+     stroke="#64748b"
+     stroke-width="1.5"
+     id="line4" />
+  <line
+     x1="100"
+     y1="72"
+     x2="100"
+     y2="92"
+     stroke="#64748b"
+     stroke-width="1.5"
+     id="line5" />
+  <line
+     x1="308"
+     y1="72"
+     x2="308"
+     y2="92"
+     stroke="#64748b"
+     stroke-width="1.5"
+     id="line6" />
+  <line
+     x1="622"
+     y1="72"
+     x2="622"
+     y2="92"
+     stroke="#64748b"
+     stroke-width="1.5"
+     id="line7" />
+  <line
+     x1="1150"
+     y1="72"
+     x2="1150"
+     y2="92"
+     stroke="#64748b"
+     stroke-width="1.5"
+     id="line8" />
+  <rect
+     x="8.5346527"
+     y="97"
+     width="183.9604"
+     height="34"
+     rx="3.9420083"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1.21583"
+     id="rect8" />
+  <text
+     x="102"
+     y="119"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#c4b5fd"
+     id="text8">① RSSI/PER 低于阈值</text>
+  <line
+     x1="102"
+     y1="131"
+     x2="102"
+     y2="150"
+     stroke="#7c3aed"
+     stroke-width="1.5"
+     id="line9" />
+  <rect
+     x="36.554459"
+     y="154"
+     width="127.92079"
+     height="30"
+     rx="2.9072907"
+     fill="#0f172a"
+     stroke="#6d28d9"
+     stroke-width="1.1438"
+     id="rect9" />
+  <text
+     x="102"
+     y="174"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#94a3b8"
+     id="text9">驱动/固件检测</text>
+  <line
+     x1="102"
+     y1="184"
+     x2="102"
+     y2="202"
+     stroke="#7c3aed"
+     stroke-width="1.5"
+     id="line10" />
+  <rect
+     x="35.564362"
+     y="206"
+     width="126.9307"
+     height="30"
+     rx="2.8847885"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1.13936"
+     id="rect10" />
+  <text
+     x="102"
+     y="226"
+     text-anchor="middle"
+     font-size="12px"
+     font-weight="bold"
+     fill="#c4b5fd"
+     id="text10">触发漫游事件</text>
+  <rect
+     x="205.72278"
+     y="97"
+     width="202.57425"
+     height="34"
+     rx="4.6747904"
+     fill="#1c1917"
+     stroke="#f59e0b"
+     stroke-width="1.32403"
+     id="rect11" />
+  <text
+     x="308"
+     y="119"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#fcd34d"
+     id="text11">② Beacon Loss 连续丢失</text>
+  <line
+     x1="308"
+     y1="131"
+     x2="308"
+     y2="150"
+     stroke="#f59e0b"
+     stroke-width="1.5"
+     id="line11" />
+  <rect
+     x="263.44556"
+     y="154"
+     width="84.158417"
+     height="30"
+     rx="2.1039603"
+     fill="#0f172a"
+     stroke="#d97706"
+     stroke-width="0.973027"
+     id="rect12" />
+  <text
+     x="308"
+     y="174"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#94a3b8"
+     id="text12">驱动检测</text>
+  <line
+     x1="308"
+     y1="184"
+     x2="308"
+     y2="202"
+     stroke="#f59e0b"
+     stroke-width="1.5"
+     id="line12" />
+  <rect
+     x="229"
+     y="206"
+     width="158"
+     height="30"
+     rx="2.8865194"
+     fill="#1c1917"
+     stroke="#f59e0b"
+     stroke-width="1.13971"
+     id="rect13" />
+  <text
+     x="308"
+     y="226"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="bold"
+     fill="#fcd34d"
+     id="text13">ROAMING_EVENT_START</text>
+  <rect
+     x="544.18048"
+     y="97"
+     width="157.89474"
+     height="34"
+     rx="3.1578948"
+     fill="#052e16"
+     stroke="#22c55e"
+     stroke-width="1.08822"
+     id="rect14" />
+  <text
+     x="622"
+     y="119"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#86efac"
+     id="text14">③ 802.11k 信息收集</text>
+  <line
+     x1="622"
+     y1="131"
+     x2="622"
+     y2="145"
+     stroke="#22c55e"
+     stroke-width="1.5"
+     id="line14" />
+  <line
+     x1="522"
+     y1="145"
+     x2="772"
+     y2="145"
+     stroke="#22c55e"
+     stroke-width="1.5"
+     id="line15" />
+  <line
+     x1="522"
+     y1="145"
+     x2="522"
+     y2="160"
+     stroke="#22c55e"
+     stroke-width="1.5"
+     id="line16" />
+  <line
+     x1="772"
+     y1="145"
+     x2="772"
+     y2="160"
+     stroke="#22c55e"
+     stroke-width="1.5"
+     id="line17" />
+  <rect
+     x="430"
+     y="164"
+     width="184"
+     height="30"
+     rx="3.7525632"
+     fill="#0f172a"
+     stroke="#4ade80"
+     stroke-width="1.29949"
+     id="rect17" />
+  <text
+     x="522"
+     y="184"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#94a3b8"
+     id="text17">Neighbor Report Request</text>
+  <line
+     x1="522"
+     y1="194"
+     x2="522"
+     y2="210"
+     stroke="#22c55e"
+     stroke-width="1.5"
+     id="line18" />
+  <rect
+     x="398"
+     y="214"
+     width="248"
+     height="28"
+     rx="4.4069953"
+     fill="#0f172a"
+     stroke="#4ade80"
+     stroke-width="1.40824"
+     id="rect18" />
+  <text
+     x="522"
+     y="233"
+     text-anchor="middle"
+     font-size="10px"
+     class="mono"
+     fill="#64748b"
+     id="text18">wpas_rrm_send_neighbor_rep_request()</text>
+  <line
+     x1="522"
+     y1="242"
+     x2="522"
+     y2="258"
+     stroke="#22c55e"
+     stroke-width="1.5"
+     id="line19" />
+  <rect
+     x="422"
+     y="262"
+     width="200"
+     height="28"
+     rx="5"
+     fill="#052e16"
+     stroke="#22c55e"
+     stroke-width="1.5"
+     id="rect19" />
+  <text
+     x="522"
+     y="281"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="bold"
+     fill="#86efac"
+     id="text19">AP 回复候选列表 (BSSID + 信道)</text>
+  <rect
+     x="687"
+     y="164"
+     width="170"
+     height="30"
+     rx="3.7781954"
+     fill="#0f172a"
+     stroke="#4ade80"
+     stroke-width="1.30391"
+     id="rect20" />
+  <text
+     x="772"
+     y="184"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#94a3b8"
+     id="text20">Beacon Report Request</text>
+  <line
+     x1="772"
+     y1="194"
+     x2="772"
+     y2="210"
+     stroke="#22c55e"
+     stroke-width="1.5"
+     id="line20" />
+  <rect
+     x="675"
+     y="214"
+     width="194"
+     height="28"
+     rx="3.6685464"
+     fill="#0f172a"
+     stroke="#4ade80"
+     stroke-width="1.28485"
+     id="rect21" />
+  <text
+     x="772"
+     y="233"
+     text-anchor="middle"
+     font-size="10px"
+     class="mono"
+     fill="#64748b"
+     id="text21">wpas_rm_handle_beacon_req()</text>
+  <line
+     x1="772"
+     y1="242"
+     x2="772"
+     y2="256"
+     stroke="#22c55e"
+     stroke-width="1.5"
+     id="line21" />
+  <line
+     x1="712"
+     y1="256"
+     x2="880"
+     y2="256"
+     stroke="#22c55e"
+     stroke-width="1.5"
+     id="line22" />
+  <line
+     x1="712"
+     y1="256"
+     x2="712"
+     y2="270"
+     stroke="#22c55e"
+     stroke-width="1.5"
+     id="line23" />
+  <line
+     x1="880"
+     y1="256"
+     x2="880"
+     y2="270"
+     stroke="#22c55e"
+     stroke-width="1.5"
+     id="line24" />
+  <rect
+     x="632.0752"
+     y="274"
+     width="159.09773"
+     height="28"
+     rx="3.6158578"
+     fill="#0f172a"
+     stroke="#4ade80"
+     stroke-width="1.27559"
+     id="rect24" />
+  <text
+     x="712"
+     y="293"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text24">PASSIVE / ACTIVE 定向扫描</text>
+  <line
+     x1="712"
+     y1="302"
+     x2="712"
+     y2="316"
+     stroke="#22c55e"
+     stroke-width="1.5"
+     id="line25" />
+  <rect
+     x="600"
+     y="320"
+     width="204"
+     height="28"
+     rx="3.8878446"
+     fill="#052e16"
+     stroke="#22c55e"
+     stroke-width="1.32269"
+     id="rect25" />
+  <text
+     x="708"
+     y="339"
+     text-anchor="middle"
+     font-size="10px"
+     class="mono"
+     fill="#64748b"
+     id="text25">wpas_beacon_rep_scan_process()</text>
+  <rect
+     x="825.86469"
+     y="274"
+     width="107.51881"
+     height="28"
+     rx="2.6879699"
+     fill="#0f172a"
+     stroke="#4ade80"
+     stroke-width="1.09981"
+     id="rect26" />
+  <text
+     x="880"
+     y="293"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text26">TABLE 读缓存上报</text>
+  <line
+     x1="880"
+     y1="302"
+     x2="880"
+     y2="316"
+     stroke="#22c55e"
+     stroke-width="1.5"
+     id="line26" />
+  <rect
+     x="806.54138"
+     y="320"
+     width="155"
+     height="28"
+     rx="4.0810356"
+     fill="#052e16"
+     stroke="#22c55e"
+     stroke-width="1.35517"
+     id="rect27" />
+  <text
+     x="880"
+     y="339"
+     text-anchor="middle"
+     font-size="10px"
+     class="mono"
+     fill="#64748b"
+     id="text27">wpas_beacon_rep_table()</text>
+  <rect
+     x="1049.624"
+     y="97"
+     width="198.49625"
+     height="34"
+     rx="3.9699249"
+     fill="#1e1b4b"
+     stroke="#a855f7"
+     stroke-width="1.22013"
+     id="rect28" />
+  <text
+     x="1150"
+     y="119"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#c4b5fd"
+     id="text28">④ BTM Request (802.11v)</text>
+  <line
+     x1="1150"
+     y1="131"
+     x2="1150"
+     y2="150"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="line28" />
+  <rect
+     x="983"
+     y="154"
+     width="334"
+     height="30"
+     rx="3.7647691"
+     fill="#0f172a"
+     stroke="#c084fc"
+     stroke-width="1.30159"
+     id="rect29" />
+  <text
+     x="1150"
+     y="174"
+     text-anchor="middle"
+     font-size="10px"
+     class="mono"
+     fill="#64748b"
+     id="text29">ieee802_11_rx_bss_trans_mgmt_req() [wnm_sta.c:1430]</text>
+  <line
+     x1="1150"
+     y1="184"
+     x2="1150"
+     y2="200"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="line29" />
+  <line
+     x1="1030"
+     y1="200"
+     x2="1270"
+     y2="200"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="line30" />
+  <line
+     x1="1030"
+     y1="200"
+     x2="1030"
+     y2="216"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="line31" />
+  <line
+     x1="1270"
+     y1="200"
+     x2="1270"
+     y2="216"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="line32" />
+  <rect
+     x="925.29321"
+     y="220"
+     width="209.03539"
+     height="28"
+     rx="4.2486863"
+     fill="#0f172a"
+     stroke="#c084fc"
+     stroke-width="1.38272"
+     id="rect32" />
+  <text
+     x="1031"
+     y="239"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text32">解析 Request Mode + Candidate List</text>
+  <rect
+     x="1149"
+     y="220"
+     width="238"
+     height="28"
+     rx="3.9661653"
+     fill="#0f172a"
+     stroke="#c084fc"
+     stroke-width="1.33595"
+     id="rect33" />
+  <text
+     x="1268"
+     y="239"
+     text-anchor="middle"
+     font-size="10px"
+     class="mono"
+     fill="#64748b"
+     id="text33">wnm_scan_process() [wnm_sta.c:1155]</text>
+  <line
+     x1="1250"
+     y1="248"
+     x2="1250"
+     y2="264"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="line33" />
+  <line
+     x1="1180"
+     y1="264"
+     x2="1320"
+     y2="264"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="line34" />
+  <line
+     x1="1180"
+     y1="264"
+     x2="1180"
+     y2="280"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="line35" />
+  <line
+     x1="1320"
+     y1="264"
+     x2="1320"
+     y2="280"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="line36" />
+  <rect
+     x="1107.1398"
+     y="284"
+     width="120.12555"
+     height="26"
+     rx="3.7539234"
+     fill="#0f172a"
+     stroke="#c084fc"
+     stroke-width="1.29972"
+     id="rect36" />
+  <text
+     x="1168"
+     y="302"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text36">缓存命中 → connect</text>
+  <rect
+     x="1245.9498"
+     y="284"
+     width="148.10043"
+     height="26"
+     rx="4.1139011"
+     fill="#0f172a"
+     stroke="#c084fc"
+     stroke-width="1.36061"
+     id="rect37" />
+  <text
+     x="1320"
+     y="302"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text37">未命中 → 定向扫描 + 回调</text>
+  <rect
+     x="1014"
+     y="337"
+     width="272"
+     height="30"
+     rx="3.9616032"
+     fill="#1e1b4b"
+     stroke="#a855f7"
+     stroke-width="1.33518"
+     id="rect38" />
+  <text
+     x="1150"
+     y="357"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="bold"
+     class="mono"
+     fill="#c4b5fd"
+     id="text38">wnm_bss_tm_connect() [wnm_sta.c:1105]</text>
+  <line
+     x1="1150"
+     y1="367"
+     x2="1150"
+     y2="384"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="line38" />
+  <line
+     x1="1050"
+     y1="384"
+     x2="1250"
+     y2="384"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="line39" />
+  <line
+     x1="1050"
+     y1="384"
+     x2="1050"
+     y2="400"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="line40" />
+  <line
+     x1="1250"
+     y1="384"
+     x2="1250"
+     y2="400"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="line41" />
+  <rect
+     x="942"
+     y="404"
+     width="216"
+     height="28"
+     rx="3.5983529"
+     fill="#0f172a"
+     stroke="#c084fc"
+     stroke-width="1.2725"
+     id="rect41" />
+  <text
+     x="1050"
+     y="423"
+     text-anchor="middle"
+     font-size="9px"
+     class="mono"
+     fill="#64748b"
+     id="text41">wnm_send_bss_transition_mgmt_resp()</text>
+  <rect
+     x="1166"
+     y="404"
+     width="168"
+     height="28"
+     rx="4.1877427"
+     fill="#0f172a"
+     stroke="#c084fc"
+     stroke-width="1.37277"
+     id="rect42" />
+  <text
+     x="1250"
+     y="423"
+     text-anchor="middle"
+     font-size="10px"
+     class="mono"
+     fill="#64748b"
+     id="text42">wpa_supplicant_connect()</text>
+  <line
+     x1="1250"
+     y1="432"
+     x2="1250"
+     y2="450"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="line42" />
+  <rect
+     x="1136.9116"
+     y="454"
+     width="224.58188"
+     height="28"
+     rx="4.6787891"
+     fill="#0f172a"
+     stroke="#c084fc"
+     stroke-width="1.45102"
+     id="rect43" />
+  <text
+     x="1250"
+     y="473"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#c4b5fd"
+     id="text43">复用连接篇 Auth / Assoc / EAPOL 流程</text>
+  <line
+     x1="1150"
+     y1="312"
+     x2="1150"
+     y2="337"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     stroke-dasharray="5, 3"
+     id="line43" />
+  <rect
+     x="7.533844"
+     y="367.57895"
+     width="600"
+     height="95"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect44" />
+  <text
+     x="307.53381"
+     y="389.57892"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text44">图例</text>
+  <rect
+     x="17.533844"
+     y="402.57892"
+     width="16"
+     height="16"
+     rx="3"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1"
+     id="rect45" />
+  <text
+     x="42.533844"
+     y="415.57892"
+     text-anchor="start"
+     font-size="11px"
+     fill="#94a3b8"
+     id="text45">RSSI / PER 触发</text>
+  <rect
+     x="151.53384"
+     y="402.57892"
+     width="16"
+     height="16"
+     rx="3"
+     fill="#1c1917"
+     stroke="#f59e0b"
+     stroke-width="1"
+     id="rect46" />
+  <text
+     x="176.53384"
+     y="415.57892"
+     text-anchor="start"
+     font-size="11px"
+     fill="#94a3b8"
+     id="text46">Beacon Loss 触发</text>
+  <rect
+     x="291.53381"
+     y="402.57892"
+     width="16"
+     height="16"
+     rx="3"
+     fill="#052e16"
+     stroke="#22c55e"
+     stroke-width="1"
+     id="rect47" />
+  <text
+     x="316.53381"
+     y="415.57892"
+     text-anchor="start"
+     font-size="11px"
+     fill="#94a3b8"
+     id="text47">802.11k 信息收集</text>
+  <rect
+     x="429.53381"
+     y="402.57892"
+     width="16"
+     height="16"
+     rx="3"
+     fill="#1e1b4b"
+     stroke="#a855f7"
+     stroke-width="1"
+     id="rect48" />
+  <text
+     x="454.53381"
+     y="415.57892"
+     text-anchor="start"
+     font-size="11px"
+     fill="#94a3b8"
+     id="text48">BTM Request (802.11v)</text>
+  <line
+     x1="27.533844"
+     y1="437.57892"
+     x2="67.533844"
+     y2="437.57892"
+     stroke="#64748b"
+     stroke-width="1.5"
+     stroke-dasharray="5, 3"
+     id="line48" />
+  <text
+     x="77.533844"
+     y="441.57892"
+     text-anchor="start"
+     font-size="11px"
+     fill="#64748b"
+     id="text49">虚线 = 异步/跨层调用（supplicant 链路，省略中间跳转）</text>
+</svg>

@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1060 550"
+   width="1060"
+   height="550"
+   version="1.1"
+   id="svg36"
+   sodipodi:docname="07f-mlo-operation-modes.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview36"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.4381579"
+     inkscape:cx="538.53614"
+     inkscape:cy="380"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg36" />
+  <!-- validate: skip-orphan-boxes -->
+  <defs
+     id="defs8">
+    <marker
+       id="arrowA"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="10,3.5 0,7 0,0 "
+         fill="#a855f7"
+         id="polygon1" />
+    </marker>
+    <marker
+       id="arrowB"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="10,3.5 0,7 0,0 "
+         fill="#22c55e"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arrowC"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="10,3.5 0,7 0,0 "
+         fill="#38bdf8"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arrowE"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="10,3.5 0,7 0,0 "
+         fill="#fb7185"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arrowF"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="10,3.5 0,7 0,0 "
+         fill="#f59e0b"
+         id="polygon5" />
+    </marker>
+    <marker
+       id="arrowG"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="10,3.5 0,7 0,0 "
+         fill="#f97316"
+         id="polygon6" />
+    </marker>
+    <marker
+       id="arrowH"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="10,3.5 0,7 0,0 "
+         fill="#94a3b8"
+         id="polygon7" />
+    </marker>
+    <linearGradient
+       id="terminalGradient"
+       x1="0"
+       y1="0"
+       x2="897.55225"
+       y2="897.55225"
+       gradientTransform="scale(1.1809898,0.61277768)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop7" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop8" />
+    </linearGradient>
+    <filter
+       id="glowBlue"
+       x="-0.30000001"
+       y="-0.30000001"
+       width="1.6"
+       height="1.6">
+      <feDropShadow
+         dx="0"
+         dy="0"
+         stdDeviation="5"
+         flood-color="#3b82f6"
+         flood-opacity="0.65" />
+    </filter>
+    <filter
+       id="glowPurple"
+       x="-0.30000001"
+       y="-0.30000001"
+       width="1.6"
+       height="1.6">
+      <feDropShadow
+         dx="0"
+         dy="0"
+         stdDeviation="5"
+         flood-color="#a855f7"
+         flood-opacity="0.72" />
+    </filter>
+    <filter
+       id="glowGreen"
+       x="-0.30000001"
+       y="-0.30000001"
+       width="1.6"
+       height="1.6">
+      <feDropShadow
+         dx="0"
+         dy="0"
+         stdDeviation="5"
+         flood-color="#22c55e"
+         flood-opacity="0.62" />
+    </filter>
+    <filter
+       id="glowOrange"
+       x="-0.30000001"
+       y="-0.30000001"
+       width="1.6"
+       height="1.6">
+      <feDropShadow
+         dx="0"
+         dy="0"
+         stdDeviation="5"
+         flood-color="#f97316"
+         flood-opacity="0.62" />
+    </filter>
+    <style
+       id="style8">
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; }
+    .title { font-size: 30px; font-weight: 700; fill: #e2e8f0; }
+    .subtitle { font-size: 14px; font-weight: 500; fill: #94a3b8; }
+    .section { font-size: 13px; font-weight: 700; fill: #38bdf8; letter-spacing: 1.4px; }
+    .section-sub { font-size: 12px; font-weight: 500; fill: #64748b; }
+    .node-title { font-size: 18px; font-weight: 700; fill: #e2e8f0; }
+    .node-sub { font-size: 12px; font-weight: 500; fill: #94a3b8; }
+    .node-type { font-size: 12px; font-weight: 700; fill: #64748b; letter-spacing: 0.08em; }
+    .arrow-label { font-size: 12px; font-weight: 600; fill: #cbd5e1; }
+    .legend { font-size: 12px; font-weight: 500; fill: #94a3b8; }
+    .footnote { font-size: 12px; font-weight: 500; fill: #64748b; }
+    </style>
+  </defs>
+  <rect
+     width="1060"
+     height="550"
+     fill="url(#terminalGradient)"
+     id="rect8"
+     style="fill:url(#terminalGradient);stroke-width:0.850696"
+     x="0"
+     y="0" />
+  <text
+     x="530"
+     y="56"
+     text-anchor="middle"
+     class="title"
+     id="text8">WiFi 7 MLO 四种操作模式</text>
+  <text
+     x="530"
+     y="82"
+     text-anchor="middle"
+     class="subtitle"
+     id="text9">SLO / MLSR / eMLSR / STR MLMR — 射频配置与切换特性对比</text>
+  <path
+     d="m 130,128 v 30"
+     fill="none"
+     stroke="#3b82f6"
+     stroke-width="2.3"
+     marker-end="url(#arrowA)"
+     id="path9" />
+  <path
+     d="m 390,128 -45,30"
+     fill="none"
+     stroke="#8b5cf6"
+     stroke-width="2.3"
+     marker-end="url(#arrowA)"
+     stroke-dasharray="6, 4"
+     id="path10" />
+  <path
+     d="m 390,128 75,30"
+     fill="none"
+     stroke="#8b5cf6"
+     stroke-width="2.3"
+     marker-end="url(#arrowA)"
+     stroke-dasharray="6, 4"
+     id="path11" />
+  <path
+     d="m 645,128 -40,30"
+     fill="none"
+     stroke="#f59e0b"
+     stroke-width="2.3"
+     marker-end="url(#arrowF)"
+     stroke-dasharray="6, 4"
+     id="path12" />
+  <path
+     d="m 645,128 70,30"
+     fill="none"
+     stroke="#f59e0b"
+     stroke-width="2.3"
+     marker-end="url(#arrowF)"
+     stroke-dasharray="6, 4"
+     id="path13" />
+  <path
+     d="m 880,118 5,40"
+     fill="none"
+     stroke="#10b981"
+     stroke-width="2.3"
+     marker-end="url(#arrowA)"
+     id="path14" />
+  <path
+     d="m 980,118 5,40"
+     fill="none"
+     stroke="#10b981"
+     stroke-width="2.3"
+     marker-end="url(#arrowA)"
+     id="path15" />
+  <rect
+     x="100"
+     y="98"
+     width="60"
+     height="30"
+     rx="10"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     id="rect15" />
+  <text
+     x="130"
+     y="113"
+     text-anchor="middle"
+     class="node-title"
+     id="text15">RF</text>
+  <rect
+     x="80"
+     y="158"
+     width="100"
+     height="44"
+     rx="10"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect16" />
+  <text
+     x="130"
+     y="180"
+     text-anchor="middle"
+     class="node-title"
+     id="text16">Link 0</text>
+  <rect
+     x="40"
+     y="238"
+     width="200"
+     height="44"
+     rx="10"
+     fill="#111827"
+     stroke="#334155"
+     stroke-width="1.8"
+     id="rect17" />
+  <text
+     x="140"
+     y="260"
+     text-anchor="middle"
+     class="node-title"
+     id="text17">仅1条链路活跃</text>
+  <rect
+     x="360"
+     y="98"
+     width="60"
+     height="30"
+     rx="10"
+     fill="#1e3a5f"
+     stroke="#8b5cf6"
+     stroke-width="1.8"
+     id="rect18" />
+  <text
+     x="390"
+     y="113"
+     text-anchor="middle"
+     class="node-title"
+     id="text18">RF</text>
+  <rect
+     x="300"
+     y="158"
+     width="90"
+     height="44"
+     rx="10"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect19" />
+  <text
+     x="345"
+     y="180"
+     text-anchor="middle"
+     class="node-title"
+     id="text19">Link 0</text>
+  <rect
+     x="420"
+     y="158"
+     width="90"
+     height="44"
+     rx="10"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect20" />
+  <text
+     x="465"
+     y="180"
+     text-anchor="middle"
+     class="node-title"
+     id="text20">Link 1</text>
+  <rect
+     x="295"
+     y="238"
+     width="200"
+     height="44"
+     rx="10"
+     fill="#111827"
+     stroke="#334155"
+     stroke-width="1.8"
+     id="rect21" />
+  <text
+     x="395"
+     y="260"
+     text-anchor="middle"
+     class="node-title"
+     id="text21">1 RF在链路间切换</text>
+  <rect
+     x="615"
+     y="98"
+     width="60"
+     height="30"
+     rx="10"
+     fill="#1e3a5f"
+     stroke="#f59e0b"
+     stroke-width="1.8"
+     id="rect22" />
+  <text
+     x="645"
+     y="113"
+     text-anchor="middle"
+     class="node-title"
+     id="text22">RF</text>
+  <rect
+     x="560"
+     y="158"
+     width="90"
+     height="44"
+     rx="10"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect23" />
+  <text
+     x="605"
+     y="180"
+     text-anchor="middle"
+     class="node-title"
+     id="text23">Link 0</text>
+  <rect
+     x="670"
+     y="158"
+     width="90"
+     height="44"
+     rx="10"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect24" />
+  <text
+     x="715"
+     y="180"
+     text-anchor="middle"
+     class="node-title"
+     id="text24">Link 1</text>
+  <rect
+     x="530"
+     y="238"
+     width="230"
+     height="44"
+     rx="10"
+     fill="#111827"
+     stroke="#334155"
+     stroke-width="1.8"
+     id="rect25" />
+  <text
+     x="645"
+     y="260"
+     text-anchor="middle"
+     class="node-title"
+     id="text25">切换需 Padding Delay</text>
+  <rect
+     x="850"
+     y="88"
+     width="60"
+     height="30"
+     rx="10"
+     fill="#1e3a5f"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect26" />
+  <text
+     x="880"
+     y="103"
+     text-anchor="middle"
+     class="node-title"
+     id="text26">RF₀</text>
+  <rect
+     x="950"
+     y="88"
+     width="60"
+     height="30"
+     rx="10"
+     fill="#1e3a5f"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect27" />
+  <text
+     x="980"
+     y="103"
+     text-anchor="middle"
+     class="node-title"
+     id="text27">RF₁</text>
+  <rect
+     x="840"
+     y="158"
+     width="90"
+     height="44"
+     rx="10"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect28" />
+  <text
+     x="885"
+     y="180"
+     text-anchor="middle"
+     class="node-title"
+     id="text28">Link 0</text>
+  <rect
+     x="940"
+     y="158"
+     width="90"
+     height="44"
+     rx="10"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.8"
+     id="rect29" />
+  <text
+     x="985"
+     y="180"
+     text-anchor="middle"
+     class="node-title"
+     id="text29">Link 1</text>
+  <rect
+     x="790"
+     y="238"
+     width="240"
+     height="44"
+     rx="10"
+     fill="#111827"
+     stroke="#334155"
+     stroke-width="1.8"
+     id="rect30" />
+  <text
+     x="910"
+     y="260"
+     text-anchor="middle"
+     class="node-title"
+     id="text30">独立RF · 真正并行</text>
+  <rect
+     x="20"
+     y="298"
+     width="1020"
+     height="30"
+     rx="10"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="1.8"
+     id="rect31" />
+  <text
+     x="530"
+     y="313"
+     text-anchor="middle"
+     class="node-title"
+     id="text31">特性SLOMLSReMLSRSTR MLMR</text>
+  <rect
+     x="20"
+     y="333"
+     width="1020"
+     height="34"
+     rx="10"
+     fill="#111827"
+     stroke="#1e293b"
+     stroke-width="1.8"
+     id="rect32" />
+  <text
+     x="530"
+     y="350"
+     text-anchor="middle"
+     class="node-title"
+     id="text32">同时发送链路数 1 1 1 2+</text>
+  <rect
+     x="20"
+     y="368"
+     width="1020"
+     height="34"
+     rx="10"
+     fill="#0f172a"
+     stroke="#1e293b"
+     stroke-width="1.8"
+     id="rect33" />
+  <text
+     x="530"
+     y="385"
+     text-anchor="middle"
+     class="node-title"
+     id="text33">切换延迟 无 ≈0ms 32μs×N+Trans 无</text>
+  <rect
+     x="20"
+     y="403"
+     width="1020"
+     height="34"
+     rx="10"
+     fill="#111827"
+     stroke="#1e293b"
+     stroke-width="1.8"
+     id="rect34" />
+  <text
+     x="530"
+     y="420"
+     text-anchor="middle"
+     class="node-title"
+     id="text34">TX描述符分配 单链路独立池 单链路独立池 单链路独立池 多链路共享池</text>
+  <rect
+     x="20"
+     y="438"
+     width="1020"
+     height="34"
+     rx="10"
+     fill="#0f172a"
+     stroke="#1e293b"
+     stroke-width="1.8"
+     id="rect35" />
+  <text
+     x="530"
+     y="455"
+     text-anchor="middle"
+     class="node-title"
+     id="text35">固件复杂度 最低 低 中(需padding PPDU) 高(并发调度)</text>
+  <rect
+     x="140"
+     y="500"
+     width="780"
+     height="40.788654"
+     rx="10"
+     fill="#064e3b"
+     stroke="#10b981"
+     stroke-width="1.56439"
+     id="rect36" />
+  <text
+     x="530"
+     y="527"
+     text-anchor="middle"
+     class="node-title"
+     id="text36">⑧ NSTR MLMR: 多RF但不能同时收发</text>
+</svg>

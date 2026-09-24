@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="800"
+   height="300"
+   viewBox="0 0 800 300"
+   version="1.1"
+   id="svg27"
+   sodipodi:docname="04-delimiter-structure.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview27"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.69"
+     inkscape:cx="479.88166"
+     inkscape:cy="150"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg27" />
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+ </style>
+  <defs
+     id="defs2">
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="536.65631"
+       y2="536.65631"
+       gradientTransform="scale(1.490712,0.55901699)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+  </defs>
+  <rect
+     width="800"
+     height="300"
+     fill="url(#bg)"
+     id="rect2"
+     style="fill:url(#bg);stroke-width:0.912871"
+     x="0"
+     y="0" />
+  <!-- Title -->
+  <text
+     x="400"
+     y="30"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="16px"
+     font-weight="700"
+     id="text2">A-MPDU Delimiter Structure (4 Bytes)</text>
+  <text
+     x="400"
+     y="52"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="12px"
+     id="text3">Delimiter 结构 — 每个 MPDU 前的 4 字节分隔符 · 位序 B0(LSB) → B31(MSB)</text>
+  <!-- ==================== Main field strip : 32 bits, x 96..864, B0(LSB) at left ==================== -->
+  <!-- Reserved : B3-B0 -->
+  <rect
+     x="16"
+     y="80"
+     width="96"
+     height="72"
+     rx="5"
+     fill="#1e293b"
+     stroke="#64748b"
+     stroke-width="1.5"
+     id="rect3" />
+  <text
+     x="64"
+     y="104"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="13px"
+     font-weight="700"
+     id="text4">Reserved</text>
+  <text
+     x="64"
+     y="125"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="11px"
+     id="text5">4 bit</text>
+  <text
+     x="64"
+     y="145"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="10px"
+     id="text6">[B3:B0]</text>
+  <!-- MPDU Length : B15-B4 -->
+  <rect
+     x="112"
+     y="80"
+     width="288"
+     height="72"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect6" />
+  <text
+     x="256"
+     y="104"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="13px"
+     font-weight="700"
+     id="text7">MPDU Length</text>
+  <text
+     x="256"
+     y="125"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="11px"
+     id="text8">12 bit · 0-4095</text>
+  <text
+     x="256"
+     y="145"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="10px"
+     id="text9">[B15:B4]</text>
+  <!-- CRC : B23-B16 -->
+  <rect
+     x="400"
+     y="80"
+     width="192"
+     height="72"
+     rx="5"
+     fill="#1e293b"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect9" />
+  <text
+     x="496"
+     y="104"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="13px"
+     font-weight="700"
+     id="text10">CRC</text>
+  <text
+     x="496"
+     y="125"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="11px"
+     id="text11">8 bit</text>
+  <text
+     x="496"
+     y="145"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="10px"
+     id="text12">[B23:B16]</text>
+  <!-- Delimiter Signature : B31-B24 (0x4E) -->
+  <rect
+     x="592"
+     y="80"
+     width="192"
+     height="72"
+     rx="5"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect12" />
+  <text
+     x="688"
+     y="104"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="13px"
+     font-weight="700"
+     id="text13">Delimiter Signature</text>
+  <text
+     x="688"
+     y="125"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="11px"
+     id="text14">8 bit · 固定 0x4E</text>
+  <text
+     x="688"
+     y="145"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="10px"
+     id="text15">[B31:B24]</text>
+  <!-- Dashed callout connectors: field box bottom -> description box top -->
+  <line
+     x1="64"
+     y1="152"
+     x2="64"
+     y2="170"
+     stroke="#64748b"
+     stroke-width="1"
+     stroke-dasharray="3, 2"
+     id="line15" />
+  <line
+     x1="256"
+     y1="152"
+     x2="256"
+     y2="170"
+     stroke="#3b82f6"
+     stroke-width="1"
+     stroke-dasharray="3, 2"
+     id="line16" />
+  <line
+     x1="496"
+     y1="152"
+     x2="496"
+     y2="170"
+     stroke="#f97316"
+     stroke-width="1"
+     stroke-dasharray="3, 2"
+     id="line17" />
+  <line
+     x1="688"
+     y1="152"
+     x2="688"
+     y2="170"
+     stroke="#10b981"
+     stroke-width="1"
+     stroke-dasharray="3, 2"
+     id="line18" />
+  <!-- ==================== Field description boxes ==================== -->
+  <rect
+     x="16"
+     y="170"
+     width="96"
+     height="44"
+     rx="4"
+     fill="#0f172a"
+     stroke="#64748b"
+     stroke-width="0.8"
+     id="rect18" />
+  <text
+     x="64"
+     y="188"
+     text-anchor="middle"
+     fill="#cbd5e1"
+     font-size="11px"
+     id="text18">保留位</text>
+  <text
+     x="64"
+     y="203"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="10px"
+     id="text19">默认 0</text>
+  <rect
+     x="112"
+     y="170"
+     width="288"
+     height="44"
+     rx="4"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="0.8"
+     id="rect19" />
+  <text
+     x="256"
+     y="188"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="11px"
+     id="text20">后续 MPDU 的字节长度</text>
+  <text
+     x="256"
+     y="203"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="10px"
+     id="text21">A-MPDU 结束由 Length = 0 的 Delimiter 标记</text>
+  <rect
+     x="400"
+     y="170"
+     width="192"
+     height="44"
+     rx="4"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="0.8"
+     id="rect21" />
+  <text
+     x="496"
+     y="188"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="11px"
+     id="text22">校验 Reserved + MPDU Length</text>
+  <text
+     x="496"
+     y="203"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="10px"
+     id="text23">前 16 bit，不含 Signature</text>
+  <rect
+     x="592"
+     y="170"
+     width="192"
+     height="44"
+     rx="4"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="0.8"
+     id="rect23" />
+  <text
+     x="688"
+     y="188"
+     text-anchor="middle"
+     fill="#6ee7b7"
+     font-size="11px"
+     id="text24">固定 0x4E = ASCII 'N'</text>
+  <text
+     x="688"
+     y="203"
+     text-anchor="middle"
+     fill="#64748b"
+     font-size="10px"
+     id="text25">出错后重定位 Delimiter 边界</text>
+  <!-- ==================== Bottom note bar ==================== -->
+  <rect
+     x="16.21302"
+     y="228"
+     width="767.57397"
+     height="50"
+     rx="3.4889727"
+     fill="#1c1917"
+     stroke="#334155"
+     stroke-width="0.46697"
+     id="rect25" />
+  <text
+     x="400"
+     y="249"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="11px"
+     id="text26">交通比喻：MPDU Length = 货物重量标签 | CRC = 标签防伪码 | 最后一个 Length = 0 的 Delimiter = 车尾灯（车队到此结束）</text>
+  <text
+     x="400"
+     y="268"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text27">802.11ac/ax：Reserved 中 2 bit 转作 MPDU Length High（扩至 14-bit / 最大 16383）；Signature 0x4E 用于重定位 Delimiter</text>
+</svg>

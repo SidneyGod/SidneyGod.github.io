@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1200"
+   height="550"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="06-bss-coloring.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.45"
+     inkscape:cx="600"
+     inkscape:cy="274.82759"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g4" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs4">
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrow-red">
+      <polygon
+         id="svg_1"
+         fill="#ef4444"
+         points="0 0, 8 3, 0 6" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="3"
+       refX="7"
+       markerHeight="6"
+       markerWidth="8"
+       id="arrow-blue">
+      <polygon
+         id="svg_2"
+         fill="#3b82f6"
+         points="0 0, 8 3, 0 6" />
+    </marker>
+    <linearGradient
+       y2="100%"
+       x2="100%"
+       y1="0%"
+       x1="0%"
+       id="bg-grad">
+      <stop
+         stop-color="#0f0f1a"
+         offset="0%"
+         id="stop1" />
+      <stop
+         stop-color="#1a1a2e"
+         offset="100%"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       y2="100%"
+       x2="0%"
+       y1="0%"
+       x1="0%"
+       id="card-grad">
+      <stop
+         stop-color="#1e293b"
+         offset="0%"
+         id="stop3" />
+      <stop
+         stop-color="#0f172a"
+         offset="100%"
+         id="stop4" />
+    </linearGradient>
+  </defs>
+  <!-- Title -->
+  <!-- Problem: Without BSS Coloring -->
+  <!-- AP1 -->
+  <!-- AP2 -->
+  <!-- STA -->
+  <!-- Signal arrows -->
+  <!-- Problem description -->
+  <!-- Solution: With BSS Coloring -->
+  <!-- AP1 with color -->
+  <!-- AP2 with color -->
+  <!-- STA -->
+  <!-- Color-coded signals -->
+  <!-- Decision -->
+  <!-- Bottom: How it works -->
+  <!-- PHY header location -->
+  <!-- HE-SIG-A -->
+  <!-- Benefits -->
+  <!-- Dynamic coloring -->
+  <g
+     id="g4">
+    <title
+       id="title4">Layer 1</title>
+    <rect
+       id="svg_4"
+       fill="url(#bg-grad)"
+       height="550"
+       width="1200" />
+    <text
+       id="svg_5"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="18"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="35"
+       x="600">BSS Coloring — Different Courier Company Colors</text>
+    <text
+       id="svg_6"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="13"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="55"
+       x="600">BSS Coloring — 不同快递公司的颜色标记，快速区分信号来源</text>
+    <rect
+       id="svg_7"
+       stroke="#ef4444"
+       fill="url(#card-grad)"
+       rx="10"
+       height="220"
+       width="540"
+       y="75"
+       x="40" />
+    <text
+       id="svg_8"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="14"
+       fill="#ef4444"
+       text-anchor="middle"
+       y="100"
+       x="310">传统方式（无 BSS Coloring）</text>
+    <rect
+       id="svg_9"
+       stroke-width="1.5"
+       stroke="#3b82f6"
+       fill="#1e3a5f"
+       rx="6"
+       height="60"
+       width="100"
+       y="115"
+       x="60" />
+    <text
+       id="svg_10"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="140"
+       x="110">AP1</text>
+    <text
+       id="svg_11"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="155"
+       x="110">Ch6</text>
+    <text
+       id="svg_12"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#60a5fa"
+       text-anchor="middle"
+       y="168"
+       x="110">BSSID: AA:BB:CC</text>
+    <rect
+       id="svg_13"
+       stroke-width="1.5"
+       stroke="#3b82f6"
+       fill="#1e3a5f"
+       rx="6"
+       height="60"
+       width="100"
+       y="195"
+       x="60" />
+    <text
+       id="svg_14"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="220"
+       x="110">AP2</text>
+    <text
+       id="svg_15"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="235"
+       x="110">Ch6</text>
+    <text
+       id="svg_16"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#60a5fa"
+       text-anchor="middle"
+       y="248"
+       x="110">BSSID: DD:EE:FF</text>
+    <rect
+       id="svg_17"
+       stroke="#94a3b8"
+       fill="#475569"
+       rx="6"
+       height="50"
+       width="80"
+       y="155"
+       x="380" />
+    <text
+       id="svg_18"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="185"
+       x="420">STA</text>
+    <line
+       id="svg_19"
+       marker-end="url(#arrow-red)"
+       stroke-width="1.5"
+       stroke="#ef4444"
+       y2="170"
+       x2="375"
+       y1="140"
+       x1="160" />
+    <line
+       id="svg_20"
+       marker-end="url(#arrow-red)"
+       stroke-width="1.5"
+       stroke="#ef4444"
+       y2="185"
+       x2="375"
+       y1="225"
+       x1="160" />
+    <text
+       id="svg_21"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#f87171"
+       text-anchor="middle"
+       y="140"
+       x="260">信号?</text>
+    <text
+       id="svg_22"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#f87171"
+       text-anchor="middle"
+       y="220"
+       x="260">信号?</text>
+    <rect
+       stroke="#ef4444"
+       id="svg_23"
+       fill="#1c1917"
+       rx="4.1558542"
+       height="50"
+       width="183.89656"
+       y="200"
+       x="176"
+       style="stroke-width:1.0193" />
+    <text
+       id="svg_24"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#ef4444"
+       text-anchor="middle"
+       y="218"
+       x="268">STA 听到信号 → 不知道是哪个 AP</text>
+    <text
+       id="svg_25"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#f87171"
+       text-anchor="middle"
+       y="235"
+       x="268">→ 只能等信道空闲（保守策略）</text>
+    <rect
+       id="svg_26"
+       stroke-width="1.5"
+       stroke="#10b981"
+       fill="url(#card-grad)"
+       rx="10"
+       height="220"
+       width="540"
+       y="76"
+       x="621" />
+    <text
+       id="svg_27"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="14"
+       fill="#10b981"
+       text-anchor="middle"
+       y="100"
+       x="890">BSS Coloring（802.11ax）</text>
+    <rect
+       id="svg_28"
+       stroke-width="2"
+       stroke="#ef4444"
+       fill="#7f1d1d"
+       rx="6"
+       height="60"
+       width="100"
+       y="115"
+       x="640" />
+    <text
+       id="svg_29"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       font-size="12"
+       fill="#ef4444"
+       text-anchor="middle"
+       y="135"
+       x="690">AP1</text>
+    <text
+       id="svg_30"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#fca5a5"
+       text-anchor="middle"
+       y="150"
+       x="690">Color=1 (红)</text>
+    <text
+       id="svg_31"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="165"
+       x="690">Ch6</text>
+    <rect
+       id="svg_32"
+       stroke-width="2"
+       stroke="#3b82f6"
+       fill="#1e3a5f"
+       rx="6"
+       height="60"
+       width="100"
+       y="195"
+       x="640" />
+    <text
+       id="svg_33"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       font-size="12"
+       fill="#3b82f6"
+       text-anchor="middle"
+       y="215"
+       x="690">AP2</text>
+    <text
+       id="svg_34"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#93c5fd"
+       text-anchor="middle"
+       y="230"
+       x="690">Color=2 (蓝)</text>
+    <text
+       id="svg_35"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="245"
+       x="690">Ch6</text>
+    <rect
+       id="svg_36"
+       stroke-width="1.5"
+       stroke="#10b981"
+       fill="#065f46"
+       rx="6"
+       height="50"
+       width="80"
+       y="155"
+       x="960" />
+    <text
+       id="svg_37"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="11"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="175"
+       x="1000">STA</text>
+    <text
+       id="svg_38"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#10b981"
+       text-anchor="middle"
+       y="190"
+       x="1000">关联到 AP1</text>
+    <line
+       id="svg_39"
+       marker-end="url(#arrow-red)"
+       stroke-width="2"
+       stroke="#ef4444"
+       y2="170"
+       x2="955"
+       y1="140"
+       x1="740" />
+    <line
+       id="svg_40"
+       marker-end="url(#arrow-blue)"
+       stroke-width="2"
+       stroke="#3b82f6"
+       y2="185"
+       x2="955"
+       y1="225"
+       x1="740" />
+    <text
+       id="svg_41"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       font-size="10"
+       fill="#ef4444"
+       text-anchor="middle"
+       y="135"
+       x="840">Color=1 (红)</text>
+    <text
+       id="svg_42"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       font-size="10"
+       fill="#3b82f6"
+       text-anchor="middle"
+       y="237"
+       x="840">Color=2 (蓝)</text>
+    <rect
+       id="svg_43"
+       stroke="#10b981"
+       fill="#1c1917"
+       rx="4"
+       height="50"
+       width="180"
+       y="174"
+       x="752" />
+    <text
+       id="svg_44"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#10b981"
+       text-anchor="middle"
+       y="192"
+       x="842">红色 = 我的 AP → 等待</text>
+    <text
+       id="svg_45"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#60a5fa"
+       text-anchor="middle"
+       y="209"
+       x="842">蓝色 = 其他 AP → 更激进接入</text>
+    <rect
+       id="svg_46"
+       stroke="#334155"
+       fill="url(#card-grad)"
+       rx="10"
+       height="220"
+       width="1120"
+       y="315"
+       x="40" />
+    <text
+       id="svg_47"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="700"
+       font-size="15"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="340"
+       x="600">BSS Coloring 工作机制</text>
+    <rect
+       id="svg_48"
+       stroke="#334155"
+       fill="#0f172a"
+       rx="6"
+       height="80"
+       width="500"
+       y="355"
+       x="60" />
+    <text
+       id="svg_49"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       font-size="12"
+       fill="#60a5fa"
+       text-anchor="middle"
+       y="375"
+       x="310">PHY Header 中的 BSS Color 字段</text>
+    <rect
+       id="svg_50"
+       stroke="#3b82f6"
+       fill="#1e3a5f"
+       rx="4"
+       height="30"
+       width="200"
+       y="385"
+       x="80" />
+    <text
+       id="svg_51"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#e2e8f0"
+       text-anchor="middle"
+       y="405"
+       x="180">HE-SIG-A</text>
+    <rect
+       id="svg_52"
+       stroke-width="1.5"
+       stroke="#10b981"
+       fill="#065f46"
+       rx="4"
+       height="30"
+       width="120"
+       y="385"
+       x="290" />
+    <text
+       id="svg_53"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       font-size="10"
+       fill="#10b981"
+       text-anchor="middle"
+       y="405"
+       x="350">BSS Color</text>
+    <text
+       id="svg_54"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="9"
+       fill="#94a3b8"
+       y="405"
+       x="420">(6-bit)</text>
+    <text
+       id="svg_55"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#94a3b8"
+       text-anchor="middle"
+       y="428"
+       x="310">0-63: 64 种颜色，快速区分不同 BSS</text>
+    <rect
+       id="svg_56"
+       stroke="#334155"
+       fill="#0f172a"
+       rx="6"
+       height="80"
+       width="540"
+       y="355"
+       x="600" />
+    <text
+       id="svg_57"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       font-size="12"
+       fill="#10b981"
+       text-anchor="middle"
+       y="375"
+       x="870">核心优势</text>
+    <text
+       id="svg_58"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#94a3b8"
+       y="393"
+       x="620">• 快速区分同频信号来源（无需解码 MAC 地址）</text>
+    <text
+       id="svg_59"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#94a3b8"
+       y="410"
+       x="620">• 非本 BSS 信号可更激进接入（OBSS PD 调整）</text>
+    <text
+       id="svg_60"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#94a3b8"
+       y="427"
+       x="620">• 支持动态颜色切换（检测冲突时自动更换）</text>
+    <rect
+       id="svg_61"
+       stroke="#f97316"
+       fill="#0f172a"
+       rx="6"
+       height="70"
+       width="1080"
+       y="450"
+       x="60" />
+    <text
+       id="svg_62"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-weight="600"
+       font-size="12"
+       fill="#f97316"
+       text-anchor="middle"
+       y="472"
+       x="600">动态 BSS Coloring</text>
+    <text
+       id="svg_63"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#94a3b8"
+       y="492"
+       x="120">当相邻 AP 检测到相同颜色时 → 自动更换颜色 → 避免混淆</text>
+    <text
+       id="svg_64"
+       font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace"
+       font-size="10"
+       fill="#fbbf24"
+       y="508"
+       x="120">比喻：当两家快递公司发现车辆颜色撞了，其中一家立即换涂装</text>
+  </g>
+</svg>

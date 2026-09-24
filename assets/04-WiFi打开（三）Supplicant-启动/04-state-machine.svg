@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 1000" width="1300" height="1000">
+<style>text{font-family:'Maple Mono Normal NL NF CN','Microsoft YaHei',monospace;}</style>
+<defs>
+  <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#0f0f1a"/><stop offset="100%" stop-color="#1a1a2e"/>
+  </linearGradient>
+  <marker id="mGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#10b981"/></marker>
+  <marker id="mOrange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#f59e0b"/></marker>
+</defs>
+<rect width="1300" height="1000" fill="url(#bgGrad)"/>
+<rect x="1" y="1" width="1298" height="998" rx="8" fill="none" stroke="#2a2d35" stroke-width="1.5"/>
+<text x="650.0" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#e2e8f0">wpa_supplicant 状态机层级：10 状态的连接生命周期</text>
+<text x="650.0" y="60" text-anchor="middle" font-size="12" fill="#94a3b8">主链（绿）= 正常连接推进，枚举值 0→9 · 虚线（橙）= 旁路状态：禁用 / 无网络</text>
+<rect x="335" y="102" width="330" height="56" rx="10" fill="#0f1f2b" stroke="#2f9e6e" stroke-width="1.6"/>
+<text x="500" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#e2e8f0">WPA_DISCONNECTED  [0]</text>
+<rect x="335" y="212" width="330" height="56" rx="10" fill="#0f1f2b" stroke="#2f9e6e" stroke-width="1.6"/>
+<text x="500" y="245" text-anchor="middle" font-size="14" font-weight="bold" fill="#e2e8f0">WPA_SCANNING  [3]</text>
+<rect x="335" y="322" width="330" height="56" rx="10" fill="#0f1f2b" stroke="#2f9e6e" stroke-width="1.6"/>
+<text x="500" y="355" text-anchor="middle" font-size="14" font-weight="bold" fill="#e2e8f0">WPA_AUTHENTICATING  [4]</text>
+<rect x="335" y="432" width="330" height="56" rx="10" fill="#0f1f2b" stroke="#2f9e6e" stroke-width="1.6"/>
+<text x="500" y="465" text-anchor="middle" font-size="14" font-weight="bold" fill="#e2e8f0">WPA_ASSOCIATING  [5]</text>
+<rect x="335" y="542" width="330" height="56" rx="10" fill="#0f1f2b" stroke="#2f9e6e" stroke-width="1.6"/>
+<text x="500" y="575" text-anchor="middle" font-size="14" font-weight="bold" fill="#e2e8f0">WPA_ASSOCIATED  [6]</text>
+<rect x="335" y="652" width="330" height="56" rx="10" fill="#0f1f2b" stroke="#2f9e6e" stroke-width="1.6"/>
+<text x="500" y="685" text-anchor="middle" font-size="14" font-weight="bold" fill="#e2e8f0">WPA_4WAY_HANDSHAKE  [7]</text>
+<rect x="335" y="762" width="330" height="56" rx="10" fill="#0f1f2b" stroke="#2f9e6e" stroke-width="1.6"/>
+<text x="500" y="795" text-anchor="middle" font-size="14" font-weight="bold" fill="#e2e8f0">WPA_GROUP_HANDSHAKE  [8]</text>
+<rect x="335" y="872" width="330" height="56" rx="10" fill="#0a2a18" stroke="#2ecc71" stroke-width="1.6"/>
+<text x="500" y="905" text-anchor="middle" font-size="14" font-weight="bold" fill="#e2e8f0">WPA_COMPLETED  [9]</text>
+<line x1="500" y1="158" x2="500" y2="212" stroke="#10b981" stroke-width="2.2" marker-end="url(#mGreen)"/>
+<text x="321" y="189" text-anchor="end" font-size="12" fill="#34d399">开始扫描 / 自动连接</text>
+<line x1="500" y1="268" x2="500" y2="322" stroke="#10b981" stroke-width="2.2" marker-end="url(#mGreen)"/>
+<text x="321" y="299" text-anchor="end" font-size="12" fill="#34d399">认证开始（仅 SME）</text>
+<line x1="500" y1="378" x2="500" y2="432" stroke="#10b981" stroke-width="2.2" marker-end="url(#mGreen)"/>
+<text x="321" y="409" text-anchor="end" font-size="12" fill="#34d399">关联开始</text>
+<line x1="500" y1="488" x2="500" y2="542" stroke="#10b981" stroke-width="2.2" marker-end="url(#mGreen)"/>
+<text x="321" y="519" text-anchor="end" font-size="12" fill="#34d399">关联成功 EVENT_ASSOC</text>
+<line x1="500" y1="598" x2="500" y2="652" stroke="#10b981" stroke-width="2.2" marker-end="url(#mGreen)"/>
+<text x="321" y="629" text-anchor="end" font-size="12" fill="#34d399">收到 EAPOL-Key msg 1/4</text>
+<line x1="500" y1="708" x2="500" y2="762" stroke="#10b981" stroke-width="2.2" marker-end="url(#mGreen)"/>
+<text x="321" y="739" text-anchor="end" font-size="12" fill="#34d399">四次握手完成 msg 4/4</text>
+<line x1="500" y1="818" x2="500" y2="872" stroke="#10b981" stroke-width="2.2" marker-end="url(#mGreen)"/>
+<text x="321" y="849" text-anchor="end" font-size="12" fill="#34d399">组密钥握手完成 / 直接完成</text>
+<rect x="780" y="102" width="280" height="56" rx="10" fill="#2a1f0f" stroke="#f59e0b" stroke-width="1.6" stroke-dasharray="5,3"/>
+<text x="920.0" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#fbbf24">WPA_INTERFACE_DISABLED  [1]</text>
+<line x1="1260" y1="112" x2="1060" y2="112" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#mOrange)"/>
+<text x="1170" y="102" text-anchor="middle" font-size="12" fill="#fbbf24">禁用接口 rfkill / 飞行</text>
+<line x1="780" y1="142" x2="665" y2="142" stroke="#10b981" stroke-width="1.8" marker-end="url(#mGreen)"/>
+<text x="722.5" y="135" text-anchor="middle" font-size="12" fill="#34d399">启用接口</text>
+<rect x="780" y="212" width="280" height="56" rx="10" fill="#1e1f2b" stroke="#8b93a7" stroke-width="1.6" stroke-dasharray="5,3"/>
+<text x="920.0" y="245" text-anchor="middle" font-size="14" font-weight="bold" fill="#cbd5e1">WPA_INACTIVE  [2]</text>
+<polyline points="640,158 640,200 820,200 820,212" fill="none" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#mOrange)"/>
+<text x="650" y="190" font-size="12" fill="#fbbf24">没有启用的网络</text>
+<line x1="780" y1="240" x2="665" y2="240" stroke="#10b981" stroke-width="1.8" marker-end="url(#mGreen)"/>
+<text x="722.5" y="232" text-anchor="middle" font-size="12" fill="#34d399">开始扫描</text>
+<text x="30" y="420" font-size="12" fill="#64748b">注：WPA_AUTHENTICATING(4) 仅用于 SME</text>
+<text x="30" y="438" font-size="12" fill="#64748b">非 SME 驱动：SCANNING 直接 → ASSOCIATING</text>
+</svg>

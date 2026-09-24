@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 960 820"
+   width="960"
+   height="820"
+   version="1.1"
+   id="svg44"
+   sodipodi:docname="11e-pd-exchange.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview44"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.3329268"
+     inkscape:cx="480.14639"
+     inkscape:cy="410"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg44" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; }
+    .title { fill: #e2e8f0; font-size: 17px; font-weight: bold; }
+    .subtitle { fill: #94a3b8; font-size: 12px; }
+    .pname { fill: #e2e8f0; font-size: 12px; font-weight: bold; }
+    .psub { fill: #94a3b8; font-size: 10px; }
+    .msg-label { fill: #cbd5e1; font-size: 11px; }
+    .msg-sublabel { fill: #94a3b8; font-size: 10px; }
+    .self-label { fill: #cbd5e1; font-size: 11px; }
+    .self-sublabel { fill: #94a3b8; font-size: 10px; }
+    .group-label { fill: #cbd5e1; font-size: 11px; font-weight: bold; }
+    .legend { fill: #94a3b8; font-size: 11px; }
+    .note { fill: #94a3b8; font-size: 11px; }
+  </style>
+  <defs
+     id="defs5">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrow-blue"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#3b82f6"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arrow-gold"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#eab308"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arrow-green"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#10b981"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arrow-gray"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#94a3b8"
+         id="polygon5" />
+    </marker>
+  </defs>
+  <rect
+     width="960"
+     height="820"
+     fill="url(#bg-grad)"
+     id="rect5" />
+  <text
+     x="480"
+     y="34"
+     text-anchor="middle"
+     class="title"
+     id="text5">Provision Discovery 帧交换时序</text>
+  <text
+     x="480"
+     y="54"
+     text-anchor="middle"
+     class="subtitle"
+     id="text6">发起方构建 PD Request → 对端回 PD Response → 回调链回传 Framework</text>
+  <rect
+     x="55.0"
+     y="72"
+     width="130"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect6" />
+  <text
+     x="120"
+     y="91"
+     text-anchor="middle"
+     class="pname"
+     id="text7">Framework</text>
+  <text
+     x="120"
+     y="106"
+     text-anchor="middle"
+     class="psub"
+     id="text8">P2pStateMachine</text>
+  <rect
+     x="57.0"
+     y="116"
+     width="126"
+     height="7"
+     rx="2"
+     fill="#1e293b"
+     stroke="#3b82f6"
+     stroke-width="1"
+     opacity="0.6"
+     id="rect8" />
+  <rect
+     x="295.0"
+     y="72"
+     width="130"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect9" />
+  <text
+     x="360"
+     y="91"
+     text-anchor="middle"
+     class="pname"
+     id="text9">supplicant</text>
+  <text
+     x="360"
+     y="106"
+     text-anchor="middle"
+     class="psub"
+     id="text10">wpas_p2p_prov_disc</text>
+  <rect
+     x="297.0"
+     y="116"
+     width="126"
+     height="7"
+     rx="2"
+     fill="#1e293b"
+     stroke="#10b981"
+     stroke-width="1"
+     opacity="0.6"
+     id="rect10" />
+  <rect
+     x="545.0"
+     y="72"
+     width="130"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect11" />
+  <text
+     x="610"
+     y="91"
+     text-anchor="middle"
+     class="pname"
+     id="text11">p2p 核心</text>
+  <text
+     x="610"
+     y="106"
+     text-anchor="middle"
+     class="psub"
+     id="text12">p2p_prov_disc_req</text>
+  <rect
+     x="547.0"
+     y="116"
+     width="126"
+     height="7"
+     rx="2"
+     fill="#1e293b"
+     stroke="#a855f7"
+     stroke-width="1"
+     opacity="0.6"
+     id="rect12" />
+  <rect
+     x="790.0"
+     y="72"
+     width="130"
+     height="42"
+     rx="6"
+     fill="#1e293b"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect13" />
+  <text
+     x="855"
+     y="91"
+     text-anchor="middle"
+     class="pname"
+     id="text13">对端设备</text>
+  <text
+     x="855"
+     y="106"
+     text-anchor="middle"
+     class="psub"
+     id="text14">peer</text>
+  <rect
+     x="792.0"
+     y="116"
+     width="126"
+     height="7"
+     rx="2"
+     fill="#1e293b"
+     stroke="#f97316"
+     stroke-width="1"
+     opacity="0.6"
+     id="rect14" />
+  <rect
+     x="50"
+     y="172"
+     width="860"
+     height="288.75296"
+     fill="rgba(51,65,85,0.05)"
+     stroke="#334155"
+     stroke-width="1.01733"
+     stroke-dasharray="4, 4"
+     rx="4"
+     id="rect15" />
+  <rect
+     x="50"
+     y="475"
+     width="860"
+     height="225.75298"
+     fill="rgba(51,65,85,0.05)"
+     stroke="#334155"
+     stroke-width="1.02233"
+     stroke-dasharray="4, 4"
+     rx="4"
+     id="rect16" />
+  <line
+     x1="120"
+     y1="140"
+     x2="120"
+     y2="720"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line16" />
+  <line
+     x1="360"
+     y1="140"
+     x2="360"
+     y2="720"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line17" />
+  <line
+     x1="610"
+     y1="140"
+     x2="610"
+     y2="720"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line18" />
+  <line
+     x1="855"
+     y1="140"
+     x2="855"
+     y2="720"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line19" />
+  <rect
+     x="58"
+     y="172"
+     width="130"
+     height="18"
+     rx="3"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect19" />
+  <text
+     x="123"
+     y="185"
+     text-anchor="middle"
+     class="group-label"
+     id="text19">请求阶段（发起方）</text>
+  <rect
+     x="58"
+     y="475"
+     width="130"
+     height="18"
+     rx="3"
+     fill="#1e293b"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect20" />
+  <text
+     x="123"
+     y="488"
+     text-anchor="middle"
+     class="group-label"
+     id="text20">响应阶段（回调链）</text>
+  <rect
+     x="115"
+     y="189"
+     width="10"
+     height="12"
+     rx="2"
+     fill="rgba(59,130,246,0.15)"
+     id="rect21" />
+  <rect
+     x="355"
+     y="189"
+     width="10"
+     height="12"
+     rx="2"
+     fill="rgba(16,185,129,0.15)"
+     id="rect22" />
+  <line
+     x1="120"
+     y1="195"
+     x2="360"
+     y2="195"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arrow-blue)"
+     id="line22" />
+  <text
+     x="270.0"
+     y="187"
+     text-anchor="middle"
+     class="msg-label"
+     id="text22">1. wpas_p2p_prov_disc()</text>
+  <text
+     x="270.0"
+     y="211"
+     text-anchor="middle"
+     class="msg-sublabel"
+     id="text23">翻译 WPS 方法字符串为位掩码</text>
+  <rect
+     x="355"
+     y="249"
+     width="10"
+     height="12"
+     rx="2"
+     fill="rgba(16,185,129,0.15)"
+     id="rect23" />
+  <rect
+     x="605"
+     y="249"
+     width="10"
+     height="12"
+     rx="2"
+     fill="rgba(168,85,247,0.15)"
+     id="rect24" />
+  <line
+     x1="360"
+     y1="255"
+     x2="610"
+     y2="255"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#arrow-blue)"
+     id="line24" />
+  <text
+     x="485.0"
+     y="247"
+     text-anchor="middle"
+     class="msg-label"
+     id="text24">2. p2p_prov_disc_req()</text>
+  <text
+     x="485.0"
+     y="271"
+     text-anchor="middle"
+     class="msg-sublabel"
+     id="text25">委托 P2P 核心层</text>
+  <rect
+     x="605"
+     y="309"
+     width="10"
+     height="12"
+     rx="2"
+     fill="rgba(168,85,247,0.15)"
+     id="rect25" />
+  <path
+     d="M 610,315 L 646,315 L 646,331 L 610,331"
+     fill="none"
+     stroke="#94a3b8"
+     stroke-width="1.2"
+     marker-end="url(#arrow-gray)"
+     id="path25" />
+  <text
+     x="660"
+     y="312"
+     class="self-label"
+     id="text26">3. dialog_token++</text>
+  <text
+     x="660"
+     y="326"
+     class="self-sublabel"
+     id="text27">递增，用于匹配请求与响应</text>
+  <rect
+     x="605"
+     y="369"
+     width="10"
+     height="12"
+     rx="2"
+     fill="rgba(168,85,247,0.15)"
+     id="rect27" />
+  <path
+     d="M 610,375 L 646,375 L 646,391 L 610,391"
+     fill="none"
+     stroke="#94a3b8"
+     stroke-width="1.2"
+     marker-end="url(#arrow-gray)"
+     id="path27" />
+  <text
+     x="660"
+     y="372"
+     class="self-label"
+     id="text28">4. p2p_send_prov_disc_req()</text>
+  <text
+     x="660"
+     y="386"
+     class="self-sublabel"
+     id="text29">构建并发送 PD Request</text>
+  <rect
+     x="605"
+     y="429"
+     width="10"
+     height="12"
+     rx="2"
+     fill="rgba(168,85,247,0.15)"
+     id="rect29" />
+  <rect
+     x="850"
+     y="429"
+     width="10"
+     height="12"
+     rx="2"
+     fill="rgba(249,115,22,0.15)"
+     id="rect30" />
+  <line
+     x1="610"
+     y1="435"
+     x2="855"
+     y2="435"
+     stroke="#eab308"
+     stroke-width="2.0"
+     marker-end="url(#arrow-gold)"
+     id="line30" />
+  <text
+     x="732.5"
+     y="427"
+     text-anchor="middle"
+     class="msg-label"
+     id="text30">5. PD Request 管理帧</text>
+  <text
+     x="732.5"
+     y="451"
+     text-anchor="middle"
+     class="msg-sublabel"
+     id="text31">dialog_token = N</text>
+  <rect
+     x="850"
+     y="489"
+     width="10"
+     height="12"
+     rx="2"
+     fill="rgba(249,115,22,0.15)"
+     id="rect31" />
+  <rect
+     x="605"
+     y="489"
+     width="10"
+     height="12"
+     rx="2"
+     fill="rgba(168,85,247,0.15)"
+     id="rect32" />
+  <line
+     x1="855"
+     y1="495"
+     x2="610"
+     y2="495"
+     stroke="#eab308"
+     stroke-width="2.0"
+     marker-end="url(#arrow-gold)"
+     id="line32" />
+  <text
+     x="732.5"
+     y="487"
+     text-anchor="middle"
+     class="msg-label"
+     id="text32">6. PD Response 管理帧</text>
+  <text
+     x="732.5"
+     y="511"
+     text-anchor="middle"
+     class="msg-sublabel"
+     id="text33">dialog_token = N（回显）</text>
+  <rect
+     x="605"
+     y="549"
+     width="10"
+     height="12"
+     rx="2"
+     fill="rgba(168,85,247,0.15)"
+     id="rect33" />
+  <path
+     d="M 610,555 L 646,555 L 646,571 L 610,571"
+     fill="none"
+     stroke="#94a3b8"
+     stroke-width="1.2"
+     marker-end="url(#arrow-gray)"
+     id="path33" />
+  <text
+     x="660"
+     y="552"
+     class="self-label"
+     id="text34">7. p2p_process_prov_disc_resp()</text>
+  <text
+     x="660"
+     y="566"
+     class="self-sublabel"
+     id="text35">精确回显校验 + dialog_token 匹配</text>
+  <rect
+     x="605"
+     y="609"
+     width="10"
+     height="12"
+     rx="2"
+     fill="rgba(168,85,247,0.15)"
+     id="rect35" />
+  <rect
+     x="355"
+     y="609"
+     width="10"
+     height="12"
+     rx="2"
+     fill="rgba(16,185,129,0.15)"
+     id="rect36" />
+  <line
+     x1="610"
+     y1="615"
+     x2="360"
+     y2="615"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="line36" />
+  <text
+     x="485.0"
+     y="607"
+     text-anchor="middle"
+     class="msg-label"
+     id="text36">8. prov_disc_resp 回调</text>
+  <text
+     x="485.0"
+     y="631"
+     text-anchor="middle"
+     class="msg-sublabel"
+     id="text37">上报协商结果</text>
+  <rect
+     x="355"
+     y="669"
+     width="10"
+     height="12"
+     rx="2"
+     fill="rgba(16,185,129,0.15)"
+     id="rect37" />
+  <rect
+     x="115"
+     y="669"
+     width="10"
+     height="12"
+     rx="2"
+     fill="rgba(59,130,246,0.15)"
+     id="rect38" />
+  <line
+     x1="360"
+     y1="675"
+     x2="120"
+     y2="675"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arrow-green)"
+     id="line38" />
+  <text
+     x="240.0"
+     y="667"
+     text-anchor="middle"
+     class="msg-label"
+     id="text38">9. P2P_PROV_DISC_*_EVENT</text>
+  <text
+     x="240.0"
+     y="691"
+     text-anchor="middle"
+     class="msg-sublabel"
+     id="text39">P2P-PROV-DISC-PBC-RESP 等</text>
+  <text
+     x="480"
+     y="748"
+     text-anchor="middle"
+     class="note"
+     id="text40">对端须原样回显 WPS 方法，否则 PD 失败；dialog_token 用于把 PD Response 精确匹配回 PD Request</text>
+  <line
+     x1="175"
+     y1="772"
+     x2="197"
+     y2="772"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#arrow-blue)"
+     id="line40" />
+  <text
+     x="205"
+     y="776"
+     class="legend"
+     id="text41">函数调用</text>
+  <line
+     x1="365"
+     y1="772"
+     x2="387"
+     y2="772"
+     stroke="#eab308"
+     stroke-width="2"
+     marker-end="url(#arrow-gold)"
+     id="line41" />
+  <text
+     x="395"
+     y="776"
+     class="legend"
+     id="text42">管理帧（空中）</text>
+  <line
+     x1="555"
+     y1="772"
+     x2="577"
+     y2="772"
+     stroke="#10b981"
+     stroke-width="2"
+     marker-end="url(#arrow-green)"
+     id="line42" />
+  <text
+     x="585"
+     y="776"
+     class="legend"
+     id="text43">回调 / 事件</text>
+  <line
+     x1="745"
+     y1="772"
+     x2="767"
+     y2="772"
+     stroke="#94a3b8"
+     stroke-width="2"
+     marker-end="url(#arrow-gray)"
+     id="line43" />
+  <text
+     x="775"
+     y="776"
+     class="legend"
+     id="text44">内部处理</text>
+</svg>

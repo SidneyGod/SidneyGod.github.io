@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 910 890"
+   width="910"
+   height="890"
+   version="1.1"
+   id="svg65"
+   sodipodi:docname="11b-overview.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview65"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.093"
+     inkscape:cx="480.32937"
+     inkscape:cy="500"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg65" />
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', 'Noto Sans CJK SC', 'PingFang SC', sans-serif; }
+  .t-title   { font-size: 16px; font-weight: 700; fill: #e2e8f0; letter-spacing: 0.02em; }
+  .t-sub     { font-size: 12px; fill: #94a3b8; }
+  .t-node    { font-size: 13px; fill: #e2e8f0; }
+  .t-sub2    { font-size: 11px; fill: #94a3b8; }
+  .t-chain   { font-size: 12.5px; fill: #e2e8f0; }
+  .t-boundary{ font-size: 11px; fill: #94a3b8; }
+  .t-badge   { font-size: 11px; font-weight: 700; }
+  .t-tag     { font-size: 11px; fill: #475569; }
+  .t-legend  { font-size: 11.5px; fill: #e2e8f0; }
+  .t-footer  { font-size: 11px; fill: #475569; }
+</style>
+  <defs
+     id="defs7">
+    <linearGradient
+       id="bg-grad"
+       x1="0"
+       y1="0"
+       x2="979.7959"
+       y2="979.7959"
+       gradientTransform="scale(0.92876486,0.90835245)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <filter
+       id="glow-orange"
+       x="-0.016875"
+       y="-0.30681818"
+       width="1.03375"
+       height="1.6136364">
+      <feGaussianBlur
+         stdDeviation="2.5"
+         result="blur"
+         id="feGaussianBlur2" />
+      <feMerge
+         id="feMerge3">
+        <feMergeNode
+           in="blur"
+           id="feMergeNode2" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode3" />
+      </feMerge>
+    </filter>
+    <marker
+       id="arrow-orange"
+       markerWidth="9"
+       markerHeight="7"
+       refX="8"
+       refY="3.5"
+       orient="auto"
+       markerUnits="userSpaceOnUse">
+      <polygon
+         points="9,3.5 0,7 0,0 "
+         fill="#f97316"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arrow-blue"
+       markerWidth="9"
+       markerHeight="7"
+       refX="8"
+       refY="3.5"
+       orient="auto"
+       markerUnits="userSpaceOnUse">
+      <polygon
+         points="9,3.5 0,7 0,0 "
+         fill="#3b82f6"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arrow-purple"
+       markerWidth="9"
+       markerHeight="7"
+       refX="8"
+       refY="3.5"
+       orient="auto"
+       markerUnits="userSpaceOnUse">
+      <polygon
+         points="9,3.5 0,7 0,0 "
+         fill="#a855f7"
+         id="polygon5" />
+    </marker>
+    <marker
+       id="arrow-cyan"
+       markerWidth="9"
+       markerHeight="7"
+       refX="8"
+       refY="3.5"
+       orient="auto"
+       markerUnits="userSpaceOnUse">
+      <polygon
+         points="9,3.5 0,7 0,0 "
+         fill="#22d3ee"
+         id="polygon6" />
+    </marker>
+    <marker
+       id="arrow-green"
+       markerWidth="9"
+       markerHeight="7"
+       refX="8"
+       refY="3.5"
+       orient="auto"
+       markerUnits="userSpaceOnUse">
+      <polygon
+         points="9,3.5 0,7 0,0 "
+         fill="#10b981"
+         id="polygon7" />
+    </marker>
+  </defs>
+  <rect
+     x="0"
+     y="0"
+     width="910"
+     height="890"
+     fill="url(#bg-grad)"
+     data-graph-role="background"
+     id="rect7"
+     style="fill:url(#bg-grad);stroke-width:0.918501" />
+  <text
+     x="456"
+     y="28"
+     text-anchor="middle"
+     class="t-title"
+     id="text7">WiFi P2P 初始化（下） · 软件分层调用链</text>
+  <text
+     x="456"
+     y="50"
+     text-anchor="middle"
+     class="t-sub"
+     id="text8">Framework → HAL(AIDL) → wpa_supplicant → nl80211/cfg80211 → 驱动（QCOM / MTK）</text>
+  <rect
+     x="16"
+     y="72"
+     width="880"
+     height="42"
+     rx="8"
+     fill="#0f172a"
+     fill-opacity="0.55"
+     stroke="#334155"
+     stroke-width="1.2"
+     stroke-dasharray="7, 5"
+     data-graph-role="container"
+     id="rect8" />
+  <rect
+     x="24"
+     y="63"
+     width="78"
+     height="18"
+     rx="4"
+     fill="#0f172a"
+     stroke="#a855f7"
+     stroke-width="1"
+     data-graph-role="decoration"
+     id="rect9" />
+  <text
+     x="63"
+     y="76"
+     text-anchor="middle"
+     class="t-badge"
+     fill="#c084fc"
+     id="text9">App 应用层</text>
+  <text
+     x="888"
+     y="90"
+     text-anchor="end"
+     class="t-tag"
+     id="text10">App 进程</text>
+  <rect
+     x="16"
+     y="142"
+     width="880"
+     height="42"
+     rx="8"
+     fill="#0f172a"
+     fill-opacity="0.55"
+     stroke="#334155"
+     stroke-width="1.2"
+     stroke-dasharray="7, 5"
+     data-graph-role="container"
+     id="rect10" />
+  <rect
+     x="24"
+     y="133"
+     width="142"
+     height="18"
+     rx="4"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     data-graph-role="decoration"
+     id="rect11" />
+  <text
+     x="95"
+     y="146"
+     text-anchor="middle"
+     class="t-badge"
+     fill="#93c5fd"
+     id="text11">SystemServer 系统服务</text>
+  <text
+     x="888"
+     y="160"
+     text-anchor="end"
+     class="t-tag"
+     id="text12">system_server 进程</text>
+  <rect
+     x="16"
+     y="212"
+     width="880"
+     height="58"
+     rx="8"
+     fill="#0f172a"
+     fill-opacity="0.55"
+     stroke="#334155"
+     stroke-width="1.2"
+     stroke-dasharray="7, 5"
+     data-graph-role="container"
+     id="rect12" />
+  <rect
+     x="24"
+     y="203"
+     width="112"
+     height="18"
+     rx="4"
+     fill="#0f172a"
+     stroke="#a855f7"
+     stroke-width="1"
+     data-graph-role="decoration"
+     id="rect13" />
+  <text
+     x="80"
+     y="216"
+     text-anchor="middle"
+     class="t-badge"
+     fill="#c084fc"
+     id="text13">Framework 框架层</text>
+  <text
+     x="894"
+     y="230"
+     text-anchor="end"
+     class="t-tag"
+     id="text14">system_server 进程</text>
+  <rect
+     x="16"
+     y="298"
+     width="880"
+     height="58"
+     rx="8"
+     fill="#0f172a"
+     fill-opacity="0.55"
+     stroke="#334155"
+     stroke-width="1.2"
+     stroke-dasharray="7, 5"
+     data-graph-role="container"
+     id="rect14" />
+  <rect
+     x="24"
+     y="289"
+     width="100"
+     height="18"
+     rx="4"
+     fill="#0f172a"
+     stroke="#eab308"
+     stroke-width="1"
+     data-graph-role="decoration"
+     id="rect15" />
+  <text
+     x="74"
+     y="302"
+     text-anchor="middle"
+     class="t-badge"
+     fill="#fcd34d"
+     id="text15">HAL 硬件抽象层</text>
+  <text
+     x="888"
+     y="316"
+     text-anchor="end"
+     class="t-tag"
+     id="text16">system_server 进程</text>
+  <rect
+     x="16"
+     y="384"
+     width="880"
+     height="156"
+     rx="8"
+     fill="#0f172a"
+     fill-opacity="0.55"
+     stroke="#334155"
+     stroke-width="1.2"
+     stroke-dasharray="7, 5"
+     data-graph-role="container"
+     id="rect16" />
+  <rect
+     x="24"
+     y="375"
+     width="154"
+     height="18"
+     rx="4"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1"
+     data-graph-role="decoration"
+     id="rect17" />
+  <text
+     x="101"
+     y="388"
+     text-anchor="middle"
+     class="t-badge"
+     fill="#fdba74"
+     id="text17">wpa_supplicant 守护进程</text>
+  <text
+     x="888"
+     y="402"
+     text-anchor="end"
+     class="t-tag"
+     id="text18">wpa_supplicant 进程</text>
+  <rect
+     x="16"
+     y="568"
+     width="880"
+     height="48"
+     rx="8"
+     fill="#0f172a"
+     fill-opacity="0.55"
+     stroke="#334155"
+     stroke-width="1.2"
+     stroke-dasharray="7, 5"
+     data-graph-role="container"
+     id="rect18" />
+  <rect
+     x="24"
+     y="559"
+     width="120"
+     height="18"
+     rx="4"
+     fill="#0f172a"
+     stroke="#22d3ee"
+     stroke-width="1"
+     data-graph-role="decoration"
+     id="rect19" />
+  <text
+     x="84"
+     y="572"
+     text-anchor="middle"
+     class="t-badge"
+     fill="#67e8f9"
+     id="text19">内核 Linux Kernel</text>
+  <text
+     x="888"
+     y="586"
+     text-anchor="end"
+     class="t-tag"
+     id="text20">内核态</text>
+  <rect
+     x="16"
+     y="644"
+     width="880"
+     height="104"
+     rx="8"
+     fill="#0f172a"
+     fill-opacity="0.55"
+     stroke="#334155"
+     stroke-width="1.2"
+     stroke-dasharray="7, 5"
+     data-graph-role="container"
+     id="rect20" />
+  <rect
+     x="24"
+     y="635"
+     width="126"
+     height="18"
+     rx="4"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1"
+     data-graph-role="decoration"
+     id="rect21" />
+  <text
+     x="87"
+     y="648"
+     text-anchor="middle"
+     class="t-badge"
+     fill="#6ee7b7"
+     id="text21">驱动 Device Driver</text>
+  <text
+     x="888"
+     y="662"
+     text-anchor="end"
+     class="t-tag"
+     id="text22">内核态</text>
+  <rect
+     x="306"
+     y="80"
+     width="300"
+     height="30"
+     rx="6"
+     fill="#1e1b4b"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     data-graph-role="node"
+     id="rect22" />
+  <text
+     x="456"
+     y="99"
+     text-anchor="middle"
+     class="t-node"
+     id="text23">Android 应用 / WifiP2pManager</text>
+  <rect
+     x="336"
+     y="150"
+     width="240"
+     height="30"
+     rx="6"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     data-graph-role="node"
+     id="rect23" />
+  <text
+     x="456"
+     y="169"
+     text-anchor="middle"
+     class="t-node"
+     id="text24">system_server 进程</text>
+  <rect
+     x="116"
+     y="222"
+     width="320"
+     height="44"
+     rx="6"
+     fill="#1e1b4b"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     data-graph-role="node"
+     id="rect24" />
+  <text
+     x="276"
+     y="239"
+     text-anchor="middle"
+     class="t-node"
+     id="text25">WifiP2pService / P2pStateMachine</text>
+  <text
+     x="276"
+     y="256"
+     text-anchor="middle"
+     class="t-sub2"
+     id="text26">enterImpl → initializeP2pSettings</text>
+  <rect
+     x="476"
+     y="222"
+     width="257.78592"
+     height="44"
+     rx="4.8334856"
+     fill="#1e1b4b"
+     stroke="#a855f7"
+     stroke-width="1.34631"
+     data-graph-role="node"
+     id="rect26" />
+  <text
+     x="636"
+     y="239"
+     text-anchor="middle"
+     class="t-node"
+     id="text27">WifiP2pMonitor</text>
+  <text
+     x="636"
+     y="256"
+     text-anchor="middle"
+     class="t-sub2"
+     id="text28">SUP_CONNECTION_EVENT 处理</text>
+  <rect
+     x="116"
+     y="306"
+     width="320"
+     height="44"
+     rx="6"
+     fill="#1c1917"
+     stroke="#eab308"
+     stroke-width="1.5"
+     data-graph-role="node"
+     id="rect28" />
+  <text
+     x="276"
+     y="323"
+     text-anchor="middle"
+     class="t-node"
+     id="text29">WifiP2pNative.setupInterface()</text>
+  <text
+     x="276"
+     y="340"
+     text-anchor="middle"
+     class="t-sub2"
+     id="text30">在 system_server 内</text>
+  <rect
+     x="476"
+     y="306"
+     width="278.82892"
+     height="44"
+     rx="5.2280421"
+     fill="#1c1917"
+     stroke="#eab308"
+     stroke-width="1.40018"
+     data-graph-role="node"
+     id="rect30" />
+  <text
+     x="636"
+     y="323"
+     text-anchor="middle"
+     class="t-node"
+     id="text31">SupplicantP2pIfaceHal</text>
+  <text
+     x="636"
+     y="340"
+     text-anchor="middle"
+     class="t-sub2"
+     id="text32">ISupplicantP2pIface 客户端（AIDL）</text>
+  <rect
+     x="256"
+     y="392"
+     width="400"
+     height="22"
+     rx="5"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.5"
+     data-graph-role="node"
+     filter="url(#glow-orange)"
+     id="rect32" />
+  <text
+     x="456"
+     y="407"
+     text-anchor="middle"
+     class="t-chain"
+     id="text33">addP2pInterface() → addP2pInterfaceInternal()</text>
+  <rect
+     x="256"
+     y="422"
+     width="400"
+     height="22"
+     rx="5"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.5"
+     data-graph-role="node"
+     filter="url(#glow-orange)"
+     id="rect33" />
+  <text
+     x="456"
+     y="437"
+     text-anchor="middle"
+     class="t-chain"
+     id="text34">wpa_supplicant_add_iface()</text>
+  <rect
+     x="256"
+     y="452"
+     width="400"
+     height="22"
+     rx="5"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.5"
+     data-graph-role="node"
+     filter="url(#glow-orange)"
+     id="rect34" />
+  <text
+     x="456"
+     y="467"
+     text-anchor="middle"
+     class="t-chain"
+     id="text35">wpa_supplicant_init_iface()</text>
+  <rect
+     x="256"
+     y="482"
+     width="400"
+     height="22"
+     rx="5"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.5"
+     data-graph-role="node"
+     filter="url(#glow-orange)"
+     id="rect35" />
+  <text
+     x="456"
+     y="497"
+     text-anchor="middle"
+     class="t-chain"
+     id="text36">wpas_p2p_init()</text>
+  <rect
+     x="256"
+     y="512"
+     width="400"
+     height="22"
+     rx="5"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.5"
+     data-graph-role="node"
+     filter="url(#glow-orange)"
+     id="rect36" />
+  <text
+     x="456"
+     y="527"
+     text-anchor="middle"
+     class="t-chain"
+     id="text37">p2p_init() → struct p2p_data</text>
+  <rect
+     x="226"
+     y="576"
+     width="220"
+     height="32"
+     rx="6"
+     fill="#0f172a"
+     stroke="#22d3ee"
+     stroke-width="1.5"
+     data-graph-role="node"
+     id="rect37" />
+  <text
+     x="336"
+     y="593"
+     text-anchor="middle"
+     class="t-node"
+     id="text38">nl80211</text>
+  <text
+     x="336"
+     y="606"
+     text-anchor="middle"
+     class="t-sub2"
+     id="text39">netlink socket</text>
+  <rect
+     x="506"
+     y="576"
+     width="220"
+     height="32"
+     rx="6"
+     fill="#0f172a"
+     stroke="#22d3ee"
+     stroke-width="1.5"
+     data-graph-role="node"
+     id="rect39" />
+  <text
+     x="616"
+     y="593"
+     text-anchor="middle"
+     class="t-node"
+     id="text40">cfg80211</text>
+  <text
+     x="616"
+     y="606"
+     text-anchor="middle"
+     class="t-sub2"
+     id="text41">内核无线子系统</text>
+  <rect
+     x="36"
+     y="652"
+     width="380"
+     height="92"
+     rx="6"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     data-graph-role="node"
+     id="rect41" />
+  <text
+     x="226"
+     y="672"
+     text-anchor="middle"
+     class="t-node"
+     id="text42">QCOM 驱动（qcacld-3.0）</text>
+  <text
+     x="226"
+     y="694"
+     text-anchor="middle"
+     class="t-chain"
+     fill="#a7f3d0"
+     id="text43">cds_enable() → hdd_component_psoc_enable()</text>
+  <text
+     x="226"
+     y="712"
+     text-anchor="middle"
+     class="t-chain"
+     fill="#a7f3d0"
+     id="text44">→ p2p_psoc_enable()</text>
+  <text
+     x="226"
+     y="730"
+     text-anchor="middle"
+     class="t-chain"
+     fill="#a7f3d0"
+     id="text45">→ p2p_psoc_start()</text>
+  <rect
+     x="456"
+     y="652"
+     width="380"
+     height="92"
+     rx="6"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     data-graph-role="node"
+     id="rect45" />
+  <text
+     x="646"
+     y="672"
+     text-anchor="middle"
+     class="t-node"
+     id="text46">MTK 驱动（wlan-core-gen4m）</text>
+  <text
+     x="646"
+     y="694"
+     text-anchor="middle"
+     class="t-chain"
+     fill="#a7f3d0"
+     id="text47">p2pLaunch() → glRegisterP2P()</text>
+  <text
+     x="646"
+     y="712"
+     text-anchor="middle"
+     class="t-chain"
+     fill="#a7f3d0"
+     id="text48">→ glSetupP2P() → p2pRoleFsmInit()</text>
+  <text
+     x="646"
+     y="730"
+     text-anchor="middle"
+     class="t-chain"
+     fill="#a7f3d0"
+     id="text49">→ p2pNetRegister()</text>
+  <line
+     x1="456"
+     y1="110"
+     x2="456"
+     y2="150"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#arrow-blue)"
+     id="line49" />
+  <text
+     x="468"
+     y="133"
+     text-anchor="start"
+     class="t-boundary"
+     id="text50">Binder IPC</text>
+  <path
+     d="m 456,180 v 20 H 276 v 22"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrow-blue)"
+     id="path50" />
+  <text
+     x="366"
+     y="193"
+     text-anchor="middle"
+     class="t-boundary"
+     id="text51">同进程（system_server 内）</text>
+  <line
+     x1="276"
+     y1="266"
+     x2="276"
+     y2="306"
+     stroke="#f97316"
+     stroke-width="2.5"
+     marker-end="url(#arrow-orange)"
+     id="line51" />
+  <text
+     x="286"
+     y="288"
+     text-anchor="start"
+     class="t-boundary"
+     id="text52">同进程（WifiP2pNative 在 system_server 内）</text>
+  <line
+     x1="436"
+     y1="328"
+     x2="476"
+     y2="328"
+     stroke="#f97316"
+     stroke-width="2"
+     marker-end="url(#arrow-orange)"
+     id="line52" />
+  <path
+     d="m 636,354 v 20 H 456 v 16"
+     stroke="#f97316"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrow-orange)"
+     id="path52" />
+  <text
+     x="536"
+     y="369"
+     text-anchor="middle"
+     class="t-boundary"
+     id="text53">AIDL（ISupplicantP2pIface.addP2pInterface）</text>
+  <line
+     x1="456"
+     y1="414"
+     x2="456"
+     y2="422"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="line53" />
+  <line
+     x1="456"
+     y1="444"
+     x2="456"
+     y2="452"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="line54" />
+  <line
+     x1="456"
+     y1="474"
+     x2="456"
+     y2="482"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="line55" />
+  <line
+     x1="456"
+     y1="504"
+     x2="456"
+     y2="512"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#arrow-orange)"
+     id="line56" />
+  <path
+     d="m 456,534 v 20 H 336 v 20"
+     stroke="#f97316"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrow-orange)"
+     id="path56" />
+  <text
+     x="406"
+     y="549"
+     text-anchor="middle"
+     class="t-boundary"
+     id="text56">nl80211 netlink</text>
+  <line
+     x1="446"
+     y1="592"
+     x2="506"
+     y2="592"
+     stroke="#22d3ee"
+     stroke-width="2"
+     marker-end="url(#arrow-cyan)"
+     id="line57" />
+  <path
+     d="m 596,608 v 18 H 226 v 24"
+     stroke="#f97316"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrow-orange)"
+     id="path57" />
+  <path
+     d="m 596,608 v 18 h 50 v 24"
+     stroke="#f97316"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrow-orange)"
+     id="path58" />
+  <text
+     x="476"
+     y="622"
+     text-anchor="middle"
+     class="t-boundary"
+     id="text58">cfg80211 ops</text>
+  <path
+     d="M 656,523 H 858.6807 V 242 H 731.07477"
+     stroke="#a855f7"
+     stroke-width="1.47363"
+     stroke-dasharray="6, 4"
+     fill="none"
+     marker-end="url(#arrow-purple)"
+     id="path59"
+     sodipodi:nodetypes="cccc" />
+  <text
+     x="860"
+     y="462"
+     text-anchor="end"
+     class="t-boundary"
+     fill="#c084fc"
+     id="text59">SUP_CONNECTION_EVENT（AIDL callback）</text>
+  <line
+     x1="476"
+     y1="242"
+     x2="436"
+     y2="242"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     stroke-dasharray="6, 4"
+     marker-end="url(#arrow-purple)"
+     id="line59" />
+  <g
+     data-graph-role="legend"
+     id="legend"
+     transform="translate(-24,-20)">
+    <rect
+       x="40"
+       y="784"
+       width="880"
+       height="110"
+       rx="8"
+       fill="#0f172a"
+       fill-opacity="0.4"
+       stroke="#334155"
+       stroke-width="1.2"
+       stroke-dasharray="7, 5"
+       id="rect59" />
+    <text
+       x="80"
+       y="808"
+       text-anchor="start"
+       class="t-legend"
+       font-weight="700"
+       id="text60">图例 LEGEND</text>
+    <line
+       x1="80"
+       y1="830"
+       x2="140"
+       y2="830"
+       stroke="#f97316"
+       stroke-width="3"
+       id="line60" />
+    <text
+       x="150"
+       y="834"
+       text-anchor="start"
+       class="t-legend"
+       id="text61">主调用链（核心路径，自上而下）</text>
+    <line
+       x1="80"
+       y1="860"
+       x2="140"
+       y2="860"
+       stroke="#a855f7"
+       stroke-width="2"
+       stroke-dasharray="6, 4"
+       id="line61" />
+    <text
+       x="150"
+       y="864"
+       text-anchor="start"
+       class="t-legend"
+       id="text62">AIDL callback（SUP_CONNECTION_EVENT 上抛）</text>
+    <line
+       x1="500"
+       y1="830"
+       x2="560"
+       y2="830"
+       stroke="#3b82f6"
+       stroke-width="2"
+       id="line62" />
+    <text
+       x="570"
+       y="834"
+       text-anchor="start"
+       class="t-legend"
+       id="text63">层间 IPC 边界（Binder / AIDL / netlink / ops）</text>
+    <rect
+       x="500"
+       y="854"
+       width="60"
+       height="20"
+       rx="4"
+       fill="#0f172a"
+       stroke="#334155"
+       stroke-width="1.2"
+       stroke-dasharray="5, 3"
+       id="rect63" />
+    <text
+       x="570"
+       y="864"
+       text-anchor="start"
+       class="t-legend"
+       id="text64">分层容器（Layer Band）</text>
+  </g>
+</svg>

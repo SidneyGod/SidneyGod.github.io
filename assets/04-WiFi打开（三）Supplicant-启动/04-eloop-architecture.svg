@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 960 720"
+   width="960"
+   height="720"
+   version="1.1"
+   id="svg42"
+   sodipodi:docname="04-eloop-architecture.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview42"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.5180556"
+     inkscape:cx="480.21958"
+     inkscape:cy="360"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg42" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+  <defs
+     id="defs12">
+    <linearGradient
+       id="bgGrad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         style="stop-color:#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="epollGrad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#e94560"
+         id="stop3" />
+      <stop
+         offset="100%"
+         style="stop-color:#c23152"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="fdGrad1"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#0f3460"
+         id="stop5" />
+      <stop
+         offset="100%"
+         style="stop-color:#16213e"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       id="fdGrad2"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#533483"
+         id="stop7" />
+      <stop
+         offset="100%"
+         style="stop-color:#3b1f6e"
+         id="stop8" />
+    </linearGradient>
+    <linearGradient
+       id="timerGrad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#1a8a5c"
+         id="stop9" />
+      <stop
+         offset="100%"
+         style="stop-color:#0d5c3b"
+         id="stop10" />
+    </linearGradient>
+    <filter
+       id="glow"
+       x="-0.068512662"
+       y="-0.45670764"
+       width="1.1370253"
+       height="1.9134153">
+      <feGaussianBlur
+         stdDeviation="3"
+         result="blur"
+         id="feGaussianBlur10" />
+      <feMerge
+         id="feMerge11">
+        <feMergeNode
+           in="blur"
+           id="feMergeNode10" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode11" />
+      </feMerge>
+    </filter>
+    <filter
+       id="shadow"
+       x="-0.0069444444"
+       y="-0.011904762"
+       width="1.0138889"
+       height="1.0238095">
+      <feDropShadow
+         dx="2"
+         dy="2"
+         stdDeviation="4"
+         flood-color="#000"
+         flood-opacity="0.5" />
+    </filter>
+    <marker
+       id="arrowHead"
+       markerWidth="10"
+       markerHeight="7"
+       refX="10"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#e94560"
+         id="polygon11" />
+    </marker>
+    <marker
+       id="arrowHeadBlue"
+       markerWidth="10"
+       markerHeight="7"
+       refX="10"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#537fe7"
+         id="polygon12" />
+    </marker>
+  </defs>
+  <!-- Background -->
+  <rect
+     width="960"
+     height="720"
+     fill="url(#bgGrad)"
+     id="rect12" />
+  <!-- Subtle grid -->
+  <pattern
+     id="grid"
+     width="40"
+     height="40"
+     patternUnits="userSpaceOnUse">
+    <path
+       d="M 40 0 L 0 0 0 40"
+       fill="none"
+       stroke="#ffffff08"
+       stroke-width="0.5"
+       id="path12" />
+  </pattern>
+  <rect
+     width="960"
+     height="720"
+     fill="url(#grid)"
+     id="rect13" />
+  <!-- Title -->
+  <text
+     x="480"
+     y="42"
+     text-anchor="middle"
+     fill="#c0c8d8"
+     font-family="monospace"
+     font-size="22"
+     font-weight="bold"
+     id="text13">
+    wpa_supplicant eloop 事件循环架构
+  </text>
+  <text
+     x="480"
+     y="66"
+     text-anchor="middle"
+     fill="#6c7a96"
+     font-family="monospace"
+     font-size="13"
+     id="text14">
+    eloop = epoll fd （中心） + 注册的 fd （四周） + timer 链表（右侧）
+  </text>
+  <!-- ====== Center: epoll fd ====== -->
+  <ellipse
+     cx="380"
+     cy="380"
+     rx="72"
+     ry="42"
+     fill="url(#epollGrad)"
+     stroke="#e94560"
+     stroke-width="2"
+     id="ellipse14" />
+  <text
+     x="380"
+     y="374"
+     text-anchor="middle"
+     fill="#ffe8ec"
+     font-family="monospace"
+     font-size="15"
+     font-weight="bold"
+     filter="url(#glow)"
+     id="text15">
+    epoll_wait()
+  </text>
+  <text
+     x="380"
+     y="394"
+     text-anchor="middle"
+     fill="#ffd4db"
+     font-family="monospace"
+     font-size="11"
+     id="text16">
+    eloop.epollfd
+  </text>
+  <!-- ====== Top: nl80211 socket ====== -->
+  <rect
+     x="260"
+     y="110"
+     width="240"
+     height="72"
+     rx="10"
+     fill="url(#fdGrad1)"
+     stroke="#537fe7"
+     stroke-width="1.5"
+     id="rect16" />
+  <text
+     x="380"
+     y="135"
+     text-anchor="middle"
+     fill="#a0c4ff"
+     font-family="monospace"
+     font-size="13"
+     font-weight="bold"
+     id="text17">
+    nl80211 socket
+  </text>
+  <text
+     x="380"
+     y="154"
+     text-anchor="middle"
+     fill="#8098cc"
+     font-family="monospace"
+     font-size="10"
+     id="text18">
+    callback:
+  </text>
+  <text
+     x="380"
+     y="170"
+     text-anchor="middle"
+     fill="#6cb4ff"
+     font-family="monospace"
+     font-size="9"
+     id="text19">
+    wpa_driver_nl80211_event_receive()
+  </text>
+  <!-- Arrow: epoll to nl80211 (bidirectional concept, draw epoll->nl80211) -->
+  <line
+     x1="380"
+     y1="338"
+     x2="380"
+     y2="182"
+     stroke="#537fe7"
+     stroke-width="1.8"
+     marker-end="url(#arrowHeadBlue)"
+     stroke-dasharray="6,3"
+     id="line19" />
+  <!-- ====== Right: ctrl socket ====== -->
+  <rect
+     x="560"
+     y="270"
+     width="240"
+     height="72"
+     rx="10"
+     fill="url(#fdGrad2)"
+     stroke="#9b59b6"
+     stroke-width="1.5"
+     id="rect19" />
+  <text
+     x="680"
+     y="295"
+     text-anchor="middle"
+     fill="#d4a0ff"
+     font-family="monospace"
+     font-size="13"
+     font-weight="bold"
+     id="text20">
+    ctrl socket
+  </text>
+  <text
+     x="680"
+     y="314"
+     text-anchor="middle"
+     fill="#a080cc"
+     font-family="monospace"
+     font-size="10"
+     id="text21">
+    callback:
+  </text>
+  <text
+     x="680"
+     y="330"
+     text-anchor="middle"
+     fill="#c48bff"
+     font-family="monospace"
+     font-size="9"
+     id="text22">
+    wpa_supplicant_ctrl_iface_receive()
+  </text>
+  <!-- Arrow: epoll to ctrl socket -->
+  <line
+     x1="452"
+     y1="380"
+     x2="560"
+     y2="324"
+     stroke="#9b59b6"
+     stroke-width="1.8"
+     marker-end="url(#arrowHeadBlue)"
+     id="line22" />
+  <!-- ====== Bottom: EAPOL socket ====== -->
+  <rect
+     x="260"
+     y="530"
+     width="240"
+     height="72"
+     rx="10"
+     fill="url(#fdGrad1)"
+     stroke="#2ecc71"
+     stroke-width="1.5"
+     id="rect22" />
+  <text
+     x="380"
+     y="555"
+     text-anchor="middle"
+     fill="#a0ffc0"
+     font-family="monospace"
+     font-size="13"
+     font-weight="bold"
+     id="text23">
+    EAPOL socket
+  </text>
+  <text
+     x="380"
+     y="574"
+     text-anchor="middle"
+     fill="#80cc98"
+     font-family="monospace"
+     font-size="10"
+     id="text24">
+    callback:
+  </text>
+  <text
+     x="380"
+     y="590"
+     text-anchor="middle"
+     fill="#5cff8a"
+     font-family="monospace"
+     font-size="9"
+     id="text25">
+    wpa_supplicant_rx_eapol()
+  </text>
+  <!-- Arrow: epoll to EAPOL -->
+  <line
+     x1="380"
+     y1="422"
+     x2="380"
+     y2="530"
+     stroke="#2ecc71"
+     stroke-width="1.8"
+     marker-end="url(#arrowHeadBlue)"
+     stroke-dasharray="6,3"
+     id="line25" />
+  <!-- ====== Left: binder fd ====== -->
+  <rect
+     x="30"
+     y="270"
+     width="240"
+     height="72"
+     rx="10"
+     fill="url(#fdGrad2)"
+     stroke="#f39c12"
+     stroke-width="1.5"
+     id="rect25" />
+  <text
+     x="150"
+     y="295"
+     text-anchor="middle"
+     fill="#ffcc80"
+     font-family="monospace"
+     font-size="13"
+     font-weight="bold"
+     id="text26">
+    binder fd
+  </text>
+  <text
+     x="150"
+     y="314"
+     text-anchor="middle"
+     fill="#ccaa80"
+     font-family="monospace"
+     font-size="10"
+     id="text27">
+    callback:
+  </text>
+  <text
+     x="150"
+     y="330"
+     text-anchor="middle"
+     fill="#ffa84d"
+     font-family="monospace"
+     font-size="9"
+     id="text28">
+    wpas_aidl_sock_handler()
+  </text>
+  <!-- Arrow: epoll to binder -->
+  <line
+     x1="308"
+     y1="380"
+     x2="270"
+     y2="324"
+     stroke="#f39c12"
+     stroke-width="1.8"
+     marker-end="url(#arrowHeadBlue)"
+     id="line28" />
+  <!-- ====== Timer List (right side) ====== -->
+  <rect
+     x="620"
+     y="450"
+     width="310"
+     height="200"
+     rx="12"
+     fill="#0a0a16"
+     stroke="#1a8a5c"
+     stroke-width="1.5"
+     id="rect28" />
+  <text
+     x="775"
+     y="478"
+     text-anchor="middle"
+     fill="#70d6a8"
+     font-family="monospace"
+     font-size="14"
+     font-weight="bold"
+     id="text29">
+    Timer 链表 (eloop.timeout)
+  </text>
+  <!-- Timer nodes -->
+  <rect
+     x="640"
+     y="495"
+     width="270"
+     height="30"
+     rx="6"
+     fill="url(#timerGrad)"
+     opacity="0.9"
+     id="rect29" />
+  <text
+     x="775"
+     y="515"
+     text-anchor="middle"
+     fill="#d4ffe8"
+     font-family="monospace"
+     font-size="11"
+     id="text30">
+    wpas_periodic()  [每N秒]
+  </text>
+  <rect
+     x="640"
+     y="535"
+     width="270"
+     height="30"
+     rx="6"
+     fill="url(#timerGrad)"
+     opacity="0.75"
+     id="rect30" />
+  <text
+     x="775"
+     y="555"
+     text-anchor="middle"
+     fill="#d4ffe8"
+     font-family="monospace"
+     font-size="11"
+     id="text31">
+    wpa_supplicant_req_scan()  [延迟扫描]
+  </text>
+  <rect
+     x="640"
+     y="575"
+     width="270"
+     height="30"
+     rx="6"
+     fill="url(#timerGrad)"
+     opacity="0.6"
+     id="rect31" />
+  <text
+     x="775"
+     y="595"
+     text-anchor="middle"
+     fill="#d4ffe8"
+     font-family="monospace"
+     font-size="11"
+     id="text32">
+    eapol_sm_step_timeout()  [EAPOL定时]
+  </text>
+  <text
+     x="775"
+     y="635"
+     text-anchor="middle"
+     fill="#4a8a6c"
+     font-family="monospace"
+     font-size="10"
+     font-style="italic"
+     id="text33">
+    （按到期时间排序，头节点最先到期）
+  </text>
+  <!-- Arrow: epoll → timer (conceptual: epoll timeout drives timer execution) -->
+  <path
+     d="M 452 400 C 500 430, 580 480, 640 510"
+     fill="none"
+     stroke="#1a8a5c"
+     stroke-width="1.5"
+     marker-end="url(#arrowHeadBlue)"
+     stroke-dasharray="4,4"
+     id="path33" />
+  <!-- ====== Legend (bottom left) ====== -->
+  <rect
+     x="20"
+     y="475"
+     width="208.61848"
+     height="170"
+     rx="8.0237875"
+     fill="#0a0a16"
+     stroke="#2a2a3e"
+     stroke-width="0.895756"
+     id="rect33" />
+  <text
+     x="122"
+     y="498"
+     text-anchor="middle"
+     fill="#8899aa"
+     font-family="monospace"
+     font-size="12px"
+     font-weight="bold"
+     id="text34">图例</text>
+  <!-- Legend items -->
+  <rect
+     x="38"
+     y="515"
+     width="16"
+     height="12"
+     rx="2"
+     fill="#e94560"
+     id="rect34" />
+  <text
+     x="64"
+     y="526"
+     fill="#8899aa"
+     font-family="monospace"
+     font-size="10"
+     id="text35">epoll fd (事件分发中心)</text>
+  <rect
+     x="38"
+     y="540"
+     width="16"
+     height="12"
+     rx="2"
+     fill="#537fe7"
+     id="rect35" />
+  <text
+     x="64"
+     y="551"
+     fill="#8899aa"
+     font-family="monospace"
+     font-size="10"
+     id="text36">netlink / 网络协议 socket</text>
+  <rect
+     x="38"
+     y="565"
+     width="16"
+     height="12"
+     rx="2"
+     fill="#9b59b6"
+     id="rect36" />
+  <text
+     x="64"
+     y="576"
+     fill="#8899aa"
+     font-family="monospace"
+     font-size="10"
+     id="text37">控制/binder socket</text>
+  <rect
+     x="38"
+     y="590"
+     width="16"
+     height="12"
+     rx="2"
+     fill="#1a8a5c"
+     id="rect37" />
+  <text
+     x="64"
+     y="601"
+     fill="#8899aa"
+     font-family="monospace"
+     font-size="10"
+     id="text38">timer 链表</text>
+  <line
+     x1="38"
+     y1="618"
+     x2="54"
+     y2="618"
+     stroke="#537fe7"
+     stroke-width="1.5"
+     stroke-dasharray="4,3"
+     id="line38" />
+  <text
+     x="64"
+     y="622"
+     fill="#8899aa"
+     font-family="monospace"
+     font-size="10"
+     id="text39">epoll_wait 等待 / 分发</text>
+  <!-- Data flow annotations -->
+  <text
+     x="220"
+     y="210"
+     fill="#4a5568"
+     font-family="monospace"
+     font-size="9"
+     font-style="italic"
+     id="text40">
+    epoll_ctl(EPOLL_CTL_ADD)
+  </text>
+  <text
+     x="470"
+     y="310"
+     fill="#4a5568"
+     font-family="monospace"
+     font-size="9"
+     font-style="italic"
+     id="text41">
+    EPOLLIN
+  </text>
+  <!-- Bottom: loop description -->
+  <text
+     x="480"
+     y="695"
+     text-anchor="middle"
+     fill="#4a5568"
+     font-family="monospace"
+     font-size="11"
+     id="text42">
+    eloop_run() 循环：epoll_wait() 等待 → 处理到期 timer → 分发 I/O 事件到对应 callback → 继续等待
+  </text>
+</svg>

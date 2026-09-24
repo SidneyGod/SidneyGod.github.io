@@ -1,0 +1,1413 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1200"
+   height="700"
+   viewBox="0 0 1200 700"
+   version="1.1"
+   id="svg97"
+   sodipodi:docname="04-ampdu-assembly.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview97"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.36"
+     inkscape:cx="600"
+     inkscape:cy="350.36765"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg97" />
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+ </style>
+  <defs
+     id="defs5">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+    <marker
+       id="arr-g"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#10b981"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arr-b"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#3b82f6"
+         id="polygon5" />
+    </marker>
+  </defs>
+  <rect
+     width="1200"
+     height="700"
+     fill="url(#bg)"
+     id="rect5" />
+  <!-- Title -->
+  <text
+     x="600"
+     y="30"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="16"
+     font-weight="700"
+     id="text5">A-MPDU Packet Assembly &amp; Traffic Metaphor</text>
+  <text
+     x="600"
+     y="48"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="11"
+     id="text6">数据包组装流程 — 交通比喻</text>
+  <!-- ==================== Left: Assembly Flow ==================== -->
+  <rect
+     x="30"
+     y="65"
+     width="560"
+     height="620"
+     rx="8"
+     fill="url(#card)"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect6" />
+  <text
+     x="310"
+     y="90"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="14"
+     font-weight="700"
+     id="text7">数据包组装流程</text>
+  <!-- Step 1: MSDU Payload -->
+  <text
+     x="60"
+     y="120"
+     fill="#10b981"
+     font-size="11"
+     font-weight="600"
+     id="text8">Step 1: 原始数据</text>
+  <rect
+     x="60"
+     y="130"
+     width="180"
+     height="30"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect8" />
+  <text
+     x="150"
+     y="150"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text9">MSDU (IP Packet)</text>
+  <rect
+     x="250"
+     y="130"
+     width="180"
+     height="30"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect9" />
+  <text
+     x="340"
+     y="150"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text10">MSDU (IP Packet)</text>
+  <rect
+     x="440"
+     y="130"
+     width="130"
+     height="30"
+     rx="4"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect10" />
+  <text
+     x="505"
+     y="150"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text11">MSDU ...</text>
+  <!-- Arrow down -->
+  <line
+     x1="310"
+     y1="165"
+     x2="310"
+     y2="185"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arr-g)"
+     id="line11" />
+  <!-- Step 2: Add MAC Header -->
+  <text
+     x="60"
+     y="200"
+     fill="#10b981"
+     font-size="11"
+     font-weight="600"
+     id="text12">Step 2: 加 MAC 头 → 封装成 MPDU</text>
+  <rect
+     x="60"
+     y="210"
+     width="170"
+     height="35"
+     rx="4"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect12" />
+  <rect
+     x="60"
+     y="210"
+     width="36"
+     height="35"
+     rx="4"
+     fill="#475569"
+     id="rect13" />
+  <text
+     x="78"
+     y="232"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text13">MAC</text>
+  <rect
+     x="96"
+     y="210"
+     width="134"
+     height="35"
+     rx="0"
+     fill="#1e3a5f"
+     id="rect14" />
+  <text
+     x="163"
+     y="232"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text14">Payload</text>
+  <text
+     x="145"
+     y="262"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text15">MPDU 1</text>
+  <rect
+     x="245"
+     y="210"
+     width="170"
+     height="35"
+     rx="4"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect15" />
+  <rect
+     x="245"
+     y="210"
+     width="36"
+     height="35"
+     rx="4"
+     fill="#475569"
+     id="rect16" />
+  <text
+     x="263"
+     y="232"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text16">MAC</text>
+  <rect
+     x="281"
+     y="210"
+     width="134"
+     height="35"
+     rx="0"
+     fill="#1e3a5f"
+     id="rect17" />
+  <text
+     x="348"
+     y="232"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text17">Payload</text>
+  <text
+     x="330"
+     y="262"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text18">MPDU 2</text>
+  <rect
+     x="430"
+     y="210"
+     width="140"
+     height="35"
+     rx="4"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect18" />
+  <text
+     x="500"
+     y="232"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text19">MPDU 3...</text>
+  <!-- Arrow down -->
+  <line
+     x1="310"
+     y1="275"
+     x2="310"
+     y2="295"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arr-g)"
+     id="line19" />
+  <!-- Step 3: Add Delimiter -->
+  <text
+     x="60"
+     y="310"
+     fill="#10b981"
+     font-size="11"
+     font-weight="600"
+     id="text20">Step 3: 加分隔符 (Delimiter)</text>
+  <rect
+     x="60"
+     y="320"
+     width="110"
+     height="40"
+     rx="4"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect20" />
+  <rect
+     x="60"
+     y="320"
+     width="30"
+     height="40"
+     rx="4"
+     fill="#475569"
+     id="rect21" />
+  <text
+     x="75"
+     y="345"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text21">DLM</text>
+  <rect
+     x="90"
+     y="320"
+     width="30"
+     height="40"
+     rx="0"
+     fill="#475569"
+     id="rect22" />
+  <text
+     x="105"
+     y="345"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="7"
+     id="text22">MAC</text>
+  <rect
+     x="120"
+     y="320"
+     width="50"
+     height="40"
+     rx="0"
+     fill="#1e3a5f"
+     id="rect23" />
+  <text
+     x="145"
+     y="345"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text23">Data</text>
+  <rect
+     x="185"
+     y="320"
+     width="110"
+     height="40"
+     rx="4"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect24" />
+  <rect
+     x="185"
+     y="320"
+     width="30"
+     height="40"
+     rx="4"
+     fill="#475569"
+     id="rect25" />
+  <text
+     x="200"
+     y="345"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text25">DLM</text>
+  <rect
+     x="215"
+     y="320"
+     width="30"
+     height="40"
+     rx="0"
+     fill="#475569"
+     id="rect26" />
+  <text
+     x="230"
+     y="345"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="7"
+     id="text26">MAC</text>
+  <rect
+     x="245"
+     y="320"
+     width="50"
+     height="40"
+     rx="0"
+     fill="#1e3a5f"
+     id="rect27" />
+  <text
+     x="270"
+     y="345"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text27">Data</text>
+  <rect
+     x="310"
+     y="320"
+     width="110"
+     height="40"
+     rx="4"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect28" />
+  <rect
+     x="310"
+     y="320"
+     width="30"
+     height="40"
+     rx="4"
+     fill="#475569"
+     id="rect29" />
+  <text
+     x="325"
+     y="345"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text29">DLM</text>
+  <rect
+     x="340"
+     y="320"
+     width="30"
+     height="40"
+     rx="0"
+     fill="#475569"
+     id="rect30" />
+  <text
+     x="355"
+     y="345"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="7"
+     id="text30">MAC</text>
+  <rect
+     x="370"
+     y="320"
+     width="50"
+     height="40"
+     rx="0"
+     fill="#1e3a5f"
+     id="rect31" />
+  <text
+     x="395"
+     y="345"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text31">Data</text>
+  <rect
+     x="435"
+     y="320"
+     width="110"
+     height="40"
+     rx="4"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect32" />
+  <rect
+     x="435"
+     y="320"
+     width="30"
+     height="40"
+     rx="4"
+     fill="#475569"
+     id="rect33" />
+  <text
+     x="450"
+     y="345"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text33">DLM</text>
+  <rect
+     x="465"
+     y="320"
+     width="30"
+     height="40"
+     rx="0"
+     fill="#475569"
+     id="rect34" />
+  <text
+     x="480"
+     y="345"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="7"
+     id="text34">MAC</text>
+  <rect
+     x="495"
+     y="320"
+     width="50"
+     height="40"
+     rx="0"
+     fill="#1e3a5f"
+     id="rect35" />
+  <text
+     x="520"
+     y="345"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text35">Data</text>
+  <text
+     x="310"
+     y="378"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text36">每个 MPDU 前加 4B Delimiter（长度 + CRC）</text>
+  <!-- Arrow down -->
+  <line
+     x1="310"
+     y1="390"
+     x2="310"
+     y2="410"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arr-g)"
+     id="line36" />
+  <!-- Step 4: Aggregate + Padding -->
+  <text
+     x="60"
+     y="425"
+     fill="#10b981"
+     font-size="11"
+     font-weight="600"
+     id="text37">Step 4: 聚合 + 对齐填充</text>
+  <rect
+     x="60"
+     y="435"
+     width="510"
+     height="50"
+     rx="5"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect37" />
+  <rect
+     x="65"
+     y="440"
+     width="115"
+     height="40"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect38" />
+  <text
+     x="122"
+     y="465"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text38">DLM+MPDU 1</text>
+  <rect
+     x="185"
+     y="440"
+     width="115"
+     height="40"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect39" />
+  <text
+     x="242"
+     y="465"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text39">DLM+MPDU 2</text>
+  <rect
+     x="305"
+     y="440"
+     width="115"
+     height="40"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect40" />
+  <text
+     x="362"
+     y="465"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text40">DLM+MPDU 3</text>
+  <rect
+     x="425"
+     y="440"
+     width="115"
+     height="40"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect41" />
+  <text
+     x="482"
+     y="465"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text41">DLM+MPDU 4</text>
+  <rect
+     x="545"
+     y="440"
+     width="20"
+     height="40"
+     rx="3"
+     fill="#1c1917"
+     stroke="#44403c"
+     stroke-width="0.5"
+     stroke-dasharray="3,2"
+     id="rect42" />
+  <text
+     x="60"
+     y="502"
+     fill="#94a3b8"
+     font-size="9"
+     id="text42">4B 对齐填充（Padding）确保每个 MPDU 边界对齐</text>
+  <!-- Arrow down -->
+  <line
+     x1="310"
+     y1="510"
+     x2="310"
+     y2="530"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#arr-g)"
+     id="line42" />
+  <!-- Step 5: Add PHY Header -->
+  <text
+     x="60"
+     y="545"
+     fill="#10b981"
+     font-size="11"
+     font-weight="600"
+     id="text43">Step 5: 加 PHY 头 → 最终 A-MPDU</text>
+  <rect
+     x="60"
+     y="555"
+     width="510"
+     height="50"
+     rx="5"
+     fill="#065f46"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect43" />
+  <rect
+     x="65"
+     y="560"
+     width="80"
+     height="40"
+     rx="3"
+     fill="#475569"
+     id="rect44" />
+  <text
+     x="105"
+     y="585"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text44">PHY Preamble</text>
+  <rect
+     x="150"
+     y="560"
+     width="50"
+     height="40"
+     rx="3"
+     fill="#475569"
+     id="rect45" />
+  <text
+     x="175"
+     y="585"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="8"
+     id="text45">PLCP</text>
+  <rect
+     x="205"
+     y="560"
+     width="360"
+     height="40"
+     rx="3"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect46" />
+  <text
+     x="385"
+     y="585"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10"
+     font-weight="600"
+     id="text46">A-MPDU (Delimiter+MPDU × N + Padding)</text>
+  <text
+     x="60"
+     y="622"
+     fill="#94a3b8"
+     font-size="9"
+     id="text47">一次信道竞争 + 一个 PHY 头 → 发送所有 MPDU</text>
+  <!-- Step 6: Block ACK -->
+  <text
+     x="60"
+     y="642"
+     fill="#10b981"
+     font-size="11"
+     font-weight="600"
+     id="text48">Step 6: 接收方回复 Block ACK</text>
+  <rect
+     x="60"
+     y="650"
+     width="300"
+     height="25"
+     rx="4"
+     fill="#065f46"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect48" />
+  <text
+     x="210"
+     y="667"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="10"
+     id="text49">Block ACK (bitmap: 哪些成功，哪些失败)</text>
+  <!-- ==================== Right: Truck Convoy Metaphor ==================== -->
+  <rect
+     x="620"
+     y="65"
+     width="550"
+     height="620"
+     rx="8"
+     fill="url(#card)"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect49" />
+  <text
+     x="895"
+     y="90"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="14"
+     font-weight="700"
+     id="text50">交通比喻：车队运输</text>
+  <!-- Without aggregation: 4 separate trucks -->
+  <text
+     x="650"
+     y="120"
+     fill="#ef4444"
+     font-size="11"
+     font-weight="600"
+     id="text51">无聚合：4 辆车各跑一趟</text>
+  <!-- Truck 1 -->
+  <rect
+     x="650"
+     y="135"
+     width="110"
+     height="45"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect51" />
+  <rect
+     x="650"
+     y="135"
+     width="25"
+     height="45"
+     rx="5"
+     fill="#475569"
+     id="rect52" />
+  <text
+     x="662"
+     y="162"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text52">车头</text>
+  <rect
+     x="675"
+     y="138"
+     width="82"
+     height="39"
+     rx="2"
+     fill="#1e3a5f"
+     id="rect53" />
+  <text
+     x="716"
+     y="158"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="8"
+     id="text53">货物 A</text>
+  <text
+     x="716"
+     y="172"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text54">1500B</text>
+  <!-- Truck 2 -->
+  <rect
+     x="770"
+     y="135"
+     width="110"
+     height="45"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect54" />
+  <rect
+     x="770"
+     y="135"
+     width="25"
+     height="45"
+     rx="5"
+     fill="#475569"
+     id="rect55" />
+  <text
+     x="782"
+     y="162"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text55">车头</text>
+  <rect
+     x="795"
+     y="138"
+     width="82"
+     height="39"
+     rx="2"
+     fill="#1e3a5f"
+     id="rect56" />
+  <text
+     x="836"
+     y="158"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="8"
+     id="text56">货物 B</text>
+  <text
+     x="836"
+     y="172"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text57">1500B</text>
+  <!-- Truck 3 -->
+  <rect
+     x="890"
+     y="135"
+     width="110"
+     height="45"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect57" />
+  <rect
+     x="890"
+     y="135"
+     width="25"
+     height="45"
+     rx="5"
+     fill="#475569"
+     id="rect58" />
+  <text
+     x="902"
+     y="162"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text58">车头</text>
+  <rect
+     x="915"
+     y="138"
+     width="82"
+     height="39"
+     rx="2"
+     fill="#1e3a5f"
+     id="rect59" />
+  <text
+     x="956"
+     y="158"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="8"
+     id="text59">货物 C</text>
+  <text
+     x="956"
+     y="172"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text60">1500B</text>
+  <!-- Truck 4 -->
+  <rect
+     x="1010"
+     y="135"
+     width="110"
+     height="45"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect60" />
+  <rect
+     x="1010"
+     y="135"
+     width="25"
+     height="45"
+     rx="5"
+     fill="#475569"
+     id="rect61" />
+  <text
+     x="1022"
+     y="162"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     id="text61">车头</text>
+  <rect
+     x="1035"
+     y="138"
+     width="82"
+     height="39"
+     rx="2"
+     fill="#1e3a5f"
+     id="rect62" />
+  <text
+     x="1076"
+     y="158"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="8"
+     id="text62">货物 D</text>
+  <text
+     x="1076"
+     y="172"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text63">1500B</text>
+  <!-- Red X marks -->
+  <text
+     x="690"
+     y="200"
+     fill="#ef4444"
+     font-size="9"
+     id="text64">红灯</text>
+  <text
+     x="810"
+     y="200"
+     fill="#ef4444"
+     font-size="9"
+     id="text65">红灯</text>
+  <text
+     x="930"
+     y="200"
+     fill="#ef4444"
+     font-size="9"
+     id="text66">红灯</text>
+  <text
+     x="1050"
+     y="200"
+     fill="#ef4444"
+     font-size="9"
+     id="text67">红灯</text>
+  <!-- Cost annotation -->
+  <rect
+     x="650"
+     y="210"
+     width="470"
+     height="35"
+     rx="4"
+     fill="#2d0a0a"
+     stroke="#ef4444"
+     stroke-width="0.5"
+     id="rect67" />
+  <text
+     x="885"
+     y="228"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="9"
+     id="text68">4 次出发 + 4 次等红灯 + 4 次到达确认 = 效率低</text>
+  <text
+     x="885"
+     y="240"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text69">比喻：4 辆小货车各走一趟，每趟都要等红灯（DIFS+Backoff）</text>
+  <!-- Arrow down -->
+  <text
+     x="895"
+     y="272"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="18"
+     id="text70">⬇</text>
+  <!-- With A-MPDU: Convoy -->
+  <text
+     x="650"
+     y="295"
+     fill="#10b981"
+     font-size="11"
+     font-weight="600"
+     id="text71">A-MPDU：组成车队，一趟送完</text>
+  <!-- Convoy container -->
+  <rect
+     x="650"
+     y="310"
+     width="470"
+     height="180"
+     rx="8"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect71" />
+  <!-- Lead truck (PHY Preamble) -->
+  <rect
+     x="665"
+     y="325"
+     width="70"
+     height="50"
+     rx="5"
+     fill="#475569"
+     stroke="#94a3b8"
+     stroke-width="1"
+     id="rect72" />
+  <text
+     x="700"
+     y="348"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="9"
+     font-weight="600"
+     id="text72">领队车</text>
+  <text
+     x="700"
+     y="363"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text73">PHY 头</text>
+  <!-- Cargo trucks in convoy -->
+  <rect
+     x="745"
+     y="325"
+     width="85"
+     height="50"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect73" />
+  <text
+     x="787"
+     y="348"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="9"
+     id="text74">货物 A</text>
+  <text
+     x="787"
+     y="363"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text75">MPDU 1</text>
+  <rect
+     x="840"
+     y="325"
+     width="85"
+     height="50"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect75" />
+  <text
+     x="882"
+     y="348"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="9"
+     id="text76">货物 B</text>
+  <text
+     x="882"
+     y="363"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text77">MPDU 2</text>
+  <rect
+     x="935"
+     y="325"
+     width="85"
+     height="50"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect77" />
+  <text
+     x="977"
+     y="348"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="9"
+     id="text78">货物 C</text>
+  <text
+     x="977"
+     y="363"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text79">MPDU 3</text>
+  <rect
+     x="1030"
+     y="325"
+     width="85"
+     height="50"
+     rx="5"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect79" />
+  <text
+     x="1072"
+     y="348"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="9"
+     id="text80">货物 D</text>
+  <text
+     x="1072"
+     y="363"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="7"
+     id="text81">MPDU 4</text>
+  <!-- Green light -->
+  <text
+     x="700"
+     y="400"
+     fill="#10b981"
+     font-size="9"
+     id="text82">绿灯</text>
+  <text
+     x="885"
+     y="400"
+     fill="#10b981"
+     font-size="9"
+     id="text83">一路畅通</text>
+  <!-- Delimiter = shipping manifest -->
+  <rect
+     x="665"
+     y="415"
+     width="440"
+     height="30"
+     rx="4"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect83" />
+  <text
+     x="885"
+     y="435"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="9"
+     id="text84">Delimiter = 随车清单（每辆车一份，记录货物重量和编号）</text>
+  <!-- Benefits -->
+  <rect
+     x="665"
+     y="455"
+     width="440"
+     height="30"
+     rx="4"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect84" />
+  <text
+     x="885"
+     y="475"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="10"
+     id="text85">1 次出发（信道竞争）+ 1 个领队车（PHY 头）+ 1 张签收单（Block ACK）</text>
+  <!-- Block ACK metaphor -->
+  <text
+     x="650"
+     y="515"
+     fill="#10b981"
+     font-size="11"
+     font-weight="600"
+     id="text86">Block ACK = 车队到达后一次性签收</text>
+  <!-- Receiver -->
+  <rect
+     x="650"
+     y="525"
+     width="470"
+     height="84.705879"
+     rx="6"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1.10004"
+     id="rect86" />
+  <!-- Trucks arrived -->
+  <rect
+     x="665"
+     y="535"
+     width="60"
+     height="25"
+     rx="3"
+     fill="#065f46"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect87" />
+  <text
+     x="695"
+     y="552"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="8"
+     id="text87">A ✓</text>
+  <rect
+     x="735"
+     y="535"
+     width="60"
+     height="25"
+     rx="3"
+     fill="#065f46"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect88" />
+  <text
+     x="765"
+     y="552"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="8"
+     id="text88">B ✓</text>
+  <rect
+     x="805"
+     y="535"
+     width="60"
+     height="25"
+     rx="3"
+     fill="#2d0a0a"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect89" />
+  <text
+     x="835"
+     y="552"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="8"
+     id="text89">C ✗</text>
+  <rect
+     x="875"
+     y="535"
+     width="60"
+     height="25"
+     rx="3"
+     fill="#065f46"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect90" />
+  <text
+     x="905"
+     y="552"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="8"
+     id="text90">D ✓</text>
+  <!-- Single Block ACK -->
+  <rect
+     x="950"
+     y="530"
+     width="160"
+     height="35"
+     rx="5"
+     fill="#065f46"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect91" />
+  <text
+     x="1030"
+     y="545"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="9"
+     font-weight="600"
+     id="text91">1 × 签收单</text>
+  <text
+     x="1030"
+     y="558"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="8"
+     id="text92">Block ACK</text>
+  <text
+     x="650"
+     y="585"
+     fill="#94a3b8"
+     font-size="9"
+     id="text93">只重发货物 C（MPDU 3），不用重发整个车队</text>
+  <text
+     x="650"
+     y="600"
+     fill="#fbbf24"
+     font-size="9px"
+     id="text94">车队到了目的地，老板一次性核对清单 — A到了 B到了 C丢了 D到了，补发C就行</text>
+  <!-- Key comparison -->
+  <rect
+     x="650"
+     y="615"
+     width="470"
+     height="55"
+     rx="6"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect94" />
+  <text
+     x="885"
+     y="635"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="10"
+     font-weight="600"
+     id="text95">核心对比</text>
+  <text
+     x="885"
+     y="652"
+     text-anchor="middle"
+     fill="#ef4444"
+     font-size="9"
+     id="text96">无聚合：4 趟 × (等红灯 + 开车 + 签收) = 效率 ~30-40%</text>
+  <text
+     x="885"
+     y="665"
+     text-anchor="middle"
+     fill="#10b981"
+     font-size="9"
+     id="text97">A-MPDU：1 趟 × (等红灯 + 车队行进 + 批量签收) = 效率 ~80%</text>
+</svg>

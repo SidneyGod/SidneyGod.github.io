@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 800 580"
+   version="1.1"
+   id="svg46"
+   sodipodi:docname="08-ft-key-hierarchy.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   width="800"
+   height="580"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview46"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.14"
+     inkscape:cx="510.52632"
+     inkscape:cy="339.91228"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg46" />
+  <style
+     id="style1">text{font-family:'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif}</style>
+  <defs
+     id="defs2">
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="832.82654"
+       y2="832.82654"
+       gradientTransform="scale(0.96058428,0.69642356)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="md"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="8,3 0,6 0,0 "
+         fill="#3b82f6"
+         id="polygon2" />
+    </marker>
+  </defs>
+  <rect
+     width="800"
+     height="580"
+     fill="url(#bg)"
+     id="rect2"
+     style="fill:url(#bg);stroke-width:0.817908"
+     x="0"
+     y="0" />
+  <text
+     x="360"
+     y="30"
+     text-anchor="middle"
+     font-size="17px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text2">802.11r FT 密钥层次</text>
+  <rect
+     x="20"
+     y="56"
+     width="420"
+     height="100"
+     rx="8"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1.2"
+     id="rect3" />
+  <rect
+     x="20"
+     y="56"
+     width="420"
+     height="28"
+     rx="8"
+     fill="#7c3aed"
+     id="rect4" />
+  <rect
+     x="20"
+     y="76"
+     width="420"
+     height="8"
+     fill="#7c3aed"
+     id="rect5" />
+  <text
+     x="230"
+     y="76"
+     text-anchor="middle"
+     font-size="14px"
+     font-weight="700"
+     fill="#ffffff"
+     id="text5">PMK</text>
+  <text
+     x="230"
+     y="100"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text6">Pairwise Master Key</text>
+  <text
+     x="230"
+     y="116"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#cbd5e1"
+     id="text7">来源: 802.1X EAP-TLS 或 PSK</text>
+  <text
+     x="230"
+     y="132"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#cbd5e1"
+     id="text8">首次关联时获得 (Initial MD Association)</text>
+  <line
+     x1="230"
+     y1="156"
+     x2="230"
+     y2="186"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#md)"
+     id="line8" />
+  <text
+     x="240"
+     y="168"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#3b82f6"
+     font-weight="600"
+     id="text9">+ MDID</text>
+  <rect
+     x="20"
+     y="191"
+     width="420"
+     height="100"
+     rx="8"
+     fill="#1e3a5f"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect9" />
+  <rect
+     x="20"
+     y="191"
+     width="420"
+     height="28"
+     rx="8"
+     fill="#3b82f6"
+     id="rect10" />
+  <rect
+     x="20"
+     y="211"
+     width="420"
+     height="8"
+     fill="#3b82f6"
+     id="rect11" />
+  <text
+     x="230"
+     y="211"
+     text-anchor="middle"
+     font-size="14px"
+     font-weight="700"
+     fill="#ffffff"
+     id="text11">PMK-R0</text>
+  <text
+     x="230"
+     y="235"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text12">由 PMK + MDID 派生</text>
+  <text
+     x="230"
+     y="251"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#cbd5e1"
+     id="text13">持有者: R0KH (AC/控制器 或 首次认证 AP)</text>
+  <text
+     x="230"
+     y="267"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#cbd5e1"
+     id="text14">标识: R0KH-ID | 作用域: 整个移动域</text>
+  <line
+     x1="230"
+     y1="291"
+     x2="230"
+     y2="321"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#md)"
+     id="line14" />
+  <text
+     x="242"
+     y="305"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#3b82f6"
+     font-weight="600"
+     id="text15">+ BSSID</text>
+  <rect
+     x="20"
+     y="326"
+     width="420"
+     height="100"
+     rx="8"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.2"
+     id="rect15" />
+  <rect
+     x="20"
+     y="326"
+     width="420"
+     height="28"
+     rx="8"
+     fill="#10b981"
+     id="rect16" />
+  <rect
+     x="20"
+     y="346"
+     width="420"
+     height="8"
+     fill="#10b981"
+     id="rect17" />
+  <text
+     x="230"
+     y="346"
+     text-anchor="middle"
+     font-size="14px"
+     font-weight="700"
+     fill="#ffffff"
+     id="text17">PMK-R1</text>
+  <text
+     x="230"
+     y="370"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text18">由 PMK-R0 + 目标 AP BSSID 派生</text>
+  <text
+     x="230"
+     y="386"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#cbd5e1"
+     id="text19">持有者: R1KH (目标 AP 自身或控制器)</text>
+  <text
+     x="230"
+     y="402"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#cbd5e1"
+     id="text20">标识: R1KH-ID | 密钥隔离: 泄露仅影响单个 AP</text>
+  <line
+     x1="230"
+     y1="426"
+     x2="230"
+     y2="456"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#md)"
+     id="line20" />
+  <text
+     x="230"
+     y="440"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#3b82f6"
+     font-weight="600"
+     id="text21">+ ANonce + SNonce</text>
+  <rect
+     x="20"
+     y="461"
+     width="420"
+     height="100"
+     rx="8"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1.2"
+     id="rect21" />
+  <rect
+     x="20"
+     y="461"
+     width="420"
+     height="28"
+     rx="8"
+     fill="#f97316"
+     id="rect22" />
+  <rect
+     x="20"
+     y="481"
+     width="420"
+     height="8"
+     fill="#f97316"
+     id="rect23" />
+  <text
+     x="230"
+     y="481"
+     text-anchor="middle"
+     font-size="14px"
+     font-weight="700"
+     fill="#ffffff"
+     id="text23">PTK</text>
+  <text
+     x="230"
+     y="505"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text24">Pairwise Transient Key</text>
+  <text
+     x="230"
+     y="521"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#cbd5e1"
+     id="text25">由 PMK-R1 + ANonce + SNonce 派生</text>
+  <text
+     x="230"
+     y="537"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#cbd5e1"
+     id="text26">用于实际数据加密 (单播 + 组播)</text>
+  <rect
+     x="458"
+     y="56"
+     width="320"
+     height="402.36841"
+     rx="6"
+     fill="none"
+     stroke="#334155"
+     stroke-width="0.851462"
+     stroke-dasharray="4, 3"
+     id="rect26" />
+  <text
+     x="618"
+     y="80"
+     text-anchor="middle"
+     font-size="13px"
+     fill="#94a3b8"
+     font-weight="600"
+     id="text27">FT 快速切换流程</text>
+  <text
+     x="473"
+     y="111"
+     font-size="11px"
+     fill="#7c3aed"
+     font-weight="600"
+     id="text28">Initial MD Association</text>
+  <text
+     x="483"
+     y="131"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text29">完整 802.1X EAP-TLS 认证</text>
+  <text
+     x="483"
+     y="147"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text30">→ 获得 PMK-R0 (存于 PMKSA 缓存)</text>
+  <text
+     x="483"
+     y="163"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text31">PMK-R0 在整个移动域 (MDID) 有效</text>
+  <text
+     x="473"
+     y="185"
+     font-size="11px"
+     fill="#3b82f6"
+     font-weight="600"
+     id="text32">FT 切换 (后续漫游)</text>
+  <text
+     x="483"
+     y="205"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text33">用 PMK-R0 + SSID 派生 PMK-R1Name</text>
+  <text
+     x="483"
+     y="221"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text34">FT Auth Req/Resp 交换 ANonce/SNonce</text>
+  <text
+     x="483"
+     y="237"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text35">→ 派生 PMK-R1 → PTK</text>
+  <text
+     x="473"
+     y="259"
+     font-size="11px"
+     fill="#10b981"
+     font-weight="600"
+     id="text36">仅需 2+2 帧</text>
+  <text
+     x="483"
+     y="279"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text37">FT Auth Req/Resp + Reassoc</text>
+  <text
+     x="483"
+     y="295"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text38">跳过 802.1X 认证</text>
+  <text
+     x="483"
+     y="311"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text39">切换时延 20-50ms</text>
+  <text
+     x="473"
+     y="333"
+     font-size="11px"
+     fill="#f97316"
+     font-weight="600"
+     id="text40">两种模式</text>
+  <text
+     x="483"
+     y="353"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text41">Over-the-Air: STA 直连目标 AP</text>
+  <text
+     x="483"
+     y="369"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text42">Over-the-DS: 经当前 AP 中转</text>
+  <text
+     x="483"
+     y="385"
+     font-size="10px"
+     fill="#94a3b8"
+     id="text43">wpa_ft_start_over_ds() 发起</text>
+  <rect
+     x="473"
+     y="395"
+     width="290"
+     height="32"
+     rx="4"
+     fill="#1c1917"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect43" />
+  <text
+     x="618"
+     y="409"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#f97316"
+     id="text44">FT 失败 → 回退标准 Auth/Assoc (100-500ms)</text>
+  <text
+     x="618"
+     y="423"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#64748b"
+     id="text45">FT_DS_STATE_FAIL → HANDLE_NEW_CANDIDATE → ROAM</text>
+  <text
+     x="714.5965"
+     y="550.73682"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#475569"
+     id="text46">802.11-2024 §4.5.4.8</text>
+</svg>

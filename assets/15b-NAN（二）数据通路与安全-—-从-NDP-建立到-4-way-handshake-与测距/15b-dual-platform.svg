@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+<!-- validate: skip-gap-consistency -->
+<style>
+  text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; letter-spacing: 0.02em; }
+  .arrow-blue { fill:none; stroke:#3b82f6; stroke-width:2; marker-end:url(#arrow-blue); }
+  .arrow-green { fill:none; stroke:#10b981; stroke-width:2; marker-end:url(#arrow-green); }
+</style>
+<defs>
+<linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#0f0f1a"/>
+<stop offset="100%" stop-color="#1a1a2e"/>
+</linearGradient>
+<marker id="arrow-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+<polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/>
+</marker>
+<marker id="arrow-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+<polygon points="0 0, 8 3, 0 6" fill="#10b981"/>
+</marker>
+</defs>
+<rect width="1200" height="720" fill="url(#bg-grad)"/>
+<text x="600" y="28" text-anchor="middle" font-size="18" font-weight="700" fill="#e2e8f0">QCOM 瘦主机 vs MTK 胖主机：NDP 数据通路对比</text>
+<text x="600" y="48" text-anchor="middle" font-size="12" fill="#94a3b8">蓝箭头 = 下发 · 绿箭头 = 回传 · 殊途同归，数据面控制逻辑都不在用户态</text>
+<rect x="400" y="68" width="400" height="50" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+<text x="600" y="88" text-anchor="middle" font-size="12" fill="#e2e8f0" font-weight="700">厂商 HAL：nan_data_request_initiator</text>
+<text x="600" y="106" text-anchor="middle" font-size="11" fill="#94a3b8">QCA_NL80211_VENDOR_SUBCMD_NDP / MTK_SUBCMD_NDP</text>
+<path class="arrow-blue" d="M 560 118 V 145"/>
+<path class="arrow-blue" d="M 640 118 V 145"/>
+<rect x="80" y="145" width="500" height="44" rx="6" fill="#0b1220" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="330" y="171" text-anchor="middle" font-size="14" fill="#60a5fa" font-weight="700">QCOM 瘦主机 + 胖固件</text>
+<rect x="640" y="145" width="500" height="44" rx="6" fill="#0b1220" stroke="#ea580c" stroke-width="1.5"/>
+<text x="890" y="171" text-anchor="middle" font-size="14" fill="#fb923c" font-weight="700">MTK 胖主机 + 瘦固件</text>
+<rect x="80" y="215" width="500" height="120" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+<text x="100" y="238" text-anchor="start" font-size="12" fill="#f97316" font-weight="700">主机：nan_main.c（瘦，无 NDP 状态机）</text>
+<text x="100" y="260" text-anchor="start" font-size="11" fill="#cbd5e1">下发：nan_scheduled_msg_handler → nan_req_activated</text>
+<text x="100" y="278" text-anchor="start" font-size="11" fill="#cbd5e1">      → nan_datapath_req_tx → WMI_NDP_INITIATOR_REQ_CMDID</text>
+<text x="100" y="300" text-anchor="start" font-size="11" fill="#cbd5e1">回程：NDP_CONFIRM / NDP_INDICATION → active_ndp_sessions 记账</text>
+<text x="100" y="318" text-anchor="start" font-size="11" fill="#cbd5e1">peer：lim_add_ndi_peer → wma_add_sta_ndi_mode（WMI_PEER_TYPE_NAN_DATA）</text>
+<rect x="440" y="222" width="74" height="20" rx="10.0" fill="#0f172a" stroke="#ea580c" stroke-width="1"/>
+<text x="477.0" y="236.0" text-anchor="middle" font-size="11" fill="#f97316">主机可见</text>
+<path class="arrow-blue" d="M 180 335 V 395"/>
+<path class="arrow-green" d="M 460 395 V 335"/>
+<text x="192" y="362" text-anchor="start" font-size="11" fill="#60a5fa">WMI_NDP_INITIATOR_REQ_CMDID（单条命令）</text>
+<text x="448" y="380" text-anchor="end" font-size="11" fill="#34d399">NDP_CONFIRM / NDP_INDICATION 事件</text>
+<rect x="80" y="395" width="500" height="110" rx="6" fill="#0b1220" stroke="#10b981" stroke-width="1.5"/>
+<text x="100" y="418" text-anchor="start" font-size="12" fill="#10b981" font-weight="700">固件（胖）</text>
+<text x="100" y="438" text-anchor="start" font-size="11" fill="#cbd5e1">NDP 状态机：Data Path Request → Response → Confirm</text>
+<text x="100" y="456" text-anchor="start" font-size="11" fill="#cbd5e1">4-way handshake M1-M4（密钥全在固件）</text>
+<text x="100" y="474" text-anchor="start" font-size="11" fill="#cbd5e1">schedule 协商 · TSF 同步 · 信道切换</text>
+<rect x="440" y="402" width="80" height="20" rx="10.0" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+<text x="480.0" y="416.0" text-anchor="middle" font-size="11" fill="#34d399">主机不可见</text>
+<rect x="80" y="535" width="500" height="60" rx="6" fill="#0b1220" stroke="#475569" stroke-width="1.5"/>
+<text x="100" y="556" text-anchor="start" font-size="11" fill="#94a3b8" font-weight="700">可见性划分（注释）</text>
+<text x="100" y="574" text-anchor="start" font-size="11" fill="#cbd5e1">主机可见：请求下发 · 事件记账 · NDI/peer 生命周期</text>
+<text x="100" y="590" text-anchor="start" font-size="11" fill="#34d399">固件不可见：NDP 协商 · 握手 · schedule（主机只收事件）</text>
+<rect x="640" y="215" width="500" height="165" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+<text x="660" y="238" text-anchor="start" font-size="12" fill="#f97316" font-weight="700">主机：nan_data_engine.c + nan_sec.c + nan_ranging.c（胖）</text>
+<text x="660" y="260" text-anchor="start" font-size="11" fill="#cbd5e1">nanCmdDataRequest → 先找 NDL 再建 NDP</text>
+<text x="660" y="280" text-anchor="start" font-size="11" fill="#cbd5e1">nanNdlMgmtFsmStep（14 态 NDL FSM）：谈 schedule</text>
+<text x="660" y="300" text-anchor="start" font-size="11" fill="#cbd5e1">nanDataPathProtocolFsmStep（12 态 NDP FSM）：Request→Confirm</text>
+<text x="660" y="320" text-anchor="start" font-size="11" fill="#cbd5e1">nan_sec.c：4-way handshake（复用 hostapd / wpa_supplicant 状态机）</text>
+<text x="660" y="340" text-anchor="start" font-size="11" fill="#cbd5e1">nan_ranging.c：FTM 测距 + geofencing</text>
+<text x="660" y="360" text-anchor="start" font-size="11" fill="#34d399">固件只做 MAC 级收发</text>
+<rect x="1030" y="222" width="88" height="20" rx="10.0" fill="#0f172a" stroke="#ea580c" stroke-width="1"/>
+<text x="1074.0" y="236.0" text-anchor="middle" font-size="11" fill="#f97316">主机侧全可见</text>
+<path class="arrow-blue" d="M 760 380 V 440"/>
+<text x="772" y="416" text-anchor="start" font-size="11" fill="#60a5fa">NDL schedule / FTM 参数下发</text>
+<rect x="640" y="440" width="500" height="80" rx="6" fill="#0b1220" stroke="#10b981" stroke-width="1.5"/>
+<text x="660" y="463" text-anchor="start" font-size="12" fill="#10b981" font-weight="700">固件（瘦）</text>
+<text x="660" y="485" text-anchor="start" font-size="11" fill="#cbd5e1">只做 MAC 级收发：NDP/NDL 帧收发 · FTM 执行测量</text>
+<rect x="1030" y="447" width="60" height="20" rx="10.0" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+<text x="1060.0" y="461.0" text-anchor="middle" font-size="11" fill="#34d399">瘦固件</text>
+<rect x="640" y="535" width="500" height="60" rx="6" fill="#0b1220" stroke="#475569" stroke-width="1.5"/>
+<text x="660" y="556" text-anchor="start" font-size="11" fill="#94a3b8" font-weight="700">可见性划分（注释）</text>
+<text x="660" y="574" text-anchor="start" font-size="11" fill="#cbd5e1">主机可见：NDP/NDL 状态机 · 4-way · FTM 测距 全在驱动</text>
+<text x="660" y="590" text-anchor="start" font-size="11" fill="#34d399">固件不可见：只做 MAC 级收发</text>
+<rect x="80" y="625" width="1060" height="74" rx="6" fill="#1e1b4b" stroke="#a855f7" stroke-width="1.5"/>
+<text x="100" y="648" text-anchor="start" font-size="13" fill="#a855f7" font-weight="700">殊途同归</text>
+<text x="100" y="670" text-anchor="start" font-size="11" fill="#cbd5e1">数据面控制逻辑都不在用户态：QCOM 甩给固件（WMI 单条命令），MTK 揽进驱动（双层 FSM + wpa 握手）</text>
+<text x="100" y="688" text-anchor="start" font-size="11" fill="#94a3b8">supplicant 全程旁观——只留 nan.h 的 NDP/NDL/NDC 属性 ID + qca-vendor.h 的 vendor 命令定义</text>
+</svg>

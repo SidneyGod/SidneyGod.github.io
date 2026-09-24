@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1100"
+   height="560"
+   version="1.1"
+   id="svg18"
+   sodipodi:docname="12-dpp-flow.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview18"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.48"
+     inkscape:cx="550.33784"
+     inkscape:cy="280.06757"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg18" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+    <style
+       id="style4">text{font-family:'Maple Mono Normal NL NF CN', monospace;}</style>
+  </defs>
+  <rect
+     width="1100"
+     height="560"
+     fill="url(#bg)"
+     id="rect4" />
+  <text
+     x="550"
+     y="38"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="20"
+     font-weight="700"
+     id="text4">DPP 四步配网 — 从扫码到上网</text>
+  <text
+     x="550"
+     y="62"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="13"
+     id="text5">先有&quot;带外的一眼&quot;(Bootstrapping)，后续带内通信才信得过</text>
+  <!-- 两个角色 -->
+  <rect
+     x="60"
+     y="100"
+     width="150"
+     height="60"
+     rx="8"
+     fill="#312e81"
+     stroke="#818cf8"
+     stroke-width="2"
+     id="rect5" />
+  <text
+     x="135"
+     y="128"
+     text-anchor="middle"
+     fill="#c7d2fe"
+     font-size="15"
+     font-weight="700"
+     id="text6">Configurator</text>
+  <text
+     x="135"
+     y="148"
+     text-anchor="middle"
+     fill="#a5b4fc"
+     font-size="11"
+     id="text7">配置器 / 门卫（手机）</text>
+  <rect
+     x="890"
+     y="100"
+     width="150"
+     height="60"
+     rx="8"
+     fill="#312e81"
+     stroke="#818cf8"
+     stroke-width="2"
+     id="rect7" />
+  <text
+     x="965"
+     y="128"
+     text-anchor="middle"
+     fill="#c7d2fe"
+     font-size="15"
+     font-weight="700"
+     id="text8">Enrollee</text>
+  <text
+     x="965"
+     y="148"
+     text-anchor="middle"
+     fill="#a5b4fc"
+     font-size="11"
+     id="text9">入网者 / 访客（灯泡）</text>
+  <!-- 四步 -->
+  <g
+     font-size="13"
+     id="g17">
+    <rect
+       x="120"
+       y="200"
+       width="860"
+       height="64"
+       rx="8"
+       fill="url(#card)"
+       stroke="#a855f7"
+       id="rect9" />
+    <text
+       x="150"
+       y="228"
+       fill="#d8b4fe"
+       font-weight="700"
+       id="text10">① Bootstrapping（引导）</text>
+    <text
+       x="150"
+       y="250"
+       fill="#cbd5e1"
+       id="text11">手机扫灯泡上的二维码 → 带外获取灯泡的公钥（+工作信道）。公钥可公开，私钥无法从公钥反推 → 杜绝中间人</text>
+    <rect
+       x="120"
+       y="276"
+       width="860"
+       height="64"
+       rx="8"
+       fill="url(#card)"
+       stroke="#818cf8"
+       id="rect11" />
+    <text
+       x="150"
+       y="304"
+       fill="#c7d2fe"
+       font-weight="700"
+       id="text12">② Authentication（认证）</text>
+    <text
+       x="150"
+       y="326"
+       fill="#cbd5e1"
+       id="text13">在 WiFi 信道上基于公钥互认（DPP Public Action 帧）→ 建立一条加密安全信道</text>
+    <rect
+       x="120"
+       y="352"
+       width="860"
+       height="64"
+       rx="8"
+       fill="url(#card)"
+       stroke="#818cf8"
+       id="rect13" />
+    <text
+       x="150"
+       y="380"
+       fill="#c7d2fe"
+       font-weight="700"
+       id="text14">③ Configuration（配置）</text>
+    <text
+       x="150"
+       y="402"
+       fill="#cbd5e1"
+       id="text15">Enrollee 发 Config Request → Configurator 回 Configuration Object，内含凭证（Connector 或 PSK/SAE）</text>
+    <rect
+       x="120"
+       y="428"
+       width="860"
+       height="64"
+       rx="8"
+       fill="url(#card)"
+       stroke="#22d3ee"
+       id="rect15" />
+    <text
+       x="150"
+       y="456"
+       fill="#67e8f9"
+       font-weight="700"
+       id="text16">④ Network Introduction（网络引入）</text>
+    <text
+       x="150"
+       y="478"
+       fill="#cbd5e1"
+       id="text17">用 Connector 与 AP 互验签名、ECDH 算出 PMK → 交标准四次握手接入（凭&quot;卡&quot;互认，非共享密码）</text>
+  </g>
+  <text
+     x="550"
+     y="528"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="12"
+     id="text18">全程用户没输过一次 WiFi 密码 —— 这正是无屏 IoT 设备配网的解法</text>
+</svg>

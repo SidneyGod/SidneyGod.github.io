@@ -1,0 +1,201 @@
+<svg width="960" height="830" xmlns="http://www.w3.org/2000/svg">
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN',monospace; }
+  </style>
+ <defs>
+  <marker orient="auto" refY="3" refX="7" markerHeight="6" markerWidth="8" id="arr-w">
+   <polygon id="svg_1" fill="#e2e8f0" points="0 0, 8 3, 0 6"/>
+  </marker>
+  <linearGradient y2="100%" x2="100%" y1="0%" x1="0%" id="bg">
+   <stop stop-color="#0f0f1a" offset="0%"/>
+   <stop stop-color="#1a1a2e" offset="100%"/>
+  </linearGradient>
+ </defs>
+ <!-- Title -->
+ <!-- ==================== Section 1: Channel Frequency Response ==================== -->
+ <!-- Frequency axis -->
+ <!-- Channel response curve -->
+ <!-- Mark deep fade dips -->
+ <!-- ==================== Section 2: Without OFDM (left) ==================== -->
+ <!-- Wide carrier band -->
+ <!-- Arrow down -->
+ <!-- Distorted constellation -->
+ <!-- Distorted 64-QAM constellation -->
+ <!-- Result -->
+ <!-- ==================== Section 3: With OFDM (right) ==================== -->
+ <!-- Subcarrier bands -->
+ <!-- Arrow down -->
+ <!-- Clean constellation (64-QAM on good subcarrier) -->
+ <!-- Clean 64-QAM 4x4 -->
+ <!-- Bad subcarrier constellation -->
+ <!-- QPSK constellation -->
+ <!-- Result -->
+ <!-- ==================== Section 4: Summary comparison ==================== -->
+ <!-- Without OFDM column -->
+ <!-- With OFDM column -->
+ <!-- Visual: many narrow subcarriers -->
+ <!-- Bottom insight -->
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_2" fill="url(#bg)" height="830" width="960"/>
+  <text id="svg_3" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="18" fill="#e2e8f0" text-anchor="middle" y="35" x="480">OFDM 为什么能跑更高阶调制？</text>
+  <text id="svg_4" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="12" fill="#94a3b8" text-anchor="middle" y="57" x="480">多径导致频率选择性衰落，OFDM让每个子载波自适应选择调制方式</text>
+  <rect id="svg_5" fill="#1e293b" rx="8" height="156.99999" width="920" y="75" x="20" stroke="#334155"/>
+  <text id="svg_6" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="13" fill="#fbbf24" y="98" x="50">1. 信道频率响应：多径衰落造成频率选择性衰落</text>
+  <text id="svg_7" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#94a3b8" y="115" x="50">信号走多条路径（直射、反射、折射）到达接收端，到达时间不同，互相叠加。某些频率被增强，某些被抵消</text>
+  <line id="svg_8" stroke="#475569" y2="208" x2="900" y1="208" x1="60"/>
+  <text id="svg_9" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#64748b" text-anchor="middle" y="223" x="480">频率 (20 MHz 信道)</text>
+  <text id="svg_10" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#64748b" y="203" x="60">0 MHz</text>
+  <text id="svg_11" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#64748b" y="203" x="890">20 MHz</text>
+  <path id="svg_12" stroke-width="2.5" stroke="#3b82f6" fill="none" d="m60,163c40,-5 70,3 110,-10c40,-13 60,20 100,15c40,-5 60,-30 100,-25c40,5 60,40 100,33c40,-8 60,-28 100,-18c40,10 60,35 100,20c40,-15 60,-25 100,-18c40,8 70,13 100,6l30,4"/>
+  <path id="svg_13" fill-opacity="0.1" fill="#3b82f6" d="m60,163c40,-5 70,3 110,-10c40,-13 60,20 100,15c40,-5 60,-30 100,-25c40,5 60,40 100,33c40,-8 60,-28 100,-18c40,10 60,35 100,20c40,-15 60,-25 100,-18c40,8 70,13 100,6l30,4l0,38l-840,0l0,-45z"/>
+  <circle id="svg_14" fill="#ef4444" r="4" cy="143" cx="370"/>
+  <text id="svg_15" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#ef4444" text-anchor="middle" y="133" x="370">深衰落</text>
+  <circle id="svg_16" fill="#ef4444" r="4" cy="157" cx="530"/>
+  <text id="svg_17" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#ef4444" text-anchor="middle" y="147" x="530">深衰落</text>
+  <circle id="svg_18" fill="#ef4444" r="4" cy="178" cx="670"/>
+  <text id="svg_19" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#ef4444" text-anchor="middle" y="195" x="670">此处较强</text>
+  <rect id="svg_20" stroke-width="1.5" stroke="#ef4444" fill="#1e293b" rx="8" height="280" width="445" y="247" x="20"/>
+  <text id="svg_21" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="14" fill="#ef4444" text-anchor="middle" y="272" x="242">无 OFDM ：一条宽载波</text>
+  <text id="svg_22" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#94a3b8" text-anchor="middle" y="290" x="242">整个20 MHz 信道当做一条载波传输</text>
+  <rect id="svg_23" stroke-width="1.5" stroke="#ef4444" fill-opacity="0.15" fill="#ef4444" rx="4" height="30" width="370" y="305" x="60"/>
+  <text id="svg_24" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="10" fill="#ef4444" text-anchor="middle" y="325" x="245">20 MHz 宽载波 (整条带宽作为一个整体)</text>
+  <line id="svg_25" marker-end="url(#arr-w)" stroke="#64748b" y2="359" x2="245" y1="341" x1="245"/>
+  <text id="svg_26" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#64748b" text-anchor="middle" y="355" x="281">信道状态影响</text>
+  <rect id="svg_27" stroke="#334155" fill="#0f172a" rx="6" height="115" width="270" y="367" x="110"/>
+  <text id="svg_28" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#e2e8f0" text-anchor="middle" y="385" x="245">星座图：64-QAM 试图接收</text>
+  <text id="svg_29" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#ef4444" text-anchor="middle" y="400" x="245">信道状态在整个带宽内变化，星座点散乱</text>
+  <g id="svg_30" fill-opacity="0.8" fill="#ef4444">
+   <circle id="svg_31" r="3" cy="420" cx="148"/>
+   <circle id="svg_32" r="3" cy="425" cx="170"/>
+   <circle id="svg_33" r="3" cy="417" cx="192"/>
+   <circle id="svg_34" r="3" cy="422" cx="214"/>
+   <circle id="svg_35" r="3" cy="415" cx="236"/>
+   <circle id="svg_36" r="3" cy="421" cx="258"/>
+   <circle id="svg_37" r="3" cy="418" cx="280"/>
+   <circle id="svg_38" r="3" cy="424" cx="302"/>
+   <circle id="svg_39" r="3" cy="438" cx="145"/>
+   <circle id="svg_40" r="3" cy="442" cx="167"/>
+   <circle id="svg_41" r="3" cy="436" cx="189"/>
+   <circle id="svg_42" r="3" cy="440" cx="211"/>
+   <circle id="svg_43" r="3" cy="434" cx="233"/>
+   <circle id="svg_44" r="3" cy="439" cx="255"/>
+   <circle id="svg_45" r="3" cy="435" cx="277"/>
+   <circle id="svg_46" r="3" cy="443" cx="299"/>
+   <circle id="svg_47" r="3" cy="455" cx="150"/>
+   <circle id="svg_48" r="3" cy="459" cx="172"/>
+   <circle id="svg_49" r="3" cy="453" cx="194"/>
+   <circle id="svg_50" r="3" cy="458" cx="216"/>
+   <circle id="svg_51" r="3" cy="451" cx="238"/>
+   <circle id="svg_52" r="3" cy="457" cx="260"/>
+   <circle id="svg_53" r="3" cy="452" cx="282"/>
+   <circle id="svg_54" r="3" cy="460" cx="304"/>
+   <circle id="svg_55" r="3" cy="470" cx="146"/>
+   <circle id="svg_56" r="3" cy="474" cx="168"/>
+   <circle id="svg_57" r="3" cy="468" cx="190"/>
+   <circle id="svg_58" r="3" cy="473" cx="212"/>
+   <circle id="svg_59" r="3" cy="467" cx="234"/>
+   <circle id="svg_60" r="3" cy="472" cx="256"/>
+   <circle id="svg_61" r="3" cy="469" cx="278"/>
+   <circle id="svg_62" r="3" cy="475" cx="300"/>
+  </g>
+  <rect id="svg_63" stroke="#ef4444" fill="#450a0a" rx="4" height="24" width="370" y="495" x="60"/>
+  <text id="svg_64" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="10" fill="#ef4444" text-anchor="middle" y="512" x="245">结果：无法识别，只能退回 QPSK (2 bit/symbol)</text>
+  <rect id="svg_65" stroke-width="1.5" stroke="#10b981" fill="#1e293b" rx="8" height="280" width="445" y="247" x="495"/>
+  <text id="svg_66" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="14" fill="#10b981" text-anchor="middle" y="272" x="717">有 OFDM ：拆成52个子载波</text>
+  <text id="svg_67" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#94a3b8" text-anchor="middle" y="290" x="717">每个子载波独立选择调制方式</text>
+  <g id="svg_68">
+   <rect id="svg_69" stroke="#10b981" fill-opacity="0.2" fill="#10b981" rx="2" height="30" width="42" y="305" x="530"/>
+   <rect id="svg_70" stroke="#10b981" fill-opacity="0.2" fill="#10b981" rx="2" height="30" width="42" y="305" x="575"/>
+   <rect id="svg_71" stroke="#10b981" fill-opacity="0.2" fill="#10b981" rx="2" height="30" width="42" y="305" x="620"/>
+   <rect id="svg_72" stroke="#ef4444" fill-opacity="0.2" fill="#ef4444" rx="2" height="30" width="42" y="305" x="665"/>
+   <rect id="svg_73" stroke="#10b981" fill-opacity="0.2" fill="#10b981" rx="2" height="30" width="42" y="305" x="710"/>
+   <rect id="svg_74" stroke="#10b981" fill-opacity="0.2" fill="#10b981" rx="2" height="30" width="42" y="305" x="755"/>
+   <rect id="svg_75" stroke="#10b981" fill-opacity="0.2" fill="#10b981" rx="2" height="30" width="42" y="305" x="800"/>
+   <rect id="svg_76" stroke="#10b981" fill-opacity="0.2" fill="#10b981" rx="2" height="30" width="42" y="305" x="845"/>
+   <rect id="svg_77" stroke="#ef4444" fill-opacity="0.2" fill="#ef4444" rx="2" height="30" width="30" y="305" x="890"/>
+   <!-- labels -->
+   <text id="svg_78" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#10b981" text-anchor="middle" y="324" x="551">良好</text>
+   <text id="svg_79" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#10b981" text-anchor="middle" y="324" x="596">良好</text>
+   <text id="svg_80" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#10b981" text-anchor="middle" y="324" x="641">良好</text>
+   <text id="svg_81" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#ef4444" text-anchor="middle" y="324" x="686">衰落</text>
+   <text id="svg_82" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#10b981" text-anchor="middle" y="324" x="731">良好</text>
+   <text id="svg_83" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#10b981" text-anchor="middle" y="324" x="776">良好</text>
+   <text id="svg_84" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#10b981" text-anchor="middle" y="324" x="821">良好</text>
+   <text id="svg_85" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#10b981" text-anchor="middle" y="324" x="866">良好</text>
+   <text id="svg_86" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="6" fill="#ef4444" text-anchor="middle" y="324" x="905">衰落</text>
+  </g>
+  <text id="svg_87" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#64748b" text-anchor="middle" y="349" x="717">... 共52个子载波，每个宽312.5 kHz ...</text>
+  <line id="svg_88" marker-end="url(#arr-w)" stroke="#64748b" y2="372" x2="717" y1="357" x1="717"/>
+  <rect id="svg_89" stroke="#10b981" fill="#0f172a" rx="6" height="105" width="180" y="377" x="530"/>
+  <text id="svg_90" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#10b981" text-anchor="middle" y="395" x="620">好子载波 (大部分):</text>
+  <text id="svg_91" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#e2e8f0" text-anchor="middle" y="408" x="620">64-QAM 星座点清晰</text>
+  <g id="svg_92" fill-opacity="0.9" fill="#10b981">
+   <circle id="svg_93" r="3.5" cy="425" cx="570"/>
+   <circle id="svg_94" r="3.5" cy="425" cx="593"/>
+   <circle id="svg_95" r="3.5" cy="425" cx="616"/>
+   <circle id="svg_96" r="3.5" cy="425" cx="639"/>
+   <circle id="svg_97" r="3.5" cy="443" cx="570"/>
+   <circle id="svg_98" r="3.5" cy="443" cx="593"/>
+   <circle id="svg_99" r="3.5" cy="443" cx="616"/>
+   <circle id="svg_100" r="3.5" cy="443" cx="639"/>
+   <circle id="svg_101" r="3.5" cy="461" cx="570"/>
+   <circle id="svg_102" r="3.5" cy="461" cx="593"/>
+   <circle id="svg_103" r="3.5" cy="461" cx="616"/>
+   <circle id="svg_104" r="3.5" cy="461" cx="639"/>
+  </g>
+  <rect id="svg_105" stroke="#ef4444" fill="#0f172a" rx="6" height="105" width="180" y="377" x="725"/>
+  <text id="svg_106" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#ef4444" text-anchor="middle" y="395" x="815">坏子载波 (少数):</text>
+  <text id="svg_107" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#e2e8f0" text-anchor="middle" y="408" x="815">退回 QPSK</text>
+  <g id="svg_108" fill-opacity="0.9" fill="#fbbf24">
+   <circle id="svg_109" r="5" cy="435" cx="785"/>
+   <circle id="svg_110" r="5" cy="435" cx="815"/>
+   <circle id="svg_111" r="5" cy="460" cx="785"/>
+   <circle id="svg_112" r="5" cy="460" cx="815"/>
+  </g>
+  <text id="svg_113" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="8" fill="#fbbf24" text-anchor="middle" y="477" x="815">QPSK: 4点，很清晰</text>
+  <rect id="svg_114" stroke="#10b981" fill="#0e4429" rx="4" height="24" width="375" y="495" x="530"/>
+  <text id="svg_115" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="10" fill="#10b981" text-anchor="middle" y="512" x="717">结果：50个好子载波用64-QAM，2个退回QPSK，综合高效</text>
+  <rect id="svg_116" stroke-width="1.5" stroke="#fbbf24" fill="#1e293b" rx="8" height="240" width="920" y="539" x="20"/>
+  <text id="svg_117" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="14" fill="#fbbf24" text-anchor="middle" y="567" x="480">结论：为什么OFDM能跑更高阶调制</text>
+  <rect id="svg_118" stroke="#ef4444" fill="#0f172a" rx="6" height="180" width="410" y="584" x="50"/>
+  <text id="svg_119" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="12" fill="#ef4444" text-anchor="middle" y="609" x="255">无 OFDM</text>
+  <rect id="svg_120" stroke="#ef4444" fill-opacity="0.2" fill="#ef4444" rx="3" height="22" width="370" y="621" x="70"/>
+  <text id="svg_121" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#ef4444" text-anchor="middle" y="637" x="255">20 MHz 一条宽载波</text>
+  <text id="svg_122" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#e2e8f0" y="659" x="70">• 信道状态在整个带宽内变化</text>
+  <text id="svg_123" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#e2e8f0" y="677" x="70">• 无法区分哪些频率好、哪些差</text>
+  <text id="svg_124" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#e2e8f0" y="695" x="70">• 只能用低阶调制（QPSK）保证安全</text>
+  <text id="svg_125" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="11" fill="#ef4444" y="717" x="70">结果：QPSK = 2 bit/symbol</text>
+  <text id="svg_126" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#94a3b8" y="734" x="70">单载波传输，仅 2 bit/symbol</text>
+  <rect id="svg_127" stroke="#10b981" fill="#0f172a" rx="6" height="180" width="430" y="584" x="490"/>
+  <text id="svg_128" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="700" font-size="12" fill="#10b981" text-anchor="middle" y="609" x="705">有 OFDM</text>
+  <g id="svg_129">
+   <rect id="svg_130" stroke-width="0.8" stroke="#10b981" fill-opacity="0.3" fill="#10b981" rx="2" height="22" width="22" y="621" x="510"/>
+   <rect id="svg_131" stroke-width="0.8" stroke="#10b981" fill-opacity="0.3" fill="#10b981" rx="2" height="22" width="22" y="621" x="534"/>
+   <rect id="svg_132" stroke-width="0.8" stroke="#10b981" fill-opacity="0.3" fill="#10b981" rx="2" height="22" width="22" y="621" x="558"/>
+   <rect id="svg_133" stroke-width="0.8" stroke="#ef4444" fill-opacity="0.3" fill="#ef4444" rx="2" height="22" width="22" y="621" x="582"/>
+   <rect id="svg_134" stroke-width="0.8" stroke="#10b981" fill-opacity="0.3" fill="#10b981" rx="2" height="22" width="22" y="621" x="606"/>
+   <rect id="svg_135" stroke-width="0.8" stroke="#10b981" fill-opacity="0.3" fill="#10b981" rx="2" height="22" width="22" y="621" x="630"/>
+   <rect id="svg_136" stroke-width="0.8" stroke="#10b981" fill-opacity="0.3" fill="#10b981" rx="2" height="22" width="22" y="621" x="654"/>
+   <rect id="svg_137" stroke-width="0.8" stroke="#10b981" fill-opacity="0.3" fill="#10b981" rx="2" height="22" width="22" y="621" x="678"/>
+   <rect id="svg_138" stroke-width="0.8" stroke="#10b981" fill-opacity="0.3" fill="#10b981" rx="2" height="22" width="22" y="621" x="702"/>
+   <rect id="svg_139" stroke-width="0.8" stroke="#ef4444" fill-opacity="0.3" fill="#ef4444" rx="2" height="22" width="22" y="621" x="726"/>
+   <rect id="svg_140" stroke-width="0.8" stroke="#10b981" fill-opacity="0.3" fill="#10b981" rx="2" height="22" width="22" y="621" x="750"/>
+   <rect id="svg_141" stroke-width="0.8" stroke="#10b981" fill-opacity="0.3" fill="#10b981" rx="2" height="22" width="22" y="621" x="774"/>
+   <rect id="svg_142" stroke-width="0.8" stroke="#10b981" fill-opacity="0.3" fill="#10b981" rx="2" height="22" width="22" y="621" x="798"/>
+   <rect id="svg_143" stroke-width="0.8" stroke="#10b981" fill-opacity="0.3" fill="#10b981" rx="2" height="22" width="22" y="621" x="822"/>
+   <rect id="svg_144" stroke-width="0.8" stroke="#10b981" fill-opacity="0.3" fill="#10b981" rx="2" height="22" width="22" y="621" x="846"/>
+   <rect id="svg_145" stroke-width="0.8" stroke="#10b981" fill-opacity="0.3" fill="#10b981" rx="2" height="22" width="22" y="621" x="870"/>
+   <rect id="svg_146" stroke-width="0.8" stroke="#10b981" fill-opacity="0.3" fill="#10b981" rx="2" height="22" width="16" y="621" x="894"/>
+  </g>
+  <text id="svg_147" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="7" fill="#94a3b8" text-anchor="middle" y="657" x="705">每根子载波自己的信道是平坦的</text>
+  <text id="svg_148" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#e2e8f0" y="677" x="510">• 每个子载波自适应调制阶数</text>
+  <text id="svg_149" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#e2e8f0" y="695" x="510">• 好子载波(约96%)：64-QAM = 6 bit</text>
+  <text id="svg_150" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#e2e8f0" y="713" x="510">• 坏子载波(约4%)：QPSK = 2 bit，纠错编码恢复</text>
+  <text id="svg_151" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-weight="600" font-size="11" fill="#10b981" y="735" x="510">结果：综合 ≈ 5.8 bit/symbol</text>
+  <text id="svg_152" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="9" fill="#94a3b8" y="752" x="510">48子载波 × 5.8 bit ≈ 278 bit/符号 → 提升~3倍</text>
+  <rect id="svg_153" stroke-width="0.5" stroke="#fbbf24" fill="#0f172a" rx="4" height="22" width="920" y="791" x="20"/>
+  <text id="svg_154" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" font-size="10" fill="#fbbf24" text-anchor="middle" y="807" x="480">核心：OFDM 不是让带宽变大，而是让每一段频率都能用最佳调制方式传输</text>
+ </g>
+</svg>

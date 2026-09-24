@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1100"
+   height="560"
+   version="1.1"
+   id="svg37"
+   sodipodi:docname="16-wfd-topology.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview37"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.5861561"
+     inkscape:cx="549.75674"
+     inkscape:cy="280.23724"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg37" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="card"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#1e293b"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#0f172a"
+         id="stop4" />
+    </linearGradient>
+    <style
+       id="style4">text{font-family:'Maple Mono Normal NL NF CN', monospace;}</style>
+  </defs>
+  <rect
+     width="1100"
+     height="560"
+     fill="url(#bg)"
+     id="rect4" />
+  <text
+     x="550"
+     y="38"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="20"
+     font-weight="700"
+     id="text4">WFD 三种连接拓扑 — 无线 HDMI 铺在哪条路上</text>
+  <text
+     x="550"
+     y="62"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="13"
+     id="text5">Miracast 不建底层连接，复用三种 L2 方式之一</text>
+  <!-- Wi-Fi Direct -->
+  <rect
+     x="40"
+     y="90"
+     width="330"
+     height="430"
+     rx="10"
+     fill="url(#card)"
+     stroke="#14b8a6"
+     stroke-width="2"
+     id="rect5" />
+  <text
+     x="205"
+     y="120"
+     text-anchor="middle"
+     fill="#14b8a6"
+     font-size="16"
+     font-weight="700"
+     id="text6">① Wi-Fi Direct</text>
+  <text
+     x="205"
+     y="142"
+     text-anchor="middle"
+     fill="#5eead4"
+     font-size="11"
+     id="text7">R1 / R2 必选 · 设备直连成组</text>
+  <rect
+     x="100"
+     y="180"
+     width="100"
+     height="62"
+     rx="6"
+     fill="#0f766e"
+     id="rect7" />
+  <text
+     x="150"
+     y="208"
+     text-anchor="middle"
+     fill="#fff"
+     font-size="13"
+     id="text8">Source</text>
+  <text
+     x="150"
+     y="228"
+     text-anchor="middle"
+     fill="#99f6e4"
+     font-size="10"
+     id="text9">手机(GO?)</text>
+  <rect
+     x="210"
+     y="180"
+     width="100"
+     height="62"
+     rx="6"
+     fill="#0f766e"
+     id="rect9" />
+  <text
+     x="260"
+     y="208"
+     text-anchor="middle"
+     fill="#fff"
+     font-size="13"
+     id="text10">Sink</text>
+  <text
+     x="260"
+     y="228"
+     text-anchor="middle"
+     fill="#99f6e4"
+     font-size="10"
+     id="text11">电视</text>
+  <line
+     x1="200"
+     y1="211"
+     x2="210"
+     y2="211"
+     stroke="#5eead4"
+     stroke-width="3"
+     id="line11" />
+  <text
+     x="205"
+     y="290"
+     text-anchor="middle"
+     fill="#cbd5e1"
+     font-size="11"
+     id="text12">Source 或 Sink 之一当 GO</text>
+  <text
+     x="205"
+     y="312"
+     text-anchor="middle"
+     fill="#cbd5e1"
+     font-size="11"
+     id="text13">复用第 1 章 P2P 直连</text>
+  <text
+     x="205"
+     y="334"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="11"
+     id="text14">无需任何 AP 参与</text>
+  <text
+     x="205"
+     y="480"
+     text-anchor="middle"
+     fill="#5eead4"
+     font-size="12"
+     id="text15">比喻：两台设备直接结伴</text>
+  <!-- TDLS -->
+  <rect
+     x="385"
+     y="90"
+     width="330"
+     height="430"
+     rx="10"
+     fill="url(#card)"
+     stroke="#3b82f6"
+     stroke-width="2"
+     id="rect15" />
+  <text
+     x="550"
+     y="120"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="16"
+     font-weight="700"
+     id="text16">② TDLS</text>
+  <text
+     x="550"
+     y="142"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="11"
+     id="text17">仅 R1 · 同 AP 下抄近路</text>
+  <rect
+     x="500"
+     y="170"
+     width="100"
+     height="40"
+     rx="6"
+     fill="#64748b"
+     id="rect17" />
+  <text
+     x="550"
+     y="195"
+     text-anchor="middle"
+     fill="#fff"
+     font-size="12"
+     id="text18">AP / GO</text>
+  <rect
+     x="430"
+     y="280"
+     width="100"
+     height="56"
+     rx="6"
+     fill="#1d4ed8"
+     id="rect18" />
+  <text
+     x="480"
+     y="304"
+     text-anchor="middle"
+     fill="#fff"
+     font-size="12"
+     id="text19">Source</text>
+  <text
+     x="480"
+     y="322"
+     text-anchor="middle"
+     fill="#bfdbfe"
+     font-size="10"
+     id="text20">关联 AP</text>
+  <rect
+     x="570"
+     y="280"
+     width="100"
+     height="56"
+     rx="6"
+     fill="#1d4ed8"
+     id="rect20" />
+  <text
+     x="620"
+     y="304"
+     text-anchor="middle"
+     fill="#fff"
+     font-size="12"
+     id="text21">Sink</text>
+  <text
+     x="620"
+     y="322"
+     text-anchor="middle"
+     fill="#bfdbfe"
+     font-size="10"
+     id="text22">关联 AP</text>
+  <line
+     x1="540"
+     y1="210"
+     x2="480"
+     y2="280"
+     stroke="#64748b"
+     stroke-width="1.5"
+     stroke-dasharray="4,3"
+     id="line22" />
+  <line
+     x1="560"
+     y1="210"
+     x2="620"
+     y2="280"
+     stroke="#64748b"
+     stroke-width="1.5"
+     stroke-dasharray="4,3"
+     id="line23" />
+  <line
+     x1="530"
+     y1="308"
+     x2="570"
+     y2="308"
+     stroke="#38bdf8"
+     stroke-width="3"
+     id="line24" />
+  <text
+     x="550"
+     y="300"
+     text-anchor="middle"
+     fill="#38bdf8"
+     font-size="10"
+     id="text24">TDLS 直连旁路</text>
+  <text
+     x="550"
+     y="400"
+     text-anchor="middle"
+     fill="#cbd5e1"
+     font-size="11"
+     id="text25">双方都连同一 AP/GO</text>
+  <text
+     x="550"
+     y="422"
+     text-anchor="middle"
+     fill="#cbd5e1"
+     font-size="11"
+     id="text26">建立 TDLS 直连绕开 AP</text>
+  <text
+     x="550"
+     y="480"
+     text-anchor="middle"
+     fill="#93c5fd"
+     font-size="12"
+     id="text27">比喻:同一 AP 下抄近路</text>
+  <!-- Infrastructure -->
+  <rect
+     x="730"
+     y="90"
+     width="330"
+     height="430"
+     rx="10"
+     fill="url(#card)"
+     stroke="#a855f7"
+     stroke-width="2"
+     id="rect27" />
+  <text
+     x="895"
+     y="120"
+     text-anchor="middle"
+     fill="#a855f7"
+     font-size="16"
+     font-weight="700"
+     id="text28">③ Infrastructure</text>
+  <text
+     x="895"
+     y="142"
+     text-anchor="middle"
+     fill="#d8b4fe"
+     font-size="11"
+     id="text29">仅 R2 · mDNS 发现，走 IP</text>
+  <rect
+     x="845"
+     y="170"
+     width="100"
+     height="40"
+     rx="6"
+     fill="#64748b"
+     id="rect29" />
+  <text
+     x="895"
+     y="195"
+     text-anchor="middle"
+     fill="#fff"
+     font-size="12"
+     id="text30">AP / 网络</text>
+  <rect
+     x="775"
+     y="280"
+     width="100"
+     height="56"
+     rx="6"
+     fill="#7e22ce"
+     id="rect30" />
+  <text
+     x="825"
+     y="304"
+     text-anchor="middle"
+     fill="#fff"
+     font-size="12"
+     id="text31">Source</text>
+  <text
+     x="825"
+     y="322"
+     text-anchor="middle"
+     fill="#e9d5ff"
+     font-size="10"
+     id="text32">_displaysrc</text>
+  <rect
+     x="915"
+     y="280"
+     width="100"
+     height="56"
+     rx="6"
+     fill="#7e22ce"
+     id="rect32" />
+  <text
+     x="965"
+     y="304"
+     text-anchor="middle"
+     fill="#fff"
+     font-size="12"
+     id="text33">Sink</text>
+  <text
+     x="965"
+     y="322"
+     text-anchor="middle"
+     fill="#e9d5ff"
+     font-size="10"
+     id="text34">_display</text>
+  <line
+     x1="880"
+     y1="210"
+     x2="825"
+     y2="280"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="line34" />
+  <line
+     x1="910"
+     y1="210"
+     x2="965"
+     y2="280"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="line35" />
+  <text
+     x="895"
+     y="400"
+     text-anchor="middle"
+     fill="#cbd5e1"
+     font-size="11"
+     id="text35">双方连同一基础网络</text>
+  <text
+     x="895"
+     y="422"
+     text-anchor="middle"
+     fill="#cbd5e1"
+     font-size="11"
+     id="text36">mDNS/DNS-SD 发现 + TCP</text>
+  <text
+     x="895"
+     y="480"
+     text-anchor="middle"
+     fill="#d8b4fe"
+     font-size="12"
+     id="text37">比喻:都走公司内网</text>
+</svg>

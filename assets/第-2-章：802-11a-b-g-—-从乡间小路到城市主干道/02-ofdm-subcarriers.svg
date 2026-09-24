@@ -1,0 +1,1117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 560"
+   width="1200"
+   height="560"
+   version="1.1"
+   id="svg96"
+   sodipodi:docname="02-ofdm-subcarriers.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview96"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.785"
+     inkscape:cx="600"
+     inkscape:cy="279.83193"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg96" />
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN',monospace; }
+  </style>
+  <defs
+     id="defs8">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="sc-blue"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#3b82f6"
+         stop-opacity="0.6"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#3b82f6"
+         stop-opacity="0.1"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="sc-orange"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#f97316"
+         stop-opacity="0.6"
+         id="stop5" />
+      <stop
+         offset="100%"
+         stop-color="#f97316"
+         stop-opacity="0.1"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       id="sc-red"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#dc2626"
+         stop-opacity="0.4"
+         id="stop7" />
+      <stop
+         offset="100%"
+         stop-color="#dc2626"
+         stop-opacity="0.1"
+         id="stop8" />
+    </linearGradient>
+  </defs>
+  <rect
+     width="1200"
+     height="560"
+     fill="url(#bg-grad)"
+     id="rect8" />
+  <!-- Title -->
+  <text
+     x="600"
+     y="30"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="17"
+     font-weight="700"
+     id="text8">OFDM Subcarrier Structure — 802.11a/g (64-point FFT)</text>
+  <text
+     x="600"
+     y="50"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="12"
+     id="text9">64 点 FFT 产生 64 个子载波 → 移除 12 个 → 剩余 52 个可用</text>
+  <!-- Frequency axis -->
+  <line
+     x1="80"
+     y1="350"
+     x2="1120"
+     y2="350"
+     stroke="#334155"
+     stroke-width="2"
+     id="line9" />
+  <text
+     x="600"
+     y="378"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="12"
+     id="text10">Frequency / 频率 (20 MHz channel)</text>
+  <!-- Channel boundaries at x=100 and x=1100 -->
+  <line
+     x1="100"
+     y1="90"
+     x2="100"
+     y2="350"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line10" />
+  <line
+     x1="1100"
+     y1="90"
+     x2="1100"
+     y2="350"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     id="line11" />
+  <text
+     x="100"
+     y="85"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="10"
+     id="text11">-10 MHz</text>
+  <text
+     x="1100"
+     y="85"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="10"
+     id="text12">+10 MHz</text>
+  <text
+     x="600"
+     y="85"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="10"
+     id="text13">Center (DC)</text>
+  <!--
+    Layout: 64 subcarriers, step = 1000/64 = 15.625px
+    x(i) = 600 + i * 15.625 - 6  (bar width = 12, centered)
+    Heights: data=190, pilot=210, guard=110, DC=220
+    All bars bottom at y=340
+  -->
+  <!-- ===== Mirror: -32 (Nyquist, FFT index 32) ===== -->
+  <rect
+     x="94"
+     y="230"
+     width="12"
+     height="110"
+     rx="2"
+     fill="url(#sc-red)"
+     id="rect13" />
+  <text
+     x="100"
+     y="358"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="7"
+     font-weight="600"
+     id="text14">Mirror</text>
+  <text
+     x="100"
+     y="368"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="6"
+     id="text15">-32</text>
+  <!-- ===== Guard Band LEFT: -31 to -27 ===== -->
+  <rect
+     x="110"
+     y="230"
+     width="12"
+     height="110"
+     rx="2"
+     fill="url(#sc-red)"
+     id="rect15" />
+  <rect
+     x="125"
+     y="230"
+     width="12"
+     height="110"
+     rx="2"
+     fill="url(#sc-red)"
+     id="rect16" />
+  <rect
+     x="141"
+     y="230"
+     width="12"
+     height="110"
+     rx="2"
+     fill="url(#sc-red)"
+     id="rect17" />
+  <rect
+     x="157"
+     y="230"
+     width="12"
+     height="110"
+     rx="2"
+     fill="url(#sc-red)"
+     id="rect18" />
+  <rect
+     x="172"
+     y="230"
+     width="12"
+     height="110"
+     rx="2"
+     fill="url(#sc-red)"
+     id="rect19" />
+  <!-- Guard band bracket left -->
+  <line
+     x1="106"
+     y1="210"
+     x2="188"
+     y2="210"
+     stroke="#dc2626"
+     stroke-width="1"
+     id="line19" />
+  <line
+     x1="106"
+     y1="205"
+     x2="106"
+     y2="215"
+     stroke="#dc2626"
+     stroke-width="1"
+     id="line20" />
+  <line
+     x1="188"
+     y1="205"
+     x2="188"
+     y2="215"
+     stroke="#dc2626"
+     stroke-width="1"
+     id="line21" />
+  <text
+     x="147"
+     y="205"
+     text-anchor="middle"
+     fill="#dc2626"
+     font-size="9"
+     font-weight="600"
+     id="text21">Guard Band</text>
+  <text
+     x="147"
+     y="195"
+     text-anchor="middle"
+     fill="#dc2626"
+     font-size="8"
+     id="text22">-31~−27 (5 removed)</text>
+  <!-- ===== Active LEFT: -26 to -1 ===== -->
+  <!-- Heights vary to represent real channel quality differences across subcarriers -->
+  <!-- -26 -->
+  <rect
+     x="188"
+     y="155"
+     width="12"
+     height="185"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect22" />
+  <text
+     x="194"
+     y="338"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="7"
+     id="text23">-26</text>
+  <!-- -25 -->
+  <rect
+     x="203"
+     y="145"
+     width="12"
+     height="195"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect23" />
+  <!-- -24 -->
+  <rect
+     x="219"
+     y="160"
+     width="12"
+     height="180"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect24" />
+  <!-- -23 -->
+  <rect
+     x="235"
+     y="140"
+     width="12"
+     height="200"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect25" />
+  <!-- -22 -->
+  <rect
+     x="250"
+     y="150"
+     width="12"
+     height="190"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect26" />
+  <!-- -21: PILOT -->
+  <rect
+     x="266"
+     y="130"
+     width="12"
+     height="210"
+     rx="2"
+     fill="url(#sc-orange)"
+     id="rect27" />
+  <text
+     x="272"
+     y="338"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="7"
+     id="text27">P</text>
+  <text
+     x="272"
+     y="348"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="6"
+     id="text28">-21</text>
+  <!-- -20 -->
+  <rect
+     x="281"
+     y="155"
+     width="12"
+     height="185"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect28" />
+  <!-- -19 -->
+  <rect
+     x="297"
+     y="135"
+     width="12"
+     height="205"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect29" />
+  <!-- -18 -->
+  <rect
+     x="313"
+     y="150"
+     width="12"
+     height="190"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect30" />
+  <!-- -17 -->
+  <rect
+     x="328"
+     y="145"
+     width="12"
+     height="195"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect31" />
+  <!-- -16 -->
+  <rect
+     x="344"
+     y="160"
+     width="12"
+     height="180"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect32" />
+  <!-- -15 -->
+  <rect
+     x="359"
+     y="140"
+     width="12"
+     height="200"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect33" />
+  <!-- -14 -->
+  <rect
+     x="375"
+     y="152"
+     width="12"
+     height="188"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect34" />
+  <!-- -13 -->
+  <rect
+     x="391"
+     y="147"
+     width="12"
+     height="193"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect35" />
+  <!-- -12 -->
+  <rect
+     x="406"
+     y="155"
+     width="12"
+     height="185"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect36" />
+  <!-- -11 -->
+  <rect
+     x="422"
+     y="142"
+     width="12"
+     height="198"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect37" />
+  <!-- -10 -->
+  <rect
+     x="438"
+     y="150"
+     width="12"
+     height="190"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect38" />
+  <!-- -9 -->
+  <rect
+     x="453"
+     y="137"
+     width="12"
+     height="203"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect39" />
+  <!-- -8 -->
+  <rect
+     x="469"
+     y="152"
+     width="12"
+     height="188"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect40" />
+  <!-- -7: PILOT -->
+  <rect
+     x="484"
+     y="130"
+     width="12"
+     height="210"
+     rx="2"
+     fill="url(#sc-orange)"
+     id="rect41" />
+  <text
+     x="490"
+     y="338"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="7"
+     id="text41">P</text>
+  <text
+     x="490"
+     y="348"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="6"
+     id="text42">-7</text>
+  <!-- -6 -->
+  <rect
+     x="500"
+     y="145"
+     width="12"
+     height="195"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect42" />
+  <!-- -5 -->
+  <rect
+     x="516"
+     y="140"
+     width="12"
+     height="200"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect43" />
+  <!-- -4 -->
+  <rect
+     x="531"
+     y="155"
+     width="12"
+     height="185"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect44" />
+  <!-- -3 -->
+  <rect
+     x="547"
+     y="147"
+     width="12"
+     height="193"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect45" />
+  <!-- -2 -->
+  <rect
+     x="563"
+     y="152"
+     width="12"
+     height="188"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect46" />
+  <!-- -1 -->
+  <rect
+     x="578"
+     y="143"
+     width="12"
+     height="197"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect47" />
+  <!-- ===== DC null (subcarrier 0) ===== -->
+  <rect
+     x="593"
+     y="120"
+     width="14"
+     height="220"
+     rx="2"
+     fill="#334155"
+     opacity="0.3"
+     id="rect48" />
+  <text
+     x="600"
+     y="240"
+     text-anchor="middle"
+     fill="#dc2626"
+     font-size="8"
+     font-weight="600"
+     id="text48">DC</text>
+  <text
+     x="600"
+     y="252"
+     text-anchor="middle"
+     fill="#dc2626"
+     font-size="7"
+     id="text49">null</text>
+  <!-- DC annotation -->
+  <line
+     x1="600"
+     y1="100"
+     x2="600"
+     y2="115"
+     stroke="#dc2626"
+     stroke-width="1"
+     id="line49" />
+  <text
+     x="600"
+     y="97"
+     text-anchor="middle"
+     fill="#dc2626"
+     font-size="8"
+     font-weight="600"
+     id="text50">DC Null (index 0) removed</text>
+  <!-- ===== Active RIGHT: +1 to +26 ===== -->
+  <!-- Heights vary to represent real channel quality differences -->
+  <!-- +1 -->
+  <rect
+     x="610"
+     y="143"
+     width="12"
+     height="197"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect50" />
+  <!-- +2 -->
+  <rect
+     x="625"
+     y="152"
+     width="12"
+     height="188"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect51" />
+  <!-- +3 -->
+  <rect
+     x="641"
+     y="147"
+     width="12"
+     height="193"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect52" />
+  <!-- +4 -->
+  <rect
+     x="657"
+     y="155"
+     width="12"
+     height="185"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect53" />
+  <!-- +5 -->
+  <rect
+     x="672"
+     y="140"
+     width="12"
+     height="200"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect54" />
+  <!-- +6 -->
+  <rect
+     x="688"
+     y="145"
+     width="12"
+     height="195"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect55" />
+  <!-- +7: PILOT -->
+  <rect
+     x="703"
+     y="130"
+     width="12"
+     height="210"
+     rx="2"
+     fill="url(#sc-orange)"
+     id="rect56" />
+  <text
+     x="709"
+     y="338"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="7"
+     id="text56">P</text>
+  <text
+     x="709"
+     y="348"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="6"
+     id="text57">+7</text>
+  <!-- +8 -->
+  <rect
+     x="719"
+     y="152"
+     width="12"
+     height="188"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect57" />
+  <!-- +9 -->
+  <rect
+     x="735"
+     y="137"
+     width="12"
+     height="203"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect58" />
+  <!-- +10 -->
+  <rect
+     x="750"
+     y="150"
+     width="12"
+     height="190"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect59" />
+  <!-- +11 -->
+  <rect
+     x="766"
+     y="143"
+     width="12"
+     height="197"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect60" />
+  <!-- +12 -->
+  <rect
+     x="782"
+     y="155"
+     width="12"
+     height="185"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect61" />
+  <!-- +13 -->
+  <rect
+     x="797"
+     y="147"
+     width="12"
+     height="193"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect62" />
+  <!-- +14 -->
+  <rect
+     x="813"
+     y="152"
+     width="12"
+     height="188"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect63" />
+  <!-- +15 -->
+  <rect
+     x="828"
+     y="140"
+     width="12"
+     height="200"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect64" />
+  <!-- +16 -->
+  <rect
+     x="844"
+     y="160"
+     width="12"
+     height="180"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect65" />
+  <!-- +17 -->
+  <rect
+     x="860"
+     y="145"
+     width="12"
+     height="195"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect66" />
+  <!-- +18 -->
+  <rect
+     x="875"
+     y="150"
+     width="12"
+     height="190"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect67" />
+  <!-- +19 -->
+  <rect
+     x="891"
+     y="135"
+     width="12"
+     height="205"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect68" />
+  <!-- +20 -->
+  <rect
+     x="907"
+     y="155"
+     width="12"
+     height="185"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect69" />
+  <!-- +21: PILOT -->
+  <rect
+     x="922"
+     y="130"
+     width="12"
+     height="210"
+     rx="2"
+     fill="url(#sc-orange)"
+     id="rect70" />
+  <text
+     x="928"
+     y="338"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="7"
+     id="text70">P</text>
+  <text
+     x="928"
+     y="348"
+     text-anchor="middle"
+     fill="#f97316"
+     font-size="6"
+     id="text71">+21</text>
+  <!-- +22 -->
+  <rect
+     x="938"
+     y="150"
+     width="12"
+     height="190"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect71" />
+  <!-- +23 -->
+  <rect
+     x="953"
+     y="140"
+     width="12"
+     height="200"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect72" />
+  <!-- +24 -->
+  <rect
+     x="969"
+     y="160"
+     width="12"
+     height="180"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect73" />
+  <!-- +25 -->
+  <rect
+     x="985"
+     y="145"
+     width="12"
+     height="195"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect74" />
+  <!-- +26 -->
+  <rect
+     x="1000"
+     y="155"
+     width="12"
+     height="185"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect75" />
+  <text
+     x="1006"
+     y="338"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="7"
+     id="text75">+26</text>
+  <!-- ===== Guard Band RIGHT: +27 to +31 ===== -->
+  <rect
+     x="1016"
+     y="230"
+     width="12"
+     height="110"
+     rx="2"
+     fill="url(#sc-red)"
+     id="rect76" />
+  <text
+     x="1022"
+     y="338"
+     text-anchor="middle"
+     fill="#dc2626"
+     font-size="7"
+     id="text76">+27</text>
+  <rect
+     x="1031"
+     y="230"
+     width="12"
+     height="110"
+     rx="2"
+     fill="url(#sc-red)"
+     id="rect77" />
+  <rect
+     x="1047"
+     y="230"
+     width="12"
+     height="110"
+     rx="2"
+     fill="url(#sc-red)"
+     id="rect78" />
+  <rect
+     x="1063"
+     y="230"
+     width="12"
+     height="110"
+     rx="2"
+     fill="url(#sc-red)"
+     id="rect79" />
+  <rect
+     x="1078"
+     y="230"
+     width="12"
+     height="110"
+     rx="2"
+     fill="url(#sc-red)"
+     id="rect80" />
+  <text
+     x="1084"
+     y="338"
+     text-anchor="middle"
+     fill="#dc2626"
+     font-size="7"
+     id="text80">+31</text>
+  <!-- Guard band bracket right -->
+  <line
+     x1="1012"
+     y1="210"
+     x2="1094"
+     y2="210"
+     stroke="#dc2626"
+     stroke-width="1"
+     id="line80" />
+  <line
+     x1="1012"
+     y1="205"
+     x2="1012"
+     y2="215"
+     stroke="#dc2626"
+     stroke-width="1"
+     id="line81" />
+  <line
+     x1="1094"
+     y1="205"
+     x2="1094"
+     y2="215"
+     stroke="#dc2626"
+     stroke-width="1"
+     id="line82" />
+  <text
+     x="1053"
+     y="205"
+     text-anchor="middle"
+     fill="#dc2626"
+     font-size="9"
+     font-weight="600"
+     id="text82">Guard Band</text>
+  <text
+     x="1053"
+     y="195"
+     text-anchor="middle"
+     fill="#dc2626"
+     font-size="8"
+     id="text83">+27~+31 (5 removed)</text>
+  <!-- ===== Legend ===== -->
+  <rect
+     x="30"
+     y="390"
+     width="1140"
+     height="160"
+     rx="4"
+     ry="4"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect83" />
+  <!-- Col 1: Data -->
+  <rect
+     x="50"
+     y="408"
+     width="20"
+     height="14"
+     rx="2"
+     fill="url(#sc-blue)"
+     id="rect84" />
+  <text
+     x="78"
+     y="420"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text84">Data (数据子载波): 48 个</text>
+  <text
+     x="78"
+     y="434"
+     fill="#94a3b8"
+     font-size="9"
+     id="text85">运输货物的小道</text>
+  <!-- Col 2: Pilot -->
+  <rect
+     x="320"
+     y="408"
+     width="20"
+     height="14"
+     rx="2"
+     fill="url(#sc-orange)"
+     id="rect85" />
+  <text
+     x="348"
+     y="420"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text86">Pilot (导频子载波): 4 个</text>
+  <text
+     x="348"
+     y="434"
+     fill="#94a3b8"
+     font-size="9"
+     id="text87">同步校准 (-21, -7, +7, +21)</text>
+  <!-- Col 3: DC Null -->
+  <rect
+     x="620"
+     y="408"
+     width="20"
+     height="14"
+     rx="2"
+     fill="#334155"
+     opacity="0.3"
+     id="rect87" />
+  <text
+     x="648"
+     y="420"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text88">DC Null: 1 个</text>
+  <text
+     x="648"
+     y="434"
+     fill="#94a3b8"
+     font-size="9"
+     id="text89">中心频率直流偏置，硬件噪声</text>
+  <!-- Col 4: Guard Band + Mirror -->
+  <rect
+     x="870"
+     y="408"
+     width="20"
+     height="14"
+     rx="2"
+     fill="url(#sc-red)"
+     id="rect89" />
+  <text
+     x="898"
+     y="420"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text90">Guard Band: 10 个 + Mirror: 1 个</text>
+  <text
+     x="898"
+     y="434"
+     fill="#94a3b8"
+     font-size="9"
+     id="text91">左右各 5 个防干扰 + Nyquist 镜像(-32) 1 个</text>
+  <!-- Math summary -->
+  <rect
+     x="50"
+     y="452"
+     width="1100"
+     height="35"
+     rx="4"
+     fill="#1e1b4b"
+     stroke="#7c3aed"
+     stroke-width="1"
+     id="rect91" />
+  <text
+     x="600"
+     y="468"
+     text-anchor="middle"
+     fill="#a78bfa"
+     font-size="11"
+     font-weight="600"
+     id="text92">64 (FFT) - 5 (左 Guard) - 5 (右 Guard) - 1 (DC) - 1 (Mirror -32) = 52</text>
+  <text
+     x="600"
+     y="482"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="9"
+     id="text93">= 48 Data + 4 Pilot | 共移除 12 个子载波</text>
+  <!-- Technical params -->
+  <text
+     x="50"
+     y="510"
+     fill="#94a3b8"
+     font-size="10"
+     id="text94">Subcarrier spacing: 312.5 kHz (20 MHz / 64) | Symbol duration: 4 us (3.2us useful + 800ns GI)</text>
+  <text
+     x="50"
+     y="526"
+     fill="#94a3b8"
+     font-size="10"
+     id="text95">子载波间距: 312.5 kHz (20 MHz / 64) | 符号时长: 4 us (3.2us 有用部分 + 800ns 保护间隔)</text>
+  <!-- Orthogonality note -->
+  <text
+     x="600"
+     y="548"
+     text-anchor="middle"
+     fill="#7c3aed"
+     font-size="10"
+     font-weight="700"
+     id="text96">Key: &quot;Orthogonal&quot; = subcarriers overlap in frequency but don't interfere | &quot;正交&quot; = 子载波频率重叠但互不干扰</text>
+</svg>

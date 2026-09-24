@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1180 1260"
+   width="1180"
+   height="1260"
+   version="1.1"
+   id="svg61"
+   sodipodi:docname="14-tdls-architecture.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview61"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.2267741"
+     inkscape:cx="596.68685"
+     inkscape:cy="155.28531"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg61" />
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif; }
+</style>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg-grad"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrowBlue"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#3b82f6"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arrowGreen"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#10b981"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arrowOrange"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#f0a040"
+         id="polygon4" />
+    </marker>
+  </defs>
+  <rect
+     x="0"
+     y="0"
+     width="1180"
+     height="1260"
+     fill="url(#bg-grad)"
+     id="rect4" />
+  <text
+     x="590"
+     y="28"
+     font-size="18px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     id="text4">TDLS 直连建立全链路：一次 setTdlsEnabled 的跨层下发</text>
+  <text
+     x="590"
+     y="47"
+     font-size="11px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     id="text5">App → Java Framework → wpa_supplicant C → 驱动 · 蓝=下发 橙=控制/状态 绿=回传/成功 · Binder / AIDL / nl80211 三道边界</text>
+  <rect
+     x="40"
+     y="62"
+     width="1100"
+     height="64"
+     rx="6"
+     fill="#121620"
+     stroke="#334155"
+     stroke-width="1.2"
+     id="rect5" />
+  <rect
+     x="40"
+     y="62"
+     width="4"
+     height="64"
+     fill="#5e9eff"
+     id="rect6" />
+  <text
+     x="56"
+     y="84"
+     font-size="15px"
+     font-weight="bold"
+     fill="#5e9eff"
+     id="text6">App 层</text>
+  <rect
+     x="380"
+     y="84"
+     width="420"
+     height="32"
+     rx="4"
+     fill="#101a2e"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect7" />
+  <text
+     x="590"
+     y="104"
+     font-size="11px"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     id="text7">WifiManager.setTdlsEnabled(IP, enable)</text>
+  <path
+     d="M 590,116 L 590,142"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path7" />
+  <rect
+     x="40"
+     y="146"
+     width="1100"
+     height="390"
+     rx="6"
+     fill="#121a2a"
+     stroke="#1e3a5f"
+     stroke-width="1.2"
+     id="rect8" />
+  <rect
+     x="40"
+     y="146"
+     width="4"
+     height="390"
+     fill="#3b82f6"
+     id="rect9" />
+  <text
+     x="56"
+     y="168"
+     font-size="15px"
+     font-weight="bold"
+     fill="#3b82f6"
+     id="text9">Java Framework 层 (system_server)</text>
+  <text
+     x="56"
+     y="184"
+     font-size="9.5px"
+     fill="#94a3b8"
+     id="text10">WifiService 运行于 system_server 进程 · Binder 进入点</text>
+  <rect
+     x="240"
+     y="196"
+     width="700"
+     height="52"
+     rx="4"
+     fill="#101a2e"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect10" />
+  <text
+     x="252"
+     y="216"
+     font-size="11px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text11">WifiServiceImpl.enableTdls</text>
+  <text
+     x="252"
+     y="231"
+     font-size="9.5px"
+     fill="#94a3b8"
+     id="text12">读 /proc/net/arp 由 IP 换 MAC 地址</text>
+  <rect
+     x="848"
+     y="210"
+     width="84"
+     height="16"
+     rx="2"
+     fill="#1a1808"
+     stroke="#f0a040"
+     stroke-width="0.8"
+     id="rect12" />
+  <text
+     x="890"
+     y="221"
+     font-size="8px"
+     fill="#f0a040"
+     text-anchor="middle"
+     id="text13">Binder 边界</text>
+  <path
+     d="M 590,248 L 590,278"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path13" />
+  <rect
+     x="240"
+     y="280"
+     width="700"
+     height="62"
+     rx="4"
+     fill="#101a2e"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect13" />
+  <text
+     x="252"
+     y="300"
+     font-size="10px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text14">ConcreteClientModeManager.enableTdls → ClientModeImpl.enableTdls</text>
+  <text
+     x="252"
+     y="317"
+     font-size="9.5px"
+     fill="#94a3b8"
+     id="text15">进入 STA 状态机 · 直连发起主流程</text>
+  <rect
+     x="748"
+     y="296"
+     width="188"
+     height="16"
+     rx="2"
+     fill="#1a1808"
+     stroke="#f0a040"
+     stroke-width="0.8"
+     id="rect15" />
+  <text
+     x="842"
+     y="307"
+     font-size="8px"
+     fill="#f0a040"
+     text-anchor="middle"
+     id="text16">canEnableTdls · mEnabledTdlsPeers 记账</text>
+  <path
+     d="M 590,342 L 590,372"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path16" />
+  <rect
+     x="240"
+     y="374"
+     width="700"
+     height="52"
+     rx="4"
+     fill="#101a2e"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect16" />
+  <text
+     x="252"
+     y="394"
+     font-size="11px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text17">WifiNative.startTdls</text>
+  <text
+     x="252"
+     y="409"
+     font-size="9.5px"
+     fill="#94a3b8"
+     id="text18">下发 TDLS Discover + Setup 两个阶段</text>
+  <path
+     d="M 590,426 L 590,456"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path18" />
+  <rect
+     x="240"
+     y="458"
+     width="700"
+     height="52"
+     rx="4"
+     fill="#101a2e"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect18" />
+  <text
+     x="252"
+     y="478"
+     font-size="11px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text19">SupplicantStaIfaceHal.initiateTdls*</text>
+  <text
+     x="252"
+     y="493"
+     font-size="9.5px"
+     fill="#94a3b8"
+     id="text20">经 AIDL 跨进程调用 supplicant 接口</text>
+  <line
+     x1="40"
+     y1="566"
+     x2="1140"
+     y2="566"
+     stroke="#f0a040"
+     stroke-width="1.5"
+     stroke-dasharray="8,4"
+     id="line20" />
+  <text
+     x="760"
+     y="560"
+     font-size="11px"
+     fill="#f0a040"
+     text-anchor="middle"
+     id="text21">AIDL / HIDL 边界 (Binder) · 跨进程</text>
+  <path
+     d="M 232,542 H 498 A 2,2 0 0 1 500,544 V 554 A 2,2 0 0 1 498,556 H 232 A 2,2 0 0 1 230,554 V 544 A 2,2 0 0 1 232,542 Z"
+     fill="#1a1808"
+     stroke="#f0a040"
+     stroke-width="0.8"
+     id="path21" />
+  <text
+     x="365"
+     y="552"
+     font-size="8px"
+     fill="#f0a040"
+     text-anchor="middle"
+     id="text22">▼ ISupplicantStaIface.initiateTdlsSetup</text>
+  <rect
+     x="40"
+     y="586"
+     width="1100"
+     height="330"
+     rx="6"
+     fill="#131226"
+     stroke="#3b2f66"
+     stroke-width="1.2"
+     id="rect22" />
+  <path
+     d="M 590,510 V 624.81515"
+     stroke="#3b82f6"
+     stroke-width="2.00714"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path22" />
+  <rect
+     x="40"
+     y="586"
+     width="4"
+     height="330"
+     fill="#a855f7"
+     id="rect23" />
+  <text
+     x="56"
+     y="608"
+     font-size="15px"
+     font-weight="bold"
+     fill="#a855f7"
+     id="text23">wpa_supplicant C 层 (daemon)</text>
+  <text
+     x="56"
+     y="622"
+     font-size="9.5px"
+     fill="#94a3b8"
+     id="text24">sta_iface.cpp · TPK 握手状态机</text>
+  <rect
+     x="240"
+     y="624"
+     width="700"
+     height="46"
+     rx="4"
+     fill="#181230"
+     stroke="#a855f7"
+     stroke-width="1.2"
+     id="rect24" />
+  <text
+     x="252"
+     y="643"
+     font-size="11px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text25">StaIface::initiateTdlsSetupInternal</text>
+  <text
+     x="252"
+     y="658"
+     font-size="9px"
+     fill="#a78bfa"
+     id="text26">sta_iface.cpp · AIDL 入口实现</text>
+  <path
+     d="M 590,670 L 590,700"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path26" />
+  <rect
+     x="240"
+     y="702"
+     width="700"
+     height="56"
+     rx="4"
+     fill="#181230"
+     stroke="#a855f7"
+     stroke-width="1.2"
+     id="rect26" />
+  <text
+     x="252"
+     y="721"
+     font-size="10px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text27">wpa_tdls_start → wpa_tdls_send_tpk_m1 / m2 / m3</text>
+  <text
+     x="252"
+     y="737"
+     font-size="9px"
+     fill="#a78bfa"
+     id="text28">TPK 握手状态机 · Setup 帧收发</text>
+  <rect
+     x="716"
+     y="714"
+     width="110"
+     height="14"
+     rx="2"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="0.8"
+     id="rect28" />
+  <text
+     x="771"
+     y="724"
+     font-size="8px"
+     fill="#10b981"
+     text-anchor="middle"
+     id="text29">← m2 回传</text>
+  <path
+     d="M 590,758 L 590,786"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path29" />
+  <rect
+     x="240"
+     y="788"
+     width="700"
+     height="46"
+     rx="4"
+     fill="#181230"
+     stroke="#a855f7"
+     stroke-width="1.2"
+     id="rect29" />
+  <text
+     x="252"
+     y="807"
+     font-size="11px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text30">wpa_tdls_generate_tpk</text>
+  <text
+     x="252"
+     y="822"
+     font-size="9px"
+     fill="#a78bfa"
+     id="text31">密钥派生 · ANonce/SNonce 协商 TPK</text>
+  <path
+     d="M 590,834 L 590,862"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path31" />
+  <rect
+     x="240"
+     y="864"
+     width="700"
+     height="46"
+     rx="4"
+     fill="#181230"
+     stroke="#a855f7"
+     stroke-width="1.2"
+     id="rect31" />
+  <text
+     x="252"
+     y="883"
+     font-size="11px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text32">nl80211_send_tdls_mgmt · nl80211_tdls_oper</text>
+  <text
+     x="252"
+     y="898"
+     font-size="9px"
+     fill="#a78bfa"
+     id="text33">组 nl80211 消息 · 发往内核</text>
+  <line
+     x1="40"
+     y1="946"
+     x2="1140"
+     y2="946"
+     stroke="#f0a040"
+     stroke-width="1.5"
+     stroke-dasharray="8,4"
+     id="line33" />
+  <text
+     x="790"
+     y="940"
+     font-size="11px"
+     fill="#f0a040"
+     text-anchor="middle"
+     id="text34">nl80211 边界 (netlink) · 用户态 → 内核</text>
+  <path
+     d="M 212,923 H 438 A 2,2 0 0 1 440,925 V 935 A 2,2 0 0 1 438,937 H 212 A 2,2 0 0 1 210,935 V 925 A 2,2 0 0 1 212,923 Z"
+     fill="#1a1808"
+     stroke="#f0a040"
+     stroke-width="0.8"
+     id="path34" />
+  <text
+     x="325"
+     y="933"
+     font-size="8px"
+     fill="#f0a040"
+     text-anchor="middle"
+     id="text35">▼ nl80211 消息下发</text>
+  <path
+     d="M 590,910 L 590,958"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     id="path35" />
+  <path
+     d="M 590,958 L 330,958"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     id="path36" />
+  <path
+     d="M 590,958 L 850,958"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     id="path37" />
+  <rect
+     x="40"
+     y="966"
+     width="1100"
+     height="232"
+     rx="6"
+     fill="#0f1b20"
+     stroke="#1e4a5f"
+     stroke-width="1.2"
+     id="rect39" />
+  <path
+     d="M 330,958 L 330,1002"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path38" />
+  <path
+     d="M 850,958 L 850,1002"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path39" />
+  <rect
+     x="40"
+     y="966"
+     width="4"
+     height="232"
+     fill="#22d3ee"
+     id="rect40" />
+  <text
+     x="56"
+     y="988"
+     font-size="15px"
+     font-weight="bold"
+     fill="#22d3ee"
+     id="text40">驱动 C 层 (cfg80211)</text>
+  <text
+     x="56"
+     y="1002"
+     font-size="9px"
+     fill="#94a3b8"
+     id="text41">QCOM 固件卸载 vs MTK 主机组帧</text>
+  <text
+     x="393.58139"
+     y="998.73944"
+     font-size="11px"
+     font-weight="bold"
+     fill="#f97316"
+     text-anchor="middle"
+     id="text42">QCOM · 固件卸载</text>
+  <text
+     x="788"
+     y="1000"
+     font-size="11px"
+     font-weight="bold"
+     fill="#f97316"
+     text-anchor="middle"
+     id="text43">MTK · 主机组帧</text>
+  <rect
+     x="110"
+     y="1004"
+     width="440"
+     height="46"
+     rx="4"
+     fill="#0e1a1e"
+     stroke="#22d3ee"
+     stroke-width="1.2"
+     id="rect43" />
+  <text
+     x="122"
+     y="1023"
+     font-size="11px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text44">wlan_cfg80211_tdls_mgmt</text>
+  <text
+     x="122"
+     y="1038"
+     font-size="9px"
+     fill="#67e8f9"
+     id="text45">QCOM cfg80211 入口</text>
+  <path
+     d="M 330,1052 L 330,1062"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path45" />
+  <rect
+     x="110"
+     y="1064"
+     width="440"
+     height="46"
+     rx="4"
+     fill="#0e1a1e"
+     stroke="#22d3ee"
+     stroke-width="1.2"
+     id="rect45" />
+  <text
+     x="122"
+     y="1083"
+     font-size="11px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text46">ucfg_tdls_send_mgmt_frame</text>
+  <text
+     x="122"
+     y="1098"
+     font-size="9px"
+     fill="#67e8f9"
+     id="text47">ucfg 层组帧 → WMI 命令</text>
+  <path
+     d="M 330,1112 L 330,1122"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path47" />
+  <rect
+     x="110"
+     y="1124"
+     width="440"
+     height="46"
+     rx="4"
+     fill="#0e1a1e"
+     stroke="#22d3ee"
+     stroke-width="1.2"
+     id="rect47" />
+  <text
+     x="122"
+     y="1143"
+     font-size="11px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text48">WMI 命令 → 固件</text>
+  <text
+     x="122"
+     y="1158"
+     font-size="9px"
+     fill="#67e8f9"
+     id="text49">固件卸载 · TPK 握手下沉固件</text>
+  <rect
+     x="630"
+     y="1004"
+     width="440"
+     height="46"
+     rx="4"
+     fill="#0e1a1e"
+     stroke="#22d3ee"
+     stroke-width="1.2"
+     id="rect49" />
+  <text
+     x="642"
+     y="1023"
+     font-size="11px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text50">mtk_cfg80211_tdls_mgmt</text>
+  <text
+     x="642"
+     y="1038"
+     font-size="9px"
+     fill="#67e8f9"
+     id="text51">MTK cfg80211 入口</text>
+  <path
+     d="M 850,1052 L 850,1062"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path51" />
+  <rect
+     x="630"
+     y="1064"
+     width="440"
+     height="46"
+     rx="4"
+     fill="#0e1a1e"
+     stroke="#22d3ee"
+     stroke-width="1.2"
+     id="rect51" />
+  <text
+     x="642"
+     y="1083"
+     font-size="11px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text52">TdlsexLinkMgt</text>
+  <text
+     x="642"
+     y="1098"
+     font-size="9px"
+     fill="#67e8f9"
+     id="text53">TDLS 扩展链路管理</text>
+  <path
+     d="M 850,1112 L 850,1122"
+     stroke="#3b82f6"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path53" />
+  <rect
+     x="630"
+     y="1124"
+     width="440"
+     height="46"
+     rx="4"
+     fill="#0e1a1e"
+     stroke="#22d3ee"
+     stroke-width="1.2"
+     id="rect53" />
+  <text
+     x="642"
+     y="1143"
+     font-size="11px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text54">TdlsDataFrameSend_SETUP_REQ</text>
+  <text
+     x="642"
+     y="1158"
+     font-size="9px"
+     fill="#67e8f9"
+     id="text55">主机组帧 · 发送 Setup Req</text>
+  <path
+     d="M 330,1172 L 330,1180"
+     stroke="#10b981"
+     stroke-width="1.8"
+     fill="none"
+     marker-end="url(#arrowGreen)"
+     id="path55" />
+  <path
+     d="M 850,1172 L 850,1180"
+     stroke="#10b981"
+     stroke-width="1.8"
+     fill="none"
+     marker-end="url(#arrowGreen)"
+     id="path56" />
+  <rect
+     x="240"
+     y="1180"
+     width="700"
+     height="16"
+     rx="4"
+     fill="#052e16"
+     stroke="#10b981"
+     stroke-width="1.2"
+     id="rect56" />
+  <text
+     x="590"
+     y="1190"
+     font-size="9.5px"
+     fill="#10b981"
+     text-anchor="middle"
+     id="text56">✓ TDLS 直连建立成功 · 数据改走直连路径（不经 AP 转发）</text>
+  <text
+     x="60"
+     y="1218"
+     font-size="13px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     id="text57">图例 · 颜色语义</text>
+  <line
+     x1="60"
+     y1="1232"
+     x2="100"
+     y2="1232"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#arrowBlue)"
+     id="line57" />
+  <text
+     x="108"
+     y="1236"
+     font-size="11px"
+     fill="#94a3b8"
+     id="text58">下发 / 数据流</text>
+  <line
+     x1="250"
+     y1="1232"
+     x2="290"
+     y2="1232"
+     stroke="#f0a040"
+     stroke-width="2"
+     marker-end="url(#arrowOrange)"
+     id="line58" />
+  <text
+     x="298"
+     y="1236"
+     font-size="11px"
+     fill="#94a3b8"
+     id="text59">控制 / 状态（记账、能力查询、Binder 边界）</text>
+  <line
+     x1="590"
+     y1="1232"
+     x2="630"
+     y2="1232"
+     stroke="#10b981"
+     stroke-width="2"
+     marker-end="url(#arrowGreen)"
+     id="line59" />
+  <text
+     x="638"
+     y="1236"
+     font-size="11px"
+     fill="#94a3b8"
+     id="text60">回传 / 成功</text>
+  <text
+     x="60"
+     y="1256"
+     font-size="10px"
+     fill="#64748b"
+     id="text61">虚线横线 = AIDL / HIDL · nl80211 跨进程边界 · 函数名均为文章正文已验证符号</text>
+</svg>

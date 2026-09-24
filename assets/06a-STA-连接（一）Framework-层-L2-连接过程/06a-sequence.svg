@@ -1,0 +1,1630 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1480 1830"
+   width="1480"
+   height="1830"
+   version="1.1"
+   id="svg115"
+   sodipodi:docname="06a-sequence.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview115"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#000000"
+     inkscape:zoom="0.6"
+     inkscape:cx="740"
+     inkscape:cy="647.5"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg115"
+     showgrid="false"
+     inkscape:lockguides="true"
+     labelstyle="default"
+     inkscape:clip-to-page="false">
+    <inkscape:grid
+       id="grid124"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14902"
+       empspacing="5"
+       enabled="true"
+       visible="false"
+       dotted="false" />
+    <sodipodi:guide
+       position="0,1830"
+       orientation="0,1480"
+       id="guide124"
+       inkscape:locked="true" />
+    <sodipodi:guide
+       position="1480,1830"
+       orientation="1830,0"
+       id="guide125"
+       inkscape:locked="true" />
+    <sodipodi:guide
+       position="1480,0"
+       orientation="0,-1480"
+       id="guide126"
+       inkscape:locked="true" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="-1830,0"
+       id="guide127"
+       inkscape:locked="true" />
+  </sodipodi:namedview>
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+</style>
+  <defs
+     id="defs6">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arr-blue"
+       markerWidth="9"
+       markerHeight="7"
+       refX="8"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 9 3.5, 0 7"
+         fill="#3b82f6"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arr-orange"
+       markerWidth="9"
+       markerHeight="7"
+       refX="8"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 9 3.5, 0 7"
+         fill="#ea580c"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="arr-green"
+       markerWidth="9"
+       markerHeight="7"
+       refX="8"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 9 3.5, 0 7"
+         fill="#10b981"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="arr-cyan"
+       markerWidth="9"
+       markerHeight="7"
+       refX="8"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 9 3.5, 0 7"
+         fill="#22d3ee"
+         id="polygon5" />
+    </marker>
+    <marker
+       id="arr-gray"
+       markerWidth="9"
+       markerHeight="7"
+       refX="8"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 9 3.5, 0 7"
+         fill="#6b7280"
+         id="polygon6" />
+    </marker>
+  </defs>
+  <rect
+     width="1480"
+     height="1830"
+     fill="url(#bg)"
+     id="rect6" />
+  <text
+     x="740"
+     y="28"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="16"
+     font-weight="700"
+     id="text6">STA L2 Connection: FWK Sequence (connect to Supplicant AIDL)</text>
+  <text
+     x="530"
+     y="52"
+     text-anchor="middle"
+     fill="#3b82f6"
+     font-size="11"
+     opacity="0.8"
+     id="text7">Java Process (Framework)</text>
+  <text
+     x="1300"
+     y="52"
+     text-anchor="middle"
+     fill="#ea580c"
+     font-size="11"
+     opacity="0.8"
+     id="text8">Native Process (wpa_supplicant)</text>
+  <rect
+     x="60"
+     y="65"
+     width="140"
+     height="44"
+     rx="5"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     id="rect8" />
+  <text
+     x="130"
+     y="82"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text9">App/Settings</text>
+  <rect
+     x="260"
+     y="65"
+     width="140"
+     height="44"
+     rx="5"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     id="rect9" />
+  <text
+     x="330"
+     y="82"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text10">WifiServiceImpl</text>
+  <rect
+     x="455"
+     y="65"
+     width="150"
+     height="44"
+     rx="5"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     id="rect10" />
+  <text
+     x="530"
+     y="82"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     id="text11">ConnectHelper</text>
+  <text
+     x="530"
+     y="96"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text12">+ CMM</text>
+  <rect
+     x="660"
+     y="65"
+     width="140"
+     height="44"
+     rx="5"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     id="rect12" />
+  <text
+     x="730"
+     y="82"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text13">ClientModeImpl</text>
+  <rect
+     x="865"
+     y="65"
+     width="130"
+     height="44"
+     rx="5"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     id="rect13" />
+  <text
+     x="930"
+     y="82"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text14">WifiNative</text>
+  <rect
+     x="1053"
+     y="65"
+     width="155"
+     height="44"
+     rx="5"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     id="rect14" />
+  <text
+     x="1130"
+     y="82"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text15">SupplicantStaIfaceHal</text>
+  <rect
+     x="1263"
+     y="65"
+     width="135"
+     height="44"
+     rx="5"
+     fill="#0f172a"
+     stroke="#ea580c"
+     stroke-width="1.8"
+     id="rect15" />
+  <text
+     x="1330"
+     y="82"
+     text-anchor="middle"
+     fill="#e2e8f0"
+     font-size="11"
+     font-weight="700"
+     id="text16">wpa_supplicant</text>
+  <line
+     x1="130"
+     y1="109"
+     x2="130"
+     y2="1340"
+     stroke="#94a3b8"
+     stroke-width="0.8"
+     stroke-dasharray="4,5"
+     opacity="0.35"
+     id="line16" />
+  <line
+     x1="330"
+     y1="109"
+     x2="330"
+     y2="1340"
+     stroke="#94a3b8"
+     stroke-width="0.8"
+     stroke-dasharray="4,5"
+     opacity="0.35"
+     id="line17" />
+  <line
+     x1="530"
+     y1="109"
+     x2="530"
+     y2="1340"
+     stroke="#94a3b8"
+     stroke-width="0.8"
+     stroke-dasharray="4,5"
+     opacity="0.35"
+     id="line18" />
+  <line
+     x1="730"
+     y1="109"
+     x2="730"
+     y2="1340"
+     stroke="#94a3b8"
+     stroke-width="0.8"
+     stroke-dasharray="4,5"
+     opacity="0.35"
+     id="line19" />
+  <line
+     x1="930"
+     y1="109"
+     x2="930"
+     y2="1340"
+     stroke="#94a3b8"
+     stroke-width="0.8"
+     stroke-dasharray="4,5"
+     opacity="0.35"
+     id="line20" />
+  <line
+     x1="1130"
+     y1="109"
+     x2="1130"
+     y2="1340"
+     stroke="#94a3b8"
+     stroke-width="0.8"
+     stroke-dasharray="4,5"
+     opacity="0.35"
+     id="line21" />
+  <line
+     x1="1330"
+     y1="109"
+     x2="1330"
+     y2="1340"
+     stroke="#94a3b8"
+     stroke-width="0.8"
+     stroke-dasharray="4,5"
+     opacity="0.35"
+     id="line22" />
+  <line
+     x1="1230"
+     y1="58"
+     x2="1230"
+     y2="1340"
+     stroke="#ea580c"
+     stroke-width="1.5"
+     stroke-dasharray="6,5"
+     opacity="0.5"
+     id="line23" />
+  <text
+     x="1170"
+     y="50"
+     text-anchor="middle"
+     fill="#ea580c"
+     font-size="9"
+     opacity="0.7"
+     id="text23">Java / AIDL</text>
+  <rect
+     x="35"
+     y="135"
+     width="1410"
+     height="26"
+     rx="3"
+     fill="#1a2a1a"
+     stroke="#22c55e"
+     stroke-width="0.6"
+     opacity="0.88"
+     id="rect23" />
+  <text
+     x="740"
+     y="152"
+     text-anchor="middle"
+     fill="#4ade80"
+     font-size="11"
+     font-weight="700"
+     id="text24">Phase 1: WifiServiceImpl.connect() — User-triggered entry point</text>
+  <line
+     x1="130"
+     y1="187"
+     x2="330"
+     y2="187"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-blue)"
+     id="line24" />
+  <g
+     id="g115"
+     transform="translate(-114.68893,26.370082)">
+    <circle
+       cx="230"
+       cy="155"
+       r="9"
+       fill="#22d3ee"
+       opacity="0.92"
+       id="circle24" />
+    <text
+       x="230"
+       y="159"
+       text-anchor="middle"
+       fill="#000000"
+       font-size="10px"
+       font-weight="700"
+       id="text25">1</text>
+  </g>
+  <text
+     x="230"
+     y="177"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text26">connect(config, netId, callback)</text>
+  <text
+     x="230"
+     y="201"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="9px"
+     id="text27">Binder IPC -- permission + AttributionSource check</text>
+  <path
+     d="M 330 213 L 372 213 L 372 235 L 333 235"
+     stroke="#3b82f6"
+     stroke-width="1.3"
+     fill="none"
+     marker-end="url(#arr-blue)"
+     id="path27" />
+  <circle
+     cx="386"
+     cy="224"
+     r="9"
+     fill="#22d3ee"
+     opacity="0.92"
+     id="circle27" />
+  <text
+     x="386"
+     y="228"
+     text-anchor="middle"
+     fill="#000"
+     font-size="10"
+     font-weight="700"
+     id="text28">2</text>
+  <text
+     x="402"
+     y="220"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text29">addOrUpdateNetwork()</text>
+  <text
+     x="402"
+     y="235"
+     text-anchor="start"
+     fill="#475569"
+     font-size="9px"
+     id="text30">Config validation, admin restriction, deprecated security</text>
+  <path
+     d="M 330 257 L 372 257 L 372 279 L 333 279"
+     stroke="#3b82f6"
+     stroke-width="1.3"
+     fill="none"
+     marker-end="url(#arr-blue)"
+     id="path30" />
+  <circle
+     cx="386"
+     cy="268"
+     r="9"
+     fill="#22d3ee"
+     opacity="0.92"
+     id="circle30" />
+  <text
+     x="386"
+     y="272"
+     text-anchor="middle"
+     fill="#000"
+     font-size="10"
+     font-weight="700"
+     id="text31">3</text>
+  <text
+     x="400"
+     y="264"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text32">SIM check, pseudonym, anti-MCC cleanup</text>
+  <text
+     x="400"
+     y="279"
+     text-anchor="start"
+     fill="#475569"
+     font-size="9px"
+     id="text33">Tear down secondary CMMs, stop MBB transient CMMs</text>
+  <rect
+     x="35"
+     y="307"
+     width="1410"
+     height="26"
+     rx="3"
+     fill="#1a2a1a"
+     stroke="#22c55e"
+     stroke-width="0.6"
+     opacity="0.88"
+     id="rect33" />
+  <text
+     x="619"
+     y="324"
+     text-anchor="middle"
+     fill="#4ade80"
+     font-size="11"
+     font-weight="700"
+     id="text34">Phase 2: ConnectHelper → CMM → ClientModeImpl — Connection dispatch chain</text>
+  <line
+     x1="330"
+     y1="367"
+     x2="530"
+     y2="367"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-blue)"
+     id="line34" />
+  <g
+     id="g117"
+     transform="translate(-111.54963,40.392269)">
+    <circle
+       cx="430"
+       cy="327"
+       r="9"
+       fill="#22d3ee"
+       opacity="0.92"
+       id="circle34" />
+    <text
+       x="430"
+       y="331"
+       text-anchor="middle"
+       fill="#000000"
+       font-size="10px"
+       font-weight="700"
+       id="text35">4</text>
+  </g>
+  <text
+     x="485.67017"
+     y="359.09286"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text36">connectToNetwork(result, wrapper, uid, pkg, attrTag)</text>
+  <text
+     x="460.55582"
+     y="380.58142"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="9px"
+     id="text37">StopAllSecondaryTransientClientModeManagers first</text>
+  <line
+     x1="530"
+     y1="413"
+     x2="730"
+     y2="413"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-blue)"
+     id="line37" />
+  <g
+     id="g116"
+     transform="translate(-113.43322,40.601556)">
+    <circle
+       cx="630"
+       cy="371"
+       r="9"
+       fill="#22d3ee"
+       opacity="0.92"
+       id="circle37" />
+    <text
+       x="630"
+       y="375"
+       text-anchor="middle"
+       fill="#000000"
+       font-size="10px"
+       font-weight="700"
+       id="text38">5</text>
+  </g>
+  <text
+     x="653.44006"
+     y="403.41858"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text39">connectNetwork(result, wrapper, uid, pkg)</text>
+  <text
+     x="671.43872"
+     y="428.25571"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="9px"
+     id="text40">CMM → ClientModeImpl.sendMessage(CMD_CONNECT_NETWORK)</text>
+  <rect
+     x="35"
+     y="437"
+     width="1410"
+     height="26"
+     rx="3"
+     fill="#1a2a1a"
+     stroke="#22c55e"
+     stroke-width="0.6"
+     opacity="0.88"
+     id="rect40" />
+  <text
+     x="740"
+     y="454"
+     text-anchor="middle"
+     fill="#4ade80"
+     font-size="11"
+     font-weight="700"
+     id="text41">Phase 3: ClientModeImpl — CMD_START_CONNECT processing (ConnectableState)</text>
+  <path
+     d="M 730 471 L 772 471 L 772 493 L 733 493"
+     stroke="#3b82f6"
+     stroke-width="1.3"
+     fill="none"
+     marker-end="url(#arr-blue)"
+     id="path41" />
+  <circle
+     cx="786"
+     cy="482"
+     r="9"
+     fill="#22d3ee"
+     opacity="0.92"
+     id="circle41" />
+  <text
+     x="786"
+     y="486"
+     text-anchor="middle"
+     fill="#000"
+     font-size="10"
+     font-weight="700"
+     id="text42">6</text>
+  <text
+     x="796.00134"
+     y="477.41925"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text43">connectToUserSelectNetwork()</text>
+  <text
+     x="796.00134"
+     y="492.41925"
+     text-anchor="start"
+     fill="#475569"
+     font-size="9px"
+     id="text44">Set User Connect Choice (30s lock)</text>
+  <path
+     d="M 730 515 L 772 515 L 772 537 L 733 537"
+     stroke="#3b82f6"
+     stroke-width="1.3"
+     fill="none"
+     marker-end="url(#arr-blue)"
+     id="path44" />
+  <circle
+     cx="786"
+     cy="526"
+     r="9"
+     fill="#22d3ee"
+     opacity="0.92"
+     id="circle44" />
+  <text
+     x="786"
+     y="530"
+     text-anchor="middle"
+     fill="#000"
+     font-size="10"
+     font-weight="700"
+     id="text45">7</text>
+  <text
+     x="796.8385"
+     y="521.00067"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text46">CMD_START_CONNECT handler</text>
+  <text
+     x="796.8385"
+     y="536.00067"
+     text-anchor="start"
+     fill="#475569"
+     font-size="9px"
+     id="text47">IpClient check, ScoreCard, FILS pre-connect, EAP TOFU</text>
+  <line
+     x1="730"
+     y1="585"
+     x2="930"
+     y2="585"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-blue)"
+     id="line47" />
+  <g
+     id="g118"
+     transform="translate(-111.13106,40.810842)">
+    <circle
+       cx="830"
+       cy="545"
+       r="9"
+       fill="#22d3ee"
+       opacity="0.92"
+       id="circle47" />
+    <text
+       x="830"
+       y="549"
+       text-anchor="middle"
+       fill="#000000"
+       font-size="10px"
+       font-weight="700"
+       id="text48">8</text>
+  </g>
+  <text
+     x="729.77606"
+     y="580.65076"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text49">connectToNetwork(config)</text>
+  <text
+     x="856.78864"
+     y="598.58142"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="9px"
+     id="text50">mWifiNative.connectToNetwork(ifaceName, config)</text>
+  <rect
+     x="35"
+     y="609"
+     width="1410"
+     height="26"
+     rx="3"
+     fill="#1a2a1a"
+     stroke="#22c55e"
+     stroke-width="0.6"
+     opacity="0.88"
+     id="rect50" />
+  <text
+     x="740"
+     y="626"
+     text-anchor="middle"
+     fill="#4ade80"
+     font-size="11"
+     font-weight="700"
+     id="text51">Phase 4: WifiNative → SupplicantStaIfaceHal — Cross-layer dispatch</text>
+  <path
+     d="M 930 643 L 972 643 L 972 665 L 933 665"
+     stroke="#3b82f6"
+     stroke-width="1.3"
+     fill="none"
+     marker-end="url(#arr-blue)"
+     id="path51" />
+  <circle
+     cx="986"
+     cy="654"
+     r="9"
+     fill="#22d3ee"
+     opacity="0.92"
+     id="circle51" />
+  <text
+     x="986"
+     y="658"
+     text-anchor="middle"
+     fill="#000"
+     font-size="10"
+     font-weight="700"
+     id="text52">9</text>
+  <text
+     x="995.58282"
+     y="649.62854"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text53">abortScan(ifaceName)</text>
+  <text
+     x="995.58282"
+     y="664.62854"
+     text-anchor="start"
+     fill="#475569"
+     font-size="9px"
+     id="text54">Stop ongoing scan before connecting to free radio</text>
+  <line
+     x1="930"
+     y1="713"
+     x2="1130"
+     y2="713"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-blue)"
+     id="line54" />
+  <g
+     id="g119"
+     transform="translate(-111.75892,39.973696)">
+    <circle
+       cx="1030"
+       cy="673"
+       r="9"
+       fill="#22d3ee"
+       opacity="0.92"
+       id="circle54" />
+    <text
+       x="1030"
+       y="677"
+       text-anchor="middle"
+       fill="#000000"
+       font-size="10px"
+       font-weight="700"
+       id="text55">10</text>
+  </g>
+  <text
+     x="931.35748"
+     y="703.41858"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text56">connectToNetwork(ifaceName, config)</text>
+  <text
+     x="931.35748"
+     y="727.41858"
+     text-anchor="start"
+     fill="#475569"
+     font-size="9px"
+     id="text57">SupplicantStaIfaceHal → mStaIfaceHal (AIDL impl dispatch)</text>
+  <rect
+     x="35"
+     y="739"
+     width="1410"
+     height="26"
+     rx="3"
+     fill="#1a2a1a"
+     stroke="#22c55e"
+     stroke-width="0.6"
+     opacity="0.88"
+     id="rect57" />
+  <text
+     x="740"
+     y="756"
+     text-anchor="middle"
+     fill="#4ade80"
+     font-size="11"
+     font-weight="700"
+     id="text58">Phase 5: SupplicantStaIfaceHalAidlImpl — AIDL network setup and select</text>
+  <path
+     d="M 1130 773 L 1172 773 L 1172 795 L 1133 795"
+     stroke="#3b82f6"
+     stroke-width="1.3"
+     fill="none"
+     marker-end="url(#arr-blue)"
+     id="path58" />
+  <circle
+     cx="1186"
+     cy="784"
+     r="9"
+     fill="#22d3ee"
+     opacity="0.92"
+     id="circle58" />
+  <text
+     x="1186"
+     y="788"
+     text-anchor="middle"
+     fill="#000"
+     font-size="10"
+     font-weight="700"
+     id="text59">11</text>
+  <text
+     x="1198.0173"
+     y="780.89661"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text60">Is network already saved?</text>
+  <text
+     x="1197.052"
+     y="795.89661"
+     text-anchor="start"
+     fill="#475569"
+     font-size="9px"
+     id="text61"><tspan
+       sodipodi:role="line"
+       id="tspan122"
+       x="1197.052"
+       y="795.89661">Same network → BSSID update | Different</tspan><tspan
+       sodipodi:role="line"
+       id="tspan123"
+       x="1197.052"
+       y="807.14661">→  removeAll + rebuild</tspan></text>
+  <line
+     x1="1130"
+     y1="837"
+     x2="1330"
+     y2="837"
+     stroke="#ea580c"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line61" />
+  <g
+     id="g122"
+     transform="translate(-113.65464,31.965367)">
+    <circle
+       cx="1230"
+       cy="803"
+       r="9"
+       fill="#22d3ee"
+       opacity="0.92"
+       id="circle61" />
+    <text
+       x="1230"
+       y="807"
+       text-anchor="middle"
+       fill="#000000"
+       font-size="10px"
+       font-weight="700"
+       id="text62">12</text>
+  </g>
+  <text
+     x="1131.3453"
+     y="827.29596"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text63">addNetworkAndSaveConfig()</text>
+  <text
+     x="1131.3453"
+     y="851.29596"
+     text-anchor="start"
+     fill="#475569"
+     font-size="9px"
+     id="text64">AIDL: setSsid, setBssid, setKeyMgmt, setPsk, setProto, EAP...</text>
+  <line
+     x1="1130"
+     y1="879"
+     x2="1330"
+     y2="879"
+     stroke="#ea580c"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="line64" />
+  <g
+     id="g121"
+     transform="translate(-112.47074,31.07744)">
+    <circle
+       cx="1230"
+       cy="847"
+       r="9"
+       fill="#22d3ee"
+       opacity="0.92"
+       id="circle64" />
+    <text
+       x="1230"
+       y="851"
+       text-anchor="middle"
+       fill="#000000"
+       font-size="10px"
+       font-weight="700"
+       id="text65">13</text>
+  </g>
+  <text
+     x="1129.8655"
+     y="873.14368"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text66">setPmkCache()</text>
+  <text
+     x="1269.3647"
+     y="891.52014"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="9px"
+     id="text67">Inject cached PMK to skip full EAP auth on reconnect</text>
+  <line
+     x1="1130.296"
+     y1="927.3678"
+     x2="1330.296"
+     y2="927.3678"
+     stroke="#22d3ee"
+     stroke-width="1.5"
+     fill="none"
+     marker-end="url(#arr-cyan)"
+     id="line67" />
+  <g
+     id="g120"
+     transform="translate(-114.24659,36.109026)">
+    <circle
+       cx="1230"
+       cy="891"
+       r="11"
+       fill="#22d3ee"
+       opacity="0.92"
+       id="circle67" />
+    <text
+       x="1230"
+       y="895"
+       text-anchor="middle"
+       fill="#000000"
+       font-size="10px"
+       font-weight="700"
+       id="text68">14</text>
+  </g>
+  <text
+     x="1129.4977"
+     y="918.25574"
+     text-anchor="start"
+     fill="#22d3ee"
+     font-size="10px"
+     font-weight="700"
+     id="text69">networkHandle.select() — FWK ENDPOINT</text>
+  <text
+     x="1290.675"
+     y="941.88794"
+     text-anchor="middle"
+     fill="#fbbf24"
+     font-size="9px"
+     id="text70">AIDL: ISupplicantStaNetwork.select() — supplicant takes over</text>
+  <rect
+     x="35"
+     y="953"
+     width="1410"
+     height="26"
+     rx="3"
+     fill="#1a2a1a"
+     stroke="#22c55e"
+     stroke-width="0.6"
+     opacity="0.88"
+     id="rect70" />
+  <text
+     x="740"
+     y="970"
+     text-anchor="middle"
+     fill="#4ade80"
+     font-size="11"
+     font-weight="700"
+     id="text71">Phase 6: wpa_supplicant internal — Auth→Assoc→EAPOL→4-Way Handshake (not covered in this article)</text>
+  <path
+     d="M 1330 987 L 1372 987 L 1372 1009 L 1333 1009"
+     stroke="#ea580c"
+     stroke-width="1.3"
+     fill="none"
+     marker-end="url(#arr-orange)"
+     id="path71" />
+  <circle
+     cx="1386"
+     cy="998"
+     r="9"
+     fill="#22d3ee"
+     opacity="0.92"
+     id="circle71" />
+  <text
+     x="1386"
+     y="1002"
+     text-anchor="middle"
+     fill="#000"
+     font-size="10"
+     font-weight="700"
+     id="text72">15</text>
+  <text
+     x="1330"
+     y="1026"
+     text-anchor="middle"
+     fill="#94a3b8"
+     font-size="8"
+     id="text73">Auth → Assoc → 4-Way Handshake</text>
+  <rect
+     x="35"
+     y="1041"
+     width="1410"
+     height="26"
+     rx="3"
+     fill="#1a2a1a"
+     stroke="#22c55e"
+     stroke-width="0.6"
+     opacity="0.88"
+     id="rect74" />
+  <text
+     x="740"
+     y="1058"
+     text-anchor="middle"
+     fill="#4ade80"
+     font-size="11"
+     font-weight="700"
+     id="text75">Phase 7: Supplicant state callback flow — AIDL callback back to Framework</text>
+  <line
+     x1="1330"
+     y1="1095"
+     x2="1130"
+     y2="1095"
+     stroke="#6b7280"
+     stroke-width="1.3"
+     stroke-dasharray="5, 4"
+     fill="none"
+     marker-end="url(#arr-gray)"
+     id="line75" />
+  <g
+     id="g124"
+     transform="translate(111.58281,33.445245)">
+    <circle
+       cx="1230"
+       cy="1061"
+       r="9"
+       fill="#22d3ee"
+       opacity="0.92"
+       id="circle75" />
+    <text
+       x="1230"
+       y="1065"
+       text-anchor="middle"
+       fill="#000000"
+       font-size="10px"
+       font-weight="700"
+       id="text76">16</text>
+  </g>
+  <text
+     x="1065.3428"
+     y="1086.7759"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text77">ISupplicantStaIfaceCallback.onStateChanged()</text>
+  <text
+     x="1186.4916"
+     y="1107.5201"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="9px"
+     id="text78">AIDL callback from supplicant → newState, bssid, ssid</text>
+  <line
+     x1="1130"
+     y1="1141"
+     x2="730"
+     y2="1141"
+     stroke="#6b7280"
+     stroke-width="1.3"
+     stroke-dasharray="5, 4"
+     fill="none"
+     marker-end="url(#arr-gray)"
+     id="line78" />
+  <g
+     id="g123"
+     transform="translate(212.80647,38.180855)">
+    <circle
+       cx="930"
+       cy="1105"
+       r="9"
+       fill="#22d3ee"
+       opacity="0.92"
+       id="circle78" />
+    <text
+       x="930"
+       y="1109"
+       text-anchor="middle"
+       fill="#000000"
+       font-size="10px"
+       font-weight="700"
+       id="text79">17</text>
+  </g>
+  <text
+     x="831.93732"
+     y="1132.7759"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10px"
+     id="text80">WifiMonitor.broadcastSupplicantStateChangeEvent()</text>
+  <text
+     x="1003.9939"
+     y="1154.4081"
+     text-anchor="middle"
+     fill="#475569"
+     font-size="9px"
+     id="text81">SUPPLICANT_STATE_CHANGE_EVENT → ClientModeImpl</text>
+  <rect
+     x="35"
+     y="1171"
+     width="1410"
+     height="26"
+     rx="3"
+     fill="#1a2a1a"
+     stroke="#22c55e"
+     stroke-width="0.6"
+     opacity="0.88"
+     id="rect81" />
+  <text
+     x="740"
+     y="1188"
+     text-anchor="middle"
+     fill="#4ade80"
+     font-size="11"
+     font-weight="700"
+     id="text82">Phase 8: ClientModeImpl state handling — State transition to L2ConnectedState</text>
+  <path
+     d="M 730 1205 L 772 1205 L 772 1227 L 733 1227"
+     stroke="#3b82f6"
+     stroke-width="1.3"
+     fill="none"
+     marker-end="url(#arr-blue)"
+     id="path82" />
+  <circle
+     cx="786"
+     cy="1216"
+     r="9"
+     fill="#22d3ee"
+     opacity="0.92"
+     id="circle82" />
+  <text
+     x="786"
+     y="1220"
+     text-anchor="middle"
+     fill="#000"
+     font-size="10"
+     font-weight="700"
+     id="text83">18</text>
+  <text
+     x="814"
+     y="1220"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10"
+     id="text84">handleSupplicantStateChange(stateChangeResult)</text>
+  <text
+     x="814"
+     y="1235"
+     text-anchor="start"
+     fill="#475569"
+     font-size="9"
+     id="text85">Update WifiInfo (BSSID, SSID, freq), ScoreCard, broadcast</text>
+  <path
+     d="M 730 1249 L 772 1249 L 772 1271 L 733 1271"
+     stroke="#3b82f6"
+     stroke-width="1.3"
+     fill="none"
+     marker-end="url(#arr-blue)"
+     id="path85" />
+  <circle
+     cx="786"
+     cy="1260"
+     r="9"
+     fill="#22d3ee"
+     opacity="0.92"
+     id="circle85" />
+  <text
+     x="786"
+     y="1264"
+     text-anchor="middle"
+     fill="#000"
+     font-size="10"
+     font-weight="700"
+     id="text86">19</text>
+  <text
+     x="814"
+     y="1264"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10"
+     id="text87">transitionTo(mL2ConnectedState)</text>
+  <text
+     x="814"
+     y="1279"
+     text-anchor="start"
+     fill="#475569"
+     font-size="9"
+     id="text88">→ L3 provisioning (DHCP / IP config, covered in a subsequent chapter)</text>
+  <line
+     x1="40"
+     y1="1360"
+     x2="1440"
+     y2="1360"
+     stroke="#334155"
+     stroke-width="1"
+     opacity="0.5"
+     id="line88" />
+  <text
+     x="80"
+     y="1382"
+     text-anchor="start"
+     fill="#10b981"
+     font-size="13"
+     font-weight="700"
+     id="text89">State Transition Summary</text>
+  <text
+     x="100"
+     y="1408"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="11"
+     id="text90">ConnectableState  →  L2ConnectingState     // CMD_START_CONNECT success</text>
+  <text
+     x="100"
+     y="1430"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="11"
+     id="text91">L2ConnectingState  →  L2ConnectedState     // SUPPLICANT_STATE_CHANGE_EVENT (COMPLETED)</text>
+  <text
+     x="100"
+     y="1452"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="11"
+     id="text92">L2ConnectingState  →  DisconnectedState    // Timeout / Supplicant failure</text>
+  <rect
+     x="40"
+     y="1487"
+     width="460"
+     height="145"
+     rx="5"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect92" />
+  <text
+     x="270"
+     y="1507"
+     text-anchor="middle"
+     fill="#22d3ee"
+     font-size="12"
+     font-weight="700"
+     id="text93">Legend</text>
+  <line
+     x1="55"
+     y1="1529"
+     x2="85"
+     y2="1529"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="line93" />
+  <text
+     x="100"
+     y="1533"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10"
+     id="text94">Synchronous call (Java → Java / AIDL)</text>
+  <line
+     x1="55"
+     y1="1545"
+     x2="85"
+     y2="1545"
+     stroke="#ea580c"
+     stroke-width="1.5"
+     id="line94" />
+  <text
+     x="100"
+     y="1549"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10"
+     id="text95">Cross-process AIDL call (Java → Native)</text>
+  <line
+     x1="55"
+     y1="1561"
+     x2="85"
+     y2="1561"
+     stroke="#6b7280"
+     stroke-width="1.3"
+     stroke-dasharray="5,4"
+     id="line95" />
+  <text
+     x="100"
+     y="1565"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10"
+     id="text96">Callback / Event (Native → Java)</text>
+  <line
+     x1="55"
+     y1="1577"
+     x2="85"
+     y2="1577"
+     stroke="#22d3ee"
+     stroke-width="1.5"
+     id="line96" />
+  <text
+     x="100"
+     y="1581"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10"
+     id="text97">Framework endpoint (last AIDL call)</text>
+  <path
+     d="M 60 1593 L 84 1593 L 84 1601 L 63 1601"
+     stroke="#3b82f6"
+     stroke-width="1.3"
+     fill="none"
+     marker-end="url(#arr-blue)"
+     id="path97" />
+  <text
+     x="100"
+     y="1597"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10"
+     id="text98">Internal processing / State machine op</text>
+  <rect
+     x="60"
+     y="1612"
+     width="22"
+     height="14"
+     rx="2"
+     fill="#0f172a"
+     stroke="#ea580c"
+     stroke-width="1.5"
+     id="rect98" />
+  <text
+     x="100"
+     y="1626"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10"
+     id="text99">wpa_supplicant (native process)</text>
+  <rect
+     x="520"
+     y="1487"
+     width="460"
+     height="145"
+     rx="5"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect99" />
+  <text
+     x="750"
+     y="1507"
+     text-anchor="middle"
+     fill="#22d3ee"
+     font-size="12"
+     font-weight="700"
+     id="text100">Diagram Keys</text>
+  <rect
+     x="535"
+     y="1525"
+     width="110"
+     height="16"
+     rx="2"
+     fill="#1a2a1a"
+     stroke="#22c55e"
+     stroke-width="0.5"
+     opacity="0.88"
+     id="rect100" />
+  <text
+     x="660"
+     y="1537"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10"
+     id="text101">Processing phase header</text>
+  <line
+     x1="535"
+     y1="1553"
+     x2="535"
+     y2="1579"
+     stroke="#ea580c"
+     stroke-width="1.5"
+     stroke-dasharray="6,5"
+     opacity="0.5"
+     id="line101" />
+  <text
+     x="558"
+     y="1567"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10"
+     id="text102">Java / AIDL process boundary</text>
+  <circle
+     cx="585"
+     cy="1597"
+     r="9"
+     fill="#22d3ee"
+     opacity="0.92"
+     id="circle102" />
+  <text
+     x="585"
+     y="1601"
+     text-anchor="middle"
+     fill="#000"
+     font-size="10"
+     font-weight="700"
+     id="text103">14</text>
+  <text
+     x="610"
+     y="1601"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10"
+     id="text104">Numbered step (1-19)</text>
+  <rect
+     x="40"
+     y="1647"
+     width="1400"
+     height="170"
+     rx="5"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="rect104" />
+  <text
+     x="740"
+     y="1669"
+     text-anchor="middle"
+     fill="#ea580c"
+     font-size="12"
+     font-weight="700"
+     id="text105">Connection Chain Statistics</text>
+  <text
+     x="70"
+     y="1697"
+     text-anchor="start"
+     fill="#10b981"
+     font-size="11"
+     font-weight="700"
+     id="text106">Process Boundaries:</text>
+  <text
+     x="80"
+     y="1714"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10"
+     id="text107">1  (Java Framework ↔ Native wpa_supplicant via AIDL boundary)</text>
+  <text
+     x="70"
+     y="1733"
+     text-anchor="start"
+     fill="#10b981"
+     font-size="11"
+     font-weight="700"
+     id="text108">Thread Switches:</text>
+  <text
+     x="80"
+     y="1750"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10"
+     id="text109">1  (Binder thread → WiFi handler via mWifiThreadRunner.post())</text>
+  <text
+     x="70"
+     y="1769"
+     text-anchor="start"
+     fill="#10b981"
+     font-size="11"
+     font-weight="700"
+     id="text110">AIDL Cross-Process:</text>
+  <text
+     x="80"
+     y="1786"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10"
+     id="text111">20+  (saveWifiConfiguration setters + select() call)</text>
+  <text
+     x="770"
+     y="1697"
+     text-anchor="start"
+     fill="#10b981"
+     font-size="11"
+     font-weight="700"
+     id="text112">State Transitions:</text>
+  <text
+     x="780"
+     y="1714"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10"
+     id="text113">ConnectableState → L2ConnectingState → L2ConnectedState (2 transitions)</text>
+  <text
+     x="770"
+     y="1733"
+     text-anchor="start"
+     fill="#10b981"
+     font-size="11"
+     font-weight="700"
+     id="text114">Framework Endpoint:</text>
+  <text
+     x="780"
+     y="1750"
+     text-anchor="start"
+     fill="#94a3b8"
+     font-size="10"
+     id="text115">networkHandle.select() → ISupplicantStaNetwork.select() in wpa_supplicant</text>
+</svg>

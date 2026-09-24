@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1040 940"
+   width="1040"
+   height="940"
+   version="1.1"
+   id="svg59"
+   sodipodi:docname="11a-overview.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview59"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.093"
+     inkscape:cx="599.72553"
+     inkscape:cy="500"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg59" />
+  <defs
+     id="defs9">
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="1095.4451"
+       y2="1095.4451"
+       gradientTransform="scale(0.94938575,0.85809864)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="a-blue"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0,0 8,3 0,6 "
+         fill="#3b82f6"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="a-purple"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0,0 8,3 0,6 "
+         fill="#a855f7"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="a-green"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0,0 8,3 0,6 "
+         fill="#10b981"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="a-gray"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0,0 8,3 0,6 "
+         fill="#64748b"
+         id="polygon5" />
+    </marker>
+    <marker
+       id="a-orange"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0,0 8,3 0,6 "
+         fill="#f97316"
+         id="polygon6" />
+    </marker>
+    <marker
+       id="a-red"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0,0 8,3 0,6 "
+         fill="#ef4444"
+         id="polygon7" />
+    </marker>
+    <marker
+       id="a-gold"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0,0 8,3 0,6 "
+         fill="#eab308"
+         id="polygon8" />
+    </marker>
+    <marker
+       id="a-cyan"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0,0 8,3 0,6 "
+         fill="#22d3ee"
+         id="polygon9" />
+    </marker>
+    <filter
+       id="sh"
+       x="-0.00125"
+       y="-0.0089285718"
+       width="1.0025001"
+       height="1.0178571">
+      <feDropShadow
+         dx="0"
+         dy="2"
+         stdDeviation="3"
+         flood-color="#000"
+         flood-opacity="0.35" />
+    </filter>
+  </defs>
+  <style
+     id="style9"> text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; } </style>
+  <rect
+     width="1040"
+     height="940"
+     fill="url(#bg)"
+     id="rect9"
+     style="fill:url(#bg);stroke-width:0.902591"
+     x="0"
+     y="0" />
+  <text
+     x="444"
+     y="30"
+     text-anchor="middle"
+     font-size="17px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text9">P2P 初始化全链路分层架构</text>
+  <text
+     x="444"
+     y="52"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#64748b"
+     id="text10">App → SystemServer → Framework → HAL → wpa_supplicant → 内核 → 驱动</text>
+  <rect
+     x="14"
+     y="60"
+     width="600"
+     height="84"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect10" />
+  <rect
+     x="18"
+     y="70"
+     width="4"
+     height="64"
+     rx="2"
+     fill="#a855f7"
+     id="rect11" />
+  <rect
+     x="32"
+     y="70"
+     width="110"
+     height="20"
+     rx="10"
+     fill="#0f0f1a"
+     stroke="#a855f7"
+     stroke-width="1"
+     id="rect12" />
+  <text
+     x="44"
+     y="84"
+     text-anchor="start"
+     font-size="11px"
+     font-weight="700"
+     fill="#a855f7"
+     id="text12">App 层</text>
+  <text
+     x="314"
+     y="108"
+     text-anchor="middle"
+     font-size="15px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text13">WifiP2pManager</text>
+  <text
+     x="314"
+     y="130"
+     text-anchor="middle"
+     font-size="10.5px"
+     fill="#94a3b8"
+     id="text14">App 调用 discoverPeers() / connect() / createGroup()</text>
+  <rect
+     x="14"
+     y="190"
+     width="600"
+     height="84"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect14" />
+  <rect
+     x="18"
+     y="200"
+     width="4"
+     height="64"
+     rx="2"
+     fill="#3b82f6"
+     id="rect15" />
+  <rect
+     x="32"
+     y="200"
+     width="110"
+     height="20"
+     rx="10"
+     fill="#0f0f1a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect16" />
+  <text
+     x="44"
+     y="214"
+     text-anchor="start"
+     font-size="11px"
+     font-weight="700"
+     fill="#3b82f6"
+     id="text16">SystemServer</text>
+  <text
+     x="314"
+     y="238"
+     text-anchor="middle"
+     font-size="15px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text17">WifiP2pService</text>
+  <text
+     x="314"
+     y="260"
+     text-anchor="middle"
+     font-size="10.5px"
+     fill="#94a3b8"
+     id="text18">SystemService · startOtherServices() 拉起</text>
+  <rect
+     x="14"
+     y="320"
+     width="600"
+     height="84"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect18" />
+  <rect
+     x="18"
+     y="330"
+     width="4"
+     height="64"
+     rx="2"
+     fill="#f97316"
+     id="rect19" />
+  <rect
+     x="32"
+     y="330"
+     width="110"
+     height="20"
+     rx="10"
+     fill="#0f0f1a"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect20" />
+  <text
+     x="44"
+     y="344"
+     text-anchor="start"
+     font-size="11px"
+     font-weight="700"
+     fill="#f97316"
+     id="text20">Framework 层</text>
+  <text
+     x="314"
+     y="368"
+     text-anchor="middle"
+     font-size="15px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text21">WifiP2pServiceImpl → P2pStateMachine</text>
+  <text
+     x="314"
+     y="390"
+     text-anchor="middle"
+     font-size="10.5px"
+     fill="#94a3b8"
+     id="text22">20 个状态 · 跑在 WifiHandlerThread</text>
+  <rect
+     x="14"
+     y="450"
+     width="600"
+     height="84"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect22" />
+  <rect
+     x="18"
+     y="460"
+     width="4"
+     height="64"
+     rx="2"
+     fill="#10b981"
+     id="rect23" />
+  <rect
+     x="32"
+     y="460"
+     width="110"
+     height="20"
+     rx="10"
+     fill="#0f0f1a"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect24" />
+  <text
+     x="44"
+     y="474"
+     text-anchor="start"
+     font-size="11px"
+     font-weight="700"
+     fill="#10b981"
+     id="text24">HAL 层</text>
+  <text
+     x="314"
+     y="498"
+     text-anchor="middle"
+     font-size="15px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text25">WifiP2pNative → SupplicantP2pIfaceHal</text>
+  <text
+     x="314"
+     y="520"
+     text-anchor="middle"
+     font-size="10.5px"
+     fill="#94a3b8"
+     id="text26">AIDL / HIDL · HalDeviceManager</text>
+  <rect
+     x="14"
+     y="580"
+     width="600"
+     height="84"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#22d3ee"
+     stroke-width="1.5"
+     id="rect26" />
+  <rect
+     x="18"
+     y="590"
+     width="4"
+     height="64"
+     rx="2"
+     fill="#22d3ee"
+     id="rect27" />
+  <rect
+     x="32"
+     y="590"
+     width="110"
+     height="20"
+     rx="10"
+     fill="#0f0f1a"
+     stroke="#22d3ee"
+     stroke-width="1"
+     id="rect28" />
+  <text
+     x="44"
+     y="604"
+     text-anchor="start"
+     font-size="11px"
+     font-weight="700"
+     fill="#22d3ee"
+     id="text28">wpa_supplicant</text>
+  <text
+     x="314"
+     y="628"
+     text-anchor="middle"
+     font-size="15px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text29">wpa_supplicant daemon</text>
+  <text
+     x="314"
+     y="650"
+     text-anchor="middle"
+     font-size="10.5px"
+     fill="#94a3b8"
+     id="text30">C 实现 · ISupplicant → P2pInterface</text>
+  <rect
+     x="14"
+     y="710"
+     width="600"
+     height="84"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     id="rect30" />
+  <rect
+     x="18"
+     y="720"
+     width="4"
+     height="64"
+     rx="2"
+     fill="#ef4444"
+     id="rect31" />
+  <rect
+     x="32"
+     y="720"
+     width="110"
+     height="20"
+     rx="10"
+     fill="#0f0f1a"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect32" />
+  <text
+     x="44"
+     y="734"
+     text-anchor="start"
+     font-size="11px"
+     font-weight="700"
+     fill="#ef4444"
+     id="text32">内核</text>
+  <text
+     x="314"
+     y="758"
+     text-anchor="middle"
+     font-size="15px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text33">cfg80211 / nl80211</text>
+  <text
+     x="314"
+     y="780"
+     text-anchor="middle"
+     font-size="10.5px"
+     fill="#94a3b8"
+     id="text34">NL80211_CMD_NEW_INTERFACE · add_virtual_intf</text>
+  <rect
+     x="14"
+     y="840"
+     width="600"
+     height="84"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="rect34" />
+  <rect
+     x="18"
+     y="850"
+     width="4"
+     height="64"
+     rx="2"
+     fill="#eab308"
+     id="rect35" />
+  <rect
+     x="32"
+     y="850"
+     width="110"
+     height="20"
+     rx="10"
+     fill="#0f0f1a"
+     stroke="#eab308"
+     stroke-width="1"
+     id="rect36" />
+  <text
+     x="44"
+     y="864"
+     text-anchor="start"
+     font-size="11px"
+     font-weight="700"
+     fill="#eab308"
+     id="text36">驱动</text>
+  <text
+     x="314"
+     y="888"
+     text-anchor="middle"
+     font-size="15px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text37">WiFi 芯片</text>
+  <text
+     x="314"
+     y="910"
+     text-anchor="middle"
+     font-size="10.5px"
+     fill="#94a3b8"
+     id="text38">p2p0 netdev（虚拟接口）</text>
+  <line
+     x1="314"
+     y1="144"
+     x2="314"
+     y2="190"
+     stroke="#0000ff"
+     stroke-width="2"
+     marker-end="url(#a-blue)"
+     id="line38" />
+  <rect
+     x="244"
+     y="154"
+     width="140"
+     height="26"
+     rx="13"
+     fill="#0f0f1a"
+     stroke="#0000ff"
+     stroke-width="1.2"
+     id="rect38" />
+  <text
+     x="314"
+     y="171"
+     text-anchor="middle"
+     font-size="11.5px"
+     font-weight="700"
+     fill="#0000ff"
+     id="text39">Binder (IPC)</text>
+  <line
+     x1="314"
+     y1="274"
+     x2="314"
+     y2="320"
+     stroke="#808080"
+     stroke-width="2"
+     marker-end="url(#a-gray)"
+     id="line39" />
+  <rect
+     x="244"
+     y="284"
+     width="140"
+     height="26"
+     rx="13"
+     fill="#0f0f1a"
+     stroke="#808080"
+     stroke-width="1.2"
+     id="rect39" />
+  <text
+     x="314"
+     y="301"
+     text-anchor="middle"
+     font-size="11.5px"
+     font-weight="700"
+     fill="#808080"
+     id="text40">同进程调用</text>
+  <line
+     x1="314"
+     y1="404"
+     x2="314"
+     y2="450"
+     stroke="#808080"
+     stroke-width="2"
+     marker-end="url(#a-gray)"
+     id="line40" />
+  <rect
+     x="244"
+     y="414"
+     width="140"
+     height="26"
+     rx="13"
+     fill="#0f0f1a"
+     stroke="#808080"
+     stroke-width="1.2"
+     id="rect40" />
+  <text
+     x="314"
+     y="431"
+     text-anchor="middle"
+     font-size="11.5px"
+     font-weight="700"
+     fill="#808080"
+     id="text41">同进程 · HDM 调用</text>
+  <line
+     x1="314"
+     y1="534"
+     x2="314"
+     y2="580"
+     stroke="#800080"
+     stroke-width="2"
+     marker-end="url(#a-purple)"
+     id="line41" />
+  <rect
+     x="244"
+     y="544"
+     width="140"
+     height="26"
+     rx="13"
+     fill="#0f0f1a"
+     stroke="#800080"
+     stroke-width="1.2"
+     id="rect41" />
+  <text
+     x="314"
+     y="561"
+     text-anchor="middle"
+     font-size="11.5px"
+     font-weight="700"
+     fill="#800080"
+     id="text42">AIDL / HIDL</text>
+  <line
+     x1="314"
+     y1="664"
+     x2="314"
+     y2="710"
+     stroke="#008000"
+     stroke-width="2"
+     marker-end="url(#a-green)"
+     id="line42" />
+  <rect
+     x="229"
+     y="674"
+     width="170"
+     height="26"
+     rx="13"
+     fill="#0f0f1a"
+     stroke="#008000"
+     stroke-width="1.2"
+     id="rect42" />
+  <text
+     x="314"
+     y="691"
+     text-anchor="middle"
+     font-size="11.5px"
+     font-weight="700"
+     fill="#008000"
+     id="text43">nl80211 netlink</text>
+  <line
+     x1="314"
+     y1="794"
+     x2="314"
+     y2="840"
+     stroke="#ff0000"
+     stroke-width="2"
+     marker-end="url(#a-red)"
+     id="line43" />
+  <rect
+     x="218.93594"
+     y="804"
+     width="194.70265"
+     height="26"
+     rx="14.889027"
+     fill="#0f0f1a"
+     stroke="#ff0000"
+     stroke-width="1.23227"
+     id="rect43" />
+  <text
+     x="314"
+     y="821"
+     text-anchor="middle"
+     font-size="11.5px"
+     font-weight="700"
+     fill="#ff0000"
+     id="text44">驱动回调 add_virtual_intf</text>
+  <rect
+     x="684"
+     y="54"
+     width="330"
+     height="700"
+     rx="10"
+     fill="#0a0a14"
+     stroke="#334155"
+     stroke-width="1.2"
+     stroke-dasharray="6, 4"
+     id="rect44" />
+  <text
+     x="95.601097"
+     y="46.148216"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="700"
+     fill="#f97316"
+     id="text45">初始化主线（自上而下）</text>
+  <rect
+     x="704"
+     y="106"
+     width="290"
+     height="46"
+     rx="8"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1.3"
+     id="rect45" />
+  <text
+     x="849"
+     y="133"
+     text-anchor="middle"
+     font-size="12px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text46">① setupInterface()</text>
+  <line
+     x1="849"
+     y1="152"
+     x2="849"
+     y2="170"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#a-orange)"
+     id="line46" />
+  <rect
+     x="704"
+     y="170"
+     width="290"
+     height="46"
+     rx="8"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1.3"
+     id="rect46" />
+  <text
+     x="849"
+     y="197"
+     text-anchor="middle"
+     font-size="12px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text47">② createP2pIface()</text>
+  <line
+     x1="849"
+     y1="216"
+     x2="849"
+     y2="234"
+     stroke="#f97316"
+     stroke-width="1.5"
+     marker-end="url(#a-orange)"
+     id="line47" />
+  <rect
+     x="704"
+     y="234"
+     width="290"
+     height="46"
+     rx="8"
+     fill="#0f172a"
+     stroke="#a855f7"
+     stroke-width="1.3"
+     id="rect47" />
+  <text
+     x="849"
+     y="261"
+     text-anchor="middle"
+     font-size="12px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text48">③ addP2pInterface(&quot;p2p0&quot;)</text>
+  <line
+     x1="849"
+     y1="280"
+     x2="849"
+     y2="298"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     marker-end="url(#a-purple)"
+     id="line48" />
+  <rect
+     x="704"
+     y="298"
+     width="290"
+     height="46"
+     rx="8"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1.3"
+     id="rect48" />
+  <text
+     x="849"
+     y="325"
+     text-anchor="middle"
+     font-size="12px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text49">④ p2p0 接口创建</text>
+  <line
+     x1="849"
+     y1="344"
+     x2="849"
+     y2="362"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#a-green)"
+     id="line49" />
+  <rect
+     x="704"
+     y="362"
+     width="290"
+     height="46"
+     rx="8"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.3"
+     id="rect49" />
+  <text
+     x="849"
+     y="389"
+     text-anchor="middle"
+     font-size="12px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text50">⑤ 广播 WIFI_P2P_STATE_CHANGED_ACTION</text>
+  <line
+     x1="684"
+     y1="129"
+     x2="614"
+     y2="404"
+     stroke="#f97316"
+     stroke-width="1"
+     stroke-dasharray="3, 3"
+     opacity="0.5"
+     id="line50" />
+  <line
+     x1="684"
+     y1="193"
+     x2="614"
+     y2="450"
+     stroke="#f97316"
+     stroke-width="1"
+     stroke-dasharray="3, 3"
+     opacity="0.5"
+     id="line51" />
+  <line
+     x1="684"
+     y1="257"
+     x2="614"
+     y2="534"
+     stroke="#a855f7"
+     stroke-width="1"
+     stroke-dasharray="3, 3"
+     opacity="0.5"
+     id="line52" />
+  <line
+     x1="684"
+     y1="321"
+     x2="614"
+     y2="664"
+     stroke="#10b981"
+     stroke-width="1"
+     stroke-dasharray="3, 3"
+     opacity="0.5"
+     id="line53" />
+  <line
+     x1="684"
+     y1="385"
+     x2="614"
+     y2="144"
+     stroke="#3b82f6"
+     stroke-width="1"
+     stroke-dasharray="3, 3"
+     opacity="0.5"
+     id="line54" />
+  <text
+     x="849"
+     y="790"
+     text-anchor="middle"
+     font-size="12px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text54">图例</text>
+  <line
+     x1="724"
+     y1="808"
+     x2="784"
+     y2="808"
+     stroke="#0000ff"
+     stroke-width="2.5"
+     marker-end="url(#a-blue)"
+     id="line55" />
+  <text
+     x="792"
+     y="812"
+     text-anchor="start"
+     font-size="11px"
+     fill="#cbd5e1"
+     id="text55">Binder IPC</text>
+  <line
+     x1="724"
+     y1="832"
+     x2="784"
+     y2="832"
+     stroke="#800080"
+     stroke-width="2.5"
+     marker-end="url(#a-purple)"
+     id="line56" />
+  <text
+     x="792"
+     y="836"
+     text-anchor="start"
+     font-size="11px"
+     fill="#cbd5e1"
+     id="text56">AIDL / HIDL</text>
+  <line
+     x1="724"
+     y1="856"
+     x2="784"
+     y2="856"
+     stroke="#008000"
+     stroke-width="2.5"
+     marker-end="url(#a-green)"
+     id="line57" />
+  <text
+     x="792"
+     y="860"
+     text-anchor="start"
+     font-size="11px"
+     fill="#cbd5e1"
+     id="text57">nl80211 netlink</text>
+  <line
+     x1="724"
+     y1="880"
+     x2="784"
+     y2="880"
+     stroke="#808080"
+     stroke-width="2.5"
+     marker-end="url(#a-gray)"
+     id="line58" />
+  <text
+     x="792"
+     y="884"
+     text-anchor="start"
+     font-size="11px"
+     fill="#cbd5e1"
+     id="text58">同进程调用</text>
+  <line
+     x1="724"
+     y1="904"
+     x2="784"
+     y2="904"
+     stroke="#ffa500"
+     stroke-width="2.5"
+     marker-end="url(#a-orange)"
+     id="line59" />
+  <text
+     x="792"
+     y="908"
+     text-anchor="start"
+     font-size="11px"
+     fill="#cbd5e1"
+     id="text59">初始化主线</text>
+</svg>

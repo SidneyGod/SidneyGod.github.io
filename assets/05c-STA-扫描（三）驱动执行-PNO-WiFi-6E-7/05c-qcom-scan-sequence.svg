@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 950 700"
+   version="1.1"
+   id="svg47"
+   sodipodi:docname="05c-qcom-scan-sequence.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   width="950"
+   height="700"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview47"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.31"
+     inkscape:cx="530.15267"
+     inkscape:cy="389.69466"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg47" />
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  .title { font-size: 15px; font-weight: 700; fill: #e2e8f0; }
+  .sub { font-size: 10px; fill: #94a3b8; }
+  .hdr { font-size: 11px; font-weight: 700; fill: #e2e8f0; text-anchor: middle; }
+  .hdr-sub { font-size: 8px; fill: #94a3b8; text-anchor: middle; }
+  .step-num { font-size: 9px; font-weight: 700; fill: #e2e8f0; text-anchor: middle; }
+  .alabel { font-size: 9px; text-anchor: middle; }
+</style>
+  <defs
+     id="defs5">
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="909.2854"
+       y2="909.2854"
+       gradientTransform="scale(1.0447764,0.7698353)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="aB"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="8,3 0,6 0,0 "
+         fill="#3b82f6"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="aW"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="8,3 0,6 0,0 "
+         fill="#e2e8f0"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="aP"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="8,3 0,6 0,0 "
+         fill="#a855f7"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="aG"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="8,3 0,6 0,0 "
+         fill="#10b981"
+         id="polygon5" />
+    </marker>
+  </defs>
+  <rect
+     width="950"
+     height="700"
+     fill="url(#bg)"
+     id="rect5"
+     style="fill:url(#bg);stroke-width:0.896831"
+     x="0"
+     y="0" />
+  <text
+     x="496"
+     y="30"
+     class="title"
+     text-anchor="middle"
+     id="text5">QCOM 驱动扫描时序图 — 命令下发与双管道结果回报</text>
+  <text
+     x="496"
+     y="48"
+     class="sub"
+     text-anchor="middle"
+     id="text6">cfg80211 → HDD → SCM → 序列化 → WMI → 固件 → 双管道返回</text>
+  <rect
+     x="41"
+     y="62"
+     width="130"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="rect6" />
+  <rect
+     x="41"
+     y="62"
+     width="130"
+     height="3"
+     rx="2"
+     fill="#eab308"
+     id="rect7" />
+  <text
+     x="106"
+     y="80"
+     class="hdr"
+     id="text7">cfg80211</text>
+  <text
+     x="106"
+     y="96"
+     class="hdr-sub"
+     id="text8">(kernel)</text>
+  <line
+     x1="106"
+     y1="102"
+     x2="106"
+     y2="680"
+     stroke="#eab308"
+     stroke-width="1"
+     stroke-dasharray="5, 5"
+     opacity="0.2"
+     id="line8" />
+  <rect
+     x="191"
+     y="62"
+     width="130"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect8" />
+  <rect
+     x="191"
+     y="62"
+     width="130"
+     height="3"
+     rx="2"
+     fill="#10b981"
+     id="rect9" />
+  <text
+     x="256"
+     y="80"
+     class="hdr"
+     id="text9">HDD</text>
+  <text
+     x="256"
+     y="96"
+     class="hdr-sub"
+     id="text10">(wlan_hdd)</text>
+  <line
+     x1="256"
+     y1="102"
+     x2="256"
+     y2="680"
+     stroke="#10b981"
+     stroke-width="1"
+     stroke-dasharray="5, 5"
+     opacity="0.2"
+     id="line10" />
+  <rect
+     x="341"
+     y="62"
+     width="130"
+     height="40"
+     rx="6"
+     fill="#1e1b4b"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect10" />
+  <rect
+     x="341"
+     y="62"
+     width="130"
+     height="3"
+     rx="2"
+     fill="#a855f7"
+     id="rect11" />
+  <text
+     x="406"
+     y="80"
+     class="hdr"
+     id="text11">SCM</text>
+  <text
+     x="406"
+     y="96"
+     class="hdr-sub"
+     id="text12">(ScanMgr)</text>
+  <line
+     x1="406"
+     y1="102"
+     x2="406"
+     y2="680"
+     stroke="#a855f7"
+     stroke-width="1"
+     stroke-dasharray="5, 5"
+     opacity="0.2"
+     id="line12" />
+  <rect
+     x="491"
+     y="62"
+     width="130"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="rect12" />
+  <rect
+     x="491"
+     y="62"
+     width="130"
+     height="3"
+     rx="2"
+     fill="#eab308"
+     id="rect13" />
+  <text
+     x="556"
+     y="80"
+     class="hdr"
+     id="text13">序列化</text>
+  <text
+     x="556"
+     y="96"
+     class="hdr-sub"
+     id="text14">(Serial)</text>
+  <line
+     x1="556"
+     y1="102"
+     x2="556"
+     y2="680"
+     stroke="#eab308"
+     stroke-width="1"
+     stroke-dasharray="5, 5"
+     opacity="0.2"
+     id="line14" />
+  <rect
+     x="641"
+     y="62"
+     width="130"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="rect14" />
+  <rect
+     x="641"
+     y="62"
+     width="130"
+     height="3"
+     rx="2"
+     fill="#eab308"
+     id="rect15" />
+  <text
+     x="706"
+     y="80"
+     class="hdr"
+     id="text15">WMI</text>
+  <text
+     x="706"
+     y="96"
+     class="hdr-sub"
+     id="text16">(wmi_unif)</text>
+  <line
+     x1="706"
+     y1="102"
+     x2="706"
+     y2="680"
+     stroke="#eab308"
+     stroke-width="1"
+     stroke-dasharray="5, 5"
+     opacity="0.2"
+     id="line16" />
+  <rect
+     x="791"
+     y="62"
+     width="130"
+     height="40"
+     rx="6"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect16" />
+  <rect
+     x="791"
+     y="62"
+     width="130"
+     height="3"
+     rx="2"
+     fill="#10b981"
+     id="rect17" />
+  <text
+     x="856"
+     y="80"
+     class="hdr"
+     id="text17">固件</text>
+  <text
+     x="856"
+     y="96"
+     class="hdr-sub"
+     id="text18">(FW)</text>
+  <line
+     x1="856"
+     y1="102"
+     x2="856"
+     y2="680"
+     stroke="#10b981"
+     stroke-width="1"
+     stroke-dasharray="5, 5"
+     opacity="0.2"
+     id="line18" />
+  <rect
+     x="253"
+     y="143"
+     width="6"
+     height="80"
+     rx="3"
+     fill="#10b981"
+     opacity="0.35"
+     id="rect18" />
+  <rect
+     x="403"
+     y="227"
+     width="6"
+     height="335"
+     rx="3"
+     fill="#a855f7"
+     opacity="0.35"
+     id="rect19" />
+  <line
+     x1="106"
+     y1="145"
+     x2="248"
+     y2="145"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#aB)"
+     id="line19" />
+  <circle
+     cx="26"
+     cy="145"
+     r="9"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="circle19" />
+  <text
+     x="26"
+     y="149"
+     class="step-num"
+     id="text19">1</text>
+  <text
+     x="181"
+     y="138"
+     class="alabel"
+     fill="#3b82f6"
+     id="text20">NL80211_CMD_TRIGGER_SCAN</text>
+  <line
+     x1="256"
+     y1="187"
+     x2="398"
+     y2="187"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#aB)"
+     id="line20" />
+  <circle
+     cx="26"
+     cy="187"
+     r="9"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="circle20" />
+  <text
+     x="26"
+     y="191"
+     class="step-num"
+     id="text21">2</text>
+  <text
+     x="331"
+     y="180"
+     class="alabel"
+     fill="#3b82f6"
+     id="text22">wlan_cfg80211_scan (SSID+信道+IE转换)</text>
+  <line
+     x1="406"
+     y1="229"
+     x2="548"
+     y2="229"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#aB)"
+     id="line22" />
+  <circle
+     cx="26"
+     cy="229"
+     r="9"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="circle22" />
+  <text
+     x="26"
+     y="233"
+     class="step-num"
+     id="text23">3</text>
+  <text
+     x="481"
+     y="222"
+     class="alabel"
+     fill="#3b82f6"
+     id="text24">wlan_serialization_request (cmd_timeout)</text>
+  <line
+     x1="556"
+     y1="271"
+     x2="414"
+     y2="271"
+     stroke="#e2e8f0"
+     stroke-width="1.5"
+     stroke-dasharray="6, 4"
+     marker-end="url(#aW)"
+     id="line24" />
+  <circle
+     cx="26"
+     cy="271"
+     r="9"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="circle24" />
+  <text
+     x="26"
+     y="275"
+     class="step-num"
+     id="text25">4</text>
+  <text
+     x="481"
+     y="264"
+     class="alabel"
+     fill="#e2e8f0"
+     id="text26">ACTIVATE_CMD (callback)</text>
+  <line
+     x1="406"
+     y1="313"
+     x2="698"
+     y2="313"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#aB)"
+     id="line26" />
+  <circle
+     cx="26"
+     cy="313"
+     r="9"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="circle26" />
+  <text
+     x="26"
+     y="317"
+     class="step-num"
+     id="text27">5</text>
+  <text
+     x="556"
+     y="306"
+     class="alabel"
+     fill="#3b82f6"
+     id="text28">tgt_scan_start → send_scan_start_cmd_tlv</text>
+  <line
+     x1="706"
+     y1="355"
+     x2="848"
+     y2="355"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     marker-end="url(#aB)"
+     id="line28" />
+  <circle
+     cx="26"
+     cy="355"
+     r="9"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="circle28" />
+  <text
+     x="26"
+     y="359"
+     class="step-num"
+     id="text29">6</text>
+  <text
+     x="781"
+     y="348"
+     class="alabel"
+     fill="#3b82f6"
+     id="text30">WMI_START_SCAN_CMDID (dwell time+channels)</text>
+  <line
+     x1="21"
+     y1="405"
+     x2="916"
+     y2="405"
+     stroke="#334155"
+     stroke-width="0.5"
+     stroke-dasharray="8, 4"
+     id="line30" />
+  <text
+     x="496"
+     y="419"
+     class="sub"
+     text-anchor="middle"
+     id="text31">扫描执行中（固件逐信道 dwell + Probe Request/Response）</text>
+  <line
+     x1="856"
+     y1="439"
+     x2="714"
+     y2="439"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     stroke-dasharray="6, 4"
+     marker-end="url(#aP)"
+     id="line31" />
+  <circle
+     cx="26"
+     cy="439"
+     r="9"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="circle31" />
+  <text
+     x="26"
+     y="443"
+     class="step-num"
+     id="text32">7</text>
+  <text
+     x="781"
+     y="432"
+     class="alabel"
+     fill="#a855f7"
+     id="text33">[管道A] beacon/probe rx (逐BSS)</text>
+  <line
+     x1="706"
+     y1="481"
+     x2="414"
+     y2="481"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     stroke-dasharray="6, 4"
+     marker-end="url(#aP)"
+     id="line33" />
+  <circle
+     cx="26"
+     cy="481"
+     r="9"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="circle33" />
+  <text
+     x="26"
+     y="485"
+     class="step-num"
+     id="text34">8</text>
+  <text
+     x="556"
+     y="474"
+     class="alabel"
+     fill="#a855f7"
+     id="text35">tgt_scan_bcn_probe_rx_callback</text>
+  <line
+     x1="406"
+     y1="523"
+     x2="114"
+     y2="523"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     stroke-dasharray="6, 4"
+     marker-end="url(#aP)"
+     id="line35" />
+  <circle
+     cx="26"
+     cy="523"
+     r="9"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="circle35" />
+  <text
+     x="26"
+     y="527"
+     class="step-num"
+     id="text36">9</text>
+  <text
+     x="256"
+     y="516"
+     class="alabel"
+     fill="#a855f7"
+     id="text37">cfg80211_inform_bss_frame (逐个BSS)</text>
+  <line
+     x1="856"
+     y1="565"
+     x2="714"
+     y2="565"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#aG)"
+     id="line37" />
+  <circle
+     cx="26"
+     cy="565"
+     r="9"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="circle37" />
+  <text
+     x="26"
+     y="569"
+     class="step-num"
+     id="text38">10</text>
+  <text
+     x="781"
+     y="558"
+     class="alabel"
+     fill="#10b981"
+     id="text39">[管道B] WMI_SCAN_EVENTID (完成)</text>
+  <line
+     x1="706"
+     y1="607"
+     x2="414"
+     y2="607"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#aG)"
+     id="line39" />
+  <circle
+     cx="26"
+     cy="607"
+     r="9"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="circle39" />
+  <text
+     x="26"
+     y="611"
+     class="step-num"
+     id="text40">11</text>
+  <text
+     x="556"
+     y="600"
+     class="alabel"
+     fill="#10b981"
+     id="text41">scm_scan_event_handler (COMPLETED)</text>
+  <line
+     x1="406"
+     y1="649"
+     x2="114"
+     y2="649"
+     stroke="#10b981"
+     stroke-width="1.5"
+     marker-end="url(#aG)"
+     id="line41" />
+  <circle
+     cx="26"
+     cy="649"
+     r="9"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="1"
+     id="circle41" />
+  <text
+     x="26"
+     y="653"
+     class="step-num"
+     id="text42">12</text>
+  <text
+     x="256"
+     y="642"
+     class="alabel"
+     fill="#10b981"
+     id="text43">cfg80211_scan_done (扫描结束)</text>
+  <rect
+     x="766"
+     y="603"
+     width="145.06862"
+     height="60"
+     rx="3.297014"
+     fill="#0f172a"
+     stroke="#334155"
+     stroke-width="0.812036"
+     id="rect43" />
+  <text
+     x="840"
+     y="619"
+     text-anchor="middle"
+     class="sub"
+     id="text44">图例</text>
+  <line
+     x1="774"
+     y1="627"
+     x2="794"
+     y2="627"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="line44" />
+  <text
+     x="802"
+     y="631"
+     font-size="8px"
+     fill="#e2e8f0"
+     font-family="Maple Mono Normal NL NF CN, Microsoft YaHei, sans-serif"
+     id="text45">命令下发</text>
+  <line
+     x1="774"
+     y1="641"
+     x2="794"
+     y2="641"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     stroke-dasharray="6, 4"
+     id="line45" />
+  <text
+     x="802"
+     y="645"
+     font-size="8px"
+     fill="#e2e8f0"
+     font-family="Maple Mono Normal NL NF CN, Microsoft YaHei, sans-serif"
+     id="text46">管道A 逐BSS</text>
+  <line
+     x1="774"
+     y1="655"
+     x2="794"
+     y2="655"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="line46" />
+  <text
+     x="802"
+     y="659"
+     font-size="8px"
+     fill="#e2e8f0"
+     font-family="Maple Mono Normal NL NF CN, Microsoft YaHei, sans-serif"
+     id="text47">管道B 完成</text>
+</svg>

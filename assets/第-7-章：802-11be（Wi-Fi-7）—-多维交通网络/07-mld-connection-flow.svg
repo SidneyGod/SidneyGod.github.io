@@ -1,0 +1,120 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <style
+     id="style1">
+    text { font-family: 'Maple Mono Normal NL NF CN', monospace; }
+  </style>
+ <defs>
+  <marker id="arrow-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+   <path d="m0,0l10,5l-10,5l0,-10z" fill="#94a3b8" id="svg_1"/>
+  </marker>
+  <marker id="arrow-purple-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+   <path d="m0,0l10,5l-10,5l0,-10z" fill="#8b5cf6" id="svg_2"/>
+  </marker>
+  <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+   <stop offset="0%" stop-color="#0f0f1a"/>
+   <stop offset="100%" stop-color="#1a1a2e"/>
+  </linearGradient>
+  <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+   <stop offset="0%" stop-color="#1e293b"/>
+   <stop offset="100%" stop-color="#0f172a"/>
+  </linearGradient>
+ </defs>
+ <!-- Title -->
+ <!-- STA and AP columns -->
+ <!-- Vertical timeline lines -->
+ <!-- Phase 1: ML Discovery -->
+ <!-- Phase 2: Authentication -->
+ <!-- Phase 3: Association per-link -->
+ <!-- Phase 4: 4-Way Handshake (corrected arrows) -->
+ <!-- Msg 1: AP -> STA -->
+ <!-- Msg 2: STA -> AP -->
+ <!-- PTK derivation note (between msg 2 and 3) -->
+ <!-- Msg 3: AP -> STA -->
+ <!-- Msg 4: STA -> AP -->
+ <!-- Key derivation tree -->
+ <!-- Phase 5: Ready -->
+ <!-- Key derivation tree (full detail) -->
+ <!-- Bottom summary -->
+ <g>
+  <title>Layer 1</title>
+  <rect width="1200" height="800" fill="url(#bg-grad)" id="svg_3"/>
+  <text x="600" y="28" text-anchor="middle" fill="#e2e8f0" font-size="18" font-weight="700" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_4">MLD Connection Setup Flow</text>
+  <text x="600" y="48" text-anchor="middle" fill="#94a3b8" font-size="12" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_5">MLD 连接建立流程 — Auth 1次 + Assoc per-link + 4-Way 1次</text>
+  <rect x="140" y="60" width="180" height="32" rx="6" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="1.5" id="svg_6"/>
+  <text x="230" y="81" text-anchor="middle" fill="#c4b5fd" font-size="12" font-weight="700" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_7">non-AP MLD (STA)</text>
+  <rect x="880" y="60" width="180" height="32" rx="6" fill="#172554" stroke="#3b82f6" stroke-width="1.5" id="svg_8"/>
+  <text x="970" y="81" text-anchor="middle" fill="#93c5fd" font-size="12" font-weight="700" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_9">AP MLD</text>
+  <line x1="230" y1="92" x2="230" y2="690" stroke="#475569" stroke-width="1.5" id="svg_10"/>
+  <line x1="970" y1="92" x2="970" y2="690" stroke="#475569" stroke-width="1.5" id="svg_11"/>
+  <rect x="50" y="100" width="1100" height="75" rx="8" fill="#0f172a" stroke="#64748b" id="svg_12"/>
+  <text x="70" y="118" fill="#64748b" font-size="10" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_13">Phase 1: ML Discovery</text>
+  <text x="70" y="133" fill="#475569" font-size="9" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_14">只需通过任意一条 Link 发现对端 MLD，即获取对方所有 Link 的信息</text>
+  <line x1="240" y1="150" x2="960" y2="150" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-r)" id="svg_15"/>
+  <text x="600" y="146" text-anchor="middle" fill="#3b82f6" font-size="9" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_16">ML Probe Request (via Link 1 or 2 or 3)</text>
+  <line x1="960" y1="165" x2="240" y2="165" stroke="#10b981" stroke-width="1.5" marker-end="url(#arrow-r)" id="svg_17"/>
+  <text x="600" y="162" text-anchor="middle" fill="#10b981" font-size="9" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_18">ML Probe Response — 包含 所有 Link 的频率、带宽、能力信息</text>
+  <rect x="50" y="185" width="1100" height="70" rx="8" fill="#0f172a" stroke="#fbbf24" id="svg_19"/>
+  <text x="70" y="203" fill="#fbbf24" font-size="10" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_20">Phase 2: Authentication (MLD 级别，只需一次)</text>
+  <text x="70" y="218" fill="#475569" font-size="9" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_21">MLO 必须在 RSNA 下运行 (802.11be Sec 35.3.4)，PMF mandatory，Open 不可用</text>
+  <line x1="240" y1="235" x2="960" y2="235" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-r)" id="svg_22"/>
+  <text x="600" y="232" text-anchor="middle" fill="#fbbf24" font-size="9" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_23">Auth Request (SAE)</text>
+  <line x1="960" y1="248" x2="240" y2="248" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-r)" id="svg_24"/>
+  <text x="600" y="245" text-anchor="middle" fill="#fbbf24" font-size="9" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_25">Auth Response</text>
+  <rect stroke="#10b981" x="50" y="265" width="1100" height="130" rx="8" fill="#0f172a" id="svg_26"/>
+  <text x="70" y="283" fill="#10b981" font-size="10" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_27">Phase 3: Association (per-link，每条 Link 需要独立关联)</text>
+  <text x="70" y="298" fill="#475569" font-size="9" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_28">因为每条 Link 的能力可能不同(带宽、信道、调制方式)，所以需要每条 Link 独立关联</text>
+  <rect x="80" y="308" width="280" height="26" rx="4" fill="#1e3a5f" stroke="#3b82f6" id="svg_29"/>
+  <text x="220" y="325" text-anchor="middle" fill="#93c5fd" font-size="9" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_30">Link 1 (2.4G)</text>
+  <line x1="240" y1="342" x2="960" y2="342" stroke="#3b82f6" marker-end="url(#arrow-r)" id="svg_31"/>
+  <text x="600" y="339" text-anchor="middle" fill="#3b82f6" font-size="8" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_32">Assoc Req/Resp (Link 1)</text>
+  <rect x="80" y="352" width="280" height="26" rx="4" fill="#1e3a5f" stroke="#10b981" id="svg_33"/>
+  <text x="220" y="369" text-anchor="middle" fill="#6ee7b7" font-size="9" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_34">Link 2 (5G)</text>
+  <line x1="240" y1="386" x2="960" y2="386" stroke="#10b981" marker-end="url(#arrow-r)" id="svg_35"/>
+  <text x="600" y="383" text-anchor="middle" fill="#10b981" font-size="8" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_36">Assoc Req/Resp (Link 2)</text>
+  <rect x="80" y="395" width="280" height="26" rx="4" fill="#1e3a5f" stroke="#f97316" id="svg_37"/>
+  <text x="220" y="412" text-anchor="middle" fill="#fdba74" font-size="9" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_38">Link 3 (6G) — 可选</text>
+  <line x1="240" y1="428" x2="960" y2="428" stroke="#f97316" marker-end="url(#arrow-r)" id="svg_39"/>
+  <text x="600" y="425" text-anchor="middle" fill="#f97316" font-size="8" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_40">Assoc Req/Resp (Link 3)</text>
+  <rect x="50" y="440" width="1100" height="130" rx="8" fill="#0f172a" stroke="#8b5cf6" id="svg_41"/>
+  <text x="70" y="458" fill="#8b5cf6" font-size="10" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_42">Phase 4: 4-Way Handshake (MLD 级别，只需一次)</text>
+  <text x="70" y="473" fill="#475569" font-size="9" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_43">MLD 级通过一次 4-Way Handshake 派生 PTK，全 Link 共享（无 per-Link PTK 变体）</text>
+  <line x1="960" y1="490" x2="240" y2="490" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#arrow-purple-r)" id="svg_44"/>
+  <text x="600" y="487" text-anchor="middle" fill="#8b5cf6" font-size="9" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_45">Msg 1/4: AP → STA (ANonce)</text>
+  <line x1="240" y1="506" x2="960" y2="506" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#arrow-purple-r)" id="svg_46"/>
+  <text x="600" y="503" text-anchor="middle" fill="#8b5cf6" font-size="9" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_47">Msg 2/4: STA → AP (SNonce + MIC)</text>
+  <rect x="370" y="510" width="280" height="14" rx="3" fill="#312e81" id="svg_48"/>
+  <text x="510" y="520" text-anchor="middle" fill="#c4b5fd" font-size="7" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_49">STA 和 AP 同时计算 PTK (ANonce + SNonce + PMK)</text>
+  <line x1="960" y1="534" x2="240" y2="534" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#arrow-purple-r)" id="svg_50"/>
+  <text x="600" y="531" text-anchor="middle" fill="#8b5cf6" font-size="9" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_51">Msg 3/4: AP → STA (GTK + MIC)</text>
+  <line x1="240" y1="550" x2="960" y2="550" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#arrow-purple-r)" id="svg_52"/>
+  <text x="600" y="547" text-anchor="middle" fill="#8b5cf6" font-size="9" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_53">Msg 4/4: STA → AP (ACK)</text>
+  <rect x="780" y="488" width="260" height="75" rx="6" fill="#1e1b4b" stroke="#7c3aed" id="svg_54"/>
+  <text x="910" y="505" text-anchor="middle" fill="#c4b5fd" font-size="9" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_55">MLD 密钥模型</text>
+  <text x="798" y="519" fill="#c4b5fd" font-size="8" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_56">PTK：MLD 级派生一次</text>
+  <text x="798" y="531" fill="#93c5fd" font-size="8" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_57">全 Link 共享 · 加密单播</text>
+  <text x="798" y="543" fill="#6ee7b7" font-size="8" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_58">GTK/IGTK/BIGTK：per-Link</text>
+  <text x="798" y="555" fill="#fdba74" font-size="8" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_59">各 affiliated AP 独立维护</text>
+  <rect x="50" y="580" width="1100" height="50" rx="8" fill="#065f46" stroke="#10b981" stroke-width="1.5" id="svg_60"/>
+  <text x="600" y="600" text-anchor="middle" fill="#10b981" font-size="12" font-weight="700" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_61">MLO 连接建立，多链路同时工作</text>
+  <text x="600" y="618" text-anchor="middle" fill="#6ee7b7" font-size="9" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_62">单播密钥 PTK 全 Link 共享；组播/管理帧密钥 GTK/IGTK/BIGTK 由各 affiliated AP per-Link 独立维护</text>
+  <rect stroke="#334155" x="50" y="640" width="1100" height="108" rx="8" fill="url(#card-grad)" id="svg_63"/>
+  <text x="70" y="658" fill="#e2e8f0" font-size="11" font-weight="700" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_64">MLD 密钥派生示意 — PTK 全 Link 共享 · GTK/IGTK/BIGTK per-Link</text>
+  <text x="100" y="678" fill="#94a3b8" font-size="9" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_65">Passphrase</text>
+  <text x="100" y="691" fill="#64748b" font-size="8" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_66">↓ PBKDF2</text>
+  <text x="100" y="704" fill="#94a3b8" font-size="9" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_67">PMK</text>
+  <text x="100" y="717" fill="#64748b" font-size="8" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_68">↓ 4-Way Handshake（MLD 级 · 仅 1 次）</text>
+  <text x="100" y="733" fill="#c4b5fd" font-size="9" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_69">PTK（单播密钥 · 全 Link 共享，无 per-Link 变体）</text>
+  <text x="390" y="676" fill="#a78bfa" font-size="9" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_70">GTK / IGTK / BIGTK — per-Link（不由 PTK 派生）</text>
+  <rect x="390" y="688" width="225" height="44" rx="4" fill="#0f172a" stroke="#3b82f6" id="svg_71"/>
+  <text x="502" y="704" text-anchor="middle" fill="#93c5fd" font-size="9" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_72">GTK/IGTK/BIGTK</text>
+  <text x="502" y="718" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_73">Link 1 (2.4G) · affiliated AP1</text>
+  <rect x="630" y="688" width="225" height="44" rx="4" fill="#0f172a" stroke="#10b981" id="svg_74"/>
+  <text x="742" y="704" text-anchor="middle" fill="#6ee7b7" font-size="9" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_75">GTK/IGTK/BIGTK</text>
+  <text x="742" y="718" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_76">Link 2 (5G) · affiliated AP2</text>
+  <rect x="870" y="688" width="225" height="44" rx="4" fill="#0f172a" stroke="#f97316" id="svg_77"/>
+  <text x="982" y="704" text-anchor="middle" fill="#fdba74" font-size="9" font-weight="600" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_78">GTK/IGTK/BIGTK</text>
+  <text x="982" y="718" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_79">Link 3 (6G) · affiliated AP3</text>
+  <rect x="50" y="758" width="1100" height="30" rx="6" fill="#1e1b4b" stroke="#7c3aed" id="svg_83"/>
+  <text x="600" y="778" text-anchor="middle" fill="#c4b5fd" font-size="10" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', 'Microsoft YaHei', 'SimHei', monospace" id="svg_84">释义：Auth 1次 + Assoc per-link + 4-Way 1次 + PTK 全 Link 共享、组播密钥 per-Link = 高效安全的多链路连接</text>
+ </g>
+</svg>
