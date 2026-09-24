@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 700" width="1120" height="700">
+<!-- validate: skip-gap-consistency -->
+<style>text{font-family:'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif;}</style>
+<defs>
+<linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f0f1a"/><stop offset="100%" stop-color="#1a1a2e"/></linearGradient>
+<marker id="arr-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#10b981"/></marker>
+</defs>
+<rect width="1120" height="700" fill="url(#bg-grad)"/>
+<text x="560" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#e2e8f0">DPP 事件回传链：supplicant → HAL → Framework → App</text>
+<text x="560" y="52" text-anchor="middle" font-size="10" fill="#64748b">绿箭头 = 回传事件流 · 橙虚线 = 进程 / AIDL 边界</text>
+<rect x="15" y="65" width="1090" height="105" rx="8" fill="#0f172a" opacity="0.28" stroke="#1e293b" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="25" y="84" font-size="11" font-weight="bold" fill="#cbd5e1">wpa_supplicant</text>
+<text x="25" y="99" font-size="9" fill="#64748b">（C 世界）</text>
+<rect x="15" y="205" width="1090" height="105" rx="8" fill="#0f172a" opacity="0.28" stroke="#1e293b" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="25" y="224" font-size="11" font-weight="bold" fill="#cbd5e1">HAL / AIDL</text>
+<text x="25" y="239" font-size="9" fill="#64748b">supplicant 回调</text>
+<rect x="15" y="345" width="1090" height="105" rx="8" fill="#0f172a" opacity="0.28" stroke="#1e293b" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="25" y="364" font-size="11" font-weight="bold" fill="#cbd5e1">Framework</text>
+<text x="25" y="379" font-size="9" fill="#64748b">DppManager</text>
+<rect x="15" y="485" width="1090" height="155" rx="8" fill="#0f172a" opacity="0.28" stroke="#1e293b" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="25" y="504" font-size="11" font-weight="bold" fill="#cbd5e1">App</text>
+<text x="25" y="519" font-size="9" fill="#64748b">EasyConnect 回调</text>
+<line x1="15" y1="188" x2="1105" y2="188" stroke="#f97316" stroke-width="1" stroke-dasharray="7,5"/>
+<text x="25" y="182" font-size="9" fill="#f97316">AIDL（ISupplicantStaIfaceCallback）</text>
+<line x1="15" y1="468" x2="1105" y2="468" stroke="#f97316" stroke-width="1" stroke-dasharray="7,5"/>
+<text x="25" y="462" font-size="9" fill="#f97316">Binder（IDppCallback）</text>
+<rect x="170.0" y="90" width="220" height="56" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="170.0" y="90" width="220" height="3" rx="1.5" fill="#10b981"/>
+<text x="280" y="122" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">DPP-AUTH-SUCCESS</text>
+<rect x="408.0" y="90" width="220" height="56" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="408.0" y="90" width="220" height="3" rx="1.5" fill="#3b82f6"/>
+<text x="518" y="122" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">DPP-CONF-SENT</text>
+<rect x="646.0" y="90" width="220" height="56" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="646.0" y="90" width="220" height="3" rx="1.5" fill="#a855f7"/>
+<text x="756" y="110" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">DPP-CONF-RECEIVED</text>
+<text x="756" y="128" text-anchor="middle" style="font-size:9px" fill="#94a3b8">DPP-NETWORK-ID</text>
+<rect x="884.0" y="90" width="220" height="56" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="884.0" y="90" width="220" height="3" rx="1.5" fill="#ef4444"/>
+<text x="994" y="110" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">DPP-* 失败事件</text>
+<text x="994" y="128" text-anchor="middle" style="font-size:9px" fill="#94a3b8">supplicant 事件</text>
+<rect x="170.0" y="230" width="220" height="56" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="170.0" y="230" width="220" height="3" rx="1.5" fill="#10b981"/>
+<text x="280" y="250" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">onDppProgress</text>
+<text x="280" y="268" text-anchor="middle" style="font-size:9px" fill="#94a3b8">AUTHENTICATION_SUCCESS</text>
+<rect x="408.0" y="230" width="220" height="56" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="408.0" y="230" width="220" height="3" rx="1.5" fill="#3b82f6"/>
+<text x="518" y="250" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">onDppSuccessConfigSent</text>
+<text x="518" y="268" text-anchor="middle" style="font-size:9px" fill="#94a3b8">CONFIGURATION_SENT</text>
+<rect x="646.0" y="230" width="220" height="56" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="646.0" y="230" width="220" height="3" rx="1.5" fill="#a855f7"/>
+<text x="756" y="250" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">onDppConfigReceived</text>
+<text x="756" y="268" text-anchor="middle" style="font-size:9px" fill="#94a3b8">DppConfigurationData</text>
+<rect x="884.0" y="230" width="220" height="56" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="884.0" y="230" width="220" height="3" rx="1.5" fill="#ef4444"/>
+<text x="994" y="250" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">onDppFailure</text>
+<text x="994" y="268" text-anchor="middle" style="font-size:9px" fill="#94a3b8">DppFailureCode</text>
+<rect x="170.0" y="370" width="220" height="56" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="170.0" y="370" width="220" height="3" rx="1.5" fill="#10b981"/>
+<text x="280" y="390" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">DppManager.onProgress</text>
+<text x="280" y="408" text-anchor="middle" style="font-size:9px" fill="#94a3b8">进度转发</text>
+<rect x="408.0" y="370" width="220" height="56" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="408.0" y="370" width="220" height="3" rx="1.5" fill="#3b82f6"/>
+<text x="518" y="390" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">DppManager.onSuccess</text>
+<text x="518" y="408" text-anchor="middle" style="font-size:9px" fill="#94a3b8">CONFIGURATION_SENT / APPLIED</text>
+<rect x="646.0" y="370" width="220" height="56" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="646.0" y="370" width="220" height="3" rx="1.5" fill="#a855f7"/>
+<text x="756" y="390" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">DppManager.onSuccessConfigReceived</text>
+<text x="756" y="408" text-anchor="middle" style="font-size:9px" fill="#94a3b8">WifiConfigManager 落库</text>
+<rect x="884.0" y="370" width="220" height="56" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="884.0" y="370" width="220" height="3" rx="1.5" fill="#ef4444"/>
+<text x="994" y="390" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">DppManager.onFailure</text>
+<text x="994" y="408" text-anchor="middle" style="font-size:9px" fill="#94a3b8">HAL 码 → App 码</text>
+<rect x="170.0" y="510" width="220" height="40" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="170.0" y="510" width="220" height="3" rx="1.5" fill="#10b981"/>
+<text x="280" y="530" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">EasyConnectCallbackProxy</text>
+<text x="280" y="548" text-anchor="middle" style="font-size:9px" fill="#94a3b8">onProgress</text>
+<rect x="408.0" y="510" width="220" height="40" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="408.0" y="510" width="220" height="3" rx="1.5" fill="#3b82f6"/>
+<text x="518" y="530" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">EasyConnectCallbackProxy</text>
+<text x="518" y="548" text-anchor="middle" style="font-size:9px" fill="#94a3b8">onSuccess</text>
+<rect x="646.0" y="510" width="220" height="40" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="646.0" y="510" width="220" height="3" rx="1.5" fill="#a855f7"/>
+<text x="756" y="530" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">EasyConnectCallbackProxy</text>
+<text x="756" y="548" text-anchor="middle" style="font-size:9px" fill="#94a3b8">onSuccessConfigReceived</text>
+<rect x="884.0" y="510" width="220" height="40" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="884.0" y="510" width="220" height="3" rx="1.5" fill="#ef4444"/>
+<text x="994" y="530" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">EasyConnectCallbackProxy</text>
+<text x="994" y="548" text-anchor="middle" style="font-size:9px" fill="#94a3b8">onFailure</text>
+<rect x="170.0" y="566" width="220" height="58" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="170.0" y="566" width="220" height="3" rx="1.5" fill="#10b981"/>
+<text x="280" y="586" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">EasyConnectStatusCallback</text>
+<text x="280" y="600" text-anchor="middle" style="font-size:9px" fill="#94a3b8">onProgress</text>
+<text x="280" y="615" text-anchor="middle" style="font-size:9px" fill="#94a3b8">进度通知</text>
+<rect x="408.0" y="566" width="220" height="58" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="408.0" y="566" width="220" height="3" rx="1.5" fill="#3b82f6"/>
+<text x="518" y="586" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">EasyConnectStatusCallback</text>
+<text x="518" y="600" text-anchor="middle" style="font-size:9px" fill="#94a3b8">onConfiguratorSuccess</text>
+<text x="518" y="615" text-anchor="middle" style="font-size:9px" fill="#94a3b8">0 = CONFIGURATION_SENT</text>
+<rect x="646.0" y="566" width="220" height="58" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="646.0" y="566" width="220" height="3" rx="1.5" fill="#a855f7"/>
+<text x="756" y="586" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">EasyConnectStatusCallback</text>
+<text x="756" y="600" text-anchor="middle" style="font-size:9px" fill="#94a3b8">onEnrolleeSuccess</text>
+<text x="756" y="615" text-anchor="middle" style="font-size:9px" fill="#94a3b8">1 = CONFIGURATION_APPLIED</text>
+<rect x="884.0" y="566" width="220" height="58" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<rect x="884.0" y="566" width="220" height="3" rx="1.5" fill="#ef4444"/>
+<text x="994" y="586" text-anchor="middle" style="font-size:10px" font-weight="bold" fill="#e2e8f0">EasyConnectStatusCallback</text>
+<text x="994" y="600" text-anchor="middle" style="font-size:9px" fill="#94a3b8">onFailure</text>
+<text x="994" y="615" text-anchor="middle" style="font-size:9px" fill="#94a3b8">失败码 -1 ~ -13</text>
+<line x1="280" y1="148" x2="280" y2="230" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<line x1="280" y1="288" x2="280" y2="370" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<line x1="280" y1="428" x2="280" y2="510" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<line x1="280" y1="550" x2="280" y2="566" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<line x1="518" y1="148" x2="518" y2="230" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<line x1="518" y1="288" x2="518" y2="370" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<line x1="518" y1="428" x2="518" y2="510" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<line x1="518" y1="550" x2="518" y2="566" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<line x1="756" y1="148" x2="756" y2="230" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<line x1="756" y1="288" x2="756" y2="370" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<line x1="756" y1="428" x2="756" y2="510" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<line x1="756" y1="550" x2="756" y2="566" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<line x1="994" y1="148" x2="994" y2="230" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<line x1="994" y1="288" x2="994" y2="370" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<line x1="994" y1="428" x2="994" y2="510" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<line x1="994" y1="550" x2="994" y2="566" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<rect x="390" y="662" width="12" height="12" rx="2" fill="#10b981" opacity="0.8"/>
+<text x="408" y="672" font-size="10" fill="#cbd5e1">回传事件流</text>
+<line x1="540" y1="668" x2="600" y2="668" stroke="#f97316" stroke-width="1.5" stroke-dasharray="7,5"/>
+<text x="606" y="672" font-size="10" fill="#cbd5e1">进程 / AIDL 边界</text>
+</svg>

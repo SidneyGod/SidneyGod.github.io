@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640">
+<style>
+text { font-family: 'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif; }
+</style>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f0f1a"/><stop offset="100%" stop-color="#16162b"/></linearGradient>
+<marker id="m-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#3b82f6"/></marker>
+<marker id="m-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#10b981"/></marker>
+</defs>
+<rect width="1000" height="640" fill="url(#bg)"/>
+<text x="500" y="34" text-anchor="middle" font-size="18" fill="#e2e8f0" font-weight="bold">标准 GO Negotiation vs Autonomous GO</text>
+<text x="500" y="56" text-anchor="middle" font-size="12" fill="#94a3b8" font-weight="normal">Autonomous GO 跳过 Find / Provision Discovery / GO Neg，WPS 只在 GO 侧启动</text>
+<rect x="40" y="84" width="430" height="412" rx="10" fill="#0f172a" stroke="#3b82f6" stroke-width="1.2"/>
+<rect x="530" y="84" width="430" height="412" rx="10" fill="#0f172a" stroke="#10b981" stroke-width="1.2"/>
+<text x="255" y="106" text-anchor="middle" font-size="15" fill="#3b82f6" font-weight="bold">标准流程（GO Negotiation）</text>
+<text x="745" y="106" text-anchor="middle" font-size="15" fill="#10b981" font-weight="bold">Autonomous GO（不谈判直接建组）</text>
+<line x1="40" y1="116" x2="470" y2="116" stroke="#334155" stroke-width="1" opacity="0.6"/>
+<line x1="530" y1="116" x2="960" y2="116" stroke="#334155" stroke-width="1" opacity="0.6"/>
+<rect x="60" y="124" width="390" height="56" rx="8" fill="#0f172a" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="255" y="158" text-anchor="middle" font-size="12" fill="#e2e8f0" font-weight="bold">① Find —— 发现 peer 设备</text>
+<rect x="60" y="200" width="390" height="56" rx="8" fill="#0f172a" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="255" y="234" text-anchor="middle" font-size="12" fill="#e2e8f0" font-weight="bold">② Provision Discovery</text>
+<rect x="60" y="276" width="390" height="56" rx="8" fill="#0f172a" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="255" y="310" text-anchor="middle" font-size="12" fill="#e2e8f0" font-weight="bold">③ GO Negotiation（Req → Resp → Confirm）</text>
+<rect x="60" y="352" width="390" height="56" rx="8" fill="#0f172a" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="255" y="386" text-anchor="middle" font-size="12" fill="#e2e8f0" font-weight="bold">④ WPS（GO + Client 双方参与）</text>
+<rect x="60" y="428" width="390" height="56" rx="8" fill="#0f172a" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="255" y="462" text-anchor="middle" font-size="12" fill="#e2e8f0" font-weight="bold">⑤ Group Formation</text>
+<rect x="550" y="124" width="390" height="56" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+<text x="745" y="146" text-anchor="middle" font-size="12" fill="#e2e8f0" font-weight="bold">① createGroup()</text>
+<text x="745" y="166" text-anchor="middle" font-size="11" fill="#94a3b8" font-weight="normal">WifiP2pManager.createGroup</text>
+<rect x="550" y="276" width="390" height="56" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+<text x="745" y="298" text-anchor="middle" font-size="12" fill="#e2e8f0" font-weight="bold">② wpas_p2p_group_add()</text>
+<text x="745" y="318" text-anchor="middle" font-size="11" fill="#94a3b8" font-weight="normal">直接建组，跳过谈判</text>
+<rect x="550" y="352" width="390" height="56" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+<text x="745" y="374" text-anchor="middle" font-size="12" fill="#e2e8f0" font-weight="bold">③ 启动 WPS GO</text>
+<text x="745" y="394" text-anchor="middle" font-size="11" fill="#94a3b8" font-weight="normal">wpas_start_wps_go（等 Client）</text>
+<rect x="550" y="428" width="390" height="56" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.5" stroke-dasharray="4,3"/>
+<text x="745" y="450" text-anchor="middle" font-size="12" fill="#e2e8f0" font-weight="bold">④ Group Formation</text>
+<text x="745" y="470" text-anchor="middle" font-size="11" fill="#94a3b8" font-weight="normal">Client 加入后自动完成</text>
+<line x1="255" y1="180" x2="255" y2="194" stroke="#3b82f6" stroke-width="1.6" marker-end="url(#m-blue)" fill="none"/>
+<line x1="255" y1="256" x2="255" y2="270" stroke="#3b82f6" stroke-width="1.6" marker-end="url(#m-blue)" fill="none"/>
+<line x1="255" y1="332" x2="255" y2="346" stroke="#3b82f6" stroke-width="1.6" marker-end="url(#m-blue)" fill="none"/>
+<line x1="255" y1="408" x2="255" y2="422" stroke="#3b82f6" stroke-width="1.6" marker-end="url(#m-blue)" fill="none"/>
+<line x1="745" y1="180" x2="745" y2="264" stroke="#10b981" stroke-width="1.6" marker-end="url(#m-green)" fill="none"/>
+<line x1="745" y1="332" x2="745" y2="340" stroke="#10b981" stroke-width="1.6" marker-end="url(#m-green)" fill="none"/>
+<line x1="745" y1="408" x2="745" y2="416" stroke="#10b981" stroke-width="1.6" marker-end="url(#m-green)" fill="none"/>
+<line x1="491" y1="143" x2="509" y2="161" stroke="#ef4444" stroke-width="3" fill="none"/>
+<line x1="491" y1="161" x2="509" y2="143" stroke="#ef4444" stroke-width="3" fill="none"/>
+<text x="500" y="176" text-anchor="middle" font-size="11" fill="#ef4444" font-weight="bold">跳过</text>
+<line x1="491" y1="219" x2="509" y2="237" stroke="#ef4444" stroke-width="3" fill="none"/>
+<line x1="491" y1="237" x2="509" y2="219" stroke="#ef4444" stroke-width="3" fill="none"/>
+<text x="500" y="252" text-anchor="middle" font-size="11" fill="#ef4444" font-weight="bold">跳过</text>
+<line x1="491" y1="295" x2="509" y2="313" stroke="#ef4444" stroke-width="3" fill="none"/>
+<line x1="491" y1="313" x2="509" y2="295" stroke="#ef4444" stroke-width="3" fill="none"/>
+<text x="500" y="328" text-anchor="middle" font-size="11" fill="#ef4444" font-weight="bold">跳过</text>
+<rect x="470" y="366" width="60" height="28" rx="14" fill="#1a1a2e" stroke="#eab308" stroke-width="1.2"/>
+<text x="500" y="385" text-anchor="middle" font-size="11" fill="#eab308" font-weight="bold">仅 GO 侧</text>
+<text x="500" y="460" text-anchor="middle" font-size="11" fill="#10b981" font-weight="bold">等价</text>
+<text x="500" y="556" text-anchor="middle" font-size="12" fill="#94a3b8" font-weight="normal">省掉 Find（2-5s）+ Provision Discovery + GO Neg 三轮握手，总耗时从 5-15s 压缩到秒级</text>
+<text x="500" y="578" text-anchor="middle" font-size="12" fill="#64748b" font-weight="normal">Autonomous GO 面向"权力不对称"场景：Miracast Source / 开放热点，角色在设计期已确定</text>
+</svg>

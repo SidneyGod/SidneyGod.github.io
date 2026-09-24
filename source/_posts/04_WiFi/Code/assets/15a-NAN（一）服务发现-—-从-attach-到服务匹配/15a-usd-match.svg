@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 780" width="1180" height="780">
+<style>
+  text { font-family: 'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif; }
+</style>
+<defs>
+  <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#0f0f1a"/>
+    <stop offset="100%" stop-color="#1a1a2e"/>
+  </linearGradient>
+  <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0 0, 8 3, 0 6" fill="#38bdf8"/>
+  </marker>
+  <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0 0, 8 3, 0 6" fill="#34d399"/>
+  </marker>
+  <marker id="arrowOrange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0 0, 8 3, 0 6" fill="#f97316"/>
+  </marker>
+</defs>
+<rect x="0" y="0" width="1180" height="780" fill="url(#bg-grad)"/>
+<text x="590" y="30" font-size="18px" font-weight="bold" fill="#e2e8f0" text-anchor="middle">USD 三种邂逅：Publish 广播 / Solicited 应答 / Follow-up 传话</text>
+<text x="590" y="49" font-size="11px" fill="#94a3b8" text-anchor="middle">Publisher（本机）↔ Subscriber（对端）· nan_de_* 收发函数 · 蓝=Publish 绿=Follow-up 橙=pauseState</text>
+<rect x="180" y="70" width="240" height="40" rx="6" ry="6" fill="#101a2e" stroke="#38bdf8" stroke-width="1.2"/>
+<text x="300" y="95" font-size="13px" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Publisher（本机）</text>
+<rect x="760" y="70" width="240" height="40" rx="6" ry="6" fill="#101a2e" stroke="#a855f7" stroke-width="1.2"/>
+<text x="880" y="95" font-size="13px" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Subscriber（对端）</text>
+<line x1="300" y1="110" x2="300" y2="690" stroke="#475569" stroke-width="1" stroke-dasharray="4,4"/>
+<line x1="880" y1="110" x2="880" y2="690" stroke="#475569" stroke-width="1" stroke-dasharray="4,4"/>
+<path d="M 300,180 L 880,180" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<text x="590" y="172" font-size="12px" font-weight="bold" fill="#38bdf8" text-anchor="middle">① unsolicited Publish（广播）</text>
+<text x="590" y="198" font-size="10px" fill="#7dd3fc" text-anchor="middle">nan_de_tx_sdf()</text>
+<text x="880" y="216" font-size="9px" fill="#94a3b8" text-anchor="middle">收到后按模式分叉</text>
+<path d="M 880,232 L 300,232" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<text x="590" y="224" font-size="11px" font-weight="bold" fill="#38bdf8" text-anchor="middle">active：回 Subscribe</text>
+<text x="590" y="250" font-size="9.5px" fill="#7dd3fc" text-anchor="middle">nan_de_rx_publish → nan_de_tx_multicast</text>
+<path d="M 880,278 L 300,278" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<text x="590" y="270" font-size="11px" font-weight="bold" fill="#38bdf8" text-anchor="middle">passive：回 Follow-up（无 SSI）</text>
+<text x="590" y="296" font-size="9.5px" fill="#7dd3fc" text-anchor="middle">nan_de_transmit</text>
+<rect x="110" y="300" width="180" height="24" rx="4" ry="4" fill="#101a2e" stroke="#38bdf8" stroke-width="1.2"/>
+<text x="200" y="317" font-size="9.5px" fill="#7dd3fc" text-anchor="middle">nan_de_rx_subscribe()</text>
+<path d="M 290,312 L 299,312" stroke="#38bdf8" stroke-width="1.5" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 300,340 L 880,340" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<text x="590" y="332" font-size="12px" font-weight="bold" fill="#38bdf8" text-anchor="middle">② solicited Publish（应答广播）</text>
+<text x="590" y="358" font-size="9.5px" fill="#7dd3fc" text-anchor="middle">nan_de_rx_subscribe() 触发 · nan_de_filter_match() 判定</text>
+<rect x="780" y="372" width="200" height="36" rx="4" ry="4" fill="#101a2e" stroke="#a855f7" stroke-width="1.2"/>
+<text x="880" y="390" font-size="10px" font-weight="bold" fill="#e2e8f0" text-anchor="middle">DiscoveryResult</text>
+<text x="880" y="405" font-size="9px" fill="#a855f7" text-anchor="middle">cb.discovery_result</text>
+<path d="M 300,440 L 880,440" stroke="#34d399" stroke-width="2" fill="none" marker-end="url(#arrowGreen)" stroke-dasharray="6,4"/>
+<text x="590" y="432" font-size="12px" font-weight="bold" fill="#34d399" text-anchor="middle">③ Follow-up + SSI（双向传信息）</text>
+<path d="M 880,475 L 300,475" stroke="#34d399" stroke-width="2" fill="none" marker-end="url(#arrowGreen)" stroke-dasharray="6,4"/>
+<text x="590" y="493" font-size="9.5px" fill="#6ee7b7" text-anchor="middle">nan_de_rx_follow_up() → cb.receive</text>
+<rect x="110" y="330" width="180" height="190" rx="8" ry="8" fill="#2a1608" stroke="#f97316" stroke-width="1.5"/>
+<text x="200" y="356" font-size="12px" font-weight="bold" fill="#f97316" text-anchor="middle">pauseState（60s）</text>
+<text x="200" y="374" font-size="9.5px" fill="#fdba74" text-anchor="middle">nan_de_pause_state()</text>
+<line x1="120" y1="386" x2="280" y2="386" stroke="#f97316" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="200" y="406" font-size="9px" fill="#fdba74" text-anchor="middle">触发：收到 Subscribe</text>
+<text x="200" y="424" font-size="9px" fill="#fdba74" text-anchor="middle">或无 SSI Follow-up</text>
+<text x="200" y="448" font-size="9px" fill="#fdba74" text-anchor="middle">效果：60s 停在当前频道</text>
+<text x="200" y="466" font-size="9px" fill="#fdba74" text-anchor="middle">只与触发方继续对话</text>
+<path d="M 290,400 L 297,400" stroke="#f97316" stroke-width="1.5" fill="none" marker-end="url(#arrowOrange)"/>
+<text x="60" y="700" font-size="13px" font-weight="bold" fill="#e2e8f0" text-anchor="start">图例 · 颜色语义</text>
+<line x1="60" y1="714" x2="100" y2="714" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+<text x="108" y="718" font-size="11px" fill="#94a3b8" text-anchor="start">Publish 广播（单向）</text>
+<line x1="340" y1="714" x2="390" y2="714" stroke="#34d399" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrowGreen)"/>
+<text x="398" y="718" font-size="11px" fill="#94a3b8" text-anchor="start">Follow-up 双向传信息</text>
+<rect x="640" y="708" width="14" height="14" rx="3" ry="3" fill="#2a1608" stroke="#f97316" stroke-width="1.2"/>
+<text x="664" y="718" font-size="11px" fill="#94a3b8" text-anchor="start">pauseState 控制</text>
+<text x="60" y="744" font-size="9.5px" fill="#64748b" text-anchor="start">① unsolicited：发帧 nan_de_tx_sdf；对端 active 回 Subscribe（nan_de_tx_multicast）、passive 回 Follow-up 无 SSI（nan_de_transmit）</text>
+<text x="60" y="762" font-size="9.5px" fill="#64748b" text-anchor="start">② solicited：nan_de_rx_subscribe 收到 Subscribe 后经 nan_de_filter_match 判定回 solicited Publish → cb.discovery_result；③ Follow-up 带 SSI → cb.receive</text>
+</svg>

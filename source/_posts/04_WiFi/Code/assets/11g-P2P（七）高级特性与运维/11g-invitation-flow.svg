@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+<style>
+text { font-family: 'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif; }
+</style>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f0f1a"/><stop offset="100%" stop-color="#16162b"/></linearGradient>
+<marker id="m-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#3b82f6"/></marker>
+<marker id="m-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#10b981"/></marker>
+<marker id="m-purple" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#a855f7"/></marker>
+<marker id="m-gold" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#eab308"/></marker>
+</defs>
+<rect width="960" height="600" fill="url(#bg)"/>
+<text x="480" y="36" text-anchor="middle" font-size="18" fill="#e2e8f0" font-weight="bold">Invitation 两帧秒重连</text>
+<text x="480" y="60" text-anchor="middle" font-size="12" fill="#94a3b8" font-weight="normal">Persistent Group Re-invoke —— Type=1（重新激活持久组）</text>
+<rect x="110" y="82" width="300" height="50" rx="8" fill="#0f172a" stroke="#3b82f6" stroke-width="1.5"/>
+<rect x="110" y="82" width="300" height="4" rx="2" fill="#3b82f6"/>
+<text x="260" y="103" text-anchor="middle" font-size="13" fill="#e2e8f0" font-weight="bold">发起方（Inviter）</text>
+<text x="260" y="121" text-anchor="middle" font-size="11" fill="#94a3b8" font-weight="normal">wpas_p2p_invite() → p2p_invite_send()</text>
+<rect x="505" y="82" width="395" height="50" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+<rect x="550" y="82" width="300" height="4" rx="2" fill="#10b981"/>
+<text x="700" y="103" text-anchor="middle" font-size="13" fill="#e2e8f0" font-weight="bold">被邀请方（Invitee）</text>
+<text x="700" y="121" text-anchor="middle" font-size="11" fill="#94a3b8" font-weight="normal">p2p_process_invitation_req() → wpas_invitation_process()</text>
+<line x1="260" y1="132" x2="260" y2="520" stroke="#3b82f6" stroke-width="1" stroke-dasharray="5,5" opacity="0.25"/>
+<line x1="700" y1="132" x2="700" y2="520" stroke="#10b981" stroke-width="1" stroke-dasharray="5,5" opacity="0.25"/>
+<rect x="256" y="196" width="8" height="108" rx="2" fill="#3b82f6" stroke="none" stroke-width="1.5" opacity="0.25"/>
+<rect x="696" y="196" width="8" height="108" rx="2" fill="#10b981" stroke="none" stroke-width="1.5" opacity="0.25"/>
+<line x1="260" y1="196" x2="692" y2="196" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#m-blue)"/>
+<text x="476" y="186" text-anchor="middle" font-size="13" fill="#3b82f6" font-weight="bold">① Invitation Request（Type=1）</text>
+<text x="476" y="214" text-anchor="middle" font-size="12" fill="#94a3b8" font-weight="normal">Group ID = GO DevAddr + SSID · Operating Channel · Channel List</text>
+<line x1="700" y1="304" x2="268" y2="304" stroke="#10b981" stroke-width="1.8" marker-end="url(#m-green)"/>
+<text x="476" y="294" text-anchor="middle" font-size="13" fill="#10b981" font-weight="bold">② Invitation Response（Status=0 成功 / 8 未知组）</text>
+<rect x="550" y="326" width="300" height="46" rx="8" fill="#1a1a2e" stroke="#eab308" stroke-width="1.2" stroke-dasharray="4,3"/>
+<text x="700" y="346" text-anchor="middle" font-size="12" fill="#eab308" font-weight="bold">100ms 应答时限</text>
+<text x="700" y="362" text-anchor="middle" font-size="11" fill="#cbd5e1" font-weight="normal">被邀请方须在 100ms 内回复 Response</text>
+<rect x="140" y="402" width="680" height="118" rx="8" fill="#0f172a" stroke="#a855f7" stroke-width="1.2" stroke-dasharray="5,3"/>
+<text x="152" y="420" text-anchor="start" font-size="12" fill="#a855f7" font-weight="bold">③ Group Formation（跳过 WPS）</text>
+<line x1="260" y1="460" x2="692" y2="460" stroke="#a855f7" stroke-width="1.8" marker-end="url(#m-purple)"/>
+<text x="476" y="448" text-anchor="middle" font-size="13" fill="#a855f7" font-weight="bold">Auth / Assoc / 四次握手（使用已存 PSK）</text>
+<text x="476" y="478" text-anchor="middle" font-size="12" fill="#94a3b8" font-weight="normal">跳过 WPS —— PSK 已在 Persistent Group 配置中</text>
+</svg>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 700" width="1280" height="700">
+<!-- validate: skip-gap-consistency -->
+<style>
+  text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; letter-spacing: 0.02em; }
+  .arrow-blue { fill:none; stroke:#3b82f6; stroke-width:2; marker-end:url(#arrow-blue); }
+  .arrow-green { fill:none; stroke:#10b981; stroke-width:2; marker-end:url(#arrow-green); }
+</style>
+<defs>
+<linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#0f0f1a"/>
+<stop offset="100%" stop-color="#1a1a2e"/>
+</linearGradient>
+<marker id="arrow-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+<polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/>
+</marker>
+<marker id="arrow-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+<polygon points="0 0, 8 3, 0 6" fill="#10b981"/>
+</marker>
+</defs>
+<rect width="1280" height="700" fill="url(#bg-grad)"/>
+<text x="640" y="28" text-anchor="middle" font-size="18" font-weight="700" fill="#e2e8f0">QCOM vs MTK：RTT 下发与固件回传路径对比</text>
+<text x="640" y="48" text-anchor="middle" font-size="12" fill="#94a3b8">蓝 = 命令下发 · 绿 = 固件回传 · 对比焦点：发起端位置不同 / 回传形态不同（时间戳 vs 距离现成）</text>
+<line x1="640" y1="70" x2="640" y2="550" stroke="#334155" stroke-width="1" stroke-dasharray="4,4"/>
+<rect x="55" y="70" width="580" height="46" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+<text x="345" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#60a5fa">QCOM（瘦主机胖固件 / 引擎驱动）</text>
+<rect x="645" y="70" width="580" height="46" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+<text x="935" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#fb923c">MTK（主机组命令 / 固件算距离）</text>
+<path class="arrow-blue" d="M 345 116 V 125 H 240 V 136"/>
+<path class="arrow-blue" d="M 935 116 V 125 H 1090 V 136"/>
+<rect x="60" y="136" width="360" height="42" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="240" y="163" text-anchor="middle" font-size="11" fill="#e2e8f0">rtt.cpp:wifi_rtt_range_request</text>
+<path class="arrow-blue" d="M 240 178 V 198"/>
+<rect x="60" y="198" width="360" height="42" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="240" y="225" text-anchor="middle" font-size="11" fill="#e2e8f0">getLowiCallbackTable</text>
+<path class="arrow-blue" d="M 240 240 V 260"/>
+<rect x="60" y="260" width="360" height="42" rx="6" fill="#0f172a" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="6,4"/>
+<text x="240" y="286" text-anchor="middle" font-size="11.5" fill="#60a5fa">LOWI（闭源定位引擎）</text>
+<rect x="335" y="264" width="78" height="18" rx="9" fill="#0f172a" stroke="#eab308" stroke-width="1"/>
+<text x="374" y="277" text-anchor="middle" font-size="9.5" fill="#fcd34d">不在开源树</text>
+<path class="arrow-blue" d="M 240 302 V 322"/>
+<rect x="60" y="322" width="360" height="42" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="240" y="342" text-anchor="middle" font-size="11" fill="#e2e8f0">wifi_pos（ucfg_wifi_pos_process_req）</text>
+<text x="240" y="360" text-anchor="middle" font-size="10" fill="#94a3b8">responder + OEM + PASN</text>
+<path class="arrow-blue" d="M 240 364 V 384"/>
+<rect x="60" y="384" width="360" height="42" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="240" y="411" text-anchor="middle" font-size="11" fill="#e2e8f0">WMI（下发固件）</text>
+<path class="arrow-blue" d="M 240 426 V 460"/>
+<rect x="440" y="322" width="190" height="42" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="535" y="342" text-anchor="middle" font-size="10.5" fill="#34d399">wmi_host_rtt_meas_event</text>
+<text x="535" y="358" text-anchor="middle" font-size="10" fill="#a7f3d0">（tod/toa/t3/t4）</text>
+<path class="arrow-green" d="M 535 460 V 364"/>
+<text x="523" y="420" text-anchor="end" font-size="10" fill="#34d399">回传</text>
+<rect x="60" y="460" width="570" height="90" rx="6" fill="#0b1220" stroke="#10b981" stroke-width="1.5"/>
+<text x="345" y="486" text-anchor="middle" font-size="12" font-weight="700" fill="#34d399">固件（QCOM）：FTM 帧交换 + T1-T4</text>
+<text x="345" y="508" text-anchor="middle" font-size="11" fill="#cbd5e1">回传形态：tod/toa/t3/t4 —— 四个 0.1ns 时间戳</text>
+<text x="345" y="530" text-anchor="middle" font-size="11" fill="#94a3b8">（距离在主机上算，固件只给时间戳）</text>
+<rect x="650" y="322" width="240" height="42" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="770" y="342" text-anchor="middle" font-size="10.5" fill="#34d399">EVENT_RTT_RESULT</text>
+<text x="770" y="358" text-anchor="middle" font-size="10" fill="#a7f3d0">（i4DistanceMM）</text>
+<path class="arrow-green" d="M 770 322 V 302"/>
+<rect x="650" y="260" width="240" height="42" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="770" y="287" text-anchor="middle" font-size="11" fill="#34d399">rttEventResult</text>
+<path class="arrow-green" d="M 770 260 V 240"/>
+<rect x="650" y="198" width="240" height="42" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="770" y="225" text-anchor="middle" font-size="11" fill="#34d399">rttEventDone</text>
+<path class="arrow-green" d="M 770 198 V 178"/>
+<rect x="650" y="136" width="240" height="42" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="770" y="156" text-anchor="middle" font-size="10.5" fill="#34d399">rttReportDone（4 秒超时）</text>
+<text x="770" y="172" text-anchor="middle" font-size="9.5" fill="#a7f3d0">（RTT_REQUEST_DONE_TIMEOUT_SEC）</text>
+<path class="arrow-green" d="M 770 460 V 364"/>
+<text x="758" y="420" text-anchor="end" font-size="10" fill="#34d399">回传</text>
+<rect x="910" y="136" width="360" height="42" rx="6" fill="#1e1b4b" stroke="#ea580c" stroke-width="1.5"/>
+<text x="1090" y="163" text-anchor="middle" font-size="10.5" fill="#e2e8f0">gl_vendor.c:mtk_cfg80211_vendor_set_rtt_config</text>
+<path class="arrow-blue" d="M 1090 178 V 198"/>
+<rect x="910" y="198" width="360" height="42" rx="6" fill="#1e1b4b" stroke="#ea580c" stroke-width="1.5"/>
+<text x="1090" y="225" text-anchor="middle" font-size="11" fill="#e2e8f0">rttHandleRttRequest</text>
+<path class="arrow-blue" d="M 1090 240 V 260"/>
+<rect x="910" y="260" width="360" height="42" rx="6" fill="#1e1b4b" stroke="#ea580c" stroke-width="1.5"/>
+<text x="1090" y="287" text-anchor="middle" font-size="11" fill="#e2e8f0">rttStartRttRequest</text>
+<path class="arrow-blue" d="M 1090 302 V 322"/>
+<rect x="910" y="322" width="360" height="42" rx="6" fill="#1e1b4b" stroke="#ea580c" stroke-width="1.5"/>
+<text x="1090" y="349" text-anchor="middle" font-size="11" fill="#e2e8f0">rttSendCmd(CMD_ID_RTT_RANGE_REQUEST)</text>
+<path class="arrow-blue" d="M 1090 364 V 460"/>
+<rect x="650" y="460" width="620" height="90" rx="6" fill="#0b1220" stroke="#10b981" stroke-width="1.5"/>
+<text x="960" y="486" text-anchor="middle" font-size="12" font-weight="700" fill="#34d399">固件（MTK）：执行 FTM 帧交换并直接算距离</text>
+<text x="960" y="508" text-anchor="middle" font-size="11" fill="#cbd5e1">回传形态：i4DistanceMM 距离现成</text>
+<text x="960" y="530" text-anchor="middle" font-size="11" fill="#94a3b8">（主机只转发结果）</text>
+<rect x="70" y="580" width="1140" height="50" rx="6" fill="#1e1b4b" stroke="#a855f7" stroke-width="1.5"/>
+<text x="640" y="604" text-anchor="middle" font-size="13" font-weight="700" fill="#c4b5fd">共同点：主机都只是参数透传 + 结果聚合的薄层，距离都不在主机算</text>
+<text x="640" y="622" text-anchor="middle" font-size="10.5" fill="#a78bfa">QCOM 给时间戳（上算）· MTK 给 i4DistanceMM（现成）——但算距离的都不是 Android 主机框架</text>
+<text x="640" y="662" text-anchor="middle" font-size="11" fill="#94a3b8">发起端位置不同：QCOM 靠闭源 LOWI 引擎驱动（LOWI 不在开源树）· MTK 由主机 rttHandleRttRequest 组命令</text>
+<text x="640" y="682" text-anchor="middle" font-size="11" fill="#94a3b8">回传形态不同：QCOM 回 0.1ns 级时间戳（tod/toa/t3/t4）· MTK 回现成距离（i4DistanceMM）</text>
+</svg>

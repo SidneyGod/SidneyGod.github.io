@@ -241,7 +241,7 @@ reward:
 follow_me:
   #Twitter: https://twitter.com/username || fab fa-twitter
   #Telegram: https://t.me/channel_name || fab fa-telegram
-  #WeChat: /images/wechat_channel.jpg || fab fa-weixin
+  #WeChat: /images/gzh.png || fab fa-weixin
   #RSS: /atom.xml || fa fa-rss
 
 # Related popular posts
@@ -250,7 +250,8 @@ related_posts:
   enable: false
   title: # Custom header, leave empty to use the default one
   display_in_home: false
-  related_count: 5
+  filter_threshold: 0.3
+  related_count: 3
   weight:
     title: 0.05
     description: 0.05
@@ -258,6 +259,14 @@ related_posts:
     tags: 0.005
     categories: 0.005
     text: 1
+  stemmers:
+    - en
+    - ru
+  reserved:
+    - asp.net
+    - vs.net
+    - ado.net
+    - .net
 
 # Post edit
 # Easily browse and edit blog source code online.

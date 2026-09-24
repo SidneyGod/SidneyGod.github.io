@@ -11,6 +11,9 @@ hexo clean && hexo generate && hexo server
 hexo deploy
 
 
+git checkout package.json package-lock.json
+npm install
+
 git push origin HEAD:refs/for/master
 git push origin master
 

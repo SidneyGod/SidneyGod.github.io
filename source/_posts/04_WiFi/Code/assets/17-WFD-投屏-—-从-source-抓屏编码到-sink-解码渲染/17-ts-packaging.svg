@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 440" width="1400" height="440">
+<!-- validate: skip-gap-consistency skip-row-centering -->
+<style>
+  text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; letter-spacing: 0.02em; }
+</style>
+<defs>
+<linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#0f0f1a"/>
+<stop offset="100%" stop-color="#1a1a2e"/>
+</linearGradient>
+<marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="8.5" refY="3.5" orient="auto">
+<polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+</marker>
+<marker id="arrow-orange" markerWidth="10" markerHeight="7" refX="8.5" refY="3.5" orient="auto">
+<polygon points="0 0, 10 3.5, 0 7" fill="#ea580c"/>
+</marker>
+</defs>
+<rect width="1400" height="440" fill="url(#bg-grad)"/>
+<text x="700" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#e2e8f0">MPEG2-TS 打包结构 — AU → PES → 188B TS，PAT/PMT/PCR 控制表</text>
+<rect x="60" y="210" width="250" height="90" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="185" y="238" text-anchor="middle" font-size="13" fill="#e2e8f0">access unit</text>
+<text x="185" y="263" text-anchor="middle" font-size="11" fill="#94a3b8">视频帧 / 音频样本</text>
+<line x1="310" y1="255" x2="360" y2="255" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+<rect x="360" y="210" width="280" height="90" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="500" y="238" text-anchor="middle" font-size="13" fill="#e2e8f0">PES 包</text>
+<text x="500" y="263" text-anchor="middle" font-size="11" fill="#94a3b8">带 PTS（90kHz 时钟）</text>
+<line x1="640" y1="255" x2="700" y2="255" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+<rect x="700" y="210" width="320" height="90" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="860" y="238" text-anchor="middle" font-size="13" fill="#e2e8f0">188 字节 TS 包</text>
+<text x="860" y="263" text-anchor="middle" font-size="11" fill="#94a3b8">×N（一个 PES 拆成多个 TS）</text>
+<rect x="1100" y="60" width="280" height="56" rx="6" fill="#1c1917" stroke="#ea580c" stroke-width="1.5"/>
+<text x="1240" y="94" text-anchor="middle" font-size="13" font-weight="700" fill="#f97316">PAT（PID 0）</text>
+<line x1="1240" y1="116" x2="1240" y2="150" stroke="#ea580c" stroke-width="1.8" marker-end="url(#arrow-orange)"/>
+<rect x="1100" y="150" width="280" height="150" rx="6" fill="#1c1917" stroke="#ea580c" stroke-width="1.5"/>
+<text x="1240" y="176" text-anchor="middle" font-size="13" font-weight="700" fill="#f97316">PMT（PID 0x100）</text>
+<text x="1240" y="216" text-anchor="middle" font-size="11" fill="#e2e8f0">视频  PID 0x1011 / stream_type 0x1b H.264</text>
+<text x="1240" y="248" text-anchor="middle" font-size="11" fill="#e2e8f0">音频  PID 0x1100 / AAC 0x0f 或 LPCM 0x83</text>
+<rect x="1100" y="330" width="280" height="56" rx="6" fill="#1c1917" stroke="#ea580c" stroke-width="1.5"/>
+<text x="1240" y="350" text-anchor="middle" font-size="13" font-weight="700" fill="#f97316">PCR（PID 0x1000）</text>
+<text x="1240" y="368" text-anchor="middle" font-size="11" fill="#e2e8f0">27MHz 时钟基准</text>
+<path d="M1100,358 L860,358 L860,300" fill="none" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrow-orange)"/>
+<text x="980" y="350" text-anchor="middle" font-size="11" fill="#f97316">PCR 时钟基准</text>
+</svg>

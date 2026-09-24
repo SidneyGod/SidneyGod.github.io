@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" width="960" height="760">
+<style>text{{font-family:'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif;}}</style>
+<defs>
+<linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f0f1a"/><stop offset="100%" stop-color="#1a1a2e"/></linearGradient>
+<marker id="arr-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#3b82f6"/></marker>
+<marker id="arr-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#10b981"/></marker>
+<marker id="arr-orange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#f97316"/></marker>
+</defs>
+<rect width="960" height="760" fill="url(#bg-grad)"/>
+<text x="480" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#e2e8f0">DPP 三帧认证握手时序</text>
+<text x="480" y="50" text-anchor="middle" font-size="10" fill="#64748b">Configurator（扫码方）↔ Enrollee（被配网设备）· 规范 §6.3</text>
+<rect x="90" y="60" width="380" height="620" rx="8" fill="#0f172a" opacity="0.35" stroke="#334155" stroke-width="1" stroke-dasharray="6,4"/>
+<rect x="490" y="60" width="380" height="620" rx="8" fill="#0f172a" opacity="0.35" stroke="#334155" stroke-width="1" stroke-dasharray="6,4"/>
+<text x="100" y="78" font-size="11" font-weight="bold" fill="#3b82f6">Configurator 泳道</text>
+<text x="500" y="78" font-size="11" font-weight="bold" fill="#10b981">Enrollee 泳道</text>
+<rect x="180" y="90" width="200" height="44" rx="6" fill="#0f172a" stroke="#3b82f6" stroke-width="1.5"/>
+<rect x="180" y="90" width="200" height="3" rx="2" fill="#3b82f6"/>
+<text x="280" y="109" text-anchor="middle" font-size="12" font-weight="bold" fill="#e2e8f0">Configurator</text>
+<text x="280" y="125" text-anchor="middle" font-size="9" fill="#94a3b8">配网发起方（扫码者）</text>
+<rect x="580" y="90" width="200" height="44" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+<rect x="580" y="90" width="200" height="3" rx="2" fill="#10b981"/>
+<text x="680" y="109" text-anchor="middle" font-size="12" font-weight="bold" fill="#e2e8f0">Enrollee</text>
+<text x="680" y="125" text-anchor="middle" font-size="9" fill="#94a3b8">被配网设备（Responder）</text>
+<line x1="280" y1="134" x2="280" y2="660" stroke="#3b82f6" stroke-width="1" stroke-dasharray="5,5" opacity="0.25"/>
+<line x1="680" y1="134" x2="680" y2="660" stroke="#10b981" stroke-width="1" stroke-dasharray="5,5" opacity="0.25"/>
+<circle cx="35" cy="161" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="165" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">1</text>
+<path d="M 285,150 L 303,150 A 15,15 0 0,1 303,172 L 280,172" stroke="#f97316" stroke-width="1.2" fill="none" marker-end="url(#arr-orange)"/>
+<text x="312" y="164" font-size="10" fill="#e2e8f0">wpas_dpp_auth_init（解析命令串）</text>
+<circle cx="35" cy="211" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="215" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">2</text>
+<path d="M 285,200 L 303,200 A 15,15 0 0,1 303,222 L 280,222" stroke="#f97316" stroke-width="1.2" fill="none" marker-end="url(#arr-orange)"/>
+<text x="312" y="214" font-size="10" fill="#e2e8f0">dpp_auth_init（ECDH 共享密钥）</text>
+<text x="312" y="228" font-size="9" fill="#10b981">M.x → k1</text>
+<circle cx="35" cy="261" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="265" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">3</text>
+<path d="M 285,250 L 303,250 A 15,15 0 0,1 303,272 L 280,272" stroke="#f97316" stroke-width="1.2" fill="none" marker-end="url(#arr-orange)"/>
+<text x="312" y="264" font-size="10" fill="#e2e8f0">dpp_auth_build_req（构造请求帧）</text>
+<circle cx="35" cy="300" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="304" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">4</text>
+<line x1="280" y1="300" x2="680" y2="300" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+<text x="480" y="293" text-anchor="middle" font-size="10" fill="#93c5fd">① Auth Request（Public Action 帧）</text>
+<circle cx="35" cy="361" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="365" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">5</text>
+<path d="M 675,350 L 657,350 A 15,15 0 0,0 657,372 L 680,372" stroke="#f97316" stroke-width="1.2" fill="none" marker-end="url(#arr-orange)"/>
+<text x="668" y="364" text-anchor="end" font-size="10" fill="#e2e8f0">收帧 → dpp_auth_req_rx</text>
+<text x="668" y="378" text-anchor="end" font-size="9" fill="#94a3b8">验签 + 协商曲线</text>
+<circle cx="35" cy="400" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="404" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">6</text>
+<line x1="680" y1="400" x2="280" y2="400" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<text x="480" y="393" text-anchor="middle" font-size="10" fill="#6ee7b7">② Auth Response</text>
+<circle cx="35" cy="461" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="465" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">7</text>
+<path d="M 285,450 L 303,450 A 15,15 0 0,1 303,472 L 280,472" stroke="#f97316" stroke-width="1.2" fill="none" marker-end="url(#arr-orange)"/>
+<text x="312" y="464" font-size="10" fill="#e2e8f0">dpp_auth_resp_rx（验签 + 派生 k2）</text>
+<text x="312" y="478" font-size="9" fill="#10b981">N.x → k2</text>
+<circle cx="35" cy="500" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="504" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">8</text>
+<line x1="280" y1="500" x2="680" y2="500" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+<text x="480" y="493" text-anchor="middle" font-size="10" fill="#93c5fd">③ Auth Confirm</text>
+<circle cx="35" cy="561" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="565" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">9</text>
+<path d="M 675,550 L 657,550 A 15,15 0 0,0 657,572 L 680,572" stroke="#f97316" stroke-width="1.2" fill="none" marker-end="url(#arr-orange)"/>
+<text x="668" y="564" text-anchor="end" font-size="10" fill="#e2e8f0">dpp_auth_conf_rx</text>
+<circle cx="35" cy="618" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="622" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">10</text>
+<rect x="560" y="596" width="240" height="44" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="680" y="614" text-anchor="middle" font-size="11" font-weight="bold" fill="#6ee7b7">dpp_auth_success（认证成功）</text>
+<text x="680" y="630" text-anchor="middle" font-size="9" fill="#10b981">ke 就绪（会话密钥）</text>
+<line x1="680" y1="572" x2="680" y2="596" stroke="#10b981" stroke-width="1.2" stroke-dasharray="3,3"/>
+<text x="480" y="700" text-anchor="middle" font-size="10" fill="#94a3b8">密钥派生：M.x = pI×BR（ECDH 共享点）→ k1；N.x = pI×PR → k2；ke = HKDF(bk, "DPP Key")</text>
+<rect x="350" y="716" width="12" height="12" rx="2" fill="#3b82f6" opacity="0.8"/>
+<text x="368" y="726" font-size="10" fill="#cbd5e1">下发帧</text>
+<rect x="468" y="716" width="12" height="12" rx="2" fill="#f97316" opacity="0.8"/>
+<text x="486" y="726" font-size="10" fill="#cbd5e1">处理 / 控制</text>
+<rect x="600" y="716" width="12" height="12" rx="2" fill="#10b981" opacity="0.8"/>
+<text x="618" y="726" font-size="10" fill="#cbd5e1">回传 / 成功</text>
+</svg>

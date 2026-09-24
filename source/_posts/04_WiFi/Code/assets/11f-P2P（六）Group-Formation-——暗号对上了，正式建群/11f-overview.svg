@@ -1,0 +1,1387 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1140 870"
+   width="1140"
+   height="870"
+   version="1.1"
+   id="svg95"
+   sodipodi:docname="11f-overview.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview95"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.2563218"
+     inkscape:cx="539.67063"
+     inkscape:cy="413.50869"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg95" />
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; fill: #e2e8f0; }
+</style>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="mk-orange"
+       markerWidth="9"
+       markerHeight="7"
+       refX="8"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 9 3.5, 0 7"
+         fill="#f97316"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="mk-blue"
+       markerWidth="9"
+       markerHeight="7"
+       refX="8"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 9 3.5, 0 7"
+         fill="#3b82f6"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="mk-green"
+       markerWidth="9"
+       markerHeight="7"
+       refX="8"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 9 3.5, 0 7"
+         fill="#10b981"
+         id="polygon4" />
+    </marker>
+  </defs>
+  <rect
+     width="1140"
+     height="870"
+     fill="url(#bg)"
+     id="rect4" />
+  <text
+     x="570"
+     y="26"
+     text-anchor="middle"
+     font-size="17"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text4">P2P Group Formation 全链路分层架构</text>
+  <text
+     x="570"
+     y="42"
+     text-anchor="middle"
+     font-size="11"
+     fill="#64748b"
+     id="text5">wpas_go_neg_completed → 组接口 → WPS → 四次握手 → 密钥安装 → IP 分配（EAPOL-Key 静态 IP / DHCP）</text>
+  <rect
+     x="150"
+     y="52"
+     width="950"
+     height="64"
+     rx="8"
+     ry="8"
+     fill="none"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="6,4"
+     id="rect5" />
+  <text
+     x="66"
+     y="84"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text6">App 层</text>
+  <rect
+     x="150"
+     y="132"
+     width="950"
+     height="64"
+     rx="8"
+     ry="8"
+     fill="none"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="6,4"
+     id="rect6" />
+  <text
+     x="66"
+     y="164"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text7">SystemServer</text>
+  <rect
+     x="150"
+     y="212"
+     width="950"
+     height="84"
+     rx="8"
+     ry="8"
+     fill="none"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="6,4"
+     id="rect7" />
+  <text
+     x="66"
+     y="254"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text8">Framework 层</text>
+  <rect
+     x="150"
+     y="312"
+     width="950"
+     height="64"
+     rx="8"
+     ry="8"
+     fill="none"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="6,4"
+     id="rect8" />
+  <text
+     x="66"
+     y="344"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text9">HAL 层</text>
+  <rect
+     x="150"
+     y="392"
+     width="950"
+     height="160"
+     rx="8"
+     ry="8"
+     fill="none"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="6,4"
+     id="rect9" />
+  <text
+     x="66"
+     y="472"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text10">wpa_supplicant</text>
+  <rect
+     x="150"
+     y="568"
+     width="950"
+     height="64"
+     rx="8"
+     ry="8"
+     fill="none"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="6,4"
+     id="rect10" />
+  <text
+     x="66"
+     y="600"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text11">内核</text>
+  <rect
+     x="150"
+     y="648"
+     width="950"
+     height="96"
+     rx="8"
+     ry="8"
+     fill="none"
+     stroke="#334155"
+     stroke-width="1"
+     stroke-dasharray="6,4"
+     id="rect11" />
+  <text
+     x="66"
+     y="696"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text12">驱动层</text>
+  <text
+     x="66"
+     y="124"
+     text-anchor="middle"
+     font-size="10"
+     fill="#64748b"
+     id="text13">Binder</text>
+  <text
+     x="66"
+     y="204"
+     text-anchor="middle"
+     font-size="10"
+     fill="#64748b"
+     id="text14">Binder</text>
+  <text
+     x="66"
+     y="304"
+     text-anchor="middle"
+     font-size="10"
+     fill="#64748b"
+     id="text15">AIDL</text>
+  <text
+     x="66"
+     y="384"
+     text-anchor="middle"
+     font-size="10"
+     fill="#64748b"
+     id="text16">AIDL</text>
+  <text
+     x="66"
+     y="560"
+     text-anchor="middle"
+     font-size="10"
+     fill="#64748b"
+     id="text17">nl80211</text>
+  <text
+     x="66"
+     y="640"
+     text-anchor="middle"
+     font-size="10"
+     fill="#64748b"
+     id="text18">cfg80211 ops</text>
+  <rect
+     x="170"
+     y="64"
+     width="240"
+     height="44"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#e2e8f0"
+     stroke-width="1.5"
+     id="rect18" />
+  <text
+     x="290.0"
+     y="80"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text19">WifiP2pManager</text>
+  <text
+     x="290.0"
+     y="96"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text20">connect() 发起建群</text>
+  <rect
+     x="760"
+     y="64"
+     width="320"
+     height="44"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#e2e8f0"
+     stroke-width="1.5"
+     id="rect20" />
+  <text
+     x="920.0"
+     y="80"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text21">BroadcastReceiver</text>
+  <text
+     x="920.0"
+     y="96"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text22">WIFI_P2P_CONNECTION_CHANGED_ACTION</text>
+  <rect
+     x="170"
+     y="144"
+     width="370"
+     height="44"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#e2e8f0"
+     stroke-width="1.5"
+     id="rect22" />
+  <text
+     x="355.0"
+     y="160"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text23">WifiP2pServiceImpl</text>
+  <text
+     x="355.0"
+     y="176"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text24">P2pStateMachine：GroupNegotiationState</text>
+  <rect
+     x="160"
+     y="224"
+     width="200"
+     height="44"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#e2e8f0"
+     stroke-width="1.5"
+     id="rect24" />
+  <text
+     x="260.0"
+     y="240"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text25">WifiP2pGroup</text>
+  <text
+     x="260.0"
+     y="256"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text26">WifiP2pInfo · 群信息登记</text>
+  <rect
+     x="400"
+     y="224"
+     width="220"
+     height="44"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect26" />
+  <text
+     x="510.0"
+     y="240"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text27">Tethering → DhcpServer</text>
+  <text
+     x="510.0"
+     y="256"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text28">GO 侧 IP 分配（固定 .1）</text>
+  <circle
+     cx="606"
+     cy="238"
+     r="9"
+     fill="#059669"
+     stroke="#0f0f1a"
+     stroke-width="1"
+     id="circle28" />
+  <text
+     x="606"
+     y="241.5"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text29">⑤</text>
+  <rect
+     x="660"
+     y="224"
+     width="260"
+     height="44"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect29" />
+  <text
+     x="790.0"
+     y="240"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text30">DhcpClient</text>
+  <text
+     x="790.0"
+     y="256"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text31">Client 侧 IP 分配（DORA）</text>
+  <circle
+     cx="906"
+     cy="238"
+     r="9"
+     fill="#059669"
+     stroke="#0f0f1a"
+     stroke-width="1"
+     id="circle31" />
+  <text
+     x="906"
+     y="241.5"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text32">⑤</text>
+  <rect
+     x="270"
+     y="324"
+     width="300"
+     height="44"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#e2e8f0"
+     stroke-width="1.5"
+     id="rect32" />
+  <text
+     x="420.0"
+     y="340"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text33">SupplicantP2pIfaceCallbackAidlImpl</text>
+  <text
+     x="420.0"
+     y="356"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text34">AIDL 事件回调</text>
+  <rect
+     x="160"
+     y="408"
+     width="228"
+     height="44"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect34" />
+  <text
+     x="274.0"
+     y="424"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text35">wpas_go_neg_completed</text>
+  <text
+     x="274.0"
+     y="440"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text36">① 角色确定（GO / Client）</text>
+  <circle
+     cx="374"
+     cy="422"
+     r="9"
+     fill="#7c3aed"
+     stroke="#0f0f1a"
+     stroke-width="1"
+     id="circle36" />
+  <text
+     x="374"
+     y="425.5"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text37">①</text>
+  <rect
+     x="400"
+     y="408"
+     width="236"
+     height="44"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect37" />
+  <text
+     x="506.0"
+     y="424"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text38">wpas_p2p_init_group_interface</text>
+  <text
+     x="506.0"
+     y="440"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text39">② 组接口 · 独立 netdev</text>
+  <circle
+     cx="626"
+     cy="422"
+     r="9"
+     fill="#1d4ed8"
+     stroke="#0f0f1a"
+     stroke-width="1"
+     id="circle39" />
+  <text
+     x="626"
+     y="425.5"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text40">②</text>
+  <rect
+     x="656.71545"
+     y="408"
+     width="204.91675"
+     height="44"
+     rx="5.3925462"
+     ry="6"
+     fill="#0f172a"
+     stroke="#eab308"
+     stroke-width="1.42203"
+     id="rect40" />
+  <text
+     x="754.0"
+     y="424"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text41">wpas_start_wps_go</text>
+  <text
+     x="754.0"
+     y="440"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text42">③ WPS · EAP-WSC</text>
+  <circle
+     cx="846"
+     cy="420"
+     r="9"
+     fill="#eab308"
+     stroke="#0f0f1a"
+     stroke-width="1"
+     id="circle42" />
+  <text
+     x="846"
+     y="423.5"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text43">③</text>
+  <rect
+     x="880"
+     y="408"
+     width="212.83623"
+     height="44"
+     rx="5.8046246"
+     ry="6"
+     fill="#0f172a"
+     stroke="#eab308"
+     stroke-width="1.47538"
+     id="rect43" />
+  <text
+     x="990.0"
+     y="424"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text44">wpas_p2p_wps_success</text>
+  <text
+     x="990.0"
+     y="440"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text45">WPS 成功 · 建群收尾</text>
+  <circle
+     cx="1078"
+     cy="422"
+     r="9"
+     fill="#eab308"
+     stroke="#0f0f1a"
+     stroke-width="1"
+     id="circle45" />
+  <text
+     x="1078"
+     y="425.5"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text46">③</text>
+  <rect
+     x="160"
+     y="480"
+     width="230"
+     height="44"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect46" />
+  <text
+     x="275.0"
+     y="496"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text47">hostapd WPA_PTK 状态机</text>
+  <text
+     x="275.0"
+     y="512"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text48">④ 四次握手 · Auth/Assoc + EAPOL</text>
+  <circle
+     cx="376"
+     cy="494"
+     r="9"
+     fill="#ea580c"
+     stroke="#0f0f1a"
+     stroke-width="1"
+     id="circle48" />
+  <text
+     x="376"
+     y="497.5"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text49">④</text>
+  <rect
+     x="420"
+     y="480"
+     width="240"
+     height="44"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#e2e8f0"
+     stroke-width="1.5"
+     id="rect49" />
+  <text
+     x="540.0"
+     y="496"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text50">wpas_group_formation_completed</text>
+  <text
+     x="540.0"
+     y="512"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text51">p2p_group_notif_formation_done</text>
+  <rect
+     x="690"
+     y="480"
+     width="400"
+     height="44"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#e2e8f0"
+     stroke-width="1.5"
+     id="rect51" />
+  <text
+     x="890.0"
+     y="496"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text52">wpas_p2p_group_started</text>
+  <text
+     x="890.0"
+     y="512"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text53">发出 GROUP_STARTED 事件 · IP 上报</text>
+  <rect
+     x="170"
+     y="580"
+     width="430"
+     height="44"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect53" />
+  <text
+     x="385.0"
+     y="596"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text54">cfg80211 / nl80211</text>
+  <text
+     x="385.0"
+     y="612"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text55">NL80211_CMD_START_AP · add_key（密钥安装）</text>
+  <circle
+     cx="586"
+     cy="594"
+     r="9"
+     fill="#ea580c"
+     stroke="#0f0f1a"
+     stroke-width="1"
+     id="circle55" />
+  <text
+     x="586"
+     y="597.5"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text56">④</text>
+  <rect
+     x="170"
+     y="660"
+     width="330"
+     height="44"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect56" />
+  <text
+     x="335.0"
+     y="676"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text57">QCOM wlan_hdd_cfg80211_*</text>
+  <text
+     x="335.0"
+     y="692"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text58">start_ap · add_key → 固件（WMI）</text>
+  <circle
+     cx="486"
+     cy="674"
+     r="9"
+     fill="#ea580c"
+     stroke="#0f0f1a"
+     stroke-width="1"
+     id="circle58" />
+  <text
+     x="486"
+     y="677.5"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text59">④</text>
+  <rect
+     x="540"
+     y="660"
+     width="330"
+     height="44"
+     rx="6"
+     ry="6"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect59" />
+  <text
+     x="705.0"
+     y="676"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text60">MTK mtk_p2p_cfg80211_*</text>
+  <text
+     x="705.0"
+     y="692"
+     text-anchor="middle"
+     font-size="11"
+     fill="#94a3b8"
+     id="text61">start_ap · mtk_cfg_add_key（mbox）</text>
+  <circle
+     cx="856"
+     cy="674"
+     r="9"
+     fill="#ea580c"
+     stroke="#0f0f1a"
+     stroke-width="1"
+     id="circle61" />
+  <text
+     x="856"
+     y="677.5"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text62">④</text>
+  <path
+     d="M 290,108 L 290,144"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.8"
+     marker-end="url(#mk-orange)"
+     id="path62" />
+  <rect
+     x="290.0"
+     y="115.0"
+     width="64.0"
+     height="13"
+     rx="3"
+     fill="#0f0f1a"
+     opacity="0.82"
+     id="rect62" />
+  <text
+     x="294"
+     y="124"
+     text-anchor="start"
+     font-size="10"
+     fill="#f97316"
+     id="text63">connect()</text>
+  <path
+     d="M 200,188 L 200,206 L 132,206 L 132,390 L 250,390 L 250,408"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.8"
+     marker-end="url(#mk-orange)"
+     id="path63" />
+  <rect
+     x="136.0"
+     y="293.0"
+     width="201.0"
+     height="13"
+     rx="3"
+     fill="#0f0f1a"
+     opacity="0.82"
+     id="rect63" />
+  <text
+     x="140"
+     y="302"
+     text-anchor="start"
+     font-size="10"
+     fill="#f97316"
+     id="text64">p2p_connect 建群指令（AIDL）</text>
+  <path
+     d="M 388,430 L 400,430"
+     fill="none"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     marker-end="url(#mk-blue)"
+     id="path64" />
+  <path
+     d="m 648,430 h 4"
+     fill="none"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     marker-end="url(#mk-blue)"
+     id="path65" />
+  <path
+     d="m 866,430 h 12"
+     fill="none"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     marker-end="url(#mk-blue)"
+     id="path66" />
+  <path
+     d="M 990,452 L 990,466 L 270,466 L 270,480"
+     fill="none"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     marker-end="url(#mk-blue)"
+     id="path67" />
+  <rect
+     x="272.0"
+     y="453.0"
+     width="106.0"
+     height="13"
+     rx="3"
+     fill="#0f0f1a"
+     opacity="0.82"
+     id="rect67" />
+  <text
+     x="276"
+     y="462"
+     text-anchor="start"
+     font-size="10"
+     fill="#3b82f6"
+     id="text67">WPS 成功 → 连接 / 握手</text>
+  <path
+     d="M 390,502 L 420,502"
+     fill="none"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     marker-end="url(#mk-blue)"
+     id="path68" />
+  <path
+     d="M 660,502 L 690,502"
+     fill="none"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     marker-end="url(#mk-blue)"
+     id="path69" />
+  <rect
+     x="671.0"
+     y="525.0"
+     width="193.0"
+     height="13"
+     rx="3"
+     fill="#0f0f1a"
+     opacity="0.82"
+     id="rect69" />
+  <text
+     x="675"
+     y="534"
+     text-anchor="start"
+     font-size="10"
+     fill="#94a3b8"
+     id="text69">GO 立即发 / Client 握手后发</text>
+  <path
+     d="M 270,524 L 270,580"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.8"
+     marker-end="url(#mk-orange)"
+     id="path70" />
+  <rect
+     x="270.0"
+     y="539.0"
+     width="194.0"
+     height="13"
+     rx="3"
+     fill="#0f0f1a"
+     opacity="0.82"
+     id="rect70" />
+  <text
+     x="274"
+     y="548"
+     text-anchor="start"
+     font-size="10"
+     fill="#f97316"
+     id="text70">add_key（nl80211 密钥安装）</text>
+  <path
+     d="M 270,624 L 270,660"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.8"
+     marker-end="url(#mk-orange)"
+     id="path71" />
+  <rect
+     x="270.0"
+     y="629.0"
+     width="82.0"
+     height="13"
+     rx="3"
+     fill="#0f0f1a"
+     opacity="0.82"
+     id="rect71" />
+  <text
+     x="274"
+     y="638"
+     text-anchor="start"
+     font-size="10"
+     fill="#f97316"
+     id="text71">cfg80211 ops</text>
+  <path
+     d="M 560,624 L 560,640 L 700,640 L 700,660"
+     fill="none"
+     stroke="#f97316"
+     stroke-width="1.8"
+     marker-end="url(#mk-orange)"
+     id="path72" />
+  <rect
+     x="560.0"
+     y="627.0"
+     width="100.0"
+     height="13"
+     rx="3"
+     fill="#0f0f1a"
+     opacity="0.82"
+     id="rect72" />
+  <text
+     x="564"
+     y="636"
+     text-anchor="start"
+     font-size="10"
+     fill="#f97316"
+     id="text72">WMI / mbox → 固件</text>
+  <path
+     d="M 1090,502 L 1108,502 L 1108,346 L 570,346"
+     fill="none"
+     stroke="#10b981"
+     stroke-width="1.8"
+     stroke-dasharray="5,3"
+     marker-end="url(#mk-green)"
+     id="path73" />
+  <path
+     d="M 380,324 L 380,188"
+     fill="none"
+     stroke="#10b981"
+     stroke-width="1.8"
+     stroke-dasharray="5,3"
+     marker-end="url(#mk-green)"
+     id="path74" />
+  <rect
+     x="750.0"
+     y="330.0"
+     width="189.0"
+     height="13"
+     rx="3"
+     fill="#0f0f1a"
+     opacity="0.82"
+     id="rect74" />
+  <text
+     x="844.0"
+     y="339"
+     text-anchor="middle"
+     font-size="10"
+     fill="#10b981"
+     id="text74">GROUP_STARTED（AIDL 回调）</text>
+  <path
+     d="M 260,188 L 260,224"
+     fill="none"
+     stroke="#10b981"
+     stroke-width="1.8"
+     stroke-dasharray="5,3"
+     marker-end="url(#mk-green)"
+     id="path75" />
+  <rect
+     x="216.0"
+     y="193.0"
+     width="88.0"
+     height="13"
+     rx="3"
+     fill="#0f0f1a"
+     opacity="0.82"
+     id="rect75" />
+  <text
+     x="220"
+     y="202"
+     text-anchor="start"
+     font-size="10"
+     fill="#10b981"
+     id="text75">登记群信息</text>
+  <path
+     d="M 420,188 L 420,224"
+     fill="none"
+     stroke="#10b981"
+     stroke-width="1.8"
+     stroke-dasharray="5,3"
+     marker-end="url(#mk-green)"
+     id="path76" />
+  <rect
+     x="420.0"
+     y="193.0"
+     width="70.0"
+     height="13"
+     rx="3"
+     fill="#0f0f1a"
+     opacity="0.82"
+     id="rect76" />
+  <text
+     x="424"
+     y="202"
+     text-anchor="start"
+     font-size="10"
+     fill="#10b981"
+     id="text76">GO：启动 DHCP</text>
+  <path
+     d="M 510,188 L 510,216 L 770,216 L 770,224"
+     fill="none"
+     stroke="#10b981"
+     stroke-width="1.8"
+     stroke-dasharray="5,3"
+     marker-end="url(#mk-green)"
+     id="path77" />
+  <rect
+     x="510.0"
+     y="203.0"
+     width="158.0"
+     height="13"
+     rx="3"
+     fill="#0f0f1a"
+     opacity="0.82"
+     id="rect77" />
+  <text
+     x="514"
+     y="212"
+     text-anchor="start"
+     font-size="10"
+     fill="#10b981"
+     id="text77">Client：startIpClient</text>
+  <path
+     d="M 480,144 L 480,120 L 920,120 L 920,108"
+     fill="none"
+     stroke="#10b981"
+     stroke-width="1.8"
+     stroke-dasharray="5,3"
+     marker-end="url(#mk-green)"
+     id="path78" />
+  <rect
+     x="496.0"
+     y="125.0"
+     width="280.0"
+     height="13"
+     rx="3"
+     fill="#0f0f1a"
+     opacity="0.82"
+     id="rect78" />
+  <text
+     x="500"
+     y="134"
+     text-anchor="start"
+     font-size="10"
+     fill="#10b981"
+     id="text78">WIFI_P2P_CONNECTION_CHANGED_ACTION 广播</text>
+  <line
+     x1="160"
+     y1="768"
+     x2="980"
+     y2="768"
+     stroke="#334155"
+     stroke-width="1"
+     id="line78" />
+  <text
+     x="160"
+     y="762"
+     font-size="13"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text79">图例 · 本文核心链（Group Formation 各阶段）</text>
+  <text
+     x="160"
+     y="792"
+     font-size="11"
+     fill="#94a3b8"
+     id="text80">阶段：</text>
+  <circle
+     cx="220"
+     cy="788"
+     r="9"
+     fill="#7c3aed"
+     id="circle80" />
+  <text
+     x="220"
+     y="791.5"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text81">①</text>
+  <text
+     x="234"
+     y="792"
+     font-size="11"
+     fill="#e2e8f0"
+     id="text82">角色确定</text>
+  <circle
+     cx="330"
+     cy="788"
+     r="9"
+     fill="#1d4ed8"
+     id="circle82" />
+  <text
+     x="330"
+     y="791.5"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text83">②</text>
+  <text
+     x="344"
+     y="792"
+     font-size="11"
+     fill="#e2e8f0"
+     id="text84">组接口</text>
+  <circle
+     cx="430"
+     cy="788"
+     r="9"
+     fill="#eab308"
+     id="circle84" />
+  <text
+     x="430"
+     y="791.5"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text85">③</text>
+  <text
+     x="444"
+     y="792"
+     font-size="11"
+     fill="#e2e8f0"
+     id="text86">WPS</text>
+  <circle
+     cx="510"
+     cy="788"
+     r="9"
+     fill="#ea580c"
+     id="circle86" />
+  <text
+     x="510"
+     y="791.5"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text87">④</text>
+  <text
+     x="524"
+     y="792"
+     font-size="11"
+     fill="#e2e8f0"
+     id="text88">四次握手 · 密钥安装</text>
+  <circle
+     cx="676"
+     cy="788"
+     r="9"
+     fill="#059669"
+     id="circle88" />
+  <text
+     x="676"
+     y="791.5"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text89">⑤</text>
+  <text
+     x="690"
+     y="792"
+     font-size="11"
+     fill="#e2e8f0"
+     id="text90">IP 分配</text>
+  <text
+     x="160"
+     y="824"
+     font-size="11"
+     fill="#94a3b8"
+     id="text91">箭头：</text>
+  <line
+     x1="210"
+     y1="820"
+     x2="246"
+     y2="820"
+     stroke="#f97316"
+     stroke-width="2"
+     id="line91" />
+  <text
+     x="252"
+     y="824"
+     font-size="11"
+     fill="#e2e8f0"
+     id="text92">建群控制链（下行）</text>
+  <line
+     x1="410"
+     y1="820"
+     x2="446"
+     y2="820"
+     stroke="#10b981"
+     stroke-width="2"
+     stroke-dasharray="5,3"
+     id="line92" />
+  <text
+     x="452"
+     y="824"
+     font-size="11"
+     fill="#e2e8f0"
+     id="text93">GROUP_STARTED 事件 / IP 分配回报（上行）</text>
+  <line
+     x1="760"
+     y1="820"
+     x2="796"
+     y2="820"
+     stroke="#3b82f6"
+     stroke-width="2"
+     id="line93" />
+  <text
+     x="802"
+     y="824"
+     font-size="11"
+     fill="#e2e8f0"
+     id="text94">阶段推进（wpa_supplicant 进程内）</text>
+  <text
+     x="160"
+     y="852"
+     font-size="10.5"
+     fill="#64748b"
+     id="text95">注：EAPOL-Key 静态 IP 在四次握手（④）内经 WFA_KEY_DATA_IP_ADDR_ALLOC KDE 协商，IP 随 GROUP_STARTED 事件上报，绕开 DHCP；GO 侧固定 IP 192.168.49.1。</text>
+</svg>

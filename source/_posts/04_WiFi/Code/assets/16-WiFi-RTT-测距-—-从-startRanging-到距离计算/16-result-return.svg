@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 900" width="960" height="900">
+<!-- validate: skip-gap-consistency -->
+<style>
+  text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; letter-spacing: 0.02em; }
+  .arrow-green { fill:none; stroke:#10b981; stroke-width:2; marker-end:url(#arrow-green); }
+</style>
+<defs>
+<linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#0f0f1a"/>
+<stop offset="100%" stop-color="#1a1a2e"/>
+</linearGradient>
+<marker id="arrow-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+<polygon points="0 0, 8 3, 0 6" fill="#10b981"/>
+</marker>
+<filter id="glow-gold" x="-20%" y="-20%" width="140%" height="140%">
+<feGaussianBlur stdDeviation="3" result="blur"/>
+<feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+</defs>
+<rect width="960" height="900" fill="url(#bg-grad)"/>
+<text x="480" y="28" text-anchor="middle" font-size="18" font-weight="700" fill="#e2e8f0">RTT 结果回传链路（逆流而上）</text>
+<text x="480" y="48" text-anchor="middle" font-size="12" fill="#94a3b8">全绿箭头 = 结果回传 · 核心：distanceMm 毫米数从头到尾原封不动（只转换、不加工）</text>
+<text x="20" y="132" font-size="11" fill="#94a3b8">App</text>
+<text x="20" y="385" font-size="11" fill="#94a3b8">Framework</text>
+<text x="20" y="625" font-size="11" fill="#94a3b8">Vendor HAL</text>
+<text x="20" y="715" font-size="11" fill="#94a3b8">驱动</text>
+<text x="20" y="805" font-size="11" fill="#94a3b8">固件</text>
+<rect x="280" y="110" width="400" height="44" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="480" y="137" text-anchor="middle" font-size="11" fill="#34d399">RangingResultCallback.onRangingResults（distanceMm 毫米数）</text>
+<rect x="80" y="210" width="800" height="350" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+<text x="100" y="232" font-size="13" font-weight="700" fill="#e2e8f0">Framework 层（system_server 进程）</text>
+<rect x="200" y="495" width="560" height="44" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="480" y="522" text-anchor="middle" font-size="11" fill="#34d399">WifiRttControllerAidlImpl.onResults</text>
+<path class="arrow-green" d="M 480 495 V 481"/>
+<rect x="200" y="437" width="560" height="44" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="480" y="464" text-anchor="middle" font-size="11" fill="#34d399">halToFrameworkRangingResults</text>
+<path class="arrow-green" d="M 480 437 V 423"/>
+<rect x="200" y="379" width="560" height="44" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="480" y="406" text-anchor="middle" font-size="11" fill="#34d399">RttServiceSynchronized.onRangingResults（cmdId 对账 + 权限复查）</text>
+<path class="arrow-green" d="M 480 379 V 365"/>
+<rect x="200" y="321" width="560" height="44" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="480" y="348" text-anchor="middle" font-size="11" fill="#34d399">postProcessResults（补 STATUS_FAIL / LCI-LCR 过滤）</text>
+<path class="arrow-green" d="M 480 321 V 307"/>
+<rect x="200" y="263" width="560" height="44" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="480" y="290" text-anchor="middle" font-size="11" fill="#34d399">callback.onRangingResults</text>
+<text x="770" y="464" font-size="10.5" fill="#94a3b8">不加工只转换</text>
+<text x="770" y="348" font-size="10.5" fill="#94a3b8">只过滤</text>
+<path class="arrow-green" d="M 480 263 V 154"/>
+<line x1="110" y1="570" x2="850" y2="570" stroke="#475569" stroke-width="1.2" stroke-dasharray="6,4"/>
+<text x="468" y="588" text-anchor="end" font-size="10.5" fill="#94a3b8">AIDL Binder：</text>
+<text x="492" y="588" text-anchor="start" font-size="10.5" fill="#94a3b8">IWifiRttControllerEventCallback.onResults(cmdId, RttResult[])</text>
+<rect x="220" y="600" width="520" height="50" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="480" y="624" text-anchor="middle" font-size="11" fill="#34d399">WifiLegacyHal 回调</text>
+<text x="480" y="644" text-anchor="middle" font-size="10.5" fill="#a7f3d0">→ convertLegacyVectorOfRttResultV3ToAidl</text>
+<text x="750" y="625" font-size="10.5" fill="#94a3b8">不加工只转换（legacy→AIDL）</text>
+<path class="arrow-green" d="M 480 600 V 539"/>
+<rect x="280" y="690" width="400" height="50" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="480" y="714" text-anchor="middle" font-size="11" fill="#34d399">rttReportDone</text>
+<text x="480" y="734" text-anchor="middle" font-size="10.5" fill="#a7f3d0">→ kalCfg80211VendorEvent（nl80211 vendor event）</text>
+<path class="arrow-green" d="M 480 690 V 650"/>
+<rect x="280" y="780" width="400" height="50" rx="6" fill="#0b1220" stroke="#eab308" stroke-width="2" filter="url(#glow-gold)"/>
+<text x="480" y="804" text-anchor="middle" font-size="11.5" font-weight="700" fill="#fcd34d">EVENT_RTT_DONE / wmi_host_rtt_meas_event</text>
+<text x="480" y="824" text-anchor="middle" font-size="10.5" fill="#94a3b8">（距离 + 时间戳）</text>
+<path class="arrow-green" d="M 480 780 V 740"/>
+<text x="480" y="858" text-anchor="middle" font-size="11" fill="#94a3b8">核心：distanceMm 毫米数从头到尾原封不动</text>
+<text x="480" y="878" text-anchor="middle" font-size="11" fill="#94a3b8">三处只转换不加工：legacy→AIDL 转换 · halToFrameworkRangingResults · postProcessResults</text>
+</svg>

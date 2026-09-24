@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1100 900"
+   width="1100"
+   height="900"
+   version="1.1"
+   id="svg82"
+   sodipodi:docname="13-passpoint-architecture.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <!-- validate: skip-orphan-boxes -->
+  <!-- validate: skip-gap-consistency -->
+  <sodipodi:namedview
+     id="namedview82"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1569609"
+     inkscape:cx="530.26857"
+     inkscape:cy="500.88123"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg82" />
+  <style
+     id="style1">
+  text { font-family: 'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif; }
+</style>
+  <defs
+     id="defs3">
+    <linearGradient
+       id="bg-grad"
+       x1="0"
+       y1="0"
+       x2="1053.1855"
+       y2="1053.1855"
+       gradientTransform="scale(1.0444503,0.8545502)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="arrowBlue"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto"
+       viewBox="0 0 8 6"
+       preserveAspectRatio="xMidYMid">
+      <polygon
+         points="0,0 8,3 0,6 "
+         fill="#3b82f6"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="arrowGreen"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0,0 8,3 0,6 "
+         fill="#10b981"
+         id="polygon3" />
+    </marker>
+  </defs>
+  <rect
+     x="0"
+     y="0"
+     width="1100"
+     height="900"
+     fill="url(#bg-grad)"
+     id="rect3"
+     style="fill:url(#bg-grad);stroke-width:0.944741" />
+  <text
+     x="564"
+     y="30"
+     font-size="18px"
+     font-weight="bold"
+     fill="#e2e8f0"
+     text-anchor="middle"
+     id="text3">Passpoint 自动连接全链路：从 ANQP 查询到提名打分</text>
+  <text
+     x="564"
+     y="48"
+     font-size="11px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     id="text4">发现 → ANQP 查询 → 匹配 → 提名 → 打分 · 下行链(蓝) 上行链(绿) · Java Framework ⇄ wpa_supplicant C (AIDL) · 驱动纯透传</text>
+  <!-- ===== Layer 1: Java Framework 层 ===== -->
+  <rect
+     x="14"
+     y="64"
+     width="1068.0197"
+     height="340"
+     rx="5.8255615"
+     fill="#121a2a"
+     stroke="#1e3a5f"
+     stroke-width="1.18243"
+     id="rect4" />
+  <rect
+     x="14"
+     y="64"
+     width="4"
+     height="340"
+     fill="#5e9eff"
+     id="rect5" />
+  <text
+     x="30"
+     y="86"
+     font-size="15px"
+     font-weight="bold"
+     fill="#5e9eff"
+     id="text5">Java Framework 层 (system_server) · 主角</text>
+  <!-- 下行起点：发现 + 查询（左列） -->
+  <text
+     x="44"
+     y="110"
+     font-size="11px"
+     font-weight="bold"
+     fill="#3b82f6"
+     id="text6">下行起点 · 发现与查询</text>
+  <rect
+     x="44"
+     y="118"
+     width="360"
+     height="36"
+     rx="4"
+     fill="#101a2e"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect6" />
+  <text
+     x="56"
+     y="132"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text7">NetworkDetail 构造（解析 Interworking / HS2.0 IE）</text>
+  <text
+     x="56"
+     y="146"
+     font-size="8px"
+     fill="#7aa8e0"
+     id="text8">NetworkDetail.java:239 · isInterworking()</text>
+  <rect
+     x="44"
+     y="162"
+     width="360"
+     height="44"
+     rx="4"
+     fill="#101a2e"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect8" />
+  <text
+     x="56"
+     y="176"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text9">PasspointManager.getAllMatchedProviders</text>
+  <text
+     x="56"
+     y="190"
+     font-size="8.5px"
+     fill="#e2e8f0"
+     id="text10">查 AnqpCache → miss 则触发查询</text>
+  <text
+     x="56"
+     y="200"
+     font-size="8px"
+     fill="#7aa8e0"
+     id="text11">PasspointManager.java:903</text>
+  <rect
+     x="44"
+     y="214"
+     width="360"
+     height="36"
+     rx="4"
+     fill="#101a2e"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect11" />
+  <text
+     x="56"
+     y="228"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text12">ANQPRequestManager.requestANQPElements</text>
+  <text
+     x="56"
+     y="242"
+     font-size="8px"
+     fill="#7aa8e0"
+     id="text13">:159 · 排队 + hold-off</text>
+  <rect
+     x="44"
+     y="258"
+     width="360"
+     height="36"
+     rx="4"
+     fill="#101a2e"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect13" />
+  <text
+     x="56"
+     y="272"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text14">PasspointEventHandler.requestANQP</text>
+  <text
+     x="56"
+     y="286"
+     font-size="8px"
+     fill="#7aa8e0"
+     id="text15">:81 · 元素枚举 → ANQP ID / HS2.0 subtype</text>
+  <rect
+     x="44"
+     y="302"
+     width="360"
+     height="48"
+     rx="4"
+     fill="#101a2e"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect15" />
+  <text
+     x="56"
+     y="316"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text16">ClientModeImpl.requestAnqp → WifiNative.requestAnqp</text>
+  <text
+     x="56"
+     y="330"
+     font-size="8.5px"
+     fill="#e2e8f0"
+     id="text17">→ SupplicantStaIfaceHal.initiateAnqpQuery</text>
+  <text
+     x="56"
+     y="342"
+     font-size="8px"
+     fill="#7aa8e0"
+     id="text18">ClientModeImpl.java:1931 · WifiNative.java:3127</text>
+  <!-- 上行终点：缓存落库 + 匹配提名打分（右列） -->
+  <text
+     x="454"
+     y="110"
+     font-size="11px"
+     font-weight="bold"
+     fill="#10b981"
+     id="text19">上行终点 · 匹配 / 提名 / 打分</text>
+  <rect
+     x="454"
+     y="118"
+     width="360"
+     height="44"
+     rx="4"
+     fill="#0d1f1a"
+     stroke="#10b981"
+     stroke-width="1.2"
+     id="rect19" />
+  <text
+     x="466"
+     y="132"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text20">CallbackHandler.onANQPResponse</text>
+  <text
+     x="466"
+     y="146"
+     font-size="8.5px"
+     fill="#e2e8f0"
+     id="text21">→ AnqpCache.addOrUpdateEntry 落缓存</text>
+  <text
+     x="466"
+     y="156"
+     font-size="8px"
+     fill="#5fc094"
+     id="text22">PasspointManager.java:160</text>
+  <rect
+     x="454"
+     y="170"
+     width="360"
+     height="48"
+     rx="4"
+     fill="#0d1f1a"
+     stroke="#10b981"
+     stroke-width="1.2"
+     id="rect22" />
+  <text
+     x="466"
+     y="184"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text23">PasspointProvider.match</text>
+  <text
+     x="466"
+     y="198"
+     font-size="8.5px"
+     fill="#e2e8f0"
+     id="text24">matchFqdnAndRcoi + ANQPMatcher（4 线索）</text>
+  <text
+     x="466"
+     y="210"
+     font-size="8px"
+     fill="#5fc094"
+     id="text25">PasspointProvider.java:466</text>
+  <rect
+     x="454"
+     y="226"
+     width="401"
+     height="36"
+     rx="3.6057045"
+     fill="#0d1f1a"
+     stroke="#10b981"
+     stroke-width="1.13932"
+     id="rect25" />
+  <text
+     x="466"
+     y="240"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text26">PasspointProvider.getWifiConfig（生成 WifiConfiguration）</text>
+  <text
+     x="466"
+     y="254"
+     font-size="8px"
+     fill="#5fc094"
+     id="text27">PasspointProvider.java:545</text>
+  <rect
+     x="454"
+     y="270"
+     width="360"
+     height="48"
+     rx="4"
+     fill="#0d1f1a"
+     stroke="#10b981"
+     stroke-width="1.2"
+     id="rect27" />
+  <text
+     x="466"
+     y="284"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text28">PasspointNetworkNominateHelper</text>
+  <text
+     x="466"
+     y="298"
+     font-size="8.5px"
+     fill="#e2e8f0"
+     id="text29">createWifiConfigForProvider → 补 SSID 落库</text>
+  <text
+     x="466"
+     y="310"
+     font-size="8px"
+     fill="#5fc094"
+     id="text30">PasspointNetworkNominateHelper.java:306</text>
+  <rect
+     x="454"
+     y="326"
+     width="360"
+     height="44"
+     rx="4"
+     fill="#0d1f1a"
+     stroke="#10b981"
+     stroke-width="1.2"
+     id="rect30" />
+  <text
+     x="466"
+     y="340"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text31">WifiNetworkSelector.getCandidatesFromScan</text>
+  <text
+     x="466"
+     y="354"
+     font-size="8.5px"
+     fill="#e2e8f0"
+     id="text32">passpointCandidates → 各 nominator 打分</text>
+  <text
+     x="466"
+     y="364"
+     font-size="8px"
+     fill="#5fc094"
+     id="text33">WifiNetworkSelector.java:1196</text>
+  <!-- 框架内：查询 → 匹配 的跨轮闭环标注 -->
+  <path
+     d="m 404,205 c 20,0 30,-65 50,-65"
+     stroke="#94a3b8"
+     stroke-width="1"
+     stroke-dasharray="4, 3"
+     fill="none"
+     opacity="0.6"
+     id="path33" />
+  <text
+     x="426"
+     y="178"
+     font-size="7.5px"
+     fill="#94a3b8"
+     text-anchor="middle"
+     id="text34">下一轮扫描</text>
+  <!-- 下行链箭头（左列内部） -->
+  <path
+     d="m 224,154 v 8"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path34" />
+  <path
+     d="m 224,206 v 8"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path35" />
+  <path
+     d="m 224,250 v 8"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path36" />
+  <path
+     d="m 224,294 v 8"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path37" />
+  <!-- 上行链箭头（右列内部） -->
+  <path
+     d="m 634,226 v -8"
+     stroke="#10b981"
+     stroke-width="1.8"
+     fill="none"
+     marker-end="url(#arrowGreen)"
+     id="path38" />
+  <path
+     d="m 634,270 v -8"
+     stroke="#10b981"
+     stroke-width="1.8"
+     fill="none"
+     marker-end="url(#arrowGreen)"
+     id="path39" />
+  <path
+     d="m 634,326 v -8"
+     stroke="#10b981"
+     stroke-width="1.8"
+     fill="none"
+     marker-end="url(#arrowGreen)"
+     id="path40" />
+  <!-- ===== AIDL 边界 ===== -->
+  <line
+     x1="14"
+     y1="428"
+     x2="1081.1553"
+     y2="428"
+     stroke="#f0a040"
+     stroke-width="1.47744"
+     stroke-dasharray="8, 4"
+     id="line40" />
+  <text
+     x="554"
+     y="422"
+     font-size="11px"
+     fill="#f0a040"
+     text-anchor="middle"
+     id="text40">AIDL 边界 (Binder) · 跨进程</text>
+  <rect
+     x="36"
+     y="410"
+     width="282"
+     height="14"
+     rx="2"
+     fill="#1a1808"
+     stroke="#f0a040"
+     stroke-width="0.8"
+     id="rect40" />
+  <text
+     x="132"
+     y="419"
+     font-size="8px"
+     fill="#f0a040"
+     text-anchor="middle"
+     id="text41">▼ ISupplicantStaIface.initiateAnqpQuery</text>
+  <rect
+     x="804"
+     y="410"
+     width="256.52829"
+     height="14"
+     rx="1.5884106"
+     fill="#1a1808"
+     stroke="#f0a040"
+     stroke-width="0.712946"
+     id="rect41" />
+  <text
+     x="919"
+     y="419"
+     font-size="7px"
+     fill="#f0a040"
+     text-anchor="middle"
+     id="text42">▲ ISupplicantStaIfaceCallback.onAnqpQueryDone</text>
+  <!-- ===== Layer 2: wpa_supplicant C 层 ===== -->
+  <rect
+     x="14"
+     y="448"
+     width="1068.884"
+     height="210"
+     rx="5.8302765"
+     fill="#121820"
+     stroke="#2a4a2a"
+     stroke-width="1.18291"
+     id="rect42" />
+  <rect
+     x="14"
+     y="448"
+     width="4"
+     height="210"
+     fill="#30d158"
+     id="rect43" />
+  <text
+     x="30"
+     y="470"
+     font-size="15px"
+     font-weight="bold"
+     fill="#30d158"
+     id="text43">wpa_supplicant C 层（被借用的传输通道 · 不选网不匹配）</text>
+  <!-- 下行（左） -->
+  <text
+     x="44"
+     y="494"
+     font-size="11px"
+     font-weight="bold"
+     fill="#3b82f6"
+     id="text44">下行 · 组帧发 GAS</text>
+  <rect
+     x="44"
+     y="502"
+     width="400"
+     height="44"
+     rx="4"
+     fill="#101a2e"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect44" />
+  <text
+     x="56"
+     y="516"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text45">StaIface::initiateAnqpQueryInternal</text>
+  <text
+     x="56"
+     y="530"
+     font-size="8.5px"
+     fill="#e2e8f0"
+     id="text46">→ anqp_send_req（组 ANQP Query 载荷）</text>
+  <text
+     x="56"
+     y="540"
+     font-size="7.5px"
+     fill="#7aa8e0"
+     id="text47">sta_iface.cpp:1133 · interworking.c:2813</text>
+  <rect
+     x="44"
+     y="554"
+     width="400"
+     height="36"
+     rx="4"
+     fill="#101a2e"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect47" />
+  <text
+     x="56"
+     y="568"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text48">gas_query_req → radio_add_work（信道互斥）</text>
+  <text
+     x="56"
+     y="582"
+     font-size="7.5px"
+     fill="#7aa8e0"
+     id="text49">gas_query.c:838 · gas_query_start_cb</text>
+  <rect
+     x="44"
+     y="598"
+     width="400"
+     height="36"
+     rx="4"
+     fill="#101a2e"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect49" />
+  <text
+     x="56"
+     y="612"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text50">gas_query_tx → offchannel_send_action</text>
+  <text
+     x="56"
+     y="626"
+     font-size="7.5px"
+     fill="#7aa8e0"
+     id="text51">gas_query.c:284 · :314 → nl80211</text>
+  <!-- 上行（右） -->
+  <text
+     x="504"
+     y="494"
+     font-size="11px"
+     font-weight="bold"
+     fill="#10b981"
+     id="text52">上行 · 解析回传</text>
+  <rect
+     x="504"
+     y="502"
+     width="400"
+     height="44"
+     rx="4"
+     fill="#0d1f1a"
+     stroke="#10b981"
+     stroke-width="1.2"
+     id="rect52" />
+  <text
+     x="516"
+     y="516"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text53">anqp_resp_cb</text>
+  <text
+     x="516"
+     y="530"
+     font-size="8.5px"
+     fill="#e2e8f0"
+     id="text54">interworking_parse_rx_anqp_resp（逐元素解析）</text>
+  <text
+     x="516"
+     y="540"
+     font-size="7.5px"
+     fill="#5fc094"
+     id="text55">interworking.c:3127</text>
+  <rect
+     x="504"
+     y="554"
+     width="400"
+     height="44"
+     rx="4"
+     fill="#0d1f1a"
+     stroke="#10b981"
+     stroke-width="1.2"
+     id="rect55" />
+  <text
+     x="516"
+     y="568"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text56">wpas_notify_anqp_query_done</text>
+  <text
+     x="516"
+     y="582"
+     font-size="8.5px"
+     fill="#e2e8f0"
+     id="text57">→ wpas_aidl_notify_anqp_query_done</text>
+  <text
+     x="516"
+     y="592"
+     font-size="7.5px"
+     fill="#5fc094"
+     id="text58">interworking.c:3215 · aidl.cpp:204</text>
+  <rect
+     x="504"
+     y="606"
+     width="400"
+     height="36"
+     rx="4"
+     fill="#0d1f1a"
+     stroke="#10b981"
+     stroke-width="1.2"
+     id="rect58" />
+  <text
+     x="516"
+     y="620"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text59">AidlManager::notifyAnqpQueryDone</text>
+  <text
+     x="516"
+     y="634"
+     font-size="7.5px"
+     fill="#5fc094"
+     id="text60">序列化 AnqpData / Hs20AnqpData</text>
+  <!-- 下行链箭头（supplicant 左列） -->
+  <path
+     d="m 332,546 v 8"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path60" />
+  <path
+     d="m 332,590 v 8"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path61" />
+  <!-- 上行链箭头（supplicant 右列） -->
+  <path
+     d="m 704,554 v -8"
+     stroke="#10b981"
+     stroke-width="1.8"
+     fill="none"
+     marker-end="url(#arrowGreen)"
+     id="path62" />
+  <path
+     d="m 704,606 v -8"
+     stroke="#10b981"
+     stroke-width="1.8"
+     fill="none"
+     marker-end="url(#arrowGreen)"
+     id="path63" />
+  <!-- AIDL 边界到 supplicant 的连接 -->
+  <path
+     d="M 368,350 V 502"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path64" />
+  <path
+     d="M 704,501.39584 V 371.61001"
+     stroke="#10b981"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowGreen)"
+     id="path66" />
+  <!-- ===== Layer 3: 驱动 C 层 ===== -->
+  <rect
+     x="14"
+     y="678"
+     width="1067.1553"
+     height="150"
+     rx="5.820847"
+     fill="#150f22"
+     stroke="#3a2a5f"
+     stroke-width="1.18195"
+     id="rect66" />
+  <rect
+     x="14"
+     y="678"
+     width="4"
+     height="150"
+     fill="#a78bfa"
+     id="rect67" />
+  <text
+     x="30"
+     y="700"
+     font-size="15px"
+     font-weight="bold"
+     fill="#a78bfa"
+     id="text67">驱动 C 层（纯透传 · 不解 ANQP）</text>
+  <rect
+     x="44"
+     y="712"
+     width="490"
+     height="52"
+     rx="4"
+     fill="#1a1220"
+     stroke="#a78bfa"
+     stroke-width="1.2"
+     id="rect68" />
+  <text
+     x="56"
+     y="728"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text68">QCOM · lim_process_action_frame_no_session</text>
+  <text
+     x="56"
+     y="742"
+     font-size="8.5px"
+     fill="#c4b5fd"
+     id="text69">认 GAS 四个 action ID → lim_send_sme_mgmt_frame_ind 整帧上传</text>
+  <text
+     x="56"
+     y="756"
+     font-size="7.5px"
+     fill="#a78bfa"
+     id="text70">lim_process_action_frame.c:2235</text>
+  <rect
+     x="564"
+     y="712"
+     width="344.1683"
+     height="52"
+     rx="2.5974967"
+     fill="#1a1220"
+     stroke="#a78bfa"
+     stroke-width="0.967005"
+     id="rect70" />
+  <text
+     x="576"
+     y="728"
+     font-size="9.5px"
+     fill="#e2e8f0"
+     id="text71">MTK · aisFuncValidateRxActionFrame</text>
+  <text
+     x="576"
+     y="742"
+     font-size="8.5px"
+     fill="#c4b5fd"
+     id="text72">所有 Action 帧统一 kalIndicateRxMgmtFrame 转手</text>
+  <text
+     x="576"
+     y="756"
+     font-size="7.5px"
+     fill="#a78bfa"
+     id="text73">ais_fsm.c:8394</text>
+  <rect
+     x="44"
+     y="774"
+     width="864.16833"
+     height="36"
+     rx="3.2920699"
+     fill="#1a1220"
+     stroke="#a78bfa"
+     stroke-width="0.907203"
+     opacity="0.85"
+     id="rect73" />
+  <text
+     x="56"
+     y="788"
+     font-size="8.5px"
+     fill="#c4b5fd"
+     id="text74">TX 侧：QCOM .mgmt_tx = wlan_hdd_mgmt_tx · MTK mtk_cfg80211_mgmt_tx → MSG_MGMT_TX_REQUEST（均不解析 payload）</text>
+  <text
+     x="56"
+     y="800"
+     font-size="7.5px"
+     fill="#a78bfa"
+     id="text75">wlan_hdd_cfg80211.c:27309 · gl_cfg80211.c:2934</text>
+  <!-- supplicant 到驱动的连接 -->
+  <path
+     d="m 334,634 v 78"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     fill="none"
+     marker-end="url(#arrowBlue)"
+     id="path75" />
+  <path
+     d="m 704,642 v 38"
+     stroke="#10b981"
+     stroke-width="1.8"
+     fill="none"
+     id="path76" />
+  <path
+     d="M 704,680 H 334.01169"
+     stroke="#10b981"
+     stroke-width="1.58033"
+     fill="none"
+     id="path77" />
+  <path
+     d="m 704,680 v 32"
+     stroke="#3b82f6"
+     stroke-width="1.8"
+     fill="none"
+     id="path79"
+     style="marker-end:url(#arrowBlue)" />
+  <!-- ===== 图例 ===== -->
+  <rect
+     x="14"
+     y="844"
+     width="1065.4266"
+     height="40"
+     rx="4.8428483"
+     fill="#0d0d1a"
+     stroke="#2a2d35"
+     stroke-width="0.984159"
+     id="rect78" />
+  <text
+     x="30"
+     y="866"
+     font-size="10px"
+     font-weight="bold"
+     fill="#94a3b8"
+     id="text78">看图指引：</text>
+  <line
+     x1="124"
+     y1="862"
+     x2="152"
+     y2="862"
+     stroke="#3b82f6"
+     stroke-width="2"
+     id="line78" />
+  <text
+     x="160"
+     y="866"
+     font-size="9.5px"
+     fill="#94a3b8"
+     id="text79">蓝色 = 下行链（查缓存 → 发 ANQP）</text>
+  <line
+     x1="404"
+     y1="862"
+     x2="432"
+     y2="862"
+     stroke="#10b981"
+     stroke-width="2"
+     id="line79" />
+  <text
+     x="440"
+     y="866"
+     font-size="9.5px"
+     fill="#94a3b8"
+     id="text80">绿色 = 上行链（回传 → 落缓存 → 匹配）</text>
+  <line
+     x1="704"
+     y1="862"
+     x2="732"
+     y2="862"
+     stroke="#f0a040"
+     stroke-width="1.5"
+     stroke-dasharray="5, 3"
+     id="line80" />
+  <text
+     x="740"
+     y="866"
+     font-size="9.5px"
+     fill="#94a3b8"
+     id="text81">橙色虚线 = AIDL 进程边界</text>
+  <rect
+     x="904"
+     y="856"
+     width="14"
+     height="12"
+     rx="2"
+     fill="#1a1220"
+     stroke="#a78bfa"
+     stroke-width="1"
+     id="rect81" />
+  <text
+     x="924"
+     y="866"
+     font-size="9.5px"
+     fill="#94a3b8"
+     id="text82">紫色 = 驱动纯透传</text>
+</svg>

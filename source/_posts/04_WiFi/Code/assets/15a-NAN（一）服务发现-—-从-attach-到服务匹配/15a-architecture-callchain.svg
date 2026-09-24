@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1420 1100" width="1420" height="1100">
+<style>
+  text { font-family: 'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif; }
+</style>
+<defs>
+  <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#0f0f1a"/>
+    <stop offset="100%" stop-color="#1a1a2e"/>
+  </linearGradient>
+  <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0 0, 8 3, 0 6" fill="#38bdf8"/>
+  </marker>
+  <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0 0, 8 3, 0 6" fill="#34d399"/>
+  </marker>
+  <marker id="arrowOrange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0 0, 8 3, 0 6" fill="#f97316"/>
+  </marker>
+</defs>
+<rect x="0" y="0" width="1420" height="1100" fill="url(#bg-grad)"/>
+<text x="710" y="28" font-size="18px" font-weight="bold" fill="#e2e8f0" text-anchor="middle">NAN 服务发现全链路：从 attach 到 match 回传</text>
+<text x="710" y="47" font-size="11px" fill="#94a3b8" text-anchor="middle">App → Framework → 厂商 HAL 与 supplicant USD 两条并列路 → 驱动/固件 · 蓝=下发 绿=回传 橙=跨进程边界</text>
+<rect x="40" y="64" width="1340" height="78" rx="6" ry="6" fill="#121620" stroke="#334155" stroke-width="1.2"/>
+<rect x="40" y="64" width="4" height="78" fill="#38bdf8"/>
+<text x="56" y="86" font-size="15px" font-weight="bold" fill="#38bdf8" text-anchor="start">App 层</text>
+<text x="56" y="99" font-size="9.5px" fill="#94a3b8" text-anchor="start">应用进程 · Java</text>
+<rect x="230" y="92" width="320" height="34" rx="4" ry="4" fill="#101a2e" stroke="#38bdf8" stroke-width="1.2"/>
+<text x="390" y="114" font-size="12px" fill="#e2e8f0" text-anchor="middle">WifiAwareManager.attach()</text>
+<rect x="660" y="92" width="320" height="34" rx="4" ry="4" fill="#101a2e" stroke="#38bdf8" stroke-width="1.2"/>
+<text x="820" y="114" font-size="12px" fill="#e2e8f0" text-anchor="middle">WifiAwareSession.publish()</text>
+<rect x="1155" y="92" width="220" height="34" rx="4" ry="4" fill="#052e16" stroke="#34d399" stroke-width="1.2"/>
+<text x="1265" y="114" font-size="12px" fill="#34d399" text-anchor="middle">onServiceDiscovered()</text>
+<path d="M 40,146 L 1380,146" stroke="#f97316" stroke-width="1.5" stroke-dasharray="8,4" fill="none"/>
+<rect x="510" y="138" width="180" height="18" rx="9" ry="9" fill="#1a1808" stroke="#f97316" stroke-width="0.8"/>
+<text x="600" y="150" font-size="9.5px" fill="#f97316" text-anchor="middle">Binder 边界</text>
+<rect x="40" y="162" width="1340" height="250" rx="6" ry="6" fill="#121a2a" stroke="#1e3a5f" stroke-width="1.2"/>
+<rect x="40" y="162" width="4" height="250" fill="#38bdf8"/>
+<text x="56" y="184" font-size="15px" font-weight="bold" fill="#38bdf8" text-anchor="start">Framework 层 (SystemServer, Java)</text>
+<text x="56" y="199" font-size="9.5px" fill="#94a3b8" text-anchor="start">system_server 进程 · Java</text>
+<text x="230" y="206" font-size="10px" font-weight="bold" fill="#f97316" text-anchor="start">attach 命令流</text>
+<text x="660" y="206" font-size="10px" font-weight="bold" fill="#f97316" text-anchor="start">publish 命令流</text>
+<path d="M 605,210 L 605,400" stroke="#334155" stroke-width="1" stroke-dasharray="4,4" fill="none" opacity="0.5"/>
+<rect x="230" y="214" width="320" height="28" rx="4" ry="4" fill="#101a2e" stroke="#38bdf8" stroke-width="1.2"/>
+<text x="390" y="232" font-size="12px" fill="#e2e8f0" text-anchor="middle">WifiAwareServiceImpl.connect()</text>
+<path d="M 390,242 L 390,252" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<rect x="230" y="252" width="320" height="28" rx="4" ry="4" fill="#101a2e" stroke="#38bdf8" stroke-width="1.2"/>
+<text x="390" y="270" font-size="12px" fill="#e2e8f0" text-anchor="middle">WifiAwareStateManager.connect()</text>
+<path d="M 390,280 L 390,290" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<rect x="230" y="290" width="320" height="28" rx="4" ry="4" fill="#101a2e" stroke="#38bdf8" stroke-width="1.2"/>
+<text x="390" y="308" font-size="12px" fill="#e2e8f0" text-anchor="middle">connectLocal()</text>
+<path d="M 390,318 L 390,328" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<rect x="230" y="328" width="320" height="28" rx="4" ry="4" fill="#101a2e" stroke="#38bdf8" stroke-width="1.2"/>
+<text x="390" y="346" font-size="12px" fill="#e2e8f0" text-anchor="middle">mergeConfigRequests()</text>
+<path d="M 390,356 L 390,366" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<rect x="230" y="366" width="320" height="28" rx="4" ry="4" fill="#101a2e" stroke="#38bdf8" stroke-width="1.2"/>
+<text x="390" y="384" font-size="12px" fill="#e2e8f0" text-anchor="middle">WifiAwareNativeApi.enableAndConfigure()</text>
+<rect x="660" y="290" width="320" height="28" rx="4" ry="4" fill="#101a2e" stroke="#38bdf8" stroke-width="1.2"/>
+<text x="820" y="308" font-size="12px" fill="#e2e8f0" text-anchor="middle">WifiAwareStateManager.publish()</text>
+<path d="M 820,318 L 820,328" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<rect x="660" y="328" width="320" height="28" rx="4" ry="4" fill="#101a2e" stroke="#38bdf8" stroke-width="1.2"/>
+<text x="820" y="346" font-size="12px" fill="#e2e8f0" text-anchor="middle">publishLocal()</text>
+<path d="M 820,356 L 820,366" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<rect x="660" y="366" width="320" height="28" rx="4" ry="4" fill="#101a2e" stroke="#38bdf8" stroke-width="1.2"/>
+<text x="820" y="384" font-size="12px" fill="#e2e8f0" text-anchor="middle">WifiAwareNativeApi.publish()</text>
+<path d="M 390,126 L 390,214" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 820,126 L 820,290" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<rect x="1155" y="252" width="220" height="28" rx="4" ry="4" fill="#052e16" stroke="#34d399" stroke-width="1.2"/>
+<text x="1265" y="270" font-size="12px" fill="#34d399" text-anchor="middle">onMatchLocal()</text>
+<rect x="1155" y="310" width="220" height="28" rx="4" ry="4" fill="#052e16" stroke="#34d399" stroke-width="1.2"/>
+<text x="1265" y="328" font-size="12px" fill="#34d399" text-anchor="middle">eventMatch()</text>
+<path d="M 40,418 L 1380,418" stroke="#f97316" stroke-width="1.5" stroke-dasharray="8,4" fill="none"/>
+<rect x="510" y="410" width="180" height="16" rx="8" ry="8" fill="#1a1808" stroke="#f97316" stroke-width="0.8"/>
+<text x="600" y="422" font-size="9.5px" fill="#f97316" text-anchor="middle">HIDL / AIDL 边界</text>
+<rect x="40" y="428" width="1340" height="96" rx="6" ry="6" fill="#131226" stroke="#3b2f66" stroke-width="1.2"/>
+<rect x="40" y="428" width="4" height="96" fill="#a855f7"/>
+<text x="56" y="450" font-size="15px" font-weight="bold" fill="#a855f7" text-anchor="start">HAL 层</text>
+<text x="56" y="465" font-size="9.5px" fill="#94a3b8" text-anchor="start">IWifiNanIface 的两种实现 · HIDL/AIDL</text>
+<rect x="425" y="452" width="360" height="46" rx="4" ry="4" fill="#181230" stroke="#a855f7" stroke-width="1.2"/>
+<text x="605" y="470" font-size="12px" font-weight="bold" fill="#e2e8f0" text-anchor="middle">WifiNanIface</text>
+<text x="605" y="488" font-size="9px" fill="#a78bfa" text-anchor="middle">HIDL 1.0–1.6 / AIDL · 两种实现</text>
+<path d="M 390,394 L 390,432 L 545,432 L 545,452" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 820,394 L 820,432 L 665,432 L 665,452" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 605,498 L 605,528 L 340,528 L 340,608" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 605,498 L 605,528 L 880,528 L 880,608" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<text x="605" y="546" font-size="10px" font-style="italic" fill="#94a3b8" text-anchor="middle">两条并列的路 · 在驱动处汇合</text>
+<rect x="775" y="536" width="210" height="18" rx="9" ry="9" fill="#1a1808" stroke="#f97316" stroke-width="0.8"/>
+<text x="880" y="548" font-size="9.5px" fill="#f97316" text-anchor="middle">控制接口 wpa_ctrl / nl80211</text>
+<rect x="100" y="560" width="480" height="160" rx="6" ry="6" fill="#131226" stroke="#3b2f66" stroke-width="1.2"/>
+<rect x="100" y="560" width="4" height="160" fill="#a855f7"/>
+<text x="116" y="582" font-size="12px" font-weight="bold" fill="#a855f7" text-anchor="start">厂商 HAL（QCOM/MTK nan.cpp）</text>
+<text x="116" y="596" font-size="9px" fill="#94a3b8" text-anchor="start">直接组 vendor command 发驱动/固件</text>
+<rect x="140" y="608" width="400" height="30" rx="4" ry="4" fill="#181230" stroke="#a855f7" stroke-width="1.2"/>
+<text x="340" y="627" font-size="12px" fill="#e2e8f0" text-anchor="middle">nanPublishRequest</text>
+<path d="M 340,638 L 340,650" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<rect x="140" y="650" width="400" height="30" rx="4" ry="4" fill="#181230" stroke="#a855f7" stroke-width="1.2"/>
+<text x="340" y="669" font-size="12px" fill="#e2e8f0" text-anchor="middle">QCA_NL80211_VENDOR_SUBCMD_NAN</text>
+<rect x="640" y="560" width="740" height="180" rx="6" ry="6" fill="#131226" stroke="#3b2f66" stroke-width="1.2"/>
+<rect x="640" y="560" width="4" height="180" fill="#c084fc"/>
+<text x="656" y="582" font-size="12px" font-weight="bold" fill="#c084fc" text-anchor="start">supplicant USD 引擎（nan_de.c / nan_usd.c）</text>
+<text x="656" y="596" font-size="9px" fill="#94a3b8" text-anchor="start">用户态 eloop · USD 无同步</text>
+<rect x="680" y="608" width="400" height="30" rx="4" ry="4" fill="#181230" stroke="#c084fc" stroke-width="1.2"/>
+<text x="880" y="627" font-size="12px" fill="#e2e8f0" text-anchor="middle">nan_de_publish()</text>
+<path d="M 880,638 L 880,650" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<rect x="680" y="650" width="400" height="30" rx="4" ry="4" fill="#181230" stroke="#c084fc" stroke-width="1.2"/>
+<text x="880" y="669" font-size="12px" fill="#e2e8f0" text-anchor="middle">nan_de_tx_sdf()</text>
+<path d="M 880,680 L 880,692" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<rect x="680" y="692" width="400" height="30" rx="4" ry="4" fill="#181230" stroke="#c084fc" stroke-width="1.2"/>
+<text x="880" y="711" font-size="12px" fill="#e2e8f0" text-anchor="middle">offchannel_send_action()</text>
+<rect x="1155" y="586" width="220" height="28" rx="4" ry="4" fill="#052e16" stroke="#34d399" stroke-width="1.2"/>
+<text x="1265" y="604" font-size="12px" fill="#34d399" text-anchor="middle">NAN-DISCOVERY-RESULT</text>
+<rect x="1155" y="646" width="220" height="28" rx="4" ry="4" fill="#052e16" stroke="#34d399" stroke-width="1.2"/>
+<text x="1265" y="664" font-size="12px" fill="#34d399" text-anchor="middle">nan_de_rx_publish()</text>
+<path d="M 340,680 L 340,748 L 605,748" stroke="#38bdf8" stroke-width="2" fill="none"/>
+<path d="M 880,722 L 880,748 L 605,748" stroke="#38bdf8" stroke-width="2" fill="none"/>
+<path d="M 605,748 L 605,790" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<rect x="40" y="790" width="1340" height="180" rx="6" ry="6" fill="#0f1b20" stroke="#1e4a5f" stroke-width="1.2"/>
+<rect x="40" y="790" width="4" height="180" fill="#22d3ee"/>
+<text x="56" y="812" font-size="15px" font-weight="bold" fill="#22d3ee" text-anchor="start">驱动/固件 层</text>
+<text x="56" y="827" font-size="9.5px" fill="#94a3b8" text-anchor="start">两条路在驱动处汇合 · QCOM 瘦主机 vs MTK 胖主机</text>
+<rect x="280" y="778" width="200" height="20" rx="4" ry="4" fill="#0e1a1e" stroke="#22d3ee" stroke-width="1"/>
+<text x="380" y="792" font-size="10px" font-weight="bold" fill="#22d3ee" text-anchor="middle">QCOM · 固件卸载</text>
+<rect x="840" y="778" width="200" height="20" rx="4" ry="4" fill="#0e1a1e" stroke="#22d3ee" stroke-width="1"/>
+<text x="940" y="792" font-size="10px" font-weight="bold" fill="#22d3ee" text-anchor="middle">MTK · 主机组帧</text>
+<path d="M 605,790 L 605,806" stroke="#38bdf8" stroke-width="2" fill="none"/>
+<path d="M 605,806 L 380,806" stroke="#38bdf8" stroke-width="2" fill="none"/>
+<path d="M 605,806 L 940,806" stroke="#38bdf8" stroke-width="2" fill="none"/>
+<path d="M 380,806 L 380,828" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 940,806 L 940,828" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<rect x="240" y="828" width="280" height="28" rx="4" ry="4" fill="#0e1a1e" stroke="#22d3ee" stroke-width="1.2"/>
+<text x="380" y="846" font-size="12px" fill="#e2e8f0" text-anchor="middle">nan.cpp</text>
+<path d="M 380,856 L 380,876" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<rect x="240" y="876" width="280" height="28" rx="4" ry="4" fill="#0e1a1e" stroke="#22d3ee" stroke-width="1.2"/>
+<text x="380" y="894" font-size="12px" fill="#e2e8f0" text-anchor="middle">WMI</text>
+<path d="M 380,904 L 380,924" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<rect x="240" y="924" width="280" height="28" rx="4" ry="4" fill="#0e1a1e" stroke="#22d3ee" stroke-width="1.2"/>
+<text x="380" y="942" font-size="12px" fill="#e2e8f0" text-anchor="middle">固件</text>
+<rect x="770" y="828" width="340" height="28" rx="4" ry="4" fill="#0e1a1e" stroke="#22d3ee" stroke-width="1.2"/>
+<text x="940" y="846" font-size="12px" fill="#e2e8f0" text-anchor="middle">mtk_cfg80211_vendor_nan</text>
+<path d="M 940,856 L 940,876" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+<rect x="770" y="876" width="340" height="28" rx="4" ry="4" fill="#0e1a1e" stroke="#22d3ee" stroke-width="1.2"/>
+<text x="940" y="894" font-size="12px" fill="#e2e8f0" text-anchor="middle">nanScheduler.c</text>
+<rect x="1155" y="876" width="220" height="28" rx="4" ry="4" fill="#052e16" stroke="#34d399" stroke-width="1.2"/>
+<text x="1265" y="894" font-size="12px" fill="#34d399" text-anchor="middle">对端 Publish SDF 上送</text>
+<path d="M 1265,876 L 1265,674" stroke="#34d399" stroke-width="2" stroke-dasharray="7,5" fill="none" marker-end="url(#arrowGreen)"/>
+<path d="M 1265,646 L 1265,614" stroke="#34d399" stroke-width="2" stroke-dasharray="7,5" fill="none" marker-end="url(#arrowGreen)"/>
+<path d="M 1265,586 L 1265,338" stroke="#34d399" stroke-width="2" stroke-dasharray="7,5" fill="none" marker-end="url(#arrowGreen)"/>
+<path d="M 1265,310 L 1265,280" stroke="#34d399" stroke-width="2" stroke-dasharray="7,5" fill="none" marker-end="url(#arrowGreen)"/>
+<path d="M 1265,252 L 1265,126" stroke="#34d399" stroke-width="2" stroke-dasharray="7,5" fill="none" marker-end="url(#arrowGreen)"/>
+<rect x="1155" y="462" width="220" height="18" rx="9" ry="9" fill="#0f0f1a" stroke="#f97316" stroke-width="0.8"/>
+<text x="1265" y="474" font-size="9.5px" fill="#f97316" text-anchor="middle">注意：中间转发链未验证（§12）</text>
+<text x="60" y="996" font-size="13px" font-weight="bold" fill="#e2e8f0" text-anchor="start">图例 · 颜色语义</text>
+<line x1="60" y1="1012" x2="100" y2="1012" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+<text x="108" y="1016" font-size="11px" fill="#94a3b8" text-anchor="start">下发 / 数据流方向</text>
+<line x1="340" y1="1012" x2="390" y2="1012" stroke="#34d399" stroke-width="2" stroke-dasharray="7,5" marker-end="url(#arrowGreen)"/>
+<text x="398" y="1016" font-size="11px" fill="#94a3b8" text-anchor="start">回传 / match 事件方向</text>
+<line x1="640" y1="1012" x2="680" y2="1012" stroke="#f97316" stroke-width="2" stroke-dasharray="8,4"/>
+<text x="688" y="1016" font-size="11px" fill="#94a3b8" text-anchor="start">跨进程边界 (Binder / HIDL / wpa_ctrl)</text>
+<text x="60" y="1040" font-size="10px" fill="#64748b" text-anchor="start">厂商 HAL（nanPublishRequest）与 supplicant USD（nan_de_publish）是两条并列的路，非 Framework → HAL → supplicant 的串行调用，二者在驱动处汇合。</text>
+<text x="60" y="1056" font-size="10px" fill="#64748b" text-anchor="start">回传链：nan_de_rx_publish → NAN-DISCOVERY-RESULT → eventMatch → onMatchLocal → onServiceDiscovered</text>
+</svg>

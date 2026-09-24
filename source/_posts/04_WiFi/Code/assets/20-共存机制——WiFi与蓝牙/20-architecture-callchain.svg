@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 920" width="1200" height="920">
+<!-- validate: skip-orphan-boxes skip-gap-consistency -->
+<style>text { font-family: 'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif; fill: #e2e8f0; }</style>
+<defs>
+  <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#0f0f1a"/>
+    <stop offset="100%" stop-color="#1a1a2e"/>
+  </linearGradient>
+  <marker id="arrow-orange" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto">
+    <polygon points="0 0, 10 4, 0 8" fill="#f97316"/>
+  </marker>
+  <marker id="arrow-green" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto">
+    <polygon points="0 0, 10 4, 0 8" fill="#10b981"/>
+  </marker>
+</defs>
+<rect width="1200" height="920" fill="url(#bg-grad)"/>
+<text x="600" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#e2e8f0">WiFi/BT 共存三层分工 · 策略在主机，执行在固件</text>
+<text x="600" y="53" text-anchor="middle" font-size="12" fill="#94a3b8">主机是搬运工 + 配置者：下配置、查状态、切 chain；微秒级逐包仲裁沉在固件，主机插不上手</text>
+<rect x="40" y="78" width="1120" height="280" rx="8" fill="#1c1917" opacity="0.35"/>
+<line x1="40" y1="112" x2="1160" y2="112" stroke="#2a2a45" stroke-width="1.2"/>
+<text x="52" y="102" font-size="13.5" font-weight="bold" fill="#fdba74">第 1 层 · 主机配置下发（策略 / 搬运工）</text>
+<text x="70" y="134" font-size="12.5" font-weight="bold" fill="#fb923c">QCOM · WMI 配置链</text>
+<text x="660" y="134" font-size="12.5" font-weight="bold" fill="#fb923c">MTK · mbox 配置链</text>
+<rect x="70" y="146" width="520" height="52" rx="6" fill="#0f172a" stroke="#f97316" stroke-width="1.4"/>
+<text x="82" y="164" font-size="12" fill="#fcd34d">hdd_send_coex_config_params</text>
+<text x="82" y="186" font-size="11" fill="#fdba74">读 INI gSetBTCMode / gSetAntennaIsolation</text>
+<line x1="330" y1="198" x2="330" y2="212" stroke="#f97316" stroke-width="2" marker-end="url(#arrow-orange)"/>
+<rect x="70" y="212" width="520" height="36" rx="6" fill="#0f172a" stroke="#f97316" stroke-width="1.4"/>
+<text x="82" y="234" font-size="12" fill="#fdba74">sme_send_coex_config_cmd</text>
+<line x1="330" y1="248" x2="330" y2="262" stroke="#f97316" stroke-width="2" marker-end="url(#arrow-orange)"/>
+<rect x="70" y="262" width="520" height="36" rx="6" fill="#0f172a" stroke="#f97316" stroke-width="1.4"/>
+<text x="82" y="284" font-size="12" fill="#fdba74">wma_send_coex_config_cmd</text>
+<line x1="330" y1="298" x2="330" y2="312" stroke="#f97316" stroke-width="2" marker-end="url(#arrow-orange)"/>
+<rect x="70" y="312" width="520" height="44" rx="6" fill="#0f172a" stroke="#f97316" stroke-width="1.5"/>
+<text x="82" y="330" font-size="12" fill="#fcd34d">wmi_unified_send_coex_config_cmd</text>
+<text x="82" y="348" font-size="10.5" fill="#fdba74">WMI_COEX_CONFIG_CMD · 51 种 config_type</text>
+<rect x="660" y="200" width="500" height="40" rx="6" fill="#0f172a" stroke="#f97316" stroke-width="1.4"/>
+<text x="672" y="223" font-size="12" fill="#fcd34d">CMD_ID_COEX_CTRL（0x7C · Set / Query）</text>
+<line x1="910" y1="240" x2="910" y2="254" stroke="#f97316" stroke-width="2" marker-end="url(#arrow-orange)"/>
+<rect x="660" y="254" width="500" height="40" rx="6" fill="#0f172a" stroke="#f97316" stroke-width="1.4"/>
+<text x="672" y="277" font-size="11" fill="#fdba74">子命令：SET_RX_DATA_INFO / GET_ISO_DETECT / GET_INFO</text>
+<rect x="40" y="382" width="1120" height="255" rx="8" fill="#052e16" opacity="0.25"/>
+<line x1="40" y1="416" x2="1160" y2="416" stroke="#2a2a45" stroke-width="1.2"/>
+<text x="52" y="406" font-size="13.5" font-weight="bold" fill="#6ee7b7">第 2 层 · 主机查询 + 少量动作（配置者）</text>
+<text x="70" y="438" font-size="12.5" font-weight="bold" fill="#34d399">QCOM · BTC chain 切换 / MWS 只读</text>
+<text x="660" y="438" font-size="12.5" font-weight="bold" fill="#34d399">MTK · 共存事件上报 / CoAnt 电源</text>
+<rect x="70" y="448" width="520" height="56" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1.4"/>
+<text x="82" y="466" font-size="12" fill="#a7f3d0">wlan_hdd_btc_chain_mode_handler（BTC chain mode 切换）</text>
+<text x="82" y="488" font-size="11" fill="#6ee7b7">FDD / Hybrid 时 NSS 2→1 + 重连</text>
+<line x1="330" y1="504" x2="330" y2="518" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+<rect x="70" y="518" width="520" height="40" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1.4"/>
+<text x="82" y="541" font-size="12" fill="#a7f3d0">debugfs 只读 MWS 状态</text>
+<rect x="660" y="448" width="500" height="40" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1.4"/>
+<text x="672" y="471" font-size="12" fill="#a7f3d0">EVENT_ID_UPDATE_COEX_STATUS（0x91）/ PHYRATE（0x90）上报</text>
+<line x1="910" y1="488" x2="910" y2="502" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+<rect x="660" y="502" width="500" height="36" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1.4"/>
+<text x="672" y="524" font-size="12" fill="#a7f3d0">cnmOpModeMapEvtReason → CNM_OPMODE_REQ_COEX</text>
+<line x1="910" y1="538" x2="910" y2="552" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+<rect x="660" y="552" width="500" height="48" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1.4"/>
+<text x="672" y="570" font-size="12" fill="#a7f3d0">CoAnt 天线电源：wlanCoAntWiFi / wlanCoAntMD</text>
+<text x="672" y="588" font-size="11" fill="#6ee7b7">写 GPIO 0x100053a0</text>
+<text x="600" y="653" text-anchor="middle" font-size="12" fill="#94a3b8">跨进程边界：WMI 命令 / mbox 命令</text>
+<line x1="40" y1="662" x2="1160" y2="662" stroke="#64748b" stroke-width="1.2" stroke-dasharray="7,5"/>
+<line x1="320" y1="641" x2="320" y2="670" stroke="#f97316" stroke-width="2" marker-end="url(#arrow-orange)"/>
+<line x1="910" y1="641" x2="910" y2="670" stroke="#f97316" stroke-width="2" marker-end="url(#arrow-orange)"/>
+<rect x="40" y="670" width="1120" height="190" rx="8" fill="#1a1030" opacity="0.5" stroke="#f97316" stroke-width="1.6" stroke-dasharray="7,5"/>
+<line x1="40" y1="704" x2="1160" y2="704" stroke="#2a2a45" stroke-width="1.2"/>
+<text x="52" y="694" font-size="13.5" font-weight="bold" fill="#fbbf24">第 3 层 · 固件逐包仲裁（虚线 = 主机不可见）</text>
+<text x="1150" y="694" text-anchor="end" font-size="12" fill="#fbbf24">微秒级逐包仲裁，主机插不上手</text>
+<text x="70" y="726" font-size="12" font-weight="bold" fill="#fbbf24">QCOM 固件 · PTA 逐包回调</text>
+<text x="660" y="726" font-size="12" font-weight="bold" fill="#fbbf24">MTK 固件 · WiFi FW + BT FW 同 MCU</text>
+<rect x="80" y="736" width="380" height="34" rx="6" fill="#0f172a" stroke="#f97316" stroke-width="1.3"/>
+<text x="92" y="757" font-size="12" fill="#fdba74">coex_tx_req（申请）</text>
+<rect x="80" y="780" width="380" height="34" rx="6" fill="#0f172a" stroke="#f97316" stroke-width="1.3"/>
+<text x="92" y="801" font-size="12" fill="#fdba74">coex_rx_status（RX 剩余时间）</text>
+<rect x="80" y="824" width="380" height="34" rx="6" fill="#0f172a" stroke="#f97316" stroke-width="1.3"/>
+<text x="92" y="845" font-size="12" fill="#fdba74">coex_tx_status（回执）</text>
+<rect x="670" y="736" width="480" height="50" rx="6" fill="#0f172a" stroke="#f97316" stroke-width="1.3"/>
+<text x="682" y="754" font-size="12" fill="#fdba74">WiFi FW + BT FW 同在 connsys MCU</text>
+<text x="682" y="774" font-size="11" fill="#fdba74">TDD / FDD / HBD 调度 + PTA 优先级仲裁在固件</text>
+<rect x="670" y="798" width="480" height="46" rx="6" fill="#0f172a" stroke="#f97316" stroke-width="1.3"/>
+<text x="682" y="816" font-size="11.5" fill="#fdba74">nicCmdEventQueryNicCoexFeature 只有声明</text>
+<text x="682" y="834" font-size="11" fill="#94a3b8">nic_cmd_event.c 闭源</text>
+<rect x="70" y="886" width="26" height="12" rx="2" fill="#f97316"/>
+<text x="104" y="896" font-size="11.5" fill="#94a3b8">橙 = 主机下发（策略 / WMI 命令 / mbox 命令）</text>
+<rect x="520" y="886" width="26" height="12" rx="2" fill="#10b981"/>
+<text x="554" y="896" font-size="11.5" fill="#94a3b8">绿 = 主机查询 / 动作</text>
+<rect x="850" y="886" width="26" height="12" rx="2" fill="none" stroke="#f97316" stroke-width="1.5" stroke-dasharray="4,3"/>
+<text x="884" y="896" font-size="11.5" fill="#94a3b8">虚线框 = 固件边界（主机不可见）</text>
+</svg>

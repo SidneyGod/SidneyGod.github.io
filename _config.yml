@@ -268,13 +268,14 @@ markdown:
     permalink: true # 如果为 true 则创建一个除标题外带有固定地址的的锚点标签
     permalinkClass: 'header-anchor' # 定义固定锚点的 class 名
     permalinkSide: 'left' # 设定为 right 则会在标题后添加固定链接
-    permalinkSymbol: '¶' # 定义固定链接使用的符号
+    permalinkSymbol: '' # 定义固定链接使用的符号  ¶
     # 标题固定锚点到此结束
     case: 0 # 转换锚点 ID 中的字母为大写或小写，"0" 不转换；"1" 为小写；"2" 为大写
     separator: '-' # 用于替换空格的符号，默认为 "-"
   plugins:
     - markdown-it-abbr # https://github.com/markdown-it/markdown-it-abbr
     - markdown-it-image-lazy-loading
+    - markdown-it-named-headings
     # 解析 **。** 有点问题
     #- markdown-it-cjk-breaks # https://github.com/markdown-it/markdown-it-cjk-breaks
     - markdown-it-container # https://github.com/markdown-it/markdown-it-container

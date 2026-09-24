@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 968" width="1180" height="968">
+<style>
+  text { font-family: 'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif; }
+</style>
+<defs>
+  <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#0f0f1a"/>
+    <stop offset="100%" stop-color="#1a1a2e"/>
+  </linearGradient>
+  <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/>
+  </marker>
+  <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0 0, 8 3, 0 6" fill="#10b981"/>
+  </marker>
+</defs>
+<rect x="0" y="0" width="1180" height="968" fill="url(#bg-grad)"/>
+<text x="590" y="30" font-size="18px" font-weight="bold" fill="#e2e8f0" text-anchor="middle">DPP 扫码配网全局调用链：从 App 扫二维码到凭据落库</text>
+<text x="590" y="48" font-size="11px" fill="#94a3b8" text-anchor="middle">Wi-Fi Easy Connect · 正向下发链 (蓝) 与反向回报链 (绿) · Java Framework ⇄ wpa_supplicant C (AIDL)</text>
+<!-- ===== Layer 1: App 层 ===== -->
+<rect x="40" y="64" width="960" height="82" rx="6" fill="#121a2a" stroke="#1e3a5f" stroke-width="1.2"/>
+<rect x="40" y="64" width="4" height="82" fill="#5e9eff"/>
+<text x="56" y="86" font-size="15px" font-weight="bold" fill="#5e9eff">App 层 (Java)</text>
+<rect x="70" y="92" width="400" height="44" rx="4" fill="#101a2e" stroke="#3b82f6" stroke-width="1.2"/>
+<text x="82" y="109" font-size="9.5px" fill="#e2e8f0">WifiManager.startEasyConnectAsConfiguratorInitiator</text>
+<text x="82" y="124" font-size="8px" fill="#7aa8e0">WifiManager.java:9474</text>
+<rect x="600" y="92" width="380" height="44" rx="4" fill="#0d1f1a" stroke="#10b981" stroke-width="1.2"/>
+<text x="612" y="109" font-size="9px" fill="#e2e8f0">EasyConnectCallbackProxy → EasyConnectStatusCallback</text>
+<text x="612" y="124" font-size="8px" fill="#5fc094">WifiManager.java:9599</text>
+<!-- ===== Layer 2: Java Framework 层 ===== -->
+<rect x="40" y="160" width="960" height="286" rx="6" fill="#121a2a" stroke="#1e3a5f" stroke-width="1.2"/>
+<rect x="40" y="160" width="4" height="286" fill="#5e9eff"/>
+<text x="56" y="182" font-size="15px" font-weight="bold" fill="#5e9eff">Java Framework 层 (system_server)</text>
+<rect x="70" y="186" width="340" height="34" rx="4" fill="#101a2e" stroke="#3b82f6" stroke-width="1.2"/>
+<text x="82" y="200" font-size="9.5px" fill="#e2e8f0">WifiServiceImpl.startDppAsConfiguratorInitiator</text>
+<text x="82" y="212" font-size="8px" fill="#7aa8e0">:6653</text>
+<rect x="70" y="232" width="340" height="34" rx="4" fill="#101a2e" stroke="#3b82f6" stroke-width="1.2"/>
+<text x="82" y="246" font-size="9.5px" fill="#e2e8f0">DppManager.startDppAsConfiguratorInitiator</text>
+<text x="82" y="258" font-size="8px" fill="#7aa8e0">DppManager.java:225</text>
+<rect x="70" y="282" width="340" height="44" rx="4" fill="#101a2e" stroke="#3b82f6" stroke-width="1.2"/>
+<text x="82" y="296" font-size="9.5px" fill="#e2e8f0">WifiNative.addDppPeerUri</text>
+<text x="82" y="309" font-size="9px" fill="#e2e8f0">startDppConfiguratorInitiator</text>
+<text x="82" y="320" font-size="8px" fill="#7aa8e0">:3216 / :3254</text>
+<rect x="70" y="342" width="340" height="44" rx="4" fill="#101a2e" stroke="#3b82f6" stroke-width="1.2"/>
+<text x="82" y="356" font-size="9.5px" fill="#e2e8f0">SupplicantStaIfaceHal.addDppPeerUri</text>
+<text x="82" y="369" font-size="9px" fill="#e2e8f0">startDppConfiguratorInitiator</text>
+<text x="82" y="380" font-size="8px" fill="#7aa8e0">:2028 / :2077</text>
+<rect x="70" y="402" width="340" height="34" rx="4" fill="#101a2e" stroke="#3b82f6" stroke-width="1.2"/>
+<text x="82" y="416" font-size="9.5px" fill="#e2e8f0">SupplicantStaIfaceHalAidlImpl</text>
+<text x="82" y="428" font-size="8px" fill="#7aa8e0">:3328 / :3402</text>
+<rect x="650" y="190" width="300" height="56" rx="4" fill="#0d1f1a" stroke="#10b981" stroke-width="1.2"/>
+<text x="662" y="207" font-size="9.5px" fill="#e2e8f0">DppManager.onSuccessConfigReceived</text>
+<text x="662" y="220" font-size="9px" fill="#e2e8f0">→ WifiConfigManager.addOrUpdateNetwork</text>
+<text x="662" y="236" font-size="8px" fill="#5fc094">DppManager.java:671 · Framework 落库</text>
+<rect x="650" y="262" width="300" height="50" rx="4" fill="#0d1f1a" stroke="#10b981" stroke-width="1.2"/>
+<text x="662" y="279" font-size="9px" fill="#e2e8f0">SupplicantStaIfaceCallbackAidlImpl</text>
+<text x="662" y="292" font-size="9px" fill="#e2e8f0">.onDppConfigReceived</text>
+<text x="662" y="304" font-size="7.5px" fill="#5fc094">SupplicantStaIfaceCallbackAidlImpl.java:531</text>
+<!-- ===== AIDL 边界 ===== -->
+<line x1="40" y1="470" x2="1000" y2="470" stroke="#f0a040" stroke-width="1.5" stroke-dasharray="8,4"/>
+<text x="580" y="464" font-size="11px" fill="#f0a040" text-anchor="middle">AIDL 边界 (Binder) · 跨进程</text>
+<rect x="50" y="452" width="160" height="14" rx="2" fill="#1a1808" stroke="#f0a040" stroke-width="0.8"/>
+<text x="130" y="461" font-size="8px" fill="#f0a040" text-anchor="middle">▼ ISupplicantStaIface</text>
+<rect x="805" y="452" width="210" height="14" rx="2" fill="#1a1808" stroke="#f0a040" stroke-width="0.8"/>
+<text x="905" y="461" font-size="7px" fill="#f0a040" text-anchor="middle">▲ ISupplicantStaIfaceCallback</text>
+<!-- ===== Layer 3: wpa_supplicant C 层 ===== -->
+<rect x="40" y="490" width="960" height="200" rx="6" fill="#121820" stroke="#2a4a2a" stroke-width="1.2"/>
+<rect x="40" y="490" width="4" height="200" fill="#30d158"/>
+<text x="56" y="512" font-size="15px" font-weight="bold" fill="#30d158">wpa_supplicant C 层 (原生进程)</text>
+<rect x="70" y="520" width="340" height="48" rx="4" fill="#101a2e" stroke="#3b82f6" stroke-width="1.2"/>
+<text x="82" y="537" font-size="9.5px" fill="#e2e8f0">StaIface::addDppPeerUriInternal</text>
+<text x="82" y="550" font-size="9px" fill="#e2e8f0">→ wpas_dpp_qr_code</text>
+<text x="82" y="562" font-size="7.5px" fill="#7aa8e0">sta_iface.cpp:1505 · dpp_supplicant.c:76</text>
+<rect x="70" y="584" width="340" height="48" rx="4" fill="#101a2e" stroke="#3b82f6" stroke-width="1.2"/>
+<text x="82" y="601" font-size="9px" fill="#e2e8f0">StaIface::startDppConfiguratorInitiatorInternal</text>
+<text x="82" y="614" font-size="9px" fill="#e2e8f0">→ wpas_dpp_auth_init</text>
+<text x="82" y="626" font-size="7.5px" fill="#7aa8e0">sta_iface.cpp:1541 · dpp_supplicant.c:846</text>
+<rect x="430" y="520" width="240" height="48" rx="4" fill="#0d1f1a" stroke="#10b981" stroke-width="1.2"/>
+<text x="442" y="537" font-size="9.5px" fill="#e2e8f0">wpas_dpp_add_network</text>
+<text x="442" y="550" font-size="9px" fill="#e2e8f0">→ DPP-NETWORK-ID (落库)</text>
+<text x="442" y="562" font-size="7.5px" fill="#5fc094">dpp_supplicant.c:1395</text>
+<rect x="690" y="520" width="260" height="48" rx="4" fill="#0d1f1a" stroke="#10b981" stroke-width="1.2"/>
+<text x="702" y="537" font-size="9.5px" fill="#e2e8f0">AidlManager::notifyDppConfigReceived</text>
+<text x="702" y="552" font-size="8px" fill="#5fc094">aidl_manager.cpp:1877</text>
+<!-- ===== Layer 4: 协议帧层 ===== -->
+<rect x="40" y="704" width="960" height="200" rx="6" fill="#150f22" stroke="#3a2a5f" stroke-width="1.2"/>
+<rect x="40" y="704" width="4" height="200" fill="#a78bfa"/>
+<text x="56" y="726" font-size="15px" font-weight="bold" fill="#a78bfa">协议帧层 (DPP 协议核心 · 空中交互)</text>
+<rect x="130" y="736" width="180" height="46" rx="4" fill="#101a2e" stroke="#3b82f6" stroke-width="1.2"/>
+<text x="142" y="753" font-size="10px" fill="#e2e8f0">dpp_auth_init</text>
+<text x="142" y="770" font-size="8px" fill="#7aa8e0">dpp_auth.c:1161</text>
+<rect x="350" y="736" width="110" height="56" rx="4" fill="#1a1220" stroke="#a78bfa" stroke-width="1.2"/>
+<text x="405" y="753" font-size="10px" fill="#e2e8f0" text-anchor="middle" font-weight="bold">Auth Request</text>
+<text x="405" y="770" font-size="7.5px" fill="#a78bfa" text-anchor="middle">公共动作帧</text>
+<rect x="490" y="736" width="110" height="56" rx="4" fill="#1a1220" stroke="#a78bfa" stroke-width="1.2"/>
+<text x="545" y="753" font-size="10px" fill="#e2e8f0" text-anchor="middle" font-weight="bold">Auth Response</text>
+<text x="545" y="770" font-size="7.5px" fill="#a78bfa" text-anchor="middle">公共动作帧</text>
+<rect x="630" y="736" width="120" height="56" rx="4" fill="#1a1220" stroke="#a78bfa" stroke-width="1.2"/>
+<text x="690" y="753" font-size="10px" fill="#e2e8f0" text-anchor="middle" font-weight="bold">Auth Confirm</text>
+<text x="690" y="770" font-size="7.5px" fill="#a78bfa" text-anchor="middle">公共动作帧</text>
+<rect x="350" y="816" width="190" height="60" rx="4" fill="#1a1220" stroke="#a78bfa" stroke-width="1.2"/>
+<text x="445" y="834" font-size="10px" fill="#e2e8f0" text-anchor="middle" font-weight="bold">GAS Config Request</text>
+<text x="445" y="852" font-size="8px" fill="#a78bfa" text-anchor="middle">dpp_conf_req_rx</text>
+<text x="445" y="866" font-size="7.5px" fill="#a78bfa" text-anchor="middle">dpp.c:2325</text>
+<rect x="570" y="816" width="280" height="60" rx="4" fill="#1a1220" stroke="#a78bfa" stroke-width="1.2"/>
+<text x="710" y="834" font-size="10px" fill="#e2e8f0" text-anchor="middle" font-weight="bold">GAS Config Response</text>
+<text x="710" y="852" font-size="8px" fill="#a78bfa" text-anchor="middle">dpp_build_conf_resp → dpp_conf_resp_rx</text>
+<text x="710" y="866" font-size="7.5px" fill="#a78bfa" text-anchor="middle">dpp.c:2081 · dpp.c:3374</text>
+<!-- ===== 下发链 (blue) ===== -->
+<path d="M 240,136 L 240,186" stroke="#3b82f6" stroke-width="1.8" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 240,220 L 240,232" stroke="#3b82f6" stroke-width="1.8" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 240,266 L 240,282" stroke="#3b82f6" stroke-width="1.8" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 240,326 L 240,342" stroke="#3b82f6" stroke-width="1.8" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 240,386 L 240,402" stroke="#3b82f6" stroke-width="1.8" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 240,436 L 240,520" stroke="#3b82f6" stroke-width="1.8" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 240,568 L 240,584" stroke="#3b82f6" stroke-width="1.8" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 240,632 L 240,736" stroke="#3b82f6" stroke-width="1.8" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 310,764 L 350,764" stroke="#3b82f6" stroke-width="1.8" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 460,764 L 490,764" stroke="#3b82f6" stroke-width="1.8" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 600,764 L 630,764" stroke="#3b82f6" stroke-width="1.8" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 690,792 L 690,806 L 445,806 L 445,816" stroke="#3b82f6" stroke-width="1.8" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 540,846 L 570,846" stroke="#3b82f6" stroke-width="1.8" fill="none" marker-end="url(#arrowBlue)"/>
+<path d="M 710,816 L 710,806 L 550,806 L 550,568" stroke="#3b82f6" stroke-width="1.8" fill="none" marker-end="url(#arrowBlue)"/>
+<text x="562" y="700" font-size="7.5px" fill="#7aa8e0">配置成功 → 落库</text>
+<!-- ===== 回报链 (green) ===== -->
+<path d="M 672,544 L 688,544" stroke="#10b981" stroke-width="1.8" fill="none" marker-end="url(#arrowGreen)"/>
+<path d="M 800,520 L 800,312" stroke="#10b981" stroke-width="1.8" fill="none" marker-end="url(#arrowGreen)"/>
+<path d="M 800,262 L 800,246" stroke="#10b981" stroke-width="1.8" fill="none" marker-end="url(#arrowGreen)"/>
+<path d="M 800,190 L 800,136" stroke="#10b981" stroke-width="1.8" fill="none" marker-end="url(#arrowGreen)"/>
+<!-- ===== Right rail: DPP 四阶段 ===== -->
+<rect x="1020" y="64" width="140" height="820" rx="6" fill="#0f1018" stroke="#2a2d35" stroke-width="1"/>
+<path d="M 1008,728 L 1008,882" stroke="#8b95a5" stroke-width="1.2" stroke-dasharray="3,3" fill="none"/>
+<path d="M 1008,728 L 1000,728" stroke="#8b95a5" stroke-width="1.2" fill="none"/>
+<path d="M 1008,882 L 1000,882" stroke="#8b95a5" stroke-width="1.2" fill="none"/>
+<path d="M 1020,163 L 1004,163" stroke="#5e9eff" stroke-width="1.2" fill="none"/>
+<path d="M 1020,503 L 1004,503" stroke="#30d158" stroke-width="1.2" fill="none"/>
+<rect x="1028" y="130" width="124" height="66" rx="4" fill="#121a2a" stroke="#5e9eff" stroke-width="1.2"/>
+<text x="1090" y="152" font-size="11px" fill="#5e9eff" text-anchor="middle" font-weight="bold">①</text>
+<text x="1090" y="168" font-size="8px" fill="#5e9eff" text-anchor="middle" font-weight="bold">Bootstrapping</text>
+<text x="1090" y="184" font-size="7px" fill="#94a3b8" text-anchor="middle">§5 扫码配网</text>
+<rect x="1028" y="470" width="124" height="66" rx="4" fill="#0d1f1a" stroke="#30d158" stroke-width="1.2"/>
+<text x="1090" y="492" font-size="11px" fill="#30d158" text-anchor="middle" font-weight="bold">④</text>
+<text x="1090" y="508" font-size="8px" fill="#30d158" text-anchor="middle" font-weight="bold">Access</text>
+<text x="1090" y="524" font-size="7px" fill="#94a3b8" text-anchor="middle">凭据落库 · 回报</text>
+<rect x="1028" y="690" width="124" height="66" rx="4" fill="#1a1220" stroke="#a78bfa" stroke-width="1.2"/>
+<text x="1090" y="712" font-size="11px" fill="#a78bfa" text-anchor="middle" font-weight="bold">②</text>
+<text x="1090" y="728" font-size="8px" fill="#a78bfa" text-anchor="middle" font-weight="bold">Authentication</text>
+<text x="1090" y="744" font-size="7px" fill="#94a3b8" text-anchor="middle">§6.3 Auth 三帧</text>
+<rect x="1028" y="806" width="124" height="66" rx="4" fill="#1a1808" stroke="#eab308" stroke-width="1.2"/>
+<text x="1090" y="828" font-size="11px" fill="#eab308" text-anchor="middle" font-weight="bold">③</text>
+<text x="1090" y="844" font-size="8px" fill="#eab308" text-anchor="middle" font-weight="bold">Configuration</text>
+<text x="1090" y="860" font-size="7px" fill="#94a3b8" text-anchor="middle">§6.4 GAS 交换</text>
+<!-- ===== Legend ===== -->
+<rect x="40" y="914" width="960" height="40" rx="5" fill="#0d0d1a" stroke="#2a2d35" stroke-width="1"/>
+<text x="56" y="936" font-size="10px" font-weight="bold" fill="#94a3b8">看图指引：</text>
+<line x1="150" y1="932" x2="178" y2="932" stroke="#3b82f6" stroke-width="2"/>
+<text x="186" y="936" font-size="9.5px" fill="#94a3b8">蓝色 = 下发链</text>
+<line x1="300" y1="932" x2="328" y2="932" stroke="#10b981" stroke-width="2"/>
+<text x="336" y="936" font-size="9.5px" fill="#94a3b8">绿色 = 回报链</text>
+<line x1="450" y1="932" x2="478" y2="932" stroke="#f0a040" stroke-width="1.5" stroke-dasharray="5,3"/>
+<text x="486" y="936" font-size="9.5px" fill="#94a3b8">橙色虚线 = AIDL 进程边界</text>
+<rect x="640" y="926" width="14" height="12" rx="2" fill="#1a1220" stroke="#a78bfa" stroke-width="1"/>
+<text x="660" y="936" font-size="9.5px" fill="#94a3b8">紫色 = 协议帧</text>
+<text x="800" y="936" font-size="9.5px" fill="#94a3b8">右侧列 = DPP 四阶段 ①→②→③→④</text>
+</svg>

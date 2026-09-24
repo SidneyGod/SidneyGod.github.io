@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" width="960" height="720">
+<!-- validate: skip-gap-consistency -->
+<style>text{font-family:'Maple Mono Normal NL NF CN','Microsoft YaHei',sans-serif;}</style>
+<defs>
+<linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f0f1a"/><stop offset="100%" stop-color="#1a1a2e"/></linearGradient>
+<marker id="arr-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#3b82f6"/></marker>
+<marker id="arr-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#10b981"/></marker>
+<marker id="arr-orange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#f97316"/></marker>
+<marker id="arr-gray" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#94a3b8"/></marker>
+</defs>
+<rect width="960" height="720" fill="url(#bg-grad)"/>
+<text x="480" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#e2e8f0">GAS 配置交换：从 Config Request 到凭据落库</text>
+<text x="480" y="50" text-anchor="middle" font-size="10" fill="#64748b">DPP Configuration 协议 · 规范 §6.4 · 隧道用 ke 加密（AES-SIV）</text>
+<rect x="150" y="70" width="220" height="44" rx="6" fill="#0f172a" stroke="#3b82f6" stroke-width="1.5"/>
+<rect x="150" y="70" width="220" height="3" rx="2" fill="#3b82f6"/>
+<text x="260" y="89" text-anchor="middle" font-size="12" font-weight="bold" fill="#e2e8f0">Configurator</text>
+<text x="260" y="105" text-anchor="middle" font-size="9" fill="#94a3b8">配网发起方（GAS server）</text>
+<rect x="590" y="70" width="220" height="44" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+<rect x="590" y="70" width="220" height="3" rx="2" fill="#10b981"/>
+<text x="700" y="89" text-anchor="middle" font-size="12" font-weight="bold" fill="#e2e8f0">Enrollee</text>
+<text x="700" y="105" text-anchor="middle" font-size="9" fill="#94a3b8">被配网设备（GAS client）</text>
+<line x1="260" y1="114" x2="260" y2="650" stroke="#3b82f6" stroke-width="1" stroke-dasharray="5,5" opacity="0.25"/>
+<line x1="700" y1="114" x2="700" y2="650" stroke="#10b981" stroke-width="1" stroke-dasharray="5,5" opacity="0.25"/>
+<circle cx="35" cy="161" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="165" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">1</text>
+<path d="M 695,150 L 677,150 A 15,15 0 0,0 677,172 L 700,172" stroke="#f97316" stroke-width="1.2" fill="none" marker-end="url(#arr-orange)"/>
+<text x="688" y="164" text-anchor="end" font-size="10" fill="#e2e8f0">构造 GAS Config Request</text>
+<text x="688" y="178" text-anchor="end" font-size="9" fill="#94a3b8">ke 会话密钥已就绪</text>
+<circle cx="35" cy="210" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="214" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">2</text>
+<line x1="700" y1="210" x2="260" y2="210" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+<text x="480" y="203" text-anchor="middle" font-size="10" fill="#93c5fd">GAS Config Request</text>
+<circle cx="35" cy="276" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="280" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">3</text>
+<path d="M 265,265 L 283,265 A 15,15 0 0,1 283,287 L 260,287" stroke="#f97316" stroke-width="1.2" fill="none" marker-end="url(#arr-orange)"/>
+<text x="292" y="279" font-size="10" fill="#e2e8f0">dpp_conf_req_rx（接收请求）</text>
+<circle cx="35" cy="331" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="335" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">4</text>
+<path d="M 265,320 L 283,320 A 15,15 0 0,1 283,342 L 260,342" stroke="#f97316" stroke-width="1.2" fill="none" marker-end="url(#arr-orange)"/>
+<text x="292" y="334" font-size="10" fill="#e2e8f0">dpp_build_conf_resp（构造响应）</text>
+<rect x="390" y="350" width="180" height="84" rx="6" fill="#0f172a" stroke="#a855f7" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="480" y="370" text-anchor="middle" font-size="10" font-weight="bold" fill="#c4b5fd">Config Response 内容</text>
+<text x="480" y="392" text-anchor="middle" font-size="10" fill="#6ee7b7">Connector = 门禁卡</text>
+<text x="480" y="408" text-anchor="middle" font-size="10" fill="#6ee7b7">SSID / psk = 钥匙</text>
+<text x="480" y="425" text-anchor="middle" font-size="9" fill="#94a3b8">AES-SIV(ke) 加密</text>
+<line x1="283" y1="380" x2="390" y2="380" stroke="#a855f7" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr-gray)"/>
+<circle cx="35" cy="472" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="476" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">5</text>
+<line x1="260" y1="472" x2="700" y2="472" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+<text x="480" y="465" text-anchor="middle" font-size="10" fill="#93c5fd">Config Response（AES-SIV + ke 加密）</text>
+<circle cx="35" cy="538" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="542" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">6</text>
+<path d="M 695,527 L 677,527 A 15,15 0 0,0 677,549 L 700,549" stroke="#f97316" stroke-width="1.2" fill="none" marker-end="url(#arr-orange)"/>
+<text x="688" y="541" text-anchor="end" font-size="10" fill="#e2e8f0">dpp_conf_resp_rx（AES-SIV 解密）</text>
+<circle cx="35" cy="593" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="597" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">7</text>
+<path d="M 695,582 L 677,582 A 15,15 0 0,0 677,604 L 700,604" stroke="#f97316" stroke-width="1.2" fill="none" marker-end="url(#arr-orange)"/>
+<text x="688" y="596" text-anchor="end" font-size="10" fill="#e2e8f0">wpas_dpp_add_network（凭据落库）</text>
+<circle cx="35" cy="654" r="9" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<text x="35" y="658" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0">8</text>
+<rect x="590" y="632" width="220" height="44" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+<text x="700" y="650" text-anchor="middle" font-size="11" font-weight="bold" fill="#6ee7b7">发 DPP-NETWORK-ID 事件</text>
+<text x="700" y="666" text-anchor="middle" font-size="9" fill="#10b981">wpa_msg → AIDL 回调（反向链起点）</text>
+<line x1="700" y1="608" x2="700" y2="632" stroke="#10b981" stroke-width="1.2" stroke-dasharray="3,3" marker-end="url(#arr-green)"/>
+<rect x="330" y="690" width="12" height="12" rx="2" fill="#3b82f6" opacity="0.8"/>
+<text x="348" y="700" font-size="10" fill="#cbd5e1">下发消息</text>
+<rect x="468" y="690" width="12" height="12" rx="2" fill="#f97316" opacity="0.8"/>
+<text x="486" y="700" font-size="10" fill="#cbd5e1">处理 / 构造</text>
+<rect x="600" y="690" width="12" height="12" rx="2" fill="#10b981" opacity="0.8"/>
+<text x="618" y="700" font-size="10" fill="#cbd5e1">落库 / 事件</text>
+</svg>

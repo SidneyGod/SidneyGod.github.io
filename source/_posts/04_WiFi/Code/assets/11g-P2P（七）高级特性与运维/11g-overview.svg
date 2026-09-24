@@ -1,0 +1,1452 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1320 1000"
+   width="1320"
+   height="1000"
+   version="1.1"
+   id="svg99"
+   sodipodi:docname="11g-overview.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview99"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.093"
+     inkscape:cx="643.1839"
+     inkscape:cy="500"
+     inkscape:window-width="2240"
+     inkscape:window-height="1337"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg99" />
+  <defs
+     id="defs9">
+    <linearGradient
+       id="bg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0f0f1a"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#1a1a2e"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="a-orange"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#f97316"
+         id="polygon2" />
+    </marker>
+    <marker
+       id="a-blue"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#3b82f6"
+         id="polygon3" />
+    </marker>
+    <marker
+       id="a-gray"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#64748b"
+         id="polygon4" />
+    </marker>
+    <marker
+       id="a-purple"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#a855f7"
+         id="polygon5" />
+    </marker>
+    <marker
+       id="a-green"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#10b981"
+         id="polygon6" />
+    </marker>
+    <marker
+       id="a-red"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#ef4444"
+         id="polygon7" />
+    </marker>
+    <marker
+       id="a-gold"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#eab308"
+         id="polygon8" />
+    </marker>
+    <marker
+       id="a-cyan"
+       markerWidth="8"
+       markerHeight="6"
+       refX="7"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 8 3, 0 6"
+         fill="#22d3ee"
+         id="polygon9" />
+    </marker>
+    <filter
+       id="sh"
+       x="-0.001744186"
+       y="-0.010135135"
+       width="1.0034884"
+       height="1.0202703">
+      <feDropShadow
+         dx="0"
+         dy="2"
+         stdDeviation="3"
+         flood-color="#000"
+         flood-opacity="0.35" />
+    </filter>
+  </defs>
+  <style
+     id="style9"> text { font-family: 'Maple Mono Normal NL NF CN', 'Microsoft YaHei', sans-serif; } </style>
+  <rect
+     width="1320"
+     height="1000"
+     fill="url(#bg)"
+     id="rect9" />
+  <text
+     x="660"
+     y="38"
+     text-anchor="middle"
+     font-size="17"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text9">P2P 高级特性与运维全链路分层架构</text>
+  <text
+     x="660"
+     y="62"
+     text-anchor="middle"
+     font-size="11"
+     fill="#64748b"
+     id="text10">App → SystemServer → Framework → HAL → wpa_supplicant → 内核 → 驱动 · 跨进程边界：Binder / AIDL / nl80211</text>
+  <rect
+     x="40"
+     y="96"
+     width="620"
+     height="74"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect10" />
+  <rect
+     x="44"
+     y="106"
+     width="4"
+     height="54"
+     rx="2"
+     fill="#a855f7"
+     id="rect11" />
+  <rect
+     x="58"
+     y="106"
+     width="110"
+     height="20"
+     rx="10"
+     fill="#0f0f1a"
+     stroke="#a855f7"
+     stroke-width="1"
+     id="rect12" />
+  <text
+     x="70"
+     y="120"
+     text-anchor="start"
+     font-size="11"
+     font-weight="700"
+     fill="#a855f7"
+     id="text12">App 层</text>
+  <text
+     x="58"
+     y="140"
+     text-anchor="start"
+     font-size="14px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text13">WifiP2pManager</text>
+  <text
+     x="58"
+     y="154"
+     text-anchor="start"
+     font-size="10.5"
+     fill="#94a3b8"
+     id="text14">createGroup() · addServiceRequest() · connect()</text>
+  <circle
+     cx="646"
+     cy="116"
+     r="9"
+     fill="#f97316"
+     id="circle14" />
+  <text
+     x="646"
+     y="119.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text15">1</text>
+  <circle
+     cx="624"
+     cy="116"
+     r="9"
+     fill="#3b82f6"
+     id="circle15" />
+  <text
+     x="624"
+     y="119.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text16">2</text>
+  <circle
+     cx="602"
+     cy="116"
+     r="9"
+     fill="#10b981"
+     id="circle16" />
+  <text
+     x="602"
+     y="119.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text17">3</text>
+  <rect
+     x="40"
+     y="222"
+     width="620"
+     height="74"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect17" />
+  <rect
+     x="44"
+     y="232"
+     width="4"
+     height="54"
+     rx="2"
+     fill="#3b82f6"
+     id="rect18" />
+  <rect
+     x="58"
+     y="232"
+     width="110"
+     height="20"
+     rx="10"
+     fill="#0f0f1a"
+     stroke="#3b82f6"
+     stroke-width="1"
+     id="rect19" />
+  <text
+     x="70"
+     y="246"
+     text-anchor="start"
+     font-size="11"
+     font-weight="700"
+     fill="#3b82f6"
+     id="text19">SystemServer</text>
+  <text
+     x="58"
+     y="266"
+     text-anchor="start"
+     font-size="14px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text20">WifiP2pService → WifiP2pServiceImpl</text>
+  <text
+     x="58"
+     y="280"
+     text-anchor="start"
+     font-size="10.5"
+     fill="#94a3b8"
+     id="text21">WifiP2pShellCommand（adb shell cmd wifip2p）</text>
+  <circle
+     cx="646"
+     cy="242"
+     r="9"
+     fill="#f97316"
+     id="circle21" />
+  <text
+     x="646"
+     y="245.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text22">1</text>
+  <circle
+     cx="624"
+     cy="242"
+     r="9"
+     fill="#ef4444"
+     id="circle22" />
+  <text
+     x="624"
+     y="245.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text23">5</text>
+  <rect
+     x="40"
+     y="348"
+     width="620"
+     height="74"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect23" />
+  <rect
+     x="44"
+     y="358"
+     width="4"
+     height="54"
+     rx="2"
+     fill="#f97316"
+     id="rect24" />
+  <rect
+     x="58"
+     y="358"
+     width="110"
+     height="20"
+     rx="10"
+     fill="#0f0f1a"
+     stroke="#f97316"
+     stroke-width="1"
+     id="rect25" />
+  <text
+     x="70"
+     y="372"
+     text-anchor="start"
+     font-size="11"
+     font-weight="700"
+     fill="#f97316"
+     id="text25">Framework 层</text>
+  <text
+     x="58"
+     y="392"
+     text-anchor="start"
+     font-size="14px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text26">P2pStateMachine（CREATE_GROUP / INVITE / SERV_DISC）</text>
+  <text
+     x="58"
+     y="406"
+     text-anchor="start"
+     font-size="10.5"
+     fill="#94a3b8"
+     id="text27">ActiveModeWarden · WifiNative.isP2pStaConcurrencySupported()</text>
+  <circle
+     cx="646"
+     cy="368"
+     r="9"
+     fill="#f97316"
+     id="circle27" />
+  <text
+     x="646"
+     y="371.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text28">1</text>
+  <circle
+     cx="624"
+     cy="368"
+     r="9"
+     fill="#3b82f6"
+     id="circle28" />
+  <text
+     x="624"
+     y="371.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text29">2</text>
+  <circle
+     cx="602"
+     cy="368"
+     r="9"
+     fill="#10b981"
+     id="circle29" />
+  <text
+     x="602"
+     y="371.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text30">3</text>
+  <circle
+     cx="580"
+     cy="368"
+     r="9"
+     fill="#a855f7"
+     id="circle30" />
+  <text
+     x="580"
+     y="371.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text31">4</text>
+  <circle
+     cx="558"
+     cy="368"
+     r="9"
+     fill="#ef4444"
+     id="circle31" />
+  <text
+     x="558"
+     y="371.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text32">5</text>
+  <rect
+     x="40"
+     y="474"
+     width="620"
+     height="74"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect32" />
+  <rect
+     x="44"
+     y="484"
+     width="4"
+     height="54"
+     rx="2"
+     fill="#10b981"
+     id="rect33" />
+  <rect
+     x="58"
+     y="484"
+     width="110"
+     height="20"
+     rx="10"
+     fill="#0f0f1a"
+     stroke="#10b981"
+     stroke-width="1"
+     id="rect34" />
+  <text
+     x="70"
+     y="498"
+     text-anchor="start"
+     font-size="11"
+     font-weight="700"
+     fill="#10b981"
+     id="text34">HAL 层</text>
+  <text
+     x="58"
+     y="518"
+     text-anchor="start"
+     font-size="14px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text35">SupplicantP2pIfaceHalAidlImpl</text>
+  <text
+     x="58"
+     y="532"
+     text-anchor="start"
+     font-size="10.5"
+     fill="#94a3b8"
+     id="text36">groupAdd() · invite() · p2pServDiscReq()</text>
+  <circle
+     cx="646"
+     cy="494"
+     r="9"
+     fill="#f97316"
+     id="circle36" />
+  <text
+     x="646"
+     y="497.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text37">1</text>
+  <circle
+     cx="624"
+     cy="494"
+     r="9"
+     fill="#3b82f6"
+     id="circle37" />
+  <text
+     x="624"
+     y="497.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text38">2</text>
+  <circle
+     cx="602"
+     cy="494"
+     r="9"
+     fill="#10b981"
+     id="circle38" />
+  <text
+     x="602"
+     y="497.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text39">3</text>
+  <rect
+     x="40"
+     y="600"
+     width="620"
+     height="74"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#22d3ee"
+     stroke-width="1.5"
+     id="rect39" />
+  <rect
+     x="44"
+     y="610"
+     width="4"
+     height="54"
+     rx="2"
+     fill="#22d3ee"
+     id="rect40" />
+  <rect
+     x="58"
+     y="610"
+     width="110"
+     height="20"
+     rx="10"
+     fill="#0f0f1a"
+     stroke="#22d3ee"
+     stroke-width="1"
+     id="rect41" />
+  <text
+     x="70"
+     y="624"
+     text-anchor="start"
+     font-size="11"
+     font-weight="700"
+     fill="#22d3ee"
+     id="text41">wpa_supplicant</text>
+  <text
+     x="58"
+     y="644"
+     text-anchor="start"
+     font-size="14px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text42">P2pIface::addGroup → addGroupInternal → wpas_p2p_group_add</text>
+  <text
+     x="58"
+     y="658"
+     text-anchor="start"
+     font-size="10.5"
+     fill="#94a3b8"
+     id="text43">wpas_start_wps_go · wpas_p2p_invite · p2p_sd_request / p2p_sd_response</text>
+  <circle
+     cx="646"
+     cy="620"
+     r="9"
+     fill="#f97316"
+     id="circle43" />
+  <text
+     x="646"
+     y="623.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text44">1</text>
+  <circle
+     cx="624"
+     cy="620"
+     r="9"
+     fill="#3b82f6"
+     id="circle44" />
+  <text
+     x="624"
+     y="623.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text45">2</text>
+  <circle
+     cx="602"
+     cy="620"
+     r="9"
+     fill="#10b981"
+     id="circle45" />
+  <text
+     x="602"
+     y="623.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text46">3</text>
+  <rect
+     x="40"
+     y="726"
+     width="620"
+     height="74"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     id="rect46" />
+  <rect
+     x="44"
+     y="736"
+     width="4"
+     height="54"
+     rx="2"
+     fill="#ef4444"
+     id="rect47" />
+  <rect
+     x="58"
+     y="736"
+     width="110"
+     height="20"
+     rx="10"
+     fill="#0f0f1a"
+     stroke="#ef4444"
+     stroke-width="1"
+     id="rect48" />
+  <text
+     x="70"
+     y="750"
+     text-anchor="start"
+     font-size="11"
+     font-weight="700"
+     fill="#ef4444"
+     id="text48">内核</text>
+  <text
+     x="58"
+     y="770"
+     text-anchor="start"
+     font-size="14px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text49">cfg80211 / nl80211</text>
+  <text
+     x="58"
+     y="784"
+     text-anchor="start"
+     font-size="10.5"
+     fill="#94a3b8"
+     id="text50">NL80211_CMD_FRAME 管理帧下发 · add_virtual_intf</text>
+  <circle
+     cx="646"
+     cy="746"
+     r="9"
+     fill="#f97316"
+     id="circle50" />
+  <text
+     x="646"
+     y="749.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text51">1</text>
+  <circle
+     cx="624"
+     cy="746"
+     r="9"
+     fill="#10b981"
+     id="circle51" />
+  <text
+     x="624"
+     y="749.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text52">3</text>
+  <circle
+     cx="602"
+     cy="746"
+     r="9"
+     fill="#a855f7"
+     id="circle52" />
+  <text
+     x="602"
+     y="749.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text53">4</text>
+  <rect
+     x="40"
+     y="852"
+     width="620"
+     height="74"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#eab308"
+     stroke-width="1.5"
+     id="rect53" />
+  <rect
+     x="44"
+     y="862"
+     width="4"
+     height="54"
+     rx="2"
+     fill="#eab308"
+     id="rect54" />
+  <rect
+     x="58"
+     y="862"
+     width="110"
+     height="20"
+     rx="10"
+     fill="#0f0f1a"
+     stroke="#eab308"
+     stroke-width="1"
+     id="rect55" />
+  <text
+     x="70"
+     y="876"
+     text-anchor="start"
+     font-size="11"
+     font-weight="700"
+     fill="#eab308"
+     id="text55">驱动</text>
+  <text
+     x="58"
+     y="896"
+     text-anchor="start"
+     font-size="14px"
+     font-weight="700"
+     fill="#e2e8f0"
+     id="text56">QCOM：policy_mgr（DBS/MCC）· MTK：P2P PS（CTWindow）</text>
+  <text
+     x="58"
+     y="910"
+     text-anchor="start"
+     font-size="10.5"
+     fill="#94a3b8"
+     id="text57">hdd_set_p2p_noa（NOA 调度）· priv_driver_set_p2p_ps · mtk_ifaces_combinations</text>
+  <circle
+     cx="646"
+     cy="872"
+     r="9"
+     fill="#f97316"
+     id="circle57" />
+  <text
+     x="646"
+     y="875.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text58">1</text>
+  <circle
+     cx="624"
+     cy="872"
+     r="9"
+     fill="#10b981"
+     id="circle58" />
+  <text
+     x="624"
+     y="875.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text59">3</text>
+  <circle
+     cx="602"
+     cy="872"
+     r="9"
+     fill="#a855f7"
+     id="circle59" />
+  <text
+     x="602"
+     y="875.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text60">4</text>
+  <circle
+     cx="580"
+     cy="872"
+     r="9"
+     fill="#ef4444"
+     id="circle60" />
+  <text
+     x="580"
+     y="875.5"
+     text-anchor="middle"
+     font-size="9.5"
+     font-weight="700"
+     fill="#0f0f1a"
+     id="text61">5</text>
+  <line
+     x1="350"
+     y1="170"
+     x2="350"
+     y2="222"
+     stroke="#3b82f6"
+     stroke-width="2"
+     marker-end="url(#a-blue)"
+     id="line61" />
+  <rect
+     x="275"
+     y="177"
+     width="150"
+     height="26"
+     rx="13"
+     fill="#0f0f1a"
+     stroke="#3b82f6"
+     stroke-width="1.2"
+     id="rect61" />
+  <text
+     x="350"
+     y="194"
+     text-anchor="middle"
+     font-size="11.5px"
+     font-weight="700"
+     fill="#3b82f6"
+     id="text62">Binder (IPC)</text>
+  <line
+     x1="350"
+     y1="296"
+     x2="350"
+     y2="348"
+     stroke="#64748b"
+     stroke-width="2"
+     marker-end="url(#a-gray)"
+     id="line62" />
+  <rect
+     x="275"
+     y="303"
+     width="150"
+     height="26"
+     rx="13"
+     fill="#0f0f1a"
+     stroke="#64748b"
+     stroke-width="1.2"
+     id="rect62" />
+  <text
+     x="350"
+     y="320"
+     text-anchor="middle"
+     font-size="11.5px"
+     font-weight="700"
+     fill="#64748b"
+     id="text63">同进程调用</text>
+  <line
+     x1="350"
+     y1="422"
+     x2="350"
+     y2="474"
+     stroke="#a855f7"
+     stroke-width="2"
+     marker-end="url(#a-purple)"
+     id="line63" />
+  <rect
+     x="275"
+     y="429"
+     width="150"
+     height="26"
+     rx="13"
+     fill="#0f0f1a"
+     stroke="#a855f7"
+     stroke-width="1.2"
+     id="rect63" />
+  <text
+     x="350"
+     y="446"
+     text-anchor="middle"
+     font-size="11.5px"
+     font-weight="700"
+     fill="#a855f7"
+     id="text64">AIDL / HIDL</text>
+  <line
+     x1="350"
+     y1="548"
+     x2="350"
+     y2="600"
+     stroke="#10b981"
+     stroke-width="2"
+     marker-end="url(#a-green)"
+     id="line64" />
+  <rect
+     x="261"
+     y="555"
+     width="178"
+     height="26"
+     rx="13"
+     fill="#0f0f1a"
+     stroke="#10b981"
+     stroke-width="1.2"
+     id="rect64" />
+  <text
+     x="350"
+     y="572"
+     text-anchor="middle"
+     font-size="11.5px"
+     font-weight="700"
+     fill="#10b981"
+     id="text65">Binder · AIDL（跨进程）</text>
+  <line
+     x1="350"
+     y1="674"
+     x2="350"
+     y2="726"
+     stroke="#10b981"
+     stroke-width="2"
+     marker-end="url(#a-green)"
+     id="line65" />
+  <rect
+     x="261"
+     y="681"
+     width="178"
+     height="26"
+     rx="13"
+     fill="#0f0f1a"
+     stroke="#10b981"
+     stroke-width="1.2"
+     id="rect65" />
+  <text
+     x="350"
+     y="698"
+     text-anchor="middle"
+     font-size="11.5px"
+     font-weight="700"
+     fill="#10b981"
+     id="text66">nl80211 netlink</text>
+  <line
+     x1="350"
+     y1="800"
+     x2="350"
+     y2="852"
+     stroke="#ef4444"
+     stroke-width="2"
+     marker-end="url(#a-red)"
+     id="line66" />
+  <rect
+     x="261"
+     y="807"
+     width="178"
+     height="26"
+     rx="13"
+     fill="#0f0f1a"
+     stroke="#ef4444"
+     stroke-width="1.2"
+     id="rect66" />
+  <text
+     x="350"
+     y="824"
+     text-anchor="middle"
+     font-size="11.5px"
+     font-weight="700"
+     fill="#ef4444"
+     id="text67">cfg80211 ops / WMI / mbox</text>
+  <line
+     x1="700"
+     y1="140"
+     x2="700"
+     y2="650"
+     stroke="#f97316"
+     stroke-width="3"
+     marker-end="url(#a-orange)"
+     id="line67" />
+  <text
+     x="736"
+     y="400"
+     transform="rotate(90 736 400)"
+     text-anchor="middle"
+     font-size="11.5"
+     font-weight="700"
+     fill="#f97316"
+     id="text68">核心链 ① Autonomous GO（App→Supplicant）</text>
+  <rect
+     x="800"
+     y="96"
+     width="430"
+     height="146"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#f97316"
+     stroke-width="1.5"
+     id="rect68" />
+  <rect
+     x="804"
+     y="104"
+     width="4"
+     height="130"
+     rx="2"
+     fill="#f97316"
+     id="rect69" />
+  <text
+     x="818"
+     y="120"
+     text-anchor="start"
+     font-size="12.5"
+     font-weight="700"
+     fill="#f97316"
+     id="text69">① Autonomous GO —— 不谈判直接当老大</text>
+  <line
+     x1="818"
+     y1="128"
+     x2="1216"
+     y2="128"
+     stroke="#f97316"
+     stroke-width="1"
+     opacity="0.4"
+     id="line69" />
+  <text
+     x="818"
+     y="147"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text70">栈位：App → Framework → HAL → Supplicant</text>
+  <text
+     x="818"
+     y="165"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text71">WifiP2pManager.createGroup → P2pStateMachine（CREATE_GROUP）</text>
+  <text
+     x="818"
+     y="183"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text72">SupplicantP2pIfaceHalAidlImpl.groupAdd → P2pIface::addGroup</text>
+  <text
+     x="818"
+     y="201"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text73">addGroupInternal → wpas_p2p_group_add → wpas_start_wps_go</text>
+  <rect
+     x="800"
+     y="258"
+     width="430"
+     height="146"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#3b82f6"
+     stroke-width="1.5"
+     id="rect73" />
+  <rect
+     x="804"
+     y="266"
+     width="4"
+     height="130"
+     rx="2"
+     fill="#3b82f6"
+     id="rect74" />
+  <text
+     x="818"
+     y="282"
+     text-anchor="start"
+     font-size="12.5"
+     font-weight="700"
+     fill="#3b82f6"
+     id="text74">② Persistent Group + Invitation —— 老熟人秒重连</text>
+  <line
+     x1="818"
+     y1="290"
+     x2="1216"
+     y2="290"
+     stroke="#3b82f6"
+     stroke-width="1"
+     opacity="0.4"
+     id="line74" />
+  <text
+     x="818"
+     y="309"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text75">栈位：Framework + Supplicant</text>
+  <text
+     x="818"
+     y="327"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text76">wpas_p2p_invite → p2p_invite → p2p_build_invitation_req（两帧）</text>
+  <text
+     x="818"
+     y="345"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text77">接收方 wpas_invitation_process：校验 mode=3 / disabled=2</text>
+  <text
+     x="818"
+     y="363"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text78">持久化 network{ psk · p2p_client_list } · persistent_reconnect</text>
+  <rect
+     x="800"
+     y="420"
+     width="472.9"
+     height="146"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#10b981"
+     stroke-width="1.5"
+     id="rect78" />
+  <rect
+     x="804"
+     y="428"
+     width="4"
+     height="130"
+     rx="2"
+     fill="#10b981"
+     id="rect79" />
+  <text
+     x="818"
+     y="444"
+     text-anchor="start"
+     font-size="12.5"
+     font-weight="700"
+     fill="#10b981"
+     id="text79">③ Service Discovery —— 群内发广告</text>
+  <line
+     x1="818"
+     y1="452"
+     x2="1216"
+     y2="452"
+     stroke="#10b981"
+     stroke-width="1"
+     opacity="0.4"
+     id="line79" />
+  <text
+     x="818"
+     y="471"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text80">栈位：App + Supplicant（预关联 GAS/ANQP）</text>
+  <text
+     x="818"
+     y="489"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text81">WifiP2pNative.p2pServDiscReq → wpas_p2p_sd_request → p2p_sd_request</text>
+  <text
+     x="818"
+     y="507"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text82">响应 p2p_sd_response / p2p_rx_gas_initial_resp（1400B 分片）</text>
+  <text
+     x="818"
+     y="525"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text83">SD 查询挂 sd_queries 队列，Find 间隙逐个执行</text>
+  <rect
+     x="800"
+     y="582"
+     width="449.5"
+     height="146"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#a855f7"
+     stroke-width="1.5"
+     id="rect83" />
+  <rect
+     x="804"
+     y="590"
+     width="4"
+     height="130"
+     rx="2"
+     fill="#a855f7"
+     id="rect84" />
+  <text
+     x="818"
+     y="606"
+     text-anchor="start"
+     font-size="12.5"
+     font-weight="700"
+     fill="#a855f7"
+     id="text84">④ STA+P2P 并发 —— 一人分饰两角</text>
+  <line
+     x1="818"
+     y1="614"
+     x2="1216"
+     y2="614"
+     stroke="#a855f7"
+     stroke-width="1"
+     opacity="0.4"
+     id="line84" />
+  <text
+     x="818"
+     y="633"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text85">栈位：Framework + 驱动</text>
+  <text
+     x="818"
+     y="651"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text86">ActiveModeWarden · WifiNative.isP2pStaConcurrencySupported()</text>
+  <text
+     x="818"
+     y="669"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text87">QCOM：policy_mgr（DBS/MCC）· hdd_set_p2p_noa（NOA 调度）</text>
+  <text
+     x="818"
+     y="687"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text88">MTK：priv_driver_set_p2p_ps（CTWindow）· mtk_ifaces_combinations</text>
+  <rect
+     x="800"
+     y="744"
+     width="461.2"
+     height="146"
+     rx="8"
+     ry="8"
+     fill="#0f172a"
+     stroke="#ef4444"
+     stroke-width="1.5"
+     id="rect88" />
+  <rect
+     x="804"
+     y="752"
+     width="4"
+     height="130"
+     rx="2"
+     fill="#ef4444"
+     id="rect89" />
+  <text
+     x="818"
+     y="768"
+     text-anchor="start"
+     font-size="12.5"
+     font-weight="700"
+     fill="#ef4444"
+     id="text89">⑤ 日志运维 —— 四层排障</text>
+  <line
+     x1="818"
+     y1="776"
+     x2="1216"
+     y2="776"
+     stroke="#ef4444"
+     stroke-width="1"
+     opacity="0.4"
+     id="line89" />
+  <text
+     x="818"
+     y="795"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text90">栈位：全栈四层（Framework / Supplicant / QCOM / MTK）</text>
+  <text
+     x="818"
+     y="813"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text91">WifiP2pShellCommand（adb shell cmd wifip2p）</text>
+  <text
+     x="818"
+     y="831"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text92">Supplicant 事件：P2P-DEVICE-FOUND · P2P-INVITATION-*（wpa_ctrl.h）</text>
+  <text
+     x="818"
+     y="849"
+     text-anchor="start"
+     font-size="9.5"
+     fill="#94a3b8"
+     id="text93">驱动：WMI 命令 · P2P_FSM / SAP FSM 状态日志</text>
+  <rect
+     x="40"
+     y="938"
+     width="1240"
+     height="44"
+     rx="8"
+     ry="8"
+     fill="#0a0a14"
+     stroke="#334155"
+     stroke-width="1.2"
+     stroke-dasharray="6,4"
+     id="rect93" />
+  <text
+     x="62"
+     y="958"
+     text-anchor="start"
+     font-size="11.5"
+     font-weight="700"
+     fill="#cbd5e1"
+     id="text94">特性分区：</text>
+  <circle
+     cx="150"
+     cy="953"
+     r="7"
+     fill="#f97316"
+     id="circle94" />
+  <text
+     x="162"
+     y="957"
+     text-anchor="start"
+     font-size="11"
+     fill="#cbd5e1"
+     id="text95">① Autonomous GO</text>
+  <circle
+     cx="385"
+     cy="953"
+     r="7"
+     fill="#3b82f6"
+     id="circle95" />
+  <text
+     x="397"
+     y="957"
+     text-anchor="start"
+     font-size="11"
+     fill="#cbd5e1"
+     id="text96">② Persistent Invitation</text>
+  <circle
+     cx="620"
+     cy="953"
+     r="7"
+     fill="#10b981"
+     id="circle96" />
+  <text
+     x="632"
+     y="957"
+     text-anchor="start"
+     font-size="11"
+     fill="#cbd5e1"
+     id="text97">③ Service Discovery</text>
+  <circle
+     cx="855"
+     cy="953"
+     r="7"
+     fill="#a855f7"
+     id="circle97" />
+  <text
+     x="867"
+     y="957"
+     text-anchor="start"
+     font-size="11"
+     fill="#cbd5e1"
+     id="text98">④ STA+P2P 并发</text>
+  <circle
+     cx="1090"
+     cy="953"
+     r="7"
+     fill="#ef4444"
+     id="circle98" />
+  <text
+     x="1102"
+     y="957"
+     text-anchor="start"
+     font-size="11"
+     fill="#cbd5e1"
+     id="text99">⑤ 日志运维</text>
+</svg>
